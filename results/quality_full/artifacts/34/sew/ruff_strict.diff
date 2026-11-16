@@ -1,0 +1,24 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,12 +1,12 @@
+-def find_missing(ar,N): 
++def find_missing(ar, N):
+     l, r = 0, N - 1
+-    while  (r >= l):  
++    while r >= l:
+         mid = (r + l) / 2
+-        mid= int (mid) 
+-        if (ar[mid] != 1 + mid and mid == ar[mid - 1]): 
+-            return  (1 + mid)  
+-        elif (ar[mid]!=mid + 1): 
+-            r=mid-1 
+-        else: 
++        mid = int(mid)
++        if ar[mid] != 1 + mid and mid == ar[mid - 1]:
++            return 1 + mid
++        if ar[mid] != mid + 1:
++            r = mid - 1
++        else:
+             l = 1 + mid
+-    return  (-1) 
++    return -1

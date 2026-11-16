@@ -1,0 +1,12 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,6 +1,6 @@
+-from itertools import zip_longest, chain, tee
++from itertools import chain, tee, zip_longest
+ 
+ 
+ def exchange_elements(lst):
+-	lst1, lst2 = tee(iter(lst), 2)
+-	return list(chain.from_iterable(zip_longest(lst[1::2], lst[::2])))
++    lst1, lst2 = tee(iter(lst), 2)
++    return list(chain.from_iterable(zip_longest(lst[1::2], lst[::2])))

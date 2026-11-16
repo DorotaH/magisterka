@@ -1,0 +1,16 @@
+--- original
++++ sew
+@@ -2,9 +2,9 @@
+   res = ''
+   dig = ''
+   for ele in test_str:
+-    if ele.isdigit():
++    if not ele.isdigit():
++      res += ele
++    else:
+       dig += ele
+-    else:
+-      res += ele
+-  res += dig
++  res+=dig
+   return (res) 

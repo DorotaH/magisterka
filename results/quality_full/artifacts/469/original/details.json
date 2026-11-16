@@ -1,0 +1,458 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "PLR1730",
+        "end_location": {
+          "column": 48,
+          "row": 13
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max_so_far = max(max_so_far, curr_price)",
+              "end_location": {
+                "column": 48,
+                "row": 13
+              },
+              "location": {
+                "column": 21,
+                "row": 12
+              }
+            }
+          ],
+          "message": "Replace with `max_so_far = max(max_so_far, curr_price)`"
+        },
+        "location": {
+          "column": 21,
+          "row": 12
+        },
+        "message": "Replace `if` statement with `max_so_far = max(max_so_far, curr_price)`",
+        "name": "if-stmt-min-max",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/if-stmt-min-max"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "PLR1730": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "PLR1730",
+        "end_location": {
+          "column": 48,
+          "row": 13
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max_so_far = max(max_so_far, curr_price)",
+              "end_location": {
+                "column": 48,
+                "row": 13
+              },
+              "location": {
+                "column": 21,
+                "row": 12
+              }
+            }
+          ],
+          "message": "Replace with `max_so_far = max(max_so_far, curr_price)`"
+        },
+        "location": {
+          "column": 21,
+          "row": 12
+        },
+        "message": "Replace `if` statement with `max_so_far = max(max_so_far, curr_price)`",
+        "name": "if-stmt-min-max",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/if-stmt-min-max"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `max_profit`\n --> solution.py:1:5\n  |\n1 | def max_profit(price, k):\n  |     ^^^^^^^^^^\n2 |     n = len(price)\n3 |     final_profit = [[None for x in range(n)] for y in range(k + 1)]\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def max_profit(price, k):\n  |     ^^^^^^^^^^\n2 |     n = len(price)\n3 |     final_profit = [[None for x in range(n)] for y in range(k + 1)]\n  |\n\nANN001 Missing type annotation for function argument `price`\n --> solution.py:1:16\n  |\n1 | def max_profit(price, k):\n  |                ^^^^^\n2 |     n = len(price)\n3 |     final_profit = [[None for x in range(n)] for y in range(k + 1)]\n  |\n\nANN001 Missing type annotation for function argument `k`\n --> solution.py:1:23\n  |\n1 | def max_profit(price, k):\n  |                       ^\n2 |     n = len(price)\n3 |     final_profit = [[None for x in range(n)] for y in range(k + 1)]\n  |\n\nFound 8 errors (2 fixed, 6 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `max_profit`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `price`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 24,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "PLR1730",
+        "end_location": {
+          "column": 48,
+          "row": 13
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max_so_far = max(max_so_far, curr_price)",
+              "end_location": {
+                "column": 48,
+                "row": 13
+              },
+              "location": {
+                "column": 21,
+                "row": 12
+              }
+            }
+          ],
+          "message": "Replace with `max_so_far = max(max_so_far, curr_price)`"
+        },
+        "location": {
+          "column": 21,
+          "row": 12
+        },
+        "message": "Replace `if` statement with `max_so_far = max(max_so_far, curr_price)`",
+        "name": "if-stmt-min-max",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/if-stmt-min-max"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 32,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 32,
+                "row": 15
+              },
+              "location": {
+                "column": 32,
+                "row": 15
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 32,
+          "row": 15
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 2,
+      "PLR1730": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `max_profit`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `price`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 24,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 17,
+    "functions": [
+      {
+        "name": "max_profit",
+        "complexity": 17,
+        "line_start": 1,
+        "line_end": 15
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "max_profit",
+      "lineno": 1,
+      "complexity": 9,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 15,
+    "lloc": 15,
+    "sloc": 15,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 5,
+      "h2": 14,
+      "N1": 11,
+      "N2": 22,
+      "vocabulary": 19,
+      "length": 33,
+      "calculated_length": 64.91260938324326,
+      "volume": 140.1816079436383,
+      "difficulty": 3.9285714285714284,
+      "effort": 550.713459778579,
+      "time": 30.595192209921056,
+      "bugs": 0.04672720264787944
+    },
+    "functions": [
+      {
+        "name": "max_profit",
+        "h1": 5,
+        "h2": 14,
+        "N1": 11,
+        "N2": 22,
+        "vocabulary": 19,
+        "length": 33,
+        "calculated_length": 64.91260938324326,
+        "volume": 140.1816079436383,
+        "difficulty": 3.9285714285714284,
+        "effort": 550.713459778579,
+        "time": 30.595192209921056,
+        "bugs": 0.04672720264787944
+      }
+    ]
+  }
+}

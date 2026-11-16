@@ -1,0 +1,461 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "UP034",
+        "end_location": {
+          "column": 72,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "m * (m + 1) * (2 * m + 1) / 6 + (n - m) * m * (m + 1) / 2",
+              "end_location": {
+                "column": 72,
+                "row": 6
+              },
+              "location": {
+                "column": 13,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Remove extraneous parentheses"
+        },
+        "location": {
+          "column": 13,
+          "row": 6
+        },
+        "message": "Avoid extraneous parentheses",
+        "name": "extraneous-parentheses",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/extraneous-parentheses"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "UP034": 1
+    },
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nN802 Function name `count_Squares` should be lowercase\n --> solution.py:1:5\n  |\n1 | def count_Squares(m,n):\n  |     ^^^^^^^^^^^^^\n2 |     if(n < m):\n3 |         temp = m\n  |\n\nANN201 Missing return type annotation for public function `count_Squares`\n --> solution.py:1:5\n  |\n1 | def count_Squares(m,n):\n  |     ^^^^^^^^^^^^^\n2 |     if(n < m):\n3 |         temp = m\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def count_Squares(m,n):\n  |     ^^^^^^^^^^^^^\n2 |     if(n < m):\n3 |         temp = m\n  |\n\nANN001 Missing type annotation for function argument `m`\n --> solution.py:1:19\n  |\n1 | def count_Squares(m,n):\n  |                   ^\n2 |     if(n < m):\n3 |         temp = m\n  |\n\nANN001 Missing type annotation for function argument `n`\n --> solution.py:1:21\n  |\n1 | def count_Squares(m,n):\n  |                     ^\n2 |     if(n < m):\n3 |         temp = m\n  |\n\nFound 9 errors (2 fixed, 7 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Function name `count_Squares` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `count_Squares`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 20,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 19,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `m`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 21,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "UP034",
+        "end_location": {
+          "column": 72,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "m * (m + 1) * (2 * m + 1) / 6 + (n - m) * m * (m + 1) / 2",
+              "end_location": {
+                "column": 72,
+                "row": 6
+              },
+              "location": {
+                "column": 13,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Remove extraneous parentheses"
+        },
+        "location": {
+          "column": 13,
+          "row": 6
+        },
+        "message": "Avoid extraneous parentheses",
+        "name": "extraneous-parentheses",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/extraneous-parentheses"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 73,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 73,
+                "row": 6
+              },
+              "location": {
+                "column": 73,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 73,
+          "row": 6
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "N802": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 2,
+      "UP034": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Function name `count_Squares` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `count_Squares`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 20,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 19,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `m`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 1,
+    "functions": [
+      {
+        "name": "count_Squares",
+        "complexity": 1,
+        "line_start": 1,
+        "line_end": 6
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "count_Squares",
+      "lineno": 1,
+      "complexity": 2,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 6,
+    "lloc": 6,
+    "sloc": 6,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 5,
+      "h2": 16,
+      "N1": 13,
+      "N2": 26,
+      "vocabulary": 21,
+      "length": 39,
+      "calculated_length": 75.60964047443682,
+      "volume": 171.30037948837168,
+      "difficulty": 4.0625,
+      "effort": 695.9077916715099,
+      "time": 38.661543981750555,
+      "bugs": 0.05710012649612389
+    },
+    "functions": [
+      {
+        "name": "count_Squares",
+        "h1": 5,
+        "h2": 16,
+        "N1": 13,
+        "N2": 26,
+        "vocabulary": 21,
+        "length": 39,
+        "calculated_length": 75.60964047443682,
+        "volume": 171.30037948837168,
+        "difficulty": 4.0625,
+        "effort": 695.9077916715099,
+        "time": 38.661543981750555,
+        "bugs": 0.05710012649612389
+      }
+    ]
+  }
+}

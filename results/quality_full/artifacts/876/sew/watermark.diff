@@ -1,0 +1,17 @@
+--- original
++++ sew
+@@ -1,11 +1,8 @@
+ def lcm(x, y):
+-   if x > y:
+-       z = x
+-   else:
+-       z = y
++   z = x if x > y else y
+    while(True):
+-       if((z % x == 0) and (z % y == 0)):
+-           lcm = z
++       if((0 == z % x) and  (0 == z % y)):
++           lcm=z
+            break
+        z += 1
+-   return lcm+   return lcm

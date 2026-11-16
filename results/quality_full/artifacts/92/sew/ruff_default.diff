@@ -1,0 +1,16 @@
+--- source.py
++++ ruff_default.py
+@@ -1,7 +1,7 @@
+-def is_undulating(n): 
+-	if (len(n)<=2): 
+-		return  False
+-	for i in range(2, len(n)): 
+-		if (n[i] != n[i - 2]): 
+-			return  False
+-	return  True+def is_undulating(n):
++    if len(n) <= 2:
++        return False
++    for i in range(2, len(n)):
++        if n[i] != n[i - 2]:
++            return False
++    return True

@@ -1,0 +1,19 @@
+def count_Fac(n):
+    m = n
+    count = 0
+    i = 2
+    while (i * i) <= m:
+        total = 0
+        while 0 == n % i:
+            n /= i
+            total += 1
+        temp = 0
+        j = 1
+        while (temp + j) <= total:
+            temp += j
+            count += 1
+            j += 1
+        i = i + 1
+    if n != 1:
+        count = count + 1
+    return count

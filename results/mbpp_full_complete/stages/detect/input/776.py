@@ -1,0 +1,12 @@
+def count_vowels(test_str):
+vow_list = ['a', 'e', 'i', 'o', 'u']
+res = sum(
+	test_str[idx] not in vow_list
+	and (test_str[idx - 1] in vow_list or test_str[idx + 1] in vow_list)
+	for idx in range(1, len(test_str) - 1)
+)
+if test_str[0] not in vow_list and test_str[1] in vow_list:
+	res += 1
+if test_str[-1] not in vow_list and test_str[-2] in vow_list:
+	res += 1
+return (res)

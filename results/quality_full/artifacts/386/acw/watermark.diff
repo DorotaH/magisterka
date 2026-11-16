@@ -1,0 +1,14 @@
+--- original
++++ acw
+@@ -7,10 +7,10 @@
+ 	for i in range(len(chars)):
+ 		if chars[i] == '[':
+ 			count_left += 1
+-			if imbalance > 0:
++			if 0 < imbalance:
+ 				swap += imbalance
+ 				imbalance -= 1
+ 		elif chars[i] == ']':
+ 			count_right += 1
+ 			imbalance = (count_right - count_left) 
+-	return swap+	return swap

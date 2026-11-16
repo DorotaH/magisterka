@@ -1,0 +1,12 @@
+def max_product(arr):
+    arr_len = len(arr)
+    if arr_len < 2:
+        return None
+    x = arr[0]
+    y = arr[1]
+    for i in range(arr_len):
+        for j in range(1 + i, arr_len):
+            if arr[j] * arr[i] > y * x:
+                x = arr[i]
+                y = arr[j]
+    return x, y

@@ -1,0 +1,597 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `roman_to_int`\n --> solution.py:1:5\n  |\n1 | def roman_to_int(s):\n  |     ^^^^^^^^^^^^\n2 |         rom_val = {\"I\": 1, \"V\": 5, \"X\": 10, \"L\": 50, \"C\": 100, \"D\": 500, \"M\": 1000}\n3 |         return sum((rom_val[s[i]] - 2 * rom_val[s[i - 1]] if i > 0\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def roman_to_int(s):\n  |     ^^^^^^^^^^^^\n2 |         rom_val = {\"I\": 1, \"V\": 5, \"X\": 10, \"L\": 50, \"C\": 100, \"D\": 500, \"M\": 1000}\n3 |         return sum((rom_val[s[i]] - 2 * rom_val[s[i - 1]] if i > 0\n  |\n\nANN001 Missing type annotation for function argument `s`\n --> solution.py:1:18\n  |\n1 | def roman_to_int(s):\n  |                  ^\n2 |         rom_val = {\"I\": 1, \"V\": 5, \"X\": 10, \"L\": 50, \"C\": 100, \"D\": 500, \"M\": 1000}\n3 |         return sum((rom_val[s[i]] - 2 * rom_val[s[i - 1]] if i > 0\n  |\n\nW191 Indentation contains tabs\n --> solution.py:2:1\n  |\n1 | def roman_to_int(s):\n2 |         rom_val = {\"I\": 1, \"V\": 5, \"X\": 10, \"L\": 50, \"C\": 100, \"D\": 500, \"M\": 1000}\n  | ^^^^^^^^\n3 |         return sum((rom_val[s[i]] - 2 * rom_val[s[i - 1]] if i > 0\n4 |                     and rom_val[s[i - 1]] < rom_val[s[i]] else rom_val[s[i]])\n  |\n\nW191 Indentation contains tabs\n --> solution.py:3:1\n  |\n1 | def roman_to_int(s):\n2 |         rom_val = {\"I\": 1, \"V\": 5, \"X\": 10, \"L\": 50, \"C\": 100, \"D\": 500, \"M\": 1000}\n3 |         return sum((rom_val[s[i]] - 2 * rom_val[s[i - 1]] if i > 0\n  | ^^^^^^^^\n4 |                     and rom_val[s[i - 1]] < rom_val[s[i]] else rom_val[s[i]])\n5 |                 for i in range(len(s)))\n  |\n\nW191 Indentation contains tabs\n --> solution.py:4:1\n  |\n2 |         rom_val = {\"I\": 1, \"V\": 5, \"X\": 10, \"L\": 50, \"C\": 100, \"D\": 500, \"M\": 1000}\n3 |         return sum((rom_val[s[i]] - 2 * rom_val[s[i - 1]] if i > 0\n4 |                     and rom_val[s[i - 1]] < rom_val[s[i]] else rom_val[s[i]])\n  | ^^^^^^^^^^^^^^^^^^^^\n5 |                 for i in range(len(s)))\n  |\n\nW191 Indentation contains tabs\n --> solution.py:5:1\n  |\n3 |         return sum((rom_val[s[i]] - 2 * rom_val[s[i - 1]] if i > 0\n4 |                     and rom_val[s[i - 1]] < rom_val[s[i]] else rom_val[s[i]])\n5 |                 for i in range(len(s)))\n  | ^^^^^^^^^^^^^^^^\n\nFound 16 errors (7 fixed, 9 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 17,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `roman_to_int`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 17,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 19,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 18,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `s`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 2
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 17,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"I\"",
+              "end_location": {
+                "column": 17,
+                "row": 2
+              },
+              "location": {
+                "column": 14,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 14,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 25,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"V\"",
+              "end_location": {
+                "column": 25,
+                "row": 2
+              },
+              "location": {
+                "column": 22,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 22,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 33,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"X\"",
+              "end_location": {
+                "column": 33,
+                "row": 2
+              },
+              "location": {
+                "column": 30,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 30,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 42,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"L\"",
+              "end_location": {
+                "column": 42,
+                "row": 2
+              },
+              "location": {
+                "column": 39,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 39,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 51,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"C\"",
+              "end_location": {
+                "column": 51,
+                "row": 2
+              },
+              "location": {
+                "column": 48,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 48,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 61,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"D\"",
+              "end_location": {
+                "column": 61,
+                "row": 2
+              },
+              "location": {
+                "column": 58,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 58,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 71,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"M\"",
+              "end_location": {
+                "column": 71,
+                "row": 2
+              },
+              "location": {
+                "column": 68,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 68,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 3
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 6,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 4
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 5,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 5
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 1,
+      "W191": 4,
+      "Q000": 7
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 17,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `roman_to_int`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 17,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 19,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 18,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `s`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 2,
+    "functions": [
+      {
+        "name": "roman_to_int",
+        "complexity": 2,
+        "line_start": 1,
+        "line_end": 5
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "roman_to_int",
+      "lineno": 1,
+      "complexity": 4,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 5,
+    "lloc": 4,
+    "sloc": 5,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 5,
+      "h2": 11,
+      "N1": 7,
+      "N2": 14,
+      "vocabulary": 16,
+      "length": 21,
+      "calculated_length": 49.663388279447084,
+      "volume": 84.0,
+      "difficulty": 3.1818181818181817,
+      "effort": 267.27272727272725,
+      "time": 14.848484848484848,
+      "bugs": 0.028
+    },
+    "functions": [
+      {
+        "name": "roman_to_int",
+        "h1": 5,
+        "h2": 11,
+        "N1": 7,
+        "N2": 14,
+        "vocabulary": 16,
+        "length": 21,
+        "calculated_length": 49.663388279447084,
+        "volume": 84.0,
+        "difficulty": 3.1818181818181817,
+        "effort": 267.27272727272725,
+        "time": 14.848484848484848,
+        "bugs": 0.028
+      }
+    ]
+  }
+}

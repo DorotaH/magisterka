@@ -1,0 +1,345 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `rearrange_bigger`\n --> solution.py:1:5\n  |\n1 | def rearrange_bigger(n):\n  |     ^^^^^^^^^^^^^^^^\n2 |     nums = list(str(n))\n3 |     for i in range(len(nums)-2,-1,-1):\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def rearrange_bigger(n):\n  |     ^^^^^^^^^^^^^^^^\n2 |     nums = list(str(n))\n3 |     for i in range(len(nums)-2,-1,-1):\n  |\n\nANN001 Missing type annotation for function argument `n`\n --> solution.py:1:22\n  |\n1 | def rearrange_bigger(n):\n  |                      ^\n2 |     nums = list(str(n))\n3 |     for i in range(len(nums)-2,-1,-1):\n  |\n\nRUF005 Consider `[y, *z]` instead of concatenation\n  --> solution.py:9:24\n   |\n 7 |             z.remove(y)\n 8 |             z.sort()\n 9 |             nums[i:] = [y] + z\n   |                        ^^^^^^^\n10 |             return  int(\"\".join(nums))\n11 |     return  False\n   |\nhelp: Replace with `[y, *z]`\n   |\n8  |             z.sort()\n   -             nums[i:] = [y] + z\n9  +             nums[i:] = [y, *z]\n10 |             return  int(\"\".join(nums))\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 6 errors.\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `rearrange_bigger`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "RUF005",
+        "end_location": {
+          "column": 31,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "[y, *z]",
+              "end_location": {
+                "column": 31,
+                "row": 9
+              },
+              "location": {
+                "column": 24,
+                "row": 9
+              }
+            }
+          ],
+          "message": "Replace with `[y, *z]`"
+        },
+        "location": {
+          "column": 24,
+          "row": 9
+        },
+        "message": "Consider `[y, *z]` instead of concatenation",
+        "name": "collection-literal-concatenation",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/collection-literal-concatenation"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 1,
+      "RUF005": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `rearrange_bigger`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "RUF005",
+        "end_location": {
+          "column": 31,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "[y, *z]",
+              "end_location": {
+                "column": 31,
+                "row": 9
+              },
+              "location": {
+                "column": 24,
+                "row": 9
+              }
+            }
+          ],
+          "message": "Replace with `[y, *z]`"
+        },
+        "location": {
+          "column": 24,
+          "row": 9
+        },
+        "message": "Consider `[y, *z]` instead of concatenation",
+        "name": "collection-literal-concatenation",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/collection-literal-concatenation"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 3,
+    "functions": [
+      {
+        "name": "rearrange_bigger",
+        "complexity": 3,
+        "line_start": 1,
+        "line_end": 11
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "rearrange_bigger",
+      "lineno": 1,
+      "complexity": 3,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 11,
+    "lloc": 14,
+    "sloc": 11,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 4,
+      "h2": 10,
+      "N1": 7,
+      "N2": 12,
+      "vocabulary": 14,
+      "length": 19,
+      "calculated_length": 41.219280948873624,
+      "volume": 72.33974351909447,
+      "difficulty": 2.4,
+      "effort": 173.61538444582672,
+      "time": 9.645299135879263,
+      "bugs": 0.024113247839698156
+    },
+    "functions": [
+      {
+        "name": "rearrange_bigger",
+        "h1": 4,
+        "h2": 10,
+        "N1": 7,
+        "N2": 12,
+        "vocabulary": 14,
+        "length": 19,
+        "calculated_length": 41.219280948873624,
+        "volume": 72.33974351909447,
+        "difficulty": 2.4,
+        "effort": 173.61538444582672,
+        "time": 9.645299135879263,
+        "bugs": 0.024113247839698156
+      }
+    ]
+  }
+}

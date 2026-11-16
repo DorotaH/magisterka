@@ -1,0 +1,28 @@
+--- original
++++ sew
+@@ -1,17 +1,15 @@
+ def find_platform(arr, dep, n): 
+     arr.sort() 
+     dep.sort() 
+-    plat_needed = 1
+-    result = 1
+-    i = 1
+-    j = 0
++    plat_needed = result = 1
++    i, j = 1, 0
+     while (i < n and j < n): 
+-        if (arr[i] <= dep[j]):           
+-            plat_needed+= 1
+-            i+= 1
++        if (dep[j] >= arr[i]):           
++            plat_needed= plat_needed+ 1
++            i= i+ 1
+         elif (arr[i] > dep[j]):           
+-            plat_needed-= 1
+-            j+= 1
++            plat_needed= plat_needed- 1
++            j= j+ 1
+         if (plat_needed > result):  
+-            result = plat_needed           
+-    return result+            result=plat_needed           
++    return  result

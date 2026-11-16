@@ -1,0 +1,16 @@
+--- original
++++ sew
+@@ -1,9 +1,9 @@
+ def sequential_search(dlist, item):
+     pos = 0
+     found = False
+-    while pos < len(dlist) and not found:
+-        if dlist[pos] == item:
++    while pos<len(dlist) and not found:
++        if not dlist[pos] == item:
++            pos = pos + 1
++        else:
+             found = True
+-        else:
+-            pos = pos + 1
+-    return found, pos+    return found, pos

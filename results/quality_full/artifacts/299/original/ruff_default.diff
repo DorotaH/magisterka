@@ -1,0 +1,11 @@
+--- source.py
++++ ruff_default.py
+@@ -1,6 +1,8 @@
+ from collections import defaultdict
++
++
+ def max_aggregate(stdata):
+     temp = defaultdict(int)
+     for name, marks in stdata:
+         temp[name] += marks
+-    return max(temp.items(), key=lambda x: x[1])+    return max(temp.items(), key=lambda x: x[1])

@@ -1,0 +1,451 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `check_permutation`\n --> solution.py:1:5\n  |\n1 | def check_permutation(str1, str2):\n  |     ^^^^^^^^^^^^^^^^^\n2 |   n1, n2=len(str1), len(str2)\n3 |   if(n2!=n1):\n  |\nhelp: Add return type annotation: `bool`\n  |\n  - def check_permutation(str1, str2):\n1 + def check_permutation(str1, str2) -> bool:\n2 |   n1, n2=len(str1), len(str2)\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def check_permutation(str1, str2):\n  |     ^^^^^^^^^^^^^^^^^\n2 |   n1, n2=len(str1), len(str2)\n3 |   if(n2!=n1):\n  |\n\nANN001 Missing type annotation for function argument `str1`\n --> solution.py:1:23\n  |\n1 | def check_permutation(str1, str2):\n  |                       ^^^^\n2 |   n1, n2=len(str1), len(str2)\n3 |   if(n2!=n1):\n  |\n\nANN001 Missing type annotation for function argument `str2`\n --> solution.py:1:29\n  |\n1 | def check_permutation(str1, str2):\n  |                             ^^^^\n2 |   n1, n2=len(str1), len(str2)\n3 |   if(n2!=n1):\n  |\n\nSIM110 Use `return all(str1[i] == str2[i] for i in range(0, n1, 1))` instead of `for` loop\n  --> solution.py:8:3\n   |\n 6 |     str1, b=\" \".join(a), sorted(str2)\n 7 |     str2=\" \".join(b)\n 8 | /   for  i in  range(0, n1, 1):\n 9 | |     if(str1[i] != str2[i]):\n10 | |       return  False\n11 | |   return  True\n   | |______________^\nhelp: Replace with `return all(str1[i] == str2[i] for i in range(0, n1, 1))`\n  |\n7 |   str2=\" \".join(b)\n  -   for  i in  range(0, n1, 1):\n  -     if(str1[i] != str2[i]):\n  -       return  False\n  -   return  True\n8 +   return all(str1[i] == str2[i] for i in range(0, n1, 1))\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 8 errors (1 fixed, 7 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> bool",
+              "end_location": {
+                "column": 34,
+                "row": 1
+              },
+              "location": {
+                "column": 34,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Add return type annotation: `bool`"
+        },
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `check_permutation`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 27,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `str1`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 33,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 29,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `str2`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "SIM110",
+        "end_location": {
+          "column": 15,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return all(str1[i] == str2[i] for i in range(0, n1, 1))",
+              "end_location": {
+                "column": 15,
+                "row": 11
+              },
+              "location": {
+                "column": 3,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Replace with `return all(str1[i] == str2[i] for i in range(0, n1, 1))`"
+        },
+        "location": {
+          "column": 3,
+          "row": 8
+        },
+        "message": "Use `return all(str1[i] == str2[i] for i in range(0, n1, 1))` instead of `for` loop",
+        "name": "reimplemented-builtin",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/reimplemented-builtin"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 15,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 15,
+                "row": 11
+              },
+              "location": {
+                "column": 15,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 15,
+          "row": 11
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 2,
+      "SIM110": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> bool",
+              "end_location": {
+                "column": 34,
+                "row": 1
+              },
+              "location": {
+                "column": 34,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Add return type annotation: `bool`"
+        },
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `check_permutation`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 27,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `str1`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 33,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 29,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `str2`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "SIM110",
+        "end_location": {
+          "column": 16,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return all(str1[i] == str2[i] for i in range(0, n1, 1))",
+              "end_location": {
+                "column": 16,
+                "row": 11
+              },
+              "location": {
+                "column": 5,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Replace with `return all(str1[i] == str2[i] for i in range(0, n1, 1))`"
+        },
+        "location": {
+          "column": 5,
+          "row": 8
+        },
+        "message": "Use `return all(str1[i] == str2[i] for i in range(0, n1, 1))` instead of `for` loop",
+        "name": "reimplemented-builtin",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/reimplemented-builtin"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 4,
+    "functions": [
+      {
+        "name": "check_permutation",
+        "complexity": 4,
+        "line_start": 1,
+        "line_end": 11
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "check_permutation",
+      "lineno": 1,
+      "complexity": 4,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 11,
+    "lloc": 11,
+    "sloc": 11,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 1,
+      "h2": 4,
+      "N1": 2,
+      "N2": 4,
+      "vocabulary": 5,
+      "length": 6,
+      "calculated_length": 8.0,
+      "volume": 13.931568569324174,
+      "difficulty": 0.5,
+      "effort": 6.965784284662087,
+      "time": 0.3869880158145604,
+      "bugs": 0.004643856189774725
+    },
+    "functions": [
+      {
+        "name": "check_permutation",
+        "h1": 1,
+        "h2": 4,
+        "N1": 2,
+        "N2": 4,
+        "vocabulary": 5,
+        "length": 6,
+        "calculated_length": 8.0,
+        "volume": 13.931568569324174,
+        "difficulty": 0.5,
+        "effort": 6.965784284662087,
+        "time": 0.3869880158145604,
+        "bugs": 0.004643856189774725
+      }
+    ]
+  }
+}

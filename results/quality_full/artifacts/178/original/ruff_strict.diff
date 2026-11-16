@@ -1,0 +1,16 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,7 +1,8 @@
+ import re
+-def string_literals(patterns,text):
+-  for pattern in patterns:
+-     if re.search(pattern,  text):
+-       return ('Matched!')
+-     else:
+-       return ('Not Matched!')+
++
++def string_literals(patterns, text):
++    for pattern in patterns:
++        if re.search(pattern, text):
++            return "Matched!"
++        return "Not Matched!"

@@ -1,0 +1,17 @@
+--- original
++++ sew
+@@ -1,9 +1,8 @@
+ def recur_gcd(a, b):
+-	low = min(a, b)
+-	high = max(a, b)
+-	if low == 0:
+-		return high
+-	elif low == 1:
+-		return 1
++	low, high = min(a, b), max(a, b)
++	if  low == 0:
++		return  high
++	elif  1 == low:
++		return  1
+ 	else:
+-		return recur_gcd(low, high%low)+		return  recur_gcd(low, high%low)

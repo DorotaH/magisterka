@@ -1,0 +1,37 @@
+--- original
++++ sew
+@@ -1,22 +1,22 @@
+-def func(nums, k):
+-    import collections
+-    d = collections.defaultdict(int)
++def  func(nums, k):
++    import  collections
++    d=collections.defaultdict(int)
+     for row in nums:
+-        for i in row:
++        for  i in  row:
+             d[i] += 1
+-    temp = []
+-    import heapq
++    temp=list()
++    import  heapq
+     for key, v in d.items():
+-        if len(temp) < k:
++        if not len(temp) < k:
++            if v > temp[0][0]:
++                heapq.heappop(temp)
++                heapq.heappush(temp, (v, key))
++        else:
+             temp.append((v, key))
+             if len(temp) == k:
+                 heapq.heapify(temp)
+-        else:
+-            if v > temp[0][0]:
+-                heapq.heappop(temp)
+-                heapq.heappush(temp, (v, key))
+-    result = []
++    result=list()
+     while temp:
+         v, key = heapq.heappop(temp)
+         result.append(key)
+-    return result+    return result

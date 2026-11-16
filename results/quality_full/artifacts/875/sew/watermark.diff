@@ -1,0 +1,12 @@
+--- original
++++ sew
+@@ -1,4 +1,6 @@
+-def min_difference(test_list):
+-  temp = [abs(b - a) for a, b in test_list]
+-  res = min(temp)
+-  return (res) +def  min_difference(test_list):
++  temp = []
++  for a, b in test_list:
++      temp.append(abs(b - a))
++  res=min(temp)
++  return  (res) 

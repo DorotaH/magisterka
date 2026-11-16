@@ -1,0 +1,13 @@
+--- original
++++ sew
+@@ -1,8 +1,5 @@
+ def recursive_list_sum(data_list):
+-	total = 0
++	total=0
+ 	for element in data_list:
+-		if type(element) == type([]):
+-			total = total + recursive_list_sum(element)
+-		else:
+-			total = total + element
++		total = total + recursive_list_sum(element) if type(element) == type([]) else total + element
+ 	return total

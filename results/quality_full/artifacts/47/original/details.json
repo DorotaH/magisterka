@@ -1,0 +1,715 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nN802 Function name `compute_Last_Digit` should be lowercase\n --> solution.py:1:5\n  |\n1 | def compute_Last_Digit(A,B):\n  |     ^^^^^^^^^^^^^^^^^^\n2 |     variable = 1\n3 |     if (A == B):\n  |\n\nANN201 Missing return type annotation for public function `compute_Last_Digit`\n --> solution.py:1:5\n  |\n1 | def compute_Last_Digit(A,B):\n  |     ^^^^^^^^^^^^^^^^^^\n2 |     variable = 1\n3 |     if (A == B):\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def compute_Last_Digit(A,B):\n  |     ^^^^^^^^^^^^^^^^^^\n2 |     variable = 1\n3 |     if (A == B):\n  |\n\nN803 Argument name `A` should be lowercase\n --> solution.py:1:24\n  |\n1 | def compute_Last_Digit(A,B):\n  |                        ^\n2 |     variable = 1\n3 |     if (A == B):\n  |\n\nANN001 Missing type annotation for function argument `A`\n --> solution.py:1:24\n  |\n1 | def compute_Last_Digit(A,B):\n  |                        ^\n2 |     variable = 1\n3 |     if (A == B):\n  |\n\nN803 Argument name `B` should be lowercase\n --> solution.py:1:26\n  |\n1 | def compute_Last_Digit(A,B):\n  |                          ^\n2 |     variable = 1\n3 |     if (A == B):\n  |\n\nANN001 Missing type annotation for function argument `B`\n --> solution.py:1:26\n  |\n1 | def compute_Last_Digit(A,B):\n  |                          ^\n2 |     variable = 1\n3 |     if (A == B):\n  |\n\nPLR2004 Magic value used in comparison, consider replacing `5` with a constant variable\n --> solution.py:5:20\n  |\n3 |     if (A == B):\n4 |         return 1\n5 |     if ((B - A) >= 5):\n  |                    ^\n6 |         return 0\n7 |     for i in range(A + 1,B + 1):\n  |\n\nFound 18 errors (8 fixed, 10 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Function name `compute_Last_Digit` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `compute_Last_Digit`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 25,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 24,
+          "row": 1
+        },
+        "message": "Argument name `A` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 25,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 24,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `A`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 27,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 26,
+          "row": 1
+        },
+        "message": "Argument name `B` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 27,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 26,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `B`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 30,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 30,
+                "row": 1
+              },
+              "location": {
+                "column": 29,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 29,
+          "row": 1
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 18,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 18,
+                "row": 3
+              },
+              "location": {
+                "column": 17,
+                "row": 3
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 17,
+          "row": 3
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "RET505",
+        "end_location": {
+          "column": 9,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 7,
+                "row": 5
+              },
+              "location": {
+                "column": 5,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Remove unnecessary `elif`"
+        },
+        "location": {
+          "column": 5,
+          "row": 5
+        },
+        "message": "Unnecessary `elif` after `return` statement",
+        "name": "superfluous-else-return",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+      },
+      {
+        "cell": null,
+        "code": "PLR2004",
+        "end_location": {
+          "column": 23,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 5
+        },
+        "message": "Magic value used in comparison, consider replacing `5` with a constant variable",
+        "name": "magic-value-comparison",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/magic-value-comparison"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 27,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 27,
+                "row": 5
+              },
+              "location": {
+                "column": 25,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 25,
+          "row": 5
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 13,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 13,
+                "row": 7
+              },
+              "location": {
+                "column": 10,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 10,
+          "row": 7
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 38,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 38,
+                "row": 8
+              },
+              "location": {
+                "column": 37,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 37,
+          "row": 8
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 29,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 29,
+                "row": 10
+              },
+              "location": {
+                "column": 29,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 29,
+          "row": 10
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "N802": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "N803": 2,
+      "ANN001": 2,
+      "W291": 5,
+      "RET505": 1,
+      "PLR2004": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Function name `compute_Last_Digit` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `compute_Last_Digit`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 25,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 24,
+          "row": 1
+        },
+        "message": "Argument name `A` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 25,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 24,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `A`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 28,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 27,
+          "row": 1
+        },
+        "message": "Argument name `B` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 28,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 27,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `B`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "PLR2004",
+        "end_location": {
+          "column": 20,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 19,
+          "row": 5
+        },
+        "message": "Magic value used in comparison, consider replacing `5` with a constant variable",
+        "name": "magic-value-comparison",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/magic-value-comparison"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 5,
+    "functions": [
+      {
+        "name": "compute_Last_Digit",
+        "complexity": 5,
+        "line_start": 1,
+        "line_end": 10
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "compute_Last_Digit",
+      "lineno": 1,
+      "complexity": 4,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 10,
+    "lloc": 10,
+    "sloc": 10,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 6,
+      "h2": 10,
+      "N1": 9,
+      "N2": 18,
+      "vocabulary": 16,
+      "length": 27,
+      "calculated_length": 48.72905595320056,
+      "volume": 108.0,
+      "difficulty": 5.4,
+      "effort": 583.2,
+      "time": 32.400000000000006,
+      "bugs": 0.036
+    },
+    "functions": [
+      {
+        "name": "compute_Last_Digit",
+        "h1": 6,
+        "h2": 10,
+        "N1": 9,
+        "N2": 18,
+        "vocabulary": 16,
+        "length": 27,
+        "calculated_length": 48.72905595320056,
+        "volume": 108.0,
+        "difficulty": 5.4,
+        "effort": 583.2,
+        "time": 32.400000000000006,
+        "bugs": 0.036
+      }
+    ]
+  }
+}

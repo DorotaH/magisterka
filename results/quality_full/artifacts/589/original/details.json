@@ -1,0 +1,459 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `perfect_squares`\n --> solution.py:1:5\n  |\n1 | def perfect_squares(a, b):\n  |     ^^^^^^^^^^^^^^^\n2 |     lists=[]\n3 |     for i in range (a,b+1):\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def perfect_squares(a, b):\n  |     ^^^^^^^^^^^^^^^\n2 |     lists=[]\n3 |     for i in range (a,b+1):\n  |\n\nANN001 Missing type annotation for function argument `a`\n --> solution.py:1:21\n  |\n1 | def perfect_squares(a, b):\n  |                     ^\n2 |     lists=[]\n3 |     for i in range (a,b+1):\n  |\n\nANN001 Missing type annotation for function argument `b`\n --> solution.py:1:24\n  |\n1 | def perfect_squares(a, b):\n  |                        ^\n2 |     lists=[]\n3 |     for i in range (a,b+1):\n  |\n\nPLW2901 `for` loop variable `i` overwritten by assignment target\n  --> solution.py:9:9\n   |\n 7 |                  lists.append(i)\n 8 |             j = j+1\n 9 |         i = i+1\n   |         ^\n10 |     return lists\n   |\n\nFound 10 errors (3 fixed, 7 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 20,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `perfect_squares`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 20,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 21,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `a`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 25,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 24,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `b`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "E703",
+        "end_location": {
+          "column": 15,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 15,
+                "row": 4
+              },
+              "location": {
+                "column": 14,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Remove unnecessary semicolon"
+        },
+        "location": {
+          "column": 14,
+          "row": 4
+        },
+        "message": "Statement ends with an unnecessary semicolon",
+        "name": "useless-semicolon",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-semicolon"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 35,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 35,
+                "row": 7
+              },
+              "location": {
+                "column": 33,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 33,
+          "row": 7
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "PLW2901",
+        "end_location": {
+          "column": 10,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 9
+        },
+        "message": "`for` loop variable `i` overwritten by assignment target",
+        "name": "redefined-loop-name",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/redefined-loop-name"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 17,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 17,
+                "row": 10
+              },
+              "location": {
+                "column": 17,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 17,
+          "row": 10
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 2,
+      "E703": 1,
+      "W291": 1,
+      "PLW2901": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 20,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `perfect_squares`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 20,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 21,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `a`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 25,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 24,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `b`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "PLW2901",
+        "end_location": {
+          "column": 10,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 9
+        },
+        "message": "`for` loop variable `i` overwritten by assignment target",
+        "name": "redefined-loop-name",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/redefined-loop-name"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 6,
+    "functions": [
+      {
+        "name": "perfect_squares",
+        "complexity": 6,
+        "line_start": 1,
+        "line_end": 10
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "perfect_squares",
+      "lineno": 1,
+      "complexity": 4,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 10,
+    "lloc": 10,
+    "sloc": 10,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 4,
+      "h2": 6,
+      "N1": 7,
+      "N2": 14,
+      "vocabulary": 10,
+      "length": 21,
+      "calculated_length": 23.509775004326936,
+      "volume": 69.76048999263462,
+      "difficulty": 4.666666666666667,
+      "effort": 325.5489532989616,
+      "time": 18.086052961053422,
+      "bugs": 0.02325349666421154
+    },
+    "functions": [
+      {
+        "name": "perfect_squares",
+        "h1": 4,
+        "h2": 6,
+        "N1": 7,
+        "N2": 14,
+        "vocabulary": 10,
+        "length": 21,
+        "calculated_length": 23.509775004326936,
+        "volume": 69.76048999263462,
+        "difficulty": 4.666666666666667,
+        "effort": 325.5489532989616,
+        "time": 18.086052961053422,
+        "bugs": 0.02325349666421154
+      }
+    ]
+  }
+}

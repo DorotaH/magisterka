@@ -1,0 +1,15 @@
+--- original
++++ sew
+@@ -1,7 +1,7 @@
+-import re 
+-regex = '[a-zA-z0-9]$'
++import  re 
++regex='[a-zA-z0-9]$'
+ def check_alphanumeric(string): 
+-	if(re.search(regex, string)): 
++	if not (re.search(regex, string)): 
++		return ("Discard") 
++	else: 
+ 		return ("Accept") 
+-	else: 
+-		return ("Discard") 

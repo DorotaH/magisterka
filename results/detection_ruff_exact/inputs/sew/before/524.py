@@ -1,0 +1,14 @@
+def  max_sum_increasing_subsequence(arr, n): 
+	max = 0
+	msis = [0 for x in range(n)] 
+	for i in range(n): 
+		msis[i] = arr[i] 
+	for i in range(1, n): 
+		for  j in  range(0, i): 
+			if (arr[i] > arr[j] and
+				msis[i] < msis[j] + arr[i]): 
+				msis[i]=msis[j]+arr[i] 
+	for i in range(n): 
+		if msis[i] > max: 
+			max=msis[i] 
+	return max

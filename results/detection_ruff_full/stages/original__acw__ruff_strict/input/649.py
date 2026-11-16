@@ -1,0 +1,2 @@
+def sum_Range_list(nums, m, n):
+    return sum(nums[i] for i in range(m, n + 1, 1))

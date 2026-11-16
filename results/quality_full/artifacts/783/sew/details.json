@@ -1,0 +1,386 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `rgb_to_hsv`\n --> solution.py:1:6\n  |\n1 | def  rgb_to_hsv(r, g, b):\n  |      ^^^^^^^^^^\n2 |     r, g, b=r/255.0, g/255.0, b/255.0\n3 |     mx, mn = max(r, g, b), min(r, g, b)\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:6\n  |\n1 | def  rgb_to_hsv(r, g, b):\n  |      ^^^^^^^^^^\n2 |     r, g, b=r/255.0, g/255.0, b/255.0\n3 |     mx, mn = max(r, g, b), min(r, g, b)\n  |\n\nANN001 Missing type annotation for function argument `r`\n --> solution.py:1:17\n  |\n1 | def  rgb_to_hsv(r, g, b):\n  |                 ^\n2 |     r, g, b=r/255.0, g/255.0, b/255.0\n3 |     mx, mn = max(r, g, b), min(r, g, b)\n  |\n\nANN001 Missing type annotation for function argument `g`\n --> solution.py:1:20\n  |\n1 | def  rgb_to_hsv(r, g, b):\n  |                    ^\n2 |     r, g, b=r/255.0, g/255.0, b/255.0\n3 |     mx, mn = max(r, g, b), min(r, g, b)\n  |\n\nANN001 Missing type annotation for function argument `b`\n --> solution.py:1:23\n  |\n1 | def  rgb_to_hsv(r, g, b):\n  |                       ^\n2 |     r, g, b=r/255.0, g/255.0, b/255.0\n3 |     mx, mn = max(r, g, b), min(r, g, b)\n  |\n\nFound 8 errors (1 fixed, 7 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 16,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `rgb_to_hsv`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 16,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 17,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `r`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 20,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `g`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 24,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `b`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 22,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 22,
+                "row": 14
+              },
+              "location": {
+                "column": 22,
+                "row": 14
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 22,
+          "row": 14
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 3,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `rgb_to_hsv`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 17,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `r`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 20,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 19,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `g`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `b`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 5,
+    "functions": [
+      {
+        "name": "rgb_to_hsv",
+        "complexity": 5,
+        "line_start": 1,
+        "line_end": 14
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "rgb_to_hsv",
+      "lineno": 1,
+      "complexity": 6,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 14,
+    "lloc": 14,
+    "sloc": 14,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 6,
+      "h2": 26,
+      "N1": 27,
+      "N2": 54,
+      "vocabulary": 32,
+      "length": 81,
+      "calculated_length": 137.72120767599534,
+      "volume": 405.0,
+      "difficulty": 6.230769230769231,
+      "effort": 2523.4615384615386,
+      "time": 140.1923076923077,
+      "bugs": 0.135
+    },
+    "functions": [
+      {
+        "name": "rgb_to_hsv",
+        "h1": 6,
+        "h2": 26,
+        "N1": 27,
+        "N2": 54,
+        "vocabulary": 32,
+        "length": 81,
+        "calculated_length": 137.72120767599534,
+        "volume": 405.0,
+        "difficulty": 6.230769230769231,
+        "effort": 2523.4615384615386,
+        "time": 140.1923076923077,
+        "bugs": 0.135
+      }
+    ]
+  }
+}

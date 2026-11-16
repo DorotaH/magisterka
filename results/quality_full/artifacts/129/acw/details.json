@@ -1,0 +1,689 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 48,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 50,
+                "row": 7
+              },
+              "location": {
+                "column": 47,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 47,
+          "row": 7
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "PIE808": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 51,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 53,
+                "row": 7
+              },
+              "location": {
+                "column": 50,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 50,
+          "row": 7
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `magic_square_test`\n --> solution.py:1:5\n  |\n1 | def magic_square_test(my_matrix):\n  |     ^^^^^^^^^^^^^^^^^\n2 |     iSize = len(my_matrix[0])\n3 |     sum_list = []\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def magic_square_test(my_matrix):\n  |     ^^^^^^^^^^^^^^^^^\n2 |     iSize = len(my_matrix[0])\n3 |     sum_list = []\n  |\n\nANN001 Missing type annotation for function argument `my_matrix`\n --> solution.py:1:23\n  |\n1 | def magic_square_test(my_matrix):\n  |                       ^^^^^^^^^\n2 |     iSize = len(my_matrix[0])\n3 |     sum_list = []\n  |\n\nW191 Indentation contains tabs\n --> solution.py:2:1\n  |\n1 | def magic_square_test(my_matrix):\n2 |     iSize = len(my_matrix[0])\n  | ^^^^\n3 |     sum_list = []\n4 |     sum_list.extend([sum (lines) for lines in my_matrix])\n  |\n\nN806 Variable `iSize` in function should be lowercase\n --> solution.py:2:2\n  |\n1 | def magic_square_test(my_matrix):\n2 |     iSize = len(my_matrix[0])\n  |     ^^^^^\n3 |     sum_list = []\n4 |     sum_list.extend([sum (lines) for lines in my_matrix])\n  |\n\nW191 Indentation contains tabs\n --> solution.py:3:1\n  |\n1 | def magic_square_test(my_matrix):\n2 |     iSize = len(my_matrix[0])\n3 |     sum_list = []\n  | ^^^^\n4 |     sum_list.extend([sum (lines) for lines in my_matrix])\n5 |     for col in range(iSize):\n  |\n\nW191 Indentation contains tabs\n --> solution.py:4:1\n  |\n2 |     iSize = len(my_matrix[0])\n3 |     sum_list = []\n4 |     sum_list.extend([sum (lines) for lines in my_matrix])\n  | ^^^^\n5 |     for col in range(iSize):\n6 |         sum_list.append(sum(row[col] for row in my_matrix))\n  |\n\nW191 Indentation contains tabs\n --> solution.py:5:1\n  |\n3 |     sum_list = []\n4 |     sum_list.extend([sum (lines) for lines in my_matrix])\n5 |     for col in range(iSize):\n  | ^^^^\n6 |         sum_list.append(sum(row[col] for row in my_matrix))\n7 |     result1 = sum(my_matrix[i][i] for i in range(iSize))\n  |\n\nW191 Indentation contains tabs\n --> solution.py:6:1\n  |\n4 |     sum_list.extend([sum (lines) for lines in my_matrix])\n5 |     for col in range(iSize):\n6 |         sum_list.append(sum(row[col] for row in my_matrix))\n  | ^^^^^^^^\n7 |     result1 = sum(my_matrix[i][i] for i in range(iSize))\n8 |     sum_list.append(result1)\n  |\n\nPERF401 Use `list.extend` to create a transformed list\n --> solution.py:6:3\n  |\n4 |     sum_list.extend([sum (lines) for lines in my_matrix])\n5 |     for col in range(iSize):\n6 |         sum_list.append(sum(row[col] for row in my_matrix))\n  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n7 |     result1 = sum(my_matrix[i][i] for i in range(iSize))\n8 |     sum_list.append(result1)\n  |\nhelp: Replace for loop with list.extend\n\nW191 Indentation contains tabs\n --> solution.py:7:1\n  |\n5 |     for col in range(iSize):\n6 |         sum_list.append(sum(row[col] for row in my_matrix))\n7 |     result1 = sum(my_matrix[i][i] for i in range(iSize))\n  | ^^^^\n8 |     sum_list.append(result1)\n9 |     result2 = sum(my_matrix[i][i] for i in range(iSize - 1, -1, -1))\n  |\n\nW191 Indentation contains tabs\n  --> solution.py:8:1\n   |\n 6 |         sum_list.append(sum(row[col] for row in my_matrix))\n 7 |     result1 = sum(my_matrix[i][i] for i in range(iSize))\n 8 |     sum_list.append(result1)\n   | ^^^^\n 9 |     result2 = sum(my_matrix[i][i] for i in range(iSize - 1, -1, -1))\n10 |     sum_list.append(result2)\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:9:1\n   |\n 7 |     result1 = sum(my_matrix[i][i] for i in range(iSize))\n 8 |     sum_list.append(result1)\n 9 |     result2 = sum(my_matrix[i][i] for i in range(iSize - 1, -1, -1))\n   | ^^^^\n10 |     sum_list.append(result2)\n11 |     return bool(len(set(sum_list)) <= 1)\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:10:1\n   |\n 8 |     sum_list.append(result1)\n 9 |     result2 = sum(my_matrix[i][i] for i in range(iSize - 1, -1, -1))\n10 |     sum_list.append(result2)\n   | ^^^^\n11 |     return bool(len(set(sum_list)) <= 1)\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:11:1\n   |\n 9 |     result2 = sum(my_matrix[i][i] for i in range(iSize - 1, -1, -1))\n10 |     sum_list.append(result2)\n11 |     return bool(len(set(sum_list)) <= 1)\n   | ^^^^\n\nFound 19 errors (2 fixed, 17 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `magic_square_test`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 32,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `my_matrix`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 2
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "N806",
+        "end_location": {
+          "column": 7,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 2,
+          "row": 2
+        },
+        "message": "Variable `iSize` in function should be lowercase",
+        "name": "non-lowercase-variable-in-function",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/non-lowercase-variable-in-function"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 3
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 4
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 5
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 6
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "PERF401",
+        "end_location": {
+          "column": 54,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 3,
+          "row": 6
+        },
+        "message": "Use `list.extend` to create a transformed list",
+        "name": "manual-list-comprehension",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/manual-list-comprehension"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 7
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 48,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 50,
+                "row": 7
+              },
+              "location": {
+                "column": 47,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 47,
+          "row": 7
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 8
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 9
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 10
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 11
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "SIM300",
+        "end_location": {
+          "column": 37,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "len(set(sum_list)) <= 1",
+              "end_location": {
+                "column": 37,
+                "row": 11
+              },
+              "location": {
+                "column": 14,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Rewrite as `len(set(sum_list)) <= 1`"
+        },
+        "location": {
+          "column": 14,
+          "row": 11
+        },
+        "message": "Yoda condition detected",
+        "name": "yoda-conditions",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/yoda-conditions"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 1,
+      "W191": 10,
+      "N806": 1,
+      "PERF401": 1,
+      "PIE808": 1,
+      "SIM300": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `magic_square_test`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 32,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `my_matrix`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "N806",
+        "end_location": {
+          "column": 10,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 2
+        },
+        "message": "Variable `iSize` in function should be lowercase",
+        "name": "non-lowercase-variable-in-function",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/non-lowercase-variable-in-function"
+      },
+      {
+        "cell": null,
+        "code": "PERF401",
+        "end_location": {
+          "column": 60,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 6
+        },
+        "message": "Use `list.extend` to create a transformed list",
+        "name": "manual-list-comprehension",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/manual-list-comprehension"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 1,
+    "functions": [
+      {
+        "name": "magic_square_test",
+        "complexity": 1,
+        "line_start": 1,
+        "line_end": 11
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "magic_square_test",
+      "lineno": 1,
+      "complexity": 6,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 11,
+    "lloc": 11,
+    "sloc": 11,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 3,
+      "h2": 3,
+      "N1": 4,
+      "N2": 6,
+      "vocabulary": 6,
+      "length": 10,
+      "calculated_length": 9.509775004326938,
+      "volume": 25.84962500721156,
+      "difficulty": 3.0,
+      "effort": 77.54887502163469,
+      "time": 4.308270834535261,
+      "bugs": 0.00861654166907052
+    },
+    "functions": [
+      {
+        "name": "magic_square_test",
+        "h1": 3,
+        "h2": 3,
+        "N1": 4,
+        "N2": 6,
+        "vocabulary": 6,
+        "length": 10,
+        "calculated_length": 9.509775004326938,
+        "volume": 25.84962500721156,
+        "difficulty": 3.0,
+        "effort": 77.54887502163469,
+        "time": 4.308270834535261,
+        "bugs": 0.00861654166907052
+      }
+    ]
+  }
+}

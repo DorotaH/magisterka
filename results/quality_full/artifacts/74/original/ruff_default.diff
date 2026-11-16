@@ -1,0 +1,30 @@
+--- source.py
++++ ruff_default.py
+@@ -1,9 +1,9 @@
+-def is_samepatterns(colors, patterns):    
++def is_samepatterns(colors, patterns):
+     if len(colors) != len(patterns):
+-        return False    
++        return False
+     sdict = {}
+     pset = set()
+-    sset = set()    
++    sset = set()
+     for i in range(len(patterns)):
+         pset.add(patterns[i])
+         sset.add(colors[i])
+@@ -15,12 +15,11 @@
+         sdict[patterns[i]] = keys
+ 
+     if len(pset) != len(sset):
+-        return False   
++        return False
+ 
+     for values in sdict.values():
+-
+         for i in range(len(values) - 1):
+-            if values[i] != values[i+1]:
++            if values[i] != values[i + 1]:
+                 return False
+ 
+-    return True+    return True

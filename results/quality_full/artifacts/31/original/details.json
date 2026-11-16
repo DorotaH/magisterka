@@ -1,0 +1,461 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `func`\n --> solution.py:1:5\n  |\n1 | def func(nums, k):\n  |     ^^^^\n2 |     import collections\n3 |     d = collections.defaultdict(int)\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def func(nums, k):\n  |     ^^^^\n2 |     import collections\n3 |     d = collections.defaultdict(int)\n  |\n\nANN001 Missing type annotation for function argument `nums`\n --> solution.py:1:10\n  |\n1 | def func(nums, k):\n  |          ^^^^\n2 |     import collections\n3 |     d = collections.defaultdict(int)\n  |\n\nANN001 Missing type annotation for function argument `k`\n --> solution.py:1:16\n  |\n1 | def func(nums, k):\n  |                ^\n2 |     import collections\n3 |     d = collections.defaultdict(int)\n  |\n\nPLC0415 `import` should be at the top-level of a file\n --> solution.py:2:5\n  |\n1 | def func(nums, k):\n2 |     import collections\n  |     ^^^^^^^^^^^^^^^^^^\n3 |     d = collections.defaultdict(int)\n4 |     for row in nums:\n  |\n\nPLC0415 `import` should be at the top-level of a file\n  --> solution.py:8:5\n   |\n 6 |             d[i] += 1\n 7 |     temp = []\n 8 |     import heapq\n   |     ^^^^^^^^^^^^\n 9 |     for key, v in d.items():\n10 |         if len(temp) < k:\n   |\n\nFound 10 errors (2 fixed, 8 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 9,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `func`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 9,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 10,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `nums`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 17,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "PLC0415",
+        "end_location": {
+          "column": 23,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 2
+        },
+        "message": "`import` should be at the top-level of a file",
+        "name": "import-outside-top-level",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+      },
+      {
+        "cell": null,
+        "code": "PLC0415",
+        "end_location": {
+          "column": 17,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 8
+        },
+        "message": "`import` should be at the top-level of a file",
+        "name": "import-outside-top-level",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+      },
+      {
+        "cell": null,
+        "code": "PLR5501",
+        "end_location": {
+          "column": 13,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "        elif v > temp[0][0]:\n            heapq.heappop(temp)\n            heapq.heappush(temp, (v, key))",
+              "end_location": {
+                "column": 47,
+                "row": 17
+              },
+              "location": {
+                "column": 1,
+                "row": 14
+              }
+            }
+          ],
+          "message": "Convert to `elif`"
+        },
+        "location": {
+          "column": 9,
+          "row": 14
+        },
+        "message": "Use `elif` instead of `else` then `if`, to reduce indentation",
+        "name": "collapsible-else-if",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/collapsible-else-if"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 18,
+          "row": 22
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 18,
+                "row": 22
+              },
+              "location": {
+                "column": 18,
+                "row": 22
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 18,
+          "row": 22
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 22,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 2,
+      "PLC0415": 2,
+      "PLR5501": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 9,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `func`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 9,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 10,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `nums`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 17,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "PLC0415",
+        "end_location": {
+          "column": 23,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 2
+        },
+        "message": "`import` should be at the top-level of a file",
+        "name": "import-outside-top-level",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+      },
+      {
+        "cell": null,
+        "code": "PLC0415",
+        "end_location": {
+          "column": 17,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 9
+        },
+        "message": "`import` should be at the top-level of a file",
+        "name": "import-outside-top-level",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 14,
+    "functions": [
+      {
+        "name": "func",
+        "complexity": 14,
+        "line_start": 1,
+        "line_end": 22
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "func",
+      "lineno": 1,
+      "complexity": 8,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 22,
+    "lloc": 22,
+    "sloc": 22,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 4,
+      "h2": 7,
+      "N1": 4,
+      "N2": 8,
+      "vocabulary": 11,
+      "length": 12,
+      "calculated_length": 27.651484454403228,
+      "volume": 41.51317942364757,
+      "difficulty": 2.2857142857142856,
+      "effort": 94.88726725405158,
+      "time": 5.27151484744731,
+      "bugs": 0.01383772647454919
+    },
+    "functions": [
+      {
+        "name": "func",
+        "h1": 4,
+        "h2": 7,
+        "N1": 4,
+        "N2": 8,
+        "vocabulary": 11,
+        "length": 12,
+        "calculated_length": 27.651484454403228,
+        "volume": 41.51317942364757,
+        "difficulty": 2.2857142857142856,
+        "effort": 94.88726725405158,
+        "time": 5.27151484744731,
+        "bugs": 0.01383772647454919
+      }
+    ]
+  }
+}

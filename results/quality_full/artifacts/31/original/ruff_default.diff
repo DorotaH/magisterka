@@ -1,0 +1,21 @@
+--- source.py
++++ ruff_default.py
+@@ -1,11 +1,13 @@
+ def func(nums, k):
+     import collections
++
+     d = collections.defaultdict(int)
+     for row in nums:
+         for i in row:
+             d[i] += 1
+     temp = []
+     import heapq
++
+     for key, v in d.items():
+         if len(temp) < k:
+             temp.append((v, key))
+@@ -19,4 +21,4 @@
+     while temp:
+         v, key = heapq.heappop(temp)
+         result.append(key)
+-    return result+    return result

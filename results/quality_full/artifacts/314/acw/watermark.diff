@@ -1,0 +1,10 @@
+--- original
++++ acw
+@@ -3,6 +3,6 @@
+ 	excl = 0
+ 	for i in range(1, n) : 
+ 		excl_new = max(excl, incl) 
+-		incl = excl + max(grid[0][i], grid[1][i]) 
++		incl = max(grid[0][i], grid[1][i]) + excl 
+ 		excl = excl_new 
+-	return max(excl, incl)+	return max(excl, incl)

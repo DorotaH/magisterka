@@ -1,0 +1,21 @@
+--- original
++++ sew
+@@ -1,12 +1,12 @@
+ def max_run_uppercase(test_str):
+   cnt = 0
+   res = 0
+-  for idx in range(0, len(test_str)):
+-    if test_str[idx].isupper():
+-      cnt += 1
+-    else:
++  for idx in range(len(test_str)):
++    if not test_str[idx].isupper():
+       res = cnt
+       cnt = 0
+-  if test_str[len(test_str) - 1].isupper():
+-    res = cnt
++    else:
++      cnt += 1
++  if  test_str[len(test_str) - 1].isupper():
++    res=cnt
+   return (res)

@@ -1,0 +1,703 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "UP034",
+        "end_location": {
+          "column": 61,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "re.search(p, str)",
+              "end_location": {
+                "column": 61,
+                "row": 11
+              },
+              "location": {
+                "column": 42,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Remove extraneous parentheses"
+        },
+        "location": {
+          "column": 42,
+          "row": 11
+        },
+        "message": "Avoid extraneous parentheses",
+        "name": "extraneous-parentheses",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/extraneous-parentheses"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "UP034": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "UP034",
+        "end_location": {
+          "column": 64,
+          "row": 13
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "re.search(p, str)",
+              "end_location": {
+                "column": 64,
+                "row": 13
+              },
+              "location": {
+                "column": 45,
+                "row": 13
+              }
+            }
+          ],
+          "message": "Remove extraneous parentheses"
+        },
+        "location": {
+          "column": 45,
+          "row": 13
+        },
+        "message": "Avoid extraneous parentheses",
+        "name": "extraneous-parentheses",
+        "noqa_row": 13,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/extraneous-parentheses"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nN802 Function name `is_valid_URL` should be lowercase\n --> solution.py:4:5\n  |\n4 | def is_valid_URL(str):\n  |     ^^^^^^^^^^^^\n5 |     regex = (\"[a-zA-Z0-9@:%._\\\\+~#?&//=]\"\n6 |             \"((http|https)://)(www.)?\"\n  |\n\nANN201 Missing return type annotation for public function `is_valid_URL`\n --> solution.py:4:5\n  |\n4 | def is_valid_URL(str):\n  |     ^^^^^^^^^^^^\n5 |     regex = (\"[a-zA-Z0-9@:%._\\\\+~#?&//=]\"\n6 |             \"((http|https)://)(www.)?\"\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:4:5\n  |\n4 | def is_valid_URL(str):\n  |     ^^^^^^^^^^^^\n5 |     regex = (\"[a-zA-Z0-9@:%._\\\\+~#?&//=]\"\n6 |             \"((http|https)://)(www.)?\"\n  |\n\nA002 Function argument `str` is shadowing a Python builtin\n --> solution.py:4:18\n  |\n4 | def is_valid_URL(str):\n  |                  ^^^\n5 |     regex = (\"[a-zA-Z0-9@:%._\\\\+~#?&//=]\"\n6 |             \"((http|https)://)(www.)?\"\n  |\n\nANN001 Missing type annotation for function argument `str`\n --> solution.py:4:18\n  |\n4 | def is_valid_URL(str):\n  |                  ^^^\n5 |     regex = (\"[a-zA-Z0-9@:%._\\\\+~#?&//=]\"\n6 |             \"((http|https)://)(www.)?\"\n  |\n\nW191 Indentation contains tabs\n --> solution.py:5:1\n  |\n4 | def is_valid_URL(str):\n5 |     regex = (\"[a-zA-Z0-9@:%._\\\\+~#?&//=]\"\n  | ^^^^\n6 |             \"((http|https)://)(www.)?\"\n7 |             \"{2,256}\\\\.[a-z]\"\n  |\n\nW191 Indentation contains tabs\n --> solution.py:6:1\n  |\n4 | def is_valid_URL(str):\n5 |     regex = (\"[a-zA-Z0-9@:%._\\\\+~#?&//=]\"\n6 |             \"((http|https)://)(www.)?\"\n  | ^^^^^^^^^^^^\n7 |             \"{2,256}\\\\.[a-z]\"\n8 |             \"{2,6}\\\\b([-a-zA-Z0-9@:%\"\n  |\n\nW191 Indentation contains tabs\n --> solution.py:7:1\n  |\n5 |     regex = (\"[a-zA-Z0-9@:%._\\\\+~#?&//=]\"\n6 |             \"((http|https)://)(www.)?\"\n7 |             \"{2,256}\\\\.[a-z]\"\n  | ^^^^^^^^^^^^\n8 |             \"{2,6}\\\\b([-a-zA-Z0-9@:%\"\n9 |             \"._\\\\+~#?&//=]*)\")\n  |\n\nW191 Indentation contains tabs\n  --> solution.py:8:1\n   |\n 6 |             \"((http|https)://)(www.)?\"\n 7 |             \"{2,256}\\\\.[a-z]\"\n 8 |             \"{2,6}\\\\b([-a-zA-Z0-9@:%\"\n   | ^^^^^^^^^^^^\n 9 |             \"._\\\\+~#?&//=]*)\")\n10 |     p = re.compile(regex)\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:9:1\n   |\n 7 |             \"{2,256}\\\\.[a-z]\"\n 8 |             \"{2,6}\\\\b([-a-zA-Z0-9@:%\"\n 9 |             \"._\\\\+~#?&//=]*)\")\n   | ^^^^^^^^^^^^\n10 |     p = re.compile(regex)\n11 |     return False if (str == None) else bool(re.search(p, str))\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:10:1\n   |\n 8 |             \"{2,6}\\\\b([-a-zA-Z0-9@:%\"\n 9 |             \"._\\\\+~#?&//=]*)\")\n10 |     p = re.compile(regex)\n   | ^^^^\n11 |     return False if (str == None) else bool(re.search(p, str))\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:11:1\n   |\n 9 |             \"._\\\\+~#?&//=]*)\")\n10 |     p = re.compile(regex)\n11 |     return False if (str == None) else bool(re.search(p, str))\n   | ^^^^\n\nE711 Comparison to `None` should be `cond is None`\n  --> solution.py:11:26\n   |\n 9 |             \"._\\\\+~#?&//=]*)\")\n10 |     p = re.compile(regex)\n11 |     return False if (str == None) else bool(re.search(p, str))\n   |                             ^^^^\nhelp: Replace with `cond is None`\n   |\n10 | \tp = re.compile(regex)\n   - \treturn False if (str == None) else bool(re.search(p, str))\n11 + \treturn False if (str is None) else bool(re.search(p, str))\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 20 errors (5 fixed, 15 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 17,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Function name `is_valid_URL` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 17,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing return type annotation for public function `is_valid_URL`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 17,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "A002",
+        "end_location": {
+          "column": 21,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 18,
+          "row": 4
+        },
+        "message": "Function argument `str` is shadowing a Python builtin",
+        "name": "builtin-argument-shadowing",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-argument-shadowing"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 21,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 18,
+          "row": 4
+        },
+        "message": "Missing type annotation for function argument `str`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 5
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "ISC003",
+        "end_location": {
+          "column": 30,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n\t\t\t",
+              "end_location": {
+                "column": 4,
+                "row": 6
+              },
+              "location": {
+                "column": 39,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Remove redundant '+' operator to implicitly concatenate"
+        },
+        "location": {
+          "column": 11,
+          "row": 5
+        },
+        "message": "Explicitly concatenated string should be implicitly concatenated",
+        "name": "explicit-string-concatenation",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/explicit-string-concatenation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 6
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 7
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 8
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 9
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 10
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 11
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "E711",
+        "end_location": {
+          "column": 30,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "str is None",
+              "end_location": {
+                "column": 30,
+                "row": 11
+              },
+              "location": {
+                "column": 19,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Replace with `cond is None`"
+        },
+        "location": {
+          "column": 26,
+          "row": 11
+        },
+        "message": "Comparison to `None` should be `cond is None`",
+        "name": "none-comparison",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/none-comparison"
+      },
+      {
+        "cell": null,
+        "code": "UP034",
+        "end_location": {
+          "column": 61,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "re.search(p, str)",
+              "end_location": {
+                "column": 61,
+                "row": 11
+              },
+              "location": {
+                "column": 42,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Remove extraneous parentheses"
+        },
+        "location": {
+          "column": 42,
+          "row": 11
+        },
+        "message": "Avoid extraneous parentheses",
+        "name": "extraneous-parentheses",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/extraneous-parentheses"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "N802": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "A002": 1,
+      "ANN001": 1,
+      "W191": 7,
+      "ISC003": 1,
+      "E711": 1,
+      "UP034": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 17,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Function name `is_valid_URL` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 17,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing return type annotation for public function `is_valid_URL`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 17,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "A002",
+        "end_location": {
+          "column": 21,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 18,
+          "row": 4
+        },
+        "message": "Function argument `str` is shadowing a Python builtin",
+        "name": "builtin-argument-shadowing",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-argument-shadowing"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 21,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 18,
+          "row": 4
+        },
+        "message": "Missing type annotation for function argument `str`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "E711",
+        "end_location": {
+          "column": 33,
+          "row": 13
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "str is None",
+              "end_location": {
+                "column": 33,
+                "row": 13
+              },
+              "location": {
+                "column": 22,
+                "row": 13
+              }
+            }
+          ],
+          "message": "Replace with `cond is None`"
+        },
+        "location": {
+          "column": 29,
+          "row": 13
+        },
+        "message": "Comparison to `None` should be `cond is None`",
+        "name": "none-comparison",
+        "noqa_row": 13,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/none-comparison"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 1,
+    "functions": [
+      {
+        "name": "is_valid_URL",
+        "complexity": 1,
+        "line_start": 4,
+        "line_end": 11
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "is_valid_URL",
+      "lineno": 4,
+      "complexity": 2,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 11,
+    "lloc": 5,
+    "sloc": 9,
+    "comments": 0,
+    "multi": 0,
+    "blank": 2,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 2,
+      "h2": 10,
+      "N1": 5,
+      "N2": 10,
+      "vocabulary": 12,
+      "length": 15,
+      "calculated_length": 35.219280948873624,
+      "volume": 53.77443751081735,
+      "difficulty": 1.0,
+      "effort": 53.77443751081735,
+      "time": 2.987468750600964,
+      "bugs": 0.017924812503605784
+    },
+    "functions": [
+      {
+        "name": "is_valid_URL",
+        "h1": 2,
+        "h2": 10,
+        "N1": 5,
+        "N2": 10,
+        "vocabulary": 12,
+        "length": 15,
+        "calculated_length": 35.219280948873624,
+        "volume": 53.77443751081735,
+        "difficulty": 1.0,
+        "effort": 53.77443751081735,
+        "time": 2.987468750600964,
+        "bugs": 0.017924812503605784
+      }
+    ]
+  }
+}

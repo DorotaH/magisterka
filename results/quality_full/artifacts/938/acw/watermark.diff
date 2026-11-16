@@ -1,0 +1,34 @@
+--- original
++++ acw
+@@ -1,4 +1,5 @@
+ import sys 
++
+ 
+ def find_closet(A, B, C, p, q, r): 
+ 	diff = sys.maxsize 
+@@ -8,10 +9,10 @@
+ 	i = 0
+ 	j = 0
+ 	k = 0
+-	while(i < p and j < q and k < r): 
++	while (i < p and q > j and k < r): 
+ 		minimum = min(A[i], min(B[j], C[k])) 
+ 		maximum = max(A[i], max(B[j], C[k])); 
+-		if maximum-minimum < diff: 
++		if maximum - minimum < diff: 
+ 			res_i = i 
+ 			res_j = j 
+ 			res_k = k 
+@@ -19,9 +20,9 @@
+ 		if diff == 0: 
+ 			break
+ 		if A[i] == minimum: 
+-			i = i+1
++			i = i + 1
+ 		elif B[j] == minimum: 
+-			j = j+1
++			j = 1 + j
+ 		else: 
+-			k = k+1
+-	return A[res_i],B[res_j],C[res_k]+			k = k + 1
++	return A[res_i], B[res_j], C[res_k]

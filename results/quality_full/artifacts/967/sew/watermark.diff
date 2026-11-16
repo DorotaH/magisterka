@@ -1,0 +1,11 @@
+--- original
++++ sew
+@@ -1,5 +1,5 @@
+ def check(string): 
+-  if len(set(string).intersection("AEIOUaeiou"))>=5: 
++  if not len(set(string).intersection("AEIOUaeiou"))>=5: 
++    return ("not accepted") 
++  else: 
+     return ('accepted') 
+-  else: 
+-    return ("not accepted") 

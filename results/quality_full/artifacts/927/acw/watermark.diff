@@ -1,0 +1,22 @@
+--- original
++++ acw
+@@ -3,13 +3,11 @@
+ 		self.data = data 
+ 		self.left = None
+ 		self.right = None
++
++
+ def max_height(node): 
+-	if node is None: 
+-		return 0 ; 
+-	else : 
+-		left_height = max_height(node.left) 
+-		right_height = max_height(node.right) 
+-		if (left_height > right_height): 
+-			return left_height+1
+-		else: 
+-			return right_height+1+	if node is None:
++		return 0 ;
++	left_height = max_height(node.left)
++	right_height = max_height(node.right)
++	return left_height + 1 if (left_height > right_height) else 1 + right_height

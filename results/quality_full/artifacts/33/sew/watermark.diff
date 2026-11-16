@@ -1,0 +1,18 @@
+--- original
++++ sew
+@@ -1,10 +1,9 @@
+ def decimal_To_Binary(N): 
+     B_Number = 0
+     cnt = 0
+-    while (N != 0): 
+-        rem = N % 2
+-        c = pow(10,cnt)  
+-        B_Number += rem*c  
+-        N //= 2 
+-        cnt += 1
++    while  (0 != N): 
++        rem, c = N % 2, pow(10,cnt)  
++        B_Number = B_Number + rem*c  
++        N = N // 2 
++        cnt = cnt + 1
+     return B_Number  

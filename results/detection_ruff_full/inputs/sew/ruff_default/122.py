@@ -1,0 +1,17 @@
+MAX = 3000
+
+
+def smartNumber(n):
+    primes = [0] * MAX
+    result = list()
+    for i in range(2, MAX):
+        if primes[i] == 0:
+            primes[i] = 1
+            j = 2 * i
+            while j < MAX:
+                primes[j] -= 1
+                if 0 == (primes[j] + 3):
+                    result.append(j)
+                j = j + i
+    result.sort()
+    return result[n - 1]

@@ -1,0 +1,493 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "FURB136",
+        "end_location": {
+          "column": 25,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max(y, x)",
+              "end_location": {
+                "column": 25,
+                "row": 2
+              },
+              "location": {
+                "column": 8,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace with `max(y, x)`"
+        },
+        "location": {
+          "column": 8,
+          "row": 2
+        },
+        "message": "Replace `x if x > y else y` with `max(y, x)`",
+        "name": "if-expr-min-max",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/if-expr-min-max"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "FURB136": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "FURB136",
+        "end_location": {
+          "column": 26,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max(y, x)",
+              "end_location": {
+                "column": 26,
+                "row": 2
+              },
+              "location": {
+                "column": 9,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace with `max(y, x)`"
+        },
+        "location": {
+          "column": 9,
+          "row": 2
+        },
+        "message": "Replace `x if x > y else y` with `max(y, x)`",
+        "name": "if-expr-min-max",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/if-expr-min-max"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `lcm`\n --> solution.py:1:5\n  |\n1 | def lcm(x, y):\n  |     ^^^\n2 |    z = max(y, x)\n3 |    while(True):\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def lcm(x, y):\n  |     ^^^\n2 |    z = max(y, x)\n3 |    while(True):\n  |\n\nANN001 Missing type annotation for function argument `x`\n --> solution.py:1:9\n  |\n1 | def lcm(x, y):\n  |         ^\n2 |    z = max(y, x)\n3 |    while(True):\n  |\n\nANN001 Missing type annotation for function argument `y`\n --> solution.py:1:12\n  |\n1 | def lcm(x, y):\n  |            ^\n2 |    z = max(y, x)\n3 |    while(True):\n  |\n\nFound 9 errors (3 fixed, 6 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 8,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `lcm`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 8,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 10,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `x`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 13,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 12,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `y`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "FURB136",
+        "end_location": {
+          "column": 25,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max(y, x)",
+              "end_location": {
+                "column": 25,
+                "row": 2
+              },
+              "location": {
+                "column": 8,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace with `max(y, x)`"
+        },
+        "location": {
+          "column": 8,
+          "row": 2
+        },
+        "message": "Replace `x if x > y else y` with `max(y, x)`",
+        "name": "if-expr-min-max",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/if-expr-min-max"
+      },
+      {
+        "cell": null,
+        "code": "SIM300",
+        "end_location": {
+          "column": 22,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "z % x == 0",
+              "end_location": {
+                "column": 22,
+                "row": 4
+              },
+              "location": {
+                "column": 12,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Rewrite as `z % x == 0`"
+        },
+        "location": {
+          "column": 12,
+          "row": 4
+        },
+        "message": "Yoda condition detected",
+        "name": "yoda-conditions",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/yoda-conditions"
+      },
+      {
+        "cell": null,
+        "code": "SIM300",
+        "end_location": {
+          "column": 40,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "z % y == 0",
+              "end_location": {
+                "column": 40,
+                "row": 4
+              },
+              "location": {
+                "column": 30,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Rewrite as `z % y == 0`"
+        },
+        "location": {
+          "column": 30,
+          "row": 4
+        },
+        "message": "Yoda condition detected",
+        "name": "yoda-conditions",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/yoda-conditions"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 2,
+      "FURB136": 1,
+      "SIM300": 2
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 8,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `lcm`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 8,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 10,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `x`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 13,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 12,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `y`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 5,
+    "functions": [
+      {
+        "name": "lcm",
+        "complexity": 5,
+        "line_start": 1,
+        "line_end": 8
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "lcm",
+      "lineno": 1,
+      "complexity": 5,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 8,
+    "lloc": 8,
+    "sloc": 8,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 5,
+      "h2": 9,
+      "N1": 7,
+      "N2": 14,
+      "vocabulary": 14,
+      "length": 21,
+      "calculated_length": 40.13896548741762,
+      "volume": 79.95445336320968,
+      "difficulty": 3.888888888888889,
+      "effort": 310.93398530137097,
+      "time": 17.27411029452061,
+      "bugs": 0.026651484454403226
+    },
+    "functions": [
+      {
+        "name": "lcm",
+        "h1": 5,
+        "h2": 9,
+        "N1": 7,
+        "N2": 14,
+        "vocabulary": 14,
+        "length": 21,
+        "calculated_length": 40.13896548741762,
+        "volume": 79.95445336320968,
+        "difficulty": 3.888888888888889,
+        "effort": 310.93398530137097,
+        "time": 17.27411029452061,
+        "bugs": 0.026651484454403226
+      }
+    ]
+  }
+}

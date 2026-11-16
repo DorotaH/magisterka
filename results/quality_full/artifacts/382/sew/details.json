@@ -1,0 +1,424 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `find_rotation_count`\n --> solution.py:1:5\n  |\n1 | def find_rotation_count(A):\n  |     ^^^^^^^^^^^^^^^^^^^\n2 |     (left, right)=(0, len(A)-1)\n3 |     while right >= left:\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def find_rotation_count(A):\n  |     ^^^^^^^^^^^^^^^^^^^\n2 |     (left, right)=(0, len(A)-1)\n3 |     while right >= left:\n  |\n\nN803 Argument name `A` should be lowercase\n --> solution.py:1:25\n  |\n1 | def find_rotation_count(A):\n  |                         ^\n2 |     (left, right)=(0, len(A)-1)\n3 |     while right >= left:\n  |\n\nANN001 Missing type annotation for function argument `A`\n --> solution.py:1:25\n  |\n1 | def find_rotation_count(A):\n  |                         ^\n2 |     (left, right)=(0, len(A)-1)\n3 |     while right >= left:\n  |\n\nA001 Variable `next` is shadowing a Python builtin\n --> solution.py:7:9\n  |\n5 |             return  left\n6 |         mid = (left + right) // 2\n7 |         next, prev = (mid + 1) % len(A), (mid - 1 + len(A)) % len(A)\n  |         ^^^^\n8 |         if A[mid] <= A[next] and A[mid] <= A[prev]:\n9 |             return  mid\n  |\n\nFound 9 errors (2 fixed, 7 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 24,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `find_rotation_count`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 24,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 26,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 25,
+          "row": 1
+        },
+        "message": "Argument name `A` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 26,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 25,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `A`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "A001",
+        "end_location": {
+          "column": 13,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 7
+        },
+        "message": "Variable `next` is shadowing a Python builtin",
+        "name": "builtin-variable-shadowing",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-variable-shadowing"
+      },
+      {
+        "cell": null,
+        "code": "RET505",
+        "end_location": {
+          "column": 13,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 11,
+                "row": 10
+              },
+              "location": {
+                "column": 9,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Remove unnecessary `elif`"
+        },
+        "location": {
+          "column": 9,
+          "row": 10
+        },
+        "message": "Unnecessary `elif` after `return` statement",
+        "name": "superfluous-else-return",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 15,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 15,
+                "row": 14
+              },
+              "location": {
+                "column": 15,
+                "row": 14
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 15,
+          "row": 14
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "N803": 1,
+      "ANN001": 1,
+      "A001": 1,
+      "RET505": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 24,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `find_rotation_count`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 24,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 26,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 25,
+          "row": 1
+        },
+        "message": "Argument name `A` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 26,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 25,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `A`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "A001",
+        "end_location": {
+          "column": 13,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 7
+        },
+        "message": "Variable `next` is shadowing a Python builtin",
+        "name": "builtin-variable-shadowing",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-variable-shadowing"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 8,
+    "functions": [
+      {
+        "name": "find_rotation_count",
+        "complexity": 8,
+        "line_start": 1,
+        "line_end": 14
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "find_rotation_count",
+      "lineno": 1,
+      "complexity": 7,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 14,
+    "lloc": 14,
+    "sloc": 14,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 8,
+      "h2": 25,
+      "N1": 18,
+      "N2": 35,
+      "vocabulary": 33,
+      "length": 53,
+      "calculated_length": 140.0964047443681,
+      "volume": 267.35288832599804,
+      "difficulty": 5.6,
+      "effort": 1497.1761746255888,
+      "time": 83.17645414586605,
+      "bugs": 0.08911762944199934
+    },
+    "functions": [
+      {
+        "name": "find_rotation_count",
+        "h1": 8,
+        "h2": 25,
+        "N1": 18,
+        "N2": 35,
+        "vocabulary": 33,
+        "length": 53,
+        "calculated_length": 140.0964047443681,
+        "volume": 267.35288832599804,
+        "difficulty": 5.6,
+        "effort": 1497.1761746255888,
+        "time": 83.17645414586605,
+        "bugs": 0.08911762944199934
+      }
+    ]
+  }
+}

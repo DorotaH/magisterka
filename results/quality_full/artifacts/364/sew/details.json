@@ -1,0 +1,1501 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 18,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 20,
+                "row": 5
+              },
+              "location": {
+                "column": 17,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 17,
+          "row": 5
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "PIE808": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 21,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 23,
+                "row": 7
+              },
+              "location": {
+                "column": 20,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 20,
+          "row": 7
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `make_flip`\n --> solution.py:1:6\n  |\n1 | def  make_flip(ch):\n  |      ^^^^^^^^^\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n3 | def  get_flip_with_starting_charcter(str, expected):\n  |\nhelp: Add return type annotation: `builtins.str`\n  |\n  - def  make_flip(ch):\n1 + import builtins\n2 + def  make_flip(ch) -> builtins.str:\n3 | \treturn  \"1\" if  (ch==\"0\") else \"0\"\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nD103 Missing docstring in public function\n --> solution.py:1:6\n  |\n1 | def  make_flip(ch):\n  |      ^^^^^^^^^\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n3 | def  get_flip_with_starting_charcter(str, expected):\n  |\n\nANN001 Missing type annotation for function argument `ch`\n --> solution.py:1:16\n  |\n1 | def  make_flip(ch):\n  |                ^^\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n3 | def  get_flip_with_starting_charcter(str, expected):\n  |\n\nW191 Indentation contains tabs\n --> solution.py:2:1\n  |\n1 | def  make_flip(ch):\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n  | ^^^^\n3 | def  get_flip_with_starting_charcter(str, expected):\n4 |     flip_count = 0\n  |\n\nANN201 Missing return type annotation for public function `get_flip_with_starting_charcter`\n --> solution.py:3:6\n  |\n1 | def  make_flip(ch):\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n3 | def  get_flip_with_starting_charcter(str, expected):\n  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n4 |     flip_count = 0\n5 |     for i in range(len( str)):\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:3:6\n  |\n1 | def  make_flip(ch):\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n3 | def  get_flip_with_starting_charcter(str, expected):\n  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n4 |     flip_count = 0\n5 |     for i in range(len( str)):\n  |\n\nA002 Function argument `str` is shadowing a Python builtin\n --> solution.py:3:38\n  |\n1 | def  make_flip(ch):\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n3 | def  get_flip_with_starting_charcter(str, expected):\n  |                                      ^^^\n4 |     flip_count = 0\n5 |     for i in range(len( str)):\n  |\n\nANN001 Missing type annotation for function argument `str`\n --> solution.py:3:38\n  |\n1 | def  make_flip(ch):\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n3 | def  get_flip_with_starting_charcter(str, expected):\n  |                                      ^^^\n4 |     flip_count = 0\n5 |     for i in range(len( str)):\n  |\n\nANN001 Missing type annotation for function argument `expected`\n --> solution.py:3:43\n  |\n1 | def  make_flip(ch):\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n3 | def  get_flip_with_starting_charcter(str, expected):\n  |                                           ^^^^^^^^\n4 |     flip_count = 0\n5 |     for i in range(len( str)):\n  |\n\nW191 Indentation contains tabs\n --> solution.py:4:1\n  |\n2 |     return  \"1\" if  (ch==\"0\") else \"0\"\n3 | def  get_flip_with_starting_charcter(str, expected):\n4 |     flip_count = 0\n  | ^^^^\n5 |     for i in range(len( str)):\n6 |         if  (str[i] != expected):\n  |\n\nW191 Indentation contains tabs\n --> solution.py:5:1\n  |\n3 | def  get_flip_with_starting_charcter(str, expected):\n4 |     flip_count = 0\n5 |     for i in range(len( str)):\n  | ^^^^\n6 |         if  (str[i] != expected):\n7 |             flip_count += 1\n  |\n\nW191 Indentation contains tabs\n --> solution.py:6:1\n  |\n4 |     flip_count = 0\n5 |     for i in range(len( str)):\n6 |         if  (str[i] != expected):\n  | ^^^^^^^^\n7 |             flip_count += 1\n8 |         expected=make_flip(expected)\n  |\n\nW191 Indentation contains tabs\n --> solution.py:7:1\n  |\n5 |     for i in range(len( str)):\n6 |         if  (str[i] != expected):\n7 |             flip_count += 1\n  | ^^^^^^^^^^^^\n8 |         expected=make_flip(expected)\n9 |     return  flip_count\n  |\n\nW191 Indentation contains tabs\n  --> solution.py:8:1\n   |\n 6 |         if  (str[i] != expected):\n 7 |             flip_count += 1\n 8 |         expected=make_flip(expected)\n   | ^^^^^^^^\n 9 |     return  flip_count\n10 | def  min_flip_to_make_string_alternate(str):\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:9:1\n   |\n 7 |             flip_count += 1\n 8 |         expected=make_flip(expected)\n 9 |     return  flip_count\n   | ^^^^\n10 | def  min_flip_to_make_string_alternate(str):\n11 |     return  min(get_flip_with_starting_charcter(str, \"0\"),get_flip_with_starting_charcter(str, \"1\"))\n   |\n\nANN201 Missing return type annotation for public function `min_flip_to_make_string_alternate`\n  --> solution.py:10:6\n   |\n 8 |         expected=make_flip(expected)\n 9 |     return  flip_count\n10 | def  min_flip_to_make_string_alternate(str):\n   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n11 |     return  min(get_flip_with_starting_charcter(str, \"0\"),get_flip_with_starting_charcter(str, \"1\"))\n   |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n  --> solution.py:10:6\n   |\n 8 |         expected=make_flip(expected)\n 9 |     return  flip_count\n10 | def  min_flip_to_make_string_alternate(str):\n   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n11 |     return  min(get_flip_with_starting_charcter(str, \"0\"),get_flip_with_starting_charcter(str, \"1\"))\n   |\n\nA002 Function argument `str` is shadowing a Python builtin\n  --> solution.py:10:40\n   |\n 8 |         expected=make_flip(expected)\n 9 |     return  flip_count\n10 | def  min_flip_to_make_string_alternate(str):\n   |                                        ^^^\n11 |     return  min(get_flip_with_starting_charcter(str, \"0\"),get_flip_with_starting_charcter(str, \"1\"))\n   |\n\nANN001 Missing type annotation for function argument `str`\n  --> solution.py:10:40\n   |\n 8 |         expected=make_flip(expected)\n 9 |     return  flip_count\n10 | def  min_flip_to_make_string_alternate(str):\n   |                                        ^^^\n11 |     return  min(get_flip_with_starting_charcter(str, \"0\"),get_flip_with_starting_charcter(str, \"1\"))\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:11:1\n   |\n 9 |     return  flip_count\n10 | def  min_flip_to_make_string_alternate(str):\n11 |     return  min(get_flip_with_starting_charcter(str, \"0\"),get_flip_with_starting_charcter(str, \"1\"))\n   | ^^^^\n\nE501 Line too long (100 > 88)\n  --> solution.py:11:86\n   |\n 9 |     return  flip_count\n10 | def  min_flip_to_make_string_alternate(str):\n11 |     return  min(get_flip_with_starting_charcter(str, \"0\"),get_flip_with_starting_charcter(str, \"1\"))\n   |                                                                                         ^^^^^^^^^^^^\n\nFound 38 errors (15 fixed, 23 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "import builtins\n",
+              "end_location": {
+                "column": 1,
+                "row": 1
+              },
+              "location": {
+                "column": 1,
+                "row": 1
+              }
+            },
+            {
+              "content": " -> builtins.str",
+              "end_location": {
+                "column": 19,
+                "row": 1
+              },
+              "location": {
+                "column": 19,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Add return type annotation: `builtins.str`"
+        },
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `make_flip`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `ch`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 21,
+                "row": 1
+              },
+              "location": {
+                "column": 20,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 20,
+          "row": 1
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 2
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 13,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"1\"",
+              "end_location": {
+                "column": 13,
+                "row": 2
+              },
+              "location": {
+                "column": 10,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 10,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 26,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"0\"",
+              "end_location": {
+                "column": 26,
+                "row": 2
+              },
+              "location": {
+                "column": 23,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 23,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 36,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"0\"",
+              "end_location": {
+                "column": 36,
+                "row": 2
+              },
+              "location": {
+                "column": 33,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 33,
+          "row": 2
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 37,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 3
+        },
+        "message": "Missing return type annotation for public function `get_flip_with_starting_charcter`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 37,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 3
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "A002",
+        "end_location": {
+          "column": 41,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 38,
+          "row": 3
+        },
+        "message": "Function argument `str` is shadowing a Python builtin",
+        "name": "builtin-argument-shadowing",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-argument-shadowing"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 41,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 38,
+          "row": 3
+        },
+        "message": "Missing type annotation for function argument `str`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 51,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 43,
+          "row": 3
+        },
+        "message": "Missing type annotation for function argument `expected`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 54,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 54,
+                "row": 3
+              },
+              "location": {
+                "column": 53,
+                "row": 3
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 53,
+          "row": 3
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 4
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 5
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 18,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 20,
+                "row": 5
+              },
+              "location": {
+                "column": 17,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 17,
+          "row": 5
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 32,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 32,
+                "row": 5
+              },
+              "location": {
+                "column": 31,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 31,
+          "row": 5
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 6
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 29,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 29,
+                "row": 6
+              },
+              "location": {
+                "column": 28,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 28,
+          "row": 6
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 7
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 8
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 32,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 32,
+                "row": 8
+              },
+              "location": {
+                "column": 31,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 31,
+          "row": 8
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 9
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 21,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 21,
+                "row": 9
+              },
+              "location": {
+                "column": 20,
+                "row": 9
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 20,
+          "row": 9
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 39,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 10
+        },
+        "message": "Missing return type annotation for public function `min_flip_to_make_string_alternate`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 39,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 10
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "A002",
+        "end_location": {
+          "column": 43,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 40,
+          "row": 10
+        },
+        "message": "Function argument `str` is shadowing a Python builtin",
+        "name": "builtin-argument-shadowing",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-argument-shadowing"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 43,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 40,
+          "row": 10
+        },
+        "message": "Missing type annotation for function argument `str`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 46,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 46,
+                "row": 10
+              },
+              "location": {
+                "column": 45,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 45,
+          "row": 10
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 11
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 54,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"0\"",
+              "end_location": {
+                "column": 54,
+                "row": 11
+              },
+              "location": {
+                "column": 51,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 51,
+          "row": 11
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "E501",
+        "end_location": {
+          "column": 99,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 86,
+          "row": 11
+        },
+        "message": "Line too long (101 > 88)",
+        "name": "line-too-long",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 96,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"1\"",
+              "end_location": {
+                "column": 96,
+                "row": 11
+              },
+              "location": {
+                "column": 93,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 93,
+          "row": 11
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 99,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 99,
+                "row": 11
+              },
+              "location": {
+                "column": 98,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 98,
+          "row": 11
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 99,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 99,
+                "row": 11
+              },
+              "location": {
+                "column": 99,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 99,
+          "row": 11
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "CPY001": 1,
+      "D100": 1,
+      "ANN201": 3,
+      "D103": 3,
+      "ANN001": 4,
+      "W291": 8,
+      "W191": 8,
+      "Q000": 5,
+      "A002": 2,
+      "PIE808": 1,
+      "E501": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "import builtins\n",
+              "end_location": {
+                "column": 1,
+                "row": 1
+              },
+              "location": {
+                "column": 1,
+                "row": 1
+              }
+            },
+            {
+              "content": " -> builtins.str",
+              "end_location": {
+                "column": 18,
+                "row": 1
+              },
+              "location": {
+                "column": 18,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Add return type annotation: `builtins.str`"
+        },
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `make_flip`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 17,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 15,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `ch`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 36,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 5
+        },
+        "message": "Missing return type annotation for public function `get_flip_with_starting_charcter`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 36,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 5
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "A002",
+        "end_location": {
+          "column": 40,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 37,
+          "row": 5
+        },
+        "message": "Function argument `str` is shadowing a Python builtin",
+        "name": "builtin-argument-shadowing",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-argument-shadowing"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 40,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 37,
+          "row": 5
+        },
+        "message": "Missing type annotation for function argument `str`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 50,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 42,
+          "row": 5
+        },
+        "message": "Missing type annotation for function argument `expected`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 38,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 14
+        },
+        "message": "Missing return type annotation for public function `min_flip_to_make_string_alternate`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 38,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 14
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "A002",
+        "end_location": {
+          "column": 42,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 39,
+          "row": 14
+        },
+        "message": "Function argument `str` is shadowing a Python builtin",
+        "name": "builtin-argument-shadowing",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-argument-shadowing"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 42,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 39,
+          "row": 14
+        },
+        "message": "Missing type annotation for function argument `str`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 4,
+    "functions": [
+      {
+        "name": "make_flip",
+        "complexity": 1,
+        "line_start": 1,
+        "line_end": 2
+      },
+      {
+        "name": "get_flip_with_starting_charcter",
+        "complexity": 3,
+        "line_start": 3,
+        "line_end": 9
+      },
+      {
+        "name": "min_flip_to_make_string_alternate",
+        "complexity": 0,
+        "line_start": 10,
+        "line_end": 11
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "make_flip",
+      "lineno": 1,
+      "complexity": 2,
+      "children": []
+    },
+    {
+      "name": "get_flip_with_starting_charcter",
+      "lineno": 3,
+      "complexity": 3,
+      "children": []
+    },
+    {
+      "name": "min_flip_to_make_string_alternate",
+      "lineno": 10,
+      "complexity": 1,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 11,
+    "lloc": 11,
+    "sloc": 11,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 3,
+      "h2": 6,
+      "N1": 3,
+      "N2": 6,
+      "vocabulary": 9,
+      "length": 9,
+      "calculated_length": 20.264662506490406,
+      "volume": 28.529325012980813,
+      "difficulty": 1.5,
+      "effort": 42.793987519471216,
+      "time": 2.377443751081734,
+      "bugs": 0.009509775004326938
+    },
+    "functions": [
+      {
+        "name": "make_flip",
+        "h1": 1,
+        "h2": 2,
+        "N1": 1,
+        "N2": 2,
+        "vocabulary": 3,
+        "length": 3,
+        "calculated_length": 2.0,
+        "volume": 4.754887502163469,
+        "difficulty": 0.5,
+        "effort": 2.3774437510817346,
+        "time": 0.1320802083934297,
+        "bugs": 0.0015849625007211565
+      },
+      {
+        "name": "get_flip_with_starting_charcter",
+        "h1": 2,
+        "h2": 4,
+        "N1": 2,
+        "N2": 4,
+        "vocabulary": 6,
+        "length": 6,
+        "calculated_length": 10.0,
+        "volume": 15.509775004326936,
+        "difficulty": 1.0,
+        "effort": 15.509775004326936,
+        "time": 0.861654166907052,
+        "bugs": 0.005169925001442312
+      },
+      {
+        "name": "min_flip_to_make_string_alternate",
+        "h1": 0,
+        "h2": 0,
+        "N1": 0,
+        "N2": 0,
+        "vocabulary": 0,
+        "length": 0,
+        "calculated_length": 0,
+        "volume": 0,
+        "difficulty": 0,
+        "effort": 0,
+        "time": 0.0,
+        "bugs": 0.0
+      }
+    ]
+  }
+}

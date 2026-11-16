@@ -1,0 +1,847 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 28,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "summ % 26 != 0",
+              "end_location": {
+                "column": 28,
+                "row": 5
+              },
+              "location": {
+                "column": 8,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 8,
+          "row": 5
+        },
+        "message": "Use `summ % 26 != 0` instead of `not summ % 26 == 0`",
+        "name": "negate-equal-op",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "SIM201": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 28,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "summ % 26 != 0",
+              "end_location": {
+                "column": 28,
+                "row": 5
+              },
+              "location": {
+                "column": 8,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 8,
+          "row": 5
+        },
+        "message": "Use `summ % 26 != 0` instead of `not summ % 26 == 0`",
+        "name": "negate-equal-op",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nN802 Function name `get_Char` should be lowercase\n --> solution.py:1:6\n  |\n1 | def  get_Char(strr):\n  |      ^^^^^^^^\n2 |     summ = 0\n3 |     for  i in  range(len(strr)):\n  |\n\nANN201 Missing return type annotation for public function `get_Char`\n --> solution.py:1:6\n  |\n1 | def  get_Char(strr):\n  |      ^^^^^^^^\n2 |     summ = 0\n3 |     for  i in  range(len(strr)):\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:6\n  |\n1 | def  get_Char(strr):\n  |      ^^^^^^^^\n2 |     summ = 0\n3 |     for  i in  range(len(strr)):\n  |\n\nANN001 Missing type annotation for function argument `strr`\n --> solution.py:1:15\n  |\n1 | def  get_Char(strr):\n  |               ^^^^\n2 |     summ = 0\n3 |     for  i in  range(len(strr)):\n  |\n\nSIM201 Use `summ % 26 != 0` instead of `not summ % 26 == 0`\n --> solution.py:5:8\n  |\n3 |     for  i in  range(len(strr)):\n4 |         summ = summ + (ord(strr[i]) - ord(\"a\") + 1)\n5 |     if not (summ % 26 == 0):\n  |        ^^^^^^^^^^^^^^^^^^^^\n6 |         summ = summ % 26\n7 |         return chr(ord(\"a\") + summ - 1)\n  |\nhelp: Replace with `!=` operator\n  |\n4 |         summ = summ + (ord(strr[i]) - ord(\"a\") + 1)\n  -     if not (summ % 26 == 0):\n5 +     if summ % 26 != 0:\n6 |         summ = summ % 26\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 17 errors (10 fixed, 7 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Function name `get_Char` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `get_Char`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 19,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 15,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `strr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 23,
+                "row": 1
+              },
+              "location": {
+                "column": 21,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 21,
+          "row": 1
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 34,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 34,
+                "row": 3
+              },
+              "location": {
+                "column": 33,
+                "row": 3
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 33,
+          "row": 3
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 46,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"a\"",
+              "end_location": {
+                "column": 46,
+                "row": 4
+              },
+              "location": {
+                "column": 43,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 43,
+          "row": 4
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 54,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 54,
+                "row": 4
+              },
+              "location": {
+                "column": 52,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 52,
+          "row": 4
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 28,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "summ % 26 != 0",
+              "end_location": {
+                "column": 28,
+                "row": 5
+              },
+              "location": {
+                "column": 8,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 8,
+          "row": 5
+        },
+        "message": "Use `summ % 26 != 0` instead of `not summ % 26 == 0`",
+        "name": "negate-equal-op",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 30,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 30,
+                "row": 5
+              },
+              "location": {
+                "column": 29,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 29,
+          "row": 5
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 27,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"a\"",
+              "end_location": {
+                "column": 27,
+                "row": 7
+              },
+              "location": {
+                "column": 24,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 24,
+          "row": 7
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 41,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 41,
+                "row": 7
+              },
+              "location": {
+                "column": 40,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 40,
+          "row": 7
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "RET505",
+        "end_location": {
+          "column": 9,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "    return ord('z')",
+              "end_location": {
+                "column": 24,
+                "row": 9
+              },
+              "location": {
+                "column": 1,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Remove unnecessary `else`"
+        },
+        "location": {
+          "column": 5,
+          "row": 8
+        },
+        "message": "Unnecessary `else` after `return` statement",
+        "name": "superfluous-else-return",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 11,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 11,
+                "row": 8
+              },
+              "location": {
+                "column": 10,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 10,
+          "row": 8
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 23,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"z\"",
+              "end_location": {
+                "column": 23,
+                "row": 9
+              },
+              "location": {
+                "column": 20,
+                "row": 9
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 20,
+          "row": 9
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 24,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 24,
+                "row": 9
+              },
+              "location": {
+                "column": 24,
+                "row": 9
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 24,
+          "row": 9
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "N802": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 1,
+      "W291": 6,
+      "Q000": 3,
+      "SIM201": 1,
+      "RET505": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 13,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Function name `get_Char` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 13,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `get_Char`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 13,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 14,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `strr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 28,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "summ % 26 != 0",
+              "end_location": {
+                "column": 28,
+                "row": 5
+              },
+              "location": {
+                "column": 8,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 8,
+          "row": 5
+        },
+        "message": "Use `summ % 26 != 0` instead of `not summ % 26 == 0`",
+        "name": "negate-equal-op",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 3,
+    "functions": [
+      {
+        "name": "get_Char",
+        "complexity": 3,
+        "line_start": 1,
+        "line_end": 9
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "get_Char",
+      "lineno": 1,
+      "complexity": 3,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 9,
+    "lloc": 9,
+    "sloc": 9,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 5,
+      "h2": 12,
+      "N1": 9,
+      "N2": 17,
+      "vocabulary": 17,
+      "length": 26,
+      "calculated_length": 54.62919048309069,
+      "volume": 106.27403387250884,
+      "difficulty": 3.5416666666666665,
+      "effort": 376.38720329846876,
+      "time": 20.910400183248264,
+      "bugs": 0.03542467795750295
+    },
+    "functions": [
+      {
+        "name": "get_Char",
+        "h1": 5,
+        "h2": 12,
+        "N1": 9,
+        "N2": 17,
+        "vocabulary": 17,
+        "length": 26,
+        "calculated_length": 54.62919048309069,
+        "volume": 106.27403387250884,
+        "difficulty": 3.5416666666666665,
+        "effort": 376.38720329846876,
+        "time": 20.910400183248264,
+        "bugs": 0.03542467795750295
+      }
+    ]
+  }
+}

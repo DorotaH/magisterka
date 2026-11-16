@@ -1,0 +1,16 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,6 +1,8 @@
+-def gcd(p,q):
+-    while 0 != q:
+-        p, q=q,p%q
++def gcd(p, q):
++    while q != 0:
++        p, q = q, p % q
+     return p
+-def is_coprime(x,y):
+-    return 1 == gcd(x,y)
++
++
++def is_coprime(x, y):
++    return gcd(x, y) == 1

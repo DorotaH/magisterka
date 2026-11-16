@@ -1,0 +1,743 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 21,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 22,
+                "row": 8
+              },
+              "location": {
+                "column": 20,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 20,
+          "row": 8
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      },
+      {
+        "cell": null,
+        "code": "SIM103",
+        "end_location": {
+          "column": 16,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return not len(set(sum_list)) > 1",
+              "end_location": {
+                "column": 16,
+                "row": 17
+              },
+              "location": {
+                "column": 5,
+                "row": 15
+              }
+            }
+          ],
+          "message": "Replace with `return not len(set(sum_list)) > 1`"
+        },
+        "location": {
+          "column": 5,
+          "row": 15
+        },
+        "message": "Return the condition `not len(set(sum_list)) > 1` directly",
+        "name": "needless-bool",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/needless-bool"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "PIE808": 1,
+      "SIM103": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 21,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 23,
+                "row": 8
+              },
+              "location": {
+                "column": 20,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 20,
+          "row": 8
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      },
+      {
+        "cell": null,
+        "code": "SIM103",
+        "end_location": {
+          "column": 16,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return not len(set(sum_list)) > 1",
+              "end_location": {
+                "column": 16,
+                "row": 17
+              },
+              "location": {
+                "column": 5,
+                "row": 15
+              }
+            }
+          ],
+          "message": "Replace with `return not len(set(sum_list)) > 1`"
+        },
+        "location": {
+          "column": 5,
+          "row": 15
+        },
+        "message": "Return the condition `not len(set(sum_list)) > 1` directly",
+        "name": "needless-bool",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/needless-bool"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `magic_square_test`\n --> solution.py:1:5\n  |\n1 | def magic_square_test(my_matrix):\n  |     ^^^^^^^^^^^^^^^^^\n2 |     iSize = len(my_matrix[0])\n3 |     sum_list = []\n  |\nhelp: Add return type annotation: `bool`\n  |\n  - def magic_square_test(my_matrix):\n1 + def magic_square_test(my_matrix) -> bool:\n2 |     iSize = len(my_matrix[0])\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def magic_square_test(my_matrix):\n  |     ^^^^^^^^^^^^^^^^^\n2 |     iSize = len(my_matrix[0])\n3 |     sum_list = []\n  |\n\nANN001 Missing type annotation for function argument `my_matrix`\n --> solution.py:1:23\n  |\n1 | def magic_square_test(my_matrix):\n  |                       ^^^^^^^^^\n2 |     iSize = len(my_matrix[0])\n3 |     sum_list = []\n  |\n\nN806 Variable `iSize` in function should be lowercase\n --> solution.py:2:5\n  |\n1 | def magic_square_test(my_matrix):\n2 |     iSize = len(my_matrix[0])\n  |     ^^^^^\n3 |     sum_list = []\n4 |     sum_list.extend([sum (lines) for lines in my_matrix])\n  |\n\nPERF401 Use `list.extend` to create a transformed list\n --> solution.py:6:9\n  |\n4 |     sum_list.extend([sum (lines) for lines in my_matrix])\n5 |     for col in range(iSize):\n6 |         sum_list.append(sum(row[col] for row in my_matrix))\n  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n7 |     result1 = 0\n8 |     for i in range(iSize):\n  |\nhelp: Replace for loop with list.extend\n\nSIM103 Return the condition `not len(set(sum_list)) > 1` directly\n  --> solution.py:15:5\n   |\n13 |           result2 +=my_matrix[i][i]\n14 |       sum_list.append(result2)\n15 | /     if len(set(sum_list))>1:\n16 | |         return False\n17 | |     return True\n   | |_______________^\nhelp: Replace with `return not len(set(sum_list)) > 1`\n   |\n14 |     sum_list.append(result2)\n   -     if len(set(sum_list))>1:\n   -         return False\n   -     return True\n15 +     return not len(set(sum_list)) > 1\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 12 errors (4 fixed, 8 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> bool",
+              "end_location": {
+                "column": 33,
+                "row": 1
+              },
+              "location": {
+                "column": 33,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Add return type annotation: `bool`"
+        },
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `magic_square_test`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 32,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `my_matrix`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "N806",
+        "end_location": {
+          "column": 10,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 2
+        },
+        "message": "Variable `iSize` in function should be lowercase",
+        "name": "non-lowercase-variable-in-function",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/non-lowercase-variable-in-function"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 61,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 61,
+                "row": 4
+              },
+              "location": {
+                "column": 58,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 58,
+          "row": 4
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "PERF401",
+        "end_location": {
+          "column": 60,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 6
+        },
+        "message": "Use `list.extend` to create a transformed list",
+        "name": "manual-list-comprehension",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/manual-list-comprehension"
+      },
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 21,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 22,
+                "row": 8
+              },
+              "location": {
+                "column": 20,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 20,
+          "row": 8
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 35,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 35,
+                "row": 10
+              },
+              "location": {
+                "column": 29,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 29,
+          "row": 10
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "SIM103",
+        "end_location": {
+          "column": 16,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return not len(set(sum_list)) > 1",
+              "end_location": {
+                "column": 16,
+                "row": 17
+              },
+              "location": {
+                "column": 5,
+                "row": 15
+              }
+            }
+          ],
+          "message": "Replace with `return not len(set(sum_list)) > 1`"
+        },
+        "location": {
+          "column": 5,
+          "row": 15
+        },
+        "message": "Return the condition `not len(set(sum_list)) > 1` directly",
+        "name": "needless-bool",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/needless-bool"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 16,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 16,
+                "row": 17
+              },
+              "location": {
+                "column": 16,
+                "row": 17
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 16,
+          "row": 17
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 17,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 1,
+      "N806": 1,
+      "W291": 2,
+      "PERF401": 1,
+      "PIE808": 1,
+      "SIM103": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> bool",
+              "end_location": {
+                "column": 33,
+                "row": 1
+              },
+              "location": {
+                "column": 33,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Add return type annotation: `bool`"
+        },
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `magic_square_test`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 32,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `my_matrix`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "N806",
+        "end_location": {
+          "column": 10,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 2
+        },
+        "message": "Variable `iSize` in function should be lowercase",
+        "name": "non-lowercase-variable-in-function",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/non-lowercase-variable-in-function"
+      },
+      {
+        "cell": null,
+        "code": "PERF401",
+        "end_location": {
+          "column": 60,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 6
+        },
+        "message": "Use `list.extend` to create a transformed list",
+        "name": "manual-list-comprehension",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/manual-list-comprehension"
+      },
+      {
+        "cell": null,
+        "code": "SIM103",
+        "end_location": {
+          "column": 16,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return not len(set(sum_list)) > 1",
+              "end_location": {
+                "column": 16,
+                "row": 17
+              },
+              "location": {
+                "column": 5,
+                "row": 15
+              }
+            }
+          ],
+          "message": "Replace with `return not len(set(sum_list)) > 1`"
+        },
+        "location": {
+          "column": 5,
+          "row": 15
+        },
+        "message": "Return the condition `not len(set(sum_list)) > 1` directly",
+        "name": "needless-bool",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/needless-bool"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 4,
+    "functions": [
+      {
+        "name": "magic_square_test",
+        "complexity": 4,
+        "line_start": 1,
+        "line_end": 17
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "magic_square_test",
+      "lineno": 1,
+      "complexity": 7,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 17,
+    "lloc": 17,
+    "sloc": 17,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 4,
+      "h2": 7,
+      "N1": 6,
+      "N2": 10,
+      "vocabulary": 11,
+      "length": 16,
+      "calculated_length": 27.651484454403228,
+      "volume": 55.350905898196764,
+      "difficulty": 2.857142857142857,
+      "effort": 158.14544542341932,
+      "time": 8.785858079078851,
+      "bugs": 0.018450301966065587
+    },
+    "functions": [
+      {
+        "name": "magic_square_test",
+        "h1": 4,
+        "h2": 7,
+        "N1": 6,
+        "N2": 10,
+        "vocabulary": 11,
+        "length": 16,
+        "calculated_length": 27.651484454403228,
+        "volume": 55.350905898196764,
+        "difficulty": 2.857142857142857,
+        "effort": 158.14544542341932,
+        "time": 8.785858079078851,
+        "bugs": 0.018450301966065587
+      }
+    ]
+  }
+}

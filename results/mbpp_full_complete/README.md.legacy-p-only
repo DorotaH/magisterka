@@ -1,0 +1,53 @@
+# Pełny MBPP — ACW i SEW
+
+Kompletny przebieg: 974 zadania referencyjne `Muennighoff/mbpp`, konfiguracja
+`full`, tabela `full/test/0000.parquet`. Rewizja:
+`39ad389e423dd348012ea1b1bcbf224aad8f34a4`.
+
+`code_pairs.jsonl` zawiera 1948 par: opis zadania, oryginał, wynik ACW lub SEW,
+nieuruchomione testy, walidację składni oraz wynik detekcji.
+Pliki kodu są w `original/`, `acw/`, `sew/`.
+
+| Metoda | Zadania | Zmienione | Błędy wykonania | Błędy składni | Wykryty znak (surowo) |
+|---|---:|---:|---:|---:|---:|
+| ACW | 974 | 974 | 0 | 397 | 552 |
+| SEW | 974 | 964 | 0 | 0 | 908 |
+
+Surowe wykrycia obejmują także niepoprawny składniowo kod. Warunkowe wyniki
+według poprawności składni zapisano w `validation.json`.
+
+397 wyników ACW ma błędną składnię. Pliki pozostawiono w stanie po
+transformacji, bez naprawiania wyników. Lista jest w `syntax_failures.csv`.
+Dwa fragmenty (323 i 515) mają błędne wcięcia już po przebiegu Sourcery
+(`sourcery_syntax_failures.json`). ACW ma także regułę konwersji wcięć,
+która usuwa resztę z dzielenia liczby spacji przez 4; jej kod pozostawiono
+bez zmian. Wszystkie oryginały i wyniki SEW są poprawne składniowo.
+Poprawna składnia nie potwierdza poprawności funkcjonalnej — nie wykonywano testów.
+
+Metryki Ruff, Complexipy i Radon: [raport](../quality_full/report.md),
+[CSV](../quality_full/metrics.csv), szczegóły i błędy w
+`../quality_full/pairs.jsonl`. Niepoprawne fragmenty nie wchodzą do średnich.
+Liczebności porównań ACW i SEW mogą się różnić.
+
+ACW używa zrekonstruowanej konfiguracji Sourcery z `refact_list.py`,
+więc jest to badanie tej implementacji, nie gwarantowana replikacja wyników autorów.
+Naprawiono adapter do aktualnego interfejsu reguł 36–39; same transformacje
+nie zostały zmienione. Sourcery uruchomiono zbiorczo na katalogu dla każdego
+z dwóch przebiegów. Sprawdzono identyczność wyników z osobnymi uruchomieniami
+na 86 zadaniach oraz identyczność detekcji na 20 zadaniach kontrolnych.
+SEW używa publicznego klucza eksperymentalnego.
+
+`metadata.json`, `environment.json` i `validation.json` opisują dane, wersje
+narzędzi i sprawdzenia. `timing.json` podaje zbiorczy czas ACW; `seconds: null`
+dla pojedynczych zadań ACW jest celowe. Czasów nie należy porównywać
+z czasami wcześniejszych uruchomień pojedynczych plików.
+
+Odtworzenie znakowania ze snapshotu:
+
+```bash
+python run_mbpp_batch.py --input results/mbpp_full --out results/mbpp_full_repeat --quality-out results/quality_full_repeat --workers 8
+```
+
+Pełny log bieżącego przebiegu: `../mbpp_full_batch.log`.
+
+Analiza jakości zakończona: 577 kompletnych par ACW i 974 pary SEW; 397 błędów ACW to niepoprawna składnia. W CSV jest 58938 wierszy metryk.

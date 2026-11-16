@@ -1,0 +1,11 @@
+--- source.py
++++ ruff_strict.py
+@@ -2,6 +2,6 @@
+     def aux(g):
+         if isinstance(g, list):
+             return [(g[1], range(g[0]))]
+-        else:
+-            return [(g, [0])]
+-    return [x for g in alist for x, R in aux(g) for i in R]+        return [(g, [0])]
++
++    return [x for g in alist for x, R in aux(g) for i in R]

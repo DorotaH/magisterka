@@ -1,0 +1,18 @@
+import math
+
+
+def get_sum(n):
+	sum = 0
+	i = 1
+	while (math.sqrt(n)) >= i:
+		if n % i == 0:
+			sum = i + sum
+			if n / i != i:
+				sum = (n / i) + sum
+		i = i + 1
+	sum = sum - n
+	return sum
+
+
+def check_abundant(n):
+	return n < get_sum(n)

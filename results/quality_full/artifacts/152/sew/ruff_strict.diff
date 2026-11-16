@@ -1,0 +1,30 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,6 +1,6 @@
+-def  merge(a,b):
+-    c=list()
+-    while  len(a) != 0 and  len(b) != 0:
++def merge(a, b):
++    c = list()
++    while len(a) != 0 and len(b) != 0:
+         if a[0] < b[0]:
+             c.append(a[0])
+             a.remove(a[0])
+@@ -12,11 +12,12 @@
+     else:
+         c += b
+     return c
+-def  merge_sort(x):
++
++
++def merge_sort(x):
+     if not (len(x) == 0 or len(x) == 1):
+-        middle = len(x)//2
++        middle = len(x) // 2
+         a = merge_sort(x[:middle])
+         b = merge_sort(x[middle:])
+-        return merge(a,b)
+-    else:
+-        return x
++        return merge(a, b)
++    return x

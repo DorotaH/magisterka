@@ -1,0 +1,12 @@
+--- source.py
++++ ruff_strict.py
+@@ -8,8 +8,8 @@
+         prev = (mid - 1 + len(A)) % len(A)
+         if A[mid] <= A[next] and A[mid] <= A[prev]:
+             return mid
+-        elif A[mid] <= A[right]:
++        if A[mid] <= A[right]:
+             right = mid - 1
+         elif A[mid] >= A[left]:
+             left = mid + 1
+-    return -1+    return -1

@@ -1,0 +1,16 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,9 +1,8 @@
+-def  check_Even_Parity(x): 
++def check_Even_Parity(x):
+     parity = 0
+-    while  (x != 0): 
+-        x = x & (x - 1) 
++    while x != 0:
++        x = x & (x - 1)
+         parity = parity + 1
+-    if not (parity % 2 == 0): 
++    if not (parity % 2 == 0):
+         return False
+-    else: 
+-        return True+    return True

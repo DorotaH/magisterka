@@ -1,0 +1,711 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `find_equal_tuple`\n --> solution.py:1:5\n  |\n1 | def find_equal_tuple(Input, k):\n  |     ^^^^^^^^^^^^^^^^\n2 |   flag = 1\n3 |   for  tuple in  Input:\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def find_equal_tuple(Input, k):\n  |     ^^^^^^^^^^^^^^^^\n2 |   flag = 1\n3 |   for  tuple in  Input:\n  |\n\nN803 Argument name `Input` should be lowercase\n --> solution.py:1:22\n  |\n1 | def find_equal_tuple(Input, k):\n  |                      ^^^^^\n2 |   flag = 1\n3 |   for  tuple in  Input:\n  |\n\nANN001 Missing type annotation for function argument `Input`\n --> solution.py:1:22\n  |\n1 | def find_equal_tuple(Input, k):\n  |                      ^^^^^\n2 |   flag = 1\n3 |   for  tuple in  Input:\n  |\n\nANN001 Missing type annotation for function argument `k`\n --> solution.py:1:29\n  |\n1 | def find_equal_tuple(Input, k):\n  |                             ^\n2 |   flag = 1\n3 |   for  tuple in  Input:\n  |\n\nA001 Variable `tuple` is shadowing a Python builtin\n --> solution.py:3:8\n  |\n1 | def find_equal_tuple(Input, k):\n2 |   flag = 1\n3 |   for  tuple in  Input:\n  |        ^^^^^\n4 |     if len(tuple) != k:\n5 |       flag=0\n  |\n\nANN201 Missing return type annotation for public function `get_equal`\n  --> solution.py:8:5\n   |\n 6 |       break\n 7 |   return  flag\n 8 | def get_equal(Input, k):\n   |     ^^^^^^^^^\n 9 |   if find_equal_tuple(Input, k) == 1:\n10 |     return (\"All tuples have same length\")\n   |\nhelp: Add return type annotation: `str`\n  |\n7 |   return  flag\n  - def get_equal(Input, k):\n8 + def get_equal(Input, k) -> str:\n9 |   if find_equal_tuple(Input, k) == 1:\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nD103 Missing docstring in public function\n  --> solution.py:8:5\n   |\n 6 |       break\n 7 |   return  flag\n 8 | def get_equal(Input, k):\n   |     ^^^^^^^^^\n 9 |   if find_equal_tuple(Input, k) == 1:\n10 |     return (\"All tuples have same length\")\n   |\n\nN803 Argument name `Input` should be lowercase\n  --> solution.py:8:15\n   |\n 6 |       break\n 7 |   return  flag\n 8 | def get_equal(Input, k):\n   |               ^^^^^\n 9 |   if find_equal_tuple(Input, k) == 1:\n10 |     return (\"All tuples have same length\")\n   |\n\nANN001 Missing type annotation for function argument `Input`\n  --> solution.py:8:15\n   |\n 6 |       break\n 7 |   return  flag\n 8 | def get_equal(Input, k):\n   |               ^^^^^\n 9 |   if find_equal_tuple(Input, k) == 1:\n10 |     return (\"All tuples have same length\")\n   |\n\nANN001 Missing type annotation for function argument `k`\n  --> solution.py:8:22\n   |\n 6 |       break\n 7 |   return  flag\n 8 | def get_equal(Input, k):\n   |                      ^\n 9 |   if find_equal_tuple(Input, k) == 1:\n10 |     return (\"All tuples have same length\")\n   |\n\nFound 15 errors (2 fixed, 13 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `find_equal_tuple`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 27,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 1
+        },
+        "message": "Argument name `Input` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 27,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `Input`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 30,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 29,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "A001",
+        "end_location": {
+          "column": 13,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 8,
+          "row": 3
+        },
+        "message": "Variable `tuple` is shadowing a Python builtin",
+        "name": "builtin-variable-shadowing",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-variable-shadowing"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 14,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> str",
+              "end_location": {
+                "column": 24,
+                "row": 8
+              },
+              "location": {
+                "column": 24,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Add return type annotation: `str`"
+        },
+        "location": {
+          "column": 5,
+          "row": 8
+        },
+        "message": "Missing return type annotation for public function `get_equal`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 14,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 8
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 20,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 15,
+          "row": 8
+        },
+        "message": "Argument name `Input` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 20,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 15,
+          "row": 8
+        },
+        "message": "Missing type annotation for function argument `Input`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 23,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 8
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "RET505",
+        "end_location": {
+          "column": 7,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "  return (\"All tuples do not have same length\")",
+              "end_location": {
+                "column": 50,
+                "row": 12
+              },
+              "location": {
+                "column": 1,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Remove unnecessary `else`"
+        },
+        "location": {
+          "column": 3,
+          "row": 11
+        },
+        "message": "Unnecessary `else` after `return` statement",
+        "name": "superfluous-else-return",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 50,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 50,
+                "row": 12
+              },
+              "location": {
+                "column": 50,
+                "row": 12
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 50,
+          "row": 12
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 2,
+      "D103": 2,
+      "N803": 2,
+      "ANN001": 4,
+      "A001": 1,
+      "RET505": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `find_equal_tuple`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 27,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 1
+        },
+        "message": "Argument name `Input` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 27,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `Input`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 30,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 29,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "A001",
+        "end_location": {
+          "column": 14,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 3
+        },
+        "message": "Variable `tuple` is shadowing a Python builtin",
+        "name": "builtin-variable-shadowing",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/builtin-variable-shadowing"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 14,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> str",
+              "end_location": {
+                "column": 24,
+                "row": 10
+              },
+              "location": {
+                "column": 24,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Add return type annotation: `str`"
+        },
+        "location": {
+          "column": 5,
+          "row": 10
+        },
+        "message": "Missing return type annotation for public function `get_equal`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 14,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 10
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "N803",
+        "end_location": {
+          "column": 20,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 15,
+          "row": 10
+        },
+        "message": "Argument name `Input` should be lowercase",
+        "name": "invalid-argument-name",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-argument-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 20,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 15,
+          "row": 10
+        },
+        "message": "Missing type annotation for function argument `Input`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 23,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 10
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 5,
+    "functions": [
+      {
+        "name": "find_equal_tuple",
+        "complexity": 3,
+        "line_start": 1,
+        "line_end": 7
+      },
+      {
+        "name": "get_equal",
+        "complexity": 2,
+        "line_start": 8,
+        "line_end": 12
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "find_equal_tuple",
+      "lineno": 1,
+      "complexity": 3,
+      "children": []
+    },
+    {
+      "name": "get_equal",
+      "lineno": 8,
+      "complexity": 2,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 12,
+    "lloc": 12,
+    "sloc": 12,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 2,
+      "h2": 4,
+      "N1": 2,
+      "N2": 4,
+      "vocabulary": 6,
+      "length": 6,
+      "calculated_length": 10.0,
+      "volume": 15.509775004326936,
+      "difficulty": 1.0,
+      "effort": 15.509775004326936,
+      "time": 0.861654166907052,
+      "bugs": 0.005169925001442312
+    },
+    "functions": [
+      {
+        "name": "find_equal_tuple",
+        "h1": 1,
+        "h2": 2,
+        "N1": 1,
+        "N2": 2,
+        "vocabulary": 3,
+        "length": 3,
+        "calculated_length": 2.0,
+        "volume": 4.754887502163469,
+        "difficulty": 0.5,
+        "effort": 2.3774437510817346,
+        "time": 0.1320802083934297,
+        "bugs": 0.0015849625007211565
+      },
+      {
+        "name": "get_equal",
+        "h1": 1,
+        "h2": 2,
+        "N1": 1,
+        "N2": 2,
+        "vocabulary": 3,
+        "length": 3,
+        "calculated_length": 2.0,
+        "volume": 4.754887502163469,
+        "difficulty": 0.5,
+        "effort": 2.3774437510817346,
+        "time": 0.1320802083934297,
+        "bugs": 0.0015849625007211565
+      }
+    ]
+  }
+}

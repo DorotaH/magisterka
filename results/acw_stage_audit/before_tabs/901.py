@@ -1,0 +1,12 @@
+def smallest_multiple(n):
+    if (2 >= n):
+      return n
+    i = 2 * n
+    factors = [number for number in range(n, 1, -1) if 2 * number > n]
+    while True:
+        for a in factors:
+            if i % a != 0:
+                i += n
+                break
+            if a == factors[-1]:
+                return i

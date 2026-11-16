@@ -1,0 +1,666 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "W605",
+        "end_location": {
+          "column": 17,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "r",
+              "end_location": {
+                "column": 14,
+                "row": 5
+              },
+              "location": {
+                "column": 14,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Use a raw string literal"
+        },
+        "location": {
+          "column": 15,
+          "row": 5
+        },
+        "message": "Invalid escape sequence: `\\w`",
+        "name": "invalid-escape-sequence",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-escape-sequence"
+      },
+      {
+        "cell": null,
+        "code": "W605",
+        "end_location": {
+          "column": 20,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "r",
+              "end_location": {
+                "column": 14,
+                "row": 5
+              },
+              "location": {
+                "column": 14,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Use a raw string literal"
+        },
+        "location": {
+          "column": 18,
+          "row": 5
+        },
+        "message": "Invalid escape sequence: `\\S`",
+        "name": "invalid-escape-sequence",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-escape-sequence"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "W605": 2
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "W605",
+        "end_location": {
+          "column": 19,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "r",
+              "end_location": {
+                "column": 16,
+                "row": 5
+              },
+              "location": {
+                "column": 16,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Use a raw string literal"
+        },
+        "location": {
+          "column": 17,
+          "row": 5
+        },
+        "message": "Invalid escape sequence: `\\w`",
+        "name": "invalid-escape-sequence",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-escape-sequence"
+      },
+      {
+        "cell": null,
+        "code": "W605",
+        "end_location": {
+          "column": 22,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "r",
+              "end_location": {
+                "column": 16,
+                "row": 5
+              },
+              "location": {
+                "column": 16,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Use a raw string literal"
+        },
+        "location": {
+          "column": 20,
+          "row": 5
+        },
+        "message": "Invalid escape sequence: `\\S`",
+        "name": "invalid-escape-sequence",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-escape-sequence"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `text_match_word`\n --> solution.py:4:5\n  |\n4 | def text_match_word(text):\n  |     ^^^^^^^^^^^^^^^\n5 |         patterns = r\"\\w+\\S*$\"\n6 |         return \"Found a match!\" if re.search(patterns, text) else \"Not matched!\"\n  |\nhelp: Add return type annotation: `str`\n  |\n3 |\n  - def text_match_word(text):\n4 + def text_match_word(text) -> str:\n5 | \t\tpatterns = r\"\\w+\\S*$\"\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nD103 Missing docstring in public function\n --> solution.py:4:5\n  |\n4 | def text_match_word(text):\n  |     ^^^^^^^^^^^^^^^\n5 |         patterns = r\"\\w+\\S*$\"\n6 |         return \"Found a match!\" if re.search(patterns, text) else \"Not matched!\"\n  |\n\nANN001 Missing type annotation for function argument `text`\n --> solution.py:4:21\n  |\n4 | def text_match_word(text):\n  |                     ^^^^\n5 |         patterns = r\"\\w+\\S*$\"\n6 |         return \"Found a match!\" if re.search(patterns, text) else \"Not matched!\"\n  |\n\nW191 Indentation contains tabs\n --> solution.py:5:1\n  |\n4 | def text_match_word(text):\n5 |         patterns = r\"\\w+\\S*$\"\n  | ^^^^^^^^\n6 |         return \"Found a match!\" if re.search(patterns, text) else \"Not matched!\"\n  |\n\nW191 Indentation contains tabs\n --> solution.py:6:1\n  |\n4 | def text_match_word(text):\n5 |         patterns = r\"\\w+\\S*$\"\n6 |         return \"Found a match!\" if re.search(patterns, text) else \"Not matched!\"\n  | ^^^^^^^^\n\nFound 12 errors (5 fixed, 7 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 20,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> str",
+              "end_location": {
+                "column": 26,
+                "row": 4
+              },
+              "location": {
+                "column": 26,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Add return type annotation: `str`"
+        },
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing return type annotation for public function `text_match_word`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 20,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 25,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 21,
+          "row": 4
+        },
+        "message": "Missing type annotation for function argument `text`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 5
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 23,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"\\w+\\S*$\"",
+              "end_location": {
+                "column": 23,
+                "row": 5
+              },
+              "location": {
+                "column": 14,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 14,
+          "row": 5
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "W605",
+        "end_location": {
+          "column": 17,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "r",
+              "end_location": {
+                "column": 14,
+                "row": 5
+              },
+              "location": {
+                "column": 14,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Use a raw string literal"
+        },
+        "location": {
+          "column": 15,
+          "row": 5
+        },
+        "message": "Invalid escape sequence: `\\w`",
+        "name": "invalid-escape-sequence",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-escape-sequence"
+      },
+      {
+        "cell": null,
+        "code": "W605",
+        "end_location": {
+          "column": 20,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "r",
+              "end_location": {
+                "column": 14,
+                "row": 5
+              },
+              "location": {
+                "column": 14,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Use a raw string literal"
+        },
+        "location": {
+          "column": 18,
+          "row": 5
+        },
+        "message": "Invalid escape sequence: `\\S`",
+        "name": "invalid-escape-sequence",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-escape-sequence"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 6
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 26,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"Found a match!\"",
+              "end_location": {
+                "column": 26,
+                "row": 6
+              },
+              "location": {
+                "column": 10,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 10,
+          "row": 6
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      },
+      {
+        "cell": null,
+        "code": "Q000",
+        "end_location": {
+          "column": 75,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\"Not matched!\"",
+              "end_location": {
+                "column": 75,
+                "row": 6
+              },
+              "location": {
+                "column": 61,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Replace single quotes with double quotes"
+        },
+        "location": {
+          "column": 61,
+          "row": 6
+        },
+        "message": "Single quotes found but double quotes preferred",
+        "name": "bad-quotes-inline-string",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/bad-quotes-inline-string"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 1,
+      "W191": 2,
+      "Q000": 3,
+      "W605": 2
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 20,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> str",
+              "end_location": {
+                "column": 26,
+                "row": 4
+              },
+              "location": {
+                "column": 26,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Add return type annotation: `str`"
+        },
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing return type annotation for public function `text_match_word`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 20,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 25,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 21,
+          "row": 4
+        },
+        "message": "Missing type annotation for function argument `text`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 1,
+    "functions": [
+      {
+        "name": "text_match_word",
+        "complexity": 1,
+        "line_start": 4,
+        "line_end": 6
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "text_match_word",
+      "lineno": 4,
+      "complexity": 2,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 6,
+    "lloc": 4,
+    "sloc": 4,
+    "comments": 0,
+    "multi": 0,
+    "blank": 2,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 0,
+      "h2": 0,
+      "N1": 0,
+      "N2": 0,
+      "vocabulary": 0,
+      "length": 0,
+      "calculated_length": 0,
+      "volume": 0,
+      "difficulty": 0,
+      "effort": 0,
+      "time": 0.0,
+      "bugs": 0.0
+    },
+    "functions": [
+      {
+        "name": "text_match_word",
+        "h1": 0,
+        "h2": 0,
+        "N1": 0,
+        "N2": 0,
+        "vocabulary": 0,
+        "length": 0,
+        "calculated_length": 0,
+        "volume": 0,
+        "difficulty": 0,
+        "effort": 0,
+        "time": 0.0,
+        "bugs": 0.0
+      }
+    ]
+  }
+}

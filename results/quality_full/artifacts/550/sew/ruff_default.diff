@@ -1,0 +1,30 @@
+--- source.py
++++ ruff_default.py
+@@ -1,14 +1,14 @@
+-def find_Max(arr,low,high): 
+-    if (high < low): 
+-        return arr[0] 
+-    if (low == high): 
+-        return arr[low] 
+-    mid = low + ((high - low) // 2) 
+-    if (mid < high and arr[1 + mid]<arr[mid]): 
+-        return arr[mid] 
+-    if (low < mid and arr[mid]<arr[mid-1]): 
+-        return arr[mid-1]  
+-    if not (arr[low] > arr[mid]): 
+-        return find_Max(arr,mid + 1,high) 
+-    else: 
+-        return find_Max(arr,low,mid - 1) +def find_Max(arr, low, high):
++    if high < low:
++        return arr[0]
++    if low == high:
++        return arr[low]
++    mid = low + ((high - low) // 2)
++    if mid < high and arr[1 + mid] < arr[mid]:
++        return arr[mid]
++    if low < mid and arr[mid] < arr[mid - 1]:
++        return arr[mid - 1]
++    if not (arr[low] > arr[mid]):
++        return find_Max(arr, mid + 1, high)
++    else:
++        return find_Max(arr, low, mid - 1)

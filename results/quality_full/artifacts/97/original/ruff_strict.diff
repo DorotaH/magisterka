@@ -1,0 +1,11 @@
+--- source.py
++++ ruff_strict.py
+@@ -2,7 +2,7 @@
+     list1 = [item for sublist in list1 for item in sublist]
+     dic_data = {}
+     for num in list1:
+-        if num in dic_data.keys():
++        if num in dic_data:
+             dic_data[num] += 1
+         else:
+             key = num

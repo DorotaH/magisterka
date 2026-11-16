@@ -1,0 +1,1296 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 20,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 22,
+                "row": 17
+              },
+              "location": {
+                "column": 19,
+                "row": 17
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 19,
+          "row": 17
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 17,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "PIE808": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 21,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 23,
+                "row": 17
+              },
+              "location": {
+                "column": 20,
+                "row": 17
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 20,
+          "row": 17
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 17,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `find_ind`\n --> solution.py:1:6\n  |\n1 | def  find_ind(key, i, n,\n  |      ^^^^^^^^\n2 |             k, arr):\n3 |     ind = -1\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:6\n  |\n1 | def  find_ind(key, i, n,\n  |      ^^^^^^^^\n2 |             k, arr):\n3 |     ind = -1\n  |\n\nANN001 Missing type annotation for function argument `key`\n --> solution.py:1:15\n  |\n1 | def  find_ind(key, i, n,\n  |               ^^^\n2 |             k, arr):\n3 |     ind = -1\n  |\n\nANN001 Missing type annotation for function argument `i`\n --> solution.py:1:20\n  |\n1 | def  find_ind(key, i, n,\n  |                    ^\n2 |             k, arr):\n3 |     ind = -1\n  |\n\nANN001 Missing type annotation for function argument `n`\n --> solution.py:1:23\n  |\n1 | def  find_ind(key, i, n,\n  |                       ^\n2 |             k, arr):\n3 |     ind = -1\n  |\n\nW191 Indentation contains tabs\n --> solution.py:2:1\n  |\n1 | def  find_ind(key, i, n,\n2 |             k, arr):\n  | ^^^^^^^^^^^^\n3 |     ind = -1\n4 |     start, end = i + 1, n - 1\n  |\n\nANN001 Missing type annotation for function argument `k`\n --> solution.py:2:4\n  |\n1 | def  find_ind(key, i, n,\n2 |             k, arr):\n  |             ^\n3 |     ind = -1\n4 |     start, end = i + 1, n - 1\n  |\n\nANN001 Missing type annotation for function argument `arr`\n --> solution.py:2:7\n  |\n1 | def  find_ind(key, i, n,\n2 |             k, arr):\n  |                ^^^\n3 |     ind = -1\n4 |     start, end = i + 1, n - 1\n  |\n\nW191 Indentation contains tabs\n --> solution.py:3:1\n  |\n1 | def  find_ind(key, i, n,\n2 |             k, arr):\n3 |     ind = -1\n  | ^^^^\n4 |     start, end = i + 1, n - 1\n5 |     while  (end > start):\n  |\n\nW191 Indentation contains tabs\n --> solution.py:4:1\n  |\n2 |             k, arr):\n3 |     ind = -1\n4 |     start, end = i + 1, n - 1\n  | ^^^^\n5 |     while  (end > start):\n6 |         mid=int(start +\n  |\n\nW191 Indentation contains tabs\n --> solution.py:5:1\n  |\n3 |     ind = -1\n4 |     start, end = i + 1, n - 1\n5 |     while  (end > start):\n  | ^^^^\n6 |         mid=int(start +\n7 |                 ((end - start) / 2))\n  |\n\nW191 Indentation contains tabs\n --> solution.py:6:1\n  |\n4 |     start, end = i + 1, n - 1\n5 |     while  (end > start):\n6 |         mid=int(start +\n  | ^^^^^^^^\n7 |                 ((end - start) / 2))\n8 |         if not (arr[mid] - key <= k):\n  |\n\nW191 Indentation contains tabs\n --> solution.py:7:1\n  |\n5 |     while  (end > start):\n6 |         mid=int(start +\n7 |                 ((end - start) / 2))\n  | ^^^^^^^^^^^^^^^^\n8 |         if not (arr[mid] - key <= k):\n9 |             end = mid\n  |\n\nW191 Indentation contains tabs\n  --> solution.py:8:1\n   |\n 6 |         mid=int(start +\n 7 |                 ((end - start) / 2))\n 8 |         if not (arr[mid] - key <= k):\n   | ^^^^^^^^\n 9 |             end = mid\n10 |         else:\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:9:1\n   |\n 7 |                 ((end - start) / 2))\n 8 |         if not (arr[mid] - key <= k):\n 9 |             end = mid\n   | ^^^^^^^^^^^^\n10 |         else:\n11 |             ind = mid\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:10:1\n   |\n 8 |         if not (arr[mid] - key <= k):\n 9 |             end = mid\n10 |         else:\n   | ^^^^^^^^\n11 |             ind = mid\n12 |             start = mid + 1\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:11:1\n   |\n 9 |             end = mid\n10 |         else:\n11 |             ind = mid\n   | ^^^^^^^^^^^^\n12 |             start = mid + 1\n13 |     return  ind\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:12:1\n   |\n10 |         else:\n11 |             ind = mid\n12 |             start = mid + 1\n   | ^^^^^^^^^^^^\n13 |     return  ind\n14 | def  removals(arr, n, k):\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:13:1\n   |\n11 |             ind = mid\n12 |             start = mid + 1\n13 |     return  ind\n   | ^^^^\n14 | def  removals(arr, n, k):\n15 |     ans = n - 1\n   |\n\nANN201 Missing return type annotation for public function `removals`\n  --> solution.py:14:6\n   |\n12 |             start = mid + 1\n13 |     return  ind\n14 | def  removals(arr, n, k):\n   |      ^^^^^^^^\n15 |     ans = n - 1\n16 |     arr.sort()\n   |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n  --> solution.py:14:6\n   |\n12 |             start = mid + 1\n13 |     return  ind\n14 | def  removals(arr, n, k):\n   |      ^^^^^^^^\n15 |     ans = n - 1\n16 |     arr.sort()\n   |\n\nANN001 Missing type annotation for function argument `arr`\n  --> solution.py:14:15\n   |\n12 |             start = mid + 1\n13 |     return  ind\n14 | def  removals(arr, n, k):\n   |               ^^^\n15 |     ans = n - 1\n16 |     arr.sort()\n   |\n\nANN001 Missing type annotation for function argument `n`\n  --> solution.py:14:20\n   |\n12 |             start = mid + 1\n13 |     return  ind\n14 | def  removals(arr, n, k):\n   |                    ^\n15 |     ans = n - 1\n16 |     arr.sort()\n   |\n\nANN001 Missing type annotation for function argument `k`\n  --> solution.py:14:23\n   |\n12 |             start = mid + 1\n13 |     return  ind\n14 | def  removals(arr, n, k):\n   |                       ^\n15 |     ans = n - 1\n16 |     arr.sort()\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:15:1\n   |\n13 |     return  ind\n14 | def  removals(arr, n, k):\n15 |     ans = n - 1\n   | ^^^^\n16 |     arr.sort()\n17 |     for  i in  range(n):\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:16:1\n   |\n14 | def  removals(arr, n, k):\n15 |     ans = n - 1\n16 |     arr.sort()\n   | ^^^^\n17 |     for  i in  range(n):\n18 |         j = find_ind(arr[i], i,\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:17:1\n   |\n15 |     ans = n - 1\n16 |     arr.sort()\n17 |     for  i in  range(n):\n   | ^^^^\n18 |         j = find_ind(arr[i], i,\n19 |                     n, k, arr)\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:18:1\n   |\n16 |     arr.sort()\n17 |     for  i in  range(n):\n18 |         j = find_ind(arr[i], i,\n   | ^^^^^^^^\n19 |                     n, k, arr)\n20 |         if (j!=-1):\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:19:1\n   |\n17 |     for  i in  range(n):\n18 |         j = find_ind(arr[i], i,\n19 |                     n, k, arr)\n   | ^^^^^^^^^^^^^^^^^^^^\n20 |         if (j!=-1):\n21 |             ans=min(ans, n -\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:20:1\n   |\n18 |         j = find_ind(arr[i], i,\n19 |                     n, k, arr)\n20 |         if (j!=-1):\n   | ^^^^^^^^\n21 |             ans=min(ans, n -\n22 |                         (j-i+1))\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:21:1\n   |\n19 |                     n, k, arr)\n20 |         if (j!=-1):\n21 |             ans=min(ans, n -\n   | ^^^^^^^^^^^^\n22 |                         (j-i+1))\n23 |     return  ans\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:22:1\n   |\n20 |         if (j!=-1):\n21 |             ans=min(ans, n -\n22 |                         (j-i+1))\n   | ^^^^^^^^^^^^^^^^^^^^^^^^\n23 |     return  ans\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:23:1\n   |\n21 |             ans=min(ans, n -\n22 |                         (j-i+1))\n23 |     return  ans\n   | ^^^^\n\nFound 40 errors (5 fixed, 35 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `find_ind`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 15,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `key`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 21,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 20,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `i`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 24,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 26,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 26,
+                "row": 1
+              },
+              "location": {
+                "column": 25,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 25,
+          "row": 1
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 2
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 5,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 4,
+          "row": 2
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 10,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 7,
+          "row": 2
+        },
+        "message": "Missing type annotation for function argument `arr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 3
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 4
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "E703",
+        "end_location": {
+          "column": 28,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 28,
+                "row": 4
+              },
+              "location": {
+                "column": 27,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Remove unnecessary semicolon"
+        },
+        "location": {
+          "column": 27,
+          "row": 4
+        },
+        "message": "Statement ends with an unnecessary semicolon",
+        "name": "useless-semicolon",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-semicolon"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 5
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 6
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 5,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 7
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 8
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 9
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 10
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 11
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 12
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 13
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 13
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 13,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 14,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 14
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 14,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 14
+        },
+        "message": "Missing return type annotation for public function `removals`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 18,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 15,
+          "row": 14
+        },
+        "message": "Missing type annotation for function argument `arr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 21,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 20,
+          "row": 14
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 24,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 14
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 15
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 16
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 16
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 16,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 17
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 17,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "PIE808",
+        "end_location": {
+          "column": 20,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 22,
+                "row": 17
+              },
+              "location": {
+                "column": 19,
+                "row": 17
+              }
+            }
+          ],
+          "message": "Remove `start` argument"
+        },
+        "location": {
+          "column": 19,
+          "row": 17
+        },
+        "message": "Unnecessary `start` argument in `range`",
+        "name": "unnecessary-range-start",
+        "noqa_row": 17,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 18
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 18
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 18,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 27,
+          "row": 18
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 27,
+                "row": 18
+              },
+              "location": {
+                "column": 26,
+                "row": 18
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 26,
+          "row": 18
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 18,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 6,
+          "row": 19
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 19
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 19,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 20
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 20
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 20,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 21
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 21
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 21,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 7,
+          "row": 22
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 22
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 22,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 23
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 23
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 23,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 13,
+          "row": 23
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 13,
+                "row": 23
+              },
+              "location": {
+                "column": 13,
+                "row": 23
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 13,
+          "row": 23
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 23,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 2,
+      "D103": 2,
+      "ANN001": 8,
+      "W291": 2,
+      "W191": 21,
+      "E703": 1,
+      "PIE808": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 13,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `find_ind`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 13,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 17,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 14,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `key`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 20,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 19,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `i`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 23,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 26,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 25,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 31,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 28,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `arr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 13,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 14
+        },
+        "message": "Missing return type annotation for public function `removals`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 13,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 14
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 17,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 14,
+          "row": 14
+        },
+        "message": "Missing type annotation for function argument `arr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 20,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 19,
+          "row": 14
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 23,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 14
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 7,
+    "functions": [
+      {
+        "name": "find_ind",
+        "complexity": 4,
+        "line_start": 1,
+        "line_end": 13
+      },
+      {
+        "name": "removals",
+        "complexity": 3,
+        "line_start": 14,
+        "line_end": 23
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "find_ind",
+      "lineno": 1,
+      "complexity": 3,
+      "children": []
+    },
+    {
+      "name": "removals",
+      "lineno": 14,
+      "complexity": 3,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 23,
+    "lloc": 19,
+    "sloc": 23,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 8,
+      "h2": 21,
+      "N1": 17,
+      "N2": 31,
+      "vocabulary": 29,
+      "length": 48,
+      "calculated_length": 116.23866587835397,
+      "volume": 233.1830877661235,
+      "difficulty": 5.904761904761905,
+      "effort": 1376.8906134761578,
+      "time": 76.49392297089766,
+      "bugs": 0.07772769592204117
+    },
+    "functions": [
+      {
+        "name": "find_ind",
+        "h1": 7,
+        "h2": 14,
+        "N1": 11,
+        "N2": 20,
+        "vocabulary": 21,
+        "length": 31,
+        "calculated_length": 72.95445336320968,
+        "volume": 136.16184010614157,
+        "difficulty": 5.0,
+        "effort": 680.8092005307078,
+        "time": 37.822733362817104,
+        "bugs": 0.04538728003538052
+      },
+      {
+        "name": "removals",
+        "h1": 4,
+        "h2": 7,
+        "N1": 6,
+        "N2": 11,
+        "vocabulary": 11,
+        "length": 17,
+        "calculated_length": 27.651484454403228,
+        "volume": 58.81033751683406,
+        "difficulty": 3.142857142857143,
+        "effort": 184.83248933862134,
+        "time": 10.268471629923408,
+        "bugs": 0.019603445838944685
+      }
+    ]
+  }
+}

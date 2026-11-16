@@ -1,0 +1,820 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "C408",
+        "end_location": {
+          "column": 13,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "[",
+              "end_location": {
+                "column": 12,
+                "row": 2
+              },
+              "location": {
+                "column": 7,
+                "row": 2
+              }
+            },
+            {
+              "content": "]",
+              "end_location": {
+                "column": 13,
+                "row": 2
+              },
+              "location": {
+                "column": 12,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Rewrite as a literal"
+        },
+        "location": {
+          "column": 7,
+          "row": 2
+        },
+        "message": "Unnecessary `list()` call (rewrite as a literal)",
+        "name": "unnecessary-collection-call",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+      },
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 23,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "len(a) != 0",
+              "end_location": {
+                "column": 23,
+                "row": 10
+              },
+              "location": {
+                "column": 8,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 8,
+          "row": 10
+        },
+        "message": "Use `len(a) != 0` instead of `not len(a) == 0`",
+        "name": "negate-equal-op",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "C408": 1,
+      "SIM201": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "C408",
+        "end_location": {
+          "column": 15,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "[",
+              "end_location": {
+                "column": 14,
+                "row": 2
+              },
+              "location": {
+                "column": 9,
+                "row": 2
+              }
+            },
+            {
+              "content": "]",
+              "end_location": {
+                "column": 15,
+                "row": 2
+              },
+              "location": {
+                "column": 14,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Rewrite as a literal"
+        },
+        "location": {
+          "column": 9,
+          "row": 2
+        },
+        "message": "Unnecessary `list()` call (rewrite as a literal)",
+        "name": "unnecessary-collection-call",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+      },
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 23,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "len(a) != 0",
+              "end_location": {
+                "column": 23,
+                "row": 10
+              },
+              "location": {
+                "column": 8,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 8,
+          "row": 10
+        },
+        "message": "Use `len(a) != 0` instead of `not len(a) == 0`",
+        "name": "negate-equal-op",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `merge`\n --> solution.py:1:6\n  |\n1 | def  merge(a,b):\n  |      ^^^^^\n2 |     c=list()\n3 |     while  len(a) != 0 and  len(b) != 0:\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:6\n  |\n1 | def  merge(a,b):\n  |      ^^^^^\n2 |     c=list()\n3 |     while  len(a) != 0 and  len(b) != 0:\n  |\n\nANN001 Missing type annotation for function argument `a`\n --> solution.py:1:12\n  |\n1 | def  merge(a,b):\n  |            ^\n2 |     c=list()\n3 |     while  len(a) != 0 and  len(b) != 0:\n  |\n\nANN001 Missing type annotation for function argument `b`\n --> solution.py:1:14\n  |\n1 | def  merge(a,b):\n  |              ^\n2 |     c=list()\n3 |     while  len(a) != 0 and  len(b) != 0:\n  |\n\nC408 Unnecessary `list()` call (rewrite as a literal)\n --> solution.py:2:7\n  |\n1 | def  merge(a,b):\n2 |     c=list()\n  |       ^^^^^^\n3 |     while  len(a) != 0 and  len(b) != 0:\n4 |         if a[0] < b[0]:\n  |\nhelp: Rewrite as a literal\n  |\n1 | def  merge(a,b):\n  -     c=list()\n2 +     c=[]\n3 |     while  len(a) != 0 and  len(b) != 0:\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nSIM201 Use `len(a) != 0` instead of `not len(a) == 0`\n  --> solution.py:10:8\n   |\n 8 |             c.append(b[0])\n 9 |             b.remove(b[0])\n10 |     if not len(a) == 0:\n   |        ^^^^^^^^^^^^^^^\n11 |         c += a\n12 |     else:\n   |\nhelp: Replace with `!=` operator\n   |\n9  |             b.remove(b[0])\n   -     if not len(a) == 0:\n10 +     if len(a) != 0:\n11 |         c += a\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nANN201 Missing return type annotation for public function `merge_sort`\n  --> solution.py:15:6\n   |\n13 |         c += b\n14 |     return c\n15 | def  merge_sort(x):\n   |      ^^^^^^^^^^\n16 |     if not (len(x) == 0 or len(x) == 1):\n17 |         middle = len(x)//2\n   |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n  --> solution.py:15:6\n   |\n13 |         c += b\n14 |     return c\n15 | def  merge_sort(x):\n   |      ^^^^^^^^^^\n16 |     if not (len(x) == 0 or len(x) == 1):\n17 |         middle = len(x)//2\n   |\n\nANN001 Missing type annotation for function argument `x`\n  --> solution.py:15:17\n   |\n13 |         c += b\n14 |     return c\n15 | def  merge_sort(x):\n   |                 ^\n16 |     if not (len(x) == 0 or len(x) == 1):\n17 |         middle = len(x)//2\n   |\n\nFound 12 errors (1 fixed, 11 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 11,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `merge`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 11,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 13,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 12,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `a`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 14,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `b`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "C408",
+        "end_location": {
+          "column": 13,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "[",
+              "end_location": {
+                "column": 12,
+                "row": 2
+              },
+              "location": {
+                "column": 7,
+                "row": 2
+              }
+            },
+            {
+              "content": "]",
+              "end_location": {
+                "column": 13,
+                "row": 2
+              },
+              "location": {
+                "column": 12,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Rewrite as a literal"
+        },
+        "location": {
+          "column": 7,
+          "row": 2
+        },
+        "message": "Unnecessary `list()` call (rewrite as a literal)",
+        "name": "unnecessary-collection-call",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+      },
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 23,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "len(a) != 0",
+              "end_location": {
+                "column": 23,
+                "row": 10
+              },
+              "location": {
+                "column": 8,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 8,
+          "row": 10
+        },
+        "message": "Use `len(a) != 0` instead of `not len(a) == 0`",
+        "name": "negate-equal-op",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 16,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 15
+        },
+        "message": "Missing return type annotation for public function `merge_sort`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 16,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 15
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 18,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 17,
+          "row": 15
+        },
+        "message": "Missing type annotation for function argument `x`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "RET505",
+        "end_location": {
+          "column": 9,
+          "row": 21
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "    return x",
+              "end_location": {
+                "column": 17,
+                "row": 22
+              },
+              "location": {
+                "column": 1,
+                "row": 21
+              }
+            }
+          ],
+          "message": "Remove unnecessary `else`"
+        },
+        "location": {
+          "column": 5,
+          "row": 21
+        },
+        "message": "Unnecessary `else` after `return` statement",
+        "name": "superfluous-else-return",
+        "noqa_row": 21,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 2,
+      "D103": 2,
+      "ANN001": 3,
+      "C408": 1,
+      "SIM201": 1,
+      "RET505": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 10,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `merge`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 10,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 12,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 11,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `a`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 15,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 14,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `b`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "C408",
+        "end_location": {
+          "column": 15,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "[",
+              "end_location": {
+                "column": 14,
+                "row": 2
+              },
+              "location": {
+                "column": 9,
+                "row": 2
+              }
+            },
+            {
+              "content": "]",
+              "end_location": {
+                "column": 15,
+                "row": 2
+              },
+              "location": {
+                "column": 14,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Rewrite as a literal"
+        },
+        "location": {
+          "column": 9,
+          "row": 2
+        },
+        "message": "Unnecessary `list()` call (rewrite as a literal)",
+        "name": "unnecessary-collection-call",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+      },
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 23,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "len(a) != 0",
+              "end_location": {
+                "column": 23,
+                "row": 10
+              },
+              "location": {
+                "column": 8,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 8,
+          "row": 10
+        },
+        "message": "Use `len(a) != 0` instead of `not len(a) == 0`",
+        "name": "negate-equal-op",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 15,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 17
+        },
+        "message": "Missing return type annotation for public function `merge_sort`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 17,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 15,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 17
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 17,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 17,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 17
+        },
+        "message": "Missing type annotation for function argument `x`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 17,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 11,
+    "functions": [
+      {
+        "name": "merge",
+        "complexity": 7,
+        "line_start": 1,
+        "line_end": 14
+      },
+      {
+        "name": "merge_sort",
+        "complexity": 4,
+        "line_start": 15,
+        "line_end": 22
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "merge",
+      "lineno": 1,
+      "complexity": 5,
+      "children": []
+    },
+    {
+      "name": "merge_sort",
+      "lineno": 15,
+      "complexity": 3,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 22,
+    "lloc": 24,
+    "sloc": 22,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 8,
+      "h2": 21,
+      "N1": 13,
+      "N2": 24,
+      "vocabulary": 29,
+      "length": 37,
+      "calculated_length": 116.23866587835397,
+      "volume": 179.74529681972018,
+      "difficulty": 4.571428571428571,
+      "effort": 821.692785461578,
+      "time": 45.649599192309886,
+      "bugs": 0.05991509893990673
+    },
+    "functions": [
+      {
+        "name": "merge",
+        "h1": 6,
+        "h2": 12,
+        "N1": 8,
+        "N2": 15,
+        "vocabulary": 18,
+        "length": 23,
+        "calculated_length": 58.52932501298082,
+        "volume": 95.90827503317318,
+        "difficulty": 3.75,
+        "effort": 359.65603137439945,
+        "time": 19.98089063191108,
+        "bugs": 0.03196942501105773
+      },
+      {
+        "name": "merge_sort",
+        "h1": 4,
+        "h2": 9,
+        "N1": 5,
+        "N2": 9,
+        "vocabulary": 13,
+        "length": 14,
+        "calculated_length": 36.52932501298081,
+        "volume": 51.80615605397529,
+        "difficulty": 2.0,
+        "effort": 103.61231210795059,
+        "time": 5.75623956155281,
+        "bugs": 0.01726871868465843
+      }
+    ]
+  }
+}

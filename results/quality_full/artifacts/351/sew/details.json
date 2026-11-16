@@ -1,0 +1,1150 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "C408",
+        "end_location": {
+          "column": 23,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "{",
+              "end_location": {
+                "column": 22,
+                "row": 2
+              },
+              "location": {
+                "column": 17,
+                "row": 2
+              }
+            },
+            {
+              "content": "}",
+              "end_location": {
+                "column": 23,
+                "row": 2
+              },
+              "location": {
+                "column": 22,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Rewrite as a literal"
+        },
+        "location": {
+          "column": 17,
+          "row": 2
+        },
+        "message": "Unnecessary `dict()` call (rewrite as a literal)",
+        "name": "unnecessary-collection-call",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+      },
+      {
+        "cell": null,
+        "code": "SIM118",
+        "end_location": {
+          "column": 43,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 43,
+                "row": 4
+              },
+              "location": {
+                "column": 36,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Remove `.keys()`"
+        },
+        "location": {
+          "column": 17,
+          "row": 4
+        },
+        "message": "Use `key in dict` instead of `key in dict.keys()`",
+        "name": "in-dict-keys",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/in-dict-keys"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "C408": 1,
+      "SIM118": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "C408",
+        "end_location": {
+          "column": 23,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "{",
+              "end_location": {
+                "column": 22,
+                "row": 2
+              },
+              "location": {
+                "column": 17,
+                "row": 2
+              }
+            },
+            {
+              "content": "}",
+              "end_location": {
+                "column": 23,
+                "row": 2
+              },
+              "location": {
+                "column": 22,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Rewrite as a literal"
+        },
+        "location": {
+          "column": 17,
+          "row": 2
+        },
+        "message": "Unnecessary `dict()` call (rewrite as a literal)",
+        "name": "unnecessary-collection-call",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+      },
+      {
+        "cell": null,
+        "code": "SIM118",
+        "end_location": {
+          "column": 43,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 43,
+                "row": 4
+              },
+              "location": {
+                "column": 36,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Remove `.keys()`"
+        },
+        "location": {
+          "column": 17,
+          "row": 4
+        },
+        "message": "Use `key in dict` instead of `key in dict.keys()`",
+        "name": "in-dict-keys",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/in-dict-keys"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nN802 Function name `first_Element` should be lowercase\n --> solution.py:1:5\n  |\n1 | def first_Element(arr,n,k):\n  |     ^^^^^^^^^^^^^\n2 |     count_map = dict()\n3 |     for i in range(n):\n  |\n\nANN201 Missing return type annotation for public function `first_Element`\n --> solution.py:1:5\n  |\n1 | def first_Element(arr,n,k):\n  |     ^^^^^^^^^^^^^\n2 |     count_map = dict()\n3 |     for i in range(n):\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def first_Element(arr,n,k):\n  |     ^^^^^^^^^^^^^\n2 |     count_map = dict()\n3 |     for i in range(n):\n  |\n\nANN001 Missing type annotation for function argument `arr`\n --> solution.py:1:19\n  |\n1 | def first_Element(arr,n,k):\n  |                   ^^^\n2 |     count_map = dict()\n3 |     for i in range(n):\n  |\n\nANN001 Missing type annotation for function argument `n`\n --> solution.py:1:23\n  |\n1 | def first_Element(arr,n,k):\n  |                       ^\n2 |     count_map = dict()\n3 |     for i in range(n):\n  |\n\nANN001 Missing type annotation for function argument `k`\n --> solution.py:1:25\n  |\n1 | def first_Element(arr,n,k):\n  |                         ^\n2 |     count_map = dict()\n3 |     for i in range(n):\n  |\n\nC408 Unnecessary `dict()` call (rewrite as a literal)\n --> solution.py:2:17\n  |\n1 | def first_Element(arr,n,k):\n2 |     count_map = dict()\n  |                 ^^^^^^\n3 |     for i in range(n):\n4 |         if arr[i] not in count_map:\n  |\nhelp: Rewrite as a literal\n  |\n1 | def first_Element(arr,n,k):\n  -     count_map = dict()\n2 +     count_map = {}\n3 |     for i in range(n):\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nPLW2901 `for` loop variable `i` overwritten by assignment target\n  --> solution.py:8:9\n   |\n 6 |         else:\n 7 |             count_map[arr[i]] += 1\n 8 |         i = i + 1\n   |         ^\n 9 |     for i in range(n):\n10 |         if  (k == count_map[arr[i]]):\n   |\n\nPLW2901 `for` loop variable `i` overwritten by assignment target\n  --> solution.py:12:9\n   |\n10 |         if  (k == count_map[arr[i]]):\n11 |             return  arr[i]\n12 |         i = i + 1\n   |         ^\n13 |     return -1\n   |\n\nFound 23 errors (12 fixed, 11 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Function name `first_Element` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `first_Element`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 19,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `arr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 24,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 26,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 25,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 29,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 29,
+                "row": 1
+              },
+              "location": {
+                "column": 28,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 28,
+          "row": 1
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "C408",
+        "end_location": {
+          "column": 23,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "{",
+              "end_location": {
+                "column": 22,
+                "row": 2
+              },
+              "location": {
+                "column": 17,
+                "row": 2
+              }
+            },
+            {
+              "content": "}",
+              "end_location": {
+                "column": 23,
+                "row": 2
+              },
+              "location": {
+                "column": 22,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Rewrite as a literal"
+        },
+        "location": {
+          "column": 17,
+          "row": 2
+        },
+        "message": "Unnecessary `dict()` call (rewrite as a literal)",
+        "name": "unnecessary-collection-call",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+      },
+      {
+        "cell": null,
+        "code": "E703",
+        "end_location": {
+          "column": 24,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 24,
+                "row": 2
+              },
+              "location": {
+                "column": 23,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Remove unnecessary semicolon"
+        },
+        "location": {
+          "column": 23,
+          "row": 2
+        },
+        "message": "Statement ends with an unnecessary semicolon",
+        "name": "useless-semicolon",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-semicolon"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 25,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 25,
+                "row": 2
+              },
+              "location": {
+                "column": 24,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 24,
+          "row": 2
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 24,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 24,
+                "row": 3
+              },
+              "location": {
+                "column": 23,
+                "row": 3
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 23,
+          "row": 3
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "SIM118",
+        "end_location": {
+          "column": 43,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 43,
+                "row": 4
+              },
+              "location": {
+                "column": 36,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Remove `.keys()`"
+        },
+        "location": {
+          "column": 17,
+          "row": 4
+        },
+        "message": "Use `key in dict` instead of `key in dict.keys()`",
+        "name": "in-dict-keys",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/in-dict-keys"
+      },
+      {
+        "cell": null,
+        "code": "E713",
+        "end_location": {
+          "column": 43,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "arr[i] not in count_map.keys()",
+              "end_location": {
+                "column": 44,
+                "row": 4
+              },
+              "location": {
+                "column": 12,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Convert to `not in`"
+        },
+        "location": {
+          "column": 17,
+          "row": 4
+        },
+        "message": "Test for membership should be `not in`",
+        "name": "not-in-test",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/not-in-test"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 46,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 46,
+                "row": 4
+              },
+              "location": {
+                "column": 45,
+                "row": 4
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 45,
+          "row": 4
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 15,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 15,
+                "row": 6
+              },
+              "location": {
+                "column": 14,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 14,
+          "row": 6
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "PLW2901",
+        "end_location": {
+          "column": 10,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 8
+        },
+        "message": "`for` loop variable `i` overwritten by assignment target",
+        "name": "redefined-loop-name",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/redefined-loop-name"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 25,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 25,
+                "row": 9
+              },
+              "location": {
+                "column": 23,
+                "row": 9
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 23,
+          "row": 9
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 39,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 39,
+                "row": 10
+              },
+              "location": {
+                "column": 38,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 38,
+          "row": 10
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 28,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 28,
+                "row": 11
+              },
+              "location": {
+                "column": 27,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 27,
+          "row": 11
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "PLW2901",
+        "end_location": {
+          "column": 10,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 12
+        },
+        "message": "`for` loop variable `i` overwritten by assignment target",
+        "name": "redefined-loop-name",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/redefined-loop-name"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 19,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 19,
+                "row": 12
+              },
+              "location": {
+                "column": 18,
+                "row": 12
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 18,
+          "row": 12
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "N802": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 3,
+      "W291": 9,
+      "C408": 1,
+      "E703": 1,
+      "SIM118": 1,
+      "E713": 1,
+      "PLW2901": 2
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "N802",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Function name `first_Element` should be lowercase",
+        "name": "invalid-function-name",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/invalid-function-name"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `first_Element`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 18,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 19,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `arr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 25,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 24,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `n`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 28,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 27,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `k`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "C408",
+        "end_location": {
+          "column": 23,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "{",
+              "end_location": {
+                "column": 22,
+                "row": 2
+              },
+              "location": {
+                "column": 17,
+                "row": 2
+              }
+            },
+            {
+              "content": "}",
+              "end_location": {
+                "column": 23,
+                "row": 2
+              },
+              "location": {
+                "column": 22,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Rewrite as a literal"
+        },
+        "location": {
+          "column": 17,
+          "row": 2
+        },
+        "message": "Unnecessary `dict()` call (rewrite as a literal)",
+        "name": "unnecessary-collection-call",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+      },
+      {
+        "cell": null,
+        "code": "PLW2901",
+        "end_location": {
+          "column": 10,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 8
+        },
+        "message": "`for` loop variable `i` overwritten by assignment target",
+        "name": "redefined-loop-name",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/redefined-loop-name"
+      },
+      {
+        "cell": null,
+        "code": "PLW2901",
+        "end_location": {
+          "column": 10,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 12
+        },
+        "message": "`for` loop variable `i` overwritten by assignment target",
+        "name": "redefined-loop-name",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/redefined-loop-name"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 7,
+    "functions": [
+      {
+        "name": "first_Element",
+        "complexity": 7,
+        "line_start": 1,
+        "line_end": 13
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "first_Element",
+      "lineno": 1,
+      "complexity": 5,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 13,
+    "lloc": 13,
+    "sloc": 13,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 5,
+      "h2": 8,
+      "N1": 7,
+      "N2": 12,
+      "vocabulary": 13,
+      "length": 19,
+      "calculated_length": 35.60964047443681,
+      "volume": 70.30835464468075,
+      "difficulty": 3.75,
+      "effort": 263.6563299175528,
+      "time": 14.647573884308489,
+      "bugs": 0.02343611821489358
+    },
+    "functions": [
+      {
+        "name": "first_Element",
+        "h1": 5,
+        "h2": 8,
+        "N1": 7,
+        "N2": 12,
+        "vocabulary": 13,
+        "length": 19,
+        "calculated_length": 35.60964047443681,
+        "volume": 70.30835464468075,
+        "difficulty": 3.75,
+        "effort": 263.6563299175528,
+        "time": 14.647573884308489,
+        "bugs": 0.02343611821489358
+      }
+    ]
+  }
+}

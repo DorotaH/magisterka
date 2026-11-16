@@ -1,0 +1,14 @@
+--- original
++++ sew
+@@ -2,8 +2,8 @@
+     l = 0
+     x = a.strip() 
+     for i in range(len(x)): 
+-        if x[i] == " ": 
++        if not x[i] == " ": 
++            l += 1
++        else: 
+             l = 0
+-        else: 
+-            l += 1
+     return l 

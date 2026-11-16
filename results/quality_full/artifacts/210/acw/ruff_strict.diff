@@ -1,0 +1,12 @@
+--- source.py
++++ ruff_strict.py
+@@ -2,6 +2,6 @@
+ 
+ 
+ def is_allowed_specific_char(string):
+-	get_char = re.compile(r'[^a-zA-Z0-9.]')
+-	string = get_char.search(string)
+-	return not bool(string)
++    get_char = re.compile(r"[^a-zA-Z0-9.]")
++    string = get_char.search(string)
++    return not bool(string)

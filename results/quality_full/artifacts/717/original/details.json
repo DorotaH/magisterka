@@ -1,0 +1,818 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "I001",
+        "end_location": {
+          "column": 11,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "import math\nimport sys\n\n\n",
+              "end_location": {
+                "column": 1,
+                "row": 3
+              },
+              "location": {
+                "column": 1,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Organize imports"
+        },
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Import block is un-sorted or un-formatted",
+        "name": "unsorted-imports",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+      },
+      {
+        "cell": null,
+        "code": "F401",
+        "end_location": {
+          "column": 11,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 1,
+                "row": 3
+              },
+              "location": {
+                "column": 1,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Remove unused import: `sys`"
+        },
+        "location": {
+          "column": 8,
+          "row": 2
+        },
+        "message": "`sys` imported but unused",
+        "name": "unused-import",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unused-import"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "I001": 1,
+      "F401": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "F401",
+        "end_location": {
+          "column": 11,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 1,
+                "row": 3
+              },
+              "location": {
+                "column": 1,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Remove unused import: `sys`"
+        },
+        "location": {
+          "column": 8,
+          "row": 2
+        },
+        "message": "`sys` imported but unused",
+        "name": "unused-import",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unused-import"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `sd_calc`\n --> solution.py:4:5\n  |\n4 | def sd_calc(data):\n  |     ^^^^^^^\n5 |     n = len(data)\n6 |     if n <= 1:\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:4:5\n  |\n4 | def sd_calc(data):\n  |     ^^^^^^^\n5 |     n = len(data)\n6 |     if n <= 1:\n  |\n\nANN001 Missing type annotation for function argument `data`\n --> solution.py:4:13\n  |\n4 | def sd_calc(data):\n  |             ^^^^\n5 |     n = len(data)\n6 |     if n <= 1:\n  |\n\nRET504 Unnecessary assignment to `sd` before `return` statement\n  --> solution.py:12:12\n   |\n10 |         sd += (float(el) - mean)**2\n11 |     sd = math.sqrt(sd / float(n-1))\n12 |     return sd\n   |            ^^\n13 | def avg_calc(ls):\n14 |     n, mean = len(ls), 0.0\n   |\nhelp: Remove unnecessary assignment\n   |\n10 |         sd += (float(el) - mean)**2\n   -     sd = math.sqrt(sd / float(n-1))\n   -     return sd\n11 +     return math.sqrt(sd / float(n-1))\n12 | def avg_calc(ls):\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nANN201 Missing return type annotation for public function `avg_calc`\n  --> solution.py:13:5\n   |\n11 |     sd = math.sqrt(sd / float(n-1))\n12 |     return sd\n13 | def avg_calc(ls):\n   |     ^^^^^^^^\n14 |     n, mean = len(ls), 0.0\n15 |     if n <= 1:\n   |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n  --> solution.py:13:5\n   |\n11 |     sd = math.sqrt(sd / float(n-1))\n12 |     return sd\n13 | def avg_calc(ls):\n   |     ^^^^^^^^\n14 |     n, mean = len(ls), 0.0\n15 |     if n <= 1:\n   |\n\nANN001 Missing type annotation for function argument `ls`\n  --> solution.py:13:14\n   |\n11 |     sd = math.sqrt(sd / float(n-1))\n12 |     return sd\n13 | def avg_calc(ls):\n   |              ^^\n14 |     n, mean = len(ls), 0.0\n15 |     if n <= 1:\n   |\n\nRET504 Unnecessary assignment to `mean` before `return` statement\n  --> solution.py:20:12\n   |\n18 |         mean = mean + float(el)\n19 |     mean = mean / float(n)\n20 |     return mean\n   |            ^^^^\nhelp: Remove unnecessary assignment\n   |\n18 |         mean = mean + float(el)\n   -     mean = mean / float(n)\n   -     return mean\n19 +     return mean / float(n)\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 13 errors (3 fixed, 10 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "I001",
+        "end_location": {
+          "column": 11,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "import math\nimport sys\n\n\n",
+              "end_location": {
+                "column": 1,
+                "row": 3
+              },
+              "location": {
+                "column": 1,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Organize imports"
+        },
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Import block is un-sorted or un-formatted",
+        "name": "unsorted-imports",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "F401",
+        "end_location": {
+          "column": 11,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 1,
+                "row": 3
+              },
+              "location": {
+                "column": 1,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Remove unused import: `sys`"
+        },
+        "location": {
+          "column": 8,
+          "row": 2
+        },
+        "message": "`sys` imported but unused",
+        "name": "unused-import",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unused-import"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 12,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 3
+        },
+        "message": "Missing return type annotation for public function `sd_calc`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 12,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 3
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 17,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 13,
+          "row": 3
+        },
+        "message": "Missing type annotation for function argument `data`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "RET504",
+        "end_location": {
+          "column": 14,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return",
+              "end_location": {
+                "column": 9,
+                "row": 10
+              },
+              "location": {
+                "column": 5,
+                "row": 10
+              }
+            },
+            {
+              "content": "",
+              "end_location": {
+                "column": 1,
+                "row": 12
+              },
+              "location": {
+                "column": 1,
+                "row": 11
+              }
+            }
+          ],
+          "message": "Remove unnecessary assignment"
+        },
+        "location": {
+          "column": 12,
+          "row": 11
+        },
+        "message": "Unnecessary assignment to `sd` before `return` statement",
+        "name": "unnecessary-assign",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-assign"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 13,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 12
+        },
+        "message": "Missing return type annotation for public function `avg_calc`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 13,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 12
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 16,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 14,
+          "row": 12
+        },
+        "message": "Missing type annotation for function argument `ls`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "RET504",
+        "end_location": {
+          "column": 16,
+          "row": 19
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return",
+              "end_location": {
+                "column": 11,
+                "row": 18
+              },
+              "location": {
+                "column": 5,
+                "row": 18
+              }
+            },
+            {
+              "content": "",
+              "end_location": {
+                "column": 16,
+                "row": 19
+              },
+              "location": {
+                "column": 1,
+                "row": 19
+              }
+            }
+          ],
+          "message": "Remove unnecessary assignment"
+        },
+        "location": {
+          "column": 12,
+          "row": 19
+        },
+        "message": "Unnecessary assignment to `mean` before `return` statement",
+        "name": "unnecessary-assign",
+        "noqa_row": 19,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-assign"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 16,
+          "row": 19
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 16,
+                "row": 19
+              },
+              "location": {
+                "column": 16,
+                "row": 19
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 16,
+          "row": 19
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 19,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "I001": 1,
+      "CPY001": 1,
+      "F401": 1,
+      "ANN201": 2,
+      "D103": 2,
+      "ANN001": 2,
+      "RET504": 2,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 12,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing return type annotation for public function `sd_calc`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 12,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 4
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 17,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 13,
+          "row": 4
+        },
+        "message": "Missing type annotation for function argument `data`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "RET504",
+        "end_location": {
+          "column": 14,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return",
+              "end_location": {
+                "column": 9,
+                "row": 11
+              },
+              "location": {
+                "column": 5,
+                "row": 11
+              }
+            },
+            {
+              "content": "",
+              "end_location": {
+                "column": 1,
+                "row": 13
+              },
+              "location": {
+                "column": 1,
+                "row": 12
+              }
+            }
+          ],
+          "message": "Remove unnecessary assignment"
+        },
+        "location": {
+          "column": 12,
+          "row": 12
+        },
+        "message": "Unnecessary assignment to `sd` before `return` statement",
+        "name": "unnecessary-assign",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-assign"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 13,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 15
+        },
+        "message": "Missing return type annotation for public function `avg_calc`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 13,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 15
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 16,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 14,
+          "row": 15
+        },
+        "message": "Missing type annotation for function argument `ls`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "RET504",
+        "end_location": {
+          "column": 16,
+          "row": 22
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "return",
+              "end_location": {
+                "column": 11,
+                "row": 21
+              },
+              "location": {
+                "column": 5,
+                "row": 21
+              }
+            },
+            {
+              "content": "",
+              "end_location": {
+                "column": 1,
+                "row": 23
+              },
+              "location": {
+                "column": 1,
+                "row": 22
+              }
+            }
+          ],
+          "message": "Remove unnecessary assignment"
+        },
+        "location": {
+          "column": 12,
+          "row": 22
+        },
+        "message": "Unnecessary assignment to `mean` before `return` statement",
+        "name": "unnecessary-assign",
+        "noqa_row": 22,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unnecessary-assign"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 4,
+    "functions": [
+      {
+        "name": "sd_calc",
+        "complexity": 2,
+        "line_start": 3,
+        "line_end": 11
+      },
+      {
+        "name": "avg_calc",
+        "complexity": 2,
+        "line_start": 12,
+        "line_end": 19
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "sd_calc",
+      "lineno": 3,
+      "complexity": 3,
+      "children": []
+    },
+    {
+      "name": "avg_calc",
+      "lineno": 12,
+      "complexity": 3,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 19,
+    "lloc": 19,
+    "sloc": 19,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 5,
+      "h2": 14,
+      "N1": 9,
+      "N2": 18,
+      "vocabulary": 19,
+      "length": 27,
+      "calculated_length": 64.91260938324326,
+      "volume": 114.6940428629768,
+      "difficulty": 3.2142857142857144,
+      "effort": 368.65942348813974,
+      "time": 20.48107908267443,
+      "bugs": 0.03823134762099227
+    },
+    "functions": [
+      {
+        "name": "sd_calc",
+        "h1": 5,
+        "h2": 9,
+        "N1": 6,
+        "N2": 12,
+        "vocabulary": 14,
+        "length": 18,
+        "calculated_length": 40.13896548741762,
+        "volume": 68.53238859703687,
+        "difficulty": 3.3333333333333335,
+        "effort": 228.44129532345625,
+        "time": 12.691183073525346,
+        "bugs": 0.022844129532345624
+      },
+      {
+        "name": "avg_calc",
+        "h1": 3,
+        "h2": 5,
+        "N1": 3,
+        "N2": 6,
+        "vocabulary": 8,
+        "length": 9,
+        "calculated_length": 16.36452797660028,
+        "volume": 27.0,
+        "difficulty": 1.8,
+        "effort": 48.6,
+        "time": 2.7,
+        "bugs": 0.009
+      }
+    ]
+  }
+}

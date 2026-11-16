@@ -1,0 +1,29 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,15 +1,15 @@
+-import math 
++import math
+ 
+ 
+-def divSum(n): 
+-	sum = 1;
+-	i = 2;
+-	while i**2 <= n: 
+-		if (n % i == 0): 
+-			sum = (i + sum + math.floor(n / i)); 
+-		i += 1;
+-	return sum; 
++def divSum(n):
++    sum = 1
++    i = 2
++    while i**2 <= n:
++        if n % i == 0:
++            sum = i + sum + math.floor(n / i)
++        i += 1
++    return sum
+ 
+ 
+-def areEquivalent(num1, num2): 
+-	return divSum(num1) == divSum(num2);
++def areEquivalent(num1, num2):
++    return divSum(num1) == divSum(num2)

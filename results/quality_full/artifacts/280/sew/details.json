@@ -1,0 +1,457 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 34,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "dlist[pos] != item",
+              "end_location": {
+                "column": 34,
+                "row": 5
+              },
+              "location": {
+                "column": 12,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 12,
+          "row": 5
+        },
+        "message": "Use `dlist[pos] != item` instead of `not dlist[pos] == item`",
+        "name": "negate-equal-op",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "SIM201": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 34,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "dlist[pos] != item",
+              "end_location": {
+                "column": 34,
+                "row": 5
+              },
+              "location": {
+                "column": 12,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 12,
+          "row": 5
+        },
+        "message": "Use `dlist[pos] != item` instead of `not dlist[pos] == item`",
+        "name": "negate-equal-op",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `sequential_search`\n --> solution.py:1:5\n  |\n1 | def sequential_search(dlist, item):\n  |     ^^^^^^^^^^^^^^^^^\n2 |     pos = 0\n3 |     found = False\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:5\n  |\n1 | def sequential_search(dlist, item):\n  |     ^^^^^^^^^^^^^^^^^\n2 |     pos = 0\n3 |     found = False\n  |\n\nANN001 Missing type annotation for function argument `dlist`\n --> solution.py:1:23\n  |\n1 | def sequential_search(dlist, item):\n  |                       ^^^^^\n2 |     pos = 0\n3 |     found = False\n  |\n\nANN001 Missing type annotation for function argument `item`\n --> solution.py:1:30\n  |\n1 | def sequential_search(dlist, item):\n  |                              ^^^^\n2 |     pos = 0\n3 |     found = False\n  |\n\nSIM201 Use `dlist[pos] != item` instead of `not dlist[pos] == item`\n --> solution.py:5:12\n  |\n3 |     found = False\n4 |     while pos<len(dlist) and not found:\n5 |         if not dlist[pos] == item:\n  |            ^^^^^^^^^^^^^^^^^^^^^^\n6 |             pos = pos + 1\n7 |         else:\n  |\nhelp: Replace with `!=` operator\n  |\n4 |     while pos<len(dlist) and not found:\n  -         if not dlist[pos] == item:\n5 +         if dlist[pos] != item:\n6 |             pos = pos + 1\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 7 errors.\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `sequential_search`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 28,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `dlist`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 34,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 30,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `item`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 34,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "dlist[pos] != item",
+              "end_location": {
+                "column": 34,
+                "row": 5
+              },
+              "location": {
+                "column": 12,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 12,
+          "row": 5
+        },
+        "message": "Use `dlist[pos] != item` instead of `not dlist[pos] == item`",
+        "name": "negate-equal-op",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 2,
+      "SIM201": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `sequential_search`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 22,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 28,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 23,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `dlist`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 34,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 30,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `item`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "SIM201",
+        "end_location": {
+          "column": 34,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "dlist[pos] != item",
+              "end_location": {
+                "column": 34,
+                "row": 5
+              },
+              "location": {
+                "column": 12,
+                "row": 5
+              }
+            }
+          ],
+          "message": "Replace with `!=` operator"
+        },
+        "location": {
+          "column": 12,
+          "row": 5
+        },
+        "message": "Use `dlist[pos] != item` instead of `not dlist[pos] == item`",
+        "name": "negate-equal-op",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 5,
+    "functions": [
+      {
+        "name": "sequential_search",
+        "complexity": 5,
+        "line_start": 1,
+        "line_end": 9
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "sequential_search",
+      "lineno": 1,
+      "complexity": 4,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 9,
+    "lloc": 9,
+    "sloc": 9,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 5,
+      "h2": 9,
+      "N1": 6,
+      "N2": 10,
+      "vocabulary": 14,
+      "length": 16,
+      "calculated_length": 40.13896548741762,
+      "volume": 60.91767875292166,
+      "difficulty": 2.7777777777777777,
+      "effort": 169.21577431367126,
+      "time": 9.400876350759514,
+      "bugs": 0.020305892917640553
+    },
+    "functions": [
+      {
+        "name": "sequential_search",
+        "h1": 5,
+        "h2": 9,
+        "N1": 6,
+        "N2": 10,
+        "vocabulary": 14,
+        "length": 16,
+        "calculated_length": 40.13896548741762,
+        "volume": 60.91767875292166,
+        "difficulty": 2.7777777777777777,
+        "effort": 169.21577431367126,
+        "time": 9.400876350759514,
+        "bugs": 0.020305892917640553
+      }
+    ]
+  }
+}

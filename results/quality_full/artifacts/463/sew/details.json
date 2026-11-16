@@ -1,0 +1,945 @@
+{
+  "ruff_default": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "PLR1730",
+        "end_location": {
+          "column": 30,
+          "row": 20
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max_so_far = max(max_so_far, max_ending_here)",
+              "end_location": {
+                "column": 30,
+                "row": 20
+              },
+              "location": {
+                "column": 3,
+                "row": 19
+              }
+            }
+          ],
+          "message": "Replace with `max_so_far = max(max_so_far, max_ending_here)`"
+        },
+        "location": {
+          "column": 3,
+          "row": 19
+        },
+        "message": "Replace `if` statement with `max_so_far = max(max_so_far, max_ending_here)`",
+        "name": "if-stmt-min-max",
+        "noqa_row": 19,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/if-stmt-min-max"
+      }
+    ],
+    "stderr": "",
+    "counts_by_rule": {
+      "PLR1730": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "PLR1730",
+        "end_location": {
+          "column": 41,
+          "row": 20
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max_so_far = max(max_so_far, max_ending_here)",
+              "end_location": {
+                "column": 41,
+                "row": 20
+              },
+              "location": {
+                "column": 9,
+                "row": 19
+              }
+            }
+          ],
+          "message": "Replace with `max_so_far = max(max_so_far, max_ending_here)`"
+        },
+        "location": {
+          "column": 9,
+          "row": 19
+        },
+        "message": "Replace `if` statement with `max_so_far = max(max_so_far, max_ending_here)`",
+        "name": "if-stmt-min-max",
+        "noqa_row": 19,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/if-stmt-min-max"
+      }
+    ]
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nANN201 Missing return type annotation for public function `max_subarray_product`\n --> solution.py:1:6\n  |\n1 | def  max_subarray_product(arr):\n  |      ^^^^^^^^^^^^^^^^^^^^\n2 |     n = len(arr)\n3 |     max_ending_here = 1\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:1:6\n  |\n1 | def  max_subarray_product(arr):\n  |      ^^^^^^^^^^^^^^^^^^^^\n2 |     n = len(arr)\n3 |     max_ending_here = 1\n  |\n\nANN001 Missing type annotation for function argument `arr`\n --> solution.py:1:27\n  |\n1 | def  max_subarray_product(arr):\n  |                           ^^^\n2 |     n = len(arr)\n3 |     max_ending_here = 1\n  |\n\nW191 Indentation contains tabs\n --> solution.py:2:1\n  |\n1 | def  max_subarray_product(arr):\n2 |     n = len(arr)\n  | ^^^^\n3 |     max_ending_here = 1\n4 |     min_ending_here = 1\n  |\n\nW191 Indentation contains tabs\n --> solution.py:3:1\n  |\n1 | def  max_subarray_product(arr):\n2 |     n = len(arr)\n3 |     max_ending_here = 1\n  | ^^^^\n4 |     min_ending_here = 1\n5 |     max_so_far = 0\n  |\n\nW191 Indentation contains tabs\n --> solution.py:4:1\n  |\n2 |     n = len(arr)\n3 |     max_ending_here = 1\n4 |     min_ending_here = 1\n  | ^^^^\n5 |     max_so_far = 0\n6 |     flag = 0\n  |\n\nW191 Indentation contains tabs\n --> solution.py:5:1\n  |\n3 |     max_ending_here = 1\n4 |     min_ending_here = 1\n5 |     max_so_far = 0\n  | ^^^^\n6 |     flag = 0\n7 |     for  i in  range(n):\n  |\n\nW191 Indentation contains tabs\n --> solution.py:6:1\n  |\n4 |     min_ending_here = 1\n5 |     max_so_far = 0\n6 |     flag = 0\n  | ^^^^\n7 |     for  i in  range(n):\n8 |         if arr[i]>0:\n  |\n\nW191 Indentation contains tabs\n --> solution.py:7:1\n  |\n5 |     max_so_far = 0\n6 |     flag = 0\n7 |     for  i in  range(n):\n  | ^^^^\n8 |         if arr[i]>0:\n9 |             max_ending_here *= arr[i]\n  |\n\nW191 Indentation contains tabs\n  --> solution.py:8:1\n   |\n 6 |     flag = 0\n 7 |     for  i in  range(n):\n 8 |         if arr[i]>0:\n   | ^^^^^^^^\n 9 |             max_ending_here *= arr[i]\n10 |             min_ending_here=min (min_ending_here * arr[i], 1)\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:9:1\n   |\n 7 |     for  i in  range(n):\n 8 |         if arr[i]>0:\n 9 |             max_ending_here *= arr[i]\n   | ^^^^^^^^^^^^\n10 |             min_ending_here=min (min_ending_here * arr[i], 1)\n11 |             flag=1\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:10:1\n   |\n 8 |         if arr[i]>0:\n 9 |             max_ending_here *= arr[i]\n10 |             min_ending_here=min (min_ending_here * arr[i], 1)\n   | ^^^^^^^^^^^^\n11 |             flag=1\n12 |         elif arr[i] == 0:\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:11:1\n   |\n 9 |             max_ending_here *= arr[i]\n10 |             min_ending_here=min (min_ending_here * arr[i], 1)\n11 |             flag=1\n   | ^^^^^^^^^^^^\n12 |         elif arr[i] == 0:\n13 |             max_ending_here = 1\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:12:1\n   |\n10 |             min_ending_here=min (min_ending_here * arr[i], 1)\n11 |             flag=1\n12 |         elif arr[i] == 0:\n   | ^^^^^^^^\n13 |             max_ending_here = 1\n14 |             min_ending_here = 1\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:13:1\n   |\n11 |             flag=1\n12 |         elif arr[i] == 0:\n13 |             max_ending_here = 1\n   | ^^^^^^^^^^^^\n14 |             min_ending_here = 1\n15 |         else:\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:14:1\n   |\n12 |         elif arr[i] == 0:\n13 |             max_ending_here = 1\n14 |             min_ending_here = 1\n   | ^^^^^^^^^^^^\n15 |         else:\n16 |             temp=max_ending_here\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:15:1\n   |\n13 |             max_ending_here = 1\n14 |             min_ending_here = 1\n15 |         else:\n   | ^^^^^^^^\n16 |             temp=max_ending_here\n17 |             max_ending_here=max (arr[i] * min_ending_here, 1)\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:16:1\n   |\n14 |             min_ending_here = 1\n15 |         else:\n16 |             temp=max_ending_here\n   | ^^^^^^^^^^^^\n17 |             max_ending_here=max (arr[i] * min_ending_here, 1)\n18 |             min_ending_here=arr[i] * temp\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:17:1\n   |\n15 |         else:\n16 |             temp=max_ending_here\n17 |             max_ending_here=max (arr[i] * min_ending_here, 1)\n   | ^^^^^^^^^^^^\n18 |             min_ending_here=arr[i] * temp\n19 |         max_so_far = max(max_so_far, max_ending_here)\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:18:1\n   |\n16 |             temp=max_ending_here\n17 |             max_ending_here=max (arr[i] * min_ending_here, 1)\n18 |             min_ending_here=arr[i] * temp\n   | ^^^^^^^^^^^^\n19 |         max_so_far = max(max_so_far, max_ending_here)\n20 |     if  flag == 0 and  max_so_far == 0:\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:19:1\n   |\n17 |             max_ending_here=max (arr[i] * min_ending_here, 1)\n18 |             min_ending_here=arr[i] * temp\n19 |         max_so_far = max(max_so_far, max_ending_here)\n   | ^^^^^^^^\n20 |     if  flag == 0 and  max_so_far == 0:\n21 |         return  0\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:20:1\n   |\n18 |             min_ending_here=arr[i] * temp\n19 |         max_so_far = max(max_so_far, max_ending_here)\n20 |     if  flag == 0 and  max_so_far == 0:\n   | ^^^^\n21 |         return  0\n22 |     return  max_so_far\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:21:1\n   |\n19 |         max_so_far = max(max_so_far, max_ending_here)\n20 |     if  flag == 0 and  max_so_far == 0:\n21 |         return  0\n   | ^^^^^^^^\n22 |     return  max_so_far\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:22:1\n   |\n20 |     if  flag == 0 and  max_so_far == 0:\n21 |         return  0\n22 |     return  max_so_far\n   | ^^^^\n\nFound 31 errors (5 fixed, 26 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 26,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `max_subarray_product`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 26,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 30,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 27,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `arr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 2
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 3
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 4
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 5
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 6
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 7
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 8
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 9
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 10
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 11
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 12
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "SIM300",
+        "end_location": {
+          "column": 19,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "arr[i] == 0",
+              "end_location": {
+                "column": 19,
+                "row": 12
+              },
+              "location": {
+                "column": 8,
+                "row": 12
+              }
+            }
+          ],
+          "message": "Rewrite as `arr[i] == 0`"
+        },
+        "location": {
+          "column": 8,
+          "row": 12
+        },
+        "message": "Yoda condition detected",
+        "name": "yoda-conditions",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/yoda-conditions"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 13
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 13
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 13,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 14
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 15
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 16
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 16
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 16,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 17
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 17
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 17,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 18
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 18
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 18,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 19
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 19
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 19,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "PLR1730",
+        "end_location": {
+          "column": 30,
+          "row": 20
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max_so_far = max(max_so_far, max_ending_here)",
+              "end_location": {
+                "column": 30,
+                "row": 20
+              },
+              "location": {
+                "column": 3,
+                "row": 19
+              }
+            }
+          ],
+          "message": "Replace with `max_so_far = max(max_so_far, max_ending_here)`"
+        },
+        "location": {
+          "column": 3,
+          "row": 19
+        },
+        "message": "Replace `if` statement with `max_so_far = max(max_so_far, max_ending_here)`",
+        "name": "if-stmt-min-max",
+        "noqa_row": 19,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/if-stmt-min-max"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 20
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 20
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 20,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 21
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 21
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 21,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "SIM300",
+        "end_location": {
+          "column": 15,
+          "row": 21
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "flag == 0",
+              "end_location": {
+                "column": 15,
+                "row": 21
+              },
+              "location": {
+                "column": 6,
+                "row": 21
+              }
+            }
+          ],
+          "message": "Rewrite as `flag == 0`"
+        },
+        "location": {
+          "column": 6,
+          "row": 21
+        },
+        "message": "Yoda condition detected",
+        "name": "yoda-conditions",
+        "noqa_row": 21,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/yoda-conditions"
+      },
+      {
+        "cell": null,
+        "code": "SIM300",
+        "end_location": {
+          "column": 36,
+          "row": 21
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "max_so_far == 0",
+              "end_location": {
+                "column": 36,
+                "row": 21
+              },
+              "location": {
+                "column": 21,
+                "row": 21
+              }
+            }
+          ],
+          "message": "Rewrite as `max_so_far == 0`"
+        },
+        "location": {
+          "column": 21,
+          "row": 21
+        },
+        "message": "Yoda condition detected",
+        "name": "yoda-conditions",
+        "noqa_row": 21,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/yoda-conditions"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 22
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 22
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 22,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 23
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 23
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 23,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W292",
+        "end_location": {
+          "column": 20,
+          "row": 23
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\n",
+              "end_location": {
+                "column": 20,
+                "row": 23
+              },
+              "location": {
+                "column": 20,
+                "row": 23
+              }
+            }
+          ],
+          "message": "Add trailing newline"
+        },
+        "location": {
+          "column": 20,
+          "row": 23
+        },
+        "message": "No newline at end of file",
+        "name": "missing-newline-at-end-of-file",
+        "noqa_row": 23,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "D100": 1,
+      "CPY001": 1,
+      "ANN201": 1,
+      "D103": 1,
+      "ANN001": 1,
+      "W191": 22,
+      "SIM300": 3,
+      "PLR1730": 1,
+      "W292": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 25,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing return type annotation for public function `max_subarray_product`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 25,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 1
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 29,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 26,
+          "row": 1
+        },
+        "message": "Missing type annotation for function argument `arr`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 9,
+    "functions": [
+      {
+        "name": "max_subarray_product",
+        "complexity": 9,
+        "line_start": 1,
+        "line_end": 23
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "max_subarray_product",
+      "lineno": 1,
+      "complexity": 7,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 23,
+    "lloc": 23,
+    "sloc": 23,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 5,
+      "h2": 14,
+      "N1": 10,
+      "N2": 20,
+      "vocabulary": 19,
+      "length": 30,
+      "calculated_length": 64.91260938324326,
+      "volume": 127.43782540330756,
+      "difficulty": 3.5714285714285716,
+      "effort": 455.13509072609844,
+      "time": 25.28528281811658,
+      "bugs": 0.042479275134435855
+    },
+    "functions": [
+      {
+        "name": "max_subarray_product",
+        "h1": 5,
+        "h2": 14,
+        "N1": 10,
+        "N2": 20,
+        "vocabulary": 19,
+        "length": 30,
+        "calculated_length": 64.91260938324326,
+        "volume": 127.43782540330756,
+        "difficulty": 3.5714285714285716,
+        "effort": 455.13509072609844,
+        "time": 25.28528281811658,
+        "bugs": 0.042479275134435855
+      }
+    ]
+  }
+}

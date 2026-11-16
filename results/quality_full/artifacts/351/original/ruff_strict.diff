@@ -1,0 +1,25 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,13 +1,13 @@
+-def first_Element(arr,n,k): 
+-    count_map = {}; 
+-    for i in range(0, n): 
+-        if(arr[i] in count_map.keys()): 
++def first_Element(arr, n, k):
++    count_map = {}
++    for i in range(n):
++        if arr[i] in count_map:
+             count_map[arr[i]] += 1
+-        else: 
++        else:
+             count_map[arr[i]] = 1
+         i += 1
+-    for i in range(0, n):  
+-        if (count_map[arr[i]] == k): 
+-            return arr[i] 
+-        i += 1 
+-    return -1+    for i in range(n):
++        if count_map[arr[i]] == k:
++            return arr[i]
++        i += 1
++    return -1

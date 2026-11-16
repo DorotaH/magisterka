@@ -1,0 +1,6 @@
+def count_Squares(m, n):
+    if m > n:
+        temp = m
+        m = n
+        n = temp
+    return n * (1 + n) * (m * 3 - n + 1) // 6

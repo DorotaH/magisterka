@@ -1,0 +1,18 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,7 +1,9 @@
+-import re 
+-regex = '^[aeiouAEIOU][A-Za-z0-9_]*'
+-def check_str(string): 
+-	if(re.search(regex, string)): 
+-		return ("Valid") 
+-	else: 
+-		return ("Invalid") +import re
++
++regex = "^[aeiouAEIOU][A-Za-z0-9_]*"
++
++
++def check_str(string):
++    if re.search(regex, string):
++        return "Valid"
++    return "Invalid"

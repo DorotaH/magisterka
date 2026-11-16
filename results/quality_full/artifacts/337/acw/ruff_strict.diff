@@ -1,0 +1,10 @@
+--- source.py
++++ ruff_strict.py
+@@ -2,5 +2,5 @@
+ 
+ 
+ def text_match_word(text):
+-		patterns = '\w+\S*$'
+-		return 'Found a match!' if re.search(patterns, text) else 'Not matched!'
++    patterns = r"\w+\S*$"
++    return "Found a match!" if re.search(patterns, text) else "Not matched!"

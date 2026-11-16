@@ -1,0 +1,14 @@
+--- original
++++ acw
+@@ -1,8 +1,4 @@
+-def min_Num(arr,n):  
+-    odd = 0
+-    for i in range(n): 
+-        if (arr[i] % 2): 
+-            odd += 1 
+-    if (odd % 2): 
+-        return 1
+-    return 2+def min_Num(arr, n):  
++	odd = sum(bool(arr[i] % 2)
++		for i in range(n))
++	return 1 if (odd % 2) else 2

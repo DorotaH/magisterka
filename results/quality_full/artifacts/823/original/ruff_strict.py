@@ -1,0 +1,11 @@
+import re
+
+
+def check_substring(string, sample):
+    if sample in string:
+        y = r"\A" + sample
+        x = re.search(y, string)
+        if x:
+            return "string starts with the given substring"
+        return "string doesnt start with the given substring"
+    return "entered string isnt a substring"

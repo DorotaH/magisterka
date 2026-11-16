@@ -1,0 +1,1243 @@
+{
+  "ruff_default": {
+    "diagnostics": [],
+    "stderr": "",
+    "counts_by_rule": {},
+    "remaining": []
+  },
+  "strict_fix_stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\nD100 Missing docstring in public module\n--> solution.py:1:1\n\nCPY001 Missing copyright notice at top of file\n--> solution.py:1:1\n\nD101 Missing docstring in public class\n --> solution.py:1:8\n  |\n1 | class  Node:\n  |        ^^^^\n2 |     def  __init__(self, data):\n3 |         self.data=data\n  |\n\nW191 Indentation contains tabs\n --> solution.py:2:1\n  |\n1 | class  Node:\n2 |     def  __init__(self, data):\n  | ^^^^\n3 |         self.data=data\n4 |         self.left=None\n  |\n\nANN204 Missing return type annotation for special method `__init__`\n --> solution.py:2:7\n  |\n1 | class  Node:\n2 |     def  __init__(self, data):\n  |          ^^^^^^^^\n3 |         self.data=data\n4 |         self.left=None\n  |\nhelp: Add return type annotation: `None`\n  |\n1 | class  Node:\n  - \tdef  __init__(self, data):\n2 + \tdef  __init__(self, data) -> None:\n3 | \t\tself.data=data\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nD107 Missing docstring in `__init__`\n --> solution.py:2:7\n  |\n1 | class  Node:\n2 |     def  __init__(self, data):\n  |          ^^^^^^^^\n3 |         self.data=data\n4 |         self.left=None\n  |\n\nANN001 Missing type annotation for function argument `data`\n --> solution.py:2:22\n  |\n1 | class  Node:\n2 |     def  __init__(self, data):\n  |                         ^^^^\n3 |         self.data=data\n4 |         self.left=None\n  |\n\nW191 Indentation contains tabs\n --> solution.py:3:1\n  |\n1 | class  Node:\n2 |     def  __init__(self, data):\n3 |         self.data=data\n  | ^^^^^^^^\n4 |         self.left=None\n5 |         self.right=None\n  |\n\nW191 Indentation contains tabs\n --> solution.py:4:1\n  |\n2 |     def  __init__(self, data):\n3 |         self.data=data\n4 |         self.left=None\n  | ^^^^^^^^\n5 |         self.right=None\n6 | def  max_height(node):\n  |\n\nW191 Indentation contains tabs\n --> solution.py:5:1\n  |\n3 |         self.data=data\n4 |         self.left=None\n5 |         self.right=None\n  | ^^^^^^^^\n6 | def  max_height(node):\n7 |     if node is not None:\n  |\n\nANN201 Missing return type annotation for public function `max_height`\n --> solution.py:6:6\n  |\n4 |         self.left=None\n5 |         self.right=None\n6 | def  max_height(node):\n  |      ^^^^^^^^^^\n7 |     if node is not None:\n8 |         left_height = max_height(node.left)\n  |\nhelp: Add return type annotation\n\nD103 Missing docstring in public function\n --> solution.py:6:6\n  |\n4 |         self.left=None\n5 |         self.right=None\n6 | def  max_height(node):\n  |      ^^^^^^^^^^\n7 |     if node is not None:\n8 |         left_height = max_height(node.left)\n  |\n\nANN001 Missing type annotation for function argument `node`\n --> solution.py:6:17\n  |\n4 |         self.left=None\n5 |         self.right=None\n6 | def  max_height(node):\n  |                 ^^^^\n7 |     if node is not None:\n8 |         left_height = max_height(node.left)\n  |\n\nW191 Indentation contains tabs\n --> solution.py:7:1\n  |\n5 |         self.right=None\n6 | def  max_height(node):\n7 |     if node is not None:\n  | ^^^^\n8 |         left_height = max_height(node.left)\n9 |         right_height = max_height(node.right)\n  |\n\nW191 Indentation contains tabs\n  --> solution.py:8:1\n   |\n 6 | def  max_height(node):\n 7 |     if node is not None:\n 8 |         left_height = max_height(node.left)\n   | ^^^^^^^^\n 9 |         right_height = max_height(node.right)\n10 |         if (left_height > right_height):\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:9:1\n   |\n 7 |     if node is not None:\n 8 |         left_height = max_height(node.left)\n 9 |         right_height = max_height(node.right)\n   | ^^^^^^^^\n10 |         if (left_height > right_height):\n11 |             return left_height+1\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:10:1\n   |\n 8 |         left_height = max_height(node.left)\n 9 |         right_height = max_height(node.right)\n10 |         if (left_height > right_height):\n   | ^^^^^^^^\n11 |             return left_height+1\n12 |         return right_height+1\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:11:1\n   |\n 9 |         right_height = max_height(node.right)\n10 |         if (left_height > right_height):\n11 |             return left_height+1\n   | ^^^^^^^^^^^^\n12 |         return right_height+1\n13 |     return 0\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:12:1\n   |\n10 |         if (left_height > right_height):\n11 |             return left_height+1\n12 |         return right_height+1\n   | ^^^^^^^^\n13 |     return 0\n   |\n\nW191 Indentation contains tabs\n  --> solution.py:13:1\n   |\n11 |             return left_height+1\n12 |         return right_height+1\n13 |     return 0\n   | ^^^^\n\nFound 35 errors (15 fixed, 20 remaining).\n",
+  "ruff_strict": {
+    "diagnostics": [
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "D101",
+        "end_location": {
+          "column": 12,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 8,
+          "row": 1
+        },
+        "message": "Missing docstring in public class",
+        "name": "undocumented-public-class",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-class"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 14,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 14,
+                "row": 1
+              },
+              "location": {
+                "column": 13,
+                "row": 1
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 13,
+          "row": 1
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 2
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "ANN204",
+        "end_location": {
+          "column": 15,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> None",
+              "end_location": {
+                "column": 27,
+                "row": 2
+              },
+              "location": {
+                "column": 27,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Add return type annotation: `None`"
+        },
+        "location": {
+          "column": 7,
+          "row": 2
+        },
+        "message": "Missing return type annotation for special method `__init__`",
+        "name": "missing-return-type-special-method",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-special-method"
+      },
+      {
+        "cell": null,
+        "code": "D107",
+        "end_location": {
+          "column": 15,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 7,
+          "row": 2
+        },
+        "message": "Missing docstring in `__init__`",
+        "name": "undocumented-public-init",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-init"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 26,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 22,
+          "row": 2
+        },
+        "message": "Missing type annotation for function argument `data`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 29,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 29,
+                "row": 2
+              },
+              "location": {
+                "column": 28,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 28,
+          "row": 2
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 3
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 18,
+          "row": 3
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 18,
+                "row": 3
+              },
+              "location": {
+                "column": 17,
+                "row": 3
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 17,
+          "row": 3
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 4
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 4
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 4,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 5
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 5
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 5,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 16,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 6
+        },
+        "message": "Missing return type annotation for public function `max_height`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 16,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 6,
+          "row": 6
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 21,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 17,
+          "row": 6
+        },
+        "message": "Missing type annotation for function argument `node`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 24,
+          "row": 6
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 24,
+                "row": 6
+              },
+              "location": {
+                "column": 23,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 23,
+          "row": 6
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 7
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "E714",
+        "end_location": {
+          "column": 21,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "node is not None",
+              "end_location": {
+                "column": 21,
+                "row": 7
+              },
+              "location": {
+                "column": 5,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Convert to `is not`"
+        },
+        "location": {
+          "column": 9,
+          "row": 7
+        },
+        "message": "Test for object identity should be `is not`",
+        "name": "not-is-test",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/not-is-test"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 23,
+          "row": 7
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 23,
+                "row": 7
+              },
+              "location": {
+                "column": 22,
+                "row": 7
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 22,
+          "row": 7
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 7,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 8
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 39,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 39,
+                "row": 8
+              },
+              "location": {
+                "column": 38,
+                "row": 8
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 38,
+          "row": 8
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 9
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 41,
+          "row": 9
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 41,
+                "row": 9
+              },
+              "location": {
+                "column": 40,
+                "row": 9
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 40,
+          "row": 9
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 9,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 10
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 36,
+          "row": 10
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 36,
+                "row": 10
+              },
+              "location": {
+                "column": 35,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 35,
+          "row": 10
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 11
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 11
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 11,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 12
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "RET505",
+        "end_location": {
+          "column": 7,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "\t\treturn right_height+1",
+              "end_location": {
+                "column": 25,
+                "row": 13
+              },
+              "location": {
+                "column": 1,
+                "row": 12
+              }
+            }
+          ],
+          "message": "Remove unnecessary `else`"
+        },
+        "location": {
+          "column": 3,
+          "row": 12
+        },
+        "message": "Unnecessary `else` after `return` statement",
+        "name": "superfluous-else-return",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 9,
+          "row": 12
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 9,
+                "row": 12
+              },
+              "location": {
+                "column": 8,
+                "row": 12
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 8,
+          "row": 12
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 12,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 4,
+          "row": 13
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 13
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 13,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 26,
+          "row": 13
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 26,
+                "row": 13
+              },
+              "location": {
+                "column": 25,
+                "row": 13
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 25,
+          "row": 13
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 13,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 2,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 14
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "W291",
+        "end_location": {
+          "column": 9,
+          "row": 14
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 9,
+                "row": 14
+              },
+              "location": {
+                "column": 8,
+                "row": 14
+              }
+            }
+          ],
+          "message": "Remove trailing whitespace"
+        },
+        "location": {
+          "column": 8,
+          "row": 14
+        },
+        "message": "Trailing whitespace",
+        "name": "trailing-whitespace",
+        "noqa_row": 14,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+      },
+      {
+        "cell": null,
+        "code": "W191",
+        "end_location": {
+          "column": 3,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 15
+        },
+        "message": "Indentation contains tabs",
+        "name": "tab-indentation",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/tab-indentation"
+      },
+      {
+        "cell": null,
+        "code": "E703",
+        "end_location": {
+          "column": 13,
+          "row": 15
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "",
+              "end_location": {
+                "column": 13,
+                "row": 15
+              },
+              "location": {
+                "column": 12,
+                "row": 15
+              }
+            }
+          ],
+          "message": "Remove unnecessary semicolon"
+        },
+        "location": {
+          "column": 12,
+          "row": 15
+        },
+        "message": "Statement ends with an unnecessary semicolon",
+        "name": "useless-semicolon",
+        "noqa_row": 15,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-semicolon"
+      }
+    ],
+    "stderr": "warning: `incorrect-blank-line-before-class` (D203) and `blank-line-before-class` (D211) are incompatible. Ignoring `incorrect-blank-line-before-class`.\nwarning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.\n",
+    "counts_by_rule": {
+      "CPY001": 1,
+      "D100": 1,
+      "D101": 1,
+      "W291": 11,
+      "W191": 13,
+      "ANN204": 1,
+      "D107": 1,
+      "ANN001": 2,
+      "ANN201": 1,
+      "D103": 1,
+      "E714": 1,
+      "RET505": 1,
+      "E703": 1
+    },
+    "remaining": [
+      {
+        "cell": null,
+        "code": "D100",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing docstring in public module",
+        "name": "undocumented-public-module",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-module"
+      },
+      {
+        "cell": null,
+        "code": "CPY001",
+        "end_location": {
+          "column": 1,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 1,
+          "row": 1
+        },
+        "message": "Missing copyright notice at top of file",
+        "name": "missing-copyright-notice",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-copyright-notice"
+      },
+      {
+        "cell": null,
+        "code": "D101",
+        "end_location": {
+          "column": 11,
+          "row": 1
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 7,
+          "row": 1
+        },
+        "message": "Missing docstring in public class",
+        "name": "undocumented-public-class",
+        "noqa_row": 1,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-class"
+      },
+      {
+        "cell": null,
+        "code": "ANN204",
+        "end_location": {
+          "column": 17,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": " -> None",
+              "end_location": {
+                "column": 29,
+                "row": 2
+              },
+              "location": {
+                "column": 29,
+                "row": 2
+              }
+            }
+          ],
+          "message": "Add return type annotation: `None`"
+        },
+        "location": {
+          "column": 9,
+          "row": 2
+        },
+        "message": "Missing return type annotation for special method `__init__`",
+        "name": "missing-return-type-special-method",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-special-method"
+      },
+      {
+        "cell": null,
+        "code": "D107",
+        "end_location": {
+          "column": 17,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 9,
+          "row": 2
+        },
+        "message": "Missing docstring in `__init__`",
+        "name": "undocumented-public-init",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-init"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 28,
+          "row": 2
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 24,
+          "row": 2
+        },
+        "message": "Missing type annotation for function argument `data`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 2,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      },
+      {
+        "cell": null,
+        "code": "ANN201",
+        "end_location": {
+          "column": 15,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 8
+        },
+        "message": "Missing return type annotation for public function `max_height`",
+        "name": "missing-return-type-public-function",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-return-type-public-function"
+      },
+      {
+        "cell": null,
+        "code": "D103",
+        "end_location": {
+          "column": 15,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 5,
+          "row": 8
+        },
+        "message": "Missing docstring in public function",
+        "name": "undocumented-public-function",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/undocumented-public-function"
+      },
+      {
+        "cell": null,
+        "code": "ANN001",
+        "end_location": {
+          "column": 20,
+          "row": 8
+        },
+        "filename": "/home/dh/Desktop/watermark/solution.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 8
+        },
+        "message": "Missing type annotation for function argument `node`",
+        "name": "missing-type-function-argument",
+        "noqa_row": 8,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/missing-type-function-argument"
+      }
+    ]
+  },
+  "complexipy": {
+    "complexity": 6,
+    "functions": [
+      {
+        "name": "Node::__init__",
+        "complexity": 0,
+        "line_start": 2,
+        "line_end": 5
+      },
+      {
+        "name": "max_height",
+        "complexity": 6,
+        "line_start": 6,
+        "line_end": 15
+      }
+    ]
+  },
+  "radon_cc": [
+    {
+      "name": "max_height",
+      "lineno": 6,
+      "complexity": 3,
+      "children": []
+    },
+    {
+      "name": "Node",
+      "lineno": 1,
+      "complexity": 2,
+      "children": [
+        {
+          "name": "__init__",
+          "lineno": 2,
+          "complexity": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "__init__",
+      "lineno": 2,
+      "complexity": 1,
+      "children": []
+    }
+  ],
+  "radon_raw": {
+    "loc": 15,
+    "lloc": 15,
+    "sloc": 15,
+    "comments": 0,
+    "multi": 0,
+    "blank": 0,
+    "single_comments": 0
+  },
+  "halstead": {
+    "total": {
+      "h1": 4,
+      "h2": 6,
+      "N1": 5,
+      "N2": 9,
+      "vocabulary": 10,
+      "length": 14,
+      "calculated_length": 23.509775004326936,
+      "volume": 46.50699332842308,
+      "difficulty": 3.0,
+      "effort": 139.52097998526924,
+      "time": 7.75116555473718,
+      "bugs": 0.01550233110947436
+    },
+    "functions": [
+      {
+        "name": "__init__",
+        "h1": 0,
+        "h2": 0,
+        "N1": 0,
+        "N2": 0,
+        "vocabulary": 0,
+        "length": 0,
+        "calculated_length": 0,
+        "volume": 0,
+        "difficulty": 0,
+        "effort": 0,
+        "time": 0.0,
+        "bugs": 0.0
+      },
+      {
+        "name": "max_height",
+        "h1": 4,
+        "h2": 6,
+        "N1": 5,
+        "N2": 9,
+        "vocabulary": 10,
+        "length": 14,
+        "calculated_length": 23.509775004326936,
+        "volume": 46.50699332842308,
+        "difficulty": 3.0,
+        "effort": 139.52097998526924,
+        "time": 7.75116555473718,
+        "bugs": 0.01550233110947436
+      }
+    ]
+  }
+}

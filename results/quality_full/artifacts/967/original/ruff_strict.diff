@@ -1,0 +1,11 @@
+--- source.py
++++ ruff_strict.py
+@@ -1,5 +1,4 @@
+-def check(string): 
+-  if len(set(string).intersection("AEIOUaeiou"))>=5: 
+-    return ('accepted') 
+-  else: 
+-    return ("not accepted") +def check(string):
++    if len(set(string).intersection("AEIOUaeiou")) >= 5:
++        return "accepted"
++    return "not accepted"

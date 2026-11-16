@@ -1,0 +1,54 @@
+--- original
++++ sew
+@@ -1,5 +1,5 @@
+-import math
+-def calculate_polygons(startx, starty, endx, endy, radius):
++import  math
++def  calculate_polygons(startx, starty, endx, endy, radius):
+     sl = (2 * radius) * math.tan(math.pi / 6)
+     p = sl * 0.5
+     b = sl * math.cos(math.radians(30))
+@@ -16,25 +16,25 @@
+     polygons = []
+     row = 1
+     counter = 0
+-    while starty < endy:
++    while  starty < endy:
+         if row % 2 == 0:
+             startx = origx + xoffset
+         else:
+             startx = origx
+-        while startx < endx:
++        while endx > startx:
+             p1x = startx
+             p1y = starty + p
+-            p2x = startx
++            p2x=startx
+             p2y = starty + (3 * p)
+             p3x = startx + b
+-            p3y = starty + h
++            p3y=starty+h
+             p4x = startx + w
+             p4y = starty + (3 * p)
+             p5x = startx + w
+             p5y = starty + p
+             p6x = startx + b
+             p6y = starty
+-            poly = [
++            poly=[
+                 (p1x, p1y),
+                 (p2x, p2y),
+                 (p3x, p3y),
+@@ -43,8 +43,8 @@
+                 (p6x, p6y),
+                 (p1x, p1y)]
+             polygons.append(poly)
+-            counter += 1
+-            startx += w
+-        starty += yoffset
+-        row += 1
+-    return polygons+            counter = counter + 1
++            startx+=w
++        starty+=yoffset
++        row = row + 1
++    return  polygons
