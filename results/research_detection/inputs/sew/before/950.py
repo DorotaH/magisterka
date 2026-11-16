@@ -1,0 +1,26 @@
+def  chinese_zodiac(year):
+ if 0 == (year - 2000) % 12:
+     sign = 'Dragon'
+ elif 1 == (year - 2000) % 12:
+     sign='Snake'
+ elif 2 == (year - 2000) % 12:
+     sign='Horse'
+ elif 3 == (year - 2000) % 12:
+     sign='sheep'
+ elif 4 == (year - 2000) % 12:
+     sign='Monkey'
+ elif 5 == (year - 2000) % 12:
+     sign='Rooster'
+ elif 6 == (year - 2000) % 12:
+     sign='Dog'
+ elif 7 == (year - 2000) % 12:
+     sign='Pig'
+ elif 8 == (year - 2000) % 12:
+     sign='Rat'
+ elif 9 == (year - 2000) % 12:
+     sign='Ox'
+ elif 10 == (year - 2000) % 12:
+     sign='Tiger'
+ else:
+     sign = 'Hare'
+ return  sign

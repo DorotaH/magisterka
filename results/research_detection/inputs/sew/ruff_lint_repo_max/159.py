@@ -1,0 +1,18 @@
+def  month_season(month,days):
+ if  month in ('January', 'February', 'March'):
+	 season = 'winter'
+ elif  month == 'April' or month == 'May' or month == 'June':
+	 season = 'spring'
+ elif  month == 'July' or month == 'August' or month == 'September':
+	 season = 'summer'
+ else:
+	 season='autumn'
+ if  (month == 'March') and  (days > 19):
+	 season = 'spring'
+ elif  (month == 'June') and  (days > 20):
+	 season = 'summer'
+ elif  (month == 'September') and  (days > 21) or (month == 'October') and  (days > 21) or (month == 'November') and  (days > 21):
+	 season = 'autumn'
+ elif  (month == 'December') and  (days > 20):
+	 season = 'winter'
+ return  season

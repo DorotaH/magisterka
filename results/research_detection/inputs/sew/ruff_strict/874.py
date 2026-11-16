@@ -1,0 +1,8 @@
+def check_Concat(str1, str2):
+    N, M = len(str1), len(str2)
+    if N % M != 0:
+        return False
+    for i in range(N):
+        if str1[i] != str2[i % M]:
+            return False
+    return True
