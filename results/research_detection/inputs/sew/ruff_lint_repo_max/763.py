@@ -1,6 +1,0 @@
-def find_Min_Diff(arr,n): 
-    arr=sorted(arr) 
-    diff=pow(10, 20) 
-    for i in range(n-1): 
-        diff = min(diff, arr[i+1] - arr[i])  
-    return diff 

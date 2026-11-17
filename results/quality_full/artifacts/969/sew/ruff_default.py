@@ -1,9 +1,0 @@
-def join_tuples(test_list):
-    res = list()
-    for sub in test_list:
-        if not (res and res[-1][0] == sub[0]):
-            res.append([ele for ele in sub])
-        else:
-            res[-1].extend(sub[1:])
-    res = list(map(tuple, res))
-    return res

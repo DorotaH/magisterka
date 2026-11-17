@@ -1,2 +1,0 @@
-def is_Sum_Of_Powers_Of_Two(n):
-    return n % 2 != 1

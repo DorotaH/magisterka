@@ -1,7 +1,0 @@
-def count_digits(num1,num2):
-    number=num1+num2
-    count = 0
-    while(number>0):
-        number //= 10
-        count += 1
-    return count

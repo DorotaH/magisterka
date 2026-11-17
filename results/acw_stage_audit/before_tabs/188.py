@@ -1,7 +1,0 @@
-def prod_Square(n):
-    for i in range(2, (n) + 1):
-        if (i * i < (1 + n)):
-            for j in range(2, 1 + n):
-                if ((i * i * j * j) == n):
-                    return True;
-    return False;

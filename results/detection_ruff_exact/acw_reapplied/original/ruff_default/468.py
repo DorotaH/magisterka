@@ -1,9 +1,0 @@
-def max_product(arr, n):
-	mpis = (n) * [0]
-	for i in range(n):
-		mpis[i] = arr[i]
-	for i in range(1, n):
-		for j in range(i):
-			if arr[j] < arr[i] and mpis[i] < (arr[i] * mpis[j]):
-				mpis[i] = arr[i] * mpis[j]
-	return max(mpis)

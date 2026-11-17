@@ -1,5 +1,0 @@
-def  array_3d(m,n,o):
- array_3d = []
- for row in range(o):
-     array_3d.append([ ['*' for col in range(m)] for col in range(n)])
- return  array_3d

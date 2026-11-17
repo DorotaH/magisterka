@@ -1,3 +1,0 @@
-def min_Swaps(str1, str2):
-	count = sum(str1[i] != str2[i] for i in range(len(str1)))
-	return (count // 2) if count % 2 == 0 else "Not Possible"

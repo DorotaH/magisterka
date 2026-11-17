@@ -1,6 +1,0 @@
-def modular_inverse(arr, N, P):
-	current_element = 0
-	for  i in  range(N):
-		if  (1 == (arr[i] * arr[i]) % P):
-			current_element = current_element + 1
-	return  current_element

@@ -1,6 +1,0 @@
-def even_Power_Sum(n): 
-    sum = 0; 
-    for i in range(1, 1 + n): 
-        j = i * 2; 
-        sum = sum + (j * j * j * j); 
-    return sum;
