@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0046.py:
+--- Original
++++ Modified
+@@ -164,7 +164,7 @@
+ 
+ 
+ def divideCeil(n, x):
+-    return n // x if (n % x == 0) else 1 + n // x
++    return n // x if (n % x == 0) else n // x + 1
+ 
+ 
+ def ii():
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0046.py:
+--- Original
++++ Modified
+@@ -96,7 +96,7 @@
+         while n % i == 0:
+             l.append(int(i))
+             n = n / i
+-    if n > 2:
++    if 2 < n:
+         l.append(n)
+     # c = dict(Counter(l))
+     return list(set(l))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0046.py

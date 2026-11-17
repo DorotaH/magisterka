@@ -1,0 +1,48 @@
+[
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 39,
+      "row": 7
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0558/acw/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 39,
+            "row": 7
+          },
+          "location": {
+            "column": 29,
+            "row": 7
+          }
+        },
+        {
+          "content": "\tif columns is None:\n\t\tcolumns = ['A', 'B']\n",
+          "end_location": {
+            "column": 1,
+            "row": 32
+          },
+          "location": {
+            "column": 1,
+            "row": 32
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 29,
+      "row": 7
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "name": "mutable-argument-default",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  }
+]

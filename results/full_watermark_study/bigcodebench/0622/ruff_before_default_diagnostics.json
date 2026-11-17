@@ -1,0 +1,107 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 28,
+      "row": 4
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0622/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from itertools import chain\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nfrom scipy.stats import norm\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "RUF059",
+    "end_location": {
+      "column": 8,
+      "row": 30
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0622/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_fig",
+          "end_location": {
+            "column": 8,
+            "row": 30
+          },
+          "location": {
+            "column": 5,
+            "row": 30
+          }
+        }
+      ],
+      "message": "Prefix it with an underscore or any other dummy variable pattern"
+    },
+    "location": {
+      "column": 5,
+      "row": 30
+    },
+    "message": "Unpacked variable `fig` is never used",
+    "name": "unused-unpacked-variable",
+    "noqa_row": 30,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-unpacked-variable"
+  },
+  {
+    "cell": null,
+    "code": "UP031",
+    "end_location": {
+      "column": 62,
+      "row": 37
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0622/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "\"Fit results: mu = {:.2f},  std = {:.2f}\".format(mu, std)",
+          "end_location": {
+            "column": 62,
+            "row": 37
+          },
+          "location": {
+            "column": 13,
+            "row": 37
+          }
+        }
+      ],
+      "message": "Replace with format specifiers"
+    },
+    "location": {
+      "column": 13,
+      "row": 37
+    },
+    "message": "Use format specifiers instead of percent format",
+    "name": "printf-string-formatting",
+    "noqa_row": 37,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/printf-string-formatting"
+  }
+]

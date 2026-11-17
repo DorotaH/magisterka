@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0491.py:
+--- Original
++++ Modified
+@@ -44,7 +44,7 @@
+     if seed is not None:
+         random.seed(seed)
+ 
+-    if epoch_milliseconds < 0:
++    if 0 > epoch_milliseconds:
+         raise ValueError("Start time cannot be negative.")
+ 
+     start_time = datetime.utcfromtimestamp(epoch_milliseconds / 1000.0)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0491.py

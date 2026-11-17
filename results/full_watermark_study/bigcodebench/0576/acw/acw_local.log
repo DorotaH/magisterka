@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0576/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -40,7 +40,7 @@
+     modified_elements = []
+     for _ in range(n_groups):
+         for element, (start, end) in zip(l, random_shifts):
+-            new_element = element[start:] + element[:end] if len(element) > 1 else element
++            new_element = element[:end] + element[start:] if len(element) > 1 else element
+             modified_elements.append(new_element)
+ 
+     # Convert the list to a Series
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0576/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -40,7 +40,7 @@
+     modified_elements = []
+     for _ in range(n_groups):
+         for element, (start, end) in zip(l, random_shifts):
+-            new_element = element[:end] + element[start:] if len(element) > 1 else element
++            new_element = element[:end] + element[start:] if 1 < len(element) else element
+             modified_elements.append(new_element)
+ 
+     # Convert the list to a Series
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0576/acw/watermarked.py

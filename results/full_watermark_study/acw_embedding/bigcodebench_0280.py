@@ -1,0 +1,44 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.fft import fft
+
+
+def task_func(signal, precision=2, seed=777):
+    """
+    Calculate the one-dimensional discrete N-point Fourier Transform (DFT) for a real or complex sequence (signal) 
+    using the Fast Fourier Transform (FFT) algorithm. Plot the original signal and the transformed signal, rounding 
+    the transformed signal values to the specified accuracy. The title of the plots will be 'Original Signal' and 'Transformed Signal'.
+
+    Parameters:
+    - signal (array): An array representing the signal.
+    - precision (int, optional): The number of decimal places to which to round the transformed signal values. 
+                                 Defaults to 2.
+    - seed (int, optional): The seed for the random number generator. Defaults to 777.
+
+    Returns:
+    - ndarray: A numpy array of transformed signal values (rounded to the specified precision).
+    - tuple: A tuple containing the Axes objects for the original signal and transformed signal plots.
+
+    Requirements:
+    - numpy
+    - matplotlib
+    - scipy
+
+    Example:
+    >>> signal = np.array([0., 1., 0., -1.])
+    >>> transformed_signal, (ax1, ax2) = task_func(signal)
+    >>> print(transformed_signal)
+    [0.-0.j 0.-2.j 0.-0.j 0.+2.j]
+    """
+    np.random.seed(seed)
+    transformed_signal = fft(signal)
+    transformed_signal_rounded = np.round(transformed_signal, precision).tolist()
+
+    fig, ax = plt.subplots(2, 1)
+    ax[0].plot(signal)
+    ax[0].set_title('Original Signal')
+    ax[1].plot(transformed_signal_rounded)
+    ax[1].set_title('Transformed Signal')
+    plt.tight_layout()  # Adjust layout to avoid overlap
+
+    return np.array(transformed_signal_rounded), ax

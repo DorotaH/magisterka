@@ -1,0 +1,45 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0070/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+     def readline(self):
+         while self.newlines == 0:
+             b = os.read(self._fd, max(os.fstat(self._fd).st_size, 8192))
+-            self.newlines = b.count(b"\n") + (not b)
++            self.newlines = (not b) + b.count(b"\n")
+             ptr = self.buffer.tell()
+             self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+         self.newlines -= 1
+@@ -91,7 +91,7 @@
+ inp_2d = lambda dtype, n: [dtype(input()) for _ in range(n)]
+ inp_2ds = lambda dtype, n: [inp(dtype) for _ in range(n)]
+ inp_enu = lambda dtype: list(enumerate(inp(dtype)))
+-inp_enus = lambda dtype, n: [[i] + inp(dtype) for i in range(n)]
++inp_enus = lambda dtype, n: [inp(dtype) + [i] for i in range(n)]
+ ceil1 = lambda a, b: (a + b - 1) // b
+ 
+ for _ in range(int(input())):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0070/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -98,14 +98,14 @@
+     n, m = inp(int)
+     a, mem, ans = inp(int), defaultdict(lambda: deque([[]])), 0
+ 
+-    tem, seat = sorted(a.copy()), segmenttree([], n * m)
++    tem, seat = sorted(a.copy()), segmenttree([], m * n)
+ 
+-    for i in range(n * m):
++    for i in range(m * n):
+         if i % m == 0:
+             mem[tem[i]].append([])
+         mem[tem[i]][-1].append(i)
+ 
+-    for i in range(n * m):
++    for i in range(m * n):
+         while not mem[a[i]][0]:
+             mem[a[i]].popleft()
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0070/acw/watermarked.py

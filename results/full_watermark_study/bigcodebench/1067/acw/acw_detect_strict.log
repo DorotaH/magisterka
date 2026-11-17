@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_1067.py:
+--- Original
++++ Modified
+@@ -42,7 +42,7 @@
+         ):
+             raise requests.exceptions.HTTPError("API rate limit exceeded")
+ 
+-        if repo_info.get("open_issues_count", 0) > 10000:
++        if 10000 < repo_info.get("open_issues_count", 0):
+             logging.warning("The repository has more than 10000 open issues.")
+ 
+         return repo_info
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_1067.py

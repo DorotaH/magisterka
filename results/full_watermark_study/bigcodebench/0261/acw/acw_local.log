@@ -1,0 +1,13 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0261/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -37,6 +37,6 @@
+         raise TypeError('ax must be a polar plot')
+ 
+     theta = np.linspace(0, 2 * np.pi, 1000)
+-    ax.plot(theta, radius * np.ones_like(theta))
++    ax.plot(theta, np.ones_like(theta) * radius)
+     ax.set_rlabel_position(radius * 45)
+     return ax
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0261/acw/watermarked.py

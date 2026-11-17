@@ -1,0 +1,13 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_before/codecontests_0196.py:
+--- Original
++++ Modified
+@@ -13,6 +13,6 @@
+ 		for j in r(m): v[j] = o[i ^ q[j]]; c[v[j]] += 1
+ 		for j in r(n): d[1 + j] = c[j] + d[j]
+ 		for j in r(m): d[v[j]] += 1; P[j] = d[v[j]]
+-		T = s(e[j]for j in r(n) if (i >> j) & 1) * 2 - s(e) + s((o[q[j]] - o[i & q[j]] * 2) * P[j]for j in r(m))
++		T = s(e[j]for j in r(n) if (i >> j) & 1) * 2 - s(e) + s((o[q[j]] - 2 * o[i & q[j]]) * P[j]for j in r(m))
+ 		if T > b: b, p = T, P
+ 	print(*p)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_before/codecontests_0196.py

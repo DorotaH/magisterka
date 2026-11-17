@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1068/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+         with sqlite3.connect(db_path) as conn:
+             data = pd.read_sql_query(query, conn)
+ 
+-        if warn_large_dataset and data.shape[0] > 10000:
++        if warn_large_dataset and 10000 < data.shape[0]:
+             warnings.warn("The data contains more than 10000 rows.")
+ 
+         return data
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1068/acw/watermarked.py

@@ -1,0 +1,58 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0112/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -5,8 +5,8 @@
+ class UnionFind():
+   def __init__(self, n):
+     self.n = n
+-    self.root = [-1] * (n + 1)
+-    self.rnk = [0] * (n + 1)
++    self.root = [-1] * (1 + n)
++    self.rnk = [0] * (1 + n)
+   def Find_Root(self, x):
+     if self.root[x] < 0:
+       return x
+@@ -30,7 +30,7 @@
+ 
+ uf = UnionFind(n)
+ 
+-e = [[] for _ in range(n + 1)]
++e = [[] for _ in range(1 + n)]
+ edges = []
+ for i in range(m):
+   u, v = map(int, input().split())
+@@ -49,8 +49,8 @@
+ res = []
+ for u, v in qs:
+   s = [u]
+-  vis = [0] * (n + 1)
+-  rev = [0] * (n + 1)
++  vis = [0] * (1 + n)
++  rev = [0] * (1 + n)
+   vis[u] = 1
+   while len(s):
+     x = s.pop()
+@@ -80,7 +80,7 @@
+     print(*r)
+ else:
+   print("NO")
+-  c = [0] * (n + 1)
++  c = [0] * (1 + n)
+   for i in range(m):
+     if table[i] == 0: continue
+     u, v = edges[i]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0112/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+     self.root = [-1] * (1 + n)
+     self.rnk = [0] * (1 + n)
+   def Find_Root(self, x):
+-    if self.root[x] < 0:
++    if 0 > self.root[x]:
+       return x
+     self.root[x] = self.Find_Root(self.root[x])
+     return self.root[x]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0112/acw/watermarked.py

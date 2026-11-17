@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_before/codecontests_0121.py:
+--- Original
++++ Modified
+@@ -76,7 +76,7 @@
+ 			ind = bisect.bisect_right(dp, k - 1)
+ 			p = powr(n, ind - 1)
+ 			ans = add(ans, p) 
+-			k -= (dp[ind - 1] + 1)
++			k -= (1 + dp[ind - 1])
+ 			# print(ans, p)
+ 		print(ans)
+ 	
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_before/codecontests_0121.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+ 
+ 
+ def sub(a, b):
+-	return (a - b) if (a - b > 0) else (a - b) + mod
++	return (a - b) if (0 < a - b) else (a - b) + mod
+ 
+ 
+ def powr(a, b):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_before/codecontests_0121.py

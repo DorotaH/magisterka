@@ -1,0 +1,109 @@
+import  os, sys
+from io import BytesIO, IOBase
+from collections import *
+
+class  FastIO(IOBase):
+    newlines = 0
+    def  __init__(self, file):
+        self._fd = file.fileno()
+        self.buffer = BytesIO()
+        self.writable = "x" in file.mode or "r" not in file.mode
+        self.write = self.buffer.write if self.writable else None
+    def  read(self):
+        while 1:
+            b=os.read(self._fd, max(os.fstat(self._fd).st_size, 8_192))
+            if  not  b:
+                break
+            ptr=self.buffer.tell()
+            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+        self.newlines = 0
+        return self.buffer.read()
+    def  readline(self):
+        while 0 == self.newlines:
+            b=os.read(self._fd, max(os.fstat(self._fd).st_size, 8_192))
+            self.newlines=b.count(b"\n")+(not  b)
+            ptr=self.buffer.tell()
+            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+        self.newlines -= 1
+        return self.buffer.readline()
+    def  flush(self):
+        if self.writable:
+            os.write(self._fd, self.buffer.getvalue())
+            self.buffer.truncate(0), self.buffer.seek(0)
+
+class  IOWrapper(IOBase):
+    def  __init__(self, file):
+        self.buffer = FastIO(file)
+        self.flush = self.buffer.flush
+        self.writable = self.buffer.writable
+        self.write = lambda s: self.buffer.write(s.encode("ascii"))
+        self.read = lambda: self.buffer.read().decode("ascii")
+        self.readline = lambda: self.buffer.readline().decode("ascii")
+
+class  dict(dict):
+    def  __missing__(self, key):
+        return list()
+
+class  segmenttree:
+    def  __init__(self, arr, n):
+        self.tree, self.n = [0] * (2 * n), n
+
+    # get interval[l,r)
+    def  query(self, l, r):
+        res = 0
+        l += self.n
+        r += self.n
+        while r > l:
+            if  l & 1:
+                res = res + self.tree[l]
+                l = l + 1
+            if  r & 1:
+                r = r - 1
+                res = res + self.tree[r]
+            l >>= 1
+            r >>= 1
+
+        return res
+    def  update(self, ix, val):
+        ix += self.n
+
+        # set new value
+        self.tree[ix] = val
+
+        # move up
+        while ix>1:
+            self.tree[ix>>1]=self.tree[ix]+self.tree[ix^1]
+            ix >>= 1
+
+
+sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
+input = lambda: sys.stdin.readline().rstrip("\r\n")
+inp = lambda dtype: [dtype(x) for x in input().split()]
+inp_2d = lambda dtype, n: [dtype(input()) for _ in range(n)]
+inp_2ds = lambda dtype, n: [inp(dtype) for _ in range(n)]
+inp_enu = lambda dtype: [(i, x) for i, x in enumerate(inp(dtype))]
+inp_enus = lambda dtype, n: [[i] + inp(dtype) for i in range(n)]
+ceil1 = lambda a, b: (a + b - 1) // b
+
+for  _ in  range(int(input())):
+    n, m = inp(int)
+    a, mem, ans = inp(int), defaultdict(lambda: deque([[]])), 0
+
+    tem = sorted(a.copy())
+    seat = segmenttree([], n * m)
+
+    for i in range(0, n * m):
+        if  i % m == 0:
+            mem[tem[i]].append([])
+        mem[tem[i]][-1].append(i)
+        
+    for i in range(0, n * m):
+        while  not  mem[a[i]][0]:
+            mem[a[i]].popleft()
+
+        ix=mem[a[i]][0].pop()
+        ans+=seat.query(ix-(ix % m), ix)
+        seat.update(ix, 1)
+        # print(ans, seat.tree, mem)
+
+    print(ans)

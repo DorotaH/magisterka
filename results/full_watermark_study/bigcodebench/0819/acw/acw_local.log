@@ -1,0 +1,19 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0819/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -45,11 +45,11 @@
+     random.seed(seed)
+ 
+     # Input validation
+-    if not isinstance(iterations, int) or iterations <= 0:
++    if not isinstance(iterations, int) or 0 >= iterations:
+         raise ValueError("iterations must be a positive integer.")
+     if not isinstance(min_delay, (int, float)) or min_delay <= 0:
+         raise ValueError("min_delay must be a positive floating point value.")
+-    if not isinstance(max_delay, (int, float)) or max_delay <= min_delay:
++    if not isinstance(max_delay, (int, float)) or min_delay >= max_delay:
+         raise ValueError("max_delay must be a floating point value larger than min_delay.")
+ 
+     total_delay = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0819/acw/watermarked.py

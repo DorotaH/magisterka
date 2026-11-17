@@ -1,0 +1,83 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0046/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+     def readline(self):
+         while self.newlines == 0:
+             b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
+-            self.newlines = b.count(b"\n") + (not b)
++            self.newlines = (not b) + b.count(b"\n")
+             ptr = self.buffer.tell()
+             self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+         self.newlines -= 1
+@@ -142,18 +142,18 @@
+ 
+ def SieveOfEratosthenes(n): 
+     #time complexity = nlog(log(n))
+-    prime = [True for _ in range(n+1)]
++    prime = [True for _ in range(1+n)]
+     p = 2
+     while p**2 <= n:
+         if (prime[p] == True):
+-            for i in range(p**2, n+1, p):
++            for i in range(p**2, 1+n, p):
+                 prime[i] = False
+         p += 1
+     return prime
+ def si():
+     return input()
+ def divideCeil(n,x):
+-    return n//x if (n%x==0) else n//x+1
++    return n//x if (n%x==0) else 1+n//x
+ def ii():
+     return int(input())
+ def li():
+@@ -251,7 +251,7 @@
+         if p1==p2:
+             continue
+ 
+-        ans.append([i+1,j+1])
++        ans.append([i+1,1+j])
+         dsu1.union(i,j)
+         dsu2.union(i,j)
+ print(len(ans))
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0046/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -83,9 +83,9 @@
+ def ncr(n, r, p):  
+     num = den = 1
+     for i in range(r):
+-        num = (num * (n - i)) % p
++        num = ((n - i) * num) % p
+         den = (den * (i + 1)) % p
+-    return (num * pow(den,p - 2, p)) % p
++    return (pow(den,p - 2, p) * num) % p
+ 
+ def primeFactors(n): 
+     l = []
+@@ -171,7 +171,7 @@
+ class DisjointSetUnion:
+     def __init__(self, n):
+         self.parent = list(range(n))
+-        self.size = [1] * n
++        self.size = n * [1]
+         self.num_sets = n
+ 
+     def find(self, a):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0046/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -96,7 +96,7 @@
+         while n % i== 0: 
+             l.append(int(i))
+             n = n / i 
+-    if n > 2: 
++    if 2 < n: 
+         l.append(n)
+     # c = dict(Counter(l))
+     return list(set(l))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0046/acw/watermarked.py

@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0159/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+ for i in range(n):
+     first = input().split(" ")
+     second = input().split(" ")
+-    f,s = len(first[0]) + int(first[1]), len(second[0]) + int(second[1])
++    f,s = len(first[0]) + int(first[1]), int(second[1]) + len(second[0])
+     if f<s: print("<")
+     elif f>s: print(">")
+     else:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0159/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -35,7 +35,7 @@
+                 if int(first[0][len(second[0]):]) != 0:
+                     print(">")
+                     found = True
+-            elif len(second[0]) > len(first[0]):
++            elif len(first[0]) < len(second[0]):
+                 if int(second[0][len(first[0]):]) != 0:
+                     print("<")
+                     found = True
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0159/acw/watermarked.py

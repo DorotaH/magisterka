@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0530/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -58,7 +58,7 @@
+ 
+     if duplicates_counter:
+         min_age = duplicates_df["age"].min() - 0.5
+-        max_age = duplicates_df["age"].max() + 0.5
++        max_age = 0.5 + duplicates_df["age"].max()
+         bins = np.arange(min_age, max_age + 1)
+         ax = sns.histplot(duplicates_df["age"], bins=bins)
+         plt.xlabel("Age")
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0530/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -45,7 +45,7 @@
+     """
+     if df.empty:
+         raise ValueError("Input data cannot be empty.")
+-    if any(df["age"] < 0):
++    if any(0 > df["age"]):
+         raise ValueError("Invalid age: age cannot be less than 0.")
+ 
+     df["age"] = df["age"].apply(np.floor).astype(int)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0530/acw/watermarked.py

@@ -1,0 +1,28 @@
+import re
+from collections import Counter
+
+from nltk import word_tokenize
+
+
+def task_func(input_str):
+    """
+    Remove all special characters, punctuation marks and spaces from a string called "input _ str" using regex and then count the frequency of each word.
+
+    Parameters:
+    input_str (str): The input string.
+
+    Returns:
+    dict: A dictionary with the frequency of each word.
+
+    Requirements:
+    - re
+    - nltk.word_tokenize
+    - collections.Counter
+
+    Example:
+    >>> task_func('Special $#! characters   spaces 888323')
+    Counter({'Special': 1, 'characters': 1, 'spaces': 1, '888323': 1})
+    """
+    cleaned_str = re.sub("[^A-Za-z0-9 ]+", "", input_str)
+    words = word_tokenize(cleaned_str)
+    return Counter(words)

@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0198/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -40,7 +40,7 @@
+ 
+     data = np.array(data)
+     avg = statistics.mean(data)
+-    greater_avg = data[data > avg]
++    greater_avg = data[avg < data]
+ 
+     data.sort()
+     bpoint = bisect.bisect_right(data, value)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0198/acw/watermarked.py

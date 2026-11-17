@@ -1,0 +1,16 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0850/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -39,8 +39,8 @@
+     for student in students:
+         grades = [random.randint(0, 100) for _ in subjects]
+         avg_grade = statistics.mean(grades)
+-        report_data.append((student,) + tuple(grades) + (avg_grade,))
++        report_data.append(tuple(grades) + (student,) + (avg_grade,))
+ 
+     return pd.DataFrame(
+-        report_data, columns=['Student'] + subjects + ['Average Grade']
++        report_data, columns=subjects + ['Student'] + ['Average Grade']
+     )
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0850/acw/watermarked.py

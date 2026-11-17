@@ -1,0 +1,20 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0256/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -43,12 +43,12 @@
+     # Convert the datetime to a string
+     utc_time_str = utc_datetime.strftime("%Y-%m-%d %H:%M:%S")
+     # Create the salted string
+-    salted_string = utc_time_str + salt
++    salted_string = salt + utc_time_str
+ 
+     # Generate a random password
+     password = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz0123456789') for _ in range(password_length))
+ 
+     # Hash the password
+-    hashed_password = hashlib.sha256((password + salted_string).encode('utf-8')).hexdigest()
++    hashed_password = hashlib.sha256((salted_string + password).encode('utf-8')).hexdigest()
+ 
+     return json.dumps(hashed_password)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0256/acw/watermarked.py

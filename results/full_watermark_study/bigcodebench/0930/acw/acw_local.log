@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0930/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -29,7 +29,7 @@
+     if any(char not in string.ascii_letters for char in word):
+         raise ValueError("Input must only contain letters.")
+ 
+-    if len(word) < 2:
++    if 2 > len(word):
+         return ['' for _ in range(len(POSSIBLE_LETTERS))]
+ 
+     pairs = [''.join(x) for x in zip(word, word[1:])]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0930/acw/watermarked.py

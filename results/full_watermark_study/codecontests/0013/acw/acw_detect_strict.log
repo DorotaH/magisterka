@@ -1,0 +1,23 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0013.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+ 
+     for i in range(1, n):
+         num = sum(a[i][j] < a[gold][j] for j in range(5))
+-        if num >= 3:
++        if 3 <= num:
+             gold = i
+ 
+     i = 0
+@@ -25,7 +25,7 @@
+             for j in range(5):
+                 if a[i][j] < a[gold][j]:
+                     num += 1
+-            if num >= 3:
++            if 3 <= num:
+                 res = -1
+                 break
+     if i == n - 1:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0013.py

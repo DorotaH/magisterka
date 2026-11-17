@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0152.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+ 
+ 
+ def pra(array):
+-    sys.stdout.write(" ".join([str(x) for x in array]) + "\n")
++    sys.stdout.write("\n" + " ".join([str(x) for x in array]))
+ 
+ 
+ def solve(array):
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0152.py:
+--- Original
++++ Modified
+@@ -51,7 +51,7 @@
+             blues_okay = False
+             break
+         for i in range(len(reds)):
+-            if reds[i] <= n - i:
++            if n - i >= reds[i]:
+                 continue
+             else:
+                 reds_okay = False
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0152.py

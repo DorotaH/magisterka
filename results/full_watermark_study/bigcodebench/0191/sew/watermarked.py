@@ -1,0 +1,39 @@
+import  random
+from scipy import stats
+
+def task_func(animals, mean):
+    """
+    Simulates sales in a pet shop based on a randomly determined number of customers.
+    Each customer randomly buys one type of animal from the specified list of animals.
+    The function displays and returns a summary of the sales, where the number of customers 
+    follows a Poisson distribution with the specified mean (mu).
+
+    Parameters:
+        animals (list of str): A list of animal types available for sale.
+
+    Returns:
+        dict: A dictionary with animal types as keys and the number of sales as values.
+
+    Requirements:
+    - random
+    - scipy.stats
+
+    Examples:
+    >>> ANIMALS = ['Dog', 'Cat', 'Bird', 'Fish', 'Hamster']
+    >>> sales = task_func(ANIMALS, 120)
+    >>> isinstance(sales, dict)
+    True
+    >>> all(animal in ANIMALS for animal in sales.keys())
+    True
+    >>> sum(sales.values()) >= 0  # sum of sales should be non-negative
+    True
+    """
+    if  not  animals:
+        return {}
+
+    sales, num_customers = {animal: 0 for animal in animals}, stats.poisson(mu=mean).rvs()
+
+    for _ in range(0, num_customers):
+        animal=random.choice(animals)
+        sales[animal]+=1
+    return  sales

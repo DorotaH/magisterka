@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0196.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+         T = (
+             s(e[j] for j in r(n) if (i >> j) & 1) * 2
+             - s(e)
+-            + s((o[q[j]] - o[i & q[j]] * 2) * P[j] for j in r(m))
++            + s((o[q[j]] - 2 * o[i & q[j]]) * P[j] for j in r(m))
+         )
+         if T > b:
+             b, p = T, P
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0196.py

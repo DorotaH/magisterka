@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0733/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+     ])
+ 
+     content = content.split(' ')
+-    content = content[:-1] if len(content) > 1 else []
++    content = content[:-1] if 1 < len(content) else []
+     words = [word.strip(string.punctuation).lower() for word in re.split(r'\W+', ' '.join(content)) if word]
+     non_stopwords = [word for word in words if word not in STOPWORDS]
+     return len(non_stopwords)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0733/acw/watermarked.py

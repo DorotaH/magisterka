@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/bigcodebench_0915.py:
+--- Original
++++ Modified
+@@ -40,7 +40,7 @@
+     df["Z_score"] = zscore(df["closing_price"])
+ 
+     # Identify outliers based on Z-Score threshold
+-    outliers = df[np.abs(df["Z_score"]) > z_threshold]
++    outliers = df[z_threshold < np.abs(df["Z_score"])]
+ 
+     # Create the plot
+     fig, ax = plt.subplots(figsize=(10, 5))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/bigcodebench_0915.py

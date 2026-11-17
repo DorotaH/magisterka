@@ -1,0 +1,118 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 38,
+      "row": 4
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0138/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from math import ceil, gcd, log, sqrt\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 4
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 4
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 4,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 38,
+      "row": 4
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0138/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from math import gcd, log, ceil",
+          "end_location": {
+            "column": 38,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 4
+          }
+        }
+      ],
+      "message": "Remove unused import: `math.sqrt`"
+    },
+    "location": {
+      "column": 34,
+      "row": 4
+    },
+    "message": "`math.sqrt` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 4,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "FURB163",
+    "end_location": {
+      "column": 47,
+      "row": 15
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0138/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "from math import gcd, log, ceil, sqrt, log2",
+          "end_location": {
+            "column": 38,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 4
+          }
+        },
+        {
+          "content": "log2(max(a))",
+          "end_location": {
+            "column": 47,
+            "row": 15
+          },
+          "location": {
+            "column": 33,
+            "row": 15
+          }
+        }
+      ],
+      "message": "Replace with `math.log2(max(a))`"
+    },
+    "location": {
+      "column": 33,
+      "row": 15
+    },
+    "message": "Prefer `math.log2(max(a))` over `math.log` with a redundant base",
+    "name": "redundant-log-base",
+    "noqa_row": 15,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/redundant-log-base"
+  }
+]

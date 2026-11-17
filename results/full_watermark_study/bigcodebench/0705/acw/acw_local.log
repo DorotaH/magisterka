@@ -1,0 +1,11 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0705/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -36,4 +36,4 @@
+         raise ValueError('Column does not exist in DataFrame')
+ 
+     _, p = stats.shapiro(df[column])
+-    return p > alpha
++    return alpha < p
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0705/acw/watermarked.py

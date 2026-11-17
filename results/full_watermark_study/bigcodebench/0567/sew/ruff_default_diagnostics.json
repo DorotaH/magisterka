@@ -1,0 +1,72 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 34,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0567/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "C414",
+    "end_location": {
+      "column": 42,
+      "row": 39
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0567/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "sorted(set(data))",
+          "end_location": {
+            "column": 42,
+            "row": 39
+          },
+          "location": {
+            "column": 19,
+            "row": 39
+          }
+        }
+      ],
+      "message": "Remove the inner `list()` call"
+    },
+    "location": {
+      "column": 19,
+      "row": 39
+    },
+    "message": "Unnecessary `list()` call within `sorted()`",
+    "name": "unnecessary-double-cast-or-process",
+    "noqa_row": 39,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-double-cast-or-process"
+  }
+]

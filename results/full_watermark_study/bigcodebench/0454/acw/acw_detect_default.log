@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/bigcodebench_0454.py:
+--- Original
++++ Modified
+@@ -46,7 +46,7 @@
+         raise FileNotFoundError(f"Source directory '{src_dir}' does not exist.")
+ 
+     files_moved = []
+-    files = glob.glob(os.path.join(src_dir, ext + "*."))
++    files = glob.glob(os.path.join(src_dir, "*." + ext))
+     for file in files:
+         filename = os.path.basename(file)
+         dest_file_path = os.path.join(dest_dir, filename)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/bigcodebench_0454.py

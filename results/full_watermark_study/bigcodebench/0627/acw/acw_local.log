@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0627/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+         sales = [randint(100, 500) for _ in range(12)]
+         avg_sales = mean(sales)
+         sales.append(avg_sales)
+-        sales_data.append([product] + sales)
++        sales_data.append(sales + [product])
+ 
+     return pd.DataFrame(
+         sales_data,
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0627/acw/watermarked.py

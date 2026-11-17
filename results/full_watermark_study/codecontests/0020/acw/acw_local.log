@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0020/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+ 	def readline(self):
+ 		while self.newlines == 0:
+ 			b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
+-			self.newlines = b.count(b"\n") + (not b)
++			self.newlines = (not b) + b.count(b"\n")
+ 			ptr = self.buffer.tell()
+ 			self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+ 		self.newlines -= 1
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0020/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -143,7 +143,7 @@
+ 		if(maxa-minb > (10-i)//2):
+ 			res=i+1
+ 			break
+-		if(maxb-mina > (9-i)//2):
++		if((9-i)//2 < maxb-mina):
+ 			res=i+1
+ 			break
+ 	print(res)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0020/acw/watermarked.py

@@ -1,0 +1,81 @@
+{
+  "dataset": "bigcodebench",
+  "id": "BigCodeBench/799",
+  "index": 799,
+  "method": "sew",
+  "original_syntax_error": null,
+  "embedding": {
+    "status": "ok",
+    "n_sites": 25,
+    "n_grades": 16,
+    "n_edits": 10,
+    "iterations": 1
+  },
+  "changed": true,
+  "syntax_error": null,
+  "detection_before": {
+    "verdict": "Watermark detected",
+    "p": 1.1827114042061502e-07,
+    "p_all": 5.913557021030751e-08,
+    "p_syntax": 0.02314775260299264,
+    "n_grades": 16,
+    "k_grades": 16,
+    "n_syntax": 5,
+    "k_syntax": 5,
+    "n_sites": 25
+  },
+  "radon_cc_exit": 0,
+  "radon_mi_exit": 0,
+  "radon_raw_exit": 0,
+  "complexipy_exit": 0,
+  "ruff": {
+    "default": {
+      "diagnostics": 1,
+      "codes": {
+        "I001": 1
+      },
+      "fix_exit": 0,
+      "format_exit": 0,
+      "fix_stderr": "",
+      "format_stderr": "",
+      "syntax_error": null,
+      "detection_after": {
+        "verdict": "Watermark detected",
+        "p": 0.006326622674851652,
+        "p_all": 0.003163311337425826,
+        "p_syntax": 0.02314775260299264,
+        "n_grades": 16,
+        "k_grades": 13,
+        "n_syntax": 5,
+        "k_syntax": 5,
+        "n_sites": 25
+      }
+    },
+    "strict": {
+      "diagnostics": 4,
+      "codes": {
+        "I001": 1,
+        "E501": 1,
+        "W293": 1,
+        "SIM300": 1
+      },
+      "fix_exit": 1,
+      "format_exit": 0,
+      "fix_stderr": "",
+      "format_stderr": "",
+      "syntax_error": null,
+      "detection_after": {
+        "verdict": "No watermark evidence",
+        "p": 0.060408518595656886,
+        "p_all": 0.030204259297828443,
+        "p_syntax": 0.2227018464700006,
+        "n_grades": 16,
+        "k_grades": 12,
+        "n_syntax": 5,
+        "k_syntax": 4,
+        "n_sites": 25
+      }
+    }
+  },
+  "status": "ok"
+}

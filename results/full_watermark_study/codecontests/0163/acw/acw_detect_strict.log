@@ -1,0 +1,63 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0163.py:
+--- Original
++++ Modified
+@@ -56,7 +56,7 @@
+ 
+ def pow2(n):
+     p = 0
+-    while n > 1:
++    while 1 < n:
+         n //= 2
+         p += 1
+     return p
+@@ -85,7 +85,7 @@
+         while n % i == 0:
+             l.append(i)
+             n = n / i
+-    if n > 2:
++    if 2 < n:
+         l.append(int(n))
+     l.sort()
+     return l
+@@ -121,7 +121,7 @@
+         while n % i == 0:
+             maxPrime = i
+             n = n / i
+-    if n > 2:
++    if 2 < n:
+         maxPrime = n
+     return int(maxPrime)
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0163.py:
+--- Original
++++ Modified
+@@ -326,7 +326,7 @@
+         for i in range(4):
+             ni = d4i[i] + x
+             nj = y + d4j[i]
+-            if ni < n and nj < m and ni >= 0 and nj >= 0 and grid[ni][nj] == ".":
++            if ni < n and nj < m and 0 <= ni and nj >= 0 and grid[ni][nj] == ".":
+                 count += 1
+         if count in [1, 0]:
+             grid[x][y] = "+"
+@@ -334,7 +334,7 @@
+                 ni = d4i[q] + x
+                 nj = d4j[q] + y
+ 
+-                if ni < n and nj < m and ni >= 0 and nj >= 0 and grid[ni][nj] == ".":
++                if ni < n and nj < m and 0 <= ni and nj >= 0 and grid[ni][nj] == ".":
+                     que.append((ni, nj))
+ 
+ 
+@@ -355,7 +355,7 @@
+                     if (
+                         ni < n
+                         and nj < m
+-                        and ni >= 0
++                        and 0 <= ni
+                         and nj >= 0
+                         and grid[ni][nj] == "."
+                     ):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0163.py

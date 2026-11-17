@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0628/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -27,7 +27,7 @@
+     amplitude = randint(1, 5)
+     phase_shift = randint(0, 360)
+ 
+-    y = [amplitude * math.sin(2 * math.pi * frequency * (xi + phase_shift)) for xi in x]
++    y = [amplitude * math.sin(2 * math.pi * frequency * (phase_shift + xi)) for xi in x]
+ 
+     fig, ax = plt.subplots()
+     ax.plot(x, y)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0628/acw/watermarked.py

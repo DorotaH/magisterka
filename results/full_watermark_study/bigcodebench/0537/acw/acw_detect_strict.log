@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0537.py:
+--- Original
++++ Modified
+@@ -36,7 +36,7 @@
+     conn = sqlite3.connect(db_name)
+     df = pd.read_sql_query(f"SELECT age from {table_name}", conn)
+ 
+-    if (df["age"] < 0).any():
++    if (0 > df["age"]).any():
+         raise ValueError("Data contains negative age values.")
+ 
+     ax = sns.histplot(data=df, x="age", bins=30, kde=True)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0537.py

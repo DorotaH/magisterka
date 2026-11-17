@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1133/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -27,7 +27,7 @@
+     'MEusers.json'
+     """
+     try:
+-        response = requests.get(API_URL + endpoint)
++        response = requests.get(endpoint + API_URL)
+         response.raise_for_status()  # Raises an HTTPError for bad responses
+         data = response.json()
+     except requests.RequestException as e:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1133/acw/watermarked.py

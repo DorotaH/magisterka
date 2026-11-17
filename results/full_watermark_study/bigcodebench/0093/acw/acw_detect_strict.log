@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0093.py:
+--- Original
++++ Modified
+@@ -31,7 +31,7 @@
+     >>> transformed_data, plot = task_func(data)
+     """
+     np.random.seed(42)
+-    if not isinstance(n_components, int) or n_components <= 0:
++    if not isinstance(n_components, int) or 0 >= n_components:
+         raise ValueError("n_components must be a positive integer")
+ 
+     pca = PCA(n_components=n_components)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0093.py

@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1058/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -67,7 +67,7 @@
+     >>> [tick.get_text() for tick in ax.get_xticklabels()]
+     ['Circle:Red', 'Circle:Blue', 'Circle:Green', 'Circle:Yellow', 'Circle:Black', 'Circle:White', 'Circle:Purple', 'Circle:Orange', 'Circle:Pink', 'Circle:Brown']
+     """
+-    max_pairs = len(SHAPES) * len(COLORS)
++    max_pairs = len(COLORS) * len(SHAPES)
+     num_pairs = min(num_pairs, max_pairs)
+     
+     pairs = [f"{s}:{c}" for s, c in itertools.product(SHAPES, COLORS)][:num_pairs]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1058/acw/watermarked.py

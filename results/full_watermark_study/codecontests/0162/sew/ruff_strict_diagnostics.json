@@ -1,0 +1,456 @@
+[
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 30,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from sys import stdin",
+          "end_location": {
+            "column": 30,
+            "row": 3
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Remove unused import: `sys.stdout`"
+    },
+    "location": {
+      "column": 24,
+      "row": 3
+    },
+    "message": "`sys.stdout` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "E402",
+    "end_location": {
+      "column": 51,
+      "row": 13
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 1,
+      "row": 13
+    },
+    "message": "Module level import not at top of file",
+    "name": "module-import-not-at-top-of-file",
+    "noqa_row": 13,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/module-import-not-at-top-of-file"
+  },
+  {
+    "cell": null,
+    "code": "E701",
+    "end_location": {
+      "column": 24,
+      "row": 28
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 23,
+      "row": 28
+    },
+    "message": "Multiple statements on one line (colon)",
+    "name": "multiple-statements-on-one-line-colon",
+    "noqa_row": 28,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon"
+  },
+  {
+    "cell": null,
+    "code": "B011",
+    "end_location": {
+      "column": 17,
+      "row": 29
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "raise AssertionError()",
+          "end_location": {
+            "column": 18,
+            "row": 29
+          },
+          "location": {
+            "column": 5,
+            "row": 29
+          }
+        }
+      ],
+      "message": "Replace `assert False`"
+    },
+    "location": {
+      "column": 12,
+      "row": 29
+    },
+    "message": "Do not `assert False` (`python -O` removes these calls), raise `AssertionError()`",
+    "name": "assert-false",
+    "noqa_row": 29,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/assert-false"
+  },
+  {
+    "cell": null,
+    "code": "SIM110",
+    "end_location": {
+      "column": 17,
+      "row": 36
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "return all(1 >= abs(seq[i] - mex(seq[0:i + 1])) for i in range(0, len(seq)))",
+          "end_location": {
+            "column": 17,
+            "row": 36
+          },
+          "location": {
+            "column": 5,
+            "row": 33
+          }
+        }
+      ],
+      "message": "Replace with `return all(1 >= abs(seq[i] - mex(seq[0:i + 1])) for i in range(0, len(seq)))`"
+    },
+    "location": {
+      "column": 5,
+      "row": 33
+    },
+    "message": "Use `return all(1 >= abs(seq[i] - mex(seq[0:i + 1])) for i in range(0, len(seq)))` instead of `for` loop",
+    "name": "reimplemented-builtin",
+    "noqa_row": 33,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/reimplemented-builtin"
+  },
+  {
+    "cell": null,
+    "code": "SIM300",
+    "end_location": {
+      "column": 51,
+      "row": 34
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "abs(seq[i] - mex(seq[0:i+1])) <= 1",
+          "end_location": {
+            "column": 51,
+            "row": 34
+          },
+          "location": {
+            "column": 17,
+            "row": 34
+          }
+        }
+      ],
+      "message": "Rewrite as `abs(seq[i] - mex(seq[0:i+1])) <= 1`"
+    },
+    "location": {
+      "column": 17,
+      "row": 34
+    },
+    "message": "Yoda condition detected",
+    "name": "yoda-conditions",
+    "noqa_row": 34,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/yoda-conditions"
+  },
+  {
+    "cell": null,
+    "code": "E402",
+    "end_location": {
+      "column": 32,
+      "row": 45
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 1,
+      "row": 45
+    },
+    "message": "Module level import not at top of file",
+    "name": "module-import-not-at-top-of-file",
+    "noqa_row": 45,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/module-import-not-at-top-of-file"
+  },
+  {
+    "cell": null,
+    "code": "E701",
+    "end_location": {
+      "column": 25,
+      "row": 57
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 24,
+      "row": 57
+    },
+    "message": "Multiple statements on one line (colon)",
+    "name": "multiple-statements-on-one-line-colon",
+    "noqa_row": 57,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon"
+  },
+  {
+    "cell": null,
+    "code": "E701",
+    "end_location": {
+      "column": 25,
+      "row": 60
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 24,
+      "row": 60
+    },
+    "message": "Multiple statements on one line (colon)",
+    "name": "multiple-statements-on-one-line-colon",
+    "noqa_row": 60,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon"
+  },
+  {
+    "cell": null,
+    "code": "E701",
+    "end_location": {
+      "column": 25,
+      "row": 61
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 24,
+      "row": 61
+    },
+    "message": "Multiple statements on one line (colon)",
+    "name": "multiple-statements-on-one-line-colon",
+    "noqa_row": 61,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon"
+  },
+  {
+    "cell": null,
+    "code": "E701",
+    "end_location": {
+      "column": 22,
+      "row": 76
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 21,
+      "row": 76
+    },
+    "message": "Multiple statements on one line (colon)",
+    "name": "multiple-statements-on-one-line-colon",
+    "noqa_row": 76,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon"
+  },
+  {
+    "cell": null,
+    "code": "E701",
+    "end_location": {
+      "column": 53,
+      "row": 79
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 52,
+      "row": 79
+    },
+    "message": "Multiple statements on one line (colon)",
+    "name": "multiple-statements-on-one-line-colon",
+    "noqa_row": 79,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon"
+  },
+  {
+    "cell": null,
+    "code": "E701",
+    "end_location": {
+      "column": 37,
+      "row": 83
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 36,
+      "row": 83
+    },
+    "message": "Multiple statements on one line (colon)",
+    "name": "multiple-statements-on-one-line-colon",
+    "noqa_row": 83,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon"
+  },
+  {
+    "cell": null,
+    "code": "E701",
+    "end_location": {
+      "column": 35,
+      "row": 84
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 34,
+      "row": 84
+    },
+    "message": "Multiple statements on one line (colon)",
+    "name": "multiple-statements-on-one-line-colon",
+    "noqa_row": 84,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon"
+  },
+  {
+    "cell": null,
+    "code": "E701",
+    "end_location": {
+      "column": 37,
+      "row": 85
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 36,
+      "row": 85
+    },
+    "message": "Multiple statements on one line (colon)",
+    "name": "multiple-statements-on-one-line-colon",
+    "noqa_row": 85,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-colon"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 19,
+      "row": 98
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "    import random\n",
+          "end_location": {
+            "column": 1,
+            "row": 99
+          },
+          "location": {
+            "column": 1,
+            "row": 98
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 5,
+      "row": 98
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 98,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 19,
+      "row": 98
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 99
+          },
+          "location": {
+            "column": 1,
+            "row": 98
+          }
+        }
+      ],
+      "message": "Remove unused import: `random`"
+    },
+    "location": {
+      "column": 13,
+      "row": 98
+    },
+    "message": "`random` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 98,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "W292",
+    "end_location": {
+      "column": 13,
+      "row": 120
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0162/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "\n",
+          "end_location": {
+            "column": 13,
+            "row": 120
+          },
+          "location": {
+            "column": 13,
+            "row": 120
+          }
+        }
+      ],
+      "message": "Add trailing newline"
+    },
+    "location": {
+      "column": 13,
+      "row": 120
+    },
+    "message": "No newline at end of file",
+    "name": "missing-newline-at-end-of-file",
+    "noqa_row": 120,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+  }
+]

@@ -1,0 +1,54 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0148/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -16,10 +16,10 @@
+ 
+ n, x = map(int, input().split())
+ 
+-dp = [[0]*(x+1) for _ in range(n+1)]
++dp = [[0]*(1+x) for _ in range(1+n)]
+ dp[n][0] = 1
+-for i in reversed(range(1, n+1)):
+-    for j in range(x+1):
++for i in reversed(range(1, 1+n)):
++    for j in range(1+x):
+         if not dp[i][j]:
+             continue
+         nj = min(x, i+j-1)
+@@ -27,7 +27,7 @@
+             dp[k][nj] += cmb1(i, i-k, mod)*pow(nj-j, i-k, mod)*dp[i][j]
+             dp[k][nj] %= mod
+ ans = 0
+-for i in range(x+1):
++for i in range(1+x):
+     ans += dp[0][i]
+     ans %= mod
+ print(ans)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0148/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+     if r <0 or r > n:
+         return 0
+     r = min(r, n-r)
+-    return fac[n] * finv[r] * finv[n-r] % mod
++    return finv[r] * fac[n] * finv[n-r] % mod
+ 
+ n, x = map(int, input().split())
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0148/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+     finv[i] = finv[i+1] * (i+1) % mod
+ 
+ def cmb1(n, r, mod):
+-    if r <0 or r > n:
++    if 0 > r or r > n:
+         return 0
+     r = min(r, n-r)
+     return finv[r] * fac[n] * finv[n-r] % mod
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0148/acw/watermarked.py

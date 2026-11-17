@@ -1,0 +1,33 @@
+import random
+
+import numpy as np
+
+# Constants
+ELEMENTS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+
+
+def task_func(l=None):
+    """
+    Create a numeric array from a list "l" and move the first 3 elements to the end of the array.
+
+    Parameters:
+    - l (list): A list of elements to be processed.
+
+    Returns:
+    - arr (numpy.ndarray): The processed array with the first three elements moved to the end.
+
+    Requirements:
+    - numpy
+    - random
+
+    Example:
+    >>> random.seed(42)
+    >>> task_func()
+    array(['I', 'F', 'G', 'J', 'E', 'A', 'B', 'H', 'D', 'C'], dtype='<U1')
+    """
+    if l is None:
+        l = ELEMENTS.copy()  # Use a copy to avoid modifying the original list
+    random.shuffle(l)
+    arr = np.array(l)
+    arr = np.concatenate((arr[3:], arr[0:3]))
+    return arr

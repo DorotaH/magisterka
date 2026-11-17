@@ -1,0 +1,48 @@
+[
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 68,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0837/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 68,
+            "row": 6
+          },
+          "location": {
+            "column": 43,
+            "row": 6
+          }
+        },
+        {
+          "content": "    if columns is None:\n        columns = ['A', 'B', 'C', 'D', 'E']\n",
+          "end_location": {
+            "column": 1,
+            "row": 43
+          },
+          "location": {
+            "column": 1,
+            "row": 43
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 43,
+      "row": 6
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "name": "mutable-argument-default",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  }
+]

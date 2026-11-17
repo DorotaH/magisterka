@@ -1,0 +1,83 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 14,
+      "row": 2
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0816/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import random\nfrom collections import Counter\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "C408",
+    "end_location": {
+      "column": 16,
+      "row": 36
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0816/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "[",
+          "end_location": {
+            "column": 15,
+            "row": 36
+          },
+          "location": {
+            "column": 10,
+            "row": 36
+          }
+        },
+        {
+          "content": "]",
+          "end_location": {
+            "column": 16,
+            "row": 36
+          },
+          "location": {
+            "column": 15,
+            "row": 36
+          }
+        }
+      ],
+      "message": "Rewrite as a literal"
+    },
+    "location": {
+      "column": 10,
+      "row": 36
+    },
+    "message": "Unnecessary `list()` call (rewrite as a literal)",
+    "name": "unnecessary-collection-call",
+    "noqa_row": 36,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+  }
+]

@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0201/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -34,7 +34,7 @@
+ 
+     data = df[column].values
+     avg = statistics.mean(data)
+-    greater_avg = data[data > avg]
++    greater_avg = data[avg < data]
+     
+     data.sort()
+     bpoint = bisect.bisect_right(data, value)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0201/acw/watermarked.py

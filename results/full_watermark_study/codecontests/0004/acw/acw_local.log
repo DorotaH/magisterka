@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0004/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+ for _ in range(int(input())):
+     n = int(input())
+     a = [int(i) for i in input().split()]
+-    b = [1] + [abs(a[i]-a[i-1]) for i in range(1, n)]
++    b = [abs(a[i]-a[i-1]) for i in range(1, n)] + [1]
+     cur = {1 : 0}
+     ans = 0
+     for i in range(1, n):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0004/acw/watermarked.py

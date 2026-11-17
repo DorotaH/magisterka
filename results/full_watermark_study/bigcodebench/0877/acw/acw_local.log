@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0877/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -67,7 +67,7 @@
+     if not data.apply(lambda s: pd.to_numeric(s, errors='coerce').notnull().all()).all():
+         raise ValueError("DataFrame should only contain numeric values.")
+     
+-    if n_components > len(data.columns):
++    if len(data.columns) < n_components:
+         raise ValueError("n_components should not be greater than the number of columns in data.")
+     
+     scaler = StandardScaler()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0877/acw/watermarked.py

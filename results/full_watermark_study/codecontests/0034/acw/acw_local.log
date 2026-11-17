@@ -1,0 +1,38 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0034/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -55,8 +55,8 @@
+     def add(self, start, stop, value):
+         """lazily add value to [start, stop]"""
+         stop+=1
+-        start = start_copy = start + self._size
+-        stop = stop_copy = stop + self._size
++        start = start_copy = self._size + start
++        stop = stop_copy = self._size + stop
+         while start < stop:
+             if start & 1:
+                 self._lazy[start] += value
+@@ -108,7 +108,7 @@
+         wlr.append((w,l,r))
+     wlr.sort()
+     
+-    lst=LazySegmentTree(m+1,default=inf,func=min)
++    lst=LazySegmentTree(1+m,default=inf,func=min)
+     
+     ans=inf
+     left=0
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0034/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -115,7 +115,7 @@
+     # print(wlr)
+     for right in range(n):
+         lst.add(wlr[right][1],wlr[right][2],1)
+-        while lst.query(1,m-1,default=inf)>=1:
++        while 1 <= lst.query(1,m-1,default=inf):
+             ans=min(ans,wlr[right][0]-wlr[left][0])
+             lst.add(wlr[left][1],wlr[left][2],-1)
+             left+=1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0034/acw/watermarked.py

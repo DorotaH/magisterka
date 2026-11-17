@@ -1,0 +1,130 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0157.py:
+--- Original
++++ Modified
+@@ -1160,7 +1160,7 @@
+ 
+ def facto(fact):
+     fact[0], fact[1] = 1, 1
+-    for i in range(2, 1 + 10**5):
++    for i in range(2, 10**5 + 1):
+         fact[i] = (i * fact[i - 1]) % M
+ 
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0157.py:
+--- Original
++++ Modified
+@@ -127,7 +127,7 @@
+             p += 1
+         else:
+             p -= 1
+-        if p < 0:
++        if 0 > p:
+             return False
+     else:
+         return p <= 0
+@@ -219,7 +219,7 @@
+ 
+ # -----------------------------roman
+ def roman_number(x):
+-    if x > 15999:
++    if 15999 < x:
+         return
+     value = [5000, 4000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+     symbol = [
+@@ -241,7 +241,7 @@
+     ]
+     roman = ""
+     i = 0
+-    while x > 0:
++    while 0 < x:
+         div = x // value[i]
+         x = x % value[i]
+         while div:
+@@ -298,7 +298,7 @@
+                 n //= i
+             result -= result // i
+         i += 1
+-    if n > 1:
++    if 1 < n:
+         result -= result // n
+     return result
+ 
+@@ -321,7 +321,7 @@
+     if r < x:
+         a.append(x)
+         return a
+-    if x < 1e10:
++    if 1e10 > x:
+         luckynum(10 * x + 4, l, r, a)
+         luckynum(10 * x + 7, l, r, a)
+     return a
+@@ -395,7 +395,7 @@
+ def solven(p, l, a, b, n, res):  # given number
+     if n < p or l > 10:
+         return
+-    if p > 0:
++    if 0 < p:
+         res.add(p)
+     solven(10 * p + a, l + 1, a, b, n)
+     solven(10 * p + b, l + 1, a, b, n)
+@@ -625,7 +625,7 @@
+ 
+ 
+ def luckynumber(x, n, a):
+-    if x > 0:
++    if 0 < x:
+         a.append(x)
+     if x > 10**9:
+         return a
+@@ -1145,7 +1145,7 @@
+     while m > 0:
+         x, y = y, x - y * (a // m)
+         a, m = m, a % m
+-    return mo + x if x < 0 else x
++    return mo + x if 0 > x else x
+ 
+ 
+ def good(l, c):
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0157.py:
+--- Original
++++ Modified
+@@ -130,7 +130,7 @@
+         if 0 > p:
+             return False
+     else:
+-        return p <= 0
++        return 0 >= p
+ 
+ 
+ # -------------------------------------------------
+@@ -329,7 +329,7 @@
+ 
+ def luckynuber(x, n, a):
+     p = set(str(x))
+-    if len(p) <= 2:
++    if 2 >= len(p):
+         a.append(x)
+     if x < n:
+         luckynuber(1 + x, n, a)
+@@ -354,7 +354,7 @@
+ 
+     # Keep dividing n by
+     # 5 & update Count
+-    while n >= 5:
++    while 5 <= n:
+         n //= 5
+         count += n
+ 
+@@ -656,7 +656,7 @@
+ def buildPrefix(MAX, prefix):
+     prime = [1] * (1 + MAX)
+     p = 2
+-    while p**2 <= MAX:
++    while MAX >= p**2:
+         if prime[p] == 1:
+             i = 2 * p
+             while i <= MAX:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0157.py

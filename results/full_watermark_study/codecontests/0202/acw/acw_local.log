@@ -1,0 +1,58 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0202/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -63,7 +63,7 @@
+ 			curr = parents[curr]
+ 	else:
+ 		if dist[curr] < lef:
+-			lef -= dist[curr] + 1
++			lef -= 1 + dist[curr]
+ 			dupe[curr] = 1
+ 			for _ in range(dist[curr]):
+ 				curr = left[curr]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0202/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -39,7 +39,7 @@
+ 	if new != curr:
+ 		after = curr
+ 		curr = new
+-	if curr < after:
++	if after > curr:
+ 		want[order[i]] = 1
+ 
+ dist = [float('inf')] * n
+@@ -53,7 +53,7 @@
+ checked = [0] * n
+ curr = 0
+ lef = k
+-while lef > 0 and curr != -1:
++while 0 < lef and curr != -1:
+ 	if dupe[curr]:
+ 		if left[curr] >= 0 and dupe[left[curr]] == 0 and checked[left[curr]] == 0:
+ 			curr = left[curr]
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0202/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+ 	right.append(r)
+ 	if l >= 0:
+ 		parents[l] = i
+-	if r >= 0:
++	if 0 <= r:
+ 		parents[r] = i
+ 
+ covered = [0] * n
+@@ -55,7 +55,7 @@
+ lef = k
+ while 0 < lef and curr != -1:
+ 	if dupe[curr]:
+-		if left[curr] >= 0 and dupe[left[curr]] == 0 and checked[left[curr]] == 0:
++		if 0 <= left[curr] and dupe[left[curr]] == 0 and checked[left[curr]] == 0:
+ 			curr = left[curr]
+ 		elif right[curr] >= 0 and dupe[right[curr]] == 0 and checked[right[curr]] == 0:
+ 			curr = right[curr]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0202/acw/watermarked.py

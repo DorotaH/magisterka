@@ -1,0 +1,161 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 31,
+      "row": 4
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0097/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import os\nimport sys\nfrom io import BytesIO, IOBase\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "E731",
+    "end_location": {
+      "column": 52,
+      "row": 51
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0097/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "def input():\n    return sys.stdin.readline().rstrip(\"\\r\\n\")",
+          "end_location": {
+            "column": 52,
+            "row": 51
+          },
+          "location": {
+            "column": 1,
+            "row": 51
+          }
+        }
+      ],
+      "message": "Rewrite `input` as a `def`"
+    },
+    "location": {
+      "column": 1,
+      "row": 51
+    },
+    "message": "Do not assign a `lambda` expression, use a `def`",
+    "name": "lambda-assignment",
+    "noqa_row": 51,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/lambda-assignment"
+  },
+  {
+    "cell": null,
+    "code": "E402",
+    "end_location": {
+      "column": 43,
+      "row": 57
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0097/original.py",
+    "fix": null,
+    "location": {
+      "column": 1,
+      "row": 57
+    },
+    "message": "Module level import not at top of file",
+    "name": "module-import-not-at-top-of-file",
+    "noqa_row": 57,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/module-import-not-at-top-of-file"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 43,
+      "row": 57
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0097/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from heapq import heapify, heappop, heappush\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 58
+          },
+          "location": {
+            "column": 1,
+            "row": 57
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 57
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 57,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 43,
+      "row": 57
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0097/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from heapq import heappush,heappop",
+          "end_location": {
+            "column": 43,
+            "row": 57
+          },
+          "location": {
+            "column": 1,
+            "row": 57
+          }
+        }
+      ],
+      "message": "Remove unused import: `heapq.heapify`"
+    },
+    "location": {
+      "column": 36,
+      "row": 57
+    },
+    "message": "`heapq.heapify` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 57,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  }
+]

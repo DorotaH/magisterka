@@ -1,0 +1,46 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0107/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+             ans=arr[m]
+             r=m-1
+         elif arr[m]<le:
+-            l=m+1 
++            l=1+m 
+         else:
+             r=m-1
+     return ans
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0107/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -37,7 +37,7 @@
+     n=int(input())
+     a=list(map(int,input().split()))
+     d={} 
+-    l=[512]*512
++    l=512*[512]
+     l[0]=0
+     for i in a:
+         for j in range(512):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0107/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -41,12 +41,12 @@
+     l[0]=0
+     for i in a:
+         for j in range(512):
+-            if l[j]<i:
++            if i > l[j]:
+                 l[i^j]=min(l[i^j],i)
+     ls=[]
+     c=0
+     for i in range(512):
+-        if l[i]<512:
++        if 512 > l[i]:
+             c+=1
+             ls.append(i)
+     print(c)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0107/acw/watermarked.py

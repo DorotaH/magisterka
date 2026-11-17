@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0235.py:
+--- Original
++++ Modified
+@@ -50,7 +50,7 @@
+         bins,
+         model.params["Intercept"]
+         + bins * model.params["bins"]
+-        + model.params["np.power(bins, 2)"] * np.power(bins, 2),
++        + np.power(bins, 2) * model.params["np.power(bins, 2)"],
+         linewidth=2,
+         color="g",
+     )
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0235.py

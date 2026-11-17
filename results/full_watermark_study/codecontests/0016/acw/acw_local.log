@@ -1,0 +1,42 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0016/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+     RLC.sort()
+ 
+     end = [False] * n
+-    rem = [(n+k-2)//(k-1)] * (n*k)
++    rem = [(k+n-2)//(k-1)] * (n*k)
+ 
+     ans = [None] * n
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0016/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -6,20 +6,20 @@
+ for _ in range(tt):
+     n,k = map(int,stdin.readline().split())
+     c = list(map(int,stdin.readline().split()))
+-    for i in range(n*k):
++    for i in range(k*n):
+         c[i] -= 1
+ 
+     last = [None] * n
+ 
+     RLC = []
+-    for i in range(n*k):
++    for i in range(k*n):
+         if last[c[i]] != None:
+             RLC.append( (i,last[c[i]],c[i]) )
+         last[c[i]] = i
+     RLC.sort()
+ 
+     end = [False] * n
+-    rem = [(k+n-2)//(k-1)] * (n*k)
++    rem = [(k+n-2)//(k-1)] * (k*n)
+ 
+     ans = [None] * n
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0016/acw/watermarked.py

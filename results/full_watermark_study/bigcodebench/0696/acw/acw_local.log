@@ -1,0 +1,16 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0696/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -30,8 +30,8 @@
+     for _ in range(num_points):
+         theta = uniform(0, 2*np.pi)
+         r = radius * math.sqrt(uniform(0, 1))
+-        x = r * math.cos(theta)
+-        y = r * math.sin(theta)
++        x = math.cos(theta) * r
++        y = math.sin(theta) * r
+         out.append((x, y))
+         
+     return out
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0696/acw/watermarked.py

@@ -1,0 +1,118 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 15,
+      "row": 2
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0930/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import random\nimport string\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "PIE808",
+    "end_location": {
+      "column": 39,
+      "row": 33
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0930/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 41,
+            "row": 33
+          },
+          "location": {
+            "column": 38,
+            "row": 33
+          }
+        }
+      ],
+      "message": "Remove `start` argument"
+    },
+    "location": {
+      "column": 38,
+      "row": 33
+    },
+    "message": "Unnecessary `start` argument in `range`",
+    "name": "unnecessary-range-start",
+    "noqa_row": 33,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+  },
+  {
+    "cell": null,
+    "code": "RUF007",
+    "end_location": {
+      "column": 17,
+      "row": 36
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0930/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "import itertools\n",
+          "end_location": {
+            "column": 1,
+            "row": 3
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        },
+        {
+          "content": "itertools.pairwise(word)",
+          "end_location": {
+            "column": 33,
+            "row": 36
+          },
+          "location": {
+            "column": 14,
+            "row": 36
+          }
+        }
+      ],
+      "message": "Replace `zip()` with `itertools.pairwise()`"
+    },
+    "location": {
+      "column": 14,
+      "row": 36
+    },
+    "message": "Prefer `itertools.pairwise()` over `zip()` when iterating over successive pairs",
+    "name": "zip-instead-of-pairwise",
+    "noqa_row": 36,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/zip-instead-of-pairwise"
+  }
+]

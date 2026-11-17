@@ -1,0 +1,40 @@
+import os
+import re
+
+
+def task_func(directory):
+    """
+    Finds all files in the specified directory whose names contain any type of
+    bracket (round, curly, or square).
+
+    Uses an internal constant BRACKET_PATTERN = '[(){}\\[\\]]', which specifies
+    the brackets that are looked for.
+
+
+    Parameters:
+    directory (str): The directory path to search in.
+
+    Returns:
+    list[str]: A list of file paths that contain brackets in their names.
+
+    Requirements:
+    - re
+    - os
+
+    Example:
+    >>> task_func('./some_directory/')
+    ['./some_directory/file(1).txt', './some_directory/folder/file[2].jpg']
+
+    >>> task_func('./another_directory/')
+    ['./another_directory/file{3}.png']
+    """
+    BRACKET_PATTERN = "[(){}\\[\\]]"  # Corrected pattern to match any type of bracket
+
+    file_list = []
+    for root, dirs, files in os.walk(directory):
+        file_list.extend(
+            os.path.join(root, file)
+            for file in files
+            if re.search(BRACKET_PATTERN, file)
+        )
+    return file_list

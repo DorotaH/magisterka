@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0973/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -40,7 +40,7 @@
+ 
+     results = []
+     for index, component in enumerate(path_components):
+-        sub_path = delimiter.join(path_components[: index + 1])
++        sub_path = delimiter.join(path_components[: 1 + index])
+         if not sub_path.startswith(delimiter):
+             sub_path = delimiter + sub_path
+         usage = shutil.disk_usage(sub_path)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0973/acw/watermarked.py

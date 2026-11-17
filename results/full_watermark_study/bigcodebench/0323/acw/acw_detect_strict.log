@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0323.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+     names = re.findall(r"(.*?)(?:\[.*?\]|$)", text)
+     words = " ".join(names).split()
+     word_freqs = Counter(words)
+-    if num_gaussians <= 0:
++    if 0 >= num_gaussians:
+         raise ValueError("Number of Gaussians must be greater than 0.")
+     if len(word_freqs) < num_gaussians:
+         raise Exception(
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0323.py

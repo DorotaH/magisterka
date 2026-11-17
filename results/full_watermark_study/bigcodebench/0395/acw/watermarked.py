@@ -1,0 +1,58 @@
+import re
+import os
+import glob
+import natsort
+import pandas as pd
+
+
+def task_func(directory='./', file_pattern='*.txt', regex=r'([0-9]+)'):
+	"""
+	Extract numeric data from all text files matching a given pattern in a directory and compile it into a Pandas DataFrame.
+
+	Parameters:
+	- directory (str): The directory to search for text files. Default is './'.
+	- file_pattern (str): The glob pattern to match text files. Default is '*.txt'.
+	- regex (str): The regular expression used to extract numeric data. Default is r'([0-9]+)'.
+
+	Returns:
+	- DataFrame: A pandas DataFrame with two columns: 'Filename' and 'Numeric Data'. Each row represents a file and its extracted numeric data.
+
+	Raises:
+	- FileNotFoundError: If the specified directory does not exist.
+	- ValueError: If no files matching the pattern are found.
+
+	Requirements:
+	- re
+	- os
+	- glob
+	- natsort
+	- pandas
+
+	Example:
+	>>> data_dir = './data/'
+	>>> create_dummy_files(data_dir)
+	>>> df = task_func('./data/', '*.txt', r'([0-9]+)')
+	>>> tear_down_files(data_dir)
+	>>> print(df)
+			Filename Numeric Data
+	0        empty.txt           []
+	1        file1.txt   [123, 456]
+	2        file2.txt        [789]
+	3        mixed.txt   [123, 456]
+	4  non_numeric.txt           []
+	"""
+	if not os.path.exists(directory):
+		raise FileNotFoundError(f"The directory '{directory}' does not exist.")
+
+	files = natsort.natsorted(glob.glob(os.path.join(directory, file_pattern)))
+	if not files:
+		raise ValueError(f"No files found matching pattern '{file_pattern}' in directory '{directory}'.")
+
+	data = []
+	for filename in files:
+		with open(filename, 'r') as file:
+			content = file.read()
+		numeric_data = re.findall(regex, content)
+		data.append([os.path.basename(filename), numeric_data])
+
+	return pd.DataFrame(data, columns=['Filename', 'Numeric Data'])

@@ -1,0 +1,118 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 32,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0477/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 58,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0477/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 58,
+            "row": 6
+          },
+          "location": {
+            "column": 33,
+            "row": 6
+          }
+        },
+        {
+          "content": "    if CATEGORIES is None:\n        CATEGORIES = [\"A\", \"B\", \"C\", \"D\", \"E\"]\n",
+          "end_location": {
+            "column": 1,
+            "row": 41
+          },
+          "location": {
+            "column": 1,
+            "row": 41
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 33,
+      "row": 6
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "name": "mutable-argument-default",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "RUF059",
+    "end_location": {
+      "column": 8,
+      "row": 55
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0477/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_fig",
+          "end_location": {
+            "column": 8,
+            "row": 55
+          },
+          "location": {
+            "column": 5,
+            "row": 55
+          }
+        }
+      ],
+      "message": "Prefix it with an underscore or any other dummy variable pattern"
+    },
+    "location": {
+      "column": 5,
+      "row": 55
+    },
+    "message": "Unpacked variable `fig` is never used",
+    "name": "unused-unpacked-variable",
+    "noqa_row": 55,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-unpacked-variable"
+  }
+]

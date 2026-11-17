@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0299.py:
+--- Original
++++ Modified
+@@ -31,7 +31,7 @@
+     >>> list(sums)
+     [5, 4]
+     """
+-    if subset_size > len(elements) or subset_size <= 0:
++    if subset_size > len(elements) or 0 >= subset_size:
+         return 1, []
+ 
+     combinations = list(itertools.combinations(elements, subset_size))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0299.py

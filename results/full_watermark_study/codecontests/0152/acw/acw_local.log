@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0152/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+     return [types[i](str_list[i]) for i in range(len(str_list))]
+ 
+ def pr( something='' ):
+-    sys.stdout.write( str(something) + '\n')
++    sys.stdout.write( '\n' + str(something))
+ def pra( array ):
+     sys.stdout.write( ' '.join([str(x) for x in array]) + '\n')
+ 
+@@ -39,7 +39,7 @@
+         #print('blues:',blues)
+         reds_okay,blues_okay = True,True
+         for i in range(len(blues)):
+-            if blues[i] >= 1+i:
++            if blues[i] >= i+1:
+                 continue
+             blues_okay = False
+             break
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0152/acw/watermarked.py

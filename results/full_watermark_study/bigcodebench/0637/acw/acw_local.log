@@ -1,0 +1,29 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0637/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -33,8 +33,8 @@
+     # Generate sample students and grades
+ 
+     # Constants
+-    STUDENTS = ['Student' + str(i) for i in range(1, 101)]
+-    COURSES = ['Course' + str(i) for i in range(1, 6)]
++    STUDENTS = [str(i) + 'Student' for i in range(1, 101)]
++    COURSES = [str(i) + 'Course' for i in range(1, 6)]
+ 
+     students_sample = sample(STUDENTS, num_students)
+     grades = np.random.randint(40, 101, size=(num_students, len(COURSES)))
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0637/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -45,7 +45,7 @@
+     # Create plot
+     fig, ax = plt.subplots()
+     df.mean().plot(kind='bar', ax=ax, position=1, width=0.4, color='b', label='Average Grade')
+-    df[df >= 60].count().plot(kind='bar', ax=ax, position=0, width=0.4, color='g', label='Passing Grade Counts')
++    df[60 <= df].count().plot(kind='bar', ax=ax, position=0, width=0.4, color='g', label='Passing Grade Counts')
+     ax.set_title('Course-wise Average and Passing Grade Counts')
+     ax.legend()
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0637/acw/watermarked.py

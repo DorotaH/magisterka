@@ -1,0 +1,13 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0807/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -47,6 +47,6 @@
+     if std_dev == 0:
+         return [], mean, std_dev**2
+     z_scores = (data - mean) / std_dev
+-    outliers = np.where(np.abs(z_scores) > threshold)
++    outliers = np.where(threshold < np.abs(z_scores))
+ 
+     return list(outliers[0]), mean, std_dev**2
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0807/acw/watermarked.py

@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0100.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+ 
+             if a[i] + j < 2100:
+                 dp[i][a[i] + j] = min(
+-                    dp[i][a[i] + j], dp[i - 1][j] + max(a[i] - (dp[i - 1][j] - j), 0)
++                    dp[i][a[i] + j], max(a[i] - (dp[i - 1][j] - j), 0) + dp[i - 1][j]
+                 )
+ 
+     print(min(dp[-1]))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0100.py

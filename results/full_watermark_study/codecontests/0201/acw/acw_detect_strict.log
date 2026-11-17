@@ -1,0 +1,23 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0201.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+ 
+     # print (p)
+ 
+-    loop = 2 * (n - 1) * 2 * (m - 1) // math.gcd(2 * (n - 1), (m - 1) * 2)
++    loop = 2 * (n - 1) * 2 * (m - 1) // math.gcd(2 * (n - 1), 2 * (m - 1))
+ 
+     xmods = []
+     tx = rb
+@@ -53,7 +53,7 @@
+     for i in range(len(lis) - 1, -1, -1):
+         kai = loop - lis[i] if i == len(lis) - 1 else lis[i + 1] - lis[i]
+         newa = ((1 - p) * (kai + lasta)) % mod
+-        newb = (lastb * (1 - p)) % mod
++        newb = ((1 - p) * lastb) % mod
+ 
+         # print (lis[i] , newa , newb , kai )
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0201.py

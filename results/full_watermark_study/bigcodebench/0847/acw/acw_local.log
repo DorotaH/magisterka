@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0847/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -27,7 +27,7 @@
+     lines = input_string.split('\n')
+     file_paths = []
+     for line in lines:
+-        line = re.sub('['+string.punctuation+']', '', line)
++        line = re.sub(string.punctuation+'['+']', '', line)
+         filename = str(random.randint(10000, 99999)) + '.txt'
+         filepath = os.path.join(directory, filename)
+         file_paths.append(filepath)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0847/acw/watermarked.py

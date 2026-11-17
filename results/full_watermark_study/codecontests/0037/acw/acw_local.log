@@ -1,0 +1,22 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0037/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ import sys
+ input=sys.stdin.readline
+-INF=int(1e9)+7
++INF=7+int(1e9)
+ dx=[-1,0,1,0]
+ dy=[0,1,0,-1]
+ 
+@@ -25,7 +25,7 @@
+                         dp[i]+=final[idx-1]
+                 else:
+                     if k == cost and idx > 0:
+-                        final[i]=final[idx-1]+1
++                        final[i]=1+final[idx-1]
+                         dp[i]+=final[idx-1]
+                     else:
+                         final[i]=1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0037/acw/watermarked.py

@@ -1,0 +1,19 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_1066.py:
+--- Original
++++ Modified
+@@ -50,11 +50,11 @@
+     """
+     normal_data = np.random.normal(size=num_samples)
+     outliers = np.random.uniform(low=-10, high=10, size=num_outliers)
+-    data = np.concatenate([normal_data, outliers]) if num_samples > 0 else outliers
++    data = np.concatenate([normal_data, outliers]) if 0 < num_samples else outliers
+ 
+     # Identify outliers using IQR (only if there is normal data)
+     outliers_detected = np.array([])
+-    if num_samples > 0:
++    if 0 < num_samples:
+         q75, q25 = np.percentile(normal_data, [75, 25])
+         iqr = q75 - q25
+         lower_bound = q25 - (1.5 * iqr)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_1066.py

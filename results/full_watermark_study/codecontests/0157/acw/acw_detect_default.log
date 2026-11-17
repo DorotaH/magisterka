@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0157.py:
+--- Original
++++ Modified
+@@ -1159,7 +1159,7 @@
+ 
+ def facto(fact):
+     fact[0], fact[1] = 1, 1
+-    for i in range(2, 1 + 10**5):
++    for i in range(2, 10**5 + 1):
+         fact[i] = (i * fact[i - 1]) % M
+ 
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0157.py:
+--- Original
++++ Modified
+@@ -626,7 +626,7 @@
+ def luckynumber(x, n, a):
+     if 0 < x:
+         a.append(x)
+-    if 10**9 < x:
++    if x > 10**9:
+         return a
+     if x < 1e12:
+         luckynumber(10 * x + 4, n, a)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0157.py

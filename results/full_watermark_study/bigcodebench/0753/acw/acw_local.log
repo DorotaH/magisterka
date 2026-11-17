@@ -1,0 +1,18 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0753/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -31,9 +31,9 @@
+ 
+     for _ in range(n):
+         theta = 2 * math.pi * random.random()
+-        r = RADIUS * math.sqrt(random.random())
+-        x = r * math.cos(theta)
+-        y = r * math.sin(theta)
++        r = math.sqrt(random.random()) * RADIUS
++        x = math.cos(theta) * r
++        y = math.sin(theta) * r
+         distance = math.sqrt(x**2 + y**2)
+         distances.append(distance)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0753/acw/watermarked.py

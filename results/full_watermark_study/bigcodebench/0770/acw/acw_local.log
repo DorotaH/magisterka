@@ -1,0 +1,22 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0770/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -42,14 +42,14 @@
+     (0.9658328575162494, LinearRegression())
+     """
+ 
+-    if num_samples * test_size < 2:
++    if test_size * num_samples < 2:
+         raise ValueError("Test set should contain at least 2 samples. num_samples * testsize >=2")
+ 
+     if random_seed is not None:
+         np.random.seed(random_seed)
+ 
+     X = np.random.rand(num_samples, 1)
+-    y = 2*X.squeeze() + 1 + np.random.randn(num_samples) * noise_strength
++    y = X.squeeze()*2 + 1 + noise_strength * np.random.randn(num_samples)
+ 
+     X_train, X_test, y_train, y_test = train_test_split(
+                                             X, y,
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0770/acw/watermarked.py

@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0859.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+     accuracy = metrics.accuracy_score(y_test, predictions)
+ 
+     warning_msg = None
+-    if accuracy < 0.9:
++    if 0.9 > accuracy:
+         warning_msg = "The accuracy of the SVM classification is below 0.9."
+         warnings.warn(warning_msg)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0859.py

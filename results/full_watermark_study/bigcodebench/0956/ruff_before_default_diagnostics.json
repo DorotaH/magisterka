@@ -1,0 +1,72 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 14,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0956/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import random\nimport re\nimport string\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "UP031",
+    "end_location": {
+      "column": 57,
+      "row": 38
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0956/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "\"[{}]\".format(re.escape(string.punctuation))",
+          "end_location": {
+            "column": 57,
+            "row": 38
+          },
+          "location": {
+            "column": 19,
+            "row": 38
+          }
+        }
+      ],
+      "message": "Replace with format specifiers"
+    },
+    "location": {
+      "column": 19,
+      "row": 38
+    },
+    "message": "Use format specifiers instead of percent format",
+    "name": "printf-string-formatting",
+    "noqa_row": 38,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/printf-string-formatting"
+  }
+]

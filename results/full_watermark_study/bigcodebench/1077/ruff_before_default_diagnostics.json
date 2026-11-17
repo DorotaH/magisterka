@@ -1,0 +1,83 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 19,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1077/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from datetime import datetime\n\nimport numpy as np\nimport pytz\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "RUF007",
+    "end_location": {
+      "column": 57,
+      "row": 50
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1077/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "import itertools\n",
+          "end_location": {
+            "column": 1,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 4
+          }
+        },
+        {
+          "content": "itertools.pairwise(parsed_times)",
+          "end_location": {
+            "column": 89,
+            "row": 50
+          },
+          "location": {
+            "column": 54,
+            "row": 50
+          }
+        }
+      ],
+      "message": "Replace `zip()` with `itertools.pairwise()`"
+    },
+    "location": {
+      "column": 54,
+      "row": 50
+    },
+    "message": "Prefer `itertools.pairwise()` over `zip()` when iterating over successive pairs",
+    "name": "zip-instead-of-pairwise",
+    "noqa_row": 50,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/zip-instead-of-pairwise"
+  }
+]

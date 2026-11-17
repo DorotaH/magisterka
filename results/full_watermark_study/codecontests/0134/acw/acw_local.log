@@ -1,0 +1,57 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0134/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+ 
+ while front<rear:
+ 
+-    mid = (front+rear)//2
++    mid = (rear+front)//2
+     p = getprob(mid)
+ 
+ #    print(mid,p)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0134/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -6,12 +6,12 @@
+ 
+ def getprob(study):
+ 
+-    tot = n*(n-1)*(n-2)//6
+-    case1 = study*(study-1)*(study-2)//6
+-    case2 = study*(study-1)*(n-study)//2
+-    case3 = study*(n-study)*(n-study-1)//2
++    tot = (n-1)*n*(n-2)//6
++    case1 = (study-1)*study*(study-2)//6
++    case2 = (study-1)*study*(n-study)//2
++    case3 = (n-study)*study*(n-study-1)//2
+ 
+-    return (case1+case2+case3*0.5)*1.0/tot
++    return (case1+case2+0.5*case3)*1.0/tot
+ 
+ 
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0134/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -19,14 +19,14 @@
+ rear = n
+ 
+ 
+-while front<rear:
++while rear > front:
+ 
+     mid = (rear+front)//2
+     p = getprob(mid)
+ 
+ #    print(mid,p)
+ 
+-    if p < target:   front = mid + 1
++    if target > p:   front = mid + 1
+     else:  rear = mid 
+ 
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0134/acw/watermarked.py

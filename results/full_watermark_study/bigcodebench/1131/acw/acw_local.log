@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1131/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -35,7 +35,7 @@
+ 
+     for user in users:
+         password = user[1].encode('utf-8')
+-        salted_password = password + salt.encode('utf-8')
++        salted_password = salt.encode('utf-8') + password
+         hash_obj = hashlib.sha256(salted_password)
+         hashed_password = binascii.hexlify(hash_obj.digest()).decode('utf-8')
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1131/acw/watermarked.py

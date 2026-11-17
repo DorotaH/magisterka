@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_1082.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+     -0.46
+     """
+     df = pd.DataFrame(data)
+-    if len(df) < 2:  # Check if the data frame has less than 2 rows
++    if 2 > len(df):  # Check if the data frame has less than 2 rows
+         return float("nan")  # or return None
+ 
+     df["Score_Float"] = df["Score_String"].astype(float)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_1082.py

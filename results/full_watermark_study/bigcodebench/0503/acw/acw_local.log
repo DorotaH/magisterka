@@ -1,0 +1,12 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0503/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -41,5 +41,5 @@
+         raise ValueError("stock_names must be a list of strings and cannot be empty.")
+ 
+     dates = pd.date_range(end=datetime.now().date(), periods=days_in_past)
+-    prices = np.random.rand(days_in_past, len(stock_names)) * 100
++    prices = 100 * np.random.rand(days_in_past, len(stock_names))
+     return pd.DataFrame(prices, columns=stock_names, index=dates)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0503/acw/watermarked.py

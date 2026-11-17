@@ -1,0 +1,107 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 40,
+      "row": 5
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0583/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import os\nfrom base64 import b64decode, b64encode\n\nimport rsa\nfrom Crypto.Cipher import AES\nfrom Crypto.Random import get_random_bytes\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 40,
+      "row": 5
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0583/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from base64 import b64encode",
+          "end_location": {
+            "column": 40,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 5
+          }
+        }
+      ],
+      "message": "Remove unused import: `base64.b64decode`"
+    },
+    "location": {
+      "column": 31,
+      "row": 5
+    },
+    "message": "`base64.b64decode` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "RUF059",
+    "end_location": {
+      "column": 28,
+      "row": 44
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0583/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_tag",
+          "end_location": {
+            "column": 28,
+            "row": 44
+          },
+          "location": {
+            "column": 25,
+            "row": 44
+          }
+        }
+      ],
+      "message": "Prefix it with an underscore or any other dummy variable pattern"
+    },
+    "location": {
+      "column": 25,
+      "row": 44
+    },
+    "message": "Unpacked variable `tag` is never used",
+    "name": "unused-unpacked-variable",
+    "noqa_row": 44,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-unpacked-variable"
+  }
+]

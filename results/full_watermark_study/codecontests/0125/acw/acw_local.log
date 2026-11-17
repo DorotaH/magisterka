@@ -1,0 +1,45 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0125/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ import io,os
+ #input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
+ 
+-M = 10**9 + 7
++M = 7 + 10**9
+ colors = {'white':0,'yellow':0,'green':1,'blue':1,'red':2,'orange':2}
+ 
+ 
+@@ -17,7 +17,7 @@
+ 
+     if index not in dic:
+         rest = n - layer
+-        sub = pow(2,(1<<(rest+2))-3, M )
++        sub = pow(2,(1<<(2+rest))-3, M )
+ #        print(index,sub)
+         return [sub,sub,sub]
+ 
+@@ -55,7 +55,7 @@
+ 
+ def main(t):
+ 
+-    M = 10**9 + 7
++    M = 7 + 10**9
+ 
+     n = int(input())
+     q = int(input())
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0125/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -31,7 +31,7 @@
+     if index in colored:
+         for i in range(3):
+             if i != colored[index]: continue 
+-            dic[index][i] =  ( sum(left) - left[i] ) * (sum(right) - right[i]) 
++            dic[index][i] =  (sum(right) - right[i]) * ( sum(left) - left[i] ) 
+             dic[index][i] =  dic[index][i] % M
+ 
+     else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0125/acw/watermarked.py

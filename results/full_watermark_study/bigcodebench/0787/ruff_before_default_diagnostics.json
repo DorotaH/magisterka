@@ -1,0 +1,72 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 35,
+      "row": 2
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0787/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from itertools import combinations\n\nimport numpy as np\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "PLR1730",
+    "end_location": {
+      "column": 36,
+      "row": 46
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0787/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "max_distance = max(max_distance, distance)",
+          "end_location": {
+            "column": 36,
+            "row": 46
+          },
+          "location": {
+            "column": 9,
+            "row": 45
+          }
+        }
+      ],
+      "message": "Replace with `max_distance = max(max_distance, distance)`"
+    },
+    "location": {
+      "column": 9,
+      "row": 45
+    },
+    "message": "Replace `if` statement with `max_distance = max(max_distance, distance)`",
+    "name": "if-stmt-min-max",
+    "noqa_row": 45,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/if-stmt-min-max"
+  }
+]

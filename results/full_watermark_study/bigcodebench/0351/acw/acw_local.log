@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0351/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -39,7 +39,7 @@
+     for product in product_list:
+         category = categories[random.randint(0, len(categories)-1)]
+         quantity_sold = random.randint(min_value, max_value)
+-        revenue = quantity_sold * random.randint(min_value, max_value)
++        revenue = random.randint(min_value, max_value) * quantity_sold
+         report_data.append([product, category, quantity_sold, revenue])
+ 
+     return pd.DataFrame(
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0351/acw/watermarked.py

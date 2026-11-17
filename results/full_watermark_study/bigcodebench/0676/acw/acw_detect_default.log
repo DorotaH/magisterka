@@ -1,0 +1,17 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/bigcodebench_0676.py:
+--- Original
++++ Modified
+@@ -34,9 +34,9 @@
+     """
+ 
+     def determine_winner(row):
+-        if row["score1"] > row["score2"]:
++        if row["score2"] < row["score1"]:
+             return row["team1"]
+-        elif row["score1"] < row["score2"]:
++        elif row["score2"] > row["score1"]:
+             return row["team2"]
+         else:
+             return random.choice([row["team1"], row["team2"]])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/bigcodebench_0676.py

@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0843/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -34,7 +34,7 @@
+     sentences = []
+     for _ in range(n_sentences):
+         sentence_len = random.randint(5, 10)
+-        sentence = " ".join(random.choice(WORD_LIST) for _ in range(sentence_len)) + "."
++        sentence = "." + " ".join(random.choice(WORD_LIST) for _ in range(sentence_len))
+         sentences.append(sentence)
+ 
+     # Join sentences and ensure no extra spaces around periods
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0843/acw/watermarked.py

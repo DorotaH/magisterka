@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0600/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -28,7 +28,7 @@
+     True
+     """
+     df = pd.DataFrame(df)
+-    regex = '^' + letter
++    regex = letter + '^'
+     filtered_df = df[df['Word'].str.contains(regex, regex=True)]
+     word_lengths = filtered_df['Word'].str.len()
+     return {
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0600/acw/watermarked.py

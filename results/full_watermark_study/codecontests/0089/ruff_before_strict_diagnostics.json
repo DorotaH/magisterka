@@ -1,0 +1,931 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 35,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import math\nimport os\nimport sys\nfrom bisect import bisect_left, bisect_right, insort\nfrom collections import Counter, OrderedDict, defaultdict, deque\nfrom functools import lru_cache\nfrom heapq import heapify, heappop, heappush\nfrom io import BytesIO, IOBase\nfrom itertools import permutations\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 11
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 12,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Remove unused import: `math`"
+    },
+    "location": {
+      "column": 8,
+      "row": 3
+    },
+    "message": "`math` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 30,
+      "row": 5
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 5
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 25,
+      "row": 5
+    },
+    "message": "`collections.deque` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 42,
+      "row": 5
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 5
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 31,
+      "row": 5
+    },
+    "message": "`collections.defaultdict` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 54,
+      "row": 5
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 5
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 43,
+      "row": 5
+    },
+    "message": "`collections.OrderedDict` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 62,
+      "row": 5
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 5
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 55,
+      "row": 5
+    },
+    "message": "`collections.Counter` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 27,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 19,
+      "row": 6
+    },
+    "message": "`heapq.heappush` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 35,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 28,
+      "row": 6
+    },
+    "message": "`heapq.heappop` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 43,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 36,
+      "row": 6
+    },
+    "message": "`heapq.heapify` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 32,
+      "row": 7
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 8
+          },
+          "location": {
+            "column": 1,
+            "row": 7
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 20,
+      "row": 7
+    },
+    "message": "`bisect.bisect_right` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 39,
+      "row": 7
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 8
+          },
+          "location": {
+            "column": 1,
+            "row": 7
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 33,
+      "row": 7
+    },
+    "message": "`bisect.insort` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 51,
+      "row": 7
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 8
+          },
+          "location": {
+            "column": 1,
+            "row": 7
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 40,
+      "row": 7
+    },
+    "message": "`bisect.bisect_left` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 32,
+      "row": 8
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 9
+          },
+          "location": {
+            "column": 1,
+            "row": 8
+          }
+        }
+      ],
+      "message": "Remove unused import: `functools.lru_cache`"
+    },
+    "location": {
+      "column": 23,
+      "row": 8
+    },
+    "message": "`functools.lru_cache` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 8,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 35,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import: `itertools.permutations`"
+    },
+    "location": {
+      "column": 23,
+      "row": 9
+    },
+    "message": "`itertools.permutations` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 4,
+      "row": 23
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 4,
+            "row": 23
+          },
+          "location": {
+            "column": 1,
+            "row": 23
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 23
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 23,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 4,
+      "row": 24
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 4,
+            "row": 24
+          },
+          "location": {
+            "column": 1,
+            "row": 24
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 24
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 24,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 5,
+      "row": 25
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 5,
+            "row": 25
+          },
+          "location": {
+            "column": 1,
+            "row": 25
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 25
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 25,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 10,
+      "row": 31
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 31
+    },
+    "message": "Loop control variable `i` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 31,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 5,
+      "row": 52
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 5,
+            "row": 52
+          },
+          "location": {
+            "column": 1,
+            "row": 52
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 52
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 52,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 5,
+      "row": 56
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 5,
+            "row": 56
+          },
+          "location": {
+            "column": 1,
+            "row": 56
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 56
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 56,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 2,
+      "row": 60
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 2,
+            "row": 60
+          },
+          "location": {
+            "column": 1,
+            "row": 60
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 60
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 60,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 9,
+      "row": 61
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 9,
+            "row": 61
+          },
+          "location": {
+            "column": 1,
+            "row": 61
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 61
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 61,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 2,
+      "row": 62
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 2,
+            "row": 62
+          },
+          "location": {
+            "column": 1,
+            "row": 62
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 62
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 62,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 2,
+      "row": 63
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 2,
+            "row": 63
+          },
+          "location": {
+            "column": 1,
+            "row": 63
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 63
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 63,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 5,
+      "row": 64
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 5,
+            "row": 64
+          },
+          "location": {
+            "column": 1,
+            "row": 64
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 64
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 64,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 9,
+      "row": 69
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 9,
+            "row": 69
+          },
+          "location": {
+            "column": 1,
+            "row": 69
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 69
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 69,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "E731",
+    "end_location": {
+      "column": 52,
+      "row": 125
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0089/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "def input():\n    return sys.stdin.readline().rstrip(\"\\r\\n\")",
+          "end_location": {
+            "column": 52,
+            "row": 125
+          },
+          "location": {
+            "column": 1,
+            "row": 125
+          }
+        }
+      ],
+      "message": "Rewrite `input` as a `def`"
+    },
+    "location": {
+      "column": 1,
+      "row": 125
+    },
+    "message": "Do not assign a `lambda` expression, use a `def`",
+    "name": "lambda-assignment",
+    "noqa_row": 125,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/lambda-assignment"
+  }
+]

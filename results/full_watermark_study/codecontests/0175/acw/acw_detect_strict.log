@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0175.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+         A = sum(B) // m
+ 
+         ans = [(i + A - j) / n for i, j in zip(B, [B[0]] + B[1:])]
+-        if any(int(x) != x or x <= 0 for x in ans):
++        if any(int(x) != x or 0 >= x for x in ans):
+             print("NO")
+         else:
+             print("YES")
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0175.py

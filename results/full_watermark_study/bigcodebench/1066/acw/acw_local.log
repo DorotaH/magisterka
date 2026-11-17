@@ -1,0 +1,40 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1066/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -57,8 +57,8 @@
+     if num_samples > 0:
+         q75, q25 = np.percentile(normal_data, [75, 25])
+         iqr = q75 - q25
+-        lower_bound = q25 - (iqr * 1.5)
+-        upper_bound = q75 + (iqr * 1.5)
++        lower_bound = q25 - (1.5 * iqr)
++        upper_bound = q75 + (1.5 * iqr)
+         outliers_detected = data[(data < lower_bound) | (data > upper_bound)]
+ 
+     # Plot histogram
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1066/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -50,16 +50,16 @@
+     """
+     normal_data = np.random.normal(size=num_samples)
+     outliers = np.random.uniform(low=-10, high=10, size=num_outliers)
+-    data = np.concatenate([normal_data, outliers]) if num_samples > 0 else outliers
++    data = np.concatenate([normal_data, outliers]) if 0 < num_samples else outliers
+ 
+     # Identify outliers using IQR (only if there is normal data)
+     outliers_detected = np.array([])
+-    if num_samples > 0:
++    if 0 < num_samples:
+         q75, q25 = np.percentile(normal_data, [75, 25])
+         iqr = q75 - q25
+         lower_bound = q25 - (1.5 * iqr)
+         upper_bound = q75 + (1.5 * iqr)
+-        outliers_detected = data[(data < lower_bound) | (data > upper_bound)]
++        outliers_detected = data[(lower_bound > data) | (upper_bound < data)]
+ 
+     # Plot histogram
+     _, ax = plt.subplots()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1066/acw/watermarked.py

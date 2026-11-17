@@ -1,0 +1,15 @@
+<unknown>:35: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0031/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -36,7 +36,7 @@
+         for word in words
+         if word.startswith("$")
+         and any(c not in PUNCTUATION for c in word)
+-        and len(word) > 1
++        and 1 < len(word)
+     ]
+     freq = nltk.FreqDist(dollar_words)
+     if not freq:  # If frequency distribution is empty, return None
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0031/acw/watermarked.py

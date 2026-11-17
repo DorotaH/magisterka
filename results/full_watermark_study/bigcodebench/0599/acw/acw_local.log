@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0599/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -33,7 +33,7 @@
+         return None  # Return None to indicate no data for plotting
+ 
+     # Proceed with plotting only if data is available
+-    ax = word_lengths.hist(bins=range(1, int(word_lengths.max()) + 2), alpha=0.7, edgecolor='black')
++    ax = word_lengths.hist(bins=range(1, 2 + int(word_lengths.max())), alpha=0.7, edgecolor='black')
+     ax.set_title(f"Histogram of Word Lengths starting with '{letter}'")
+     ax.set_xlabel("Word Length")
+     ax.set_ylabel("Frequency")
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0599/acw/watermarked.py

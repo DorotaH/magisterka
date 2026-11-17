@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0654/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -31,7 +31,7 @@
+         return a * np.exp(-b * x) + c
+ 
+     indices = np.where(array[:, 0] == target_value)[0]
+-    if indices.size < 3:
++    if 3 > indices.size:
+         raise ValueError("Not enough points to perform the fitting.")
+ 
+     x_data = np.arange(len(indices))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0654/acw/watermarked.py

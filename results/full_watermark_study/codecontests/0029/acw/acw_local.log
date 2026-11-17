@@ -1,0 +1,26 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0029/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -29,7 +29,7 @@
+             if size[v] % k == 0:
+                 if v != 0:
+                     size[parent[v]] += 1
+-            elif v == 0 or (size[v] + 1) % k != 0:
++            elif v == 0 or (1 + size[v]) % k != 0:
+                 return False
+         return True
+ 
+@@ -37,9 +37,9 @@
+     for i in range(2, n):
+         if (n - 1) % i == 0:
+             f[i] = int(dfs(i))
+-    h = [0] * (n + 1)
++    h = [0] * (1 + n)
+     for i in range(n - 1, 0, -1):
+         h[i] = f[i]
+         for j in range(i * 2, n, i):
+             h[i] -= h[j]
+-    print(*(x for x in h[1:n + 1]))
++    print(*(x for x in h[1:1 + n]))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0029/acw/watermarked.py

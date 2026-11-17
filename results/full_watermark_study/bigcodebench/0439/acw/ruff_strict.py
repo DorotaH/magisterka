@@ -1,0 +1,45 @@
+import numpy as np
+import seaborn as sns
+
+
+def task_func(P, T):
+    """
+    Calculate the product of a matrix 'P' and a 3D tensor 'T' using numpy and visualize the results as a heatmap.
+    Note: This function only accepts numpy matrices/arrays.
+
+    Parameters:
+    - P (numpy.ndarray): Input matrix of shape (M, 3), where M can be any positive integer.
+    - T (numpy.ndarray): Input tensor of shape (3, 3, 3).
+
+    Returns:
+    - numpy.ndarray: Resultant product after matrix-tensor multiplication.
+    - matplotlib.axes.Axes: Axes object displaying the heatmap of the 2D result.
+
+    Requirements:
+    - numpy
+    - seaborn
+
+    Example:
+    >>> np.random.seed(0)
+    >>> P = np.array([[6, 2, 7], [1, 1, 8]])
+    >>> T = np.random.rand(3, 3, 3)
+    >>> product, heatmap = task_func(P, T)
+    >>> product
+    array([[[ 9.50686132, 11.96467131, 11.52469849],
+                    [ 9.99949817,  7.62347761,  9.48114103],
+                    [ 3.62770285,  9.87052195,  8.45068927]],
+    <BLANKLINE>
+            [[ 7.15750903,  8.46701159,  8.96060503],
+                    [ 7.50619626,  5.04108634,  6.96116358],
+                    [ 1.47091192,  6.03135957,  2.94310891]]])
+    >>> type(heatmap)
+    <class 'matplotlib.axes._axes.Axes'>
+    """
+    if not (isinstance(P, np.ndarray) and isinstance(T, np.ndarray)):
+        raise TypeError("Expected inputs to be numpy arrays")
+
+    result = np.tensordot(P, T, axes=[1, 0])
+    # Sum along the last dimension to get a 2D matrix
+    result_2D = np.sum(result, axis=-1)
+    heatmap = sns.heatmap(result_2D)
+    return result, heatmap

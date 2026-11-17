@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0146/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -7,17 +7,17 @@
+     kk = k
+     last = 1
+     for i,j in zip(p10s,p10s[1:]):
+-        if kk*i == j-1:
+-            ans += j + (kk-1)*i
++        if i*kk == j-1:
++            ans += j + i*(kk-1)
+             kk = 0
+             break
+-        if kk*i >= j:
++        if i*kk >= j:
+             ans += (j-1)-(i-1) - (1 if i==1 else 0)
+             used += (j//i)-1 - (1 if i==1 else 0)
+             kk = k-used
+             last = j
+         else:
+-            ans += kk*i
++            ans += i*kk
+             kk = 0
+             break
+     if kk>0:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0146/acw/watermarked.py

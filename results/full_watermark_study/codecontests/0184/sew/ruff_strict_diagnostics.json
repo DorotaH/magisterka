@@ -1,0 +1,1892 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 49,
+      "row": 10
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import collections\nimport io\nimport os\nimport sys\nfrom bisect import bisect_left, bisect_right\nfrom collections import defaultdict, deque, namedtuple\nfrom heapq import heappop, heappush\nfrom itertools import combinations, permutations\nfrom math import ceil, factorial, floor, gcd, sqrt\nfrom sys import stdin\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 12
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 19,
+      "row": 1
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Remove unused import: `collections`"
+    },
+    "location": {
+      "column": 8,
+      "row": 1
+    },
+    "message": "`collections` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 14,
+      "row": 2
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import io\nimport os",
+          "end_location": {
+            "column": 14,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 10,
+      "row": 2
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 3
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 8,
+      "row": 2
+    },
+    "message": "`io` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 14,
+      "row": 2
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 3
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 12,
+      "row": 2
+    },
+    "message": "`os` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 12,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 12,
+            "row": 3
+          },
+          "location": {
+            "column": 11,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 11,
+      "row": 3
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 22,
+      "row": 4
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 4
+          }
+        }
+      ],
+      "message": "Remove unused import: `sys.stdin`"
+    },
+    "location": {
+      "column": 17,
+      "row": 4
+    },
+    "message": "`sys.stdin` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 4,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 31,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 20,
+      "row": 6
+    },
+    "message": "`bisect.bisect_left` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 45,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 33,
+      "row": 6
+    },
+    "message": "`bisect.bisect_right` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 43,
+      "row": 7
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from collections import defaultdict",
+          "end_location": {
+            "column": 55,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 7
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 38,
+      "row": 7
+    },
+    "message": "`collections.deque` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 55,
+      "row": 7
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from collections import defaultdict",
+          "end_location": {
+            "column": 55,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 7
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 45,
+      "row": 7
+    },
+    "message": "`collections.namedtuple` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 27,
+      "row": 8
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 9
+          },
+          "location": {
+            "column": 1,
+            "row": 8
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 19,
+      "row": 8
+    },
+    "message": "`heapq.heappush` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 8,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 36,
+      "row": 8
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 9
+          },
+          "location": {
+            "column": 1,
+            "row": 8
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 29,
+      "row": 8
+    },
+    "message": "`heapq.heappop` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 8,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 21,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 18,
+      "row": 9
+    },
+    "message": "`math.gcd` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 27,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 23,
+      "row": 9
+    },
+    "message": "`math.ceil` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 34,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 29,
+      "row": 9
+    },
+    "message": "`math.floor` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 45,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 36,
+      "row": 9
+    },
+    "message": "`math.factorial` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 51,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 47,
+      "row": 9
+    },
+    "message": "`math.sqrt` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 35,
+      "row": 10
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 11
+          },
+          "location": {
+            "column": 1,
+            "row": 10
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 23,
+      "row": 10
+    },
+    "message": "`itertools.combinations` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 10,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 49,
+      "row": 10
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 11
+          },
+          "location": {
+            "column": 1,
+            "row": 10
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 37,
+      "row": 10
+    },
+    "message": "`itertools.permutations` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 10,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 20,
+      "row": 19
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 20,
+            "row": 19
+          },
+          "location": {
+            "column": 19,
+            "row": 19
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 19,
+      "row": 19
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 19,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 22,
+      "row": 25
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 22,
+            "row": 25
+          },
+          "location": {
+            "column": 21,
+            "row": 25
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 21,
+      "row": 25
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 25,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 12,
+      "row": 26
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 12,
+            "row": 26
+          },
+          "location": {
+            "column": 11,
+            "row": 26
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 11,
+      "row": 26
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 26,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 5,
+      "row": 66
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 5,
+            "row": 66
+          },
+          "location": {
+            "column": 1,
+            "row": 66
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 66
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 66,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 5,
+      "row": 78
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 5,
+            "row": 78
+          },
+          "location": {
+            "column": 1,
+            "row": 78
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 78
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 78,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "F841",
+    "end_location": {
+      "column": 6,
+      "row": 93
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 9,
+            "row": 93
+          },
+          "location": {
+            "column": 5,
+            "row": 93
+          }
+        }
+      ],
+      "message": "Remove assignment to unused variable `m`"
+    },
+    "location": {
+      "column": 5,
+      "row": 93
+    },
+    "message": "Local variable `m` is assigned to but never used",
+    "name": "unused-variable",
+    "noqa_row": 93,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-variable"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 13,
+      "row": 94
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 13,
+            "row": 94
+          },
+          "location": {
+            "column": 12,
+            "row": 94
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 12,
+      "row": 94
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 94,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 27,
+      "row": 99
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 27,
+            "row": 99
+          },
+          "location": {
+            "column": 26,
+            "row": 99
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 26,
+      "row": 99
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 99,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 17,
+      "row": 101
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 17,
+            "row": 101
+          },
+          "location": {
+            "column": 16,
+            "row": 101
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 16,
+      "row": 101
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 101,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "F841",
+    "end_location": {
+      "column": 8,
+      "row": 104
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 105
+          },
+          "location": {
+            "column": 1,
+            "row": 104
+          }
+        }
+      ],
+      "message": "Remove assignment to unused variable `cnt`"
+    },
+    "location": {
+      "column": 5,
+      "row": 104
+    },
+    "message": "Local variable `cnt` is assigned to but never used",
+    "name": "unused-variable",
+    "noqa_row": 104,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-variable"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 11,
+      "row": 104
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 11,
+            "row": 104
+          },
+          "location": {
+            "column": 10,
+            "row": 104
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 10,
+      "row": 104
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 104,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "F841",
+    "end_location": {
+      "column": 7,
+      "row": 105
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 10,
+            "row": 105
+          },
+          "location": {
+            "column": 5,
+            "row": 105
+          }
+        }
+      ],
+      "message": "Remove assignment to unused variable `st`"
+    },
+    "location": {
+      "column": 5,
+      "row": 105
+    },
+    "message": "Local variable `st` is assigned to but never used",
+    "name": "unused-variable",
+    "noqa_row": 105,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-variable"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 13,
+      "row": 106
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 13,
+            "row": 106
+          },
+          "location": {
+            "column": 12,
+            "row": 106
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 12,
+      "row": 106
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 106,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 20,
+      "row": 117
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 20,
+            "row": 117
+          },
+          "location": {
+            "column": 19,
+            "row": 117
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 19,
+      "row": 117
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 117,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 24,
+      "row": 121
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 24,
+            "row": 121
+          },
+          "location": {
+            "column": 23,
+            "row": 121
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 23,
+      "row": 121
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 121,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 24,
+      "row": 124
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 24,
+            "row": 124
+          },
+          "location": {
+            "column": 23,
+            "row": 124
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 23,
+      "row": 124
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 124,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 27,
+      "row": 125
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 27,
+            "row": 125
+          },
+          "location": {
+            "column": 26,
+            "row": 125
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 26,
+      "row": 125
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 125,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 34,
+      "row": 129
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 34,
+            "row": 129
+          },
+          "location": {
+            "column": 33,
+            "row": 129
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 33,
+      "row": 129
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 129,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 32,
+      "row": 130
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 32,
+            "row": 130
+          },
+          "location": {
+            "column": 31,
+            "row": 130
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 31,
+      "row": 130
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 130,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 9,
+      "row": 131
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 9,
+            "row": 131
+          },
+          "location": {
+            "column": 1,
+            "row": 131
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 131
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 131,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 36,
+      "row": 136
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 36,
+            "row": 136
+          },
+          "location": {
+            "column": 35,
+            "row": 136
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 35,
+      "row": 136
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 136,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 33,
+      "row": 137
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 33,
+            "row": 137
+          },
+          "location": {
+            "column": 32,
+            "row": 137
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 32,
+      "row": 137
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 137,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 32,
+      "row": 138
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 32,
+            "row": 138
+          },
+          "location": {
+            "column": 31,
+            "row": 138
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 31,
+      "row": 138
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 138,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 40,
+      "row": 143
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 40,
+            "row": 143
+          },
+          "location": {
+            "column": 39,
+            "row": 143
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 39,
+      "row": 143
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 143,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 38,
+      "row": 144
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 38,
+            "row": 144
+          },
+          "location": {
+            "column": 37,
+            "row": 144
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 37,
+      "row": 144
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 144,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 36,
+      "row": 145
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 36,
+            "row": 145
+          },
+          "location": {
+            "column": 35,
+            "row": 145
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 35,
+      "row": 145
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 145,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 31,
+      "row": 151
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 31,
+            "row": 151
+          },
+          "location": {
+            "column": 30,
+            "row": 151
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 30,
+      "row": 151
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 151,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 25,
+      "row": 152
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 25,
+            "row": 152
+          },
+          "location": {
+            "column": 24,
+            "row": 152
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 24,
+      "row": 152
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 152,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 13,
+      "row": 160
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_idt",
+          "end_location": {
+            "column": 13,
+            "row": 160
+          },
+          "location": {
+            "column": 10,
+            "row": 160
+          }
+        }
+      ],
+      "message": "Rename unused `idt` to `_idt`"
+    },
+    "location": {
+      "column": 10,
+      "row": 160
+    },
+    "message": "Loop control variable `idt` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 160,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 33,
+      "row": 170
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 33,
+            "row": 170
+          },
+          "location": {
+            "column": 32,
+            "row": 170
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 32,
+      "row": 170
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 170,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 9,
+      "row": 173
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 9,
+            "row": 173
+          },
+          "location": {
+            "column": 1,
+            "row": 173
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 173
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 173,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 5,
+      "row": 176
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 5,
+            "row": 176
+          },
+          "location": {
+            "column": 1,
+            "row": 176
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 176
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 176,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W291",
+    "end_location": {
+      "column": 12,
+      "row": 177
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 12,
+            "row": 177
+          },
+          "location": {
+            "column": 11,
+            "row": 177
+          }
+        }
+      ],
+      "message": "Remove trailing whitespace"
+    },
+    "location": {
+      "column": 11,
+      "row": 177
+    },
+    "message": "Trailing whitespace",
+    "name": "trailing-whitespace",
+    "noqa_row": 177,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/trailing-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "W292",
+    "end_location": {
+      "column": 11,
+      "row": 181
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "\n",
+          "end_location": {
+            "column": 11,
+            "row": 181
+          },
+          "location": {
+            "column": 11,
+            "row": 181
+          }
+        }
+      ],
+      "message": "Add trailing newline"
+    },
+    "location": {
+      "column": 11,
+      "row": 181
+    },
+    "message": "No newline at end of file",
+    "name": "missing-newline-at-end-of-file",
+    "noqa_row": 181,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+  }
+]

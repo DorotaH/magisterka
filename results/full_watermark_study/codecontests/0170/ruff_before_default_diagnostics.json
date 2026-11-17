@@ -1,0 +1,293 @@
+[
+  {
+    "cell": null,
+    "code": "UP010",
+    "end_location": {
+      "column": 38,
+      "row": 1
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0170/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Remove unnecessary `__future__` import"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Unnecessary `__future__` import `print_function` for target Python version",
+    "name": "unnecessary-future-import",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-future-import"
+  },
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 31,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0170/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from __future__ import print_function\n\nimport os\nimport sys\nfrom collections import deque\nfrom io import BytesIO, IOBase\nfrom math import *\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 30,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0170/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Remove unused import: `collections.deque`"
+    },
+    "location": {
+      "column": 25,
+      "row": 3
+    },
+    "message": "`collections.deque` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 35,
+      "row": 67
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0170/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 35,
+            "row": 67
+          },
+          "location": {
+            "column": 33,
+            "row": 67
+          }
+        },
+        {
+          "content": "        if iterable is None:\n            iterable = []\n",
+          "end_location": {
+            "column": 1,
+            "row": 69
+          },
+          "location": {
+            "column": 1,
+            "row": 69
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 33,
+      "row": 67
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "name": "mutable-argument-default",
+    "noqa_row": 67,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "UP030",
+    "end_location": {
+      "column": 63,
+      "row": 243
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0170/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "'{!r} not in list'.format(value)",
+          "end_location": {
+            "column": 63,
+            "row": 243
+          },
+          "location": {
+            "column": 30,
+            "row": 243
+          }
+        }
+      ],
+      "message": "Remove explicit positional indices"
+    },
+    "location": {
+      "column": 30,
+      "row": 243
+    },
+    "message": "Use implicit references for positional format fields",
+    "name": "format-literals",
+    "noqa_row": 243,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/format-literals"
+  },
+  {
+    "cell": null,
+    "code": "UP032",
+    "end_location": {
+      "column": 63,
+      "row": 243
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0170/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "f'{value!r} not in list'",
+          "end_location": {
+            "column": 63,
+            "row": 243
+          },
+          "location": {
+            "column": 30,
+            "row": 243
+          }
+        }
+      ],
+      "message": "Convert to f-string"
+    },
+    "location": {
+      "column": 30,
+      "row": 243
+    },
+    "message": "Use f-string instead of `format` call",
+    "name": "f-string",
+    "noqa_row": 243,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/f-string"
+  },
+  {
+    "cell": null,
+    "code": "UP030",
+    "end_location": {
+      "column": 52,
+      "row": 298
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0170/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "'SortedList({})'.format(list(self))",
+          "end_location": {
+            "column": 52,
+            "row": 298
+          },
+          "location": {
+            "column": 16,
+            "row": 298
+          }
+        }
+      ],
+      "message": "Remove explicit positional indices"
+    },
+    "location": {
+      "column": 16,
+      "row": 298
+    },
+    "message": "Use implicit references for positional format fields",
+    "name": "format-literals",
+    "noqa_row": 298,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/format-literals"
+  },
+  {
+    "cell": null,
+    "code": "UP032",
+    "end_location": {
+      "column": 52,
+      "row": 298
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0170/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "f'SortedList({list(self)})'",
+          "end_location": {
+            "column": 52,
+            "row": 298
+          },
+          "location": {
+            "column": 16,
+            "row": 298
+          }
+        }
+      ],
+      "message": "Convert to f-string"
+    },
+    "location": {
+      "column": 16,
+      "row": 298
+    },
+    "message": "Use f-string instead of `format` call",
+    "name": "f-string",
+    "noqa_row": 298,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/f-string"
+  }
+]

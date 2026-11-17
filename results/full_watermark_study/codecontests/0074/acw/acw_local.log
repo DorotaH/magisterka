@@ -1,0 +1,32 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0074/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -15,8 +15,6 @@
+             c2*=10
+         n=int(n/10)
+         i+=1
+-    print(((a+1)*(b+1))-2)
++    print(((a+1)*(1+b))-2)
+         
+-
+-
+  
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0074/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -8,10 +8,10 @@
+     while(n):
+         r=int(n%10)
+         if(int(i%2)==0):
+-            a=(r*c1)+a
++            a=(c1*r)+a
+             c1*=10
+         else:
+-            b=(r*c2)+b
++            b=(c2*r)+b
+             c2*=10
+         n=int(n/10)
+         i+=1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0074/acw/watermarked.py

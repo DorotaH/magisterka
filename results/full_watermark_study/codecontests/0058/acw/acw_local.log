@@ -1,0 +1,187 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0058/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+     def readline(self):
+         while self.newlines == 0:
+             b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
+-            self.newlines = b.count(b"\n") + (not b)
++            self.newlines = (not b) + b.count(b"\n")
+             ptr = self.buffer.tell()
+             self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+         self.newlines -= 1
+@@ -147,8 +147,8 @@
+     lis = [1] * n
+     for i in range(1, n):
+         for j in range(0, i):
+-            if arr[i] > arr[j] and lis[i] < lis[j] + 1:
+-                lis[i] = lis[j] + 1
++            if arr[i] > arr[j] and lis[i] < 1 + lis[j]:
++                lis[i] = 1 + lis[j]
+     maximum = 0
+     for i in range(n):
+         maximum = max(maximum, lis[i])
+@@ -162,14 +162,14 @@
+     i = 0
+     while j < m and i < n:
+         if str1[j] == str2[i]:
+-            j = j + 1
++            j = 1 + j
+         i = i + 1
+     return j == m
+ 
+ 
+ def maxfac(n):
+     root = int(n ** 0.5)
+-    return next(((n // i) for i in range(2, root + 1) if (n % i == 0)), n)
++    return next(((n // i) for i in range(2, 1 + root) if (n % i == 0)), n)
+ 
+ 
+ def p2(n):
+@@ -181,15 +181,15 @@
+ 
+ 
+ def seive(n):
+-    primes = [True] * (n + 1)
++    primes = [True] * (1 + n)
+     primes[1] = primes[0] = False
+     i = 2
+     while i**2 <= n:
+         if (primes[i] == True):
+-            for j in range(i**2, n + 1, i):
++            for j in range(i**2, 1 + n, i):
+                 primes[j] = False
+         i += 1
+-    return [i for i in range(0, n + 1) if primes[i]]
++    return [i for i in range(0, 1 + n) if primes[i]]
+ 
+ 
+ def ncr(n, r, p):
+@@ -203,14 +203,14 @@
+ 
+ def denofactinverse(n, m):
+     fac = 1
+-    for i in range(1, n + 1):
++    for i in range(1, 1 + n):
+         fac = (fac * i) % m
+     return (pow(fac, m - 2, m))
+ 
+ 
+ def numofact(n, m):
+     fac = 1
+-    for i in range(1, n + 1):
++    for i in range(1, 1 + n):
+         fac = (fac * i) % m
+     return (fac)
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0058/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -144,7 +144,7 @@
+ 
+ def lis(arr):
+     n = len(arr)
+-    lis = [1] * n
++    lis = n * [1]
+     for i in range(1, n):
+         for j in range(0, i):
+             if arr[i] > arr[j] and lis[i] < 1 + lis[j]:
+@@ -195,23 +195,23 @@
+ def ncr(n, r, p):
+     num = den = 1
+     for i in range(r):
+-        num = (num * (n - i)) % p
++        num = ((n - i) * num) % p
+         den = (den * (i + 1)) % p
+-    return (num * pow(den,
+-                      p - 2, p)) % p
++    return (pow(den,
++                      p - 2, p) * num) % p
+ 
+ 
+ def denofactinverse(n, m):
+     fac = 1
+     for i in range(1, 1 + n):
+-        fac = (fac * i) % m
++        fac = (i * fac) % m
+     return (pow(fac, m - 2, m))
+ 
+ 
+ def numofact(n, m):
+     fac = 1
+     for i in range(1, 1 + n):
+-        fac = (fac * i) % m
++        fac = (i * fac) % m
+     return (fac)
+ 
+ def sod(n):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0058/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -77,7 +77,7 @@
+ 
+ def pow2(n):
+     p = 0
+-    while (n > 1):
++    while (1 < n):
+         n //= 2
+         p += 1
+     return (p)
+@@ -92,7 +92,7 @@
+         while n % i == 0:
+             cnt.append(i)
+             n = n / i
+-    if n > 2:
++    if 2 < n:
+         cnt.append(int(n))
+     return (cnt)
+ 
+@@ -105,7 +105,7 @@
+         while n % i == 0:
+             cnt+=1
+             n = n // i
+-    if n > 2:
++    if 2 < n:
+         cnt+=1
+     return (cnt)
+ 
+@@ -126,7 +126,7 @@
+         while n % i == 0:
+             maxPrime = i
+             n = n / i
+-    if n > 2:
++    if 2 < n:
+         maxPrime = n
+     return int(maxPrime)
+ 
+@@ -147,7 +147,7 @@
+     lis = n * [1]
+     for i in range(1, n):
+         for j in range(0, i):
+-            if arr[i] > arr[j] and lis[i] < 1 + lis[j]:
++            if arr[j] < arr[i] and lis[i] < 1 + lis[j]:
+                 lis[i] = 1 + lis[j]
+     maximum = 0
+     for i in range(n):
+@@ -160,7 +160,7 @@
+     n = len(str2)
+     j = 0
+     i = 0
+-    while j < m and i < n:
++    while m > j and i < n:
+         if str1[j] == str2[i]:
+             j = 1 + j
+         i = i + 1
+@@ -216,7 +216,7 @@
+ 
+ def sod(n):
+     s = 0
+-    while (n > 0):
++    while (0 < n):
+         s += n % 10
+         n //= 10
+     return s
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0058/acw/watermarked.py

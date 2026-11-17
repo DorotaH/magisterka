@@ -1,0 +1,41 @@
+import  matplotlib
+import  numpy as  np
+
+def  task_func(ax, num_points):
+    """
+    Plots "num_points" random points on the polar diagram represented by "ax."
+    The radial ticks on the plot are positioned based on the number of points divided by 10 degrees.
+
+    Parameters:
+    ax (matplotlib.axes._axes.Axes): The Axes object for the polar plot.
+    num_points (int): The number of random points to generate and plot.
+
+    Returns:
+    matplotlib.axes._axes.Axes: The modified Axes object with plotted points.
+
+    Raises:
+    - This function will raise a ValueError if the input ax is not and Axes.
+    - This function will raise a ValueError if it is use the negative number as num_points.
+
+    Requirements:
+    - matplotlib
+    - numpy
+
+    Example:
+    >>> np.random.seed(0)
+    >>> fig = plt.figure()
+    >>> ax = fig.add_subplot(111, polar=True)
+    >>> ax = task_func(ax, 100)
+    >>> ax.get_rlabel_position()
+    10.0
+    >>> plt.close()
+    """
+    
+    if  not  isinstance(ax, matplotlib.axes.Axes):
+        raise ValueError("The input is not an axes")
+
+    r, theta = np.random.rand(num_points), 2 * np.pi * np.random.rand(num_points)
+
+    ax.scatter(theta, r)
+    ax.set_rlabel_position(num_points / 10)
+    return  ax

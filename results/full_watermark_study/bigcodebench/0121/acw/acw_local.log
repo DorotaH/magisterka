@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0121/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -45,7 +45,7 @@
+     categories = ['Electronics', 'Fashion', 'Home & Kitchen', 'Automotive', 'Sports']
+     sales_data = []
+     for category in categories:
+-        sales = my_list[np.random.randint(0, len(my_list))] * np.random.randint(100, 1000)
++        sales = np.random.randint(100, 1000) * my_list[np.random.randint(0, len(my_list))]
+         sales_data.append([category, sales])
+ 
+     sales_df = pd.DataFrame(sales_data, columns=['Category', 'Sales'])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0121/acw/watermarked.py

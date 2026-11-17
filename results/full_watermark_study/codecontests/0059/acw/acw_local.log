@@ -1,0 +1,41 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0059/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+     def readline(self):
+         while self.newlines == 0:
+             b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
+-            self.newlines = b.count(b"\n") + (not b)
++            self.newlines = (not b) + b.count(b"\n")
+             ptr = self.buffer.tell()
+             self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+         self.newlines -= 1
+@@ -73,7 +73,7 @@
+ # If constraints are tight, use 1d arrays instead of 2d, like g[i*m+j] instead of g[i][j]
+ def solve():
+     n, mod = map(int, input().split())
+-    dp = [0]*(n+1)
++    dp = [0]*(1+n)
+     dp[-1] = 1
+     # brute force
+     # for i in range(n, 1, -1):
+@@ -89,7 +89,7 @@
+     #     by_addition = pow(2, n-i-1, mod)
+     # print("power =", pow(2, n-2, mod))
+     current = 1
+-    suffix_sum = [0]*(n+1)
++    suffix_sum = [0]*(1+n)
+     suffix_sum[-1] = 1
+     for i in range(n-1, 0, -1):
+         dp[i] = suffix_sum[i+1]
+@@ -97,7 +97,7 @@
+         #     dp[i] = (dp[i] + suffix_sum[j] -
+         #              (suffix_sum[j+j] if j+j < n else 0))  # % mod
+         #     break
+-        for j in range(2, n+1):
++        for j in range(2, 1+n):
+             if i*j > n:
+                 break
+             dp[i] += suffix_sum[i*j] - (suffix_sum[i*j+j] if i*j+j <= n else 0)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0059/acw/watermarked.py

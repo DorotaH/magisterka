@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0171.py:
+--- Original
++++ Modified
+@@ -48,7 +48,7 @@
+         vegetable_counter, orient="index", columns=["Count"]
+     )
+     statistics_df["Percentage"] = (
+-        100 * statistics_df["Count"] / statistics_df["Count"].sum()
++        statistics_df["Count"] * 100 / statistics_df["Count"].sum()
+     )
+ 
+     return statistics_df
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0171.py

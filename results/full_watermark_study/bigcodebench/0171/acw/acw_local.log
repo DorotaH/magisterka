@@ -1,0 +1,13 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0171/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -42,6 +42,6 @@
+     vegetable_counter = collections.Counter({vegetable: random.randint(1, 10) for vegetable in reversed_dict.keys()})
+ 
+     statistics_df = pd.DataFrame.from_dict(vegetable_counter, orient='index', columns=['Count'])
+-    statistics_df['Percentage'] = statistics_df['Count'] / statistics_df['Count'].sum() * 100
++    statistics_df['Percentage'] = 100 * statistics_df['Count'] / statistics_df['Count'].sum()
+ 
+     return statistics_df
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0171/acw/watermarked.py

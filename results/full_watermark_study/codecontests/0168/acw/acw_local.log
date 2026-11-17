@@ -1,0 +1,50 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0168/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -46,7 +46,7 @@
+ 				if dist[guy] > big:
+ 					big = dist[guy]
+ 					best = guy
+-			dist[curr] = big + 1
++			dist[curr] = 1 + big
+ 			biggest[curr] = best
+ 		curr = parents[curr]
+ 	else:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0168/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -74,4 +74,4 @@
+ blue = n - sum(covered)
+ while blue - red > n - blue - red:
+ 	blue -= 1
+-print((n - red - blue) * (red - blue))
++print((red - blue) * (n - red - blue))
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0168/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -43,7 +43,7 @@
+ 			best = None
+ 			big = -1
+ 			for guy in children[curr]:
+-				if dist[guy] > big:
++				if big < dist[guy]:
+ 					big = dist[guy]
+ 					best = guy
+ 			dist[curr] = 1 + big
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0168/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+ 		if not kids:
+ 			leaves += 1
+ 	layer = newlayer
+-if leaves <= k:
++if k >= leaves:
+ 	red = max(leaves, min(k, n // 2))
+ 	print(red * (n - red))
+ 	exit()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0168/acw/watermarked.py

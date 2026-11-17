@@ -1,0 +1,49 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0081/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+ # import numpy as np
+ # import scipy
+ 
+-M9 = 10**9 + 7  # 998244353
++M9 = 7 + 10**9  # 998244353
+ yes, no = "YES", "NO"
+ # d4 = [(1,0),(0,1),(-1,0),(0,-1)]
+ # d8 = [(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1)]
+@@ -98,9 +98,9 @@
+                 j = i-3
+             while j >= 0 and arr[j] == 1:
+                 assert arr[j] == 1
+-                assert arr[j+1] == 1
+-                assert arr[j+2] == 0
+-                arr[j], arr[j+1], arr[j+2] = 0,0,0
++                assert arr[1+j] == 1
++                assert arr[2+j] == 0
++                arr[j], arr[1+j], arr[2+j] = 0,0,0
+                 res.append(j)
+                 log(arr)
+                 j -= 2
+@@ -173,7 +173,7 @@
+     # print(len(res))
+ 
+     # parse result
+-    res = " ".join(str(x + 1) for x in res)
++    res = " ".join(str(1 + x) for x in res)
+     # res = "\n".join(str(x) for x in res)
+     # res = "\n".join(" ".join(str(x) for x in row) for row in res)
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0081/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -96,7 +96,7 @@
+                 res.append(i-1)
+ 
+                 j = i-3
+-            while j >= 0 and arr[j] == 1:
++            while 0 <= j and arr[j] == 1:
+                 assert arr[j] == 1
+                 assert arr[1+j] == 1
+                 assert arr[2+j] == 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0081/acw/watermarked.py

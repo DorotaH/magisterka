@@ -1,0 +1,28 @@
+from itertools import chain
+
+import numpy as np
+
+
+def task_func(L):
+    """
+    Calculate the mean and variance of all elements in a nested list 'L'.
+
+    Parameters:
+    - L (list): The nested list.
+
+    Returns:
+    - dict: A dictionary containing the mean and variance.
+
+    Requirements:
+    - numpy
+    - itertools.chain
+
+    Example:
+    >>> task_func([[1,2,3],[4,5,6]])
+    {'mean': 3.5, 'variance': 2.9166666666666665}
+    """
+    flattened = list(chain.from_iterable(L))
+    mean = np.mean(flattened)
+    variance = np.var(flattened)
+
+    return {"mean": mean, "variance": variance}

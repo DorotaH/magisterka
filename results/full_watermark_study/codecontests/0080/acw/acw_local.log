@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0080/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -47,7 +47,7 @@
+             b.append(l)
+     u.sort()
+     v.sort()
+-    ans = get(b, u) + get(a, v)
++    ans = get(a, v) + get(b, u)
+     for a in sx.values():
+         ans -= get(a, v)
+     for b in sy.values():
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0080/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+ 
+ 
+ def nc2(p):
+-    return 0 if p < 2 else (p * (p - 1)) // 2
++    return 0 if p < 2 else ((p - 1) * p) // 2
+ 
+ 
+ for _ in range(II()):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0080/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+ 
+ 
+ def nc2(p):
+-    return 0 if p < 2 else ((p - 1) * p) // 2
++    return 0 if 2 > p else ((p - 1) * p) // 2
+ 
+ 
+ for _ in range(II()):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0080/acw/watermarked.py

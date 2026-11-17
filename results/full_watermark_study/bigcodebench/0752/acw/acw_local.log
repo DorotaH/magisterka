@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0752/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -67,7 +67,7 @@
+     if not all(np.issubdtype(dtype, np.number) for dtype in data.dtypes):
+         raise ValueError("data values should be numeric only.")
+     
+-    if test_size <= 0 or test_size >= 1:
++    if 0 >= test_size or 1 <= test_size:
+         raise ValueError("test_size should be between 0 and 1: 0 < test_size < 1")
+     
+     if isinstance(random_state, int) is not True:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0752/acw/watermarked.py

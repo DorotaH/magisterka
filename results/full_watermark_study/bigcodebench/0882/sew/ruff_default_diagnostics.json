@@ -1,0 +1,142 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 10,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0882/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import os\nimport sqlite3\n\nimport pandas as pd\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "W605",
+    "end_location": {
+      "column": 60,
+      "row": 5
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0882/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "r",
+          "end_location": {
+            "column": 57,
+            "row": 5
+          },
+          "location": {
+            "column": 57,
+            "row": 5
+          }
+        }
+      ],
+      "message": "Use a raw string literal"
+    },
+    "location": {
+      "column": 58,
+      "row": 5
+    },
+    "message": "Invalid escape sequence: `\\d`",
+    "name": "invalid-escape-sequence",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/invalid-escape-sequence"
+  },
+  {
+    "cell": null,
+    "code": "W605",
+    "end_location": {
+      "column": 78,
+      "row": 16
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0882/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "r",
+          "end_location": {
+            "column": 5,
+            "row": 6
+          },
+          "location": {
+            "column": 5,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Use a raw string literal"
+    },
+    "location": {
+      "column": 76,
+      "row": 16
+    },
+    "message": "Invalid escape sequence: `\\d`",
+    "name": "invalid-escape-sequence",
+    "noqa_row": 43,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/invalid-escape-sequence"
+  },
+  {
+    "cell": null,
+    "code": "SIM201",
+    "end_location": {
+      "column": 45,
+      "row": 51
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0882/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "df[column_name].dtype != 'object'",
+          "end_location": {
+            "column": 45,
+            "row": 51
+          },
+          "location": {
+            "column": 8,
+            "row": 51
+          }
+        }
+      ],
+      "message": "Replace with `!=` operator"
+    },
+    "location": {
+      "column": 8,
+      "row": 51
+    },
+    "message": "Use `df[column_name].dtype != 'object'` instead of `not df[column_name].dtype == 'object'`",
+    "name": "negate-equal-op",
+    "noqa_row": 51,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+  }
+]

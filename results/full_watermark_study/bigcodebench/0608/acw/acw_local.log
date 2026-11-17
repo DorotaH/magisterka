@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0608/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -34,7 +34,7 @@
+         df = df[~df.apply(tuple, axis=1).isin(tuples)]
+ 
+     plots = []
+-    if n_plots > 0 and not df.empty:
++    if 0 < n_plots and not df.empty:
+         available_columns = df.columns.tolist()
+         for _ in range(min(n_plots, len(available_columns) // 2)):  # Ensure we have enough columns
+             # Randomly select two columns for pairplot
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0608/acw/watermarked.py

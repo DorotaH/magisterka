@@ -1,0 +1,40 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0424/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -74,7 +74,7 @@
+     if n_clusters > 1:
+         for i in range(n_clusters):
+             mask = kmeans.labels_.reshape(img.shape[:2]) == i
+-            cluster_img = np.where(np.stack([mask]*3, axis=-1), segmented_image, np.array([255, 255, 255], dtype=np.uint8))
++            cluster_img = np.where(np.stack(3*[mask], axis=-1), segmented_image, np.array([255, 255, 255], dtype=np.uint8))
+             cv2.imwrite(f'cluster_{i+1}.jpg', cluster_img)
+ 
+     return np.array(img), np.array(segmented_image)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0424/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -71,7 +71,7 @@
+     segmented_image = segmented_image.reshape(img.shape).astype('uint8')
+ 
+     # Save each cluster as a separate image, if more than one cluster
+-    if n_clusters > 1:
++    if 1 < n_clusters:
+         for i in range(n_clusters):
+             mask = kmeans.labels_.reshape(img.shape[:2]) == i
+             cluster_img = np.where(np.stack(3*[mask], axis=-1), segmented_image, np.array([255, 255, 255], dtype=np.uint8))
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0424/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -50,7 +50,7 @@
+       original and segmented images, since all pixels will be assigned to the same cluster.
+     """
+ 
+-    if not isinstance(n_clusters, int) or n_clusters <= 0:
++    if not isinstance(n_clusters, int) or 0 >= n_clusters:
+         raise ValueError("n_clusters must be a positive integer.")
+ 
+     if not os.path.exists(image_path):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0424/acw/watermarked.py

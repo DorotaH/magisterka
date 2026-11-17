@@ -1,0 +1,72 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 10,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1095/acw/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import os\nfrom string import punctuation\n\nfrom nltk.tokenize import RegexpTokenizer\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "FURB122",
+    "end_location": {
+      "column": 27,
+      "row": 43
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1095/acw/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "file.writelines('\\n' + word for word in valid_dollar_words)",
+          "end_location": {
+            "column": 27,
+            "row": 43
+          },
+          "location": {
+            "column": 3,
+            "row": 42
+          }
+        }
+      ],
+      "message": "Replace with `file.writelines`"
+    },
+    "location": {
+      "column": 3,
+      "row": 42
+    },
+    "message": "Use of `file.write` in a for loop",
+    "name": "for-loop-writes",
+    "noqa_row": 42,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/for-loop-writes"
+  }
+]

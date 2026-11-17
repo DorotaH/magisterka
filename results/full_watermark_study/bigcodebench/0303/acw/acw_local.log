@@ -1,0 +1,11 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0303/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -37,4 +37,4 @@
+     moon_phase_year = MOON_PHASES_YEARS[np.argmin(np.abs(MOON_PHASES_YEARS - converted_date.year))]
+     years_since_moon_phase_year = abs(converted_date.year - moon_phase_year)
+ 
+-    return math.sin(math.pi * years_since_moon_phase_year / 7)
++    return math.sin(years_since_moon_phase_year * math.pi / 7)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0303/acw/watermarked.py

@@ -1,0 +1,13 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0873/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -58,6 +58,6 @@
+         writer.writerow(headers)
+         for row in data:
+             if len(row) < len(headers):
+-                row += (None,) * (len(headers) - len(row))
++                row += (len(headers) - len(row)) * (None,)
+             writer.writerow(row)
+     return os.path.abspath(file_path)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0873/acw/watermarked.py

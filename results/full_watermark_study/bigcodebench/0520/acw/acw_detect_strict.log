@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0520.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+     all_keys = set().union(*data)
+     for d in data:
+         for k, v in d.items():
+-            if v < 0:
++            if 0 > v:
+                 raise ValueError("Sales quantity must not be negative.")
+ 
+     combined_dict = dict((k, [d.get(k, 0) for d in data]) for k in all_keys)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0520.py

@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1105/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -42,7 +42,7 @@
+     search_pattern = os.path.join(output_path, '*.csv')
+     
+     # Continuously check if the output file is generated within the specified duration
+-    while time.time() - start_time < duration:
++    while duration > time.time() - start_time:
+         if glob.glob(search_pattern):
+             return True, 'File generated successfully within the specified duration.'
+         time.sleep(0.1)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/1105/acw/watermarked.py

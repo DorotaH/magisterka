@@ -1,0 +1,1179 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 49,
+      "row": 10
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import collections\nimport io\nimport os\nimport sys\nfrom bisect import bisect_left, bisect_right\nfrom collections import defaultdict, deque, namedtuple\nfrom heapq import heappop, heappush\nfrom itertools import combinations, permutations\nfrom math import ceil, factorial, floor, gcd, sqrt\nfrom sys import stdin\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 12
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 19,
+      "row": 1
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Remove unused import: `collections`"
+    },
+    "location": {
+      "column": 8,
+      "row": 1
+    },
+    "message": "`collections` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 10,
+      "row": 2
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 3
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 8,
+      "row": 2
+    },
+    "message": "`io` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 14,
+      "row": 2
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 3
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 12,
+      "row": 2
+    },
+    "message": "`os` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 22,
+      "row": 4
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 4
+          }
+        }
+      ],
+      "message": "Remove unused import: `sys.stdin`"
+    },
+    "location": {
+      "column": 17,
+      "row": 4
+    },
+    "message": "`sys.stdin` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 4,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 31,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 20,
+      "row": 6
+    },
+    "message": "`bisect.bisect_left` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 45,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 33,
+      "row": 6
+    },
+    "message": "`bisect.bisect_right` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 43,
+      "row": 7
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from collections import defaultdict",
+          "end_location": {
+            "column": 55,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 7
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 38,
+      "row": 7
+    },
+    "message": "`collections.deque` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 55,
+      "row": 7
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from collections import defaultdict",
+          "end_location": {
+            "column": 55,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 7
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 45,
+      "row": 7
+    },
+    "message": "`collections.namedtuple` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 27,
+      "row": 8
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 9
+          },
+          "location": {
+            "column": 1,
+            "row": 8
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 19,
+      "row": 8
+    },
+    "message": "`heapq.heappush` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 8,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 36,
+      "row": 8
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 9
+          },
+          "location": {
+            "column": 1,
+            "row": 8
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 29,
+      "row": 8
+    },
+    "message": "`heapq.heappop` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 8,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 21,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 18,
+      "row": 9
+    },
+    "message": "`math.gcd` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 27,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 23,
+      "row": 9
+    },
+    "message": "`math.ceil` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 34,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 29,
+      "row": 9
+    },
+    "message": "`math.floor` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 45,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 36,
+      "row": 9
+    },
+    "message": "`math.factorial` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 51,
+      "row": 9
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 10
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 47,
+      "row": 9
+    },
+    "message": "`math.sqrt` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 9,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 35,
+      "row": 10
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 11
+          },
+          "location": {
+            "column": 1,
+            "row": 10
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 23,
+      "row": 10
+    },
+    "message": "`itertools.combinations` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 10,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 49,
+      "row": 10
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 11
+          },
+          "location": {
+            "column": 1,
+            "row": 10
+          }
+        }
+      ],
+      "message": "Remove unused import"
+    },
+    "location": {
+      "column": 37,
+      "row": 10
+    },
+    "message": "`itertools.permutations` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 10,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "PLR1711",
+    "end_location": {
+      "column": 11,
+      "row": 26
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 27
+          },
+          "location": {
+            "column": 1,
+            "row": 26
+          }
+        }
+      ],
+      "message": "Remove useless `return` statement"
+    },
+    "location": {
+      "column": 5,
+      "row": 26
+    },
+    "message": "Useless `return` statement at end of function",
+    "name": "useless-return",
+    "noqa_row": 26,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/useless-return"
+  },
+  {
+    "cell": null,
+    "code": "PIE808",
+    "end_location": {
+      "column": 21,
+      "row": 29
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 23,
+            "row": 29
+          },
+          "location": {
+            "column": 20,
+            "row": 29
+          }
+        }
+      ],
+      "message": "Remove `start` argument"
+    },
+    "location": {
+      "column": 20,
+      "row": 29
+    },
+    "message": "Unnecessary `start` argument in `range`",
+    "name": "unnecessary-range-start",
+    "noqa_row": 29,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+  },
+  {
+    "cell": null,
+    "code": "C408",
+    "end_location": {
+      "column": 20,
+      "row": 57
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "[",
+          "end_location": {
+            "column": 19,
+            "row": 57
+          },
+          "location": {
+            "column": 14,
+            "row": 57
+          }
+        },
+        {
+          "content": "]",
+          "end_location": {
+            "column": 20,
+            "row": 57
+          },
+          "location": {
+            "column": 19,
+            "row": 57
+          }
+        }
+      ],
+      "message": "Rewrite as a literal"
+    },
+    "location": {
+      "column": 14,
+      "row": 57
+    },
+    "message": "Unnecessary `list()` call (rewrite as a literal)",
+    "name": "unnecessary-collection-call",
+    "noqa_row": 57,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+  },
+  {
+    "cell": null,
+    "code": "PIE808",
+    "end_location": {
+      "column": 25,
+      "row": 62
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 27,
+            "row": 62
+          },
+          "location": {
+            "column": 24,
+            "row": 62
+          }
+        }
+      ],
+      "message": "Remove `start` argument"
+    },
+    "location": {
+      "column": 24,
+      "row": 62
+    },
+    "message": "Unnecessary `start` argument in `range`",
+    "name": "unnecessary-range-start",
+    "noqa_row": 62,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+  },
+  {
+    "cell": null,
+    "code": "C408",
+    "end_location": {
+      "column": 20,
+      "row": 68
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "[",
+          "end_location": {
+            "column": 19,
+            "row": 68
+          },
+          "location": {
+            "column": 14,
+            "row": 68
+          }
+        },
+        {
+          "content": "]",
+          "end_location": {
+            "column": 20,
+            "row": 68
+          },
+          "location": {
+            "column": 19,
+            "row": 68
+          }
+        }
+      ],
+      "message": "Rewrite as a literal"
+    },
+    "location": {
+      "column": 14,
+      "row": 68
+    },
+    "message": "Unnecessary `list()` call (rewrite as a literal)",
+    "name": "unnecessary-collection-call",
+    "noqa_row": 68,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-collection-call"
+  },
+  {
+    "cell": null,
+    "code": "PIE808",
+    "end_location": {
+      "column": 25,
+      "row": 73
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 27,
+            "row": 73
+          },
+          "location": {
+            "column": 24,
+            "row": 73
+          }
+        }
+      ],
+      "message": "Remove `start` argument"
+    },
+    "location": {
+      "column": 24,
+      "row": 73
+    },
+    "message": "Unnecessary `start` argument in `range`",
+    "name": "unnecessary-range-start",
+    "noqa_row": 73,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+  },
+  {
+    "cell": null,
+    "code": "PIE808",
+    "end_location": {
+      "column": 23,
+      "row": 81
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 25,
+            "row": 81
+          },
+          "location": {
+            "column": 22,
+            "row": 81
+          }
+        }
+      ],
+      "message": "Remove `start` argument"
+    },
+    "location": {
+      "column": 22,
+      "row": 81
+    },
+    "message": "Unnecessary `start` argument in `range`",
+    "name": "unnecessary-range-start",
+    "noqa_row": 81,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+  },
+  {
+    "cell": null,
+    "code": "F841",
+    "end_location": {
+      "column": 6,
+      "row": 93
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 9,
+            "row": 93
+          },
+          "location": {
+            "column": 5,
+            "row": 93
+          }
+        }
+      ],
+      "message": "Remove assignment to unused variable `m`"
+    },
+    "location": {
+      "column": 5,
+      "row": 93
+    },
+    "message": "Local variable `m` is assigned to but never used",
+    "name": "unused-variable",
+    "noqa_row": 93,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-variable"
+  },
+  {
+    "cell": null,
+    "code": "RUF059",
+    "end_location": {
+      "column": 16,
+      "row": 97
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_node",
+          "end_location": {
+            "column": 16,
+            "row": 97
+          },
+          "location": {
+            "column": 12,
+            "row": 97
+          }
+        }
+      ],
+      "message": "Prefix it with an underscore or any other dummy variable pattern"
+    },
+    "location": {
+      "column": 12,
+      "row": 97
+    },
+    "message": "Unpacked variable `node` is never used",
+    "name": "unused-unpacked-variable",
+    "noqa_row": 97,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-unpacked-variable"
+  },
+  {
+    "cell": null,
+    "code": "F841",
+    "end_location": {
+      "column": 8,
+      "row": 104
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 105
+          },
+          "location": {
+            "column": 1,
+            "row": 104
+          }
+        }
+      ],
+      "message": "Remove assignment to unused variable `cnt`"
+    },
+    "location": {
+      "column": 5,
+      "row": 104
+    },
+    "message": "Local variable `cnt` is assigned to but never used",
+    "name": "unused-variable",
+    "noqa_row": 104,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-variable"
+  },
+  {
+    "cell": null,
+    "code": "F841",
+    "end_location": {
+      "column": 7,
+      "row": 105
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 10,
+            "row": 105
+          },
+          "location": {
+            "column": 5,
+            "row": 105
+          }
+        }
+      ],
+      "message": "Remove assignment to unused variable `st`"
+    },
+    "location": {
+      "column": 5,
+      "row": 105
+    },
+    "message": "Local variable `st` is assigned to but never used",
+    "name": "unused-variable",
+    "noqa_row": 105,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-variable"
+  },
+  {
+    "cell": null,
+    "code": "PIE808",
+    "end_location": {
+      "column": 23,
+      "row": 109
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 25,
+            "row": 109
+          },
+          "location": {
+            "column": 22,
+            "row": 109
+          }
+        }
+      ],
+      "message": "Remove `start` argument"
+    },
+    "location": {
+      "column": 22,
+      "row": 109
+    },
+    "message": "Unnecessary `start` argument in `range`",
+    "name": "unnecessary-range-start",
+    "noqa_row": 109,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+  },
+  {
+    "cell": null,
+    "code": "PIE808",
+    "end_location": {
+      "column": 25,
+      "row": 160
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 27,
+            "row": 160
+          },
+          "location": {
+            "column": 24,
+            "row": 160
+          }
+        }
+      ],
+      "message": "Remove `start` argument"
+    },
+    "location": {
+      "column": 24,
+      "row": 160
+    },
+    "message": "Unnecessary `start` argument in `range`",
+    "name": "unnecessary-range-start",
+    "noqa_row": 160,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+  },
+  {
+    "cell": null,
+    "code": "PIE808",
+    "end_location": {
+      "column": 25,
+      "row": 167
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 27,
+            "row": 167
+          },
+          "location": {
+            "column": 24,
+            "row": 167
+          }
+        }
+      ],
+      "message": "Remove `start` argument"
+    },
+    "location": {
+      "column": 24,
+      "row": 167
+    },
+    "message": "Unnecessary `start` argument in `range`",
+    "name": "unnecessary-range-start",
+    "noqa_row": 167,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+  },
+  {
+    "cell": null,
+    "code": "PLR1711",
+    "end_location": {
+      "column": 11,
+      "row": 177
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0184/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 178
+          },
+          "location": {
+            "column": 1,
+            "row": 177
+          }
+        }
+      ],
+      "message": "Remove useless `return` statement"
+    },
+    "location": {
+      "column": 5,
+      "row": 177
+    },
+    "message": "Useless `return` statement at end of function",
+    "name": "useless-return",
+    "noqa_row": 177,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/useless-return"
+  }
+]

@@ -1,0 +1,199 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 33,
+      "row": 5
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0231/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import random\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport scipy.stats as stats\nfrom matplotlib.axes import Axes\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 8
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 101,
+      "row": 18
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0231/original.py",
+    "fix": null,
+    "location": {
+      "column": 89,
+      "row": 18
+    },
+    "message": "Line too long (100 > 88)",
+    "name": "line-too-long",
+    "noqa_row": 40,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 102,
+      "row": 19
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0231/original.py",
+    "fix": null,
+    "location": {
+      "column": 89,
+      "row": 19
+    },
+    "message": "Line too long (101 > 88)",
+    "name": "line-too-long",
+    "noqa_row": 40,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "W293",
+    "end_location": {
+      "column": 5,
+      "row": 21
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0231/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 5,
+            "row": 21
+          },
+          "location": {
+            "column": 1,
+            "row": 21
+          }
+        }
+      ],
+      "message": "Remove whitespace from blank line"
+    },
+    "location": {
+      "column": 1,
+      "row": 21
+    },
+    "message": "Blank line contains whitespace",
+    "name": "blank-line-with-whitespace",
+    "noqa_row": 40,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/blank-line-with-whitespace"
+  },
+  {
+    "cell": null,
+    "code": "E501",
+    "end_location": {
+      "column": 124,
+      "row": 36
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0231/original.py",
+    "fix": null,
+    "location": {
+      "column": 89,
+      "row": 36
+    },
+    "message": "Line too long (123 > 88)",
+    "name": "line-too-long",
+    "noqa_row": 40,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/line-too-long"
+  },
+  {
+    "cell": null,
+    "code": "SIM108",
+    "end_location": {
+      "column": 49,
+      "row": 44
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0231/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "values = [0] if len(obj_list) == 0 else [obj.value for obj in obj_list]",
+          "end_location": {
+            "column": 49,
+            "row": 44
+          },
+          "location": {
+            "column": 5,
+            "row": 41
+          }
+        }
+      ],
+      "message": "Replace `if`-`else`-block with `values = [0] if len(obj_list) == 0 else [obj.value for obj in obj_list]`"
+    },
+    "location": {
+      "column": 5,
+      "row": 41
+    },
+    "message": "Use ternary operator `values = [0] if len(obj_list) == 0 else [obj.value for obj in obj_list]` instead of `if`-`else`-block",
+    "name": "if-else-block-instead-of-if-exp",
+    "noqa_row": 41,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp"
+  },
+  {
+    "cell": null,
+    "code": "UP031",
+    "end_location": {
+      "column": 64,
+      "row": 60
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0231/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "\"Fit results: mu = {:.2f},  std = {:.2f}\".format(mean, std)",
+          "end_location": {
+            "column": 64,
+            "row": 60
+          },
+          "location": {
+            "column": 13,
+            "row": 60
+          }
+        }
+      ],
+      "message": "Replace with format specifiers"
+    },
+    "location": {
+      "column": 13,
+      "row": 60
+    },
+    "message": "Use format specifiers instead of percent format",
+    "name": "printf-string-formatting",
+    "noqa_row": 60,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/printf-string-formatting"
+  }
+]

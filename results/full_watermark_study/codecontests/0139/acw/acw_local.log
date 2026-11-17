@@ -1,0 +1,118 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0139/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -1,8 +1,8 @@
+ import sys
+ input = lambda : sys.stdin.readline().rstrip()
+ 
+-write = lambda x: sys.stdout.write(x+"\n")
+-debug = lambda x: sys.stderr.write(x+"\n")
++write = lambda x: sys.stdout.write("\n"+x)
++debug = lambda x: sys.stderr.write("\n"+x)
+ writef = lambda x: print("{:.12f}".format(x))
+ # sys.setrecursionlimit(3*10**5+10)
+ ### セグメント木(はやい)
+@@ -18,7 +18,7 @@
+         self._d = [ninf] * (2 * self._size)
+         if v is not None:
+             for i in range(self._n):
+-                self._d[self._size + i] = v[i]
++                self._d[i + self._size] = v[i]
+         for i in range(self._size - 1, 0, -1):
+             self._update(i)
+     def _update(self, k):
+@@ -28,13 +28,13 @@
+ #         x -= self.geta
+         p += self._size
+         self._d[p] = x
+-        for i in range(1, self._log + 1):
++        for i in range(1, 1 + self._log):
+ #             self._update(p >> i)
+             k = p>>i
+             self._d[k] = op(self._d[2 * k], self._d[2 * k + 1])
+     def get(self, p):
+         assert 0 <= p < self._n
+-        return self._d[p + self._size] # + self.geta
++        return self._d[self._size + p] # + self.geta
+     def check(self):
+         return [self.get(p) for p in range(self._n)]
+     def query(self, left, right):
+@@ -106,7 +106,7 @@
+                     if f(op(self._d[right], sm)):
+                         sm = op(self._d[right], sm)
+                         right -= 1
+-                return right + 1 - self._size
++                return 1 + right - self._size
+             sm = op(self._d[right], sm)
+         return 0
+ op = min
+@@ -115,14 +115,14 @@
+ n = int(input())
+ a = list(map(int, input().split()))
+ b = list(map(int, input().split()))
+-ns = [[] for _ in range(n+1)]
+-for i in range(1,n+1):
++ns = [[] for _ in range(1+n)]
++for i in range(1,1+n):
+ #     if b[i-1]>0:
+     ns[i+b[i-1]].append(i)
+ ns[0].append(0)
+-sg = SG(n+1, [0]+[i+1-a[i] for i in range(n)])
+-vs = [ninf]*(n+1)
+-prv = [-1]*(n+1)
++sg = SG(1+n, [0]+[i+1-a[i] for i in range(n)])
++vs = [ninf]*(1+n)
++prv = [-1]*(1+n)
+ prv[0] = 0
+ vs[0] = 0
+ from collections import deque
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0139/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+             x += 1
+         self._log = x
+         self._size = 1 << self._log
+-        self._d = [ninf] * (2 * self._size)
++        self._d = [ninf] * (self._size * 2)
+         if v is not None:
+             for i in range(self._n):
+                 self._d[i + self._size] = v[i]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0139/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         self._n = n
+         self.geta = 0
+         x = 0
+-        while (1 << x) < n:
++        while n > (1 << x):
+             x += 1
+         self._log = x
+         self._size = 1 << self._log
+@@ -76,7 +76,7 @@
+             while left % 2 == 0:
+                 left >>= 1
+             if not f(op(sm, self._d[left])):
+-                while left < self._size:
++                while self._size > left:
+                     left *= 2
+                     if f(op(sm, self._d[left])):
+                         sm = op(sm, self._d[left])
+@@ -98,10 +98,10 @@
+         while first or (right & -right) != right:
+             first = False
+             right -= 1
+-            while right > 1 and right % 2:
++            while 1 < right and right % 2:
+                 right >>= 1
+             if not f(op(self._d[right], sm)):
+-                while right < self._size:
++                while self._size > right:
+                     right = 2 * right + 1
+                     if f(op(self._d[right], sm)):
+                         sm = op(self._d[right], sm)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0139/acw/watermarked.py

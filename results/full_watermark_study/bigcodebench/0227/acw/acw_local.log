@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0227/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -61,7 +61,7 @@
+     matrix = np.array(L).reshape(M, N)
+ 
+     # Normalize the matrix to match the SPL
+-    matrix = matrix / np.max(matrix) * spl
++    matrix = spl * matrix / np.max(matrix)
+ 
+     # Generate the spectrogram
+     D = librosa.amplitude_to_db(np.abs(librosa.stft(matrix)), ref=np.max)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0227/acw/watermarked.py

@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/bigcodebench_0123.py:
+--- Original
++++ Modified
+@@ -46,7 +46,7 @@
+     my_list.append(12)
+     num_files = sum(my_list)
+ 
+-    files = glob.glob(os.path.join(file_dir, file_ext + "*"))[:num_files]
++    files = glob.glob(os.path.join(file_dir, "*" + file_ext))[:num_files]
+     if not files:
+         raise FileNotFoundError(
+             f"No files with extension '{file_ext}' found in directory '{file_dir}'."
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/bigcodebench_0123.py

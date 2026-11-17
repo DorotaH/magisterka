@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0139.py:
+--- Original
++++ Modified
+@@ -109,7 +109,7 @@
+         while first or (right & -right) != right:
+             first = False
+             right -= 1
+-            while right > 1 and right % 2:
++            while 1 < right and right % 2:
+                 right >>= 1
+             if not f(op(self._d[right], sm)):
+                 while self._size > right:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0139.py

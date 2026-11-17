@@ -1,0 +1,58 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0088/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -7,8 +7,8 @@
+         self.m = m
+         self.filled = {}
+         self.alternating = [0, 0]
+-        self.rows = [[0]*(n + 1), [0]*(n + 1)]
+-        self.cols = [[0]*(m + 1), [0]*(m + 1)]
++        self.rows = [[0]*(1 + n), [0]*(1 + n)]
++        self.cols = [[0]*(1 + m), [0]*(1 + m)]
+         self.frozen_rows = 0
+         self.frozen_cols = 0
+         self.bad_rows = 0
+@@ -18,28 +18,28 @@
+         if (x, y) not in self.filled:
+             return
+         t = self.filled.pop((x, y))
+-        self.alternating[(x + y + t) % 2] -= 1
+-        self.rows[(y + t) % 2][x] -= 1
+-        if self.rows[(y + t) % 2][x] == 0:
+-            if self.rows[(y + t + 1) % 2][x] == 0:
++        self.alternating[(y + x + t) % 2] -= 1
++        self.rows[(t + y) % 2][x] -= 1
++        if self.rows[(t + y) % 2][x] == 0:
++            if self.rows[(t + y + 1) % 2][x] == 0:
+                 self.frozen_rows -= 1
+             else:
+                 self.bad_rows -= 1
+-        self.cols[(x + t) % 2][y] -= 1
+-        if self.cols[(x + t) % 2][y] == 0:
+-            if self.cols[(x + t + 1) % 2][y] == 0:
++        self.cols[(t + x) % 2][y] -= 1
++        if self.cols[(t + x) % 2][y] == 0:
++            if self.cols[(t + x + 1) % 2][y] == 0:
+                 self.frozen_cols -= 1
+             else:
+                 self.bad_cols -= 1
+ 
+     def write(self, x, y, t):
+-        self.filled[(x, y)] = t;self.alternating[(x + y + t) % 2] += 1;self.rows[(y + t) % 2][x] += 1
+-        if self.rows[(y + t) % 2][x] == 1:
+-            if self.rows[(y + t + 1) % 2][x] == 0:self.frozen_rows += 1
++        self.filled[(x, y)] = t;self.alternating[(y + x + t) % 2] += 1;self.rows[(t + y) % 2][x] += 1
++        if self.rows[(t + y) % 2][x] == 1:
++            if self.rows[(t + y + 1) % 2][x] == 0:self.frozen_rows += 1
+             else:self.bad_rows += 1
+-        self.cols[(x + t) % 2][y] += 1
+-        if self.cols[(x + t) % 2][y] == 1:
+-            if self.cols[(x + t + 1) % 2][y] == 0:self.frozen_cols += 1
++        self.cols[(t + x) % 2][y] += 1
++        if self.cols[(t + x) % 2][y] == 1:
++            if self.cols[(t + x + 1) % 2][y] == 0:self.frozen_cols += 1
+             else:self.bad_cols += 1
+     def count(self):
+         total = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0088/acw/watermarked.py

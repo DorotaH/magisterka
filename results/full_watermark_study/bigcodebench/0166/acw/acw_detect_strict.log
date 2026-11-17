@@ -1,0 +1,12 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0166.py:
+--- Original
++++ Modified
+@@ -44,5 +44,5 @@
+     country_holidays = holidays.CountryHoliday(country)
+     dates = pd.date_range(start_date, end_date)
+     return [
+-        date for date in dates if date.weekday() < 5 and date not in country_holidays
++        date for date in dates if 5 > date.weekday() and date not in country_holidays
+     ]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0166.py

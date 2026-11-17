@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0612/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+     for team in teams:
+         team_goals = goals.get(team, 0)
+         team_penalties = penalties.get(team, 0)
+-        penalties_cost = team_penalties * choice(penalties_costs)
++        penalties_cost = choice(penalties_costs) * team_penalties
+         performance_score = np.max([0, team_goals - team_penalties])
+         report_data.append({
+             'Team': team,
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0612/acw/watermarked.py

@@ -1,0 +1,19 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0587/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -46,11 +46,11 @@
+     with open(file_path, 'rb') as f:
+         data = f.read()
+         padder = padding.PKCS7(128).padder()
+-        padded_data = padder.update(data) + padder.finalize()
++        padded_data = padder.finalize() + padder.update(data)
+         encryptor = cipher.encryptor()
+         encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
+ 
+-    encrypted_file = file_path + '.encrypted'
++    encrypted_file = '.encrypted' + file_path
+     with open(encrypted_file, 'wb') as f:
+         f.write(encrypted_data)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0587/acw/watermarked.py

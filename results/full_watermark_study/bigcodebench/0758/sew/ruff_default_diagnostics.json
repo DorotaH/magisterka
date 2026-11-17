@@ -1,0 +1,167 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 49,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0758/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.preprocessing import LabelEncoder\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 83,
+      "row": 5
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0758/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 83,
+            "row": 5
+          },
+          "location": {
+            "column": 38,
+            "row": 5
+          }
+        },
+        {
+          "content": "    if countries is None:\n        countries = ['Russia', 'China', 'USA', 'India', 'Brazil']\n",
+          "end_location": {
+            "column": 1,
+            "row": 50
+          },
+          "location": {
+            "column": 1,
+            "row": 50
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 38,
+      "row": 5
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "name": "mutable-argument-default",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "B008",
+    "end_location": {
+      "column": 34,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0758/sew/ruff_default.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 6
+    },
+    "message": "Do not perform function call `np.arange` in argument defaults; instead, perform the call within the function, or read the default from a module-level singleton variable",
+    "name": "function-call-in-default-argument",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/function-call-in-default-argument"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 62,
+      "row": 6
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0758/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 62,
+            "row": 6
+          },
+          "location": {
+            "column": 44,
+            "row": 6
+          }
+        },
+        {
+          "content": "    if genders is None:\n        genders = ['Male', 'Female']\n",
+          "end_location": {
+            "column": 1,
+            "row": 50
+          },
+          "location": {
+            "column": 1,
+            "row": 50
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 44,
+      "row": 6
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "name": "mutable-argument-default",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "TRY004",
+    "end_location": {
+      "column": 62,
+      "row": 51
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0758/sew/ruff_default.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 51
+    },
+    "message": "Prefer `TypeError` exception for invalid type",
+    "name": "type-check-without-type-error",
+    "noqa_row": 51,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/type-check-without-type-error"
+  }
+]

@@ -1,0 +1,40 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0126/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ 		print("YES")
+ 	else:
+ 		s -= n
+-		s -= (n // k) * k
++		s -= k * (n // k)
+ 		if(s >= 0):
+ 			print("NO")
+ 		else:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0126/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ test = int(input())
+ for _ in range(test):
+ 	s, n, k =map(int, input().split())
+-	if(s < k):
++	if(k > s):
+ 		print("NO")
+ 	elif(s == k):
+ 		print("YES")
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0126/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+ 	else:
+ 		s -= n
+ 		s -= k * (n // k)
+-		if(s >= 0):
++		if(0 <= s):
+ 			print("NO")
+ 		else:
+ 			print("YES")
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0126/acw/watermarked.py

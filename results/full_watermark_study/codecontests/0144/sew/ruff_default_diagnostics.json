@@ -1,0 +1,37 @@
+[
+  {
+    "cell": null,
+    "code": "SIM201",
+    "end_location": {
+      "column": 29,
+      "row": 8
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0144/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "s[0] != s[len(s) - 1]",
+          "end_location": {
+            "column": 29,
+            "row": 8
+          },
+          "location": {
+            "column": 8,
+            "row": 8
+          }
+        }
+      ],
+      "message": "Replace with `!=` operator"
+    },
+    "location": {
+      "column": 8,
+      "row": 8
+    },
+    "message": "Use `s[0] != s[len(s) - 1]` instead of `not s[0] == s[len(s) - 1]`",
+    "name": "negate-equal-op",
+    "noqa_row": 8,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+  }
+]

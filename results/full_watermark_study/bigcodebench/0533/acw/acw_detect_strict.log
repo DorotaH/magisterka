@@ -1,0 +1,18 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0533.py:
+--- Original
++++ Modified
+@@ -50,10 +50,10 @@
+     n = int(num, from_base)
+     new_num = ""
+ 
+-    if to_base < 2:
++    if 2 > to_base:
+         raise ValueError("to_base must be >= 2.")
+ 
+-    while n > 0:
++    while 0 < n:
+         n, m = divmod(n, to_base)
+         new_num += base64_table[m]
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0533.py

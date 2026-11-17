@@ -1,0 +1,19 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0853/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -32,11 +32,11 @@
+             if not os.path.exists(os.path.join(directory_path, 'Invalid')):
+                 os.mkdir(os.path.join(directory_path, 'Invalid'))
+             shutil.move(os.path.join(directory_path, filename), os.path.join(directory_path, 'Invalid'))
+-            summary['Invalid'] = summary.get('Invalid', 0) + 1
++            summary['Invalid'] = 1 + summary.get('Invalid', 0)
+         else:
+             extension = os.path.splitext(filename)[-1].strip('.')
+             if not os.path.exists(os.path.join(directory_path, extension)):
+                 os.mkdir(os.path.join(directory_path, extension))
+             shutil.move(os.path.join(directory_path, filename), os.path.join(directory_path, extension))
+-            summary[extension] = summary.get(extension, 0) + 1
++            summary[extension] = 1 + summary.get(extension, 0)
+     return summary
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0853/acw/watermarked.py

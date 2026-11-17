@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0121/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -50,7 +50,7 @@
+ def generate():
+ 	ans = [0]
+ 	while ans[-1]<1000000000:
+-		ans.append(1+ans[-1]*2)
++		ans.append(1+2*ans[-1])
+ 	return ans
+ 
+ def main():
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0121/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+ 
+ def powr(a, b):
+ 	ans = 1
+-	while b>0:
++	while 0 < b:
+ 		if b & 1:
+ 			ans=mul(ans,a)
+ 		a = mul(a,a) 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0121/acw/watermarked.py

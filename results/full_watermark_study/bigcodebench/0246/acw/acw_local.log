@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0246/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+     if n_waves < 1:
+         return sine_wave_series, np.array([]), None
+ 
+-    for frequency in range(1, n_waves+1):
++    for frequency in range(1, 1+n_waves):
+         wave = np.sin(frequency * ANGLES)
+         sine_wave_series.append(wave)
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0246/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -42,7 +42,7 @@
+         return sine_wave_series, np.array([]), None
+ 
+     for frequency in range(1, 1+n_waves):
+-        wave = np.sin(frequency * ANGLES)
++        wave = np.sin(ANGLES * frequency)
+         sine_wave_series.append(wave)
+ 
+     fft_data = fft(np.sum(sine_wave_series, axis=0))
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0246/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+     np.random.seed(seed)
+     sine_wave_series = []
+ 
+-    if n_waves < 1:
++    if 1 > n_waves:
+         return sine_wave_series, np.array([]), None
+ 
+     for frequency in range(1, 1+n_waves):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0246/acw/watermarked.py

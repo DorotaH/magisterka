@@ -1,0 +1,40 @@
+import collections
+
+import pandas as pd
+
+
+def task_func(df):
+    """
+    Generate a sales report from a DataFrame, excluding duplicate customer names.
+    The report includes total sales and the most popular sales category.
+
+    Parameters:
+    df (DataFrame): A pandas DataFrame with columns 'Customer', 'Category', and 'Sales'.
+
+    Returns:
+    dict: A dictionary with keys 'Total Sales' (sum of sales) and 'Most Popular Category' (most frequent category).
+
+    Requirements:
+    - pandas
+    - collections
+
+    Raises:
+    - The function will raise a ValueError is input df is not a DataFrame.
+
+    Note:
+    - The function would return the first category in alphabetical order for "Most Popular Category' in the case of tie
+
+    Example:
+    >>> data = pd.DataFrame([{'Customer': 'John', 'Category': 'Electronics', 'Sales': 500}, {'Customer': 'Mary', 'Category': 'Home', 'Sales': 300}])
+    >>> report = task_func(data)
+    >>> print(report)
+    {'Total Sales': 800, 'Most Popular Category': 'Electronics'}
+    """
+
+    if not isinstance(df, pd.DataFrame):
+        raise ValueError("The input df is not a DataFrame")
+
+    df = df.drop_duplicates(subset="Customer")
+    total_sales = df["Sales"].sum()
+    popular_category = collections.Counter(df["Category"]).most_common(1)[0][0]
+    return {"Total Sales": total_sales, "Most Popular Category": popular_category}

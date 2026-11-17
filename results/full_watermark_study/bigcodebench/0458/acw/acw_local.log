@@ -1,0 +1,24 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0458/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -49,14 +49,14 @@
+ 
+     for key, value in my_dict.items():
+         if isinstance(value, list):
+-            my_dict[key] = [v * 2 if isinstance(v, (int, float)) else v for v in value]
++            my_dict[key] = [2 * v if isinstance(v, (int, float)) else v for v in value]
+         elif isinstance(value, (int, float)):
+-            my_dict[key] = value * 2
++            my_dict[key] = 2 * value
+         elif isinstance(value, str) and NUMBERS.match(value):
+             try:
+-                my_dict[key] = int(value) * 2
++                my_dict[key] = 2 * int(value)
+             except ValueError:
+-                my_dict[key] = float(value) * 2
++                my_dict[key] = 2 * float(value)
+ 
+     if all(not isinstance(v, list) for v in my_dict.values()):
+         df = pd.DataFrame([my_dict])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0458/acw/watermarked.py

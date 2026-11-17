@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0586/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+         data = f.read()
+         encrypted_data = fernet.encrypt(data)
+ 
+-    encrypted_file = file_path + '.encrypted'
++    encrypted_file = '.encrypted' + file_path
+     with open(encrypted_file, 'wb') as f:
+         f.write(encrypted_data)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0586/acw/watermarked.py

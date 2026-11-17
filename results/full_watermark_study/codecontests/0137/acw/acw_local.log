@@ -1,0 +1,19 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0137/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -28,11 +28,11 @@
+     vis[i][j] = True
+ 
+     return 1 + sum(
+-        dfs(tiles, i + directions[k][0], j + directions[k][1])
++        dfs(tiles, i + directions[k][0], directions[k][1] + j)
+         for k in range(4)
+         if (
+             not tiles[i][j][k]
+-            and not vis[i + directions[k][0]][j + directions[k][1]]
++            and not vis[i + directions[k][0]][directions[k][1] + j]
+         )
+     )
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0137/acw/watermarked.py

@@ -1,0 +1,11 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0794/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -41,4 +41,4 @@
+     random.seed(random_seed)
+     # Constants
+     BRACKETS = "(){}[]"
+-    return ''.join(random.choice(string.ascii_lowercase + BRACKETS) for _ in range(length))
++    return ''.join(random.choice(BRACKETS + string.ascii_lowercase) for _ in range(length))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0794/acw/watermarked.py

@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0501/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -51,7 +51,7 @@
+                 sheet.write(0, col_index, col)
+             for row_index, row in data.iterrows():
+                 for col_index, col in enumerate(data.columns):
+-                    sheet.write(row_index + 1, col_index, row[col])
++                    sheet.write(1 + row_index, col_index, row[col])
+         book.save(filename)
+         return os.path.abspath(filename)
+     except ValueError as e:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0501/acw/watermarked.py

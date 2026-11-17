@@ -1,0 +1,118 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 32,
+      "row": 2
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0868/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from itertools import cycle\nfrom random import choice, seed\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 4
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 76,
+      "row": 4
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0868/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 76,
+            "row": 4
+          },
+          "location": {
+            "column": 32,
+            "row": 4
+          }
+        },
+        {
+          "content": "    if colors is None:\n        colors = ['Red', 'Green', 'Blue', 'Yellow', 'Purple']\n",
+          "end_location": {
+            "column": 1,
+            "row": 42
+          },
+          "location": {
+            "column": 1,
+            "row": 42
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 32,
+      "row": 4
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "name": "mutable-argument-default",
+    "noqa_row": 4,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "PIE808",
+    "end_location": {
+      "column": 23,
+      "row": 47
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0868/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 25,
+            "row": 47
+          },
+          "location": {
+            "column": 22,
+            "row": 47
+          }
+        }
+      ],
+      "message": "Remove `start` argument"
+    },
+    "location": {
+      "column": 22,
+      "row": 47
+    },
+    "message": "Unnecessary `start` argument in `range`",
+    "name": "unnecessary-range-start",
+    "noqa_row": 47,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-range-start"
+  }
+]

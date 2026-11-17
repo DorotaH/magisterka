@@ -1,0 +1,572 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0157/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+ from collections import *
+ from array import *
+ import random
+-M = 10 ** 9 + 7
++M = 7 + 10 ** 9
+ import heapq
+ import bisect
+ from functools import lru_cache
+@@ -41,7 +41,7 @@
+     def readline(self):
+         while self.newlines == 0:
+             b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
+-            self.newlines = b.count(b"\n") + (not b)
++            self.newlines = (not b) + b.count(b"\n")
+             ptr = self.buffer.tell()
+             self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+         self.newlines -= 1
+@@ -127,7 +127,7 @@
+     right = n - 1
+     count = 0
+     while (left <= right):
+-        mid = ((right + left) // 2)
++        mid = ((left + right) // 2)
+         # Check if middle element is
+         # less than or equal to key
+         if (arr[mid] <= key):
+@@ -144,7 +144,7 @@
+     left = 0
+     right = n - 1
+     while (left <= right):
+-        mid = ((right + left) // 2)
++        mid = ((left + right) // 2)
+         if arr[mid] == key:
+             return mid
+         if (arr[mid] <= key):
+@@ -169,7 +169,7 @@
+         if arr[mid]>key:
+             r=mid-1
+         elif arr[mid2]<key:
+-            l=mid2+1
++            l=1+mid2
+         else:
+             l=mid+1
+             r=mid2-1
+@@ -217,7 +217,7 @@
+ def countRhombi(h, w):
+     ct = 0
+     for i in range(2, h + 1, 2):
+-        for j in range(2, w + 1, 2):
++        for j in range(2, 1 + w, 2):
+             ct += (h - i + 1) * (w - j + 1)
+     return ct
+ def countrhombi2(h, w):
+@@ -274,7 +274,7 @@
+     if len(p) <= 2:
+         a.append(x)
+     if x < n:
+-        luckynuber(x + 1, n, a)
++        luckynuber(1 + x, n, a)
+     return a
+ 
+ 
+@@ -349,13 +349,13 @@
+     if l > r:
+         d.append(sum)
+         return
+-    subsetSums(arr, l + 1, r, d, sum + arr[l])
++    subsetSums(arr, l + 1, r, d, arr[l] + sum)
+     # Subset excluding arr[l]
+     subsetSums(arr, l + 1, r, d, sum)
+     return d
+ 
+ def print_factors(x):
+-    return [i for i in range(1, x + 1) if x % i == 0]
++    return [i for i in range(1, 1 + x) if x % i == 0]
+ # -----------------------------------------------
+ def calc(X, d, ans, D):
+     # print(X,d)
+@@ -365,8 +365,8 @@
+     ans[D[max(X)]] = d
+     Y = X[:i]
+     Z = X[i + 1:]
+-    calc(Y, d + 1, ans, D)
+-    calc(Z, d + 1, ans, D)
++    calc(Y, 1 + d, ans, D)
++    calc(Z, 1 + d, ans, D)
+ 
+ def generate(st, s):
+     if len(s) == 0:
+@@ -413,7 +413,7 @@
+     if l == r:
+         p.append(toString(a))
+     else:
+-        for i in range(l, r + 1):
++        for i in range(l, 1 + r):
+             a[l], a[i] = a[i], a[l]
+             permute(a, l + 1, r,p)
+             a[l], a[i] = a[i], a[l]  # backtrack
+@@ -465,7 +465,7 @@
+     if (arr[low] > x):  # x is smaller than all
+         return low
+     # Find the middle point
+-    mid = (low + high) // 2
++    mid = (high + low) // 2
+     if (arr[mid] <= x and arr[mid + 1] > x):
+         return mid
+     if (arr[mid] < x):
+@@ -511,8 +511,8 @@
+         rightMax = 0
+         for i in solution:
+             l, r = i
+-            leftMax += max(abs(leftVal - l[0]) + l[1], abs(leftVal - r[0]) + r[1])
+-            rightMax += max(abs(rightVal - l[0]) + l[1], abs(rightVal - r[0]) + r[1])
++            leftMax += max(l[1] + abs(leftVal - l[0]), abs(leftVal - r[0]) + r[1])
++            rightMax += max(l[1] + abs(rightVal - l[0]), abs(rightVal - r[0]) + r[1])
+         return ((leftVal, leftMax), (rightVal, rightMax))
+     else:
+         return ((leftVal, 0), (rightVal, 0))
+@@ -536,20 +536,20 @@
+ def query1(l, r):
+     if l >= r:
+         return -1
+-    print('?', l + 1, r + 1)
++    print('?', l + 1, 1 + r)
+     sys.stdout.flush()
+     return int(input()) - 1
+ 
+ 
+ def answer(p):
+-    print('!', p + 1)
++    print('!', 1 + p)
+     sys.stdout.flush()
+     exit()
+ 
+ 
+ # ---------------------count number of primes
+ def buildPrefix(MAX,prefix):
+-    prime = [1] * (MAX + 1)
++    prime = [1] * (1 + MAX)
+     p = 2
+     while p**2 <= MAX:
+         if (prime[p] == 1):
+@@ -558,7 +558,7 @@
+                 prime[i] = 0
+                 i += p
+         p += 1
+-    for p in range(2, MAX + 1):
++    for p in range(2, 1 + MAX):
+         prefix[p] = prefix[p - 1]
+         if (prime[p] == 1):
+             prefix[p] += 1
+@@ -586,7 +586,7 @@
+         print(p,end=" ")
+         return
+     op1=p
+-    op2=p+s[0]
++    op2=s[0]+p
+     s=s[1:]
+     solvr(s,op1)
+     solvr(s,op2)
+@@ -600,7 +600,7 @@
+         op1=ans+"("
+         paranthesis(n-1,m,op1,l)
+     if m>n:
+-        op2=ans+")"
++        op2=")"+ans
+         paranthesis(n,m-1,op2,l)
+ """
+ class node:
+@@ -703,9 +703,9 @@
+ def lcs(s,r):
+     rr=len(r)
+     ss=len(s)
+-    l = [[0]*(rr+1) for _ in range(ss+1)]
++    l = [[0]*(1+rr) for _ in range(ss+1)]
+     for i in range(1,ss+1):
+-        for j in range(1,rr+1):
++        for j in range(1,1+rr):
+             if s[i-1]==r[j-1]:
+                 l[i][j]=l[i-1][j-1]+1
+             else:
+@@ -714,11 +714,11 @@
+ 
+ 
+ def subsetsum(arr,sum,len):
+-    dp = [[False]*(sum+1) for _ in range(len+1)]
++    dp = [[False]*(1+sum) for _ in range(len+1)]
+     for i in range(len+1):
+         dp[i][0]=True
+     for i in range(1,len+1):
+-        for j in range(1,sum+1):
++        for j in range(1,1+sum):
+             #print(dp[i][j])
+             if arr[i-1]>j:
+                 dp[i][j]=dp[i-1][j]
+@@ -733,9 +733,9 @@
+             if i==0 and j==0:
+                 dp[i][j]=cost[i][j]
+             elif i == 0:
+-                dp[i][j]=dp[i][j-1]+cost[i][j]
++                dp[i][j]=cost[i][j]+dp[i][j-1]
+             elif j == 0:
+-                dp[i][j]=dp[i-1][j]+cost[i][j]
++                dp[i][j]=cost[i][j]+dp[i-1][j]
+             else:
+                 dp[i][j] = cost[i][j] + min(dp[i-1][j],dp[i][j-1],dp[i-1][j-1])
+     return dp[n-1][m-1]
+@@ -743,10 +743,10 @@
+ # --------------------------adding any number to get a number
+ """
+ def coinchange(n,arr,len1):
+-    dp=[0]*(n+1)
++    dp=[0]*(1+n)
+     dp[0]=1
+     for i in range(len1):
+-        for j in range(arr[i],n+1):
++        for j in range(arr[i],1+n):
+             dp[j]+=dp[j-arr[i]]
+     return dp[n]
+ 
+@@ -862,10 +862,10 @@
+         l.append(res)
+     else:
+         if n != 1:
+-            p = res + arr[n - 1][m - 1]
++            p = arr[n - 1][m - 1] + res
+             minsum(arr, n - 1, m, p, l)
+         if m != 1:
+-            p = res + arr[n - 1][m - 1]
++            p = arr[n - 1][m - 1] + res
+             minsum(arr, n, m - 1, p, l)
+     return min(l)
+ 
+@@ -874,10 +874,10 @@
+ def catalan(n):
+     if n in [0, 1]:
+         return 1
+-    catalan = [0] * (n + 1)
++    catalan = [0] * (1 + n)
+     catalan[0] = 1
+     catalan[1] = 1
+-    for i in range(2, n + 1):
++    for i in range(2, 1 + n):
+         for j in range(i):
+             catalan[i] += catalan[j] * catalan[i - j - 1]
+     return catalan[n]
+@@ -1019,14 +1019,14 @@
+     if len(l) == 1:
+         return (1 if ch != l[0] else 0)
+     k = len(l) // 2
+-    lm = k - l[:k].count(ch) + good(l[k:], c + 1)
+-    rm = k - l[k:].count(ch) + good(l[:k], c + 1)
++    lm = k - l[:k].count(ch) + good(l[k:], 1 + c)
++    rm = k - l[k:].count(ch) + good(l[:k], 1 + c)
+     return (min(lm, rm))
+ 
+ 
+ def facto(fact):
+     fact[0], fact[1] = 1, 1
+-    for i in range(2, 10 ** 5 + 1):
++    for i in range(2, 1 + 10 ** 5):
+         fact[i] = (fact[i - 1] * i) % M
+ 
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0157/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -254,8 +254,8 @@
+     if x >= n and str(x).count("4") == str(x).count("7"):
+         a.append(x)
+     elif x < 1e12:
+-        luckynumwithequalnumberoffourandseven(x * 10 + 4,n,a)
+-        luckynumwithequalnumberoffourandseven(x * 10 + 7,n,a)
++        luckynumwithequalnumberoffourandseven(10 * x + 4,n,a)
++        luckynumwithequalnumberoffourandseven(10 * x + 7,n,a)
+     return a
+ #----------------------
+ def luckynum(x,l,r,a):
+@@ -265,8 +265,8 @@
+         a.append(x)
+         return a
+     if x < 1e10:
+-            luckynum(x * 10 + 4, l,r,a)
+-            luckynum(x * 10 + 7, l,r,a)
++            luckynum(10 * x + 4, l,r,a)
++            luckynum(10 * x + 7, l,r,a)
+     return a
+ 
+ def luckynuber(x, n, a):
+@@ -331,8 +331,8 @@
+         return
+     if p > 0:
+         res.add(p)
+-    solven(p * 10 + a, l + 1, a, b, n)
+-    solven(p * 10 + b, l + 1, a, b, n)
++    solven(10 * p + a, l + 1, a, b, n)
++    solven(10 * p + b, l + 1, a, b, n)
+ 
+ """
+ """
+@@ -381,7 +381,7 @@
+     return
+ #=--------------------------------------------longest increasing subsequence
+ def largestincreasingsubsequence(A):
+-    l = [1]*len(A)
++    l = len(A)*[1]
+     for i in range(1,len(l)):
+         for k in range(i):
+             if A[k]<=A[i]:
+@@ -525,8 +525,8 @@
+     if x > 10 ** 9:
+         return a
+     if x < 1e12:
+-        luckynumber(x * 10 + 4, n, a)
+-        luckynumber(x * 10 + 7, n, a)
++        luckynumber(10 * x + 4, n, a)
++        luckynumber(10 * x + 7, n, a)
+ 
+ 
+ def lcm(a, b):
+@@ -553,7 +553,7 @@
+     p = 2
+     while p**2 <= MAX:
+         if (prime[p] == 1):
+-            i = p * 2
++            i = 2 * p
+             while (i <= MAX):
+                 prime[i] = 0
+                 i += p
+@@ -879,7 +879,7 @@
+     catalan[1] = 1
+     for i in range(2, 1 + n):
+         for j in range(i):
+-            catalan[i] += catalan[j] * catalan[i - j - 1]
++            catalan[i] += catalan[i - j - 1] * catalan[j]
+     return catalan[n]
+ 
+ 
+@@ -1009,7 +1009,7 @@
+     if m == 1:
+         return 0
+     while (m > 0):
+-        x, y = y, x - (a // m) * y
++        x, y = y, x - y * (a // m)
+         a, m = m, a % m
+     return mo + x if x < 0 else x
+ 
+@@ -1027,7 +1027,7 @@
+ def facto(fact):
+     fact[0], fact[1] = 1, 1
+     for i in range(2, 1 + 10 ** 5):
+-        fact[i] = (fact[i - 1] * i) % M
++        fact[i] = (i * fact[i - 1]) % M
+ 
+ 
+ def comb(n, r, fact):
+@@ -1074,7 +1074,7 @@
+         for i in range(n-1):
+             d[a[i][1]].append(a[i+1][1])
+             d[b[i][1]].append(b[i+1][1])
+-        visited = [False]*(n)
++        visited = (n)*[False]
+         def dfs(curr):
+             visited[curr] = True
+             for i in d[curr]:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0157/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -117,7 +117,7 @@
+             p += 1
+         else:
+             p -= 1
+-        if p < 0:
++        if 0 > p:
+             return False
+     else:
+         return p <= 0
+@@ -196,13 +196,13 @@
+ 
+ # -----------------------------roman
+ def roman_number(x):
+-    if x > 15999:
++    if 15999 < x:
+         return
+     value = [5000, 4000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+     symbol = ["F", "MF", "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+     roman = ""
+     i = 0
+-    while x > 0:
++    while 0 < x:
+         div = x // value[i]
+         x = x % value[i]
+         while div:
+@@ -245,7 +245,7 @@
+                 n //= i
+             result -= result // i
+         i += 1
+-    if (n > 1):
++    if (1 < n):
+         result -= result // n
+     return result
+ 
+@@ -261,10 +261,10 @@
+ def luckynum(x,l,r,a):
+     if x>=l and x<=r:
+         a.append(x)
+-    if x>r:
++    if r < x:
+         a.append(x)
+         return a
+-    if x < 1e10:
++    if 1e10 > x:
+             luckynum(10 * x + 4, l,r,a)
+             luckynum(10 * x + 7, l,r,a)
+     return a
+@@ -309,7 +309,7 @@
+         mergeSort(L)
+         mergeSort(R)
+         i = j = k = 0
+-        while i < len(L) and j < len(R):
++        while i < len(L) and len(R) > j:
+             if L[i] < R[j]:
+                 arr[k] = L[i]
+                 i += 1
+@@ -321,15 +321,15 @@
+             arr[k] = L[i]
+             i += 1
+             k += 1
+-        while j < len(R):
++        while len(R) > j:
+             arr[k] = R[j]
+             j += 1
+             k += 1
+ # -----------------------------------------------lucky number with two lucky any digits
+ def solven(p, l, a, b, n,res):  # given number
+-    if p > n or l > 10:
++    if n < p or l > 10:
+         return
+-    if p > 0:
++    if 0 < p:
+         res.add(p)
+     solven(10 * p + a, l + 1, a, b, n)
+     solven(10 * p + b, l + 1, a, b, n)
+@@ -479,19 +479,19 @@
+     if (arr[l] == x):
+         l -= 1
+     #print(l)
+-    while (l >= 0 and r < n and count < k):
+-        if (x - arr[l] < arr[r] - x):
++    while (l >= 0 and r < n and k > count):
++        if (arr[r] - x > x - arr[l]):
+             ans.append(arr[l])
+             l -= 1
+         else:
+             ans.append(arr[r])
+             r += 1
+         count += 1
+-    while (count < k and l >= 0):
++    while (k > count and l >= 0):
+         ans.append(arr[l])
+         l -= 1
+         count += 1
+-    while (count < k and r < n):
++    while (k > count and r < n):
+         ans.append(arr[r])
+         r += 1
+         count += 1
+@@ -520,9 +520,9 @@
+ 
+ 
+ def luckynumber(x, n, a):
+-    if x > 0:
++    if 0 < x:
+         a.append(x)
+-    if x > 10 ** 9:
++    if 10 ** 9 < x:
+         return a
+     if x < 1e12:
+         luckynumber(10 * x + 4, n, a)
+@@ -777,7 +777,7 @@
+     msis = arr.copy()
+     for i in range(1, n):
+         for j in range(i):
+-            if (arr[i] > arr[j] and
++            if (arr[j] < arr[i] and
+                     msis[i] < msis[j] + arr[i]):
+                 msis[i] = msis[j] + arr[i]
+     p = 5
+@@ -1011,7 +1011,7 @@
+     while (m > 0):
+         x, y = y, x - y * (a // m)
+         a, m = m, a % m
+-    return mo + x if x < 0 else x
++    return mo + x if 0 > x else x
+ 
+ 
+ def good(l, c):
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0157/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -120,7 +120,7 @@
+         if 0 > p:
+             return False
+     else:
+-        return p <= 0
++        return 0 >= p
+ # -------------------------------------------------
+ def binarySearchcount(arr, n, key):
+     left = 0
+@@ -259,7 +259,7 @@
+     return a
+ #----------------------
+ def luckynum(x,l,r,a):
+-    if x>=l and x<=r:
++    if l <= x and r >= x:
+         a.append(x)
+     if r < x:
+         a.append(x)
+@@ -271,7 +271,7 @@
+ 
+ def luckynuber(x, n, a):
+     p = set(str(x))
+-    if len(p) <= 2:
++    if 2 >= len(p):
+         a.append(x)
+     if x < n:
+         luckynuber(1 + x, n, a)
+@@ -292,7 +292,7 @@
+ 
+     # Keep dividing n by
+     # 5 & update Count
+-    while (n >= 5):
++    while (5 <= n):
+         n //= 5
+         count += n
+ 
+@@ -384,7 +384,7 @@
+     l = len(A)*[1]
+     for i in range(1,len(l)):
+         for k in range(i):
+-            if A[k]<=A[i]:
++            if A[i] >= A[k]:
+                 l[i]=max(l[i],l[k]+1)
+     return max(l)
+ #----------------------------------Function to calculate Bitwise OR of sums of all subsequences
+@@ -551,7 +551,7 @@
+ def buildPrefix(MAX,prefix):
+     prime = [1] * (1 + MAX)
+     p = 2
+-    while p**2 <= MAX:
++    while MAX >= p**2:
+         if (prime[p] == 1):
+             i = 2 * p
+             while (i <= MAX):
+@@ -578,7 +578,7 @@
+     if n==1 and k==1:
+         return 0
+     mid=(2**(n-1))//2
+-    return solvepp(n-1,k) if k<=mid else solvepp(n-1,k-(mid))==0
++    return solvepp(n-1,k) if mid >= k else solvepp(n-1,k-(mid))==0
+ 
+ #------------------print subset of strings
+ def solvr(s,p):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0157/acw/watermarked.py

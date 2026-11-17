@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0128/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+     for _ in range(int(input())):
+         n = int(input())
+         days = [set() for _ in range(5)]
+-        totals = [0] * 5
++        totals = 5 * [0]
+         for student in range(n):
+             for day, value in enumerate(input().split()):
+                 if value == '1':
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0128/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+         n1, n2 = len(days[a]), len(days[b])
+         students = days[a].union(days[b])
+         # print(students)
+-        if len(students) == all_students and n1 >= required and n2 >= required:
++        if len(students) == all_students and required <= n1 and required <= n2:
+             return "YES"
+ 
+     return "NO"
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0128/acw/watermarked.py

@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0087/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+ 
+ def totstr(li,temp):
+     n=len(temp)
+-    return sum(li[i][temp[i-1]] for i in range(1,n+1))
++    return sum(li[i][temp[i-1]] for i in range(1,1+n))
+ 
+ n=ii()
+ li=[()]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0087/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -48,7 +48,7 @@
+     if dd[curr]<0:
+         curr=list(curr)
+         for i in range(n):
+-            if curr[i]>1:
++            if 1 < curr[i]:
+                 curr[i]-=1
+                 cr=tuple(curr)
+                 if dd[cr]==0:
+@@ -62,7 +62,7 @@
+                 curr[i]+=1
+     else:
+         x=totstr(li,curr)
+-        if x>mx:
++        if mx < x:
+             mx=x
+             ans=curr
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0087/acw/watermarked.py

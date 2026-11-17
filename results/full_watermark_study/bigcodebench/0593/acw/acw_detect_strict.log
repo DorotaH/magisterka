@@ -1,0 +1,20 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0593.py:
+--- Original
++++ Modified
+@@ -46,11 +46,11 @@
+     if not os.path.exists(output_dir):
+         os.makedirs(output_dir)
+     FILE_PATH = os.path.join(output_dir, "traffic_data.csv")
+-    data = [["Time"] + VEHICLE_TYPES]
++    data = [VEHICLE_TYPES + ["Time"]]
+     for _ in range(hours):
+-        row = [randint(0, 50) for _ in VEHICLE_TYPES] + [
++        row = [
+             datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+-        ]
++        ] + [randint(0, 50) for _ in VEHICLE_TYPES]
+         data.append(row)
+ 
+     with open(FILE_PATH, "w+", newline="") as f:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0593.py

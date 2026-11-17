@@ -1,0 +1,16 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0899/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -26,8 +26,8 @@
+     >>> walk.tolist()
+     [0, 1, 2, 1, 0, 1]
+     """
+-    if length < 0:
++    if 0 > length:
+         raise ValueError("length must be a non-negative integer")
+     random.seed(seed)
+-    steps = [1 if random.random() > 0.5 else -1 for _ in range(length)]
++    steps = [1 if 0.5 < random.random() else -1 for _ in range(length)]
+     return np.cumsum([0] + steps)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0899/acw/watermarked.py

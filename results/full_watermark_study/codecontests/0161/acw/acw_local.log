@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0161/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+     dist = list()
+ 
+     for j in range(0, len(a)-1):
+-        dist.append(a[j+1]-a[j])
++        dist.append(a[1+j]-a[j])
+ 
+     dist.sort()
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0161/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -27,7 +27,7 @@
+     flag = 0
+     k = 0
+     for j in range(0, len(a)):
+-        sum = pred_sum+(len(a)-j)*dist[j]
++        sum = pred_sum+dist[j]*(len(a)-j)
+         if(sum>=h):
+             flag = 1
+             k = j
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0161/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -28,7 +28,7 @@
+     k = 0
+     for j in range(0, len(a)):
+         sum = pred_sum+dist[j]*(len(a)-j)
+-        if(sum>=h):
++        if(h <= sum):
+             flag = 1
+             k = j
+             break
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0161/acw/watermarked.py

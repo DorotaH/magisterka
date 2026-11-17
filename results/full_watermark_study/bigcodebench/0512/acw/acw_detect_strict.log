@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0512.py:
+--- Original
++++ Modified
+@@ -35,7 +35,7 @@
+     """
+     COLUMNS = ["Product", "Quantity Sold", "Total Sales"]
+     df = pd.DataFrame(data, columns=COLUMNS)
+-    if (df["Quantity Sold"] < 0).any() or (df["Total Sales"] < 0).any():
++    if (df["Quantity Sold"] < 0).any() or (0 > df["Total Sales"]).any():
+         raise ValueError("Value must not be negative")
+     column_data = df[column]
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/bigcodebench_0512.py

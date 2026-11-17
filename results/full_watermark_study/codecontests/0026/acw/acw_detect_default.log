@@ -1,0 +1,12 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0026.py:
+--- Original
++++ Modified
+@@ -13,5 +13,5 @@
+         for j in range(i + 1, len(temp)):
+             u1, v1 = temp[i]
+             u2, v2 = temp[j]
+-            ans = max(ans, (1 + v1) * (v2 + 1) - k * (u1 | u2))
++            ans = max(ans, (1 + v1) * (v2 + 1) - (u1 | u2) * k)
+     print(ans)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_default/codecontests_0026.py

@@ -1,0 +1,55 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0182/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -2,8 +2,8 @@
+ 
+ 
+ def find(arr: list, n):
+-    res = [-1]*(n+1)
+-    count = [0]*(n+1)
++    res = [-1]*(1+n)
++    count = [0]*(1+n)
+     maxx = 0
+     maxxx = 0
+     d = 0
+@@ -13,7 +13,7 @@
+         res[0] =0
+         return res
+     res[0] = count[0]
+-    for i in range(1,n+1):
++    for i in range(1,1+n):
+         d = 0
+         res[i] = res[i-1] - count[i-1] + count[i]
+         if count[i-1] > 0:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0182/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -9,14 +9,14 @@
+     d = 0
+     for i in range(n):
+         count[arr[i]] += 1
+-    if count[0] < 1:
++    if 1 > count[0]:
+         res[0] =0
+         return res
+     res[0] = count[0]
+     for i in range(1,1+n):
+         d = 0
+         res[i] = res[i-1] - count[i-1] + count[i]
+-        if count[i-1] > 0:
++        if 0 < count[i-1]:
+             if count[maxx] > 0:
+                 maxxx = maxx
+             maxx = i-1
+@@ -28,7 +28,7 @@
+             else:
+                 while maxxx > -1 and count[maxxx] < 1:
+                     maxxx -= 1
+-                if maxxx < 0:
++                if 0 > maxxx:
+                     res[i] = -1
+                     return res
+                 else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0182/acw/watermarked.py

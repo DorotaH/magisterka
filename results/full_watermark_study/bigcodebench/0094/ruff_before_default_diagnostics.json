@@ -1,0 +1,72 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 32,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0094/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import matplotlib.pyplot as plt\nimport numpy as np\nfrom scipy.stats import norm\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "UP031",
+    "end_location": {
+      "column": 70,
+      "row": 53
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0094/original.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "\"Fit results: mean = {:.2f},  std = {:.2f}\".format(mean, std_dev)",
+          "end_location": {
+            "column": 70,
+            "row": 53
+          },
+          "location": {
+            "column": 13,
+            "row": 53
+          }
+        }
+      ],
+      "message": "Replace with format specifiers"
+    },
+    "location": {
+      "column": 13,
+      "row": 53
+    },
+    "message": "Use format specifiers instead of percent format",
+    "name": "printf-string-formatting",
+    "noqa_row": 53,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/printf-string-formatting"
+  }
+]

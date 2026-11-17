@@ -1,0 +1,20 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0125.py:
+--- Original
++++ Modified
+@@ -27,12 +27,12 @@
+         for i in range(3):
+             if i != colored[index]:
+                 continue
+-            dic[index][i] = (sum(right) - right[i]) * (sum(left) - left[i])
++            dic[index][i] = (sum(left) - left[i]) * (sum(right) - right[i])
+             dic[index][i] = dic[index][i] % M
+ 
+     else:
+         for i in range(3):
+-            dic[index][i] = 2 * (sum(left) - left[i]) * (sum(right) - right[i])
++            dic[index][i] = (sum(left) - left[i]) * 2 * (sum(right) - right[i])
+             dic[index][i] = dic[index][i] % M
+ 
+     return dic[index]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0125.py

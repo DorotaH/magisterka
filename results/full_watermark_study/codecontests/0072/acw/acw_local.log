@@ -1,0 +1,74 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0072/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -18,10 +18,10 @@
+         )
+     dl, dr = next(gen)
+     v = min(b1 + 2 * dl, b2 + dl)
+-    b1n, b2n = v + dr, v + dr * 2
++    b1n, b2n = dr + v, v + dr * 2
+     for dl, dr in gen:
+         v = min(b1 + 2 * dl, b2 + dl)
+-        b1n, b2n = min(b1n, v + dr), min(b2n, v + dr * 2)
++        b1n, b2n = min(b1n, dr + v), min(b2n, v + dr * 2)
+     return b1n, b2n
+ 
+ 
+@@ -37,13 +37,13 @@
+             S1.pop()
+         S1.append(current)
+     # at this moment, all left value and right value of S1 are sorted and unique respectively
+-    areas = zip([None] + P, P + [None])
+-    S = [list(next(areas)) + [[]]]
++    areas = zip([None] + P, [None] + P)
++    S = [[[]] + list(next(areas))]
+     for current in S1:
+         # at any moment, left is None or current[0] > left holds
+         left, right, group = S[-1]
+         while right is not None and current[0] > right:
+-            S.append(list(next(areas)) + [[]])
++            S.append([[]] + list(next(areas)))
+             left, right, group = S[-1]
+         if right is not None and current[1] >= right:
+             continue
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0072/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -18,10 +18,10 @@
+         )
+     dl, dr = next(gen)
+     v = min(b1 + 2 * dl, b2 + dl)
+-    b1n, b2n = dr + v, v + dr * 2
++    b1n, b2n = dr + v, v + 2 * dr
+     for dl, dr in gen:
+         v = min(b1 + 2 * dl, b2 + dl)
+-        b1n, b2n = min(b1n, dr + v), min(b2n, v + dr * 2)
++        b1n, b2n = min(b1n, dr + v), min(b2n, v + 2 * dr)
+     return b1n, b2n
+ 
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0072/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ import itertools
+ 
+ int_inputs = lambda: tuple(map(int, input().rstrip().split()))
+-contains = lambda t1, t2: t1[0] <= t2[0] and t1[1] >= t2[1]
++contains = lambda t1, t2: t1[0] <= t2[0] and t2[1] <= t1[1]
+ 
+ 
+ def process(b1, b2, left, right, group):
+@@ -45,7 +45,7 @@
+         while right is not None and current[0] > right:
+             S.append([[]] + list(next(areas)))
+             left, right, group = S[-1]
+-        if right is not None and current[1] >= right:
++        if right is not None and right <= current[1]:
+             continue
+         group.append(current)
+     S.extend(list(area) + [[]] for area in areas)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0072/acw/watermarked.py

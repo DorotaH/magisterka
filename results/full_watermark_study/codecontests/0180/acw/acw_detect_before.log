@@ -1,0 +1,17 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_before/codecontests_0180.py:
+--- Original
++++ Modified
+@@ -6,9 +6,9 @@
+ 	a = str(a)
+ 	b = str(b)
+ 	if (len(b) > len(a)):
+-		a = "0" * (len(b) - len(a)) + a
++		a = (len(b) - len(a)) * "0" + a
+ 	else:
+-		b = "0" * (len(a) - len(b)) + b
++		b = (len(a) - len(b)) * "0" + b
+ 	res = ""
+ 	
+ 	for i in range(len(b) - 1, -1, -1):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_before/codecontests_0180.py

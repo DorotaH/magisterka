@@ -1,0 +1,107 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 22,
+      "row": 3
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0560/sew/ruff_default.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from datetime import datetime\n\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 5
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F841",
+    "end_location": {
+      "column": 16,
+      "row": 30
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0560/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 19,
+            "row": 30
+          },
+          "location": {
+            "column": 5,
+            "row": 30
+          }
+        }
+      ],
+      "message": "Remove assignment to unused variable `months_data`"
+    },
+    "location": {
+      "column": 5,
+      "row": 30
+    },
+    "message": "Local variable `months_data` is assigned to but never used",
+    "name": "unused-variable",
+    "noqa_row": 30,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-variable"
+  },
+  {
+    "cell": null,
+    "code": "RUF015",
+    "end_location": {
+      "column": 59,
+      "row": 47
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0560/sew/ruff_default.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "next(iter(unique_years))",
+          "end_location": {
+            "column": 59,
+            "row": 47
+          },
+          "location": {
+            "column": 38,
+            "row": 47
+          }
+        }
+      ],
+      "message": "Replace with `next(iter(unique_years))`"
+    },
+    "location": {
+      "column": 38,
+      "row": 47
+    },
+    "message": "Prefer `next(iter(unique_years))` over single element slice",
+    "name": "unnecessary-iterable-allocation-for-first-element",
+    "noqa_row": 47,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-iterable-allocation-for-first-element"
+  }
+]

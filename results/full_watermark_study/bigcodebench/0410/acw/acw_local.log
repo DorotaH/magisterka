@@ -1,0 +1,11 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0410/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -55,4 +55,4 @@
+     except ValueError as e:
+         raise ValueError("Date format is incorrect. Please use 'yyyy-mm-dd' format.") from e
+ 
+-    return df[(df[column_name] >= start_date) & (df[column_name] <= end_date)]
++    return df[(start_date <= df[column_name]) & (df[column_name] <= end_date)]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0410/acw/watermarked.py

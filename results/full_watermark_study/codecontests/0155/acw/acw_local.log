@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0155/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+                 cnt += 1
+                 while pq and pq[0][0] <= x:
+                     _, j = heapq.heappop(pq)
+-                    ret[j + 1] = f"{pairs[j][0] - x} {pairs[j][1] - k + x}"
++                    ret[1 + j] = f"{pairs[j][0] - x} {pairs[j][1] - k + x}"
+             else:
+                 heapq.heappush(pq, (x, i))
+     ret[0] = str(cnt)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0155/acw/watermarked.py

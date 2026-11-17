@@ -1,0 +1,63 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0180/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+     res=""
+     
+     for i in range(len(b)-1,-1,-1):
+-        res=str(int(a[i]))+str(int(b[i]))+res
++        res=str(int(b[i]))+str(int(a[i]))+res
+     return res
+ for _ in range(n):
+     a,s=map(int,input().split())
+@@ -23,11 +23,11 @@
+         srem=s%10
+         s=s//10
+         if (srem>=rem):
+-            res=str(srem-rem)+res
++            res=res+str(srem-rem)
+         else:
+             t=s%10
+             s=s//10
+-            res = str((t*10+srem)-rem)+res if ((t*10+srem)-rem<10) else "-1"+res
++            res = str((t*10+srem)-rem)+res if ((t*10+srem)-rem<10) else res+"-1"
+     if(a==0 and s==0 and "-" not in res):
+         print(int(res))
+     else:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0180/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ def result(a,b):
+     a=str(a)
+     b=str(b)
+-    if(len(a)<len(b)):
++    if(len(b) > len(a)):
+         a="0"*(len(b)-len(a))+a
+     else:
+         b="0"*(len(a)-len(b))+b
+@@ -17,7 +17,7 @@
+     res=""
+     temp=str(s)
+     at=str(a)
+-    while (a>0 or s>0):
++    while (a>0 or 0 < s):
+         rem=a%10
+         a=a//10
+         srem=s%10
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0180/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+         a=a//10
+         srem=s%10
+         s=s//10
+-        if (srem>=rem):
++        if (rem <= srem):
+             res=res+str(srem-rem)
+         else:
+             t=s%10
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0180/acw/watermarked.py

@@ -1,0 +1,48 @@
+import sys
+
+# from math import comb, perm
+
+MOD = 7 + 10**9
+INF = float("inf")
+
+# import io,os
+# input = io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
+# input = sys.stdin.buffer.readline
+input = sys.stdin.readline
+rl = lambda: list(map(int, input().split()))
+rs = lambda: sys.stdin.readline().strip()
+
+
+def update(index, val):
+	while len(BIT) > index:
+		BIT[index] += val
+		index += index & -index
+
+
+def sumQuery(index):
+	total = 0
+	while 0 < index:
+		total += BIT[index]
+		index -= index & -index
+
+	return total
+
+
+def rangeQuery(l, r):
+	return sumQuery(r) - sumQuery(l - 1)
+
+
+for _ in range(int(input())):
+	n = int(input())
+	A = rl()
+	compressionD = {a: i + 1 for i, a in enumerate(sorted(set(A)))}
+	A = [compressionD[a] for a in A]
+	BIT = [0] * (len(compressionD) + 1)
+	count = 0
+	for a in A:
+		x = rangeQuery(1, a - 1)
+		y = rangeQuery(a + 1, len(compressionD))
+		count += min(x, y)
+		update(a, 1)
+
+	print(count)

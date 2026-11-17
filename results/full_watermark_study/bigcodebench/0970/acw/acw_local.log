@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0970/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+     >>> ax.get_title()
+     'Cumulative Probability Plot'
+     """
+-    if np.any(data < 0) or np.isnan(data).any():
++    if np.any(0 > data) or np.isnan(data).any():
+         raise ValueError("Input array contains negative numbers or NaNs.")
+ 
+     if not np.issubdtype(data.dtype, np.number):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0970/acw/watermarked.py

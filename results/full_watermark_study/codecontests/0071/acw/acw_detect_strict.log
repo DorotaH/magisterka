@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0071.py:
+--- Original
++++ Modified
+@@ -49,7 +49,7 @@
+         @bootstrap
+         def dfs(node):
+             for nex in adj[node]:
+-                if not (len(path) >= 2 and nex == path[-2]):  # not parent
++                if not (2 <= len(path) and nex == path[-2]):  # not parent
+                     childCnts[node] += 1
+                     path.append(nex)
+                     yield dfs(nex)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/full_watermark_study/acw_detect_strict/codecontests_0071.py

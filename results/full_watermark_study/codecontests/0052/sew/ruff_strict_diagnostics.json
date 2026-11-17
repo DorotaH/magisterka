@@ -1,0 +1,266 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 31,
+      "row": 25
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0052/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import math\nimport os\nimport sys\nfrom io import BytesIO, IOBase\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 26
+          },
+          "location": {
+            "column": 1,
+            "row": 22
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 22
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 22,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 13,
+      "row": 24
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0052/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 25
+          },
+          "location": {
+            "column": 1,
+            "row": 24
+          }
+        }
+      ],
+      "message": "Remove unused import: `math`"
+    },
+    "location": {
+      "column": 9,
+      "row": 24
+    },
+    "message": "`math` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 24,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "SIM300",
+    "end_location": {
+      "column": 34,
+      "row": 47
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0052/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "self.newlines == 0",
+          "end_location": {
+            "column": 34,
+            "row": 47
+          },
+          "location": {
+            "column": 16,
+            "row": 47
+          }
+        }
+      ],
+      "message": "Rewrite as `self.newlines == 0`"
+    },
+    "location": {
+      "column": 16,
+      "row": 47
+    },
+    "message": "Yoda condition detected",
+    "name": "yoda-conditions",
+    "noqa_row": 47,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/yoda-conditions"
+  },
+  {
+    "cell": null,
+    "code": "E731",
+    "end_location": {
+      "column": 50,
+      "row": 70
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0052/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "def input():\n    return sys.stdin.readline().rstrip(\"\\r\\n\")",
+          "end_location": {
+            "column": 50,
+            "row": 70
+          },
+          "location": {
+            "column": 1,
+            "row": 70
+          }
+        }
+      ],
+      "message": "Rewrite `input` as a `def`"
+    },
+    "location": {
+      "column": 1,
+      "row": 70
+    },
+    "message": "Do not assign a `lambda` expression, use a `def`",
+    "name": "lambda-assignment",
+    "noqa_row": 70,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/lambda-assignment"
+  },
+  {
+    "cell": null,
+    "code": "E741",
+    "end_location": {
+      "column": 2,
+      "row": 107
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0052/sew/ruff_strict.py",
+    "fix": null,
+    "location": {
+      "column": 1,
+      "row": 107
+    },
+    "message": "Ambiguous variable name: `l`",
+    "name": "ambiguous-variable-name",
+    "noqa_row": 107,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/ambiguous-variable-name"
+  },
+  {
+    "cell": null,
+    "code": "SIM201",
+    "end_location": {
+      "column": 28,
+      "row": 111
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0052/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "n & n - 1 != 0",
+          "end_location": {
+            "column": 28,
+            "row": 111
+          },
+          "location": {
+            "column": 8,
+            "row": 111
+          }
+        }
+      ],
+      "message": "Replace with `!=` operator"
+    },
+    "location": {
+      "column": 8,
+      "row": 111
+    },
+    "message": "Use `n & n - 1 != 0` instead of `not n & n - 1 == 0`",
+    "name": "negate-equal-op",
+    "noqa_row": 111,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/negate-equal-op"
+  },
+  {
+    "cell": null,
+    "code": "B007",
+    "end_location": {
+      "column": 15,
+      "row": 126
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0052/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "_unique",
+          "end_location": {
+            "column": 15,
+            "row": 126
+          },
+          "location": {
+            "column": 9,
+            "row": 126
+          }
+        }
+      ],
+      "message": "Rename unused `unique` to `_unique`"
+    },
+    "location": {
+      "column": 9,
+      "row": 126
+    },
+    "message": "Loop control variable `unique` not used within loop body",
+    "name": "unused-loop-control-variable",
+    "noqa_row": 126,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-loop-control-variable"
+  },
+  {
+    "cell": null,
+    "code": "W292",
+    "end_location": {
+      "column": 11,
+      "row": 133
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/codecontests/0052/sew/ruff_strict.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "\n",
+          "end_location": {
+            "column": 11,
+            "row": 133
+          },
+          "location": {
+            "column": 11,
+            "row": 133
+          }
+        }
+      ],
+      "message": "Add trailing newline"
+    },
+    "location": {
+      "column": 11,
+      "row": 133
+    },
+    "message": "No newline at end of file",
+    "name": "missing-newline-at-end-of-file",
+    "noqa_row": 133,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file"
+  }
+]

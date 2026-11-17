@@ -1,0 +1,72 @@
+[
+  {
+    "cell": null,
+    "code": "I001",
+    "end_location": {
+      "column": 61,
+      "row": 4
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0077/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import base64\nimport binascii\nimport hashlib\n\nfrom django.http import HttpResponse, HttpResponseBadRequest\n\n\n",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 1
+          }
+        }
+      ],
+      "message": "Organize imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 1
+    },
+    "message": "Import block is un-sorted or un-formatted",
+    "name": "unsorted-imports",
+    "noqa_row": 1,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+  },
+  {
+    "cell": null,
+    "code": "UP012",
+    "end_location": {
+      "column": 85,
+      "row": 60
+    },
+    "filename": "/home/dh/Desktop/watermark/results/full_watermark_study/bigcodebench/0077/original.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "b'password'",
+          "end_location": {
+            "column": 85,
+            "row": 60
+          },
+          "location": {
+            "column": 66,
+            "row": 60
+          }
+        }
+      ],
+      "message": "Rewrite as bytes literal"
+    },
+    "location": {
+      "column": 66,
+      "row": 60
+    },
+    "message": "Unnecessary call to `encode` as UTF-8",
+    "name": "unnecessary-encode-utf8",
+    "noqa_row": 60,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-encode-utf8"
+  }
+]
