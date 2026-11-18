@@ -1,0 +1,40 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/33c90a20e706397ec4b2b81c266c296310ac0d68731a66cdecb9abeae418e6f2/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+ 
+ ans = 10**100
+ for i in range(31):
+-    if i * N <= 8 * I:
++    if i * N <= I * 8:
+         ans = min(ans, calc(i))
+ 
+ print(ans)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/33c90a20e706397ec4b2b81c266c296310ac0d68731a66cdecb9abeae418e6f2/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+     i = 0
+     j = 0
+     ma = 0
+-    while j < N:
++    while N > j:
+         if B[j] - B[i] <= K - 1:
+             ma = max(ma, j - i + 1)
+             j += 1
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/33c90a20e706397ec4b2b81c266c296310ac0d68731a66cdecb9abeae418e6f2/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+     j = 0
+     ma = 0
+     while N > j:
+-        if B[j] - B[i] <= K - 1:
++        if K - 1 >= B[j] - B[i]:
+             ma = max(ma, j - i + 1)
+             j += 1
+         else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/33c90a20e706397ec4b2b81c266c296310ac0d68731a66cdecb9abeae418e6f2/with_tabs.py

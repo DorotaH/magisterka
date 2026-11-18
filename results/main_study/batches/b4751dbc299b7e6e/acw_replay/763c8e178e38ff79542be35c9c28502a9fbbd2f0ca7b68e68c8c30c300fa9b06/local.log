@@ -1,0 +1,54 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/763c8e178e38ff79542be35c9c28502a9fbbd2f0ca7b68e68c8c30c300fa9b06/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+     n = int(input())
+     a = list(map(int, input().split()))
+ 
+-    MAX = 10**7 + 1
++    MAX = 1 + 10**7
+     res = MAX * MAX
+ 
+     #MAX_P = int(math.sqrt(MAX))
+@@ -71,7 +71,7 @@
+                     x, y = ind1[d], ind2[d]
+                     res = cand1[d] // d * cand2[d]
+ 
+-    print(min(x+1, y+1), max(x+1, y+1))
++    print(min(1+x, y+1), max(1+x, y+1))
+ 
+ 
+ def __starting_point():
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/763c8e178e38ff79542be35c9c28502a9fbbd2f0ca7b68e68c8c30c300fa9b06/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,11 +41,11 @@
+         p = 0
+         while val > 0 and p < np:
+             while val % primes[p] == 0:
+-                divisors += [d * primes[p] for d in divisors]
++                divisors += [primes[p] * d for d in divisors]
+                 val //= primes[p]
+             p += 1
+         if val > 1:
+-            divisors += [d * val for d in divisors]
++            divisors += [val * d for d in divisors]
+ 
+         for d in set(divisors):
+             if d not in cand1:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/763c8e178e38ff79542be35c9c28502a9fbbd2f0ca7b68e68c8c30c300fa9b06/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+     primes = []
+     p = 2
+     sieve = [True] * (MAX_P+1)
+-    while p < MAX_P:
++    while MAX_P > p:
+         if sieve[p]:
+             primes.append(p)
+             k = 2
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/763c8e178e38ff79542be35c9c28502a9fbbd2f0ca7b68e68c8c30c300fa9b06/with_tabs.py

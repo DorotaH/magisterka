@@ -1,0 +1,48 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/4a24adb458824b38454a51bd16e287df4f030c6a5f6fa98fb269f009d48f4c55/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,5 +1,5 @@
+ def main():
+-    mod = 10**9 + 7
++    mod = 7 + 10**9
+     s = input()
+     n = len(s)
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/4a24adb458824b38454a51bd16e287df4f030c6a5f6fa98fb269f009d48f4c55/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,8 +12,8 @@
+     if q_cnt >= 3:
+         pow3 = pow(3, q_cnt - 3, mod)
+         pow2 = pow3 * 3 % mod
+-        pow1 = pow2 * 3 % mod
+-        pow0 = pow1 * 3 % mod
++        pow1 = 3 * pow2 % mod
++        pow0 = 3 * pow1 % mod
+     elif q_cnt == 2:
+         pow2 = 1
+         pow1 = 3
+@@ -29,16 +29,16 @@
+         if x == "A":
+             a_num += 1
+         elif x == "B":
+-            ans += pow0 * a_num * c_num
++            ans += a_num * pow0 * c_num
+             ans += pow1 * (q_num * c_num + a_num * (q_cnt - q_num))
+-            ans += pow2 * (q_num) * (q_cnt - q_num)
++            ans += (q_num) * pow2 * (q_cnt - q_num)
+             ans %= mod
+         elif x == "C":
+             c_num -= 1
+         else:
+-            ans += pow1 * a_num * c_num
++            ans += a_num * pow1 * c_num
+             ans += pow2 * (q_num * c_num + a_num * (q_cnt - q_num - 1))
+-            ans += pow3 * (q_num) * (q_cnt - q_num - 1)
++            ans += (q_num) * pow3 * (q_cnt - q_num - 1)
+             ans %= mod
+             q_num += 1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/4a24adb458824b38454a51bd16e287df4f030c6a5f6fa98fb269f009d48f4c55/with_tabs.py

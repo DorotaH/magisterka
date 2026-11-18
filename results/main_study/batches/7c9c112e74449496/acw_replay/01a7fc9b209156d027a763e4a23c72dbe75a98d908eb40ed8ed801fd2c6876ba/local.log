@@ -1,0 +1,13 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/01a7fc9b209156d027a763e4a23c72dbe75a98d908eb40ed8ed801fd2c6876ba/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+     for i in range(0, n):
+         a[i] += d[i]
+         if d[i] == 0: continue
+-        k = Min(k, a[i] // d[i]) if a[i] % d[i] > 0 else Min(k, a[i] // d[i] - 1)
++        k = Min(k, a[i] // d[i]) if 0 < a[i] % d[i] else Min(k, a[i] // d[i] - 1)
+     if k == 10**20:
+         k = 0
+ 
+

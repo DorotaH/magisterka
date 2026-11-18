@@ -1,0 +1,23 @@
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        final = []
+        if numRows == 0:
+            return final
+        elif numRows == 1:
+            final.append([1])
+            return final
+        elif numRows == 2:
+            final.append([1])
+            final.append([1, 1])
+            return final
+        else:
+            final.append([1])
+            final.append([1, 1])
+            for i in range(1, numRows - 1):
+                a = [1]
+                jk = len(final[i][:]) - 1
+                for ii in range(0, jk):
+                    a.append(final[i][ii] + final[i][ii + 1])
+                a.append(1)
+                final.append(a)
+            return final

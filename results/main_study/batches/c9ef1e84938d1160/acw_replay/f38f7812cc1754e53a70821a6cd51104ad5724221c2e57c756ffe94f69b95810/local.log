@@ -1,0 +1,67 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/f38f7812cc1754e53a70821a6cd51104ad5724221c2e57c756ffe94f69b95810/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         c = (c[1], c[0], c[2])
+ 
+     ans = []
+-    if a[0] == b[0] == c[0] == n and a[1] + b[1] + c[1] == n:
++    if a[0] == b[0] == c[0] == n and b[1] + a[1] + c[1] == n:
+         for _ in range(a[1]):
+             ans.append(a[2] * n)
+         for _ in range(b[1]):
+@@ -19,7 +19,7 @@
+         for _ in range(c[1]):
+             ans.append(c[2] * n)
+         return True, ans
+-    if a[0] + c[0] == b[0] + c[0] == n and c[1] == n == a[1] + b[1]:
++    if a[0] + c[0] == b[0] + c[0] == n and c[1] == n == b[1] + a[1]:
+         for _ in range(a[1]):
+             ans.append(a[2] * a[0] + c[2] * c[0])
+         for _ in range(b[1]):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/f38f7812cc1754e53a70821a6cd51104ad5724221c2e57c756ffe94f69b95810/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+         for _ in range(a[1]):
+             ans.append(a[2] * n)
+         for _ in range(b[1]):
+-            ans.append(b[2] * n)
++            ans.append(n * b[2])
+         for _ in range(c[1]):
+             ans.append(c[2] * n)
+         return True, ans
+@@ -23,7 +23,7 @@
+         for _ in range(a[1]):
+             ans.append(a[2] * a[0] + c[2] * c[0])
+         for _ in range(b[1]):
+-            ans.append(b[2] * b[0] + c[2] * c[0])
++            ans.append(b[0] * b[2] + c[2] * c[0])
+         return True, ans
+     return False, ans
+ 
+@@ -39,7 +39,7 @@
+ # sys.stdout = open('output.txt', 'w')
+ 
+ x1, y1, x2, y2, x3, y3 = [int(i) for i in input().split()]
+-total_area = x1 * y1 + x2 * y2 + x3 * y3
++total_area = x1 * y1 + y2 * x2 + y3 * x3
+ n = 0
+ while n**2 < total_area:
+     n += 1
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/f38f7812cc1754e53a70821a6cd51104ad5724221c2e57c756ffe94f69b95810/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+ x1, y1, x2, y2, x3, y3 = [int(i) for i in input().split()]
+ total_area = x1 * y1 + y2 * x2 + y3 * x3
+ n = 0
+-while n**2 < total_area:
++while total_area > n**2:
+     n += 1
+ if n**2 == total_area:
+     first = (x1, y1, "A")
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/f38f7812cc1754e53a70821a6cd51104ad5724221c2e57c756ffe94f69b95810/with_tabs.py

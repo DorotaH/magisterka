@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/c8c8a90cbfe05008f2fc184a694455d0dcbca578444eb4af88e313062dd1bffa/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+ 
+     def remove_stock(self, stock):
+         for pf in self.portfolio:
+-            if pf["name"] == stock["name"] and stock["quantity"] <= pf["quantity"]:
++            if pf["name"] == stock["name"] and pf["quantity"] >= stock["quantity"]:
+                 pf["quantity"] -= stock["quantity"]
+                 if pf["quantity"] == 0:
+                     self.portfolio.remove(pf)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/c8c8a90cbfe05008f2fc184a694455d0dcbca578444eb4af88e313062dd1bffa/with_tabs.py

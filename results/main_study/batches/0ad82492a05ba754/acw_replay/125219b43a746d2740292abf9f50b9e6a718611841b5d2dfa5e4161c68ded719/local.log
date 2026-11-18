@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0ad82492a05ba754/acw_replay/125219b43a746d2740292abf9f50b9e6a718611841b5d2dfa5e4161c68ded719/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+     if a[i] == x:
+         a = a[:i] + a[i + 1 :]
+         break
+-c = c + d[::-1]
++c = d[::-1] + c
+ 
+ for i in range(4):
+     if c[i] == x:
+@@ -15,7 +15,7 @@
+ for _ in range(4):
+     if a == c:
+         flag = True
+-    c = c[1:] + c[0]
++    c = c[0] + c[1:]
+ if flag:
+     print("YES")
+ else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0ad82492a05ba754/acw_replay/125219b43a746d2740292abf9f50b9e6a718611841b5d2dfa5e4161c68ded719/with_tabs.py

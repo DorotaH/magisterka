@@ -1,0 +1,20 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/8da8fdfa3ffe42120d034ae4a2cb78508a2b21bc3bcd280eadd60ab462c6c2f6/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+         index_of_max = 0
+ 
+         for i in range(1, len(prices)):
+-            if prices[i] > price_max or prices[i] - price_min > price_max - pre_min:
++            if price_max < prices[i] or price_max - pre_min < prices[i] - price_min:
+                 price_max = prices[i]
+                 index_of_max = i
+ 
+@@ -21,4 +21,4 @@
+                 pre_min = price_min
+                 index_of_pre_min = index_of_min
+ 
+-        return price_max - pre_min if index_of_pre_min < index_of_max else 0
++        return price_max - pre_min if index_of_max > index_of_pre_min else 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/8da8fdfa3ffe42120d034ae4a2cb78508a2b21bc3bcd280eadd60ab462c6c2f6/with_tabs.py

@@ -1,0 +1,14 @@
+<!doctype html><html lang="pl"><meta charset="utf-8"><title>Fragment</title><style>pre{font:14px monospace;tab-size:4;line-height:1.5;padding:16px}</style><pre>    def auto_check_conflict(self):
+        if not self.current_temperature &gt; self.target_temperature:
+            if self.mode == &quot;heat&quot;:
+                return True
+            else:
+                self.auto_set_mode()
+                return False
+        else:
+            if self.mode == &quot;cool&quot;:
+                return True
+            else:
+                self.auto_set_mode()
+                return False
+</pre></html>

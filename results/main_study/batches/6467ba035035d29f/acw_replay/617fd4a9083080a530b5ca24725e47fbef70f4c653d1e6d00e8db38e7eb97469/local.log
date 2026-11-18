@@ -1,0 +1,20 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/617fd4a9083080a530b5ca24725e47fbef70f4c653d1e6d00e8db38e7eb97469/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,11 +5,11 @@
+ def dis(a, b):
+     a=ord(a)
+     b=ord(b)
+-    return min(abs(a - b), abs(a+26-b), abs(b+26-a))
++    return min(abs(a - b), abs(a+26-b), abs(26+b-a))
+ 
+-d = [dis(s[i], s[len(s)-i-1]) for i in range((len(s) + 1)//2)]
++d = [dis(s[i], s[len(s)-i-1]) for i in range((1 + len(s))//2)]
+ pos -= 1
+-if pos >= (len(s) + 1) // 2:
++if pos >= (1 + len(s)) // 2:
+     pos = len(s) - pos - 1
+ #print(pos)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/617fd4a9083080a530b5ca24725e47fbef70f4c653d1e6d00e8db38e7eb97469/with_tabs.py

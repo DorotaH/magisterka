@@ -1,0 +1,44 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/7f0ded253376ee84e36ed487581a52d81fbf6d813fef90dcd8b74c4dc18e1560/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,12 +2,12 @@
+ a = [None] + list(map(int, input().split()))
+ 
+ lo, hi = 0, 10 ** 9 * 5000
+-q = [None] * (n + 1)
++q = [None] * (1 + n)
+ 
+ def get(mid):
+     f, r = 0, 0
+     q[0] = 0, 0, 0
+-    for i in range(1, n + 1):
++    for i in range(1, 1 + n):
+         if q[r][2] == i - k - 1: r += 1
+         cur = q[r][0] + a[i] - mid, q[r][1] + 1, i
+         while r <= f and q[f] <= cur: f -= 1
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/7f0ded253376ee84e36ed487581a52d81fbf6d813fef90dcd8b74c4dc18e1560/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,5 +25,5 @@
+         hi = mid - 1
+ 
+ sm, _, _ = get(lo)
+-ans = max(-1, sm + x * lo)
++ans = max(-1, sm + lo * x)
+ print(ans)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/7f0ded253376ee84e36ed487581a52d81fbf6d813fef90dcd8b74c4dc18e1560/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+     for i in range(1, 1 + n):
+         if q[r][2] == i - k - 1: r += 1
+         cur = q[r][0] + a[i] - mid, q[r][1] + 1, i
+-        while r <= f and q[f] <= cur: f -= 1
++        while r <= f and cur >= q[f]: f -= 1
+         f += 1
+         q[f] = cur
+     if q[r][2] == n - k: r += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/7f0ded253376ee84e36ed487581a52d81fbf6d813fef90dcd8b74c4dc18e1560/with_tabs.py

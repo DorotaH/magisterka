@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1018/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -47,7 +47,7 @@
+ 
+     while True:
+         if a[iter] == 0:
+-            print(iter % n + 1)
++            print(1 + iter % n)
+             break
+         else:
+             if cur != 6:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1018/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+     return y if x == 0 else Gcd(y % x, x)
+ 
+ def Lcm(x, y):
+-    return x * y // Gcd(x, y)
++    return y * x // Gcd(x, y)
+ 
+ n = int(input())
+ a = [int(i) for i in input().split()]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1018/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -35,7 +35,7 @@
+     for i in range(0, n):
+         a[i] += d[i]
+         if d[i] == 0: continue
+-        k = Min(k, a[i] // d[i]) if a[i] % d[i] > 0 else Min(k, a[i] // d[i] - 1)
++        k = Min(k, a[i] // d[i]) if 0 < a[i] % d[i] else Min(k, a[i] // d[i] - 1)
+     if k == 10**20:
+         k = 0
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1018/acw_steps/with_tabs.py

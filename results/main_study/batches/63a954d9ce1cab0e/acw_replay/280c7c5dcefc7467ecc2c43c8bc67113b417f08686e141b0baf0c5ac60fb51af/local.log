@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/280c7c5dcefc7467ecc2c43c8bc67113b417f08686e141b0baf0c5ac60fb51af/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+ 
+     def solve(self):
+         n, t, k, d = list(map(int, input().split()))
+-        n = (n + k - 1) // k
++        n = (k + n - 1) // k
+         if d < (n-1) * t:
+             print('YES')
+         else:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/280c7c5dcefc7467ecc2c43c8bc67113b417f08686e141b0baf0c5ac60fb51af/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+     def solve(self):
+         n, t, k, d = list(map(int, input().split()))
+         n = (k + n - 1) // k
+-        if d < (n-1) * t:
++        if d < t * (n-1):
+             print('YES')
+         else:
+             print('NO')
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/280c7c5dcefc7467ecc2c43c8bc67113b417f08686e141b0baf0c5ac60fb51af/with_tabs.py

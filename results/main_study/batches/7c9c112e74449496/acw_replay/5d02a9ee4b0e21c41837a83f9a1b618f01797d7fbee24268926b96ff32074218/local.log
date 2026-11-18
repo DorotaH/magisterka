@@ -1,0 +1,85 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/5d02a9ee4b0e21c41837a83f9a1b618f01797d7fbee24268926b96ff32074218/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+     disc = max(disc, 0)
+     disc = (disc) ** 0.5
+ 
+-    return ((-b + disc) / 2 / a, (-b - disc) / 2 / a)
++    return ((disc + -b) / 2 / a, (-b - disc) / 2 / a)
+ 
+ 
+ x = int(input())
+@@ -18,13 +18,13 @@
+ 
+ py = [0, y[0]]
+ for i in range(1, x):
+-    py.append(py[-1] + y[i])
++    py.append(y[i] + py[-1])
+ z.reverse()
+ pz = [0, z[0]]
+ for i in range(1, x):
+-    pz.append(pz[-1] + z[i])
++    pz.append(z[i] + pz[-1])
+ pz.reverse()
+-k = [py[i] + 1 - pz[i] for i in range(0, x + 1)]
++k = [1 + py[i] - pz[i] for i in range(0, 1 + x)]
+ l = [0]
+ for i in range(x):
+     l.append(k[i + 1] - k[i])
+@@ -35,7 +35,7 @@
+ avals = []
+ bvals = []
+ 
+-for i in range(1, x + 1):
++for i in range(1, 1 + x):
+     a, b = quad(-1, s1 + l[i] - s2, (s1 + l[i]) * s2 - py[i])
+ 
+     if b < 0 or l[i] - b < 0:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/5d02a9ee4b0e21c41837a83f9a1b618f01797d7fbee24268926b96ff32074218/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ 
+ 
+ def quad(a, b, c):
+-    disc = b**2 - 4 * a * c
++    disc = b**2 - a * 4 * c
+     disc = max(disc, 0)
+     disc = (disc) ** 0.5
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/5d02a9ee4b0e21c41837a83f9a1b618f01797d7fbee24268926b96ff32074218/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,9 +38,9 @@
+ for i in range(1, 1 + x):
+     a, b = quad(-1, s1 + l[i] - s2, (s1 + l[i]) * s2 - py[i])
+ 
+-    if b < 0 or l[i] - b < 0:
++    if 0 > b or l[i] - b < 0:
+         a, b = b, a
+-    if a < 0 and b < 0:
++    if a < 0 and 0 > b:
+         a = 0
+         b = 0
+     bvals.append(b)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/5d02a9ee4b0e21c41837a83f9a1b618f01797d7fbee24268926b96ff32074218/without_tabs.py:
+--- Original
++++ Modified
+@@ -49,9 +49,9 @@
+     s2 += bvals[-1]
+ 
+ for i in range(len(avals)):
+-    if abs(avals[i]) <= 10 ** (-10):
++    if 10 ** (-10) >= abs(avals[i]):
+         avals[i] = 0
+-    if abs(bvals[i]) <= 10 ** (-10):
++    if 10 ** (-10) >= abs(bvals[i]):
+         bvals[i] = 0
+ 
+ print(" ".join([str(i) for i in avals]))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/5d02a9ee4b0e21c41837a83f9a1b618f01797d7fbee24268926b96ff32074218/with_tabs.py

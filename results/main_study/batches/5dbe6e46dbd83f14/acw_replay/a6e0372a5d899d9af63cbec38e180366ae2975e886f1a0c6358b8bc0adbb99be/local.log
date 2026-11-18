@@ -1,0 +1,13 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/a6e0372a5d899d9af63cbec38e180366ae2975e886f1a0c6358b8bc0adbb99be/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+             del d[k]
+ 
+     def allNonPos(self, d):
+-        return all(v <= 0 for k, v in d.items())
++        return all(0 >= v for k, v in d.items())
+ 
+     def moveForward(self, s, start, lettersNeeded, lettersSet) :
+         missing = 0
+

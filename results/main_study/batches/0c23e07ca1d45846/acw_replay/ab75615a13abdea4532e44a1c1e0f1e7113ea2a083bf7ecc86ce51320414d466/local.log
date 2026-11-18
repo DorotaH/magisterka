@@ -1,0 +1,52 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/ab75615a13abdea4532e44a1c1e0f1e7113ea2a083bf7ecc86ce51320414d466/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,9 +1,9 @@
+ def f(n):
+-    m = int(n ** 0.5) + 1
+-    t = [1] * (n + 1)
++    m = 1 + int(n ** 0.5)
++    t = [1] * (1 + n)
+     for i in range(3, m):
+         if t[i]: t[i * i :: 2 * i] = [0] * ((n - i * i) // (2 * i) + 1)
+-    return [2] + [i for i in range(3, n + 1, 2) if t[i]]
++    return [2] + [i for i in range(3, 1 + n, 2) if t[i]]
+ 
+ a, b, k = map(int, input().split())
+ n = 2000001
+@@ -16,7 +16,7 @@
+ 
+ t.reverse()
+ for i in range(1, n):
+-    if t[i] < 0: t[i] = t[i - 1] + 1
++    if t[i] < 0: t[i] = 1 + t[i - 1]
+ t.reverse()
+ 
+ for i in range(a + 1, b):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/ab75615a13abdea4532e44a1c1e0f1e7113ea2a083bf7ecc86ce51320414d466/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+     m = 1 + int(n ** 0.5)
+     t = [1] * (1 + n)
+     for i in range(3, m):
+-        if t[i]: t[i * i :: 2 * i] = [0] * ((n - i * i) // (2 * i) + 1)
++        if t[i]: t[i * i :: i * 2] = [0] * ((n - i * i) // (i * 2) + 1)
+     return [2] + [i for i in range(3, 1 + n, 2) if t[i]]
+ 
+ a, b, k = map(int, input().split())
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/ab75615a13abdea4532e44a1c1e0f1e7113ea2a083bf7ecc86ce51320414d466/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+     t[i] = max(t[i], t[i - 1])
+ 
+ for l in range(1, b - a + 1):
+-    if t[b - l] < l:
++    if l > t[b - l]:
+         x = l
+         break
+ print(x)
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/ab75615a13abdea4532e44a1c1e0f1e7113ea2a083bf7ecc86ce51320414d466/with_tabs.py

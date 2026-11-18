@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/detect-capital/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+                 lower_count += 1
+             else:
+                 upper_count += 1
+-            if capital and upper_count > 1 and lower_count > 0:
++            if capital and upper_count > 1 and 0 < lower_count:
+                 return False
+             if not capital and upper_count > 0:
+                 return False
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/detect-capital/acw_steps/with_tabs.py

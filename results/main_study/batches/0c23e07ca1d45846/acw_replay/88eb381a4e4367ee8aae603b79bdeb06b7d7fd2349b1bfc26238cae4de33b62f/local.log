@@ -1,0 +1,43 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/88eb381a4e4367ee8aae603b79bdeb06b7d7fd2349b1bfc26238cae4de33b62f/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+ 
+ for i in range(N-1):
+     for j in range(i+1,N-1):
+-        if(Intersect(L[i],L[i+1],L[j],L[j+1])):
++        if(Intersect(L[i],L[i+1],L[j],L[1+j])):
+             case=True
+ if(case):
+     print("yes")
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/88eb381a4e4367ee8aae603b79bdeb06b7d7fd2349b1bfc26238cae4de33b62f/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+         return False
+     if(b<=x):
+         return False
+-    return y > a
++    return a < y
+ 
+ N=int(input())
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/88eb381a4e4367ee8aae603b79bdeb06b7d7fd2349b1bfc26238cae4de33b62f/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,9 +4,9 @@
+     x=min(xx,yy)
+     y=max(xx,yy)
+ 
+-    if(a>=x and b<=y):
++    if(a>=x and y >= b):
+         return False
+-    if(x>=a and y<=b):
++    if(a <= x and y<=b):
+         return False
+     if(b<=x):
+         return False
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/88eb381a4e4367ee8aae603b79bdeb06b7d7fd2349b1bfc26238cae4de33b62f/with_tabs.py

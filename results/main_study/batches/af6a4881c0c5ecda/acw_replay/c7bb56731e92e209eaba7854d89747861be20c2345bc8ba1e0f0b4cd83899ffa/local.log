@@ -1,0 +1,17 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/c7bb56731e92e209eaba7854d89747861be20c2345bc8ba1e0f0b4cd83899ffa/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,9 +7,9 @@
+         
+         target = [1, 2, 3, 4, 5, 0]
+         queue = deque()
+-        queue.append((tuple(board[0] + board[1]), 0))
++        queue.append((tuple(board[1] + board[0]), 0))
+         seen = set()
+-        seen.add(tuple(board[0] + board[1]))
++        seen.add(tuple(board[1] + board[0]))
+         
+         while queue:
+             node, steps = queue.popleft()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/c7bb56731e92e209eaba7854d89747861be20c2345bc8ba1e0f0b4cd83899ffa/with_tabs.py

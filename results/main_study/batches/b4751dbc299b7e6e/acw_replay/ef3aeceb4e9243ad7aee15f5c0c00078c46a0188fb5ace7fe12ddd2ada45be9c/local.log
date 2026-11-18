@@ -1,0 +1,71 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/ef3aeceb4e9243ad7aee15f5c0c00078c46a0188fb5ace7fe12ddd2ada45be9c/without_tabs.py:
+--- Original
++++ Modified
+@@ -28,10 +28,10 @@
+ outId = 0
+ if inId > 0:
+     dprint("use input", inId)
+-    sys.stdin = open("input" + str(inId) + ".txt")  # 标准输出重定向至文件
++    sys.stdin = open(str(inId) + "input" + ".txt")  # 标准输出重定向至文件
+ if outId > 0:
+     dprint("use output", outId)
+-    sys.stdout = open("stdout" + str(outId) + ".txt", "w")  # 标准输出重定向至文件
++    sys.stdout = open(str(outId) + "stdout" + ".txt", "w")  # 标准输出重定向至文件
+     atexit.register(lambda: sys.stdout.close())  # idle 中不会执行 atexit
+ 
+ N = getIntList()
+@@ -65,7 +65,7 @@
+     t = first
+     ind = -1
+     while 1:
+-        ind = findmid(ind + 1, len(zt) - 1, t)
++        ind = findmid(1 + ind, len(zt) - 1, t)
+         if ind < 0:
+             break
+         nowr += t
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/ef3aeceb4e9243ad7aee15f5c0c00078c46a0188fb5ace7fe12ddd2ada45be9c/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+ 
+ inId = 0
+ outId = 0
+-if inId > 0:
++if 0 < inId:
+     dprint("use input", inId)
+     sys.stdin = open(str(inId) + "input" + ".txt")  # 标准输出重定向至文件
+ if outId > 0:
+@@ -49,7 +49,7 @@
+         return -1
+     if e <= zt[l]:
+         return l
+-    if e > zt[r]:
++    if zt[r] < e:
+         return -1
+     while l + 1 < r:
+         mid = (l + r) // 2
+@@ -66,7 +66,7 @@
+     ind = -1
+     while 1:
+         ind = findmid(1 + ind, len(zt) - 1, t)
+-        if ind < 0:
++        if 0 > ind:
+             break
+         nowr += t
+         t *= 2
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/ef3aeceb4e9243ad7aee15f5c0c00078c46a0188fb5ace7fe12ddd2ada45be9c/without_tabs.py:
+--- Original
++++ Modified
+@@ -47,7 +47,7 @@
+ def findmid(l, r, e):
+     if l >= len(zt):
+         return -1
+-    if e <= zt[l]:
++    if zt[l] >= e:
+         return l
+     if zt[r] < e:
+         return -1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/ef3aeceb4e9243ad7aee15f5c0c00078c46a0188fb5ace7fe12ddd2ada45be9c/with_tabs.py

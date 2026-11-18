@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_66/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+ 
+         while pos < length - 2:
+             if string[pos] == '&' and string[pos + 1] == '#':
+-                start = pos + 2
++                start = 2 + pos
+                 is_hex = False
+                 first_char = string[start]
+ 
+@@ -31,7 +31,7 @@
+                         return ''.join(out)
+ 
+                     out.append(chr(entity_value))
+-                    pos = end + 1
++                    pos = 1 + end
+                     continue
+ 
+             out.append(string[pos])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_66/acw_steps/with_tabs.py

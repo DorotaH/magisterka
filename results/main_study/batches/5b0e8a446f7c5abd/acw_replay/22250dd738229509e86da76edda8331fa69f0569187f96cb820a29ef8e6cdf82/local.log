@@ -1,0 +1,29 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/22250dd738229509e86da76edda8331fa69f0569187f96cb820a29ef8e6cdf82/without_tabs.py:
+--- Original
++++ Modified
+@@ -39,16 +39,16 @@
+             for x, y in forward:
+                 if (
+                     i + x >= 0
+-                    and j + y >= 0
++                    and y + j >= 0
+                     and i + x < n
+-                    and j + y < n
+-                    and grid[i + x][j + y] != -1
++                    and y + j < n
++                    and grid[i + x][y + j] != -1
+                 ):
+-                    temp = grid[i + x][j + y]
++                    temp = grid[i + x][y + j]
+                     # grid[i+x][j+y] = 0
+-                    if dfs(i + x, j + y) + grid[i + x][j + y] > maxi:
+-                        p, q = i + x, j + y
+-                    maxi = max(dfs(i + x, j + y) + grid[i + x][j + y], maxi)
++                    if dfs(i + x, y + j) + grid[i + x][y + j] > maxi:
++                        p, q = i + x, y + j
++                    maxi = max(dfs(i + x, y + j) + grid[i + x][y + j], maxi)
+                     # grid[i+x][j+y] = temp
+             # print(i,j, maxi)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/22250dd738229509e86da76edda8331fa69f0569187f96cb820a29ef8e6cdf82/with_tabs.py

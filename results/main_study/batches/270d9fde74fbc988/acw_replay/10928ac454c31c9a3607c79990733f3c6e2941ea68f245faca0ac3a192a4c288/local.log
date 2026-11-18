@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/10928ac454c31c9a3607c79990733f3c6e2941ea68f245faca0ac3a192a4c288/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,6 +15,6 @@
+              result.append(string)
+              return
+          if left:
+-             self.generate(left - 1, right , result, string+'(')
++             self.generate(left - 1, right , result, '('+string)
+          if left < right:
+-             self.generate(left, right - 1, result, string+')')
++             self.generate(left, right - 1, result, ')'+string)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/10928ac454c31c9a3607c79990733f3c6e2941ea68f245faca0ac3a192a4c288/with_tabs.py

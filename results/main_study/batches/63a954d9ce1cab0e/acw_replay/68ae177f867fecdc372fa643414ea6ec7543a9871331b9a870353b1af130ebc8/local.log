@@ -1,0 +1,48 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/68ae177f867fecdc372fa643414ea6ec7543a9871331b9a870353b1af130ebc8/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,12 +13,12 @@
+ 
+ 
+ def prime(n):
+-    m = int(n**0.5) + 1
+-    t = [1] * (n + 1)
++    m = 1 + int(n**0.5)
++    t = [1] * (1 + n)
+     for i in range(3, m):
+         if t[i]:
+             t[i * i :: 2 * i] = [0] * ((n - i * i) // (2 * i) + 1)
+-    return [2] + [i for i in range(3, n + 1, 2) if t[i]]
++    return [2] + [i for i in range(3, 1 + n, 2) if t[i]]
+ 
+ 
+ p = prime(31650)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/68ae177f867fecdc372fa643414ea6ec7543a9871331b9a870353b1af130ebc8/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,11 +5,11 @@
+ f = [0] * 15001
+ f[0] = 1
+ for i in range(1, 15001):
+-    f[i] = (f[i - 1] * i) % m
++    f[i] = (i * f[i - 1]) % m
+ 
+ 
+ def c(n, k):
+-    return (f[n] * pow((f[k] * f[n - k]) % m, m - 2, m)) % m
++    return (f[n] * pow((f[n - k] * f[k]) % m, m - 2, m)) % m
+ 
+ 
+ def prime(n):
+@@ -17,7 +17,7 @@
+     t = [1] * (1 + n)
+     for i in range(3, m):
+         if t[i]:
+-            t[i * i :: 2 * i] = [0] * ((n - i * i) // (2 * i) + 1)
++            t[i * i :: i * 2] = [0] * ((n - i * i) // (i * 2) + 1)
+     return [2] + [i for i in range(3, 1 + n, 2) if t[i]]
+ 
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/68ae177f867fecdc372fa643414ea6ec7543a9871331b9a870353b1af130ebc8/with_tabs.py

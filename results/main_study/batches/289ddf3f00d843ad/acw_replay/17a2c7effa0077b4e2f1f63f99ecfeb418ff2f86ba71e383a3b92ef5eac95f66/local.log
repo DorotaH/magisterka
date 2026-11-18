@@ -1,0 +1,23 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/17a2c7effa0077b4e2f1f63f99ecfeb418ff2f86ba71e383a3b92ef5eac95f66/without_tabs.py:
+--- Original
++++ Modified
+@@ -42,7 +42,7 @@
+ 	for d in div:
+ 		n = S // d
+ 		# d桁のものをn個使うようにしたい
+-		if d < 10:
++		if 10 > d:
+ 			total = 10 ** (d - 1) * 9
+ 			cnt += max(0, total - n + 1)
+ 		else:
+@@ -59,7 +59,7 @@
+ 		for L in range(1, R):
+ 			mid = sum(i * 9 * 10**(i - 1) for i in range(L + 1, R)) # 途中の桁数の寄与
+ 			rest = S - (mid + L + R)
+-			if rest < 0:
++			if 0 > rest:
+ 				continue
+ 			# Lが1+x個、Rが1+y個として
+ 			# Lx + Ry = rest, 0<=x<=x_max, 0<=y<=y_max
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/17a2c7effa0077b4e2f1f63f99ecfeb418ff2f86ba71e383a3b92ef5eac95f66/with_tabs.py

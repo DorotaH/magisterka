@@ -1,0 +1,17 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/0b4cd85f0fc028c36f89b8251bf416bd62cf7c45c3597cd80391edf865261848/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,9 +15,9 @@
+         if n == 0:
+             res = inputs[:]
+             inputs[:] = []
+-        while n > len(inputs):
++        while len(inputs) < n:
+             inputs.extend(input().split(" "))
+-        if n > 0:
++        if 0 < n:
+             res = inputs[:n]
+             inputs[:n] = []
+         return res
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/0b4cd85f0fc028c36f89b8251bf416bd62cf7c45c3597cd80391edf865261848/with_tabs.py

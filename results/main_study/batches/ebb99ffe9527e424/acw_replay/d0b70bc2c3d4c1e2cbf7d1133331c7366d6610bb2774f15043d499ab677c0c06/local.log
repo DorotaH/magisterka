@@ -1,0 +1,23 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/d0b70bc2c3d4c1e2cbf7d1133331c7366d6610bb2774f15043d499ab677c0c06/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+             if total_num == 0:
+                 return 0.0, [0.0]
+             ranking_array = 1.0 / (np.array(list(range(len(sub_list)))) + 1)
+-            mr_np = sub_list * ranking_array
++            mr_np = ranking_array * sub_list
+ 
+             mr = next((team for team in mr_np if team > 0), 0.0)
+             return mr, [mr]
+@@ -34,7 +34,7 @@
+                     mr = 0.0
+                 else:
+                     ranking_array = 1.0 / (np.array(list(range(len(sub_list)))) + 1)
+-                    mr_np = sub_list * ranking_array
++                    mr_np = ranking_array * sub_list
+ 
+                     mr = next((team for team in mr_np if team > 0), 0.0)
+                 separate_result.append(mr)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/d0b70bc2c3d4c1e2cbf7d1133331c7366d6610bb2774f15043d499ab677c0c06/with_tabs.py

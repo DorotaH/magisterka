@@ -1,0 +1,18 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1358/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -29,10 +29,10 @@
+                 center = max(center, D[s][-1])
+         else:
+             while (len(D[s]) > 0 and len(D[revs]) > 0 and
+-                   D[s][-1] + D[revs][-1] > 0):
++                   D[revs][-1] + D[s][-1] > 0):
+                 res += D[s].pop()
+                 res += D[revs].pop()
+ 
+-    return res + center
++    return center + res
+ 
+ print(solve())
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1358/acw_steps/with_tabs.py

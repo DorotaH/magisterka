@@ -1,0 +1,42 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/82b668bb03e62a17b8c8cc9688754325646187f0b5bd6a95b6d936dd0c28e978/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,7 +27,7 @@
+                             odds.append(x[0])
+                             odds.append(x[0])
+                             break
+-                req_length = (n - odd) // odd + 1
++                req_length = 1 + (n - odd) // odd
+                 cur_length = 0
+                 while odd > 0:
+                     if cur_length == 0:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/82b668bb03e62a17b8c8cc9688754325646187f0b5bd6a95b6d936dd0c28e978/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,8 +11,8 @@
+     if odd == 0:
+         print(1)
+         for c, x in alph.items():
+-            dq.append(c * (x >> 1))
+-            dq.appendleft(c * (x >> 1))
++            dq.append((x >> 1) * c)
++            dq.appendleft((x >> 1) * c)
+         print(*dq, sep="")
+     else:
+         for odd in range(odd, n):
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/82b668bb03e62a17b8c8cc9688754325646187f0b5bd6a95b6d936dd0c28e978/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+                     dq.append(items[-1][0] * x)
+                     dq.appendleft(items[-1][0] * x)
+                     cur_length += x << 1
+-                    if items[-1][1] - (x << 1) <= 1:
++                    if 1 >= items[-1][1] - (x << 1):
+                         items.pop()
+                     else:
+                         items[-1] = (items[-1][0], items[-1][1] - (x << 1))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/82b668bb03e62a17b8c8cc9688754325646187f0b5bd6a95b6d936dd0c28e978/with_tabs.py

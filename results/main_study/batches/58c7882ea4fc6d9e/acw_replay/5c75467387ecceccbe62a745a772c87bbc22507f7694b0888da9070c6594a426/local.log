@@ -1,0 +1,41 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/5c75467387ecceccbe62a745a772c87bbc22507f7694b0888da9070c6594a426/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,10 +27,10 @@
+ outId = 0
+ if inId > 0:
+     dprint("use input", inId)
+-    sys.stdin = open("input" + str(inId) + ".txt")  # 标准输出重定向至文件
++    sys.stdin = open(str(inId) + "input" + ".txt")  # 标准输出重定向至文件
+ if outId > 0:
+     dprint("use output", outId)
+-    sys.stdout = open("stdout" + str(outId) + ".txt", "w")  # 标准输出重定向至文件
++    sys.stdout = open(str(outId) + "stdout" + ".txt", "w")  # 标准输出重定向至文件
+     atexit.register(lambda: sys.stdout.close())  # idle 中不会执行 atexit
+ 
+ (N,) = getIntList()
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/5c75467387ecceccbe62a745a772c87bbc22507f7694b0888da9070c6594a426/without_tabs.py:
+--- Original
++++ Modified
+@@ -40,4 +40,4 @@
+     t = N // i - 1
+     re += t * i
+ 
+-print(re * 4)
++print(4 * re)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/5c75467387ecceccbe62a745a772c87bbc22507f7694b0888da9070c6594a426/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+ 
+ inId = 0
+ outId = 0
+-if inId > 0:
++if 0 < inId:
+     dprint("use input", inId)
+     sys.stdin = open(str(inId) + "input" + ".txt")  # 标准输出重定向至文件
+ if outId > 0:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/5c75467387ecceccbe62a745a772c87bbc22507f7694b0888da9070c6594a426/with_tabs.py

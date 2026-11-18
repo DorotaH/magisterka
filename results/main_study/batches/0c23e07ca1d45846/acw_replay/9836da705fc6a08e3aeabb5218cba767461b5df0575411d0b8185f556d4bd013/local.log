@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/9836da705fc6a08e3aeabb5218cba767461b5df0575411d0b8185f556d4bd013/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+         p = int(input())
+         nodes[p - 1].children.append(nodes[i])
+     ok = all(
+-        len([child for child in node.children if not child.children]) >= 3
++        3 <= len([child for child in node.children if not child.children])
+         for node in nodes
+         if node.children
+     )
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/9836da705fc6a08e3aeabb5218cba767461b5df0575411d0b8185f556d4bd013/with_tabs.py

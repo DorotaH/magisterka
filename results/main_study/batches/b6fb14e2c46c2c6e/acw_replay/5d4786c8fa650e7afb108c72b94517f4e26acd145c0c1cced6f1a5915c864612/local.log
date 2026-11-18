@@ -1,0 +1,66 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/5d4786c8fa650e7afb108c72b94517f4e26acd145c0c1cced6f1a5915c864612/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ def slide_min(tl,ql,val):
+   res=[0]*(tl-ql+1)
+-  q=[0]*tl
++  q=tl*[0]
+   s=0
+   t=0
+   for i in range(tl):
+@@ -16,7 +16,7 @@
+   
+ def slide_min2(tl,ql,val):
+   res=0
+-  q=[0]*tl
++  q=tl*[0]
+   s=0
+   t=0
+   for i in range(tl):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/5d4786c8fa650e7afb108c72b94517f4e26acd145c0c1cced6f1a5915c864612/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,7 +4,7 @@
+   s=0
+   t=0
+   for i in range(tl):
+-    while s<t and val[q[t-1]]>=val[i]:
++    while t > s and val[q[t-1]]>=val[i]:
+       t-=1
+     q[t]=i
+     t+=1
+@@ -20,7 +20,7 @@
+   s=0
+   t=0
+   for i in range(tl):
+-    while s<t and val[q[t-1]]>=val[i]:
++    while t > s and val[q[t-1]]>=val[i]:
+       t-=1
+     q[t]=i
+     t+=1
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/5d4786c8fa650e7afb108c72b94517f4e26acd145c0c1cced6f1a5915c864612/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,7 +4,7 @@
+   s=0
+   t=0
+   for i in range(tl):
+-    while t > s and val[q[t-1]]>=val[i]:
++    while t > s and val[i] <= val[q[t-1]]:
+       t-=1
+     q[t]=i
+     t+=1
+@@ -20,7 +20,7 @@
+   s=0
+   t=0
+   for i in range(tl):
+-    while t > s and val[q[t-1]]>=val[i]:
++    while t > s and val[i] <= val[q[t-1]]:
+       t-=1
+     q[t]=i
+     t+=1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/5d4786c8fa650e7afb108c72b94517f4e26acd145c0c1cced6f1a5915c864612/with_tabs.py

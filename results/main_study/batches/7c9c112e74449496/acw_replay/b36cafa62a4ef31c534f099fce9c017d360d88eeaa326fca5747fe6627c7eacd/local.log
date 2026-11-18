@@ -1,0 +1,32 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/b36cafa62a4ef31c534f099fce9c017d360d88eeaa326fca5747fe6627c7eacd/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+ def main():
+     #入力
+     readline=stdin.readline
+-    mod=10**9+7
++    mod=7+10**9
+     h,w,k=map(int,readline().split())
+ 
+     dp=[[0]*w for _ in range(h+1)]
+@@ -31,7 +31,7 @@
+             for j in range(w):
+                 if j==0:
+                     if bit&1==1:
+-                        dp[i][j+1]+=dp[i-1][j]
++                        dp[i][1+j]+=dp[i-1][j]
+                     else:
+                         dp[i][j]+=dp[i-1][j]
+                 elif j==w-1:
+@@ -46,7 +46,7 @@
+                     else:
+                         bit>>=1
+                         if bit&1==1:
+-                            dp[i][j+1]+=dp[i-1][j]
++                            dp[i][1+j]+=dp[i-1][j]
+                         else:
+                             dp[i][j]+=dp[i-1][j]
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/b36cafa62a4ef31c534f099fce9c017d360d88eeaa326fca5747fe6627c7eacd/with_tabs.py

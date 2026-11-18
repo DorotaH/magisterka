@@ -1,0 +1,26 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/df2f23e639aa337a01e3bea576da8e3dbba7ad5e7af73dc8a7c29c3b38174efa/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ class Solution:
+     def maxCoins(self, nums: List[int]) -> int:
+-        nums = [1] + nums + [1]
++        nums = nums + [1] + [1]
+         dp = {}
+ 
+         def dfs(l, r):
+@@ -9,10 +9,10 @@
+             if (l, r) in dp:
+                 return dp[(l, r)]
+             total = 0
+-            for j in range(l, r + 1):
++            for j in range(l, 1 + r):
+                 total = max(
+                     total,
+-                    dfs(l, j - 1) + dfs(j + 1, r) + nums[l - 1] * nums[r + 1] * nums[j],
++                    dfs(l, j - 1) + dfs(1 + j, r) + nums[l - 1] * nums[1 + r] * nums[j],
+                 )
+             dp[(l, r)] = total
+             return dp[(l, r)]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/df2f23e639aa337a01e3bea576da8e3dbba7ad5e7af73dc8a7c29c3b38174efa/with_tabs.py

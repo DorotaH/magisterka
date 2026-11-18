@@ -1,0 +1,17 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/61c1eeeb9c287c5b8b0af7203a07c45b8d98a6f5e3c531f9ab91ee832ac5fd73/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,9 +3,9 @@
+         s: str = ""
+         carry: int = 0
+         i, j = len(a)-1, len(b)-1
+-        while i >=0 or j >= 0 or carry > 0:
++        while i >=0 or 0 <= j or carry > 0:
+             if i >= 0 and a[i] == "1": carry+=1
+-            if j >= 0 and b[j] == "1": carry+=1
++            if 0 <= j and b[j] == "1": carry+=1
+ 
+             t: int = carry//2
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/61c1eeeb9c287c5b8b0af7203a07c45b8d98a6f5e3c531f9ab91ee832ac5fd73/with_tabs.py

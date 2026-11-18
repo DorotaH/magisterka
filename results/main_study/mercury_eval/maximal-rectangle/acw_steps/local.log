@@ -1,0 +1,16 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/maximal-rectangle/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,8 +25,8 @@
+                         valid = False
+                         
+                     if valid:
+-                        ans = max(ans, (1 + dp[k]) * (i-k+1))
+-                        dp[k] = 1 + dp[k]
++                        ans = max(ans, (dp[k] + 1) * (i-k+1))
++                        dp[k] = dp[k] + 1
+                     else:
+                         dp[k] = 0
+         return ans
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/maximal-rectangle/acw_steps/with_tabs.py

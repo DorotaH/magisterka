@@ -1,0 +1,17 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/86cf41d2ebaf38ab881138ec5eb37d7429580bde168025ac6741bdf7be48fa21/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,9 +9,9 @@
+     num = 0
+     T = t[i]
+     for j in range(1, 101):
+-        if T + j * tmp[j] <= M:
++        if T + tmp[j] * j <= M:
+             num += tmp[j]
+-            T += j * tmp[j]
++            T += tmp[j] * j
+         else:
+             m = M - T
+             num += m // j
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/86cf41d2ebaf38ab881138ec5eb37d7429580bde168025ac6741bdf7be48fa21/with_tabs.py

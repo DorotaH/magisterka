@@ -1,0 +1,33 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    m = random.randint(1, 100)\n    n = random.randint(1, 100)\n    target = random.randint(-10000, 10000)\n    prev = -10000\n    \n    matrix = []\n    for _ in range(m):\n        row = []\n        for _ in range(n):\n            current = random.randint(prev, 10000)\n            prev = current\n            row.append(current)\n        matrix.append(row)\n        prev += 1\n        if prev > 1000:\n            break\n        \n    return matrix, target",
+  "seed": 10422919131526234826,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          [
+            1,
+            3,
+            5,
+            7
+          ],
+          [
+            10,
+            11,
+            16,
+            20
+          ],
+          [
+            23,
+            30,
+            34,
+            60
+          ]
+        ],
+        3
+      ],
+      "expected": true
+    }
+  ]
+}

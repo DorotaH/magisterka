@@ -1,0 +1,25 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/7d93fdabb3dab1240fef147c12b4725c36dfe9fb8f0c43e95ca5417dd933ec59/without_tabs.py:
+--- Original
++++ Modified
+@@ -36,8 +36,8 @@
+         ck = k - 1
+         if cn >= ck:
+             combi = inv[ck] * f[cn] % MOD * inv[cn - ck] % MOD
+-            p += (combi * a[i]) % MOD if a[i] >= 0 else (combi * a[i]) % -MOD
+-            if p >= 0:
++            p += (combi * a[i]) % MOD if 0 <= a[i] else (combi * a[i]) % -MOD
++            if 0 <= p:
+                 p %= MOD
+             else:
+                 p %= -MOD
+@@ -46,7 +46,7 @@
+         ck = k - 1
+         if cn >= ck:
+             combi = inv[ck] * f[cn] % MOD * inv[cn - ck] % MOD
+-            m += (combi * a[i]) % MOD if a[i] >= 0 else (combi * a[i]) % -MOD
++            m += (combi * a[i]) % MOD if 0 <= a[i] else (combi * a[i]) % -MOD
+             if m >= 0:
+                 m %= MOD
+             else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/7d93fdabb3dab1240fef147c12b4725c36dfe9fb8f0c43e95ca5417dd933ec59/with_tabs.py

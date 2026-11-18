@@ -1,0 +1,67 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2121/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -90,7 +90,7 @@
+ 				total += val
+ 			else:
+ 				opt = max(opt, val)
+-		if total + opt >= k:
++		if opt + total >= k:
+ 			return True
+ 	return False
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2121/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -31,7 +31,7 @@
+ def good(guess):
+ 	cnt = [0] * n
+ 	for i in order:
+-		if a[i] < guess:
++		if guess > a[i]:
+ 			continue
+ 		cnt[i] = 1
+ 		opt = 0
+@@ -46,7 +46,7 @@
+ 		return True
+ 	up = [0] * n
+ 	for i in order[::-1]:
+-		if a[i] < guess:
++		if guess > a[i]:
+ 			continue
+ 		opt, secondOpt = 0, 0
+ 		total = 1
+@@ -60,7 +60,7 @@
+ 				size = n - sub[i]
+ 			if val == size:
+ 				total += val
+-			elif opt < val:
++			elif val > opt:
+ 				opt, secondOpt = val, opt
+ 			elif secondOpt < val:
+ 				secondOpt = val
+@@ -75,7 +75,7 @@
+ 					add = secondOpt
+ 				up[j] += add
+ 	for i in range(n):
+-		if a[i] < guess:
++		if guess > a[i]:
+ 			continue
+ 		total, opt = 1, 0
+ 		for j in g[i]:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2121/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -42,7 +42,7 @@
+ 				else:
+ 					opt = max(opt, cnt[j])
+ 		cnt[i] += opt
+-	if cnt[0] >= k:
++	if k <= cnt[0]:
+ 		return True
+ 	up = [0] * n
+ 	for i in order[::-1]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2121/acw_steps/with_tabs.py

@@ -1,0 +1,16 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/f105f77944c1142cceaca1bfe6ab36801bb2e74d5fca2ec8cb376cfa6f1a1cd6/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,8 +14,8 @@
+         p = 0
+         for dy in range(-1, 2):
+             for dx in range(-1, 2):
+-                y = Y + dy
+-                x = X + dx
++                y = dy + Y
++                x = dx + X
+                 if 0 <= y < r and 0 <= x < c:
+                     p += b[y][x] == '*'
+         if p != int(b[Y][X]):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/f105f77944c1142cceaca1bfe6ab36801bb2e74d5fca2ec8cb376cfa6f1a1cd6/with_tabs.py

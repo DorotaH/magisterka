@@ -1,0 +1,52 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/a2cba37dfa745d3f76e03e2e8c2a8e7abbfd588cafbe491987285376ef383698/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+         D.append(i)
+         if i * i != area:
+             D.append(area // i)
+-for i in range(1, sa + 1):
++for i in range(1, 1 + sa):
+     if a % i == 0:
+         DA.append(i)
+         if i * i != a:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/a2cba37dfa745d3f76e03e2e8c2a8e7abbfd588cafbe491987285376ef383698/without_tabs.py:
+--- Original
++++ Modified
+@@ -49,6 +49,6 @@
+     t = D[start]
+     s = D[-start - 1]
+     if DA[-closestdiv(t, DA) - 1] <= s or DB[-closestdiv(t, DB) - 1] <= s:
+-        print(2 * t + 2 * s)
++        print(t * 2 + 2 * s)
+         break
+     start -= 1
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/a2cba37dfa745d3f76e03e2e8c2a8e7abbfd588cafbe491987285376ef383698/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+     high = len(D) - 1
+     while high - low > 1:
+         guess = (high + low) // 2
+-        if D[guess] > t:
++        if t < D[guess]:
+             high = guess
+         else:
+             low = guess
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/a2cba37dfa745d3f76e03e2e8c2a8e7abbfd588cafbe491987285376ef383698/without_tabs.py:
+--- Original
++++ Modified
+@@ -42,7 +42,7 @@
+             high = guess
+         else:
+             low = guess
+-    return high if D[high] <= t else low
++    return high if t >= D[high] else low
+ 
+ 
+ while start > -1:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/a2cba37dfa745d3f76e03e2e8c2a8e7abbfd588cafbe491987285376ef383698/with_tabs.py

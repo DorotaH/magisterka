@@ -1,0 +1,22 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/b7600bf9632f6c2394ae17f48c6008436ce7f0d05a485ed1c823710c236c488c/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,14 +13,14 @@
+     mult = 1
+     for i in range(n, col, -1):
+         mult *= i
+-        mult *= inv(n + 1 - i)
++        mult *= inv(1 + n - i)
+         mult %= MOD
+         
+     for i in range(col, 0, -1):
+         out += binom * pow(i, n, MOD)
+         out %= MOD
+         binom *= i
+-        binom *= inv(col + 1 - i)
++        binom *= inv(1 + col - i)
+         binom *= -1
+         binom %= MOD
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/b7600bf9632f6c2394ae17f48c6008436ce7f0d05a485ed1c823710c236c488c/with_tabs.py

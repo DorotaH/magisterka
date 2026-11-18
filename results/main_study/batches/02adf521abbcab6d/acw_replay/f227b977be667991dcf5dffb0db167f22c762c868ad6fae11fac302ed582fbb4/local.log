@@ -1,0 +1,46 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/f227b977be667991dcf5dffb0db167f22c762c868ad6fae11fac302ed582fbb4/without_tabs.py:
+--- Original
++++ Modified
+@@ -73,11 +73,11 @@
+             add(N, bitArray, mostRightColorIndex[C[n]], -1)
+ 
+         # この要素の色の一番右のindexを、BITに登録
+-        mostRightColorIndex[C[n]] = n + 1
+-        add(N, bitArray, n + 1, 1)
++        mostRightColorIndex[C[n]] = 1 + n
++        add(N, bitArray, 1 + n, 1)
+ 
+         # while qindex < Q and n+1 == queries[qindex][2]:
+-        while qindex < Q and n + 1 == queries[orderByR[qindex]][1]:
++        while qindex < Q and 1 + n == queries[orderByR[qindex]][1]:
+             # 今のBITが次のクエリ発行するための状態(n==query.right)だったら、クエリ発行
+             tmpIndex = orderByR[qindex]
+             start = queries[tmpIndex][0]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/f227b977be667991dcf5dffb0db167f22c762c868ad6fae11fac302ed582fbb4/without_tabs.py:
+--- Original
++++ Modified
+@@ -66,7 +66,7 @@
+         if Q <= qindex:
+             break
+ 
+-        if 0 < mostRightColorIndex[C[n]]:
++        if mostRightColorIndex[C[n]] > 0:
+             # ループ中の場所の色のindexが既にある場合(=過去に、同じ色が登録されていた場合)
+             # 今回で、同じ色の一番右側の要素はループ中の要素になる
+             # 前登録したこの色の一番右のindexを一度BITから抜く(↓で再度登録される)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/f227b977be667991dcf5dffb0db167f22c762c868ad6fae11fac302ed582fbb4/without_tabs.py:
+--- Original
++++ Modified
+@@ -63,7 +63,7 @@
+     for n in range(N):
+         # 外側のループでは、全部の色をループ
+ 
+-        if Q <= qindex:
++        if qindex >= Q:
+             break
+ 
+         if mostRightColorIndex[C[n]] > 0:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/f227b977be667991dcf5dffb0db167f22c762c868ad6fae11fac302ed582fbb4/with_tabs.py

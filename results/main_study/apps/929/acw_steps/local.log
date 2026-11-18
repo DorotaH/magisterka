@@ -1,0 +1,77 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/929/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,8 +13,8 @@
+         if i % 2 == 0 and j < w - 1:
+             if a[i][j]%2==1:
+                 n+=1
+-                ans.append([i+1,j+1,i+1,j+2])
+-                a[i][j+1]+=1
++                ans.append([i+1,1+j,i+1,2+j])
++                a[i][1+j]+=1
+             j+=1
+         elif (
+             i % 2 == 0
+@@ -28,7 +28,7 @@
+                 break
+             if a[i][j]%2==1:
+                 n+=1
+-                ans.append([i+1,j+1,i+2,j+1])
++                ans.append([i+1,1+j,i+2,1+j])
+                 a[i+1][j]+=1
+             i+=1
+         elif (
+@@ -43,7 +43,7 @@
+         else:
+             if a[i][j]%2==1:
+                 n+=1
+-                ans.append([i+1,j+1,i+1,j])
++                ans.append([i+1,1+j,i+1,j])
+                 a[i][j-1]+=1
+             j-=1
+     print(n)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/929/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+     n=0
+     ans=[]
+     while True:
+-        if i % 2 == 0 and j < w - 1:
++        if i % 2 == 0 and w - 1 > j:
+             if a[i][j]%2==1:
+                 n+=1
+                 ans.append([i+1,1+j,i+1,2+j])
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/929/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,10 +18,10 @@
+             j+=1
+         elif (
+             i % 2 == 0
+-            and j >= w - 1
++            and w - 1 <= j
+             and j == w - 1
+             or i % 2 != 0
+-            and j <= 0
++            and 0 >= j
+             and j == 0
+         ):
+             if i >= h - 1:
+@@ -33,10 +33,10 @@
+             i+=1
+         elif (
+             i % 2 == 0
+-            and j >= w - 1
++            and w - 1 <= j
+             and j != w - 1
+             or i % 2 != 0
+-            and j <= 0
++            and 0 >= j
+             and j != 0
+         ):
+             pass
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/929/acw_steps/with_tabs.py

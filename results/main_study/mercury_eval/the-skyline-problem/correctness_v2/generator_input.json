@@ -1,0 +1,68 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    num_buildings = random.randint(1, 10**2)\n    buildings = []\n    for _ in range(num_buildings):\n        lefti = random.randint(0, 2**10 - 2)\n        righti = random.randint(lefti + 1, 2**10 - 1)\n        heighti = random.randint(1, 2**10 - 1)\n        buildings.append([lefti, righti, heighti])\n    buildings.sort()\n    return buildings",
+  "seed": 12651822776852396103,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          [
+            2,
+            9,
+            10
+          ],
+          [
+            3,
+            7,
+            15
+          ],
+          [
+            5,
+            12,
+            12
+          ],
+          [
+            15,
+            20,
+            10
+          ],
+          [
+            19,
+            24,
+            8
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          20,
+          8
+        ],
+        [
+          24,
+          0
+        ]
+      ]
+    }
+  ]
+}

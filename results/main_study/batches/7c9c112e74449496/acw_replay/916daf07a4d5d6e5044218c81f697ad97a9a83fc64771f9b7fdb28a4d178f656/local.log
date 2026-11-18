@@ -1,0 +1,47 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/916daf07a4d5d6e5044218c81f697ad97a9a83fc64771f9b7fdb28a4d178f656/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+             if r1 == 0:
+                 print(s1 % k)
+             else:
+-                print(r1 + s1)
++                print(s1 + r1)
+             return
+         join = a[0][1] + a[-1][1]
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/916daf07a4d5d6e5044218c81f697ad97a9a83fc64771f9b7fdb28a4d178f656/without_tabs.py:
+--- Original
++++ Modified
+@@ -34,13 +34,13 @@
+             a.pop()
+             a.pop(0)
+         else:
+-            s1 += (join // k) * k
++            s1 += k * (join // k)
+             a[0] = (a[0][0], join % k)
+             a.pop()
+             break
+ 
+     s = sum(ai[1] for ai in a)
+-    print(s*m + s1)
++    print(m*s + s1)
+ 
+ 
+ def __starting_point():
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/916daf07a4d5d6e5044218c81f697ad97a9a83fc64771f9b7fdb28a4d178f656/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,7 +27,7 @@
+             return
+         join = a[0][1] + a[-1][1]
+ 
+-        if join < k:
++        if k > join:
+             break
+         elif join % k == 0:
+             s1 += join
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/916daf07a4d5d6e5044218c81f697ad97a9a83fc64771f9b7fdb28a4d178f656/with_tabs.py

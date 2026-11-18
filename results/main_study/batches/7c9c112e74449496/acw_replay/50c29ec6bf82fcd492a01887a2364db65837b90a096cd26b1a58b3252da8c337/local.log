@@ -1,0 +1,33 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/50c29ec6bf82fcd492a01887a2364db65837b90a096cd26b1a58b3252da8c337/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,9 +38,9 @@
+ for i in range(1, 1 + x):
+ 	a, b = (quad(-1, s1 + l[i] - s2, (s1 + l[i]) * s2 - py[i]))
+ 
+-	if b < 0 or l[i] - b < 0:
++	if 0 > b or l[i] - b < 0:
+ 		a, b = b, a
+-	if a < 0 and b < 0:
++	if a < 0 and 0 > b:
+ 		a = 0
+ 		b = 0
+ 	bvals.append(b)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/50c29ec6bf82fcd492a01887a2364db65837b90a096cd26b1a58b3252da8c337/without_tabs.py:
+--- Original
++++ Modified
+@@ -50,9 +50,9 @@
+ 
+ for i in range(len(avals)):
+ 
+-	if abs(avals[i]) <= 10**(-10):
++	if 10**(-10) >= abs(avals[i]):
+ 		avals[i] = 0
+-	if abs(bvals[i]) <= 10**(-10):
++	if 10**(-10) >= abs(bvals[i]):
+ 		bvals[i] = 0
+ 
+ print(' '.join([str(i) for i in avals]))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/50c29ec6bf82fcd492a01887a2364db65837b90a096cd26b1a58b3252da8c337/with_tabs.py

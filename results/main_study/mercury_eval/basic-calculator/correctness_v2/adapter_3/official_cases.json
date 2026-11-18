@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "input": [
+        "1 + 1"
+      ],
+      "expected": 2
+    },
+    {
+      "input": [
+        " 2-1 + 2 "
+      ],
+      "expected": 3
+    },
+    {
+      "input": [
+        "(1+(4+5+2)-3)+(6+8)"
+      ],
+      "expected": 23
+    },
+    {
+      "input": [
+        "(72) + 20 + 87 + 10 - (12 - 18) + 56"
+      ],
+      "expected": 251
+    },
+    {
+      "input": [
+        "39 - 16 - 71 + 100 - (29) - 53"
+      ],
+      "expected": -30
+    },
+    {
+      "input": [
+        "(((28))) + 48"
+      ],
+      "expected": 76
+    },
+    {
+      "input": [
+        "(7 + 54 + 5) - ((50 - 71 + 44 - 51 - (60) - 56 - 35 + 58))"
+      ],
+      "expected": 187
+    },
+    {
+      "input": [
+        "((43 + 24))"
+      ],
+      "expected": 67
+    }
+  ],
+  "published_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "seed": 4003534480111758299,
+  "convert_offline": "def convert_offline(case):\n    return case",
+  "evaluate_offline": "def evaluate_offline(inputs, outputs, expected):\n    if outputs == expected:\n        return True\n    \n    return False",
+  "entry_point": "calculate"
+}

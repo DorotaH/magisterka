@@ -1,0 +1,19 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/b813145dc0f19e3996d17e7bfe940c26d9779a38571c6c331fa2318ae54bb6d9/without_tabs.py:
+--- Original
++++ Modified
+@@ -29,11 +29,11 @@
+             if len(D[s]) > 0:
+                 center = max(center, D[s][-1])
+         else:
+-            while len(D[s]) > 0 and len(D[revs]) > 0 and D[s][-1] + D[revs][-1] > 0:
++            while len(D[s]) > 0 and len(D[revs]) > 0 and D[revs][-1] + D[s][-1] > 0:
+                 res += D[s].pop()
+                 res += D[revs].pop()
+ 
+-    return res + center
++    return center + res
+ 
+ 
+ print(solve())
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/b813145dc0f19e3996d17e7bfe940c26d9779a38571c6c331fa2318ae54bb6d9/with_tabs.py

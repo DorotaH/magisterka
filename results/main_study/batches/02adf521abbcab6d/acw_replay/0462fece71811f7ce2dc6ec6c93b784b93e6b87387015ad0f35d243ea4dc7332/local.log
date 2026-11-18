@@ -1,0 +1,38 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/0462fece71811f7ce2dc6ec6c93b784b93e6b87387015ad0f35d243ea4dc7332/without_tabs.py:
+--- Original
++++ Modified
+@@ -80,7 +80,7 @@
+             alpha = angles[j]
+             # Чтобы вычислить новые координаты g, нуно повернуть ее на угол
+             # dalpha относительно currX, currY
+-            gx, gy = currX, currY - math.sqrt(x[j] ** 2 + y[j] ** 2)
++            gx, gy = currX, currY - math.sqrt(y[j] ** 2 + x[j] ** 2)
+ 
+             # print('pos',gx, gy, alpha/math.pi)
+         fix.add(t[i])
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/0462fece71811f7ce2dc6ec6c93b784b93e6b87387015ad0f35d243ea4dc7332/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,8 +3,8 @@
+ 
+ # Вычисление координаты точки по координатам центра, углу, и начальным относительно центра
+ def getCoordinate(gx, gy, alpha, x, y):
+-    x1 = gx + x * math.cos(alpha) - y * math.sin(alpha)
+-    y1 = gy + x * math.sin(alpha) + y * math.cos(alpha)
++    x1 = gx + math.cos(alpha) * x - y * math.sin(alpha)
++    y1 = gy + x * math.sin(alpha) + math.cos(alpha) * y
+     return x1, y1
+ 
+ 
+@@ -44,7 +44,7 @@
+     ip = i + 1
+     if ip == n:
+         ip = 0
+-    ds = x[i] * y[ip] - x[ip] * y[i]
++    ds = x[i] * y[ip] - y[i] * x[ip]
+     s += ds
+     gx += (x[i] + x[ip]) * ds
+     gy += (y[i] + y[ip]) * ds
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/0462fece71811f7ce2dc6ec6c93b784b93e6b87387015ad0f35d243ea4dc7332/with_tabs.py

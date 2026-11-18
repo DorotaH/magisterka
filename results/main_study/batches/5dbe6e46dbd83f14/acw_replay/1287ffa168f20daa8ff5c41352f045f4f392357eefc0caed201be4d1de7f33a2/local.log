@@ -1,0 +1,26 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/1287ffa168f20daa8ff5c41352f045f4f392357eefc0caed201be4d1de7f33a2/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,6 +18,6 @@
+             for i in range(px,len(s)):
+                 if s[i] == s[px] and espalindrome(px,i):
+                     val = min(val, solve(i + 1))
+-            return 1+val
++            return val+1
+ 
+         return solve(0) - 1
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/1287ffa168f20daa8ff5c41352f045f4f392357eefc0caed201be4d1de7f33a2/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+     def minCut(self, s: str) -> int:
+         @lru_cache(maxsize=None)
+         def espalindrome(px,i):
+-            if px >= i:
++            if i <= px:
+                 return True
+             elif s[px] != s[i]:
+                 return False
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/1287ffa168f20daa8ff5c41352f045f4f392357eefc0caed201be4d1de7f33a2/with_tabs.py

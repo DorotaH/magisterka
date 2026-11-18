@@ -1,0 +1,33 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/bf79ba781a6410bb9b91e6faac5bfcd1d644375c39cc52ab3c531caf1bb85c9d/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,11 +21,11 @@
+             continue
+         x = x[1]
+         for (i,l) in adj[x]:
+-            if dist[x]+l<dist[i]:
+-                dist[i] = dist[x]+l
++            if l+dist[x]<dist[i]:
++                dist[i] = l+dist[x]
+                 ways[i] = ways[x]
+                 heappush(frontier,(dist[i],i))
+-            elif dist[x]+l==dist[i]:
++            elif l+dist[x]==dist[i]:
+                 ways[i] = addM(ways[i],ways[x])
+     return (dist,ways)
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/bf79ba781a6410bb9b91e6faac5bfcd1d644375c39cc52ab3c531caf1bb85c9d/without_tabs.py:
+--- Original
++++ Modified
+@@ -52,7 +52,7 @@
+         sys.stdout.write("YES\n")
+     else:
+         x = one[0][t]-1-one[0][i[0]]-two[0][i[1]]
+-        if x<=0:
++        if 0 >= x:
+             sys.stdout.write("NO\n")
+         else:
+             sys.stdout.write("CAN "+str(i[2]-x)+"\n")
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/bf79ba781a6410bb9b91e6faac5bfcd1d644375c39cc52ab3c531caf1bb85c9d/with_tabs.py

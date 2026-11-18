@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1631/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -66,7 +66,7 @@
+             break
+         else:
+             used[zeroIndegreeNode] = True
+-            theOrder.append( chr( ord('a') + zeroIndegreeNode ) )
++            theOrder.append( chr( zeroIndegreeNode + ord('a') ) )
+             for j in range(0,26):
+                 if g[zeroIndegreeNode][j]:
+                     indegree[j] -= 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1631/acw_steps/with_tabs.py

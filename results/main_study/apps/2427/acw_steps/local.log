@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2427/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+     for i in range(len(a)-1,-1,-1):
+         c = 0
+         for j in range(i-2,-1,-1):
+-            c += a[j+1]
++            c += a[1+j]
+             if a[i]^a[j] == c:
+                 seen.add((j,i))
+             if c >= 2 *a[i]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2427/acw_steps/with_tabs.py

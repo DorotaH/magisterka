@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/359/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+ if h==w:
+     if a<h:
+         n=w//a
+-        x=(w-a*n)/(n+1)
++        x=(w-a*n)/(1+n)
+         print(x)
+     elif a==h:
+         print(0)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/359/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+     for _ in range(100):
+         if h>w:
+             w,h=h,w
+-        if w>h+a*2:
++        if w>h+2*a:
+             w=w-h-a
+     if h>w:
+         w,h=h,w
+@@ -21,7 +21,7 @@
+     r=0
+     if m<s or s==0:
+         for i in range(m,0,-1):
+-            x=(h-a*i)/(i+1)
++            x=(h-i*a)/(i+1)
+             w1=w-x
+             a1=a+x
+             q=w1%a1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/359/acw_steps/with_tabs.py

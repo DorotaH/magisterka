@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/22e1c29d85abbe6c9e07579bda1a6d5b1ef41a387b95e025faba5561013bec1f/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+     el = arr[i][j]
+     index1 = rows[i][el]
+     index2 = columns[j][el]
+-    return max(index1, index2) + max(len(rows[i]) - index1, len(columns[j]) - index2)
++    return max(len(rows[i]) - index1, len(columns[j]) - index2) + max(index1, index2)
+ 
+ 
+ for i in range(n):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/22e1c29d85abbe6c9e07579bda1a6d5b1ef41a387b95e025faba5561013bec1f/with_tabs.py

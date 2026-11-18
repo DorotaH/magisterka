@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/bdfa4b1208b8204bc8153e8c7b47694769d82d7021811be7cea099d296ecf8e9/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+ 
+ left = 10**12  # 可能
+ right = -1  # 不可能
+-while left > right + 1:
++while left > 1 + right:
+     mid = (left + right) // 2
+     if check(mid):
+         left = mid
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/bdfa4b1208b8204bc8153e8c7b47694769d82d7021811be7cea099d296ecf8e9/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+ 
+ def check(x):
+     count = np.maximum(0, (A - (x // F))).sum()
+-    return count <= K
++    return K >= count
+ 
+ 
+ left = 10**12  # 可能
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/bdfa4b1208b8204bc8153e8c7b47694769d82d7021811be7cea099d296ecf8e9/with_tabs.py

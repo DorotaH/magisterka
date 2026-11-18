@@ -1,0 +1,11 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/40ed16faef2d722fe443d48eec5ee84ee1ff4016cea1e22f66979fd39aa110b4/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,5 +10,5 @@
+         if chars[0] == '1':
+             result += 1 + int(chars[1:]) + total[len(chars) - 1]
+         else:
+-            result += total[len(chars) - 1] * int(chars[0]) + 10 ** (len(chars) - 1)
++            result += int(chars[0]) * total[len(chars) - 1] + 10 ** (len(chars) - 1)
+         return result if n <= 9 else result + self.countDigitOne(int(chars[1:]))
+

@@ -1,0 +1,567 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_68/sew/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_68/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.PageUtilTest.test_pageutil\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3], [\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestGetPage.test_get_page_1\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.PageUtilTestGetPage.test_get_page_2\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.PageUtilTestGetPage.test_get_page_3\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.PageUtilTestGetPage.test_get_page_4\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.PageUtilTestGetPage.test_get_page_5\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_1\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_2\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_3\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_4\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_5\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestSearch.test_search_1\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestSearch.test_search_2\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestSearch.test_search_3\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestSearch.test_search_4\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.PageUtilTestSearch.test_search_5\": [[\"assertEqual\", 2], [\"assertDictEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]]}, \"errors\": [], \"failures\": [], \"log\": \"test_get_page_1 (benchmark_case.PageUtilTestGetPage.test_get_page_1) ... ok\\ntest_get_page_2 (benchmark_case.PageUtilTestGetPage.test_get_page_2) ... ok\\ntest_get_page_3 (benchmark_case.PageUtilTestGetPage.test_get_page_3) ... ok\\ntest_get_page_4 (benchmark_case.PageUtilTestGetPage.test_get_page_4) ... ok\\ntest_get_page_5 (benchmark_case.PageUtilTestGetPage.test_get_page_5) ... ok\\ntest_get_page_info_1 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_1) ... ok\\ntest_get_page_info_2 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_2) ... ok\\ntest_get_page_info_3 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_3) ... ok\\ntest_get_page_info_4 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_4) ... ok\\ntest_get_page_info_5 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_5) ... ok\\ntest_search_1 (benchmark_case.PageUtilTestSearch.test_search_1) ... ok\\ntest_search_2 (benchmark_case.PageUtilTestSearch.test_search_2) ... ok\\ntest_search_3 (benchmark_case.PageUtilTestSearch.test_search_3) ... ok\\ntest_search_4 (benchmark_case.PageUtilTestSearch.test_search_4) ... ok\\ntest_search_5 (benchmark_case.PageUtilTestSearch.test_search_5) ... ok\\ntest_pageutil (benchmark_case.PageUtilTest.test_pageutil) ... ok\\n\\n----------------------------------------------------------------------\\nRan 16 tests in 0.002s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.PageUtilTest.test_pageutil\": [[\"__init__\", \"null\"], [\"get_page\", \"[1, 2, 3]\"], [\"get_page_info\", \"{\\\"current_page\\\": 2, \\\"data\\\": [4, 5, 6], \\\"has_next\\\": true, \\\"has_previous\\\": true, \\\"per_page\\\": 3, \\\"total_items\\\": 10, \\\"total_pages\\\": 4}\"], [\"search\", \"{\\\"keyword\\\": \\\"4\\\", \\\"results\\\": [4], \\\"total_pages\\\": 1, \\\"total_results\\\": 1}\"]], \"benchmark_case.PageUtilTestGetPage.test_get_page_1\": [[\"__init__\", \"null\"], [\"get_page\", \"[1, 2, 3]\"]], \"benchmark_case.PageUtilTestGetPage.test_get_page_2\": [[\"__init__\", \"null\"], [\"get_page\", \"[4, 5, 6]\"]], \"benchmark_case.PageUtilTestGetPage.test_get_page_3\": [[\"__init__\", \"null\"], [\"get_page\", \"[7, 8, 9]\"]], \"benchmark_case.PageUtilTestGetPage.test_get_page_4\": [[\"__init__\", \"null\"], [\"get_page\", \"[10]\"]], \"benchmark_case.PageUtilTestGetPage.test_get_page_5\": [[\"__init__\", \"null\"], [\"get_page\", \"[]\"]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_1\": [[\"__init__\", \"null\"], [\"get_page_info\", \"{\\\"current_page\\\": 2, \\\"data\\\": [4, 5, 6], \\\"has_next\\\": true, \\\"has_previous\\\": true, \\\"per_page\\\": 3, \\\"total_items\\\": 10, \\\"total_pages\\\": 4}\"]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_2\": [[\"__init__\", \"null\"], [\"get_page_info\", \"{\\\"current_page\\\": 1, \\\"data\\\": [1, 2, 3], \\\"has_next\\\": true, \\\"has_previous\\\": false, \\\"per_page\\\": 3, \\\"total_items\\\": 10, \\\"total_pages\\\": 4}\"]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_3\": [[\"__init__\", \"null\"], [\"get_page_info\", \"{\\\"current_page\\\": 3, \\\"data\\\": [7, 8, 9], \\\"has_next\\\": true, \\\"has_previous\\\": true, \\\"per_page\\\": 3, \\\"total_items\\\": 10, \\\"total_pages\\\": 4}\"]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_4\": [[\"__init__\", \"null\"], [\"get_page_info\", \"{\\\"current_page\\\": 4, \\\"data\\\": [10], \\\"has_next\\\": false, \\\"has_previous\\\": true, \\\"per_page\\\": 3, \\\"total_items\\\": 10, \\\"total_pages\\\": 4}\"]], \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_5\": [[\"__init__\", \"null\"], [\"get_page_info\", \"{}\"]], \"benchmark_case.PageUtilTestSearch.test_search_1\": [[\"__init__\", \"null\"], [\"search\", \"{\\\"keyword\\\": \\\"1\\\", \\\"results\\\": [1, 10], \\\"total_pages\\\": 1, \\\"total_results\\\": 2}\"]], \"benchmark_case.PageUtilTestSearch.test_search_2\": [[\"__init__\", \"null\"], [\"search\", \"{\\\"keyword\\\": \\\"2\\\", \\\"results\\\": [2], \\\"total_pages\\\": 1, \\\"total_results\\\": 1}\"]], \"benchmark_case.PageUtilTestSearch.test_search_3\": [[\"__init__\", \"null\"], [\"search\", \"{\\\"keyword\\\": \\\"3\\\", \\\"results\\\": [3], \\\"total_pages\\\": 1, \\\"total_results\\\": 1}\"]], \"benchmark_case.PageUtilTestSearch.test_search_4\": [[\"__init__\", \"null\"], [\"search\", \"{\\\"keyword\\\": \\\"4\\\", \\\"results\\\": [4], \\\"total_pages\\\": 1, \\\"total_results\\\": 1}\"]], \"benchmark_case.PageUtilTestSearch.test_search_5\": [[\"__init__\", \"null\"], [\"search\", \"{\\\"keyword\\\": \\\"11\\\", \\\"results\\\": [], \\\"total_pages\\\": 0, \\\"total_results\\\": 0}\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.PageUtilTestGetPage.test_get_page_1\", \"benchmark_case.PageUtilTestGetPage.test_get_page_2\", \"benchmark_case.PageUtilTestGetPage.test_get_page_3\", \"benchmark_case.PageUtilTestGetPage.test_get_page_4\", \"benchmark_case.PageUtilTestGetPage.test_get_page_5\", \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_1\", \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_2\", \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_3\", \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_4\", \"benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_5\", \"benchmark_case.PageUtilTestSearch.test_search_1\", \"benchmark_case.PageUtilTestSearch.test_search_2\", \"benchmark_case.PageUtilTestSearch.test_search_3\", \"benchmark_case.PageUtilTestSearch.test_search_4\", \"benchmark_case.PageUtilTestSearch.test_search_5\", \"benchmark_case.PageUtilTest.test_pageutil\"], \"tests\": 16}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.09822674599990933,
+  "result": {
+    "checks": {
+      "benchmark_case.PageUtilTest.test_pageutil": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_1": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_1": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_1": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertDictEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_get_page_1 (benchmark_case.PageUtilTestGetPage.test_get_page_1) ... ok\ntest_get_page_2 (benchmark_case.PageUtilTestGetPage.test_get_page_2) ... ok\ntest_get_page_3 (benchmark_case.PageUtilTestGetPage.test_get_page_3) ... ok\ntest_get_page_4 (benchmark_case.PageUtilTestGetPage.test_get_page_4) ... ok\ntest_get_page_5 (benchmark_case.PageUtilTestGetPage.test_get_page_5) ... ok\ntest_get_page_info_1 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_1) ... ok\ntest_get_page_info_2 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_2) ... ok\ntest_get_page_info_3 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_3) ... ok\ntest_get_page_info_4 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_4) ... ok\ntest_get_page_info_5 (benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_5) ... ok\ntest_search_1 (benchmark_case.PageUtilTestSearch.test_search_1) ... ok\ntest_search_2 (benchmark_case.PageUtilTestSearch.test_search_2) ... ok\ntest_search_3 (benchmark_case.PageUtilTestSearch.test_search_3) ... ok\ntest_search_4 (benchmark_case.PageUtilTestSearch.test_search_4) ... ok\ntest_search_5 (benchmark_case.PageUtilTestSearch.test_search_5) ... ok\ntest_pageutil (benchmark_case.PageUtilTest.test_pageutil) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.002s\n\nOK\n",
+    "observed": {
+      "benchmark_case.PageUtilTest.test_pageutil": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page",
+          "[1, 2, 3]"
+        ],
+        [
+          "get_page_info",
+          "{\"current_page\": 2, \"data\": [4, 5, 6], \"has_next\": true, \"has_previous\": true, \"per_page\": 3, \"total_items\": 10, \"total_pages\": 4}"
+        ],
+        [
+          "search",
+          "{\"keyword\": \"4\", \"results\": [4], \"total_pages\": 1, \"total_results\": 1}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page",
+          "[1, 2, 3]"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page",
+          "[4, 5, 6]"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page",
+          "[7, 8, 9]"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page",
+          "[10]"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPage.test_get_page_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page",
+          "[]"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page_info",
+          "{\"current_page\": 2, \"data\": [4, 5, 6], \"has_next\": true, \"has_previous\": true, \"per_page\": 3, \"total_items\": 10, \"total_pages\": 4}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page_info",
+          "{\"current_page\": 1, \"data\": [1, 2, 3], \"has_next\": true, \"has_previous\": false, \"per_page\": 3, \"total_items\": 10, \"total_pages\": 4}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page_info",
+          "{\"current_page\": 3, \"data\": [7, 8, 9], \"has_next\": true, \"has_previous\": true, \"per_page\": 3, \"total_items\": 10, \"total_pages\": 4}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page_info",
+          "{\"current_page\": 4, \"data\": [10], \"has_next\": false, \"has_previous\": true, \"per_page\": 3, \"total_items\": 10, \"total_pages\": 4}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "get_page_info",
+          "{}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "search",
+          "{\"keyword\": \"1\", \"results\": [1, 10], \"total_pages\": 1, \"total_results\": 2}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "search",
+          "{\"keyword\": \"2\", \"results\": [2], \"total_pages\": 1, \"total_results\": 1}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "search",
+          "{\"keyword\": \"3\", \"results\": [3], \"total_pages\": 1, \"total_results\": 1}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "search",
+          "{\"keyword\": \"4\", \"results\": [4], \"total_pages\": 1, \"total_results\": 1}"
+        ]
+      ],
+      "benchmark_case.PageUtilTestSearch.test_search_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "search",
+          "{\"keyword\": \"11\", \"results\": [], \"total_pages\": 0, \"total_results\": 0}"
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.PageUtilTestGetPage.test_get_page_1",
+      "benchmark_case.PageUtilTestGetPage.test_get_page_2",
+      "benchmark_case.PageUtilTestGetPage.test_get_page_3",
+      "benchmark_case.PageUtilTestGetPage.test_get_page_4",
+      "benchmark_case.PageUtilTestGetPage.test_get_page_5",
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_1",
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_2",
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_3",
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_4",
+      "benchmark_case.PageUtilTestGetPageInfo.test_get_page_info_5",
+      "benchmark_case.PageUtilTestSearch.test_search_1",
+      "benchmark_case.PageUtilTestSearch.test_search_2",
+      "benchmark_case.PageUtilTestSearch.test_search_3",
+      "benchmark_case.PageUtilTestSearch.test_search_4",
+      "benchmark_case.PageUtilTestSearch.test_search_5",
+      "benchmark_case.PageUtilTest.test_pageutil"
+    ],
+    "tests": 16
+  }
+}

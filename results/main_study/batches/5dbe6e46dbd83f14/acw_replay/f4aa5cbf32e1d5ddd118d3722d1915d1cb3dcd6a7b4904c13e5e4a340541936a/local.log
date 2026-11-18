@@ -1,0 +1,42 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/f4aa5cbf32e1d5ddd118d3722d1915d1cb3dcd6a7b4904c13e5e4a340541936a/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,12 +12,12 @@
+                         return True
+                     for i, j in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
+                         if (
+-                            0 <= x + i < size
++                            0 <= i + x < size
+                             and 0 <= y + j < size
+-                            and (x + i, y + j) not in seen
++                            and (i + x, y + j) not in seen
+                         ):
+-                            seen.add((x + i, y + j))
+-                            bfs.append((x + i, y + j))
++                            seen.add((i + x, y + j))
++                            bfs.append((i + x, y + j))
+             return False
+ 
+         # def swimInTime(x, y, t_cap, history):
+@@ -37,5 +37,5 @@
+             if res:
+                 maxT = midT - 1
+             else:
+-                minT = midT + 1
++                minT = 1 + midT
+         return minT
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/f4aa5cbf32e1d5ddd118d3722d1915d1cb3dcd6a7b4904c13e5e4a340541936a/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+             bfs = [(0, 0)]
+             seen = set((0, 0))
+             for x, y in bfs:
+-                if grid[x][y] <= T:
++                if T >= grid[x][y]:
+                     if x == y == size - 1:
+                         return True
+                     for i, j in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/f4aa5cbf32e1d5ddd118d3722d1915d1cb3dcd6a7b4904c13e5e4a340541936a/with_tabs.py

@@ -1,0 +1,59 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/872d4194a94b74b29af79fb4401589d8aca0ddb905a58e9cbc1b37c05e60a438/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,12 +2,12 @@
+ 
+     f = 1
+     factorials = [1]
+-    for m in range(1, n + 1):
++    for m in range(1, 1 + n):
+         f *= m
+         f %= MOD
+         factorials.append(f)
+     inv = pow(f, MOD - 2, MOD)
+-    invs = [1] * (n + 1)
++    invs = [1] * (1 + n)
+     invs[n] = inv
+     for m in range(n, 1, -1):
+         inv *= m
+@@ -22,10 +22,10 @@
+ 
+ n, k = map(int, input().split())
+ mod = 998244353
+-fac, inv = modfac(n + 10, mod)
++fac, inv = modfac(10 + n, mod)
+ ans = 0
+ 
+-for i in range(1, n + 1):
++for i in range(1, 1 + n):
+     rem = n // i - 1
+     if rem >= k - 1:
+         ans += modnCr(rem, k - 1, mod, fac, inv)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/872d4194a94b74b29af79fb4401589d8aca0ddb905a58e9cbc1b37c05e60a438/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+ 
+ 
+ def modnCr(n, r, mod, fac, inv):
+-    return fac[n] * inv[n - r] * inv[r] % mod
++    return inv[n - r] * fac[n] * inv[r] % mod
+ 
+ 
+ n, k = map(int, input().split())
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/872d4194a94b74b29af79fb4401589d8aca0ddb905a58e9cbc1b37c05e60a438/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,7 +27,7 @@
+ 
+ for i in range(1, 1 + n):
+     rem = n // i - 1
+-    if rem >= k - 1:
++    if k - 1 <= rem:
+         ans += modnCr(rem, k - 1, mod, fac, inv)
+         ans %= mod
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/872d4194a94b74b29af79fb4401589d8aca0ddb905a58e9cbc1b37c05e60a438/with_tabs.py

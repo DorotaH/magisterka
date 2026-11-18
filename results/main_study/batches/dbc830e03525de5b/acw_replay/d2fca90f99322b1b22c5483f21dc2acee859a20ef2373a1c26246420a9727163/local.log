@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/d2fca90f99322b1b22c5483f21dc2acee859a20ef2373a1c26246420a9727163/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+     return sum_
+ 
+ def max_differences_sum(d):
+-    return max_sums(d) + max_sums([-x for x in d])
++    return max_sums([-x for x in d]) + max_sums(d)
+ 
+ n=int(input())
+ l=list(map(int,input().split()))
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/d2fca90f99322b1b22c5483f21dc2acee859a20ef2373a1c26246420a9727163/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,7 +4,7 @@
+     stack = [(-1, float('inf'))]
+     sum_ = 0
+     for i, x in enumerate(d):
+-        while x > stack[-1][1]:
++        while stack[-1][1] < x:
+             prev_i, prev_x = stack.pop()
+             prev_prev_i, prev_prev_x = stack[-1]
+             sum_ += prev_x * (i - prev_i) * (prev_i - prev_prev_i)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/d2fca90f99322b1b22c5483f21dc2acee859a20ef2373a1c26246420a9727163/with_tabs.py

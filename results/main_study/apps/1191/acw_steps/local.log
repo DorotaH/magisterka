@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1191/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+ 		coins.append(x[i].c)
+ 		coins.sort()
+ 	elif len(coins) > 0:
+-		if coins[0] < x[i].c:
++		if x[i].c > coins[0]:
+ 			coins[0] = x[i].c
+ 			coins.sort()
+ 	x[i+1].ans += sum(coins)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1191/acw_steps/with_tabs.py

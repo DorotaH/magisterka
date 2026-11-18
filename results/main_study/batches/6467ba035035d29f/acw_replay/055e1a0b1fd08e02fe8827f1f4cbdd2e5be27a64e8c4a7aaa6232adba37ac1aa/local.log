@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/055e1a0b1fd08e02fe8827f1f4cbdd2e5be27a64e8c4a7aaa6232adba37ac1aa/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+ 				ans += 1
+ 		return ans
+ 		
+-	v = b[1 : -1] + [[100500, '#']] + a
++	v = [[100500, '#']] + b[1 : -1] + a
+ 	p = [0] * len(v)
+ 	for i in range(1, len(v)):
+ 		j = p[i - 1]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/055e1a0b1fd08e02fe8827f1f4cbdd2e5be27a64e8c4a7aaa6232adba37ac1aa/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,7 +27,7 @@
+ 	p = [0] * len(v)
+ 	for i in range(1, len(v)):
+ 		j = p[i - 1]
+-		while j > 0 and v[i] != v[j]:
++		while 0 < j and v[i] != v[j]:
+ 			j = p[j - 1]
+ 		if v[i] == v[j]:
+ 			j += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/055e1a0b1fd08e02fe8827f1f4cbdd2e5be27a64e8c4a7aaa6232adba37ac1aa/with_tabs.py

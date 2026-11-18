@@ -1,0 +1,38 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/cdc2bfd75db7c92e6ef46b50894e8ed88a37aec34dff4d529dbe741c27a1c2c8/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+     
+     digits = v // dominant[0]
+ 
+-    v -= dominant[0] * digits
++    v -= digits * dominant[0]
+ 
+     ar = [(a - dominant[0], n) for a, n in ar if a > dominant[0] and n > dominant[1]]
+     
+@@ -34,8 +34,8 @@
+     for a, n in ar:
+         if a <= v:
+             q = v // a
+-            v -= q * a
+-            s += str(n) * q
++            v -= a * q
++            s += q * str(n)
+ 
+     s = '%s%s' % (s, str(dominant[1]) * (digits - len(s)))
+     
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/cdc2bfd75db7c92e6ef46b50894e8ed88a37aec34dff4d529dbe741c27a1c2c8/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+ 
+     v -= digits * dominant[0]
+ 
+-    ar = [(a - dominant[0], n) for a, n in ar if a > dominant[0] and n > dominant[1]]
++    ar = [(a - dominant[0], n) for a, n in ar if a > dominant[0] and dominant[1] < n]
+     
+     ar.sort(key=lambda x: (-x[1], x[0]))
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/cdc2bfd75db7c92e6ef46b50894e8ed88a37aec34dff4d529dbe741c27a1c2c8/with_tabs.py

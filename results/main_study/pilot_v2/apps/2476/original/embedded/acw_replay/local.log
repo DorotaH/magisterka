@@ -1,0 +1,46 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/2476/original/embedded/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+         ok = 0
+         ng = N//k + 1
+         while ng-ok > 1:
+-            m = (ok+ng)//2
++            m = (ng+ok)//2
+             if is_ok(k,m):
+                 ok = m
+             else:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/2476/original/embedded/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+ def is_ok(k,m):
+     j = bisect(vs,m)
+     z = cums[j] + m*(len(vs)-j)
+-    return z >= m*k
++    return z >= k*m
+ 
+ ans = []
+ for k in range(1,N+1):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/2476/original/embedded/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,12 +14,12 @@
+ 
+ ans = []
+ for k in range(1,N+1):
+-    if k > len(vs):
++    if len(vs) < k:
+         ans.append(0)
+     else:
+         ok = 0
+         ng = N//k + 1
+-        while ng-ok > 1:
++        while 1 < ng-ok:
+             m = (ng+ok)//2
+             if is_ok(k,m):
+                 ok = m
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/2476/original/embedded/acw_replay/with_tabs.py

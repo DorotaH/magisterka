@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/66f126ba75ef37d5e11d988d2c733fd340c07478fe91c0bdc4ff770cb3834b41/without_tabs.py:
+--- Original
++++ Modified
+@@ -64,7 +64,7 @@
+ 
+ 	for i in range(1, len(LIST_Y[y])):
+ 		#print(getvalue(LIST_Y[y][i]+1)-getvalue(LIST_Y[y][i-1]+1)),getvalue(MAX+1)
+-		ANS += (getvalue(LIST_Y[y][i] + 1) - getvalue(1 + LIST_Y[y][i - 1])) * (getvalue(1 + MAX) - getvalue(LIST_Y[y][i] + 1) + 1)
++		ANS += (getvalue(LIST_Y[y][i] + 1) - getvalue(LIST_Y[y][i - 1] + 1)) * (getvalue(1 + MAX) - getvalue(LIST_Y[y][i] + 1) + 1)
+ 
+ 	#print(ANS)
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/66f126ba75ef37d5e11d988d2c733fd340c07478fe91c0bdc4ff770cb3834b41/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+ 
+ 
+ def update(v, w): # vにwを加える
+-	while v <= LEN:
++	while LEN >= v:
+ 		BIT[v] += w
+ 		v += (v & (-v))# 自分を含む大きなノードへ. たとえばv=3→v=4
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/66f126ba75ef37d5e11d988d2c733fd340c07478fe91c0bdc4ff770cb3834b41/with_tabs.py

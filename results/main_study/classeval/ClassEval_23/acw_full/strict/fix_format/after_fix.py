@@ -1,0 +1,40 @@
+import math
+
+
+class CombinationCalculator:
+	def __init__(self, datas: list[str]):
+		self.datas = datas
+
+	@staticmethod
+	def count(n: int, m: int) -> int:
+		if m == 0 or n == m:
+			return 1
+		return math.factorial(n) // (math.factorial(m) * math.factorial(n - m))
+
+	@staticmethod
+	def count_all(n: int) -> int:
+		if n < 0 or n > 63:
+			return False
+		return (1 << n) - 1 if n != 63 else float("inf")
+
+	def select(self, m: int) -> list[list[str]]:
+		result = []
+		self._select(0, [None] * m, 0, result)
+		return result
+
+	def select_all(self) -> list[list[str]]:
+		result = []
+		for i in range(1, len(self.datas) + 1):
+			result.extend(self.select(i))
+		return result
+
+	def _select(self, dataIndex: int, resultList: list[str], resultIndex: int, result: list[list[str]]):
+		resultLen = len(resultList)
+		resultCount = 1 + resultIndex
+		if resultCount > resultLen:
+			result.append(resultList.copy())
+			return
+
+		for i in range(dataIndex, resultCount + len(self.datas) - resultLen):
+			resultList[resultIndex] = self.datas[i]
+			self._select(i + 1, resultList, 1 + resultIndex, result)

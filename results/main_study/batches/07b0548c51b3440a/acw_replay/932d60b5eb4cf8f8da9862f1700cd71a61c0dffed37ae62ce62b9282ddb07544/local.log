@@ -1,0 +1,22 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/932d60b5eb4cf8f8da9862f1700cd71a61c0dffed37ae62ce62b9282ddb07544/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,14 +3,14 @@
+ N = int(input())
+ A = [int(a) for a in input().split()]
+ for i in range(N):
+-    if A[i] < 0:
++    if 0 > A[i]:
+         k = i
+         break
+ A = [0] + [0 if i < k else A[i] for i in range(N) if i != k]
+ 
+ ans = A.pop()
+ H = []
+-while N > 2:
++while 2 < N:
+     N //= 2
+     for _ in range(N):
+         heappush(H, A.pop())
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/932d60b5eb4cf8f8da9862f1700cd71a61c0dffed37ae62ce62b9282ddb07544/with_tabs.py

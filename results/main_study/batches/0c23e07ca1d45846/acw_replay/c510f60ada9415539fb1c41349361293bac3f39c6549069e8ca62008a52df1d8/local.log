@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/c510f60ada9415539fb1c41349361293bac3f39c6549069e8ca62008a52df1d8/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ def size(k):
+     return int(math.log2(k))
+ def v2(k):
+-    return 0 if k%2==1 else 1+v2(k//2)
++    return 0 if k%2==1 else v2(k//2)+1
+ n=int(input())
+ s=list(map(int,input().split()))
+ import math
+@@ -19,7 +19,7 @@
+         new = [boi^guy for boi in found]
+         for guy in new:
+             found[guy]=1
+-        if use==big+1:
++        if use==1+big:
+             good=use
+ if good==0:
+     print(0)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/c510f60ada9415539fb1c41349361293bac3f39c6549069e8ca62008a52df1d8/with_tabs.py

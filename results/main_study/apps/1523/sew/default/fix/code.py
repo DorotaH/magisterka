@@ -1,0 +1,29 @@
+n, k = list(map(int, input().strip().split()))
+
+jobs = list(map(int, input().strip().split()))
+times = list(map(int, input().strip().split()))
+
+counts_jobs = dict()
+for  job in  jobs:
+    if job in counts_jobs:
+        counts_jobs[job] += 1
+    else:
+        counts_jobs[job] = 1
+
+times_i = list()
+for  i, time in  enumerate(times, 0):
+    times_i.append((time, i))
+
+times_i.sort()
+jobs_left = k - len(counts_jobs.keys())
+
+ans = 0
+for  time, i in  times_i:
+    if 0 == jobs_left:
+        break
+    if counts_jobs[jobs[i]] > 1:
+        ans += time
+        jobs_left -= 1
+        counts_jobs[jobs[i]] -= 1
+
+print(ans)

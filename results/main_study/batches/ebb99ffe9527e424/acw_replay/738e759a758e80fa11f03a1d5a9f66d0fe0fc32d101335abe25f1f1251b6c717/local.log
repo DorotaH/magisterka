@@ -1,0 +1,70 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/738e759a758e80fa11f03a1d5a9f66d0fe0fc32d101335abe25f1f1251b6c717/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,51 +16,51 @@
+             y = random.randint(0, self.n - 1)
+             arr[y][x] = "X"
+             if (
+-                (x >= 0 and self.n - 2 >= x)
+-                and (y >= 0 and y <= self.n - 1)
++                (0 <= x and self.n - 2 >= x)
++                and (y >= 0 and self.n - 1 >= y)
+                 and arr[y][1 + x] != "X"
+             ):
+                 arr[y][1 + x] += 1
+             if (
+-                (x >= 1 and self.n - 1 >= x)
+-                and (y >= 0 and y <= self.n - 1)
++                (1 <= x and self.n - 1 >= x)
++                and (y >= 0 and self.n - 1 >= y)
+                 and arr[y][x - 1] != "X"
+             ):
+                 arr[y][x - 1] += 1
+             if (
+-                (x >= 1 and self.n - 1 >= x)
+-                and (y >= 1 and y <= self.n - 1)
++                (1 <= x and self.n - 1 >= x)
++                and (y >= 1 and self.n - 1 >= y)
+                 and arr[y - 1][x - 1] != "X"
+             ):
+                 arr[y - 1][x - 1] += 1
+ 
+             if (
+-                (x >= 0 and self.n - 2 >= x)
+-                and (y >= 1 and y <= self.n - 1)
++                (0 <= x and self.n - 2 >= x)
++                and (y >= 1 and self.n - 1 >= y)
+                 and arr[y - 1][1 + x] != "X"
+             ):
+                 arr[y - 1][1 + x] += 1
+             if (
+-                (x >= 0 and self.n - 1 >= x)
+-                and (y >= 1 and y <= self.n - 1)
++                (0 <= x and self.n - 1 >= x)
++                and (y >= 1 and self.n - 1 >= y)
+                 and arr[y - 1][x] != "X"
+             ):
+                 arr[y - 1][x] += 1
+ 
+             if (
+-                (x >= 0 and self.n - 2 >= x)
++                (0 <= x and self.n - 2 >= x)
+                 and (y >= 0 and self.n - 2 >= y)
+                 and arr[y + 1][1 + x] != "X"
+             ):
+                 arr[y + 1][1 + x] += 1
+             if (
+-                (x >= 1 and self.n - 1 >= x)
++                (1 <= x and self.n - 1 >= x)
+                 and (y >= 0 and self.n - 2 >= y)
+                 and arr[y + 1][x - 1] != "X"
+             ):
+                 arr[y + 1][x - 1] += 1
+             if (
+-                (x >= 0 and self.n - 1 >= x)
++                (0 <= x and self.n - 1 >= x)
+                 and (y >= 0 and self.n - 2 >= y)
+                 and arr[y + 1][x] != "X"
+             ):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/738e759a758e80fa11f03a1d5a9f66d0fe0fc32d101335abe25f1f1251b6c717/with_tabs.py

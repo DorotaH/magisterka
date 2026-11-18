@@ -1,0 +1,44 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/ef7d413102e90a9da3c77b7055be759b6305d44e69453ff182de322245f47574/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+         # search for lowest value
+         while low <= high:
+             # find mid
+-            mid = (low + high) // 2
++            mid = (high + low) // 2
+ 
+             if mid > 0 and nums[mid] < nums[mid - 1]:
+                 # base index found
+@@ -44,4 +44,4 @@
+             return -1
+ 
+         # send stitched together derotated list to binary_search function
+-        return binary_search(nums[base_index:] + nums[:base_index])+        return binary_search(nums[:base_index] + nums[base_index:])
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/ef7d413102e90a9da3c77b7055be759b6305d44e69453ff182de322245f47574/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+                 # base index found
+                 base_index = mid
+                 break
+-            elif nums[mid] > nums[-1]:
++            elif nums[-1] < nums[mid]:
+                 # check right
+                 low = mid + 1
+             else:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/ef7d413102e90a9da3c77b7055be759b6305d44e69453ff182de322245f47574/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         base_index = 0
+ 
+         # search for lowest value
+-        while low <= high:
++        while high >= low:
+             # find mid
+             mid = (high + low) // 2
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/ef7d413102e90a9da3c77b7055be759b6305d44e69453ff182de322245f47574/with_tabs.py

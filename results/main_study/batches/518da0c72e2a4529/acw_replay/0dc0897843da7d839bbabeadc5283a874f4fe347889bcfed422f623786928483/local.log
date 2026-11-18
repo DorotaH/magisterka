@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/0dc0897843da7d839bbabeadc5283a874f4fe347889bcfed422f623786928483/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+                 summ = nums[i] + nums[l] + nums[r]
+                 if summ == target:
+                     return summ
+-                if abs(summ - target) < abs(ans - target):
++                if abs(ans - target) > abs(summ - target):
+                     ans = summ
+                 if summ < target:
+                     l += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/0dc0897843da7d839bbabeadc5283a874f4fe347889bcfed422f623786928483/with_tabs.py

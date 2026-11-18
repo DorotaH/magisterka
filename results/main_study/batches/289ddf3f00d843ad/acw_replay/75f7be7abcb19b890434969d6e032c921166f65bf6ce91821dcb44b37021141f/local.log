@@ -1,0 +1,110 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/75f7be7abcb19b890434969d6e032c921166f65bf6ce91821dcb44b37021141f/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ from fractions import gcd
+ import numpy as np
+ 
+-MOD = 10**9 + 7
++MOD = 7 + 10**9
+ 
+ S = int(input())
+ 
+@@ -17,12 +17,12 @@
+     # S 2種の桁数k,k+1からなる。さらにk>=9を仮定する。
+     # 項数nとすると、kn < S < (k+1)n となる(k,n)の個数を数える
+     # まずk > Mとなるものを数える。このとき1<=n<=Mである。
+-    n = np.arange(1, M + 1)
++    n = np.arange(1, 1 + M)
+     k_max = (S - 1) // n
+-    k_min = np.maximum(M + 1, S // n)
++    k_min = np.maximum(1 + M, S // n)
+     cnt += np.maximum(0, k_max - k_min + 1).sum()
+     # 次に、9<=k<=Mとなるものを数える
+-    k = np.arange(9, M + 1)
++    k = np.arange(9, 1 + M)
+     n_max = (S - 1) // k
+     n_min = S // (k + 1) + 1
+     cnt += np.maximum(0, n_max - n_min + 1).sum()
+@@ -35,7 +35,7 @@
+ def type_2(S):
+     # S 1種の桁数からなる。
+     cnt = 0
+-    div = np.arange(1, M + 1, dtype=np.int64)
++    div = np.arange(1, 1 + M, dtype=np.int64)
+     div = set(div[S % div == 0])
+     div |= set(S // x for x in div)
+     for d in div:
+@@ -59,7 +59,7 @@
+             mid = sum(
+                 i * 9 * 10 ** (i - 1) for i in range(L + 1, R)
+             )  # 途中の桁数の寄与
+-            rest = S - (L + mid + R)
++            rest = S - (mid + L + R)
+             if rest < 0:
+                 continue
+             # Lが1+x個、Rが1+y個として
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/75f7be7abcb19b890434969d6e032c921166f65bf6ce91821dcb44b37021141f/without_tabs.py:
+--- Original
++++ Modified
+@@ -42,10 +42,10 @@
+         n = S // d
+         # d桁のものをn個使うようにしたい
+         if d < 10:
+-            total = 9 * 10 ** (d - 1)
++            total = 10 ** (d - 1) * 9
+             cnt += max(0, total - n + 1)
+         else:
+-            total = 9 * pow(10, int(d) - 1, MOD)
++            total = pow(10, int(d) - 1, MOD) * 9
+             cnt += total - n + 1
+     return cnt % MOD
+ 
+@@ -64,8 +64,8 @@
+                 continue
+             # Lが1+x個、Rが1+y個として
+             # Lx + Ry = rest, 0<=x<=x_max, 0<=y<=y_max
+-            x_max = 9 * 10 ** (L - 1) - 1
+-            y_max = 9 * 10 ** (R - 1) - 1
++            x_max = 10 ** (L - 1) * 9 - 1
++            y_max = 10 ** (R - 1) * 9 - 1
+             g = gcd(L, R)
+             if rest % g != 0:
+                 continue
+@@ -74,9 +74,9 @@
+             rest //= g
+             # x mod R0が一意に決まる
+             for x0 in range(R0):
+-                if (L0 * x0 - rest) % R0 == 0:
++                if (x0 * L0 - rest) % R0 == 0:
+                     break
+-            y0 = (rest - L0 * x0) // R0
++            y0 = (rest - x0 * L0) // R0
+             # (x0 + tR, y0-tL)として解がパラメータ表示できる
+             # 0 <= x0 + tR <= x_max
+             t_min = 0
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/75f7be7abcb19b890434969d6e032c921166f65bf6ce91821dcb44b37021141f/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+     for d in div:
+         n = S // d
+         # d桁のものをn個使うようにしたい
+-        if d < 10:
++        if 10 > d:
+             total = 10 ** (d - 1) * 9
+             cnt += max(0, total - n + 1)
+         else:
+@@ -60,7 +60,7 @@
+                 i * 9 * 10 ** (i - 1) for i in range(L + 1, R)
+             )  # 途中の桁数の寄与
+             rest = S - (mid + L + R)
+-            if rest < 0:
++            if 0 > rest:
+                 continue
+             # Lが1+x個、Rが1+y個として
+             # Lx + Ry = rest, 0<=x<=x_max, 0<=y<=y_max
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/75f7be7abcb19b890434969d6e032c921166f65bf6ce91821dcb44b37021141f/with_tabs.py

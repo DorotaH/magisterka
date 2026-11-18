@@ -1,0 +1,13 @@
+    def auto_check_conflict(self):
+        if self.current_temperature > self.target_temperature:
+            if self.mode == 'cool':
+                return True
+            else:
+                self.auto_set_mode()
+                return False
+        else:
+            if self.mode == 'heat':
+                return True
+            else:
+                self.auto_set_mode()
+                return False

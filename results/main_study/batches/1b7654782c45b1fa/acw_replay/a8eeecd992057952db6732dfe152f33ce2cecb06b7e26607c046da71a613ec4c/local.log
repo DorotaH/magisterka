@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/a8eeecd992057952db6732dfe152f33ce2cecb06b7e26607c046da71a613ec4c/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ n=int(input())
+ a=list(map(int,input().split()))
+ 
+-c=[0]*1001
++c=1001*[0]
+ 
+ for i in range (len(a)):
+ 	c[a[i]]+=1
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/a8eeecd992057952db6732dfe152f33ce2cecb06b7e26607c046da71a613ec4c/without_tabs.py:
+--- Original
++++ Modified
+@@ -70,7 +70,7 @@
+ 	for i in range (na):
+ 		ar2.extend((ar[i], ar[i]))
+ 	for i in range (1001):
+-		while(c[i]>=2):
++		while(2 <= c[i]):
+ 			ar2.append(i)
+ 			c[i]-=2
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/a8eeecd992057952db6732dfe152f33ce2cecb06b7e26607c046da71a613ec4c/with_tabs.py

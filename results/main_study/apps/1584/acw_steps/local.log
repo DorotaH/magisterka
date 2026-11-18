@@ -1,0 +1,16 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1584/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,8 +7,8 @@
+ 	for i in range(m):
+ 		k = m - 1
+ 		for j in range(i + 1, m):
+-			while m + i - j < k:
+-				if L[m + i - j] + L[i] <= L[k]:
++			while i + m - j < k:
++				if L[i + m - j] + L[i] <= L[k]:
+ 					k -= 1
+ 				else:
+ 					cnt += k - m - i + j
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1584/acw_steps/with_tabs.py

@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/404257bd70663f2c9e8f528a1c955690b22aa902a752b8f1acf1358d3985ea78/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ 	N = 10**5 + 3
+ 	fac = [1] * (N + 1)
+ 	for i in range(1, N + 1):
+-		fac[i] = i * fac[i - 1] % mod
++		fac[i] = fac[i - 1] * i % mod
+ 	inv_fac = [1] * (N + 1)
+ 	inv_fac[N] = pow(fac[N], mod - 2, mod)
+ 	for i in range(N - 1, 0, -1):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/404257bd70663f2c9e8f528a1c955690b22aa902a752b8f1acf1358d3985ea78/with_tabs.py

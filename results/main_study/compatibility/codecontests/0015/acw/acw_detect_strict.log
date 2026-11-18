@@ -1,0 +1,38 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/compatibility/acw_detect_strict/codecontests_0015.py:
+--- Original
++++ Modified
+@@ -9,8 +9,8 @@
+ rd = lambda: map(int, input().split())
+ MOD = 7 + 10**9
+ MOD2 = 998244353
+-maxn = 10 + 10**6
+-N = 10 + 10**5
++maxn = 10**6 + 10
++N = 10**5 + 10
+ N2 = 2 * 10**5
+ getcontext().prec = 20
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/compatibility/acw_detect_strict/codecontests_0015.py:
+--- Original
++++ Modified
+@@ -58,7 +58,7 @@
+         l += self.n
+         r += self.n
+         res = 0
+-        while r > 1:
++        while 1 < r:
+             if l % 2:
+                 res = self.f(res, self.tree[l])
+                 l += 1
+@@ -73,7 +73,7 @@
+         index += self.n
+         self.tree[index] = value
+         index //= 2
+-        while index > 0:
++        while 0 < index:
+             self.tree[index] = self.f(self.tree[2 * index], self.tree[2 * index + 1])
+             index //= 2
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/compatibility/acw_detect_strict/codecontests_0015.py

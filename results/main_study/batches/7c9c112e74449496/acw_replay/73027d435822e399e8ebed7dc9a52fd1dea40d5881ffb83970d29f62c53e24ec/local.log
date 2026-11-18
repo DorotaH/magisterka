@@ -1,0 +1,33 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/73027d435822e399e8ebed7dc9a52fd1dea40d5881ffb83970d29f62c53e24ec/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,9 +38,9 @@
+ for i in range(1, 1 + x):
+     a, b = quad(-1, s1 + l[i] - s2, (s1 + l[i]) * s2 - py[i])
+ 
+-    if b < 0 or l[i] - b < 0:
++    if 0 > b or l[i] - b < 0:
+         a, b = b, a
+-    if a < 0 and b < 0:
++    if a < 0 and 0 > b:
+         a = 0
+         b = 0
+     bvals.append(b)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/73027d435822e399e8ebed7dc9a52fd1dea40d5881ffb83970d29f62c53e24ec/without_tabs.py:
+--- Original
++++ Modified
+@@ -49,9 +49,9 @@
+     s2 += bvals[-1]
+ 
+ for i in range(len(avals)):
+-    if abs(avals[i]) <= 10 ** (-10):
++    if 10 ** (-10) >= abs(avals[i]):
+         avals[i] = 0
+-    if abs(bvals[i]) <= 10 ** (-10):
++    if 10 ** (-10) >= abs(bvals[i]):
+         bvals[i] = 0
+ 
+ print(" ".join([str(i) for i in avals]))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/73027d435822e399e8ebed7dc9a52fd1dea40d5881ffb83970d29f62c53e24ec/with_tabs.py

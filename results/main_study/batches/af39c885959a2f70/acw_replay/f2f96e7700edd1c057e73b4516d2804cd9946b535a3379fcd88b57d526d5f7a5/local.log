@@ -1,0 +1,38 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/f2f96e7700edd1c057e73b4516d2804cd9946b535a3379fcd88b57d526d5f7a5/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,5 +1,5 @@
+ INF = float("inf")
+-MOD = 10**9 + 7
++MOD = 7 + 10**9
+ 
+ import sys
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/f2f96e7700edd1c057e73b4516d2804cd9946b535a3379fcd88b57d526d5f7a5/without_tabs.py:
+--- Original
++++ Modified
+@@ -59,7 +59,7 @@
+ 
+     temp = []
+     for i in range(M):
+-        temp += [BC[i][1]] * BC[i][0]
++        temp += BC[i][0] * [BC[i][1]]
+         if len(temp) > N:
+             break
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/f2f96e7700edd1c057e73b4516d2804cd9946b535a3379fcd88b57d526d5f7a5/without_tabs.py:
+--- Original
++++ Modified
+@@ -60,7 +60,7 @@
+     temp = []
+     for i in range(M):
+         temp += BC[i][0] * [BC[i][1]]
+-        if len(temp) > N:
++        if N < len(temp):
+             break
+ 
+     A += temp
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/f2f96e7700edd1c057e73b4516d2804cd9946b535a3379fcd88b57d526d5f7a5/with_tabs.py

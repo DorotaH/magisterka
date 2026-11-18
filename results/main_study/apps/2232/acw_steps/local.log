@@ -1,0 +1,65 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2232/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,9 +23,9 @@
+         for k in edges[j]:
+             if not pruned[k]:
+                 if len(edges[k]) < 3:
+-                    todo.append((d + 1, i, k))
++                    todo.append((1 + d, i, k))
+                 else:
+-                    leaves[k].append((d + 1, i))
++                    leaves[k].append((1 + d, i))
+     return pruned, leaves
+ 
+ pruned, leaves = prune()
+@@ -48,7 +48,7 @@
+             top_vertices.append(i)
+         for j in edges[i]:
+             if not visited[j]:
+-                todo.append((d + 1, j))
++                todo.append((1 + d, j))
+     return top_distance, top_vertices
+ 
+ # Single center topology.
+@@ -64,7 +64,7 @@
+     for i in v:
+         assert not pruned[i]
+         l = list(reversed(sorted(leaves[i])))[:2]
+-        score = (l[0][0] + l[1][0]), l[0][1], l[1][1]
++        score = (l[1][0] + l[0][0]), l[0][1], l[1][1]
+         scores.append(score)
+     return list(reversed(sorted(scores)))
+ 
+@@ -101,5 +101,5 @@
+     )
+ 
+ a, b, c, d = solve()
+-print(a + 1, b + 1)
+-print(c + 1, d + 1)
++print(a + 1, 1 + b)
++print(1 + c, 1 + d)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2232/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+         pruned[j] = True
+         for k in edges[j]:
+             if not pruned[k]:
+-                if len(edges[k]) < 3:
++                if 3 > len(edges[k]):
+                     todo.append((1 + d, i, k))
+                 else:
+                     leaves[k].append((1 + d, i))
+@@ -41,7 +41,7 @@
+     while todo:
+         d, i = todo.pop()
+         visited[i] = True
+-        if d > top_distance:
++        if top_distance < d:
+             top_distance = d
+             top_vertices = []
+         if d == top_distance:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2232/acw_steps/with_tabs.py

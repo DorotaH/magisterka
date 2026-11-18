@@ -1,0 +1,39 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/d42870ae9b01d5c72e6fa89cf13e67cf66ac158552f3b56728f52f1072902244/without_tabs.py:
+--- Original
++++ Modified
+@@ -34,10 +34,10 @@
+     diff = [-1, 0, 1]
+ 
+     for d1 in diff:
+-        a1 = l[a] + d1
++        a1 = d1 + l[a]
+         if a1:
+             for d2 in diff:
+-                a2 = l[b] + d2
++                a2 = d2 + l[b]
+                 if a2:
+                     factAdd(gcd(a1, a2))
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/d42870ae9b01d5c72e6fa89cf13e67cf66ac158552f3b56728f52f1072902244/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+             candidates.add(test)
+             n //= test
+         test += 2
+-    if n > 1:
++    if 1 < n:
+         candidates.add(n)
+ 
+ for _ in range(100):
+@@ -49,6 +49,6 @@
+         else:
+             v2 = v % cand
+             count += min(v2, cand - v2)
+-    if count < best:
++    if best > count:
+         best = count
+ print(best)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/d42870ae9b01d5c72e6fa89cf13e67cf66ac158552f3b56728f52f1072902244/with_tabs.py

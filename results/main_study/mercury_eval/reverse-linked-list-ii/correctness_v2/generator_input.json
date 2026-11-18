@@ -1,0 +1,27 @@
+{
+  "generator_code": "import random\n\nclass ListNode:\n    def __init__(self, x):\n        self.val = x\n        self.next = None\n\ndef generate_test_case():\n    n = random.randint(1, 500)\n    head = ListNode(random.randint(-500, 500))\n    current_node = head\n    for _ in range(n - 1):\n        new_node = ListNode(random.randint(-500, 500))\n        current_node.next = new_node\n        current_node = new_node\n\n    left = random.randint(1, n)\n    right = random.randint(left, n)\n    import lctk\n    head = lctk.linkedList2Arr(head)\n    return head, left, right",
+  "seed": 14478733059104875159,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        2,
+        4
+      ],
+      "expected": [
+        1,
+        4,
+        3,
+        2,
+        5
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_61/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,7 +33,7 @@
+             return False
+         current_index = self.playlist.index(self.current_song)
+         if current_index < len(self.playlist) - 1:
+-            self.current_song = self.playlist[current_index + 1]
++            self.current_song = self.playlist[1 + current_index]
+             return True
+         else:
+             return False
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_61/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+         if not self.current_song:
+             return False
+         current_index = self.playlist.index(self.current_song)
+-        if current_index < len(self.playlist) - 1:
++        if len(self.playlist) - 1 > current_index:
+             self.current_song = self.playlist[1 + current_index]
+             return True
+         else:
+@@ -42,7 +42,7 @@
+         if not self.current_song:
+             return False
+         current_index = self.playlist.index(self.current_song)
+-        if current_index > 0:
++        if 0 < current_index:
+             self.current_song = self.playlist[current_index - 1]
+             return True
+         else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_61/acw_steps/with_tabs.py

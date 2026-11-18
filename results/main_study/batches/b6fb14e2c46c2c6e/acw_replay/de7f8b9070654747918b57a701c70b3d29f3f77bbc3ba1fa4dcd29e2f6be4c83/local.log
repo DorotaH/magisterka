@@ -1,0 +1,29 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/de7f8b9070654747918b57a701c70b3d29f3f77bbc3ba1fa4dcd29e2f6be4c83/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,12 +27,12 @@
+         a = [x // self.d for x in a]
+         a.sort()
+ 
+-        d = [sum(a)] + [0 for _ in range(1, a[-1] + 1)]
++        d = [sum(a)] + [0 for _ in range(1, 1 + a[-1])]
+ 
+         lessCurrentLevel = 0
+         counter = Counter(a)
+ 
+-        for level in range(1, a[-1] + 1):
++        for level in range(1, 1 + a[-1]):
+             lessCurrentLevel += counter[level - 1]
+             d[level] = d[level - 1] + lessCurrentLevel - (len(a) - lessCurrentLevel)
+         self.answer = min(d)
+@@ -44,7 +44,7 @@
+                 self.answer = -1
+                 return
+         a = [x // d for x in a]
+-        d = [abs(a[0] - i) for i in range(10000 + 1)]
++        d = [abs(a[0] - i) for i in range(1 + 10000)]
+         for i in range(1, len(a)):
+             for j in range(0, len(d)):
+                 d[j] += abs(a[i] - j)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/de7f8b9070654747918b57a701c70b3d29f3f77bbc3ba1fa4dcd29e2f6be4c83/with_tabs.py

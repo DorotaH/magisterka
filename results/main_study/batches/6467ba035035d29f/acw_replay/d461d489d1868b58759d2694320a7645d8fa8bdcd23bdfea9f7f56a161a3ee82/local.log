@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/d461d489d1868b58759d2694320a7645d8fa8bdcd23bdfea9f7f56a161a3ee82/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+                         if a[i][k][0] >= l and r >= a[i][k][1]:
+                             cnt += 1
+                     lr = cnt * cnt
+-                    if l <= k - 1:
++                    if k - 1 >= l:
+                         lr += dp[l][k - 1]
+                     if k + 1 <= r:
+                         lr += dp[k + 1][r]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/d461d489d1868b58759d2694320a7645d8fa8bdcd23bdfea9f7f56a161a3ee82/with_tabs.py

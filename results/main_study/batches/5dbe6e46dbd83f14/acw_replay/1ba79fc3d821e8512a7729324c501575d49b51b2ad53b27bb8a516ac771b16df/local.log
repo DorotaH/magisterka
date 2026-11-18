@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/1ba79fc3d821e8512a7729324c501575d49b51b2ad53b27bb8a516ac771b16df/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ 			bfs = [(0, 0)]
+ 			seen = set((0, 0))
+ 			for x, y in bfs:
+-				if grid[x][y] <= T:
++				if T >= grid[x][y]:
+ 					if x == y == size - 1: return True
+ 					for i, j in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
+ 						if 0 <= i + x < size and 0 <= y + j < size and (i + x, y + j) not in seen:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/1ba79fc3d821e8512a7729324c501575d49b51b2ad53b27bb8a516ac771b16df/with_tabs.py

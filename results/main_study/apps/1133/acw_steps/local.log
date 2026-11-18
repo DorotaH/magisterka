@@ -1,0 +1,16 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1133/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,8 +6,8 @@
+     for i in range(26):
+         for j in range(i + 1, 26):
+             ci = chr(i + ord('a'))
+-            cj = chr(j + ord('a'))
+-            t = sum(len(s) for s in a if s.count(ci) + s.count(cj) == len(s))
++            cj = chr(ord('a') + j)
++            t = sum(len(s) for s in a if s.count(cj) + s.count(ci) == len(s))
+             result = max(result, t)
+ 
+     print(result)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1133/acw_steps/with_tabs.py

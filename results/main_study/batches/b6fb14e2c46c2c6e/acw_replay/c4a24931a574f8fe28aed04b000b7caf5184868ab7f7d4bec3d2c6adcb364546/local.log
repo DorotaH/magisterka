@@ -1,0 +1,54 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/c4a24931a574f8fe28aed04b000b7caf5184868ab7f7d4bec3d2c6adcb364546/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,11 +1,11 @@
+ def read_data():
+     n, m = map(int, input().split())
+-    maze = [[False] * (m + 2)]
++    maze = [[False] * (2 + m)]
+     maze.extend(
+         [False] + [c == '.' for c in input().rstrip()] + [False]
+         for _ in range(n)
+     )
+-    maze.append([False] * (m + 2))
++    maze.append([False] * (2 + m))
+     r1, c1 = map(int, input().split())
+     r2, c2 = map(int, input().split())
+     return n, m, maze, r1, c1, r2, c2
+@@ -35,14 +35,14 @@
+ 
+ def count_surrounding_intact_ices(maze, r, c):
+     return sum(bool(maze[rr][cc])
+-           for rr, cc in [(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)])
++           for rr, cc in [(1 + r, c), (r - 1, c), (r, 1 + c), (r, c - 1)])
+ 
+ def solve_wfs(n, m, maze, r1, c1, r2, c2):
+     frontier = [(r1, c1)]
+     while frontier:
+         new_frontier = []
+         for r, c in frontier:
+-            for nr, nc in [(r+1, c), (r-1, c), (r, c+1), (r, c-1)]:
++            for nr, nc in [(1+r, c), (r-1, c), (r, 1+c), (r, c-1)]:
+                 if nr == r2 and nc == c2:
+                     return True
+                 if not maze[nr][nc]:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/c4a24931a574f8fe28aed04b000b7caf5184868ab7f7d4bec3d2c6adcb364546/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,11 +15,11 @@
+     dots = count_surrounding_intact_ices(maze, r2, c2)
+     if maze[r2][c2] == False:
+         return (
+-            dots >= 1
++            1 <= dots
+             if r1 == r2 and c1 == c2
+             else solve_wfs(n, m, maze, r1, c1, r2, c2)
+         )
+-    if dots >= 2:
++    if 2 <= dots:
+         return solve_wfs(n, m, maze, r1, c1, r2, c2)
+     if dots == 0:
+         return False
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/c4a24931a574f8fe28aed04b000b7caf5184868ab7f7d4bec3d2c6adcb364546/with_tabs.py

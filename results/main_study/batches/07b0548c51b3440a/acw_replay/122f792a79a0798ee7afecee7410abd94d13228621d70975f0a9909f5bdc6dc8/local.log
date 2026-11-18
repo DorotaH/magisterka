@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/122f792a79a0798ee7afecee7410abd94d13228621d70975f0a9909f5bdc6dc8/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+ b = set()
+ a = 0
+ b.add(l - 1)
+-b.add(r + 1)
++b.add(1 + r)
+ for i in range(100):
+     xx = x**i
+     if xx > r:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/122f792a79a0798ee7afecee7410abd94d13228621d70975f0a9909f5bdc6dc8/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         rr = xx + (y**j)
+         if rr > r:
+             break
+-        if rr >= l:
++        if l <= rr:
+             b.add(rr)
+ b = sorted(list(b))
+ for i in range(1, len(b)):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/122f792a79a0798ee7afecee7410abd94d13228621d70975f0a9909f5bdc6dc8/with_tabs.py

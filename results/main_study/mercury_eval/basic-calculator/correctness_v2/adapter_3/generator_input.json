@@ -1,0 +1,13 @@
+{
+  "generator_code": "from random import random, randint, choice\n\nclass Expression:\n    pass\n\nclass Number(Expression):\n    def __init__(self, num):\n        self.num = num\n\n    def __str__(self):\n        return str(self.num)\n\nclass BinaryExpression(Expression):\n    def __init__(self, left, op, right):\n        self.left = left\n        self.op = op\n        self.right = right\n\n    def __str__(self):\n        return str(self.left) + \" \" + self.op + \" \"  + str(self.right)\n\nclass ParenthesizedExpression(Expression):\n    def __init__(self, exp):\n        self.exp = exp\n\n    def __str__(self):\n        return \"(\" + str(self.exp) + \")\"\n\ndef randomExpression(prob):\n    p = random()\n    if p > prob:\n        return Number(randint(1, 100))\n    elif randint(0, 1) == 0:\n        return ParenthesizedExpression(randomExpression(prob / 1.2))\n    else:\n        left = randomExpression(prob / 1.2)\n        op = choice([\"+\", \"-\"])\n        right = randomExpression(prob / 1.2)\n        return BinaryExpression(left, op, right)\n    \ndef generate_test_case():\n    return str(randomExpression(1))",
+  "seed": 4003534480111758299,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "1 + 1"
+      ],
+      "expected": 2
+    }
+  ]
+}

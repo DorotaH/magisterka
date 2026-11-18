@@ -1,0 +1,378 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_11/sew/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_11/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.BitStatusUtilTestAdd.test_add\": [[\"assertEqual\", 2]], \"benchmark_case.BitStatusUtilTestAdd.test_add_2\": [[\"assertEqual\", 2]], \"benchmark_case.BitStatusUtilTestAdd.test_add_3\": [[\"assertEqual\", 2]], \"benchmark_case.BitStatusUtilTestAdd.test_add_4\": [[\"assertEqual\", 2]], \"benchmark_case.BitStatusUtilTestAdd.test_add_5\": [[\"assertEqual\", 2]], \"benchmark_case.BitStatusUtilTestCheck.test_check_2\": [[\"assertRaises\", 1]], \"benchmark_case.BitStatusUtilTestCheck.test_check_3\": [[\"assertRaises\", 1]], \"benchmark_case.BitStatusUtilTestCheck.test_check_4\": [[\"assertRaises\", 1]], \"benchmark_case.BitStatusUtilTestCheck.test_check_5\": [[\"assertRaises\", 1]], \"benchmark_case.BitStatusUtilTestHas.test_has\": [[\"assertTrue\", 1]], \"benchmark_case.BitStatusUtilTestHas.test_has_2\": [[\"assertFalse\", 1]], \"benchmark_case.BitStatusUtilTestHas.test_has_3\": [[\"assertTrue\", 1]], \"benchmark_case.BitStatusUtilTestHas.test_has_4\": [[\"assertFalse\", 1]], \"benchmark_case.BitStatusUtilTestHas.test_has_5\": [[\"assertTrue\", 1]], \"benchmark_case.BitStatusUtilTestMain.test_main\": [[\"assertEqual\", 2], [\"assertTrue\", 1], [\"assertEqual\", 2], [\"assertRaises\", 1]], \"benchmark_case.BitStatusUtilTestRemove.test_remove\": [[\"assertEqual\", 2]], \"benchmark_case.BitStatusUtilTestRemove.test_remove_2\": [[\"assertEqual\", 2]], \"benchmark_case.BitStatusUtilTestRemove.test_remove_3\": [[\"assertEqual\", 2]], \"benchmark_case.BitStatusUtilTestRemove.test_remove_4\": [[\"assertEqual\", 2]], \"benchmark_case.BitStatusUtilTestRemove.test_remove_5\": [[\"assertEqual\", 2]]}, \"errors\": [], \"failures\": [], \"log\": \"test_add (benchmark_case.BitStatusUtilTestAdd.test_add) ... ok\\ntest_add_2 (benchmark_case.BitStatusUtilTestAdd.test_add_2) ... ok\\ntest_add_3 (benchmark_case.BitStatusUtilTestAdd.test_add_3) ... ok\\ntest_add_4 (benchmark_case.BitStatusUtilTestAdd.test_add_4) ... ok\\ntest_add_5 (benchmark_case.BitStatusUtilTestAdd.test_add_5) ... ok\\ntest_has (benchmark_case.BitStatusUtilTestHas.test_has) ... ok\\ntest_has_2 (benchmark_case.BitStatusUtilTestHas.test_has_2) ... ok\\ntest_has_3 (benchmark_case.BitStatusUtilTestHas.test_has_3) ... ok\\ntest_has_4 (benchmark_case.BitStatusUtilTestHas.test_has_4) ... ok\\ntest_has_5 (benchmark_case.BitStatusUtilTestHas.test_has_5) ... ok\\ntest_remove (benchmark_case.BitStatusUtilTestRemove.test_remove) ... ok\\ntest_remove_2 (benchmark_case.BitStatusUtilTestRemove.test_remove_2) ... ok\\ntest_remove_3 (benchmark_case.BitStatusUtilTestRemove.test_remove_3) ... ok\\ntest_remove_4 (benchmark_case.BitStatusUtilTestRemove.test_remove_4) ... ok\\ntest_remove_5 (benchmark_case.BitStatusUtilTestRemove.test_remove_5) ... ok\\ntest_check (benchmark_case.BitStatusUtilTestCheck.test_check) ... ok\\ntest_check_2 (benchmark_case.BitStatusUtilTestCheck.test_check_2) ... ok\\ntest_check_3 (benchmark_case.BitStatusUtilTestCheck.test_check_3) ... ok\\ntest_check_4 (benchmark_case.BitStatusUtilTestCheck.test_check_4) ... ok\\ntest_check_5 (benchmark_case.BitStatusUtilTestCheck.test_check_5) ... ok\\ntest_main (benchmark_case.BitStatusUtilTestMain.test_main) ... ok\\n\\n----------------------------------------------------------------------\\nRan 21 tests in 0.005s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.BitStatusUtilTestAdd.test_add\": [[\"add\", \"6\"]], \"benchmark_case.BitStatusUtilTestAdd.test_add_2\": [[\"add\", \"2\"]], \"benchmark_case.BitStatusUtilTestAdd.test_add_3\": [[\"add\", \"0\"]], \"benchmark_case.BitStatusUtilTestAdd.test_add_4\": [[\"add\", \"2\"]], \"benchmark_case.BitStatusUtilTestAdd.test_add_5\": [[\"add\", \"2\"]], \"benchmark_case.BitStatusUtilTestCheck.test_check\": [[\"check\", \"null\"]], \"benchmark_case.BitStatusUtilTestCheck.test_check_2\": [[\"check\", \"null\"]], \"benchmark_case.BitStatusUtilTestCheck.test_check_3\": [[\"check\", \"null\"]], \"benchmark_case.BitStatusUtilTestCheck.test_check_4\": [[\"check\", \"null\"]], \"benchmark_case.BitStatusUtilTestCheck.test_check_5\": [[\"check\", \"null\"]], \"benchmark_case.BitStatusUtilTestHas.test_has\": [[\"has\", \"true\"]], \"benchmark_case.BitStatusUtilTestHas.test_has_2\": [[\"has\", \"false\"]], \"benchmark_case.BitStatusUtilTestHas.test_has_3\": [[\"has\", \"true\"]], \"benchmark_case.BitStatusUtilTestHas.test_has_4\": [[\"has\", \"false\"]], \"benchmark_case.BitStatusUtilTestHas.test_has_5\": [[\"has\", \"true\"]], \"benchmark_case.BitStatusUtilTestMain.test_main\": [[\"add\", \"6\"], [\"has\", \"true\"], [\"remove\", \"4\"], [\"check\", \"null\"]], \"benchmark_case.BitStatusUtilTestRemove.test_remove\": [[\"remove\", \"4\"]], \"benchmark_case.BitStatusUtilTestRemove.test_remove_2\": [[\"remove\", \"8\"]], \"benchmark_case.BitStatusUtilTestRemove.test_remove_3\": [[\"remove\", \"2\"]], \"benchmark_case.BitStatusUtilTestRemove.test_remove_4\": [[\"remove\", \"8\"]], \"benchmark_case.BitStatusUtilTestRemove.test_remove_5\": [[\"remove\", \"0\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.BitStatusUtilTestAdd.test_add\", \"benchmark_case.BitStatusUtilTestAdd.test_add_2\", \"benchmark_case.BitStatusUtilTestAdd.test_add_3\", \"benchmark_case.BitStatusUtilTestAdd.test_add_4\", \"benchmark_case.BitStatusUtilTestAdd.test_add_5\", \"benchmark_case.BitStatusUtilTestHas.test_has\", \"benchmark_case.BitStatusUtilTestHas.test_has_2\", \"benchmark_case.BitStatusUtilTestHas.test_has_3\", \"benchmark_case.BitStatusUtilTestHas.test_has_4\", \"benchmark_case.BitStatusUtilTestHas.test_has_5\", \"benchmark_case.BitStatusUtilTestRemove.test_remove\", \"benchmark_case.BitStatusUtilTestRemove.test_remove_2\", \"benchmark_case.BitStatusUtilTestRemove.test_remove_3\", \"benchmark_case.BitStatusUtilTestRemove.test_remove_4\", \"benchmark_case.BitStatusUtilTestRemove.test_remove_5\", \"benchmark_case.BitStatusUtilTestCheck.test_check\", \"benchmark_case.BitStatusUtilTestCheck.test_check_2\", \"benchmark_case.BitStatusUtilTestCheck.test_check_3\", \"benchmark_case.BitStatusUtilTestCheck.test_check_4\", \"benchmark_case.BitStatusUtilTestCheck.test_check_5\", \"benchmark_case.BitStatusUtilTestMain.test_main\"], \"tests\": 21}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.16792673600002672,
+  "result": {
+    "checks": {
+      "benchmark_case.BitStatusUtilTestAdd.test_add": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestAdd.test_add_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestAdd.test_add_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestAdd.test_add_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestAdd.test_add_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestCheck.test_check_2": [
+        [
+          "assertRaises",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestCheck.test_check_3": [
+        [
+          "assertRaises",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestCheck.test_check_4": [
+        [
+          "assertRaises",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestCheck.test_check_5": [
+        [
+          "assertRaises",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has": [
+        [
+          "assertTrue",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has_2": [
+        [
+          "assertFalse",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has_3": [
+        [
+          "assertTrue",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has_4": [
+        [
+          "assertFalse",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has_5": [
+        [
+          "assertTrue",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestMain.test_main": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTrue",
+          1
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertRaises",
+          1
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_add (benchmark_case.BitStatusUtilTestAdd.test_add) ... ok\ntest_add_2 (benchmark_case.BitStatusUtilTestAdd.test_add_2) ... ok\ntest_add_3 (benchmark_case.BitStatusUtilTestAdd.test_add_3) ... ok\ntest_add_4 (benchmark_case.BitStatusUtilTestAdd.test_add_4) ... ok\ntest_add_5 (benchmark_case.BitStatusUtilTestAdd.test_add_5) ... ok\ntest_has (benchmark_case.BitStatusUtilTestHas.test_has) ... ok\ntest_has_2 (benchmark_case.BitStatusUtilTestHas.test_has_2) ... ok\ntest_has_3 (benchmark_case.BitStatusUtilTestHas.test_has_3) ... ok\ntest_has_4 (benchmark_case.BitStatusUtilTestHas.test_has_4) ... ok\ntest_has_5 (benchmark_case.BitStatusUtilTestHas.test_has_5) ... ok\ntest_remove (benchmark_case.BitStatusUtilTestRemove.test_remove) ... ok\ntest_remove_2 (benchmark_case.BitStatusUtilTestRemove.test_remove_2) ... ok\ntest_remove_3 (benchmark_case.BitStatusUtilTestRemove.test_remove_3) ... ok\ntest_remove_4 (benchmark_case.BitStatusUtilTestRemove.test_remove_4) ... ok\ntest_remove_5 (benchmark_case.BitStatusUtilTestRemove.test_remove_5) ... ok\ntest_check (benchmark_case.BitStatusUtilTestCheck.test_check) ... ok\ntest_check_2 (benchmark_case.BitStatusUtilTestCheck.test_check_2) ... ok\ntest_check_3 (benchmark_case.BitStatusUtilTestCheck.test_check_3) ... ok\ntest_check_4 (benchmark_case.BitStatusUtilTestCheck.test_check_4) ... ok\ntest_check_5 (benchmark_case.BitStatusUtilTestCheck.test_check_5) ... ok\ntest_main (benchmark_case.BitStatusUtilTestMain.test_main) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.005s\n\nOK\n",
+    "observed": {
+      "benchmark_case.BitStatusUtilTestAdd.test_add": [
+        [
+          "add",
+          "6"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestAdd.test_add_2": [
+        [
+          "add",
+          "2"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestAdd.test_add_3": [
+        [
+          "add",
+          "0"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestAdd.test_add_4": [
+        [
+          "add",
+          "2"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestAdd.test_add_5": [
+        [
+          "add",
+          "2"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestCheck.test_check": [
+        [
+          "check",
+          "null"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestCheck.test_check_2": [
+        [
+          "check",
+          "null"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestCheck.test_check_3": [
+        [
+          "check",
+          "null"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestCheck.test_check_4": [
+        [
+          "check",
+          "null"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestCheck.test_check_5": [
+        [
+          "check",
+          "null"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has": [
+        [
+          "has",
+          "true"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has_2": [
+        [
+          "has",
+          "false"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has_3": [
+        [
+          "has",
+          "true"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has_4": [
+        [
+          "has",
+          "false"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestHas.test_has_5": [
+        [
+          "has",
+          "true"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestMain.test_main": [
+        [
+          "add",
+          "6"
+        ],
+        [
+          "has",
+          "true"
+        ],
+        [
+          "remove",
+          "4"
+        ],
+        [
+          "check",
+          "null"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove": [
+        [
+          "remove",
+          "4"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_2": [
+        [
+          "remove",
+          "8"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_3": [
+        [
+          "remove",
+          "2"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_4": [
+        [
+          "remove",
+          "8"
+        ]
+      ],
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_5": [
+        [
+          "remove",
+          "0"
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.BitStatusUtilTestAdd.test_add",
+      "benchmark_case.BitStatusUtilTestAdd.test_add_2",
+      "benchmark_case.BitStatusUtilTestAdd.test_add_3",
+      "benchmark_case.BitStatusUtilTestAdd.test_add_4",
+      "benchmark_case.BitStatusUtilTestAdd.test_add_5",
+      "benchmark_case.BitStatusUtilTestHas.test_has",
+      "benchmark_case.BitStatusUtilTestHas.test_has_2",
+      "benchmark_case.BitStatusUtilTestHas.test_has_3",
+      "benchmark_case.BitStatusUtilTestHas.test_has_4",
+      "benchmark_case.BitStatusUtilTestHas.test_has_5",
+      "benchmark_case.BitStatusUtilTestRemove.test_remove",
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_2",
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_3",
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_4",
+      "benchmark_case.BitStatusUtilTestRemove.test_remove_5",
+      "benchmark_case.BitStatusUtilTestCheck.test_check",
+      "benchmark_case.BitStatusUtilTestCheck.test_check_2",
+      "benchmark_case.BitStatusUtilTestCheck.test_check_3",
+      "benchmark_case.BitStatusUtilTestCheck.test_check_4",
+      "benchmark_case.BitStatusUtilTestCheck.test_check_5",
+      "benchmark_case.BitStatusUtilTestMain.test_main"
+    ],
+    "tests": 21
+  }
+}

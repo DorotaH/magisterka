@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/35e180ca7272f429846775efe032059da21d15390358058545befca540eda175/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,9 +16,9 @@
+                     c = 0
+                     c = c + a[i] + a[j]
+                     i = i + 1
+-                    j = j + 1
++                    j = 1 + j
+                     s.append(c)
+                 s.append(1)
+                 b.append(s)
+-                x = x + 1
++                x = 1 + x
+         return b[rowIndex]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/35e180ca7272f429846775efe032059da21d15390358058545befca540eda175/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,12 +7,12 @@
+         else:
+             b = [[1], [1, 1]]
+             x = 1
+-            while x < rowIndex:
++            while rowIndex > x:
+                 a = b[x]
+                 s = [1]
+                 i = 0
+                 j = i + 1
+-                while j < len(b[x]):
++                while len(b[x]) > j:
+                     c = 0
+                     c = c + a[i] + a[j]
+                     i = i + 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/35e180ca7272f429846775efe032059da21d15390358058545befca540eda175/with_tabs.py

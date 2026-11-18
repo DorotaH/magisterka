@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2063/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ def main():
+     from collections import defaultdict
+     def f(x):
+-        inc = [0 for i in range(n + w)]
++        inc = [0 for i in range(w + n)]
+         cur_inc = 0
+         days = m
+         for i, v in enumerate(arr):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2063/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+             v += cur_inc
+             if x - v > days:
+                 return False
+-            if x > v:
++            if v < x:
+                 cur_inc += x - v
+                 days -= x - v
+                 inc[i + w] += x - v
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2063/acw_steps/with_tabs.py

@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/723/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+                 if k != i:
+                     w, h = people[k]
+                     w, h = min(w, h), max(w, h)
+-                    if w > maxh:
++                    if maxh < w:
+                         S = float("inf")
+                         break
+                     S += h if h > maxh else w
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/723/acw_steps/with_tabs.py

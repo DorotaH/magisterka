@@ -1,0 +1,67 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/75ae6859eeb15026d24225a274568b255b3fc53c1bb2567e9af0b0083dece6e5/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,15 +16,15 @@
+         seg.append((l, r))
+     val = list(val)
+     val.sort()
+-    comp = {i: e + 1 for e, i in enumerate(val)}
+-    for i in range(n + 1):
++    comp = {i: 1 + e for e, i in enumerate(val)}
++    for i in range(1 + n):
+         l, r = seg[i]
+         seg[i] = (comp[l], comp[r])
+ 
+-    deg = [0] * (n + 1)
+-    out = [[] for i in range(n + 1)]
+-    for i in range(n + 1):
+-        for j in range(i + 1, n + 1):
++    deg = [0] * (1 + n)
++    out = [[] for i in range(1 + n)]
++    for i in range(1 + n):
++        for j in range(i + 1, 1 + n):
+             l, r = seg[i]
+             L, R = seg[j]
+             if l >= L and r <= R:
+@@ -45,7 +45,7 @@
+                 deq.append(nv)
+                 ans.append(nv)
+ 
+-    dp = [0] * (n + 1)
++    dp = [0] * (1 + n)
+ 
+     def solve(v):
+         query = [[] for _ in range(2 * n + 3)]
+@@ -56,11 +56,11 @@
+         for i in range(1, 2 * n + 3):
+             res = subdp[i - 1]
+             for l, val in query[i]:
+-                test = subdp[l - 1] + val
++                test = val + subdp[l - 1]
+                 res = max(test, res)
+             subdp[i] = res
+ 
+-        dp[v] = subdp[-1] + 1
++        dp[v] = 1 + subdp[-1]
+ 
+     for v in ans[::-1]:
+         solve(v)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/75ae6859eeb15026d24225a274568b255b3fc53c1bb2567e9af0b0083dece6e5/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,10 +27,10 @@
+         for j in range(i + 1, 1 + n):
+             l, r = seg[i]
+             L, R = seg[j]
+-            if l >= L and r <= R:
++            if l >= L and R >= r:
+                 out[j].append(i)
+                 deg[i] += 1
+-            elif l <= L and r >= R:
++            elif l <= L and R <= r:
+                 out[i].append(j)
+                 deg[j] += 1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/75ae6859eeb15026d24225a274568b255b3fc53c1bb2567e9af0b0083dece6e5/with_tabs.py

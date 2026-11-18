@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/93572c1827b1559abd94729b1ae3808a4182d0360efca0b2c679957811f12ee3/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+ def main():
+     n = int(input())
+     a = list(map(int, input().split()))
+-    primes = gen_primes(n + 1)
++    primes = gen_primes(1 + n)
+     process = list()
+     d = [0] * n
+ 
+@@ -32,7 +32,7 @@
+         r = d[i]
+         l = r - primes[bisect.bisect(primes, r - i + 1) - 1] + 1
+         a[l], a[r] = a[r], a[l]
+-        process.append(f"{l + 1} {r + 1}")
++        process.append(f"{l + 1} {1 + r}")
+         d[a[l] - 1] = l
+         d[a[r] - 1] = r
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/93572c1827b1559abd94729b1ae3808a4182d0360efca0b2c679957811f12ee3/with_tabs.py

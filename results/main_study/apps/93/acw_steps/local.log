@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/93/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+     if a[i] == x:
+         a = a[:i] + a[i + 1:]
+         break
+-c = c + d[::-1]
++c = d[::-1] + c
+ 
+ for i in range(4):
+     if c[i] == x:
+@@ -15,7 +15,7 @@
+ for _ in range(4):
+     if a == c:
+         flag = True
+-    c = c[1:] + c[0]
++    c = c[0] + c[1:]
+ if flag:
+     print("YES")
+ else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/93/acw_steps/with_tabs.py

@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/5464dad25a67832eb5d3c6711ad52ae60d27c30013da6793b43a95a94bf6588b/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+         return None
+ 
+     while True:
+-        new_len = curr_len + cnt[curr_pow]
++        new_len = cnt[curr_pow] + curr_len
+         if new_len > k:
+             break
+         cnt[curr_pow - 1] += 2 * cnt[curr_pow]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/5464dad25a67832eb5d3c6711ad52ae60d27c30013da6793b43a95a94bf6588b/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+     curr_len = len(cnt)
+     curr_pow = len(as_bin) - 1
+ 
+-    if curr_len > k:
++    if k < curr_len:
+         return None
+ 
+     while True:
+@@ -21,7 +21,7 @@
+         curr_len = new_len
+ 
+     i = min(cnt.keys())
+-    while curr_len < k:
++    while k > curr_len:
+         cnt[i] -= 1
+         cnt[i - 1] += 2
+         curr_len += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/5464dad25a67832eb5d3c6711ad52ae60d27c30013da6793b43a95a94bf6588b/with_tabs.py

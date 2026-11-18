@@ -1,0 +1,24 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_classeval/acw_detect_default/classeval_0000.py:
+--- Original
++++ Modified
+@@ -38,4 +38,4 @@
+ 
+     def set_current_user_info_and_log(self, user):
+         host = user["address"]
+-        logging.log(msg=host + user["name"] + str(datetime.datetime.now()), level=1)
++        logging.log(msg=user["name"] + host + str(datetime.datetime.now()), level=1)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_classeval/acw_detect_default/classeval_0000.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+         try:
+             token = self.get_jwt_user(request)
+             user = token["user"]
+-            if user["level"] > 2:
++            if 2 < user["level"]:
+                 self.set_current_user_info_and_log(user)
+                 return True
+         except:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_classeval/acw_detect_default/classeval_0000.py

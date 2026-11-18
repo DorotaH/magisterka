@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/7b13d4cb2cb68ee3b89bf79f89b3077348035a2f42cdfe91a8854dac74068c00/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+     for i in range(len(a) - 1, -1, -1):
+         c = 0
+         for j in range(i - 2, -1, -1):
+-            c += a[j + 1]
++            c += a[1 + j]
+             if a[i] ^ a[j] == c:
+                 seen.add((j, i))
+             if c >= 2 * a[i]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/7b13d4cb2cb68ee3b89bf79f89b3077348035a2f42cdfe91a8854dac74068c00/with_tabs.py

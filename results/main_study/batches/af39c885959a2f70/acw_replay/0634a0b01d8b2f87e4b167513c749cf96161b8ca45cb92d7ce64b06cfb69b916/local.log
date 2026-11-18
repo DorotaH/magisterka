@@ -1,0 +1,24 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/0634a0b01d8b2f87e4b167513c749cf96161b8ca45cb92d7ce64b06cfb69b916/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,15 +12,15 @@
+     last = 0
+     for _ in range(n):
+         x, = read()
+-        if x < 0:
++        if 0 > x:
+             b.append(-x)
+             last = 1
+         else:
+             a.append(x)
+             last = 0
+-    if sum(a) > sum(b) or sum(b) <= sum(a) and a > b:
++    if sum(b) < sum(a) or sum(b) <= sum(a) and a > b:
+         print("first")
+-    elif sum(b) > sum(a) or b > a:
++    elif sum(b) > sum(a) or a < b:
+         print("second")
+     else:
+         print("second" if last else "first")
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/0634a0b01d8b2f87e4b167513c749cf96161b8ca45cb92d7ce64b06cfb69b916/with_tabs.py

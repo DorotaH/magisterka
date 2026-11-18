@@ -1,0 +1,53 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/71f3bd4ac258f34d783542ca446d24f401e38df254c0aa8ed1935dcd690932b1/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+ 
+ Hotels=[False]*(n)
+ 
+-Rep=[0]*(n+1)
++Rep=[0]*(1+n)
+ Chains=[]
+ 
+ Type=list(map(int,sys.stdin.readline().split()))
+@@ -43,7 +43,7 @@
+ 
+ 
+ 
+-    sys.stdout.write(str(len(X))+"\n")
++    sys.stdout.write("\n"+str(len(X)))
+     sys.stdout.write(str(X[-1]+1))
+ 
+     for i in range(len(X)-2,-1,-1):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/71f3bd4ac258f34d783542ca446d24f401e38df254c0aa8ed1935dcd690932b1/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+ 
+ n=int(sys.stdin.readline())
+ 
+-Hotels=[False]*(n)
++Hotels=(n)*[False]
+ 
+ Rep=[0]*(1+n)
+ Chains=[]
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/71f3bd4ac258f34d783542ca446d24f401e38df254c0aa8ed1935dcd690932b1/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,10 +25,10 @@
+         x=A[i]
+         if(x==-1):
+             continue
+-        while(A[x]!=-1 and Rep[x]<=1):
++        while(A[x]!=-1 and 1 >= Rep[x]):
+             Chains[-1].append(x)
+             x=A[x]
+-        if(Rep[x]<=1):
++        if(1 >= Rep[x]):
+             Chains[-1].append(x)
+ 
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/71f3bd4ac258f34d783542ca446d24f401e38df254c0aa8ed1935dcd690932b1/with_tabs.py

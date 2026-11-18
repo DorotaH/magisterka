@@ -1,0 +1,31 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/fe1c6526e9b0ef99c9cf905b432739b7cec791598dcef9bfd0331571ed24b4b5/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+         mean1 = sum(data1) / n
+         mean2 = sum(data2) / n
+ 
+-        numerator = sum((data1[i] - mean1) * (data2[i] - mean2) for i in range(n))
++        numerator = sum((data2[i] - mean2) * (data1[i] - mean1) for i in range(n))
+         denominator = math.sqrt(
+             sum((data1[i] - mean1) ** 2 for i in range(n))
+         ) * math.sqrt(sum((data2[i] - mean2) ** 2 for i in range(n)))
+@@ -25,7 +25,7 @@
+         return (
+             sum((x - mean) ** 3 for x in data)
+             * n
+-            / ((n - 1) * (n - 2) * std_deviation**3)
++            / ((n - 2) * (n - 1) * std_deviation**3)
+             if std_deviation != 0
+             else 0
+         )
+@@ -50,6 +50,6 @@
+         return [
+             1
+             / (sigma * math.sqrt(2 * math.pi))
+-            * math.exp(-0.5 * ((x - mu) / sigma) ** 2)
++            * math.exp(((x - mu) / sigma) ** 2 * -0.5)
+             for x in data
+         ]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/fe1c6526e9b0ef99c9cf905b432739b7cec791598dcef9bfd0331571ed24b4b5/with_tabs.py

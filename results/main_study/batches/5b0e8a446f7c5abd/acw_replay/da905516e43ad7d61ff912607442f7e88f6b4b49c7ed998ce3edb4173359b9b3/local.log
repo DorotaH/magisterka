@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/da905516e43ad7d61ff912607442f7e88f6b4b49c7ed998ce3edb4173359b9b3/without_tabs.py:
+--- Original
++++ Modified
+@@ -28,7 +28,7 @@
+         root = check_degrees()
+ 
+         for edge in reversed(edges):
+-            if root == -1 or in_degree[edge[1]] > 1:
++            if root == -1 or 1 < in_degree[edge[1]]:
+                 adj_list[edge[0]].remove(edge[1])
+                 in_degree[edge[1]] -= 1
+                 found_root = check_degrees()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/da905516e43ad7d61ff912607442f7e88f6b4b49c7ed998ce3edb4173359b9b3/with_tabs.py

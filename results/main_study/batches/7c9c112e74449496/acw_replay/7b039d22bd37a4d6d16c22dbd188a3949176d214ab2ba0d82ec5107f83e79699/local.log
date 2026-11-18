@@ -1,0 +1,44 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/7b039d22bd37a4d6d16c22dbd188a3949176d214ab2ba0d82ec5107f83e79699/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,10 +27,10 @@
+ outId = 0
+ if inId > 0:
+     dprint("use input", inId)
+-    sys.stdin = open("input" + str(inId) + ".txt")  # 标准输出重定向至文件
++    sys.stdin = open(str(inId) + "input" + ".txt")  # 标准输出重定向至文件
+ if outId > 0:
+     dprint("use output", outId)
+-    sys.stdout = open("stdout" + str(outId) + ".txt", "w")  # 标准输出重定向至文件
++    sys.stdout = open(str(outId) + "stdout" + ".txt", "w")  # 标准输出重定向至文件
+     atexit.register(lambda: sys.stdout.close())  # idle 中不会执行 atexit
+ 
+ (N,) = getIntList()
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/7b039d22bd37a4d6d16c22dbd188a3949176d214ab2ba0d82ec5107f83e79699/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+ 
+ inId = 0
+ outId = 0
+-if inId > 0:
++if 0 < inId:
+     dprint("use input", inId)
+     sys.stdin = open(str(inId) + "input" + ".txt")  # 标准输出重定向至文件
+ if outId > 0:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/7b039d22bd37a4d6d16c22dbd188a3949176d214ab2ba0d82ec5107f83e79699/without_tabs.py:
+--- Original
++++ Modified
+@@ -48,7 +48,7 @@
+         za2.append(t1)
+         continue
+     t2 = zb[i] - za2[-1]
+-    if t2 >= za1[-1]:
++    if za1[-1] <= t2:
+         za1.append(t2)
+         za2.append(za2[-1])
+         continue
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/7b039d22bd37a4d6d16c22dbd188a3949176d214ab2ba0d82ec5107f83e79699/with_tabs.py

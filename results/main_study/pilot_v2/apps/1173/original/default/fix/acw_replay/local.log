@@ -1,0 +1,29 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1173/original/default/fix/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -57,8 +57,8 @@
+                 if used[mys] == True or used[psn] == True:
+                     continue
+ 
+-                if a[psn][check[psn]] == mys+1:
+-                    d.append([psn+1,mys+1])
++                if a[psn][check[psn]] == 1+mys:
++                    d.append([psn+1,1+mys])
+                     used[mys] = True
+                     used[psn] = True
+                     check[mys] += 1
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1173/original/default/fix/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -37,7 +37,7 @@
+ 
+     while len(d) > 0:
+         if time.time() - t1 >= 1.95:
+-            print(n*(n-1)//2)
++            print((n-1)*n//2)
+             return
+         used = [False]*n
+         ans += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1173/original/default/fix/acw_replay/with_tabs.py

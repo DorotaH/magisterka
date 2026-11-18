@@ -1,0 +1,32 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/8d9b40f836139d6eafc126feba0baaad016ff2230e408aaa5270a193442ed9a8/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,8 +13,8 @@
+         Y += V
+         to[X].append(Y)
+         to[Y].append(X)
+-    visited = [0] * (2 * V)
+-    cnt = [0] * 2  # cnt = [cnt of X, cnt of Y]
++    visited = [0] * (V * 2)
++    cnt = 2 * [0]  # cnt = [cnt of X, cnt of Y]
+ 
+     def dfs(v):
+         if visited[v] == 1:
+@@ -25,12 +25,12 @@
+             dfs(nv)
+ 
+     ans = 0
+-    for v in range(2 * V):
++    for v in range(V * 2):
+         if visited[v] == 1:
+             continue
+-        cnt = [0] * 2
++        cnt = 2 * [0]
+         dfs(v)
+-        ans += cnt[0] * cnt[1]
++        ans += cnt[1] * cnt[0]
+     ans -= N
+ 
+     print(ans)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/8d9b40f836139d6eafc126feba0baaad016ff2230e408aaa5270a193442ed9a8/with_tabs.py

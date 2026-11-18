@@ -1,0 +1,3476 @@
+{
+  "dataset": "mercury_eval",
+  "sample": {
+    "sample_id": "add-strings",
+    "sloc": 15,
+    "structure": "class",
+    "difficulty": "Easy",
+    "solution_index": 0,
+    "eligible_solutions": 14,
+    "sha256": "dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc"
+  },
+  "sew_embedding": {
+    "status": "ok",
+    "n_sites": 29,
+    "n_grades": 15,
+    "n_edits": 10,
+    "iterations": 1
+  },
+  "variants": {
+    "original": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py",
+        "sha256": "dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.09863557176838098,
+            "p_all": 0.04931778588419049,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 10,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.544047685941485,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.020317726814165944,
+            "p_all": 0.010158863407082972,
+            "p_syntax": 0.8932773523839999,
+            "n_grades": 15,
+            "k_grades": 8,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 29
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py\": {\"loc\": 17, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.11169001300004311
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"endline\": 17, \"lineno\": 1, \"col_offset\": 0, \"complexity\": 6, \"name\": \"Solution\", \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"endline\": 17, \"lineno\": 2, \"col_offset\": 4, \"complexity\": 5, \"name\": \"addStrings\", \"classname\": \"Solution\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"endline\": 17, \"lineno\": 2, \"col_offset\": 4, \"complexity\": 5, \"name\": \"addStrings\", \"classname\": \"Solution\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.11829932099999496
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.10459461499976896
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.10662467299971468
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/complexipy.json\nresults/main_study/mercury_eval/add-strings/original/embedded/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04700232799996229,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 11
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 15
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/original/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.01521677600021576
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 19,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 19,\n            \"row\": 17\n          },\n          \"location\": {\n            \"column\": 19,\n            \"row\": 17\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 19,\n      \"row\": 17\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.010203755000020465
+            },
+            "diagnostics": {
+              "W292": 1
+            }
+          }
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/check/code.py",
+        "sha256": "dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.09863557176838098,
+            "p_all": 0.04931778588419049,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 10,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.544047685941485,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.020317726814165944,
+            "p_all": 0.010158863407082972,
+            "p_syntax": 0.8932773523839999,
+            "n_grades": 15,
+            "k_grades": 8,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 29
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01521677600021576
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix/code.py",
+        "sha256": "dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.09863557176838098,
+            "p_all": 0.04931778588419049,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 10,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.544047685941485,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.020317726814165944,
+            "p_all": 0.010158863407082972,
+            "p_syntax": 0.8932773523839999,
+            "n_grades": 15,
+            "k_grades": 8,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 29
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.01062282899965794
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.013002993000100105
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/format/code.py",
+        "sha256": "7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.993103448275862,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.4637855957881017,
+            "p_all": 0.23189279789405084,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.3489375832748011,
+            "p_all": 0.17446879163740056,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 10,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5645871286236753,
+            "p_syntax": 0.8932773523839999,
+            "n_grades": 15,
+            "k_grades": 5,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 29
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.014164626999900065
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.0139446550001594
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py",
+        "sha256": "7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.993103448275862,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.4637855957881017,
+            "p_all": 0.23189279789405084,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.3489375832748011,
+            "p_all": 0.17446879163740056,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 10,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5645871286236753,
+            "p_syntax": 0.8932773523839999,
+            "n_grades": 15,
+            "k_grades": 5,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 29
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py\": {\"loc\": 16, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 1, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.10859843700018246
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"lineno\": 1, \"endline\": 16, \"col_offset\": 0, \"name\": \"Solution\", \"complexity\": 6, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"lineno\": 2, \"endline\": 16, \"col_offset\": 4, \"name\": \"addStrings\", \"complexity\": 5, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"lineno\": 2, \"endline\": 16, \"col_offset\": 4, \"name\": \"addStrings\", \"complexity\": 5, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.11731785499978287
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.11012024499996187
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.13319996500013076
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/complexipy.json\nresults/main_study/mercury_eval/add-strings/original/default/fix_format/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04841260800003511,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 14
+                  }
+                ],
+                "line_end": 16,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.022567351999896346
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.014206074999947305
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.012468282999634539
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/check/code.py",
+        "sha256": "dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.09863557176838098,
+            "p_all": 0.04931778588419049,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 10,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.544047685941485,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.020317726814165944,
+            "p_all": 0.010158863407082972,
+            "p_syntax": 0.8932773523839999,
+            "n_grades": 15,
+            "k_grades": 8,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 29
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 19,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 19,\n            \"row\": 17\n          },\n          \"location\": {\n            \"column\": 19,\n            \"row\": 17\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 19,\n      \"row\": 17\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.010203755000020465
+        },
+        "diagnostics": {
+          "W292": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix/code.py",
+        "sha256": "b374ea0553ffd29711fd0bec1daa6a4c37e1195094be6b515fca2fb7e9b32c00",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.012547056452974272,
+            "p_all": 0.006273528226487136,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 11,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.3489375832748011,
+            "p_all": 0.17446879163740056,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 10,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "Watermark detected",
+            "p": 0.002474114508125199,
+            "p_all": 0.0012370572540625995,
+            "p_syntax": 0.8932773523839999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 29
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "Found 1 error (1 fixed, 0 remaining).\n",
+            "stderr": "",
+            "seconds": 0.021565507000104844
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.029041187000075297
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/b374ea0553ffd29711fd0bec1daa6a4c37e1195094be6b515fca2fb7e9b32c00"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/format/code.py",
+        "sha256": "7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.993103448275862,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.4637855957881017,
+            "p_all": 0.23189279789405084,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.3489375832748011,
+            "p_all": 0.17446879163740056,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 10,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5645871286236753,
+            "p_syntax": 0.8932773523839999,
+            "n_grades": 15,
+            "k_grades": 5,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 29
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.012668357000165997
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.02365240300014193
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py",
+        "sha256": "7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.993103448275862,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.4637855957881017,
+            "p_all": 0.23189279789405084,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.3489375832748011,
+            "p_all": 0.17446879163740056,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 10,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5645871286236753,
+            "p_syntax": 0.8932773523839999,
+            "n_grades": 15,
+            "k_grades": 5,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 29
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py\": {\"loc\": 16, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 1, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.09284040800002913
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"lineno\": 1, \"name\": \"Solution\", \"col_offset\": 0, \"endline\": 16, \"complexity\": 6, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"name\": \"addStrings\", \"col_offset\": 4, \"endline\": 16, \"complexity\": 5, \"classname\": \"Solution\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"name\": \"addStrings\", \"col_offset\": 4, \"endline\": 16, \"complexity\": 5, \"classname\": \"Solution\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.09705992499993954
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.11103042800004914
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.10720151299983627
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/complexipy.json\nresults/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04378378499995961,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 14
+                  }
+                ],
+                "line_end": 16,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "Found 1 error (1 fixed, 0 remaining).\n",
+            "stderr": "",
+            "seconds": 0.01132316900020669
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.01248709699984829
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/original/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.02201273399987258
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2"
+      }
+    },
+    "sew": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py",
+        "sha256": "f50ea2ff5d3b41f93e9f0160c91829b6e50c5eca34eab93f3a9c0f33df247f8f",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.7647058823529411,
+          "changed_lines": 4,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 1.2314424304928837e-08,
+            "p_all": 6.157212152464418e-09,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 15,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py\": {\"loc\": 17, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.12532506900015505
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"lineno\": 1, \"name\": \"Solution\", \"endline\": 17, \"col_offset\": 0, \"complexity\": 6, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"name\": \"addStrings\", \"endline\": 17, \"col_offset\": 4, \"classname\": \"Solution\", \"complexity\": 5, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"name\": \"addStrings\", \"endline\": 17, \"col_offset\": 4, \"classname\": \"Solution\", \"complexity\": 5, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.1120076069996685
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.11238500400031626
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.12725655300027938
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/complexipy.json\nresults/main_study/mercury_eval/add-strings/sew/embedded/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.05675650200009841,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 11
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 15
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/sew/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.01469914700010122
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.011415372000101343
+            },
+            "diagnostics": {}
+          }
+        }
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/check/code.py",
+        "sha256": "f50ea2ff5d3b41f93e9f0160c91829b6e50c5eca34eab93f3a9c0f33df247f8f",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.7647058823529411,
+          "changed_lines": 4,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 1.2314424304928837e-08,
+            "p_all": 6.157212152464418e-09,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 15,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01469914700010122
+        },
+        "diagnostics": {}
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix/code.py",
+        "sha256": "f50ea2ff5d3b41f93e9f0160c91829b6e50c5eca34eab93f3a9c0f33df247f8f",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.7647058823529411,
+          "changed_lines": 4,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 1.2314424304928837e-08,
+            "p_all": 6.157212152464418e-09,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 15,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.011733107000054588
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01225932199986346
+        },
+        "diagnostics": {}
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/format/code.py",
+        "sha256": "7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.993103448275862,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.4637855957881017,
+            "p_all": 0.23189279789405084,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.011278756000137946
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.012946769000336644
+        },
+        "diagnostics": {}
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py",
+        "sha256": "7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.993103448275862,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.4637855957881017,
+            "p_all": 0.23189279789405084,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py\": {\"loc\": 16, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 1, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.10805334699989544
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"lineno\": 1, \"endline\": 16, \"col_offset\": 0, \"name\": \"Solution\", \"complexity\": 6, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"classname\": \"Solution\", \"endline\": 16, \"col_offset\": 4, \"name\": \"addStrings\", \"complexity\": 5, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"classname\": \"Solution\", \"endline\": 16, \"col_offset\": 4, \"name\": \"addStrings\", \"complexity\": 5, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.11578969500033054
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.10956709999982195
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.11403343800020593
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/complexipy.json\nresults/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06586683099976653,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 14
+                  }
+                ],
+                "line_end": 16,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.020488933000251563
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.01578352700016694
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.011929172999771254
+        },
+        "diagnostics": {}
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/check/code.py",
+        "sha256": "f50ea2ff5d3b41f93e9f0160c91829b6e50c5eca34eab93f3a9c0f33df247f8f",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.7647058823529411,
+          "changed_lines": 4,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 1.2314424304928837e-08,
+            "p_all": 6.157212152464418e-09,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 15,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.011415372000101343
+        },
+        "diagnostics": {}
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix/code.py",
+        "sha256": "f50ea2ff5d3b41f93e9f0160c91829b6e50c5eca34eab93f3a9c0f33df247f8f",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.7647058823529411,
+          "changed_lines": 4,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 1.2314424304928837e-08,
+            "p_all": 6.157212152464418e-09,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 15,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.012833555999804958
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01676249899992399
+        },
+        "diagnostics": {}
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/format/code.py",
+        "sha256": "7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.993103448275862,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.4637855957881017,
+            "p_all": 0.23189279789405084,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03993478300026254
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.036954544999844074
+        },
+        "diagnostics": {}
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py",
+        "sha256": "7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.993103448275862,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.4637855957881017,
+            "p_all": 0.23189279789405084,
+            "p_syntax": 0.6117217361919999,
+            "n_grades": 15,
+            "k_grades": 9,
+            "n_syntax": 3,
+            "k_syntax": 3,
+            "n_sites": 29
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py\": {\"loc\": 16, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 1, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.09901439200029927
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"lineno\": 1, \"endline\": 16, \"name\": \"Solution\", \"complexity\": 6, \"col_offset\": 0, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"endline\": 16, \"name\": \"addStrings\", \"classname\": \"Solution\", \"complexity\": 5, \"col_offset\": 4, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"endline\": 16, \"name\": \"addStrings\", \"classname\": \"Solution\", \"complexity\": 5, \"col_offset\": 4, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.10562919999983933
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.1270458389999476
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.11799612400000115
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/complexipy.json\nresults/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06904945700034659,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 14
+                  }
+                ],
+                "line_end": 16,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.01232486400022026
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03422104999981457
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/sew/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01895868799965683
+        },
+        "diagnostics": {}
+      }
+    },
+    "acw_notab": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py",
+        "sha256": "c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.35294117647058826,
+          "changed_lines": 11,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py\": {\"loc\": 17, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.09426326099992366
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"name\": \"Solution\", \"lineno\": 1, \"endline\": 17, \"col_offset\": 0, \"complexity\": 6, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"name\": \"addStrings\", \"lineno\": 2, \"endline\": 17, \"classname\": \"Solution\", \"col_offset\": 4, \"complexity\": 5, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"name\": \"addStrings\", \"lineno\": 2, \"endline\": 17, \"classname\": \"Solution\", \"col_offset\": 4, \"complexity\": 5, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.10553916299977573
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.10651036000035674
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.11652155399997355
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/complexipy.json\nresults/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06955573400000503,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 11
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 15
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.01712300300005154
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.011409170999741036
+            },
+            "diagnostics": {}
+          }
+        },
+        "acw": {
+          "acw_notab": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/check/code.py",
+        "sha256": "c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.35294117647058826,
+          "changed_lines": 11,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01712300300005154
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix/code.py",
+        "sha256": "c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.35294117647058826,
+          "changed_lines": 11,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.011688143000355922
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.013471589999880962
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/format/code.py",
+        "sha256": "862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.9517241379310345,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.01587222300031499
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01703814499978762
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py",
+        "sha256": "862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.9517241379310345,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py\": {\"loc\": 16, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 1, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.11356475100001262
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"complexity\": 6, \"lineno\": 1, \"name\": \"Solution\", \"col_offset\": 0, \"endline\": 16, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"complexity\": 5, \"lineno\": 2, \"name\": \"addStrings\", \"col_offset\": 4, \"endline\": 16, \"classname\": \"Solution\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"complexity\": 5, \"lineno\": 2, \"name\": \"addStrings\", \"col_offset\": 4, \"endline\": 16, \"classname\": \"Solution\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.13320644699979312
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.09823302999984662
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.11835685899995951
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/complexipy.json\nresults/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.05920055600017804,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 14
+                  }
+                ],
+                "line_end": 16,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.01114698999981556
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02211722899983215
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.015434603999892715
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/check/code.py",
+        "sha256": "c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.35294117647058826,
+          "changed_lines": 11,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.011409170999741036
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix/code.py",
+        "sha256": "c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.35294117647058826,
+          "changed_lines": 11,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.01485267499992915
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.010973636000016995
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/c269c6fcd0e9060331c43dd1bee8c4845c54f63880a9e55634e5a2871122aa7c"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/format/code.py",
+        "sha256": "862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.9517241379310345,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02466883399983999
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.027225108000038745
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py",
+        "sha256": "862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.9517241379310345,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py\": {\"loc\": 16, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 1, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.12617912699988665
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"col_offset\": 0, \"lineno\": 1, \"complexity\": 6, \"endline\": 16, \"name\": \"Solution\", \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"col_offset\": 4, \"lineno\": 2, \"complexity\": 5, \"endline\": 16, \"classname\": \"Solution\", \"name\": \"addStrings\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"col_offset\": 4, \"lineno\": 2, \"complexity\": 5, \"endline\": 16, \"classname\": \"Solution\", \"name\": \"addStrings\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.11629765499992573
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.11804791099984868
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.11103135000030306
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/complexipy.json\nresults/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.046487885000260576,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 14
+                  }
+                ],
+                "line_end": 16,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.013658549999945535
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.027630396999938966
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_notab/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01379365399998278
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722"
+      }
+    },
+    "acw_full": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py",
+        "sha256": "39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.17647058823529413,
+          "changed_lines": 14,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 14,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\": {\"loc\": 17, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.09757139200019083
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"complexity\": 6, \"col_offset\": 0, \"lineno\": 1, \"endline\": 17, \"name\": \"Solution\", \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"complexity\": 5, \"col_offset\": 1, \"lineno\": 2, \"endline\": 17, \"name\": \"addStrings\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"complexity\": 5, \"col_offset\": 1, \"lineno\": 2, \"endline\": 17, \"name\": \"addStrings\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.12648188399998617
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.11445421600001282
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.1152645920001305
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/complexipy.json\nresults/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04828589999988253,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 11
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 15
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.015790138999818737
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 2,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 4\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 5\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 5\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 5,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 11\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 11\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 16\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 16\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 16,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.01668354100002034
+            },
+            "diagnostics": {
+              "W191": 14
+            }
+          }
+        },
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/check/code.py",
+        "sha256": "39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.17647058823529413,
+          "changed_lines": 14,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 14,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.015790138999818737
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix/code.py",
+        "sha256": "39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.17647058823529413,
+          "changed_lines": 14,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 14,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.010695203999603109
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.022334906999731174
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/format/code.py",
+        "sha256": "862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.9517241379310345,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03420417899997119
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.017045618999873113
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py",
+        "sha256": "862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.9517241379310345,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py\": {\"loc\": 16, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 1, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.09371133800004827
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"col_offset\": 0, \"endline\": 16, \"lineno\": 1, \"complexity\": 6, \"name\": \"Solution\", \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"col_offset\": 4, \"endline\": 16, \"lineno\": 2, \"complexity\": 5, \"name\": \"addStrings\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"col_offset\": 4, \"endline\": 16, \"lineno\": 2, \"complexity\": 5, \"name\": \"addStrings\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.12781769299999723
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.10494202500012761
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.11735923200012621
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/complexipy.json\nresults/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.05571802799977377,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 14
+                  }
+                ],
+                "line_end": 16,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.02530125799967209
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.012230607999754284
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01874874599980103
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/check/code.py",
+        "sha256": "39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.17647058823529413,
+          "changed_lines": 14,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 14,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 2,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 4\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 5\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 5\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 5,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 11\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 11\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 16\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 16\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 16,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.01668354100002034
+        },
+        "diagnostics": {
+          "W191": 14
+        },
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py",
+        "sha256": "39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.17647058823529413,
+          "changed_lines": 14,
+          "token_similarity": 0.958904109589041,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 14,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "W191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:2:1\n  |\n1 | class Solution:\n2 |     def addStrings(self, num1: str, num2: str) -> str:\n  | ^^^^\n3 |         if len(num1) < len(num2):\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:3:1\n  |\n1 | class Solution:\n2 |     def addStrings(self, num1: str, num2: str) -> str:\n3 |         if len(num1) < len(num2):\n  | ^^^^^^^^\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n5 |         elif len(num1) > len(num2):\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:4:1\n  |\n2 |     def addStrings(self, num1: str, num2: str) -> str:\n3 |         if len(num1) < len(num2):\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n  | ^^^^^^^^^^^^\n5 |         elif len(num1) > len(num2):\n6 |             num2 = \"0\" * (len(num1) - len(num2)) + num2\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:5:1\n  |\n3 |         if len(num1) < len(num2):\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n5 |         elif len(num1) > len(num2):\n  | ^^^^^^^^\n6 |             num2 = \"0\" * (len(num1) - len(num2)) + num2\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:6:1\n  |\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n5 |         elif len(num1) > len(num2):\n6 |             num2 = \"0\" * (len(num1) - len(num2)) + num2\n  | ^^^^^^^^^^^^\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:9:1\n   |\n 9 |         res = \"\"\n   | ^^^^^^^^\n10 |         carry = False\n11 |         for i in range(len(num1) - 1, -1, -1):\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:10:1\n   |\n 9 |         res = \"\"\n10 |         carry = False\n   | ^^^^^^^^\n11 |         for i in range(len(num1) - 1, -1, -1):\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:11:1\n   |\n 9 |         res = \"\"\n10 |         carry = False\n11 |         for i in range(len(num1) - 1, -1, -1):\n   | ^^^^^^^^\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n13 |             res = res + str(digit % 10)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:12:1\n   |\n10 |         carry = False\n11 |         for i in range(len(num1) - 1, -1, -1):\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n   | ^^^^^^^^^^^^\n13 |             res = res + str(digit % 10)\n14 |             carry = digit > 9\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:13:1\n   |\n11 |         for i in range(len(num1) - 1, -1, -1):\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n13 |             res = res + str(digit % 10)\n   | ^^^^^^^^^^^^\n14 |             carry = digit > 9\n15 |         if carry:\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:14:1\n   |\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n13 |             res = res + str(digit % 10)\n14 |             carry = digit > 9\n   | ^^^^^^^^^^^^\n15 |         if carry:\n16 |             res = res + \"1\"\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:15:1\n   |\n13 |             res = res + str(digit % 10)\n14 |             carry = digit > 9\n15 |         if carry:\n   | ^^^^^^^^\n16 |             res = res + \"1\"\n17 |         return res\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:16:1\n   |\n14 |             carry = digit > 9\n15 |         if carry:\n16 |             res = res + \"1\"\n   | ^^^^^^^^^^^^\n17 |         return res\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py:17:1\n   |\n15 |         if carry:\n16 |             res = res + \"1\"\n17 |         return res\n   | ^^^^^^^^\n\nFound 14 errors.\n",
+            "stderr": "",
+            "seconds": 0.01217547399983232
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 2,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 4\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 5\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 5\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 5,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 11\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 11\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 16\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 16\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 16,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.013086409000152344
+        },
+        "diagnostics": {
+          "W191": 14
+        },
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/39f6912475dfac6ee82c51203d9abb87f94214890890a9cc2d9cc2c96ffa163c"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/format/code.py",
+        "sha256": "862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.9517241379310345,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.025972283000101015
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.02642169399996419
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py",
+        "sha256": "862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30303030303030304,
+          "changed_lines": 12,
+          "token_similarity": 0.9517241379310345,
+          "delta_tokens": -2,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py\": {\"loc\": 16, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 1, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.09986073499976555
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"lineno\": 1, \"col_offset\": 0, \"name\": \"Solution\", \"complexity\": 6, \"endline\": 16, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"classname\": \"Solution\", \"col_offset\": 4, \"name\": \"addStrings\", \"complexity\": 5, \"endline\": 16, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"classname\": \"Solution\", \"col_offset\": 4, \"name\": \"addStrings\", \"complexity\": 5, \"endline\": 16, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.1300744959999065
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py\": {\"mi\": 56.7560638061709, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.10746412499975122
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}, \"functions\": {\"addStrings\": {\"h1\": 7, \"h2\": 27, \"N1\": 17, \"N2\": 32, \"vocabulary\": 34, \"length\": 49, \"calculated_length\": 148.0334470128169, \"volume\": 249.28567922126666, \"difficulty\": 4.148148148148148, \"effort\": 1034.0739286215505, \"time\": 57.44855159008614, \"bugs\": 0.08309522640708888}}}}\n",
+            "stderr": "",
+            "seconds": 0.09646586199960439
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/complexipy.json\nresults/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py\n    Solution::addStrings 4  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06348018399967259,
+            "data": [
+              {
+                "complexity": 4,
+                "file_name": "code.py",
+                "function_name": "Solution::addStrings",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 3
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 14
+                  }
+                ],
+                "line_end": 16,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "W191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:2:1\n  |\n1 | class Solution:\n2 |     def addStrings(self, num1: str, num2: str) -> str:\n  | ^^^^\n3 |         if len(num1) < len(num2):\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:3:1\n  |\n1 | class Solution:\n2 |     def addStrings(self, num1: str, num2: str) -> str:\n3 |         if len(num1) < len(num2):\n  | ^^^^^^^^\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n5 |         elif len(num1) > len(num2):\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:4:1\n  |\n2 |     def addStrings(self, num1: str, num2: str) -> str:\n3 |         if len(num1) < len(num2):\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n  | ^^^^^^^^^^^^\n5 |         elif len(num1) > len(num2):\n6 |             num2 = \"0\" * (len(num1) - len(num2)) + num2\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:5:1\n  |\n3 |         if len(num1) < len(num2):\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n5 |         elif len(num1) > len(num2):\n  | ^^^^^^^^\n6 |             num2 = \"0\" * (len(num1) - len(num2)) + num2\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:6:1\n  |\n4 |             num1 = (len(num2) - len(num1)) * \"0\" + num1\n5 |         elif len(num1) > len(num2):\n6 |             num2 = \"0\" * (len(num1) - len(num2)) + num2\n  | ^^^^^^^^^^^^\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:9:1\n   |\n 9 |         res = \"\"\n   | ^^^^^^^^\n10 |         carry = False\n11 |         for i in range(len(num1) - 1, -1, -1):\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:10:1\n   |\n 9 |         res = \"\"\n10 |         carry = False\n   | ^^^^^^^^\n11 |         for i in range(len(num1) - 1, -1, -1):\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:11:1\n   |\n 9 |         res = \"\"\n10 |         carry = False\n11 |         for i in range(len(num1) - 1, -1, -1):\n   | ^^^^^^^^\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n13 |             res = res + str(digit % 10)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:12:1\n   |\n10 |         carry = False\n11 |         for i in range(len(num1) - 1, -1, -1):\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n   | ^^^^^^^^^^^^\n13 |             res = res + str(digit % 10)\n14 |             carry = digit > 9\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:13:1\n   |\n11 |         for i in range(len(num1) - 1, -1, -1):\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n13 |             res = res + str(digit % 10)\n   | ^^^^^^^^^^^^\n14 |             carry = digit > 9\n15 |         if carry:\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:14:1\n   |\n12 |             digit = (int(num1[i]) + int(num2[i]) + carry)\n13 |             res = res + str(digit % 10)\n14 |             carry = digit > 9\n   | ^^^^^^^^^^^^\n15 |         if carry:\n16 |             res = res + \"1\"\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:15:1\n   |\n13 |             res = res + str(digit % 10)\n14 |             carry = digit > 9\n15 |         if carry:\n   | ^^^^^^^^\n16 |             res = res + \"1\"\n17 |         return res\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:16:1\n   |\n14 |             carry = digit > 9\n15 |         if carry:\n16 |             res = res + \"1\"\n   | ^^^^^^^^^^^^\n17 |         return res\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py:17:1\n   |\n15 |         if carry:\n16 |             res = res + \"1\"\n17 |         return res\n   | ^^^^^^^^\n\nFound 14 errors.\n",
+            "stderr": "",
+            "seconds": 0.016768779999893013
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03455694800004494
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/add-strings/acw_full/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.022514021999995748
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/862f23b7578aa8c7863166f80565a1666af2aecdfe8115eaf9033299dd16f722"
+      }
+    }
+  }
+}

@@ -1,0 +1,3464 @@
+{
+  "dataset": "mercury_eval",
+  "sample": {
+    "sample_id": "happy-number",
+    "sloc": 15,
+    "structure": "class",
+    "difficulty": "Easy",
+    "solution_index": 3,
+    "eligible_solutions": 7,
+    "sha256": "2cc746f8e078514fc9a2d51e24932f84e7b9e7fffe2575b321f2cf4e803c8b02"
+  },
+  "sew_embedding": {
+    "status": "ok",
+    "n_sites": 15,
+    "n_grades": 10,
+    "n_edits": 5,
+    "iterations": 1
+  },
+  "variants": {
+    "original": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py",
+        "sha256": "2cc746f8e078514fc9a2d51e24932f84e7b9e7fffe2575b321f2cf4e803c8b02",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7324088945348733,
+            "p_syntax": 0.95722,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 15
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.571729510924584,
+            "p_syntax": 0.81282,
+            "n_grades": 10,
+            "k_grades": 9,
+            "n_syntax": 2,
+            "k_syntax": 2,
+            "n_sites": 15
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.6922760948313639,
+            "p_syntax": 0.86282,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 15
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\": {\"loc\": 20, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 5, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.11960858100019323
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"complexity\": 6, \"endline\": 17, \"col_offset\": 0, \"lineno\": 1, \"name\": \"Solution\", \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"complexity\": 5, \"endline\": 17, \"col_offset\": 4, \"lineno\": 2, \"name\": \"isHappy\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"complexity\": 5, \"endline\": 17, \"col_offset\": 4, \"lineno\": 2, \"name\": \"isHappy\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.13255724300006477
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\": {\"mi\": 62.20721040059578, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.0840959339998335
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\": {\"total\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}, \"functions\": {\"isHappy\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}}}}\n",
+            "stderr": "",
+            "seconds": 0.13922192500012898
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/complexipy.json\nresults/main_study/mercury_eval/happy-number/original/embedded/code.py\n    Solution::isHappy 7  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06528862899995147,
+            "data": [
+              {
+                "complexity": 7,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 16
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/original/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.012017339000067295
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 13,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 13,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 9,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 20\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 9,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 9,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.02409056199985571
+            },
+            "diagnostics": {
+              "W293": 2,
+              "W292": 1
+            }
+          }
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/2cc746f8e078514fc9a2d51e24932f84e7b9e7fffe2575b321f2cf4e803c8b02"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/check/code.py",
+        "sha256": "2cc746f8e078514fc9a2d51e24932f84e7b9e7fffe2575b321f2cf4e803c8b02",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7324088945348733,
+            "p_syntax": 0.95722,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 15
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.571729510924584,
+            "p_syntax": 0.81282,
+            "n_grades": 10,
+            "k_grades": 9,
+            "n_syntax": 2,
+            "k_syntax": 2,
+            "n_sites": 15
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.6922760948313639,
+            "p_syntax": 0.86282,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 15
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.012017339000067295
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/2cc746f8e078514fc9a2d51e24932f84e7b9e7fffe2575b321f2cf4e803c8b02"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix/code.py",
+        "sha256": "2cc746f8e078514fc9a2d51e24932f84e7b9e7fffe2575b321f2cf4e803c8b02",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7324088945348733,
+            "p_syntax": 0.95722,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 15
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.571729510924584,
+            "p_syntax": 0.81282,
+            "n_grades": 10,
+            "k_grades": 9,
+            "n_syntax": 2,
+            "k_syntax": 2,
+            "n_sites": 15
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.6922760948313639,
+            "p_syntax": 0.86282,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 15
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.029697034000037092
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03793979900001432
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/2cc746f8e078514fc9a2d51e24932f84e7b9e7fffe2575b321f2cf4e803c8b02"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/format/code.py",
+        "sha256": "f66516ecd0424f6c7ed79900a965ac7d31a179bc7bcc114f608c7e7569363871",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6486486486486487,
+          "changed_lines": 8,
+          "token_similarity": 0.9594594594594594,
+          "delta_tokens": -6,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9610581912752821,
+            "p_syntax": 0.9593590000000001,
+            "n_grades": 12,
+            "k_grades": 5,
+            "n_syntax": 3,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9039960415123173,
+            "p_syntax": 0.821818,
+            "n_grades": 12,
+            "k_grades": 8,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9522079493717698,
+            "p_syntax": 0.869679,
+            "n_grades": 12,
+            "k_grades": 4,
+            "n_syntax": 3,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.01395910199971695
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.028263782000067295
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/f66516ecd0424f6c7ed79900a965ac7d31a179bc7bcc114f608c7e7569363871"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py",
+        "sha256": "f66516ecd0424f6c7ed79900a965ac7d31a179bc7bcc114f608c7e7569363871",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6486486486486487,
+          "changed_lines": 8,
+          "token_similarity": 0.9594594594594594,
+          "delta_tokens": -6,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9610581912752821,
+            "p_syntax": 0.9593590000000001,
+            "n_grades": 12,
+            "k_grades": 5,
+            "n_syntax": 3,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9039960415123173,
+            "p_syntax": 0.821818,
+            "n_grades": 12,
+            "k_grades": 8,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9522079493717698,
+            "p_syntax": 0.869679,
+            "n_grades": 12,
+            "k_grades": 4,
+            "n_syntax": 3,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py\": {\"loc\": 17, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.10235858999976699
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"complexity\": 6, \"endline\": 17, \"name\": \"Solution\", \"lineno\": 1, \"col_offset\": 0, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"complexity\": 5, \"endline\": 17, \"classname\": \"Solution\", \"name\": \"isHappy\", \"lineno\": 2, \"col_offset\": 4, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"complexity\": 5, \"endline\": 17, \"classname\": \"Solution\", \"name\": \"isHappy\", \"lineno\": 2, \"col_offset\": 4, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.11057611800015366
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py\": {\"mi\": 62.20721040059578, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.10312723900005949
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py\": {\"total\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}, \"functions\": {\"isHappy\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}}}}\n",
+            "stderr": "",
+            "seconds": 0.11441751599977579
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/complexipy.json\nresults/main_study/mercury_eval/happy-number/original/default/fix_format/code.py\n    Solution::isHappy 7  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.0476507319999655,
+            "data": [
+              {
+                "complexity": 7,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 16
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.02849780999986251
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.010634601000219845
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.016852236999966408
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/f66516ecd0424f6c7ed79900a965ac7d31a179bc7bcc114f608c7e7569363871"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/check/code.py",
+        "sha256": "2cc746f8e078514fc9a2d51e24932f84e7b9e7fffe2575b321f2cf4e803c8b02",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7324088945348733,
+            "p_syntax": 0.95722,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 15
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.571729510924584,
+            "p_syntax": 0.81282,
+            "n_grades": 10,
+            "k_grades": 9,
+            "n_syntax": 2,
+            "k_syntax": 2,
+            "n_sites": 15
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.6922760948313639,
+            "p_syntax": 0.86282,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 15
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 13,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 13,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 9,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 20\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 9,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 9,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02409056199985571
+        },
+        "diagnostics": {
+          "W293": 2,
+          "W292": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/2cc746f8e078514fc9a2d51e24932f84e7b9e7fffe2575b321f2cf4e803c8b02"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix/code.py",
+        "sha256": "5703c4e895c0f668eb01c3d1c181a4a839112e4148bd63d4a822599bfc449270",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9230769230769231,
+          "changed_lines": 2,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.760923652943818,
+            "p_syntax": 0.95722,
+            "n_grades": 9,
+            "k_grades": 5,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 14
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5987359285721452,
+            "p_syntax": 0.81282,
+            "n_grades": 9,
+            "k_grades": 8,
+            "n_syntax": 2,
+            "k_syntax": 2,
+            "n_sites": 14
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7205874486953103,
+            "p_syntax": 0.86282,
+            "n_grades": 9,
+            "k_grades": 4,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 14
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "Found 2 errors (2 fixed, 0 remaining).\n",
+            "stderr": "",
+            "seconds": 0.01586860599991269
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.016114877000291017
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/5703c4e895c0f668eb01c3d1c181a4a839112e4148bd63d4a822599bfc449270"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/format/code.py",
+        "sha256": "f66516ecd0424f6c7ed79900a965ac7d31a179bc7bcc114f608c7e7569363871",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6486486486486487,
+          "changed_lines": 8,
+          "token_similarity": 0.9594594594594594,
+          "delta_tokens": -6,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9610581912752821,
+            "p_syntax": 0.9593590000000001,
+            "n_grades": 12,
+            "k_grades": 5,
+            "n_syntax": 3,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9039960415123173,
+            "p_syntax": 0.821818,
+            "n_grades": 12,
+            "k_grades": 8,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9522079493717698,
+            "p_syntax": 0.869679,
+            "n_grades": 12,
+            "k_grades": 4,
+            "n_syntax": 3,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.01287022499991508
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01198904600005335
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/f66516ecd0424f6c7ed79900a965ac7d31a179bc7bcc114f608c7e7569363871"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py",
+        "sha256": "f66516ecd0424f6c7ed79900a965ac7d31a179bc7bcc114f608c7e7569363871",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6486486486486487,
+          "changed_lines": 8,
+          "token_similarity": 0.9594594594594594,
+          "delta_tokens": -6,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9610581912752821,
+            "p_syntax": 0.9593590000000001,
+            "n_grades": 12,
+            "k_grades": 5,
+            "n_syntax": 3,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9039960415123173,
+            "p_syntax": 0.821818,
+            "n_grades": 12,
+            "k_grades": 8,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9522079493717698,
+            "p_syntax": 0.869679,
+            "n_grades": 12,
+            "k_grades": 4,
+            "n_syntax": 3,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py\": {\"loc\": 17, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.1008157129999745
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"col_offset\": 0, \"lineno\": 1, \"name\": \"Solution\", \"endline\": 17, \"complexity\": 6, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"col_offset\": 4, \"lineno\": 2, \"name\": \"isHappy\", \"endline\": 17, \"classname\": \"Solution\", \"complexity\": 5, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"col_offset\": 4, \"lineno\": 2, \"name\": \"isHappy\", \"endline\": 17, \"classname\": \"Solution\", \"complexity\": 5, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.12079148500015435
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py\": {\"mi\": 62.20721040059578, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.10470602299983511
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py\": {\"total\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}, \"functions\": {\"isHappy\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}}}}\n",
+            "stderr": "",
+            "seconds": 0.10838404600008289
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/complexipy.json\nresults/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py\n    Solution::isHappy 7  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04990934900024513,
+            "data": [
+              {
+                "complexity": 7,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 16
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "Found 2 errors (2 fixed, 0 remaining).\n",
+            "stderr": "",
+            "seconds": 0.013052375999905053
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.010008538999954908
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/original/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01193453399991995
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/f66516ecd0424f6c7ed79900a965ac7d31a179bc7bcc114f608c7e7569363871"
+      }
+    },
+    "sew": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py",
+        "sha256": "0c5fc95eef865c6c06f3dbbb0ad25fa2022acae05a9c16cd1bca2f5cb9605bc6",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8,
+          "changed_lines": 4,
+          "token_similarity": 0.974025974025974,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 2.3605741250560005e-05,
+            "p_all": 1.1802870625280003e-05,
+            "p_syntax": 0.13718,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 2,
+            "k_syntax": 2,
+            "n_sites": 15
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\": {\"loc\": 20, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 5, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.10964042700015852
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"col_offset\": 0, \"name\": \"Solution\", \"lineno\": 1, \"complexity\": 6, \"endline\": 17, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"col_offset\": 4, \"name\": \"isHappy\", \"lineno\": 2, \"complexity\": 5, \"endline\": 17, \"classname\": \"Solution\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"col_offset\": 4, \"name\": \"isHappy\", \"lineno\": 2, \"complexity\": 5, \"endline\": 17, \"classname\": \"Solution\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.13514221000014004
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\": {\"mi\": 62.20721040059578, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.11203554899975643
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\": {\"total\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}, \"functions\": {\"isHappy\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}}}}\n",
+            "stderr": "",
+            "seconds": 0.09820136000007551
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/complexipy.json\nresults/main_study/mercury_eval/happy-number/sew/embedded/code.py\n    Solution::isHappy 7  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.05322095600013199,
+            "data": [
+              {
+                "complexity": 7,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 16
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/sew/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.034281223000107275
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 13,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 13,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"SIM300\",\n    \"end_location\": {\n      \"column\": 20,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"k == 1\",\n          \"end_location\": {\n            \"column\": 20,\n            \"row\": 14\n          },\n          \"location\": {\n            \"column\": 16,\n            \"row\": 14\n          }\n        }\n      ],\n      \"message\": \"Rewrite as `k == 1`\"\n    },\n    \"location\": {\n      \"column\": 16,\n      \"row\": 14\n    },\n    \"message\": \"Yoda condition detected\",\n    \"name\": \"yoda-conditions\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/yoda-conditions\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 9,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 20\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 9,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 9,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.030251360999955068
+            },
+            "diagnostics": {
+              "W293": 2,
+              "SIM300": 1,
+              "W292": 1
+            }
+          }
+        }
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/check/code.py",
+        "sha256": "0c5fc95eef865c6c06f3dbbb0ad25fa2022acae05a9c16cd1bca2f5cb9605bc6",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8,
+          "changed_lines": 4,
+          "token_similarity": 0.974025974025974,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 2.3605741250560005e-05,
+            "p_all": 1.1802870625280003e-05,
+            "p_syntax": 0.13718,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 2,
+            "k_syntax": 2,
+            "n_sites": 15
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.034281223000107275
+        },
+        "diagnostics": {}
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix/code.py",
+        "sha256": "0c5fc95eef865c6c06f3dbbb0ad25fa2022acae05a9c16cd1bca2f5cb9605bc6",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8,
+          "changed_lines": 4,
+          "token_similarity": 0.974025974025974,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 2.3605741250560005e-05,
+            "p_all": 1.1802870625280003e-05,
+            "p_syntax": 0.13718,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 2,
+            "k_syntax": 2,
+            "n_sites": 15
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.017214714999681746
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.011983054999745946
+        },
+        "diagnostics": {}
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/format/code.py",
+        "sha256": "c73a93272c8d625eae248a7d0c164ce25f0ffdddfa916adec89883ffb4ac95bb",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6486486486486487,
+          "changed_lines": 8,
+          "token_similarity": 0.9324324324324325,
+          "delta_tokens": -6,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.356364,
+            "p_all": 0.7544279195068356,
+            "p_syntax": 0.178182,
+            "n_grades": 12,
+            "k_grades": 6,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03725648999989062
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.02059666400009519
+        },
+        "diagnostics": {}
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py",
+        "sha256": "c73a93272c8d625eae248a7d0c164ce25f0ffdddfa916adec89883ffb4ac95bb",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6486486486486487,
+          "changed_lines": 8,
+          "token_similarity": 0.9324324324324325,
+          "delta_tokens": -6,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.356364,
+            "p_all": 0.7544279195068356,
+            "p_syntax": 0.178182,
+            "n_grades": 12,
+            "k_grades": 6,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py\": {\"loc\": 17, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.13058931999967172
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"lineno\": 1, \"name\": \"Solution\", \"col_offset\": 0, \"endline\": 17, \"complexity\": 6, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"lineno\": 2, \"name\": \"isHappy\", \"col_offset\": 4, \"endline\": 17, \"complexity\": 5, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"lineno\": 2, \"name\": \"isHappy\", \"col_offset\": 4, \"endline\": 17, \"complexity\": 5, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.08875015399962649
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py\": {\"mi\": 62.20721040059578, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.09475698500000362
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py\": {\"total\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}, \"functions\": {\"isHappy\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}}}}\n",
+            "stderr": "",
+            "seconds": 0.11187801400001263
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/complexipy.json\nresults/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py\n    Solution::isHappy 7  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04531453000026886,
+            "data": [
+              {
+                "complexity": 7,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 16
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.013394866999988153
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02282376200037106
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.013932883000052243
+        },
+        "diagnostics": {}
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/check/code.py",
+        "sha256": "0c5fc95eef865c6c06f3dbbb0ad25fa2022acae05a9c16cd1bca2f5cb9605bc6",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8,
+          "changed_lines": 4,
+          "token_similarity": 0.974025974025974,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 2.3605741250560005e-05,
+            "p_all": 1.1802870625280003e-05,
+            "p_syntax": 0.13718,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 2,
+            "k_syntax": 2,
+            "n_sites": 15
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 13,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 13,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"SIM300\",\n    \"end_location\": {\n      \"column\": 20,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"k == 1\",\n          \"end_location\": {\n            \"column\": 20,\n            \"row\": 14\n          },\n          \"location\": {\n            \"column\": 16,\n            \"row\": 14\n          }\n        }\n      ],\n      \"message\": \"Rewrite as `k == 1`\"\n    },\n    \"location\": {\n      \"column\": 16,\n      \"row\": 14\n    },\n    \"message\": \"Yoda condition detected\",\n    \"name\": \"yoda-conditions\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/yoda-conditions\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 9,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 20\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 9,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 9,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 9,\n      \"row\": 20\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.030251360999955068
+        },
+        "diagnostics": {
+          "W293": 2,
+          "SIM300": 1,
+          "W292": 1
+        }
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix/code.py",
+        "sha256": "e7301dc99e84319d2eb157f9af87ee1c879c2155d94b8c9ad85fa58d79204029",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.717948717948718,
+          "changed_lines": 6,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 0.0015981147791616003,
+            "p_all": 0.0007990573895808002,
+            "p_syntax": 0.95722,
+            "n_grades": 9,
+            "k_grades": 8,
+            "n_syntax": 2,
+            "k_syntax": 1,
+            "n_sites": 14
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "Found 3 errors (3 fixed, 0 remaining).\n",
+            "stderr": "",
+            "seconds": 0.01279223900019133
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.016408575999776076
+        },
+        "diagnostics": {}
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/format/code.py",
+        "sha256": "c73a93272c8d625eae248a7d0c164ce25f0ffdddfa916adec89883ffb4ac95bb",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6486486486486487,
+          "changed_lines": 8,
+          "token_similarity": 0.9324324324324325,
+          "delta_tokens": -6,
+          "delta_ast_nodes": 0,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.356364,
+            "p_all": 0.7544279195068356,
+            "p_syntax": 0.178182,
+            "n_grades": 12,
+            "k_grades": 6,
+            "n_syntax": 3,
+            "k_syntax": 2,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.01033431899986681
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM300\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/format/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"k == 1\",\n          \"end_location\": {\n            \"column\": 22,\n            \"row\": 14\n          },\n          \"location\": {\n            \"column\": 16,\n            \"row\": 14\n          }\n        }\n      ],\n      \"message\": \"Rewrite as `k == 1`\"\n    },\n    \"location\": {\n      \"column\": 16,\n      \"row\": 14\n    },\n    \"message\": \"Yoda condition detected\",\n    \"name\": \"yoda-conditions\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/yoda-conditions\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.012500161999923876
+        },
+        "diagnostics": {
+          "SIM300": 1
+        }
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py",
+        "sha256": "f66516ecd0424f6c7ed79900a965ac7d31a179bc7bcc114f608c7e7569363871",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6486486486486487,
+          "changed_lines": 8,
+          "token_similarity": 0.9594594594594594,
+          "delta_tokens": -6,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9610581912752821,
+            "p_syntax": 0.9593590000000001,
+            "n_grades": 12,
+            "k_grades": 5,
+            "n_syntax": 3,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py\": {\"loc\": 17, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.09318445199960479
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"endline\": 17, \"lineno\": 1, \"col_offset\": 0, \"name\": \"Solution\", \"complexity\": 6, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"endline\": 17, \"lineno\": 2, \"col_offset\": 4, \"name\": \"isHappy\", \"complexity\": 5, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"endline\": 17, \"lineno\": 2, \"col_offset\": 4, \"name\": \"isHappy\", \"complexity\": 5, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.08853370899987567
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py\": {\"mi\": 62.20721040059578, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.10649169399994207
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py\": {\"total\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}, \"functions\": {\"isHappy\": {\"h1\": 4, \"h2\": 7, \"N1\": 4, \"N2\": 8, \"vocabulary\": 11, \"length\": 12, \"calculated_length\": 27.651484454403228, \"volume\": 41.51317942364757, \"difficulty\": 2.2857142857142856, \"effort\": 94.88726725405158, \"time\": 5.27151484744731, \"bugs\": 0.01383772647454919}}}}\n",
+            "stderr": "",
+            "seconds": 0.1246948190000694
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/complexipy.json\nresults/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py\n    Solution::isHappy 7  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.03981947600004787,
+            "data": [
+              {
+                "complexity": 7,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 16
+                  }
+                ],
+                "line_end": 17,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "Found 3 errors (3 fixed, 0 remaining).\n",
+            "stderr": "",
+            "seconds": 0.024221607000072254
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.050445262000266666
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/sew/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.016241513999830204
+        },
+        "diagnostics": {}
+      }
+    },
+    "acw_notab": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py",
+        "sha256": "f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.631578947368421,
+          "changed_lines": 8,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py\": {\"loc\": 18, \"lloc\": 13, \"sloc\": 13, \"comments\": 0, \"multi\": 0, \"blank\": 5, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.08579792899990935
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"col_offset\": 0, \"lineno\": 1, \"complexity\": 6, \"name\": \"Solution\", \"endline\": 15, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"col_offset\": 4, \"lineno\": 2, \"complexity\": 5, \"name\": \"isHappy\", \"endline\": 15, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"classname\": \"Solution\", \"col_offset\": 4, \"lineno\": 2, \"complexity\": 5, \"name\": \"isHappy\", \"endline\": 15, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.09710365599994475
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py\": {\"mi\": 64.87103433093603, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.11259883299999274
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py\": {\"total\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}, \"functions\": {\"isHappy\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}}}}\n",
+            "stderr": "",
+            "seconds": 0.1260039300000244
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/complexipy.json\nresults/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py\n    Solution::isHappy 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04910024399987378,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 12
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 15,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.013066983000044274
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.011989797999831353
+            },
+            "diagnostics": {}
+          }
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/check/code.py",
+        "sha256": "f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.631578947368421,
+          "changed_lines": 8,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.013066983000044274
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix/code.py",
+        "sha256": "f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.631578947368421,
+          "changed_lines": 8,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.013050643000042328
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.011642015999768773
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/format/code.py",
+        "sha256": "a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5714285714285714,
+          "changed_lines": 10,
+          "token_similarity": 0.8571428571428571,
+          "delta_tokens": -7,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.011963166999976238
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.015008165999915946
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py",
+        "sha256": "a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5714285714285714,
+          "changed_lines": 10,
+          "token_similarity": 0.8571428571428571,
+          "delta_tokens": -7,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py\": {\"loc\": 15, \"lloc\": 13, \"sloc\": 13, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.12000667599977533
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"complexity\": 6, \"name\": \"Solution\", \"lineno\": 1, \"endline\": 15, \"col_offset\": 0, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"complexity\": 5, \"name\": \"isHappy\", \"lineno\": 2, \"classname\": \"Solution\", \"endline\": 15, \"col_offset\": 4, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"complexity\": 5, \"name\": \"isHappy\", \"lineno\": 2, \"classname\": \"Solution\", \"endline\": 15, \"col_offset\": 4, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.1077613909997126
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py\": {\"mi\": 64.87103433093603, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.09528776799970728
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py\": {\"total\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}, \"functions\": {\"isHappy\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}}}}\n",
+            "stderr": "",
+            "seconds": 0.1130078589999357
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/complexipy.json\nresults/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py\n    Solution::isHappy 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04600060399980066,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 12
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 15,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.014368800000283954
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.015034796000236383
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.010434918000100879
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/check/code.py",
+        "sha256": "f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.631578947368421,
+          "changed_lines": 8,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.011989797999831353
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix/code.py",
+        "sha256": "f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.631578947368421,
+          "changed_lines": 8,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.013317121999989467
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.013185163999878569
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/f250baaa836b4e2d05ffcbf0d647005d02b49c940f824556d3ffe6245944b2e0"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/format/code.py",
+        "sha256": "a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5714285714285714,
+          "changed_lines": 10,
+          "token_similarity": 0.8571428571428571,
+          "delta_tokens": -7,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.016024849000132235
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.010873127000195382
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py",
+        "sha256": "a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5714285714285714,
+          "changed_lines": 10,
+          "token_similarity": 0.8571428571428571,
+          "delta_tokens": -7,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py\": {\"loc\": 15, \"lloc\": 13, \"sloc\": 13, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.1300160980003966
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"col_offset\": 0, \"lineno\": 1, \"complexity\": 6, \"endline\": 15, \"name\": \"Solution\", \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"col_offset\": 4, \"classname\": \"Solution\", \"lineno\": 2, \"complexity\": 5, \"endline\": 15, \"name\": \"isHappy\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"col_offset\": 4, \"classname\": \"Solution\", \"lineno\": 2, \"complexity\": 5, \"endline\": 15, \"name\": \"isHappy\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.10897244699981457
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py\": {\"mi\": 64.87103433093603, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.12856732599993848
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py\": {\"total\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}, \"functions\": {\"isHappy\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}}}}\n",
+            "stderr": "",
+            "seconds": 0.10266461299988805
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/complexipy.json\nresults/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py\n    Solution::isHappy 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04548384600002464,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 12
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 15,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.013153644999874814
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.011990278000212129
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_notab/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.015247393999743508
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826"
+      }
+    },
+    "acw_full": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py",
+        "sha256": "84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.21052631578947367,
+          "changed_lines": 16,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 12,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\": {\"loc\": 18, \"lloc\": 13, \"sloc\": 13, \"comments\": 0, \"multi\": 0, \"blank\": 5, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.09560469099960756
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"name\": \"Solution\", \"endline\": 15, \"complexity\": 6, \"lineno\": 1, \"col_offset\": 0, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"name\": \"isHappy\", \"endline\": 15, \"complexity\": 5, \"lineno\": 2, \"classname\": \"Solution\", \"col_offset\": 1, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"name\": \"isHappy\", \"endline\": 15, \"complexity\": 5, \"lineno\": 2, \"classname\": \"Solution\", \"col_offset\": 1, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.1154260839998642
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\": {\"mi\": 64.87103433093603, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.12468697499980408
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\": {\"total\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}, \"functions\": {\"isHappy\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}}}}\n",
+            "stderr": "",
+            "seconds": 0.12382110399994417
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/complexipy.json\nresults/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\n    Solution::isHappy 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.05545065900014379,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 12
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 15,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.012218105000101787
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 2,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 4\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 5\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 5\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 5,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.02233744100021795
+            },
+            "diagnostics": {
+              "W191": 12
+            }
+          }
+        },
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/check/code.py",
+        "sha256": "84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.21052631578947367,
+          "changed_lines": 16,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 12,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.012218105000101787
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix/code.py",
+        "sha256": "84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.21052631578947367,
+          "changed_lines": 16,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 12,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.014011339999797201
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.011930396000025212
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/format/code.py",
+        "sha256": "a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5714285714285714,
+          "changed_lines": 10,
+          "token_similarity": 0.8571428571428571,
+          "delta_tokens": -7,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.01476661399965451
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.02297382300002937
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py",
+        "sha256": "a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5714285714285714,
+          "changed_lines": 10,
+          "token_similarity": 0.8571428571428571,
+          "delta_tokens": -7,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py\": {\"loc\": 15, \"lloc\": 13, \"sloc\": 13, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.08883048400002735
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"lineno\": 1, \"endline\": 15, \"name\": \"Solution\", \"col_offset\": 0, \"complexity\": 6, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"endline\": 15, \"name\": \"isHappy\", \"col_offset\": 4, \"complexity\": 5, \"classname\": \"Solution\", \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"endline\": 15, \"name\": \"isHappy\", \"col_offset\": 4, \"complexity\": 5, \"classname\": \"Solution\", \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.12046165700030542
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py\": {\"mi\": 64.87103433093603, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.11021737700002632
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py\": {\"total\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}, \"functions\": {\"isHappy\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}}}}\n",
+            "stderr": "",
+            "seconds": 0.1153080230001251
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/complexipy.json\nresults/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py\n    Solution::isHappy 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.04589538700020057,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 12
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 15,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.012981242000023485
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02194368399977975
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.012712429000202974
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/check/code.py",
+        "sha256": "84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.21052631578947367,
+          "changed_lines": 16,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 12,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 2,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 4\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 5\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 5\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 5,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02233744100021795
+        },
+        "diagnostics": {
+          "W191": 12
+        },
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py",
+        "sha256": "84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.21052631578947367,
+          "changed_lines": 16,
+          "token_similarity": 0.8874172185430463,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 12,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "W191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:2:1\n  |\n1 | class Solution:\n2 |     def isHappy(self, n: int) -> bool:\n  | ^^^^\n3 |         k = n\n4 |         store = [k]\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:3:1\n  |\n1 | class Solution:\n2 |     def isHappy(self, n: int) -> bool:\n3 |         k = n\n  | ^^^^^^^^\n4 |         store = [k]\n5 |         while True:\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:4:1\n  |\n2 |     def isHappy(self, n: int) -> bool:\n3 |         k = n\n4 |         store = [k]\n  | ^^^^^^^^\n5 |         while True:\n6 |             store.append(k)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:5:1\n  |\n3 |         k = n\n4 |         store = [k]\n5 |         while True:\n  | ^^^^^^^^\n6 |             store.append(k)\n7 |             string = str(k)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:6:1\n  |\n4 |         store = [k]\n5 |         while True:\n6 |             store.append(k)\n  | ^^^^^^^^^^^^\n7 |             string = str(k)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:7:1\n  |\n5 |         while True:\n6 |             store.append(k)\n7 |             string = str(k)\n  | ^^^^^^^^^^^^\n8 |\n9 |             sum_squares = sum(int(s)**2 for s in string)\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:9:1\n   |\n 7 |             string = str(k)\n 8 |\n 9 |             sum_squares = sum(int(s)**2 for s in string)\n   | ^^^^^^^^^^^^\n10 |             k = sum_squares\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:10:1\n   |\n 9 |             sum_squares = sum(int(s)**2 for s in string)\n10 |             k = sum_squares\n   | ^^^^^^^^^^^^\n11 |\n12 |             if (k == 1):\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:12:1\n   |\n10 |             k = sum_squares\n11 |\n12 |             if (k == 1):\n   | ^^^^^^^^^^^^\n13 |                 return True\n14 |             if (k in store):\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:13:1\n   |\n12 |             if (k == 1):\n13 |                 return True\n   | ^^^^^^^^^^^^^^^^\n14 |             if (k in store):\n15 |                 return False\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:14:1\n   |\n12 |             if (k == 1):\n13 |                 return True\n14 |             if (k in store):\n   | ^^^^^^^^^^^^\n15 |                 return False\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py:15:1\n   |\n13 |                 return True\n14 |             if (k in store):\n15 |                 return False\n   | ^^^^^^^^^^^^^^^^\n\nFound 12 errors.\n",
+            "stderr": "",
+            "seconds": 0.016374623000046995
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 2,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 4\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 5\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 5\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 5,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 4,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.01517451700010497
+        },
+        "diagnostics": {
+          "W191": 12
+        },
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/84581f4a5a7957532db46b989da31a83c15847dfec4c391a082f294d7110dcb5"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/format/code.py",
+        "sha256": "a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5714285714285714,
+          "changed_lines": 10,
+          "token_similarity": 0.8571428571428571,
+          "delta_tokens": -7,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.0221746060001351
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01478741299979447
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py",
+        "sha256": "a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5714285714285714,
+          "changed_lines": 10,
+          "token_similarity": 0.8571428571428571,
+          "delta_tokens": -7,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py\": {\"loc\": 15, \"lloc\": 13, \"sloc\": 13, \"comments\": 0, \"multi\": 0, \"blank\": 2, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.1147191009999915
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py\": [{\"type\": \"class\", \"rank\": \"B\", \"lineno\": 1, \"complexity\": 6, \"col_offset\": 0, \"name\": \"Solution\", \"endline\": 15, \"methods\": [{\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"complexity\": 5, \"classname\": \"Solution\", \"col_offset\": 4, \"name\": \"isHappy\", \"endline\": 15, \"closures\": []}]}, {\"type\": \"method\", \"rank\": \"A\", \"lineno\": 2, \"complexity\": 5, \"classname\": \"Solution\", \"col_offset\": 4, \"name\": \"isHappy\", \"endline\": 15, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.1004677820001234
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py\": {\"mi\": 64.87103433093603, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.1246125050001865
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py\": {\"total\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}, \"functions\": {\"isHappy\": {\"h1\": 3, \"h2\": 5, \"N1\": 3, \"N2\": 6, \"vocabulary\": 8, \"length\": 9, \"calculated_length\": 16.36452797660028, \"volume\": 27.0, \"difficulty\": 1.8, \"effort\": 48.6, \"time\": 2.7, \"bugs\": 0.009}}}}\n",
+            "stderr": "",
+            "seconds": 0.13404765199993562
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/complexipy.json\nresults/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py\n    Solution::isHappy 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.05475823300002958,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "Solution::isHappy",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 12
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 15,
+                "line_start": 2,
+                "path": "results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "W191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:2:1\n  |\n1 | class Solution:\n2 |     def isHappy(self, n: int) -> bool:\n  | ^^^^\n3 |         k = n\n4 |         store = [k]\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:3:1\n  |\n1 | class Solution:\n2 |     def isHappy(self, n: int) -> bool:\n3 |         k = n\n  | ^^^^^^^^\n4 |         store = [k]\n5 |         while True:\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:4:1\n  |\n2 |     def isHappy(self, n: int) -> bool:\n3 |         k = n\n4 |         store = [k]\n  | ^^^^^^^^\n5 |         while True:\n6 |             store.append(k)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:5:1\n  |\n3 |         k = n\n4 |         store = [k]\n5 |         while True:\n  | ^^^^^^^^\n6 |             store.append(k)\n7 |             string = str(k)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:6:1\n  |\n4 |         store = [k]\n5 |         while True:\n6 |             store.append(k)\n  | ^^^^^^^^^^^^\n7 |             string = str(k)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:7:1\n  |\n5 |         while True:\n6 |             store.append(k)\n7 |             string = str(k)\n  | ^^^^^^^^^^^^\n8 |\n9 |             sum_squares = sum(int(s)**2 for s in string)\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:9:1\n   |\n 7 |             string = str(k)\n 8 |\n 9 |             sum_squares = sum(int(s)**2 for s in string)\n   | ^^^^^^^^^^^^\n10 |             k = sum_squares\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:10:1\n   |\n 9 |             sum_squares = sum(int(s)**2 for s in string)\n10 |             k = sum_squares\n   | ^^^^^^^^^^^^\n11 |\n12 |             if (k == 1):\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:12:1\n   |\n10 |             k = sum_squares\n11 |\n12 |             if (k == 1):\n   | ^^^^^^^^^^^^\n13 |                 return True\n14 |             if (k in store):\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:13:1\n   |\n12 |             if (k == 1):\n13 |                 return True\n   | ^^^^^^^^^^^^^^^^\n14 |             if (k in store):\n15 |                 return False\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:14:1\n   |\n12 |             if (k == 1):\n13 |                 return True\n14 |             if (k in store):\n   | ^^^^^^^^^^^^\n15 |                 return False\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py:15:1\n   |\n13 |                 return True\n14 |             if (k in store):\n15 |                 return False\n   | ^^^^^^^^^^^^^^^^\n\nFound 12 errors.\n",
+            "stderr": "",
+            "seconds": 0.013208017000124528
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.025935866000054375
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/mercury_eval/happy-number/acw_full/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.012839827999869158
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a39568924ef786fece6bd9c55abaa0277d42a379daf86b41554d8395cba19826"
+      }
+    }
+  }
+}

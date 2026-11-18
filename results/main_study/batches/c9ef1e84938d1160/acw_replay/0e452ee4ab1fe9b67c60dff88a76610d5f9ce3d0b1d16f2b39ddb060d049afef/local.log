@@ -1,0 +1,18 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/0e452ee4ab1fe9b67c60dff88a76610d5f9ce3d0b1d16f2b39ddb060d049afef/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,10 +16,10 @@
+         return heapq.heappop(self.hq) * self.sign
+ 
+     def push(self, a):
+-        heapq.heappush(self.hq, a * self.sign)
++        heapq.heappush(self.hq, self.sign * a)
+ 
+     def top(self):
+-        return self.hq[0] * self.sign
++        return self.sign * self.hq[0]
+ 
+     def size(self):
+         return len(self.hq)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/0e452ee4ab1fe9b67c60dff88a76610d5f9ce3d0b1d16f2b39ddb060d049afef/with_tabs.py

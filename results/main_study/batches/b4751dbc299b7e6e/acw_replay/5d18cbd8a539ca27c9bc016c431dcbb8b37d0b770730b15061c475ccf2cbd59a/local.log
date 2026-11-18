@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/5d18cbd8a539ca27c9bc016c431dcbb8b37d0b770730b15061c475ccf2cbd59a/without_tabs.py:
+--- Original
++++ Modified
+@@ -29,7 +29,7 @@
+         if h > 0:
+             if h + b > bn:
+                 h = bn - b
+-            r -= h * (k - i)
++            r -= (k - i) * h
+             b = h + b
+         seq[i] = b
+     return None if r != 0 else [i + b + 1 for i, b in enumerate(seq)]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/5d18cbd8a539ca27c9bc016c431dcbb8b37d0b770730b15061c475ccf2cbd59a/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+ def solve(n, k):
+ 
+     r = n - k * (k + 1) // 2
+-    if r < 0:
++    if 0 > r:
+         return None
+ 
+     b0 = r // k
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/5d18cbd8a539ca27c9bc016c431dcbb8b37d0b770730b15061c475ccf2cbd59a/with_tabs.py

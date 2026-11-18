@@ -1,0 +1,57 @@
+{
+  "dataset": "codecontests",
+  "id": "CodeContests/valid/12",
+  "index": 9,
+  "method": "acw",
+  "original_syntax_error": null,
+  "embedding": {
+    "sourcery_applied": true
+  },
+  "changed": true,
+  "syntax_error": "expected an indented block after 'if' statement on line 144 (<unknown>, line 145)",
+  "radon_cc_exit": 0,
+  "radon_mi_exit": 0,
+  "radon_raw_exit": 0,
+  "complexipy_exit": 1,
+  "ruff": {
+    "default": {
+      "diagnostics": 1,
+      "codes": {
+        "invalid-syntax": 1
+      },
+      "fix_exit": 1,
+      "format_exit": 2,
+      "fix_stderr": "",
+      "format_stderr": "error: Failed to parse results/main_study/compatibility/codecontests/0009/acw/ruff_default.py:145:1: Expected an indented block after `if` statement\n",
+      "syntax_error": "expected an indented block after 'if' statement on line 144 (<unknown>, line 145)",
+      "detection_after": {
+        "fixed_point": null,
+        "reason": "invalid syntax before detection"
+      }
+    },
+    "strict": {
+      "diagnostics": 102,
+      "codes": {
+        "W191": 98,
+        "E501": 1,
+        "E701": 1,
+        "E702": 1,
+        "invalid-syntax": 1
+      },
+      "fix_exit": 1,
+      "format_exit": 2,
+      "fix_stderr": "",
+      "format_stderr": "error: Failed to parse results/main_study/compatibility/codecontests/0009/acw/ruff_strict.py:145:1: Expected an indented block after `if` statement\n",
+      "syntax_error": "expected an indented block after 'if' statement on line 144 (<unknown>, line 145)",
+      "detection_after": {
+        "fixed_point": null,
+        "reason": "invalid syntax before detection"
+      }
+    }
+  },
+  "status": "ok",
+  "detection_before": {
+    "fixed_point": null,
+    "reason": "invalid syntax before detection"
+  }
+}

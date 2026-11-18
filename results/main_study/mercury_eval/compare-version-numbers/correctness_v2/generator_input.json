@@ -1,0 +1,14 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    def generate_version():\n        num_revisions = random.randint(1, 10)\n        version = \"\"\n\n        for _ in range(num_revisions):\n            num_digits = random.randint(1, 3)\n            revision = str(random.randint(0, 9**num_digits)).zfill(num_digits)\n            version += revision + \".\"\n\n        # Remove trailing dot\n        version = version[:-1]\n\n        return version\n\n    version1 = generate_version()\n    version2 = generate_version()\n\n    return version1, version2",
+  "seed": 1104448570313743182,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "1.01",
+        "1.001"
+      ],
+      "expected": 0
+    }
+  ]
+}

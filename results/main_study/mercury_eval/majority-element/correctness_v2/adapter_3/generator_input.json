@@ -1,0 +1,17 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    n = random.randint(1, 500)\n    majority_element = random.randint(-10**6, 10**6)\n    nums = [majority_element for _ in range(n//2 + 1)]\n    for _ in range(n//2):\n        element = random.randint(-10**6, 10**6)\n        while element == majority_element:\n            element = random.randint(-10**6, 10**6)\n        nums.append(element)\n    random.shuffle(nums)\n    return nums",
+  "seed": 16337568602002212891,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "expected": 3
+    }
+  ]
+}

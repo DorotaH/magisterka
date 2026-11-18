@@ -1,0 +1,758 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_64/sew/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_64/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_2\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_3\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_4\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_5\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_2\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_3\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_4\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_5\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_2\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_3\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_4\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_5\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestMain.test_main\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3], [\"assertEqual\", 2], [\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3], [\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3], [\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3], [\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_2\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_3\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_4\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_5\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_2\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_3\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_4\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_5\": [[\"assertEqual\", 2]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_2\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_3\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_4\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_5\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]]}, \"errors\": [], \"failures\": [], \"log\": \"test_decimal_to_binary (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary) ... ok\\ntest_decimal_to_binary_2 (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_2) ... ok\\ntest_decimal_to_binary_3 (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_3) ... ok\\ntest_decimal_to_binary_4 (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_4) ... ok\\ntest_decimal_to_binary_5 (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_5) ... ok\\ntest_binary_to_decimal (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal) ... ok\\ntest_binary_to_decimal_2 (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_2) ... ok\\ntest_binary_to_decimal_3 (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_3) ... ok\\ntest_binary_to_decimal_4 (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_4) ... ok\\ntest_binary_to_decimal_5 (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_5) ... ok\\ntest_decimal_to_octal (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal) ... ok\\ntest_decimal_to_octal_2 (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_2) ... ok\\ntest_decimal_to_octal_3 (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_3) ... ok\\ntest_decimal_to_octal_4 (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_4) ... ok\\ntest_decimal_to_octal_5 (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_5) ... ok\\ntest_octal_to_decimal (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal) ... ok\\ntest_octal_to_decimal_2 (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_2) ... ok\\ntest_octal_to_decimal_3 (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_3) ... ok\\ntest_octal_to_decimal_4 (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_4) ... ok\\ntest_octal_to_decimal_5 (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_5) ... ok\\ntest_decimal_to_hex (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex) ... ok\\ntest_decimal_to_hex_2 (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_2) ... ok\\ntest_decimal_to_hex_3 (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_3) ... ok\\ntest_decimal_to_hex_4 (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_4) ... ok\\ntest_decimal_to_hex_5 (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_5) ... ok\\ntest_hex_to_decimal (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal) ... ok\\ntest_hex_to_decimal_2 (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_2) ... ok\\ntest_hex_to_decimal_3 (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_3) ... ok\\ntest_hex_to_decimal_4 (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_4) ... ok\\ntest_hex_to_decimal_5 (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_5) ... ok\\ntest_main (benchmark_case.NumberConvertTestMain.test_main) ... ok\\n\\n----------------------------------------------------------------------\\nRan 31 tests in 0.002s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex\": [[\"decimal_to_hex\", \"\\\"a5b7\\\"\"]], \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_2\": [[\"decimal_to_hex\", \"\\\"5317\\\"\"]], \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_3\": [[\"decimal_to_hex\", \"\\\"14bab\\\"\"]], \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_4\": [[\"decimal_to_hex\", \"\\\"29757\\\"\"]], \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_5\": [[\"decimal_to_hex\", \"\\\"52eb7\\\"\"]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal\": [[\"decimal_to_octal\", \"\\\"122667\\\"\"]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_2\": [[\"decimal_to_octal\", \"\\\"51427\\\"\"]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_3\": [[\"decimal_to_octal\", \"\\\"245653\\\"\"]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_4\": [[\"decimal_to_octal\", \"\\\"513527\\\"\"]], \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_5\": [[\"decimal_to_octal\", \"\\\"1227256\\\"\"]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal\": [[\"hex_to_decimal\", \"42423\"]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_2\": [[\"hex_to_decimal\", \"21207\"]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_3\": [[\"hex_to_decimal\", \"84627\"]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_4\": [[\"hex_to_decimal\", \"170615\"]], \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_5\": [[\"hex_to_decimal\", \"342647\"]], \"benchmark_case.NumberConvertTestMain.test_main\": [[\"decimal_to_binary\", \"\\\"1010010110110111\\\"\"], [\"binary_to_decimal\", \"42423\"], [\"decimal_to_octal\", \"\\\"122667\\\"\"], [\"decimal_to_octal\", \"\\\"122667\\\"\"], [\"decimal_to_hex\", \"\\\"a5b7\\\"\"], [\"hex_to_decimal\", \"42423\"]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal\": [[\"octal_to_decimal\", \"42423\"]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_2\": [[\"octal_to_decimal\", \"21271\"]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_3\": [[\"octal_to_decimal\", \"84907\"]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_4\": [[\"octal_to_decimal\", \"169815\"]], \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_5\": [[\"octal_to_decimal\", \"339630\"]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal\": [[\"binary_to_decimal\", \"42423\"]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_2\": [[\"binary_to_decimal\", \"10615\"]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_3\": [[\"binary_to_decimal\", \"42455\"]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_4\": [[\"binary_to_decimal\", \"169819\"]], \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_5\": [[\"binary_to_decimal\", \"339639\"]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary\": [[\"decimal_to_binary\", \"\\\"1010010110110111\\\"\"]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_2\": [[\"decimal_to_binary\", \"\\\"101001100010111\\\"\"]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_3\": [[\"decimal_to_binary\", \"\\\"1010010111010111\\\"\"]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_4\": [[\"decimal_to_binary\", \"\\\"10100101110101011\\\"\"]], \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_5\": [[\"decimal_to_binary\", \"\\\"101001011101010111\\\"\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary\", \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_2\", \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_3\", \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_4\", \"benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_5\", \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal\", \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_2\", \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_3\", \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_4\", \"benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_5\", \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal\", \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_2\", \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_3\", \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_4\", \"benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_5\", \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal\", \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_2\", \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_3\", \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_4\", \"benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_5\", \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex\", \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_2\", \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_3\", \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_4\", \"benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_5\", \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal\", \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_2\", \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_3\", \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_4\", \"benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_5\", \"benchmark_case.NumberConvertTestMain.test_main\"], \"tests\": 31}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.0789249699996617,
+  "result": {
+    "checks": {
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestMain.test_main": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_decimal_to_binary (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary) ... ok\ntest_decimal_to_binary_2 (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_2) ... ok\ntest_decimal_to_binary_3 (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_3) ... ok\ntest_decimal_to_binary_4 (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_4) ... ok\ntest_decimal_to_binary_5 (benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_5) ... ok\ntest_binary_to_decimal (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal) ... ok\ntest_binary_to_decimal_2 (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_2) ... ok\ntest_binary_to_decimal_3 (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_3) ... ok\ntest_binary_to_decimal_4 (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_4) ... ok\ntest_binary_to_decimal_5 (benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_5) ... ok\ntest_decimal_to_octal (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal) ... ok\ntest_decimal_to_octal_2 (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_2) ... ok\ntest_decimal_to_octal_3 (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_3) ... ok\ntest_decimal_to_octal_4 (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_4) ... ok\ntest_decimal_to_octal_5 (benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_5) ... ok\ntest_octal_to_decimal (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal) ... ok\ntest_octal_to_decimal_2 (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_2) ... ok\ntest_octal_to_decimal_3 (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_3) ... ok\ntest_octal_to_decimal_4 (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_4) ... ok\ntest_octal_to_decimal_5 (benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_5) ... ok\ntest_decimal_to_hex (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex) ... ok\ntest_decimal_to_hex_2 (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_2) ... ok\ntest_decimal_to_hex_3 (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_3) ... ok\ntest_decimal_to_hex_4 (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_4) ... ok\ntest_decimal_to_hex_5 (benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_5) ... ok\ntest_hex_to_decimal (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal) ... ok\ntest_hex_to_decimal_2 (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_2) ... ok\ntest_hex_to_decimal_3 (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_3) ... ok\ntest_hex_to_decimal_4 (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_4) ... ok\ntest_hex_to_decimal_5 (benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_5) ... ok\ntest_main (benchmark_case.NumberConvertTestMain.test_main) ... ok\n\n----------------------------------------------------------------------\nRan 31 tests in 0.002s\n\nOK\n",
+    "observed": {
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex": [
+        [
+          "decimal_to_hex",
+          "\"a5b7\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_2": [
+        [
+          "decimal_to_hex",
+          "\"5317\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_3": [
+        [
+          "decimal_to_hex",
+          "\"14bab\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_4": [
+        [
+          "decimal_to_hex",
+          "\"29757\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_5": [
+        [
+          "decimal_to_hex",
+          "\"52eb7\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal": [
+        [
+          "decimal_to_octal",
+          "\"122667\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_2": [
+        [
+          "decimal_to_octal",
+          "\"51427\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_3": [
+        [
+          "decimal_to_octal",
+          "\"245653\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_4": [
+        [
+          "decimal_to_octal",
+          "\"513527\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_5": [
+        [
+          "decimal_to_octal",
+          "\"1227256\""
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal": [
+        [
+          "hex_to_decimal",
+          "42423"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_2": [
+        [
+          "hex_to_decimal",
+          "21207"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_3": [
+        [
+          "hex_to_decimal",
+          "84627"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_4": [
+        [
+          "hex_to_decimal",
+          "170615"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_5": [
+        [
+          "hex_to_decimal",
+          "342647"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestMain.test_main": [
+        [
+          "decimal_to_binary",
+          "\"1010010110110111\""
+        ],
+        [
+          "binary_to_decimal",
+          "42423"
+        ],
+        [
+          "decimal_to_octal",
+          "\"122667\""
+        ],
+        [
+          "decimal_to_octal",
+          "\"122667\""
+        ],
+        [
+          "decimal_to_hex",
+          "\"a5b7\""
+        ],
+        [
+          "hex_to_decimal",
+          "42423"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal": [
+        [
+          "octal_to_decimal",
+          "42423"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_2": [
+        [
+          "octal_to_decimal",
+          "21271"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_3": [
+        [
+          "octal_to_decimal",
+          "84907"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_4": [
+        [
+          "octal_to_decimal",
+          "169815"
+        ]
+      ],
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_5": [
+        [
+          "octal_to_decimal",
+          "339630"
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal": [
+        [
+          "binary_to_decimal",
+          "42423"
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_2": [
+        [
+          "binary_to_decimal",
+          "10615"
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_3": [
+        [
+          "binary_to_decimal",
+          "42455"
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_4": [
+        [
+          "binary_to_decimal",
+          "169819"
+        ]
+      ],
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_5": [
+        [
+          "binary_to_decimal",
+          "339639"
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary": [
+        [
+          "decimal_to_binary",
+          "\"1010010110110111\""
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_2": [
+        [
+          "decimal_to_binary",
+          "\"101001100010111\""
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_3": [
+        [
+          "decimal_to_binary",
+          "\"1010010111010111\""
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_4": [
+        [
+          "decimal_to_binary",
+          "\"10100101110101011\""
+        ]
+      ],
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_5": [
+        [
+          "decimal_to_binary",
+          "\"101001011101010111\""
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary",
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_2",
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_3",
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_4",
+      "benchmark_case.NumberConverterTestDecimalToBinary.test_decimal_to_binary_5",
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal",
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_2",
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_3",
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_4",
+      "benchmark_case.NumberConverterTestBinaryToDecimal.test_binary_to_decimal_5",
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal",
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_2",
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_3",
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_4",
+      "benchmark_case.NumberConvertTestDecimalToOctal.test_decimal_to_octal_5",
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal",
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_2",
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_3",
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_4",
+      "benchmark_case.NumberConvertTestOctalToDecimal.test_octal_to_decimal_5",
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex",
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_2",
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_3",
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_4",
+      "benchmark_case.NumberConvertTestDecimalToHex.test_decimal_to_hex_5",
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal",
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_2",
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_3",
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_4",
+      "benchmark_case.NumberConvertTestHexToDecimal.test_hex_to_decimal_5",
+      "benchmark_case.NumberConvertTestMain.test_main"
+    ],
+    "tests": 31
+  }
+}

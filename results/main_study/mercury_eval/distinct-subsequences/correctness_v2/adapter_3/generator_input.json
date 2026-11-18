@@ -1,0 +1,14 @@
+{
+  "generator_code": "import random\nimport string\n\ndef generate_test_case():\n    len_s = random.randint(1, 1000)\n    len_t = random.randint(1, len_s)\n    s = ''.join(random.choices(string.ascii_lowercase, k = len_s))\n    t = ''.join(random.choices(s, k = len_t))\n    return s, t",
+  "seed": 8695358598140338610,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "rabbbit",
+        "rabbit"
+      ],
+      "expected": 3
+    }
+  ]
+}

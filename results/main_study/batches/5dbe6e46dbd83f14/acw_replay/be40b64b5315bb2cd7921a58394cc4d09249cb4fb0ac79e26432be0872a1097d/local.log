@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/be40b64b5315bb2cd7921a58394cc4d09249cb4fb0ac79e26432be0872a1097d/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+             for i, j in zone:
+                 for di, dj in ((1, 0), (0, 1), (-1, 0), (0, -1)):
+                     i2 = i + di
+-                    j2 = j + dj
++                    j2 = dj + j
+                     if (
+                         in_bounds(i2, j2)
+                         and (i2, j2) not in zone
+@@ -65,7 +65,7 @@
+ 
+                     for di, dj in ((1, 0), (0, 1), (-1, 0), (0, -1)):
+                         i2 = i + di
+-                        j2 = j + dj
++                        j2 = dj + j
+                         if in_bounds(i2, j2) and matrix[i2][j2] == 1:
+                             q.append((i2, j2))
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/be40b64b5315bb2cd7921a58394cc4d09249cb4fb0ac79e26432be0872a1097d/without_tabs.py:
+--- Original
++++ Modified
+@@ -90,7 +90,7 @@
+                 new_zone, walls = infect(zone)
+                 new_zones.append(new_zone)
+                 impact = len(new_zone) - len(zone)
+-                if impact > n_max_impact:
++                if n_max_impact < impact:
+                     max_impact_zone_index = i
+                     n_max_impact = impact
+                     new_walls = walls
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/be40b64b5315bb2cd7921a58394cc4d09249cb4fb0ac79e26432be0872a1097d/with_tabs.py

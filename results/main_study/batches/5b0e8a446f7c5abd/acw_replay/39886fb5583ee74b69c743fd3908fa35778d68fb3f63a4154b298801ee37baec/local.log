@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/39886fb5583ee74b69c743fd3908fa35778d68fb3f63a4154b298801ee37baec/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+ 			return max(c1, c2, c3, c4) + grid[x1][y1] + (grid[x2][y2] if x1 != x2 else 0)
+ 		n = len(grid)
+ 		r = dfs(n - 1, n - 1, n - 1, n - 1, n)
+-		return r if r > 0 else 0
++		return r if 0 < r else 0
+ 
+ 		n = len(grid)
+ 		forward = [(0, 1), (1, 0)]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/39886fb5583ee74b69c743fd3908fa35778d68fb3f63a4154b298801ee37baec/with_tabs.py

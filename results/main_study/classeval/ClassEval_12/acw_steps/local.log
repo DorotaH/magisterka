@@ -1,0 +1,19 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_12/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -37,11 +37,11 @@
+     def check_winner(self, player_hand, dealer_hand):
+         player_value = self.calculate_hand_value(player_hand)
+         dealer_value = self.calculate_hand_value(dealer_hand)
+-        if player_value > 21 and dealer_value > 21:
++        if 21 < player_value and 21 < dealer_value:
+             return 'Player wins' if player_value <= dealer_value else 'Dealer wins'
+-        elif player_value > 21:
++        elif 21 < player_value:
+             return 'Dealer wins'
+-        elif dealer_value > 21:
++        elif 21 < dealer_value:
+             return 'Player wins'
+         else:
+             return 'Dealer wins' if player_value <= dealer_value else 'Player wins'
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_12/acw_steps/with_tabs.py

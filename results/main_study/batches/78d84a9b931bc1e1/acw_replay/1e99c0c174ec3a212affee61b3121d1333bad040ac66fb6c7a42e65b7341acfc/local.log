@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/1e99c0c174ec3a212affee61b3121d1333bad040ac66fb6c7a42e65b7341acfc/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,6 +23,6 @@
+     for creature in hand[max(0,n-b):]:
+         best = max(best, (creature[0] << a) - max(creature))
+ 
+-    print(sum(creature[1] for creature in hand)
+-          + sum(max(0, creature[0] - creature[1]) for creature in hand[max(0,n-b):])
++    print(sum(max(0, creature[0] - creature[1]) for creature in hand[max(0,n-b):])
++          + sum(creature[1] for creature in hand)
+           + best)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/1e99c0c174ec3a212affee61b3121d1333bad040ac66fb6c7a42e65b7341acfc/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+     hand.sort(key=lambda self: self[0] - self[1])
+ 
+     best = 0
+-    if n > b:
++    if b < n:
+         l = hand[n - b]
+         lost = max(0, l[0] - l[1])
+         for creature in hand[:n-b]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/1e99c0c174ec3a212affee61b3121d1333bad040ac66fb6c7a42e65b7341acfc/with_tabs.py

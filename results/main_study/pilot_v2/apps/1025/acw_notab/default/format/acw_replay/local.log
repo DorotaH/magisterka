@@ -1,0 +1,13 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1025/acw_notab/default/format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+     if 2 >= n:
+         return 0
+     zeros = sum(count_zeros(i, x, y, points) for i, (x, y) in enumerate(points[:-2]))
+-    return (n - 1) * n * (n - 2) // 6 - zeros
++    return n * (n - 1) * (n - 2) // 6 - zeros
+ 
+ 
+ def count_zeros(i, x, y, points):
+

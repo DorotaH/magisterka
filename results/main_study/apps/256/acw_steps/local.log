@@ -1,0 +1,22 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/256/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,13 +8,13 @@
+ 
+ Team1=False
+ Team2=False
+-if(a>w and a>y and d>x and d>z):
++if(a>w and a>y and x < d and z < d):
+     Team1=True
+ 
+-if(c>w and c>y and b>x and b>z):
++if(w < c and y < c and b>x and z < b):
+     Team1=True
+ 
+-if(((x>b and w>c) or (z>b and y>c)) and ((x>d and w>a) or (z>d and y>a))):
++if(((b < x and w>c) or (z>b and y>c)) and ((x>d and a < w) or (z>d and a < y))):
+     Team2=True
+ 
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/256/acw_steps/with_tabs.py

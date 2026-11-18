@@ -1,0 +1,12 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/count-complete-tree-nodes/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,6 +32,6 @@
+         rightLevel = depthOfRight(root.right)
+ 
+         if leftLevel == rightLevel:
+-            return 2 ** (leftLevel + 1) - 1
++            return 2 ** (1 + leftLevel) - 1
+         else:
+-            return 1 + self.countNodes(root.left) + self.countNodes(root.right)+            return self.countNodes(root.left) + 1 + self.countNodes(root.right)
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/count-complete-tree-nodes/acw_steps/with_tabs.py

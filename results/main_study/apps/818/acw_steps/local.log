@@ -1,0 +1,55 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/818/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,9 +20,9 @@
+         tenRemainders = [1, 3, 2, 6, 4, 5]
+         for x in range(0, 100):
+             if (tenRemainders[(n - 1) % 6] + x * 10) % 7 == 0 and \
+-                    (1 + x // 10 + x % 10) % 3 == 0:
++                    (x // 10 + 1 + x % 10) % 3 == 0:
+                 self.answer = '1' + '0' * (n - 4)
+-                self.answer += '0' + str(x) if (x < 10) else str(x)
++                self.answer += str(x) + '0' if (x < 10) else str(x)
+                 self.answer += '0'
+                 return
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/818/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,9 +19,9 @@
+             return
+         tenRemainders = [1, 3, 2, 6, 4, 5]
+         for x in range(0, 100):
+-            if (tenRemainders[(n - 1) % 6] + x * 10) % 7 == 0 and \
++            if (tenRemainders[(n - 1) % 6] + 10 * x) % 7 == 0 and \
+                     (x // 10 + 1 + x % 10) % 3 == 0:
+-                self.answer = '1' + '0' * (n - 4)
++                self.answer = '1' + (n - 4) * '0'
+                 self.answer += str(x) + '0' if (x < 10) else str(x)
+                 self.answer += '0'
+                 return
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/818/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+ 	
+     def solve(self):
+         n = self.n
+-        if n < 3:
++        if 3 > n:
+             self.answer = "-1"
+             return
+         if n == 3:
+@@ -22,7 +22,7 @@
+             if (tenRemainders[(n - 1) % 6] + 10 * x) % 7 == 0 and \
+                     (x // 10 + 1 + x % 10) % 3 == 0:
+                 self.answer = '1' + (n - 4) * '0'
+-                self.answer += str(x) + '0' if (x < 10) else str(x)
++                self.answer += str(x) + '0' if (10 > x) else str(x)
+                 self.answer += '0'
+                 return
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/818/acw_steps/with_tabs.py

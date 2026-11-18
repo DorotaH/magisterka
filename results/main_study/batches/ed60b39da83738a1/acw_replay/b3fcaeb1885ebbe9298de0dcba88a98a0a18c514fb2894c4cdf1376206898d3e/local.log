@@ -1,0 +1,27 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/b3fcaeb1885ebbe9298de0dcba88a98a0a18c514fb2894c4cdf1376206898d3e/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+         l, r = 0, 0
+         res = 0
+-        while r < len(nums):
++        while len(nums) > r:
+             # find next one
+             for i in range(l, len(nums)):
+                 if nums[i] == 1:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/b3fcaeb1885ebbe9298de0dcba88a98a0a18c514fb2894c4cdf1376206898d3e/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+             r = i
+             while nums[r] == 1:
+                 r += 1
+-                if r >= len(nums):
++                if len(nums) <= r:
+                     return max(res, r-l)
+             
+             res = max(res, r-l)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/b3fcaeb1885ebbe9298de0dcba88a98a0a18c514fb2894c4cdf1376206898d3e/with_tabs.py

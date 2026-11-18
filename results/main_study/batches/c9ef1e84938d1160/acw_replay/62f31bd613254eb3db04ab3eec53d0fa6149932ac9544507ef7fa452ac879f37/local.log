@@ -1,0 +1,77 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/62f31bd613254eb3db04ab3eec53d0fa6149932ac9544507ef7fa452ac879f37/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,8 +15,8 @@
+         if i % 2 == 0 and j < w - 1:
+             if a[i][j]%2==1:
+                 n+=1
+-                ans.append([i+1,j+1,i+1,j+2])
+-                a[i][j+1]+=1
++                ans.append([i+1,1+j,i+1,2+j])
++                a[i][1+j]+=1
+             j+=1
+         elif (
+             i % 2 == 0
+@@ -30,7 +30,7 @@
+                 break
+             if a[i][j]%2==1:
+                 n+=1
+-                ans.append([i+1,j+1,i+2,j+1])
++                ans.append([i+1,1+j,i+2,1+j])
+                 a[i+1][j]+=1
+             i+=1
+         elif (
+@@ -45,7 +45,7 @@
+         else:
+             if a[i][j]%2==1:
+                 n+=1
+-                ans.append([i+1,j+1,i+1,j])
++                ans.append([i+1,1+j,i+1,j])
+                 a[i][j-1]+=1
+             j-=1
+     print(n)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/62f31bd613254eb3db04ab3eec53d0fa6149932ac9544507ef7fa452ac879f37/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+     n=0
+     ans=[]
+     while True:
+-        if i % 2 == 0 and j < w - 1:
++        if i % 2 == 0 and w - 1 > j:
+             if a[i][j]%2==1:
+                 n+=1
+                 ans.append([i+1,1+j,i+1,2+j])
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/62f31bd613254eb3db04ab3eec53d0fa6149932ac9544507ef7fa452ac879f37/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,10 +20,10 @@
+             j+=1
+         elif (
+             i % 2 == 0
+-            and j >= w - 1
++            and w - 1 <= j
+             and j == w - 1
+             or i % 2 != 0
+-            and j <= 0
++            and 0 >= j
+             and j == 0
+         ):
+             if i >= h - 1:
+@@ -35,10 +35,10 @@
+             i+=1
+         elif (
+             i % 2 == 0
+-            and j >= w - 1
++            and w - 1 <= j
+             and j != w - 1
+             or i % 2 != 0
+-            and j <= 0
++            and 0 >= j
+             and j != 0
+         ):
+             pass
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/62f31bd613254eb3db04ab3eec53d0fa6149932ac9544507ef7fa452ac879f37/with_tabs.py

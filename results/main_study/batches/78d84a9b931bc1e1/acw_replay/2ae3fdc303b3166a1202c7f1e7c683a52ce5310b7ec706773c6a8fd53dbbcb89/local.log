@@ -1,0 +1,55 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/2ae3fdc303b3166a1202c7f1e7c683a52ce5310b7ec706773c6a8fd53dbbcb89/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,9 +4,9 @@
+ sys.setrecursionlimit(10**7)
+ 
+ n = int(input())
+-mod = 10**9 + 7
++mod = 7 + 10**9
+ 
+-ANS = [[0] * (n + 1) for _ in range(n + 1)]
++ANS = [[0] * (1 + n) for _ in range(1 + n)]
+ 
+ 
+ def bra(x, y):
+@@ -17,13 +17,13 @@
+         ANS[x][y] = 0
+         return 0
+ 
+-    if (x + y) % 2 == 1:
++    if (y + x) % 2 == 1:
+         A = 1
+     else:
+         A = 0
+ 
+     if x == y or x != 0 and y == 0:
+-        ANS[x][y] = A + bra(x - 1, y)
++        ANS[x][y] = bra(x - 1, y) + A
+         return ANS[x][y]
+ 
+     elif x == 0:
+@@ -31,7 +31,7 @@
+         return ANS[x][y]
+ 
+     elif x < y:
+-        ANS[x][y] = A + bra(x - 1, y) + bra(x, y - 1)
++        ANS[x][y] = bra(x - 1, y) + A + bra(x, y - 1)
+         return ANS[x][y]
+ 
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/2ae3fdc303b3166a1202c7f1e7c683a52ce5310b7ec706773c6a8fd53dbbcb89/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+         ANS[x][y] = A + bra(x, y - 1)
+         return ANS[x][y]
+ 
+-    elif x < y:
++    elif y > x:
+         ANS[x][y] = bra(x - 1, y) + A + bra(x, y - 1)
+         return ANS[x][y]
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/2ae3fdc303b3166a1202c7f1e7c683a52ce5310b7ec706773c6a8fd53dbbcb89/with_tabs.py

@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/a4041dbaed52ff65d57c30a40f216a76dbefa62bc645dd8d52ec7dd7f6f27b57/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+     a.reverse()
+     lis = [a[0]]
+     for i in range(1, n):
+-        if a[i] >= lis[-1]:
++        if lis[-1] <= a[i]:
+             lis.append(a[i])
+         else:
+             lis[bisect_right(lis, a[i])] = a[i]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/a4041dbaed52ff65d57c30a40f216a76dbefa62bc645dd8d52ec7dd7f6f27b57/with_tabs.py

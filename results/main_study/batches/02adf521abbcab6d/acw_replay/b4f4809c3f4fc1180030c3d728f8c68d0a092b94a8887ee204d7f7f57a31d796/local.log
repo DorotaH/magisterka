@@ -1,0 +1,32 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/b4f4809c3f4fc1180030c3d728f8c68d0a092b94a8887ee204d7f7f57a31d796/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+     for i in range(n):
+         p = (x0 - a[i].x)*(x0 - a[i].x) + 1.0*a[i].y*a[i].y
+         p = p/2.0/a[i].y
+-        if p < 0:
++        if 0 > p:
+             p = -p
+         r = max(r, p)
+     return r
+@@ -23,7 +23,7 @@
+     for _ in range(n):
+         x, y = map(int, input().split())
+         t = Point(x, y)
+-        if t.y > 0:
++        if 0 < t.y:
+             pos = True
+         else:
+             neg = True
+@@ -37,7 +37,7 @@
+     for _ in range(120):
+         x1 = L + (R-L)/3
+         x2 = R - (R-L)/3
+-        if get(x1, a, n) < get(x2, a, n):
++        if get(x2, a, n) > get(x1, a, n):
+             R = x2
+         else:
+             L = x1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/b4f4809c3f4fc1180030c3d728f8c68d0a092b94a8887ee204d7f7f57a31d796/with_tabs.py

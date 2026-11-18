@@ -1,0 +1,13 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/38a9ea1b7d04fe9087ba734be3bae20b69dc13c7bd29a1ad265c27e5444a79cb/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+     lst = [0] * (1 + n)
+     lst[0] = 0
+     for i in range(n):
+-        lst[i + 1] = lst[i] ^ (arr[i] < 0)
++        lst[i + 1] = lst[i] ^ (0 > arr[i])
+         cnt[lst[i + 1]] += 1
+ 
+     ans1 = cnt[1] * cnt[0]
+

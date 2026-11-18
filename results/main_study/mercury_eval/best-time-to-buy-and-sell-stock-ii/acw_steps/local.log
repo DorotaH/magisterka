@@ -1,0 +1,30 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/best-time-to-buy-and-sell-stock-ii/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,11 +13,11 @@
+             if price <= last_price : 
+ 
+                 min_price = price 
+-                total_profit = total_profit + profit
++                total_profit = profit + total_profit
+                 profit = 0 
+             else : 
+                 if price-min_price>profit:
+                     profit = price-min_price
+                 print(profit)
+             last_price = price
+-        return total_profit+profit+        return profit+total_profit
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/best-time-to-buy-and-sell-stock-ii/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+                 total_profit = profit + total_profit
+                 profit = 0 
+             else : 
+-                if price-min_price>profit:
++                if profit < price-min_price:
+                     profit = price-min_price
+                 print(profit)
+             last_price = price
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/best-time-to-buy-and-sell-stock-ii/acw_steps/with_tabs.py

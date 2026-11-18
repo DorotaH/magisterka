@@ -1,0 +1,3144 @@
+{
+  "dataset": "apps",
+  "sample": {
+    "sample_id": "4689",
+    "sloc": 18,
+    "structure": "script",
+    "difficulty": "introductory",
+    "format": "stdin",
+    "sha256": "62bc022a1c5b93fe193887764fcbd6130a5ac01fe3654de6d9a0e407af6d0235"
+  },
+  "sew_embedding": {
+    "status": "ok",
+    "n_sites": 19,
+    "n_grades": 10,
+    "n_edits": 12,
+    "iterations": 1
+  },
+  "variants": {
+    "original": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py",
+        "sha256": "62bc022a1c5b93fe193887764fcbd6130a5ac01fe3654de6d9a0e407af6d0235",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.80172661328159,
+            "p_syntax": 0.8755569283500001,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.930324516484732,
+            "p_syntax": 0.97982155305,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.969291314029986,
+            "p_syntax": 0.99081288535,
+            "n_grades": 10,
+            "k_grades": 3,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py\": {\"loc\": 21, \"lloc\": 18, \"sloc\": 18, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.20612797000012506
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/complexipy.json\nresults/main_study/apps/4689/original/embedded/code.py\n    <module> 8  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.10737490500014246,
+            "data": [
+              {
+                "complexity": 8,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 19
+                  }
+                ],
+                "line_end": 21,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/original/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.039787634999811416
+            },
+            "diagnostics": {
+              "PLR1730": 1
+            }
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 43,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 43,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 11,\n      \"row\": 21\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 11,\n            \"row\": 21\n          },\n          \"location\": {\n            \"column\": 11,\n            \"row\": 21\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 11,\n      \"row\": 21\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 21,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.03335740799957421
+            },
+            "diagnostics": {
+              "SIM108": 1,
+              "W292": 1
+            }
+          }
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/62bc022a1c5b93fe193887764fcbd6130a5ac01fe3654de6d9a0e407af6d0235"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/check/code.py",
+        "sha256": "62bc022a1c5b93fe193887764fcbd6130a5ac01fe3654de6d9a0e407af6d0235",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.80172661328159,
+            "p_syntax": 0.8755569283500001,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.930324516484732,
+            "p_syntax": 0.97982155305,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.969291314029986,
+            "p_syntax": 0.99081288535,
+            "n_grades": 10,
+            "k_grades": 3,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.039787634999811416
+        },
+        "diagnostics": {
+          "PLR1730": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/62bc022a1c5b93fe193887764fcbd6130a5ac01fe3654de6d9a0e407af6d0235"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix/code.py",
+        "sha256": "62bc022a1c5b93fe193887764fcbd6130a5ac01fe3654de6d9a0e407af6d0235",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.80172661328159,
+            "p_syntax": 0.8755569283500001,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.930324516484732,
+            "p_syntax": 0.97982155305,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.969291314029986,
+            "p_syntax": 0.99081288535,
+            "n_grades": 10,
+            "k_grades": 3,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "PLR1730 Replace `if` statement with `max = max(max, dist[j])`\n  --> results/main_study/apps/4689/original/default/fix/code.py:14:5\n   |\n12 |   max = dist[0]\n13 |   for j in range(1, len(dist), 1):\n14 | /     if max < dist[j]:\n15 | |         max = dist[j]\n   | |_____________________^\n16 |   dist.remove(max)\n   |\nhelp: Replace with `max = max(max, dist[j])`\n\nFound 1 error.\n",
+            "stderr": "",
+            "seconds": 0.02339501799997379
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03279378299976088
+        },
+        "diagnostics": {
+          "PLR1730": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/62bc022a1c5b93fe193887764fcbd6130a5ac01fe3654de6d9a0e407af6d0235"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/format/code.py",
+        "sha256": "abced2366bd2ba0f5b92b2fb6446ae33263b08368cc92dd12cb49c113c4b2e8e",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8571428571428571,
+          "changed_lines": 3,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.8495830704476603,
+            "p_all": 0.4247915352238302,
+            "p_syntax": 0.8755569283500001,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.6855793672123054,
+            "p_syntax": 0.97982155305,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7831038063776657,
+            "p_syntax": 0.99081288535,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.059346562000428094
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.030307056999845372
+        },
+        "diagnostics": {
+          "PLR1730": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/abced2366bd2ba0f5b92b2fb6446ae33263b08368cc92dd12cb49c113c4b2e8e"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/code.py",
+        "sha256": "abced2366bd2ba0f5b92b2fb6446ae33263b08368cc92dd12cb49c113c4b2e8e",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8571428571428571,
+          "changed_lines": 3,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.8495830704476603,
+            "p_all": 0.4247915352238302,
+            "p_syntax": 0.8755569283500001,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.6855793672123054,
+            "p_syntax": 0.97982155305,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7831038063776657,
+            "p_syntax": 0.99081288535,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/code.py\": {\"loc\": 21, \"lloc\": 18, \"sloc\": 18, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.19249859399951674
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/complexipy.json\nresults/main_study/apps/4689/original/default/fix_format/code.py\n    <module> 8  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.0652671959996951,
+            "data": [
+              {
+                "complexity": 8,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 19
+                  }
+                ],
+                "line_end": 21,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/original/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "PLR1730 Replace `if` statement with `max = max(max, dist[j])`\n  --> results/main_study/apps/4689/original/default/fix_format/code.py:14:5\n   |\n12 |   max = dist[0]\n13 |   for j in range(1, len(dist), 1):\n14 | /     if max < dist[j]:\n15 | |         max = dist[j]\n   | |_____________________^\n16 |   dist.remove(max)\n   |\nhelp: Replace with `max = max(max, dist[j])`\n\nFound 1 error.\n",
+            "stderr": "",
+            "seconds": 0.019330187999912596
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.024896618000639137
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/default/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.023998808000214922
+        },
+        "diagnostics": {
+          "PLR1730": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/abced2366bd2ba0f5b92b2fb6446ae33263b08368cc92dd12cb49c113c4b2e8e"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/check/code.py",
+        "sha256": "62bc022a1c5b93fe193887764fcbd6130a5ac01fe3654de6d9a0e407af6d0235",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.80172661328159,
+            "p_syntax": 0.8755569283500001,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.930324516484732,
+            "p_syntax": 0.97982155305,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.969291314029986,
+            "p_syntax": 0.99081288535,
+            "n_grades": 10,
+            "k_grades": 3,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 43,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 43,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 11,\n      \"row\": 21\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 11,\n            \"row\": 21\n          },\n          \"location\": {\n            \"column\": 11,\n            \"row\": 21\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 11,\n      \"row\": 21\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 21,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03335740799957421
+        },
+        "diagnostics": {
+          "SIM108": 1,
+          "W292": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/62bc022a1c5b93fe193887764fcbd6130a5ac01fe3654de6d9a0e407af6d0235"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix/code.py",
+        "sha256": "be1481c65a2ecfe186ffb698f125ae3ed20ac69d1ee70a6a4969e47f8090da94",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.8495830704476603,
+            "p_all": 0.4247915352238302,
+            "p_syntax": 0.8755569283500001,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.6855793672123054,
+            "p_syntax": 0.97982155305,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7831038063776657,
+            "p_syntax": 0.99081288535,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "SIM108 Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\n  --> results/main_study/apps/4689/original/strict/fix/code.py:6:5\n   |\n 4 |   dist = []\n 5 |   for i in range(n):\n 6 | /     if i != n-1:\n 7 | |         distance = points[i+1] - points[i]\n 8 | |     else:\n 9 | |         distance = points[0]+k - points[i]\n   | |__________________________________________^\n10 |       dist.append(distance)\n   |\nhelp: Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\n  |\n5 | for i in range(n):\n  -     if i != n-1:\n  -         distance = points[i+1] - points[i]\n  -     else:\n  -         distance = points[0]+k - points[i]\n6 +     distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\n7 |     dist.append(distance)\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 2 errors (1 fixed, 1 remaining).\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.03835305000029621
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 43,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 43,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.05923049400007585
+        },
+        "diagnostics": {
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/be1481c65a2ecfe186ffb698f125ae3ed20ac69d1ee70a6a4969e47f8090da94"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/format/code.py",
+        "sha256": "abced2366bd2ba0f5b92b2fb6446ae33263b08368cc92dd12cb49c113c4b2e8e",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8571428571428571,
+          "changed_lines": 3,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.8495830704476603,
+            "p_all": 0.4247915352238302,
+            "p_syntax": 0.8755569283500001,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.6855793672123054,
+            "p_syntax": 0.97982155305,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7831038063776657,
+            "p_syntax": 0.99081288535,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.029650497999682557
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 45,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.025818193999839423
+        },
+        "diagnostics": {
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/abced2366bd2ba0f5b92b2fb6446ae33263b08368cc92dd12cb49c113c4b2e8e"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/code.py",
+        "sha256": "abced2366bd2ba0f5b92b2fb6446ae33263b08368cc92dd12cb49c113c4b2e8e",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8571428571428571,
+          "changed_lines": 3,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.8495830704476603,
+            "p_all": 0.4247915352238302,
+            "p_syntax": 0.8755569283500001,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.6855793672123054,
+            "p_syntax": 0.97982155305,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 2,
+            "n_sites": 19
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.7831038063776657,
+            "p_syntax": 0.99081288535,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/code.py\": {\"loc\": 21, \"lloc\": 18, \"sloc\": 18, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.202045476999956
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/complexipy.json\nresults/main_study/apps/4689/original/strict/fix_format/code.py\n    <module> 8  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.08349844700023823,
+            "data": [
+              {
+                "complexity": 8,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 19
+                  }
+                ],
+                "line_end": 21,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/original/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "SIM108 Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\n  --> results/main_study/apps/4689/original/strict/fix_format/code.py:6:5\n   |\n 4 |   dist = []\n 5 |   for i in range(n):\n 6 | /     if i != n-1:\n 7 | |         distance = points[i+1] - points[i]\n 8 | |     else:\n 9 | |         distance = points[0]+k - points[i]\n   | |__________________________________________^\n10 |       dist.append(distance)\n   |\nhelp: Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\n  |\n5 | for i in range(n):\n  -     if i != n-1:\n  -         distance = points[i+1] - points[i]\n  -     else:\n  -         distance = points[0]+k - points[i]\n6 +     distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\n7 |     dist.append(distance)\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 2 errors (1 fixed, 1 remaining).\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.036172948999592336
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.019358270000338962
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/original/strict/fix_format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 45,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.042880465999587614
+        },
+        "diagnostics": {
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/abced2366bd2ba0f5b92b2fb6446ae33263b08368cc92dd12cb49c113c4b2e8e"
+      }
+    },
+    "sew": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py",
+        "sha256": "231a3fd162b073a26b8ac38a210a005c27a07511096a373c9318090796ffa83e",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6153846153846154,
+          "changed_lines": 9,
+          "token_similarity": 0.9187279151943463,
+          "delta_tokens": -1,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 3.8706008778178597e-07,
+            "p_all": 1.9353004389089299e-07,
+            "p_syntax": 0.0009759676500000002,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py\": {\"loc\": 18, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.13268967699968925
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/complexipy.json\nresults/main_study/apps/4689/sew/embedded/code.py\n    <module> 7  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.0923476429998118,
+            "data": [
+              {
+                "complexity": 7,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 11
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 16
+                  }
+                ],
+                "line_end": 18,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/sew/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"C408\",\n    \"end_location\": {\n      \"column\": 14,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"[\",\n          \"end_location\": {\n            \"column\": 13,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 8,\n            \"row\": 4\n          }\n        },\n        {\n          \"content\": \"]\",\n          \"end_location\": {\n            \"column\": 14,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 13,\n            \"row\": 4\n          }\n        }\n      ],\n      \"message\": \"Rewrite as a literal\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 4\n    },\n    \"message\": \"Unnecessary `list()` call (rewrite as a literal)\",\n    \"name\": \"unnecessary-collection-call\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unnecessary-collection-call\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"PIE808\",\n    \"end_location\": {\n      \"column\": 19,\n      \"row\": 5\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 21,\n            \"row\": 5\n          },\n          \"location\": {\n            \"column\": 18,\n            \"row\": 5\n          }\n        }\n      ],\n      \"message\": \"Remove `start` argument\"\n    },\n    \"location\": {\n      \"column\": 18,\n      \"row\": 5\n    },\n    \"message\": \"Unnecessary `start` argument in `range`\",\n    \"name\": \"unnecessary-range-start\",\n    \"noqa_row\": 5,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unnecessary-range-start\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 11\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.019257490999734728
+            },
+            "diagnostics": {
+              "C408": 1,
+              "PIE808": 1,
+              "PLR1730": 1
+            }
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.026102435999746376
+            },
+            "diagnostics": {}
+          }
+        }
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/check/code.py",
+        "sha256": "231a3fd162b073a26b8ac38a210a005c27a07511096a373c9318090796ffa83e",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6153846153846154,
+          "changed_lines": 9,
+          "token_similarity": 0.9187279151943463,
+          "delta_tokens": -1,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 3.8706008778178597e-07,
+            "p_all": 1.9353004389089299e-07,
+            "p_syntax": 0.0009759676500000002,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 19
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"C408\",\n    \"end_location\": {\n      \"column\": 14,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"[\",\n          \"end_location\": {\n            \"column\": 13,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 8,\n            \"row\": 4\n          }\n        },\n        {\n          \"content\": \"]\",\n          \"end_location\": {\n            \"column\": 14,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 13,\n            \"row\": 4\n          }\n        }\n      ],\n      \"message\": \"Rewrite as a literal\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 4\n    },\n    \"message\": \"Unnecessary `list()` call (rewrite as a literal)\",\n    \"name\": \"unnecessary-collection-call\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unnecessary-collection-call\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"PIE808\",\n    \"end_location\": {\n      \"column\": 19,\n      \"row\": 5\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 21,\n            \"row\": 5\n          },\n          \"location\": {\n            \"column\": 18,\n            \"row\": 5\n          }\n        }\n      ],\n      \"message\": \"Remove `start` argument\"\n    },\n    \"location\": {\n      \"column\": 18,\n      \"row\": 5\n    },\n    \"message\": \"Unnecessary `start` argument in `range`\",\n    \"name\": \"unnecessary-range-start\",\n    \"noqa_row\": 5,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unnecessary-range-start\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 11\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.019257490999734728
+        },
+        "diagnostics": {
+          "C408": 1,
+          "PIE808": 1,
+          "PLR1730": 1
+        }
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix/code.py",
+        "sha256": "548aad5d9d70d0c88916025153d7ac139e238dd70198f574f4aeea70a75625ad",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6153846153846154,
+          "changed_lines": 9,
+          "token_similarity": 0.9252669039145908,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 3.371622882176965e-05,
+            "p_all": 1.6858114410884826e-05,
+            "p_syntax": 0.03924205305000001,
+            "n_grades": 10,
+            "k_grades": 9,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "C408 Unnecessary `list()` call (rewrite as a literal)\n --> results/main_study/apps/4689/sew/default/fix/code.py:4:8\n  |\n2 | points = list(map(int, input().split()))\n3 |\n4 | dist = list()\n  |        ^^^^^^\n5 | for  i in  range(n):\n6 |     distance = points[i+1] - points[i] if i != n-1 else points[0]+k - points[i]\n  |\nhelp: Rewrite as a literal\n  |\n3 |\n  - dist = list()\n4 + dist = []\n5 | for  i in  range(n):\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nPLR1730 Replace `if` statement with `max = max(max, dist[j])`\n  --> results/main_study/apps/4689/sew/default/fix/code.py:11:5\n   |\n 9 |   max = dist[0]\n10 |   for  j in  range(1, len(dist), 1):\n11 | /     if max < dist[j]:\n12 | |         max = dist[j]\n   | |_____________________^\n13 |   dist.remove(max)\n   |\nhelp: Replace with `max = max(max, dist[j])`\n\nFound 3 errors (1 fixed, 2 remaining).\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.054484759999468224
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"C408\",\n    \"end_location\": {\n      \"column\": 14,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"[\",\n          \"end_location\": {\n            \"column\": 13,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 8,\n            \"row\": 4\n          }\n        },\n        {\n          \"content\": \"]\",\n          \"end_location\": {\n            \"column\": 14,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 13,\n            \"row\": 4\n          }\n        }\n      ],\n      \"message\": \"Rewrite as a literal\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 4\n    },\n    \"message\": \"Unnecessary `list()` call (rewrite as a literal)\",\n    \"name\": \"unnecessary-collection-call\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unnecessary-collection-call\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 11\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02952561500023876
+        },
+        "diagnostics": {
+          "C408": 1,
+          "PLR1730": 1
+        }
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/format/code.py",
+        "sha256": "e44c02f6f5587f86521e76574dd9d23a434bd3ae02ea729fbd58b2b80beb7ff0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.7692307692307693,
+          "changed_lines": 6,
+          "token_similarity": 0.9187279151943463,
+          "delta_tokens": -1,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 0.0011747050759704008,
+            "p_all": 0.0005873525379852004,
+            "p_syntax": 0.0009759676500000002,
+            "n_grades": 10,
+            "k_grades": 8,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.028456453000217152
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"C408\",\n    \"end_location\": {\n      \"column\": 14,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"[\",\n          \"end_location\": {\n            \"column\": 13,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 8,\n            \"row\": 4\n          }\n        },\n        {\n          \"content\": \"]\",\n          \"end_location\": {\n            \"column\": 14,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 13,\n            \"row\": 4\n          }\n        }\n      ],\n      \"message\": \"Rewrite as a literal\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 4\n    },\n    \"message\": \"Unnecessary `list()` call (rewrite as a literal)\",\n    \"name\": \"unnecessary-collection-call\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unnecessary-collection-call\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"PIE808\",\n    \"end_location\": {\n      \"column\": 17,\n      \"row\": 5\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/format/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 19,\n            \"row\": 5\n          },\n          \"location\": {\n            \"column\": 16,\n            \"row\": 5\n          }\n        }\n      ],\n      \"message\": \"Remove `start` argument\"\n    },\n    \"location\": {\n      \"column\": 16,\n      \"row\": 5\n    },\n    \"message\": \"Unnecessary `start` argument in `range`\",\n    \"name\": \"unnecessary-range-start\",\n    \"noqa_row\": 5,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unnecessary-range-start\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 11\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.023787643000105163
+        },
+        "diagnostics": {
+          "C408": 1,
+          "PIE808": 1,
+          "PLR1730": 1
+        }
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/code.py",
+        "sha256": "9df6870cff1d491388e8efff11cd656a2f07fdbcb1b5285cd24f89ba314cd9b4",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8205128205128205,
+          "changed_lines": 5,
+          "token_similarity": 0.9252669039145908,
+          "delta_tokens": -3,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.0206709233780225,
+            "p_all": 0.01033546168901125,
+            "p_syntax": 0.03924205305000001,
+            "n_grades": 10,
+            "k_grades": 7,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/code.py\": {\"loc\": 18, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.19230786700063618
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/complexipy.json\nresults/main_study/apps/4689/sew/default/fix_format/code.py\n    <module> 7  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.09229111700005888,
+            "data": [
+              {
+                "complexity": 7,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 11
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 16
+                  }
+                ],
+                "line_end": 18,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/sew/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "C408 Unnecessary `list()` call (rewrite as a literal)\n --> results/main_study/apps/4689/sew/default/fix_format/code.py:4:8\n  |\n2 | points = list(map(int, input().split()))\n3 |\n4 | dist = list()\n  |        ^^^^^^\n5 | for  i in  range(n):\n6 |     distance = points[i+1] - points[i] if i != n-1 else points[0]+k - points[i]\n  |\nhelp: Rewrite as a literal\n  |\n3 |\n  - dist = list()\n4 + dist = []\n5 | for  i in  range(n):\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nPLR1730 Replace `if` statement with `max = max(max, dist[j])`\n  --> results/main_study/apps/4689/sew/default/fix_format/code.py:11:5\n   |\n 9 |   max = dist[0]\n10 |   for  j in  range(1, len(dist), 1):\n11 | /     if max < dist[j]:\n12 | |         max = dist[j]\n   | |_____________________^\n13 |   dist.remove(max)\n   |\nhelp: Replace with `max = max(max, dist[j])`\n\nFound 3 errors (1 fixed, 2 remaining).\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.03217550600038521
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.01963537899973744
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"C408\",\n    \"end_location\": {\n      \"column\": 14,\n      \"row\": 4\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"[\",\n          \"end_location\": {\n            \"column\": 13,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 8,\n            \"row\": 4\n          }\n        },\n        {\n          \"content\": \"]\",\n          \"end_location\": {\n            \"column\": 14,\n            \"row\": 4\n          },\n          \"location\": {\n            \"column\": 13,\n            \"row\": 4\n          }\n        }\n      ],\n      \"message\": \"Rewrite as a literal\"\n    },\n    \"location\": {\n      \"column\": 8,\n      \"row\": 4\n    },\n    \"message\": \"Unnecessary `list()` call (rewrite as a literal)\",\n    \"name\": \"unnecessary-collection-call\",\n    \"noqa_row\": 4,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/unnecessary-collection-call\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"PLR1730\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/default/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 5,\n      \"row\": 11\n    },\n    \"message\": \"Replace `if` statement with `max = max(max, dist[j])`\",\n    \"name\": \"if-stmt-min-max\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-stmt-min-max\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03238842399969144
+        },
+        "diagnostics": {
+          "C408": 1,
+          "PLR1730": 1
+        }
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/check/code.py",
+        "sha256": "231a3fd162b073a26b8ac38a210a005c27a07511096a373c9318090796ffa83e",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6153846153846154,
+          "changed_lines": 9,
+          "token_similarity": 0.9187279151943463,
+          "delta_tokens": -1,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 3.8706008778178597e-07,
+            "p_all": 1.9353004389089299e-07,
+            "p_syntax": 0.0009759676500000002,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 19
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.026102435999746376
+        },
+        "diagnostics": {}
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix/code.py",
+        "sha256": "231a3fd162b073a26b8ac38a210a005c27a07511096a373c9318090796ffa83e",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6153846153846154,
+          "changed_lines": 9,
+          "token_similarity": 0.9187279151943463,
+          "delta_tokens": -1,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 3.8706008778178597e-07,
+            "p_all": 1.9353004389089299e-07,
+            "p_syntax": 0.0009759676500000002,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.07643937099965115
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.05669309399945632
+        },
+        "diagnostics": {}
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/format/code.py",
+        "sha256": "e44c02f6f5587f86521e76574dd9d23a434bd3ae02ea729fbd58b2b80beb7ff0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.7692307692307693,
+          "changed_lines": 6,
+          "token_similarity": 0.9187279151943463,
+          "delta_tokens": -1,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 0.0011747050759704008,
+            "p_all": 0.0005873525379852004,
+            "p_syntax": 0.0009759676500000002,
+            "n_grades": 10,
+            "k_grades": 8,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 19
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.0298752090002381
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.0490197890003401
+        },
+        "diagnostics": {}
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix_format/code.py",
+        "sha256": "e44c02f6f5587f86521e76574dd9d23a434bd3ae02ea729fbd58b2b80beb7ff0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.7692307692307693,
+          "changed_lines": 6,
+          "token_similarity": 0.9187279151943463,
+          "delta_tokens": -1,
+          "delta_ast_nodes": -1,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 0.0011747050759704008,
+            "p_all": 0.0005873525379852004,
+            "p_syntax": 0.0009759676500000002,
+            "n_grades": 10,
+            "k_grades": 8,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 19
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix_format/code.py\": {\"loc\": 18, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.2508382910000364
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix_format/complexipy.json\nresults/main_study/apps/4689/sew/strict/fix_format/code.py\n    <module> 7  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.050699744000667124,
+            "data": [
+              {
+                "complexity": 7,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 11
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 16
+                  }
+                ],
+                "line_end": 18,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/sew/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.024815557000692934
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.027058475000558246
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/sew/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.031496905000494735
+        },
+        "diagnostics": {}
+      }
+    },
+    "acw_notab": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py\": {\"loc\": 18, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.1308410650008227
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/complexipy.json\nresults/main_study/apps/4689/acw_notab/embedded/code.py\n    <module> 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.11503079700014496,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  }
+                ],
+                "line_end": 18,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/acw_notab/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.022232180000173685
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 45,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.019343541999660374
+            },
+            "diagnostics": {
+              "SIM108": 1
+            }
+          }
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/check/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.022232180000173685
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.03810299200085865
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.05061977399964235
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/format/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file left unchanged\n",
+            "stderr": "",
+            "seconds": 0.017985150000640715
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03989947500031121
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix_format/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix_format/code.py\": {\"loc\": 18, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.1971249850003005
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix_format/complexipy.json\nresults/main_study/apps/4689/acw_notab/default/fix_format/code.py\n    <module> 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.10529223600042315,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  }
+                ],
+                "line_end": 18,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/acw_notab/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.028422127999874647
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file left unchanged\n",
+            "stderr": "",
+            "seconds": 0.02403539599981741
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.028863384999567643
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/check/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 45,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.019343541999660374
+        },
+        "diagnostics": {
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "SIM108 Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\n  --> results/main_study/apps/4689/acw_notab/strict/fix/code.py:6:5\n   |\n 4 |   dist = []\n 5 |   for i in range(n):\n 6 | /     if i != n - 1:\n 7 | |         distance = points[i + 1] - points[i]\n 8 | |     else:\n 9 | |         distance = points[0] + k - points[i]\n   | |____________________________________________^\n10 |       dist.append(distance)\n   |\nhelp: Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\n  |\n5 | for i in range(n):\n  -     if i != n - 1:\n  -         distance = points[i + 1] - points[i]\n  -     else:\n  -         distance = points[0] + k - points[i]\n6 +     distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\n7 |     dist.append(distance)\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 1 error.\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.0388779720005914
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 45,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.06912210299924482
+        },
+        "diagnostics": {
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/format/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file left unchanged\n",
+            "stderr": "",
+            "seconds": 0.03599904400016385
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 45,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.04243729600057122
+        },
+        "diagnostics": {
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/code.py\": {\"loc\": 18, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.16307235600015701
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/complexipy.json\nresults/main_study/apps/4689/acw_notab/strict/fix_format/code.py\n    <module> 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.08972272899973177,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  }
+                ],
+                "line_end": 18,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/acw_notab/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "SIM108 Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\n  --> results/main_study/apps/4689/acw_notab/strict/fix_format/code.py:6:5\n   |\n 4 |   dist = []\n 5 |   for i in range(n):\n 6 | /     if i != n - 1:\n 7 | |         distance = points[i + 1] - points[i]\n 8 | |     else:\n 9 | |         distance = points[0] + k - points[i]\n   | |____________________________________________^\n10 |       dist.append(distance)\n   |\nhelp: Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\n  |\n5 | for i in range(n):\n  -     if i != n - 1:\n  -         distance = points[i + 1] - points[i]\n  -     else:\n  -         distance = points[0] + k - points[i]\n6 +     distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\n7 |     dist.append(distance)\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 1 error.\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.036960152999199636
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file left unchanged\n",
+            "stderr": "",
+            "seconds": 0.026213794999421225
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_notab/strict/fix_format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 45,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03163141599998198
+        },
+        "diagnostics": {
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      }
+    },
+    "acw_full": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py",
+        "sha256": "0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5641025641025641,
+          "changed_lines": 10,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 6,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\": {\"loc\": 18, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.16408136500012915
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/complexipy.json\nresults/main_study/apps/4689/acw_full/embedded/code.py\n    <module> 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06621863700001995,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  }
+                ],
+                "line_end": 18,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/acw_full/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.028681083000265062
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 39,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 39,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 2,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 8\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 8\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 8,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.020232026000485348
+            },
+            "diagnostics": {
+              "W191": 6,
+              "SIM108": 1
+            }
+          }
+        },
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/check/code.py",
+        "sha256": "0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5641025641025641,
+          "changed_lines": 10,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 6,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.028681083000265062
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix/code.py",
+        "sha256": "0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5641025641025641,
+          "changed_lines": 10,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 6,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.043373780000365514
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.023325598000155878
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/format/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.039622046000658884
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.08079135800016957
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix_format/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix_format/code.py\": {\"loc\": 18, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.15220423899972957
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix_format/complexipy.json\nresults/main_study/apps/4689/acw_full/default/fix_format/code.py\n    <module> 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.13171091399999568,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  }
+                ],
+                "line_end": 18,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/acw_full/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.024898872999983723
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.05319783100003406
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.08609663999959594
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/check/code.py",
+        "sha256": "0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5641025641025641,
+          "changed_lines": 10,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 6,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 39,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 39,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 2,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 8\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 8\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 8,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.020232026000485348
+        },
+        "diagnostics": {
+          "W191": 6,
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py",
+        "sha256": "0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.5641025641025641,
+          "changed_lines": 10,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 6,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "W191 Indentation contains tabs\n --> results/main_study/apps/4689/acw_full/strict/fix/code.py:6:1\n  |\n4 | dist = []\n5 | for i in range(n):\n6 |     if i != n - 1:\n  | ^^^^\n7 |         distance = points[i + 1] - points[i]\n8 |     else:\n  |\n\nSIM108 Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\n  --> results/main_study/apps/4689/acw_full/strict/fix/code.py:6:2\n   |\n 4 |   dist = []\n 5 |   for i in range(n):\n 6 | /     if i != n - 1:\n 7 | |         distance = points[i + 1] - points[i]\n 8 | |     else:\n 9 | |         distance = points[0] + k - points[i]\n   | |____________________________________________^\n10 |       dist.append(distance)\n   |\nhelp: Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\n  |\n5 | for i in range(n):\n  - \tif i != n - 1:\n  - \t\tdistance = points[i + 1] - points[i]\n  - \telse:\n  - \t\tdistance = points[0] + k - points[i]\n6 + \tdistance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\n7 | \tdist.append(distance)\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nW191 Indentation contains tabs\n --> results/main_study/apps/4689/acw_full/strict/fix/code.py:7:1\n  |\n5 | for i in range(n):\n6 |     if i != n - 1:\n7 |         distance = points[i + 1] - points[i]\n  | ^^^^^^^^\n8 |     else:\n9 |         distance = points[0] + k - points[i]\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/4689/acw_full/strict/fix/code.py:8:1\n   |\n 6 |     if i != n - 1:\n 7 |         distance = points[i + 1] - points[i]\n 8 |     else:\n   | ^^^^\n 9 |         distance = points[0] + k - points[i]\n10 |     dist.append(distance)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/4689/acw_full/strict/fix/code.py:9:1\n   |\n 7 |         distance = points[i + 1] - points[i]\n 8 |     else:\n 9 |         distance = points[0] + k - points[i]\n   | ^^^^^^^^\n10 |     dist.append(distance)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/4689/acw_full/strict/fix/code.py:10:1\n   |\n 8 |     else:\n 9 |         distance = points[0] + k - points[i]\n10 |     dist.append(distance)\n   | ^^^^\n11 |\n12 | max = dist[0]\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/4689/acw_full/strict/fix/code.py:14:1\n   |\n12 | max = dist[0]\n13 | for j in range(1, len(dist), 1):\n14 |     max = max(max, dist[j])\n   | ^^^^\n15 | dist.remove(max)\n   |\n\nFound 7 errors.\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.019988300000477466
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 39,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 39,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 2,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 8\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 8\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 8,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.05941471999994974
+        },
+        "diagnostics": {
+          "W191": 6,
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/0d2d391f21cfec32dc210556810fa9ed0df89277274767057bb6e2af085034a2"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/format/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.06020837500000198
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 45,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.044793306999963534
+        },
+        "diagnostics": {
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/code.py",
+        "sha256": "1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6666666666666666,
+          "changed_lines": 8,
+          "token_similarity": 0.9142857142857143,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -7,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/code.py\": {\"loc\": 18, \"lloc\": 15, \"sloc\": 15, \"comments\": 0, \"multi\": 0, \"blank\": 3, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.17808996999974624
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/complexipy.json\nresults/main_study/apps/4689/acw_full/strict/fix_format/code.py\n    <module> 5  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.09397951699975238,
+            "data": [
+              {
+                "complexity": 5,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  }
+                ],
+                "line_end": 18,
+                "line_start": 1,
+                "path": "results/main_study/apps/4689/acw_full/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "W191 Indentation contains tabs\n --> results/main_study/apps/4689/acw_full/strict/fix_format/code.py:6:1\n  |\n4 | dist = []\n5 | for i in range(n):\n6 |     if i != n - 1:\n  | ^^^^\n7 |         distance = points[i + 1] - points[i]\n8 |     else:\n  |\n\nSIM108 Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\n  --> results/main_study/apps/4689/acw_full/strict/fix_format/code.py:6:2\n   |\n 4 |   dist = []\n 5 |   for i in range(n):\n 6 | /     if i != n - 1:\n 7 | |         distance = points[i + 1] - points[i]\n 8 | |     else:\n 9 | |         distance = points[0] + k - points[i]\n   | |____________________________________________^\n10 |       dist.append(distance)\n   |\nhelp: Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\n  |\n5 | for i in range(n):\n  - \tif i != n - 1:\n  - \t\tdistance = points[i + 1] - points[i]\n  - \telse:\n  - \t\tdistance = points[0] + k - points[i]\n6 + \tdistance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\n7 | \tdist.append(distance)\n  |\nnote: This is an unsafe fix and may change runtime behavior\n\nW191 Indentation contains tabs\n --> results/main_study/apps/4689/acw_full/strict/fix_format/code.py:7:1\n  |\n5 | for i in range(n):\n6 |     if i != n - 1:\n7 |         distance = points[i + 1] - points[i]\n  | ^^^^^^^^\n8 |     else:\n9 |         distance = points[0] + k - points[i]\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/4689/acw_full/strict/fix_format/code.py:8:1\n   |\n 6 |     if i != n - 1:\n 7 |         distance = points[i + 1] - points[i]\n 8 |     else:\n   | ^^^^\n 9 |         distance = points[0] + k - points[i]\n10 |     dist.append(distance)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/4689/acw_full/strict/fix_format/code.py:9:1\n   |\n 7 |         distance = points[i + 1] - points[i]\n 8 |     else:\n 9 |         distance = points[0] + k - points[i]\n   | ^^^^^^^^\n10 |     dist.append(distance)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/4689/acw_full/strict/fix_format/code.py:10:1\n   |\n 8 |     else:\n 9 |         distance = points[0] + k - points[i]\n10 |     dist.append(distance)\n   | ^^^^\n11 |\n12 | max = dist[0]\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/4689/acw_full/strict/fix_format/code.py:14:1\n   |\n12 | max = dist[0]\n13 | for j in range(1, len(dist), 1):\n14 |     max = max(max, dist[j])\n   | ^^^^\n15 | dist.remove(max)\n   |\n\nFound 7 errors.\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.024193623000428488
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.04055320899988146
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM108\",\n    \"end_location\": {\n      \"column\": 45,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/4689/acw_full/strict/fix_format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]\",\n          \"end_location\": {\n            \"column\": 45,\n            \"row\": 9\n          },\n          \"location\": {\n            \"column\": 5,\n            \"row\": 6\n          }\n        }\n      ],\n      \"message\": \"Replace `if`-`else`-block with `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]`\"\n    },\n    \"location\": {\n      \"column\": 5,\n      \"row\": 6\n    },\n    \"message\": \"Use ternary operator `distance = points[i + 1] - points[i] if i != n - 1 else points[0] + k - points[i]` instead of `if`-`else`-block\",\n    \"name\": \"if-else-block-instead-of-if-exp\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02884528100003081
+        },
+        "diagnostics": {
+          "SIM108": 1
+        },
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/1de30e8864acce396070354002694cf7523d95103ada9abc84f4a51f7d3b9dd1"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/9bda3c2a09dbeefa092e4801215c4e0dba19bb5d5363067d836c22cd829db7f0/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,6 +14,6 @@
+             if j - i == 1:
+                 result.append(str(nums[i]))
+             else:
+-                result.append(str(nums[i]) + "->" + str(nums[j - 1]))
++                result.append("->" + str(nums[i]) + str(nums[j - 1]))
+             i = j
+         return result
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/9bda3c2a09dbeefa092e4801215c4e0dba19bb5d5363067d836c22cd829db7f0/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+             return []
+         while i < len(nums):
+             j = i + 1
+-            while j < len(nums):
++            while len(nums) > j:
+                 if nums[j - 1] + 1 == nums[j]:
+                     j += 1
+                 else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/9bda3c2a09dbeefa092e4801215c4e0dba19bb5d5363067d836c22cd829db7f0/with_tabs.py

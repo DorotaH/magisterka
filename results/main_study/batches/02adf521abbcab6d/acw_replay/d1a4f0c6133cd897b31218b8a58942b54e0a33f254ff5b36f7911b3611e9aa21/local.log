@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/d1a4f0c6133cd897b31218b8a58942b54e0a33f254ff5b36f7911b3611e9aa21/without_tabs.py:
+--- Original
++++ Modified
+@@ -36,7 +36,7 @@
+     if len(summer_seqs) == 0:
+         return 1 if winter_seqs else 0
+ 
+-    changes = len(summer_seqs) + len(winter_seqs)
++    changes = len(winter_seqs) + len(summer_seqs)
+ 
+     last_sum_seq = None
+     if temps[-1] >= 0:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/d1a4f0c6133cd897b31218b8a58942b54e0a33f254ff5b36f7911b3611e9aa21/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+     cur_len = 0
+     for t in temps:
+         # print("Handling", t)
+-        if cur_season * t > 0 or (t == 0 and cur_season == 1):
++        if t * cur_season > 0 or (t == 0 and cur_season == 1):
+             cur_len += 1
+             # print("Adding...")
+         else:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/d1a4f0c6133cd897b31218b8a58942b54e0a33f254ff5b36f7911b3611e9aa21/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+ 
+     cur_len = sum(winter_seqs)
+ 
+-    if cur_len > k:
++    if k < cur_len:
+         return -1
+ 
+     if len(summer_seqs) == 0:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/d1a4f0c6133cd897b31218b8a58942b54e0a33f254ff5b36f7911b3611e9aa21/with_tabs.py

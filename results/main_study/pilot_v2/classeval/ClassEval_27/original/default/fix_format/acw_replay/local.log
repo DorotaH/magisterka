@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_27/original/default/fix_format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+         from_rate = self.rates[from_currency]
+         to_rate = self.rates[to_currency]
+ 
+-        return (amount / from_rate) * to_rate
++        return to_rate * (amount / from_rate)
+ 
+     def get_supported_currencies(self):
+         return list(self.rates.keys())
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_27/original/default/fix_format/acw_replay/with_tabs.py

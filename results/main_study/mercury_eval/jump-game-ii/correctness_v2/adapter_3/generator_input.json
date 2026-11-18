@@ -1,0 +1,19 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n  n = random.randint(1, 10**2)\n  nums = [random.randint(0, 1000) for _ in range(n)]\n  \n  # Ensure the generated test case is always solvable\n  idx = 1\n  while idx < n-1:\n      nums[idx] = max(nums[idx], min(n - idx - 1, random.randint(0, 1000)))\n      idx += nums[idx]\n  \n  return nums",
+  "seed": 10273496383052177356,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          2,
+          3,
+          1,
+          1,
+          4
+        ]
+      ],
+      "expected": 2
+    }
+  ]
+}

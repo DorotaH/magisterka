@@ -1,0 +1,21 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/5de1149bb24ddd7102d011a4c1a39aa968521043eb014b3e8e048931ddf81621/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,5 +1,5 @@
+ def solve(a,l,r,k):
+-    out = sorted(a[:l]+a[r:],reverse=True)
++    out = sorted(a[r:]+a[:l],reverse=True)
+     inside = sorted(a[l:r])
+     cur = sum(a[l:r])
+     for i in range(min(k,len(inside),len(out))):
+@@ -15,7 +15,7 @@
+ 
+ best = a[0]
+ for l in range(n):
+-    for r in range(l+1,n+1):
++    for r in range(l+1,1+n):
+         cur = solve(a,l,r,k)
+         best = max(best, cur)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/5de1149bb24ddd7102d011a4c1a39aa968521043eb014b3e8e048931ddf81621/with_tabs.py

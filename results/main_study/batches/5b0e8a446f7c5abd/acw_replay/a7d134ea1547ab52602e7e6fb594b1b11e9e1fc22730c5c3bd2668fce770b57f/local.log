@@ -1,0 +1,25 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a7d134ea1547ab52602e7e6fb594b1b11e9e1fc22730c5c3bd2668fce770b57f/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,16 +11,16 @@
+         if(root is None):
+             a = False
+             return False
+-        if(root.left is None and root.right is None and s+root.val==targetSum):
++        if(root.left is None and root.right is None and root.val+s==targetSum):
+             b=True
+             if(b==True):
+                 return True
+         if(root.left is not None):
+-            c=self.target(root.left,targetSum,s+root.val)
++            c=self.target(root.left,targetSum,root.val+s)
+             if(c==True):
+                 return True
+         if(root.right is not None):
+-            d=self.target(root.right,targetSum,s+root.val)
++            d=self.target(root.right,targetSum,root.val+s)
+             if(d==True):
+                 return True
+         return a or b or c or d
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/a7d134ea1547ab52602e7e6fb594b1b11e9e1fc22730c5c3bd2668fce770b57f/with_tabs.py

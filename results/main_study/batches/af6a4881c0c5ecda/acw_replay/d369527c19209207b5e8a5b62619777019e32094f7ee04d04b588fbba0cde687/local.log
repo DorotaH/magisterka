@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/d369527c19209207b5e8a5b62619777019e32094f7ee04d04b588fbba0cde687/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+                     dp[ind1][ind2] = dp[ind1 - 1][ind2 - 1]
+                 else:
+                     insert = dp[ind1][ind2 - 1] + 1
+-                    delete = 1 + dp[ind1 - 1][ind2]
++                    delete = dp[ind1 - 1][ind2] + 1
+                     replace = dp[ind1 - 1][ind2 - 1] + 1
+                     dp[ind1][ind2] = min(insert, min(delete, replace))
+         return dp[n1][n2]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/d369527c19209207b5e8a5b62619777019e32094f7ee04d04b588fbba0cde687/with_tabs.py

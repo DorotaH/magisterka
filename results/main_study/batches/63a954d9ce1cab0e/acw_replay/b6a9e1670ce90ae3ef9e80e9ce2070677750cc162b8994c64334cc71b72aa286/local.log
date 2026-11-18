@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/b6a9e1670ce90ae3ef9e80e9ce2070677750cc162b8994c64334cc71b72aa286/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+ 
+ ans = 10**100
+ for i in range(31):
+-    if i * N <= 8 * I:
++    if i * N <= I * 8:
+         ans = min(ans, calc(i))
+ 
+ print(ans)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/b6a9e1670ce90ae3ef9e80e9ce2070677750cc162b8994c64334cc71b72aa286/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+     i = 0
+     j = 0
+     ma = 0
+-    while j < N:
++    while N > j:
+         if B[j]-B[i] <= K - 1:
+             ma = max(ma, j-i+1)
+             j += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/b6a9e1670ce90ae3ef9e80e9ce2070677750cc162b8994c64334cc71b72aa286/with_tabs.py

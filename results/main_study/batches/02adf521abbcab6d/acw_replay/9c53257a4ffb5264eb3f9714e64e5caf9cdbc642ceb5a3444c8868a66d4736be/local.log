@@ -1,0 +1,63 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/9c53257a4ffb5264eb3f9714e64e5caf9cdbc642ceb5a3444c8868a66d4736be/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+     n = len(coef)
+     carry = 0
+     i = 0
+-    while i < n + 1000:
++    while i < 1000 + n:
+         if i >= n and not carry:
+             break
+         cur = carry
+@@ -37,11 +37,11 @@
+     last -= 1
+ 
+ ans = 0
+-for i in range(0, n + 1):
++for i in range(0, 1 + n):
+     if last - i > 40:
+         continue
+ 
+-    cur = sum(b[j] * (2 ** (j - i)) for j in range(i, last + 1))
++    cur = sum(b[j] * (2 ** (j - i)) for j in range(i, 1 + last))
+     new_coef = coef[i] - cur
+     if ref:
+         new_coef = coef[i] + cur
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/9c53257a4ffb5264eb3f9714e64e5caf9cdbc642ceb5a3444c8868a66d4736be/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+     if last - i > 40:
+         continue
+ 
+-    cur = sum(b[j] * (2 ** (j - i)) for j in range(i, 1 + last))
++    cur = sum((2 ** (j - i)) * b[j] for j in range(i, 1 + last))
+     new_coef = coef[i] - cur
+     if ref:
+         new_coef = coef[i] + cur
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/9c53257a4ffb5264eb3f9714e64e5caf9cdbc642ceb5a3444c8868a66d4736be/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+ 
+ ans = 0
+ for i in range(0, 1 + n):
+-    if last - i > 40:
++    if 40 < last - i:
+         continue
+ 
+     cur = sum((2 ** (j - i)) * b[j] for j in range(i, 1 + last))
+@@ -46,7 +46,7 @@
+     if ref:
+         new_coef = coef[i] + cur
+ 
+-    if abs(new_coef) > k:
++    if k < abs(new_coef):
+         if b[i] == 1:
+             break
+         continue
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/9c53257a4ffb5264eb3f9714e64e5caf9cdbc642ceb5a3444c8868a66d4736be/with_tabs.py

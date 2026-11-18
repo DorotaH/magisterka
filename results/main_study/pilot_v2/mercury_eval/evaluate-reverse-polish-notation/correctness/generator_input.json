@@ -1,0 +1,19 @@
+{
+  "generator_code": "import random\nfrom itertools import permutations\n\ndef generate_test_case():\n    variables = [str(i) for i in range(0, 50)]\n    operators = ['+', '-', '*', '/']\n\n    equations = set()\n\n    count = 0\n    for permutation in permutations(variables):\n        a, b, *rest = permutation\n        operations = permutations(operators)\n        \n        for permutation in operations:\n            equation = zip([a + b, *rest], permutation)\n            equations.add(\"\".join(variable + operator for variable, operator in equation))\n            count += 1\n            if count > 10:\n                break\n        if count > 10:\n            break\n    case = random.choice(list(equations))\n    case = list(case)\n    \n    return case",
+  "seed": 7474524712272076955,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          "2",
+          "1",
+          "+",
+          "3",
+          "*"
+        ]
+      ],
+      "expected": 9
+    }
+  ]
+}

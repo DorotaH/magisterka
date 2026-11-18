@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/binary-watch/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         result = []
+         for hour in range(12):
+             for minute in range(60):
+-                if self.countBits(hour) + self.countBits(minute) == turnedOn:
++                if self.countBits(minute) + self.countBits(hour) == turnedOn:
+                     temp = f'{hour}:{minute:02d}'
+                     result.append(temp)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/binary-watch/acw_steps/with_tabs.py

@@ -1,0 +1,13 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/2f5d4fea9fd958ecddf7ddd27b96fe3e25f69204b19defff7be286433cfe3089/without_tabs.py:
+--- Original
++++ Modified
+@@ -61,7 +61,7 @@
+         req_id = st.query(pos)
+         if req_id > 0:
+             x, y, k = request[req_id]
+-            ans = a[x + (pos - y)]
++            ans = a[(pos - y) + x]
+         else:
+             ans = b[pos]
+         sys.stdout.write(f'{ans}\n')
+

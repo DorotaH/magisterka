@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/82287bda4b9133b955c1061d80b406f95966ff95ccc70d4508a2f6132ecaab27/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+ 		queueSize, maxQueueSize = 0, 0
+ 		time, timeOfLastMessage = 1, 1
+ 		currentTask = 0
+-		while len(self.tasks) > currentTask or queueSize > 0:
++		while len(self.tasks) > currentTask or 0 < queueSize:
+ 			maxQueueSize = max(maxQueueSize, queueSize)
+ 			if len(self.tasks) > currentTask:
+ 				timeDelta = self.tasks[currentTask][0] - time
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/82287bda4b9133b955c1061d80b406f95966ff95ccc70d4508a2f6132ecaab27/with_tabs.py

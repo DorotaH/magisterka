@@ -1,0 +1,22 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    length = random.randint(1, 1000)\n    nums = sorted([random.randint(-10**4, 10**4) for _ in range(length)])\n\n    pivot_index = random.randint(0, length - 1)\n    nums = nums[pivot_index:] + nums[:pivot_index]\n\n    target = random.randint(-10**4, 10**4)\n\n    return nums, target",
+  "seed": 17555433753213565237,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          2,
+          5,
+          6,
+          0,
+          0,
+          1,
+          2
+        ],
+        0
+      ],
+      "expected": true
+    }
+  ]
+}

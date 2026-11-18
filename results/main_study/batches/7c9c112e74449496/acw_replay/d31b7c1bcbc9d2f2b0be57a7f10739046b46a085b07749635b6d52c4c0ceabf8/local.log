@@ -1,0 +1,13 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/d31b7c1bcbc9d2f2b0be57a7f10739046b46a085b07749635b6d52c4c0ceabf8/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+             j = s - i;
+             if n > j and i < n:
+                 if (i > 0 and 0 < j):
+-                    if (dp[i][j - 1] > dp[i - 1][j]):
++                    if (dp[i - 1][j] < dp[i][j - 1]):
+                         dp[i][j] = dp[i - 1][j]
+                         direct[i][j] = 'l'
+                     else:
+

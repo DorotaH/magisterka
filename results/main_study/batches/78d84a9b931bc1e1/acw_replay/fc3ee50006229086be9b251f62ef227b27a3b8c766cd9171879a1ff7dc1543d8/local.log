@@ -1,0 +1,13 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/fc3ee50006229086be9b251f62ef227b27a3b8c766cd9171879a1ff7dc1543d8/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+         for pi in range(p, -1, -1):
+             t = si * ri + si * pi + pi * ri
+             if t == 0: continue
+-            if ri > 0:
++            if 0 < ri:
+                 dp[ri - 1][si][pi] += dp[ri][si][pi] * ri * pi / t
+             if si > 0:
+                 dp[ri][si - 1][pi] += dp[ri][si][pi] * ri * si / t
+

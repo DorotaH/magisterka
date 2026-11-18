@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/e3dcbd8b27e3460ca5877a626a38d9b63d2aa028ba922c282905bcbf02baa158/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+                 dp[i + 1][j - 1] += c
+                 dp[i + 1][j - 1] %= MOD
+ 
+-    return (dp[N][0] + MOD - 1) % MOD
++    return (MOD + dp[N][0] - 1) % MOD
+ 
+ 
+ def main():
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/e3dcbd8b27e3460ca5877a626a38d9b63d2aa028ba922c282905bcbf02baa158/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+             dp[i + 1][j] %= MOD
+ 
+             if j == 0:
+-                if A[i] > 0 and A[i] < N:
++                if 0 < A[i] and N > A[i]:
+                     dp[i + 1][A[i]] += c
+                     dp[i + 1][A[i]] %= MOD
+             else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/e3dcbd8b27e3460ca5877a626a38d9b63d2aa028ba922c282905bcbf02baa158/with_tabs.py

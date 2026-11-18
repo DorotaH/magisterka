@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/0e2adcaedbfc383eb74f0b5e82a267ec6e94f5d809d8dba104ef3a9308037919/without_tabs.py:
+--- Original
++++ Modified
+@@ -84,7 +84,7 @@
+ 		elif u.Right():
+ 			return cal(u.right, num, dig - 1)
+ 	elif u.Right():
+-		return cal(u.right, num, dig - 1) + (1 << dig)
++		return (1 << dig) + cal(u.right, num, dig - 1)
+ 	elif u.Left():
+ 		return cal(u.left, num, dig - 1)
+ 	return 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/0e2adcaedbfc383eb74f0b5e82a267ec6e94f5d809d8dba104ef3a9308037919/with_tabs.py

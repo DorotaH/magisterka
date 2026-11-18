@@ -1,0 +1,21 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/74197702a25f528d2799caeb02c0665890b0fde4d47387d61c7e54b2500dbfa7/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,11 +9,11 @@
+ 		while len(nums) > 1:
+ 			i = len(nums) // 2
+ 			if nums[i // 2] != tru[i // 2]:
+-				nums = nums[:1 + i // 2]
+-				tru = tru[:1 + i // 2]
++				nums = nums[:i // 2 + 1]
++				tru = tru[:i // 2 + 1]
+ 			else:
+-				nums = nums[1 + i // 2:]
+-				tru = tru[1 + i // 2:]
++				nums = nums[i // 2 + 1:]
++				tru = tru[i // 2 + 1:]
+ 
+ 		return nums[0] - 1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/74197702a25f528d2799caeb02c0665890b0fde4d47387d61c7e54b2500dbfa7/with_tabs.py

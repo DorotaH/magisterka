@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/cc013d81823b0ab0644d5ea90cbea93757eea02d15c63bf93145443d9b9ea5ba/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+                     best = left[j]
+                 break
+         # print('best=',best)
+-        for j in range(best, x + 1):
++        for j in range(best, 1 + x):
+             choosed[j] = True
+             left[j] = best
+     p[i] = left[x]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/cc013d81823b0ab0644d5ea90cbea93757eea02d15c63bf93145443d9b9ea5ba/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+             if not choosed[j]:
+                 best = j
+             else:
+-                if x - left[j] < k:
++                if k > x - left[j]:
+                     best = left[j]
+                 break
+         # print('best=',best)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/cc013d81823b0ab0644d5ea90cbea93757eea02d15c63bf93145443d9b9ea5ba/with_tabs.py

@@ -1,0 +1,36 @@
+import sys
+sys.setrecursionlimit(10 ** 6)
+
+D, G = map(int, input().split())
+p = []
+c = []
+for _ in range(D):
+  a, b = map(int, input().split())
+  p += [a]
+  c += [b]
+
+
+def solve(bit):
+  if (1 << D) <= bit:
+    return 1000
+  p_sum = 0
+  num = 0
+  for i in range(D):
+    if bit & (1 << i):
+      p_sum += c[i] + 100 * p[i] * (i + 1)
+      num += p[i]
+  if p_sum < G:
+    for i in reversed(range(D)):
+      if bit & 1 << i:
+        continue
+      for j in range(p[i]):
+        if p_sum >= G:
+          break
+        p_sum += 100 * (i + 1)
+        num += 1
+      else:
+        return solve(bit + 1)
+  return min(num, solve(bit + 1))
+
+
+print(solve(0))

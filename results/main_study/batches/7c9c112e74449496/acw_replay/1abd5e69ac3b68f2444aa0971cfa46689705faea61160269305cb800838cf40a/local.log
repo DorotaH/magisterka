@@ -1,0 +1,53 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/1abd5e69ac3b68f2444aa0971cfa46689705faea61160269305cb800838cf40a/without_tabs.py:
+--- Original
++++ Modified
+@@ -28,7 +28,7 @@
+ 
+ def candy(n, k):
+     # print(n, k)
+-    return C(n + k - 1, k - 1)
++    return C(k + n - 1, k - 1)
+ 
+ 
+ def count_game(
+@@ -53,7 +53,7 @@
+ gamesize = count_game(p, s - r, int(1e18))
+ gamesize = inverse(gamesize)
+ ans = 0
+-for q in range(r, s + 1):
++for q in range(r, 1 + s):
+     for i in range(0, p):  # exactly i people have the same score
+         t = s - (i + 1) * q
+         if t < 0:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/1abd5e69ac3b68f2444aa0971cfa46689705faea61160269305cb800838cf40a/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,7 +18,7 @@
+ f = [1]
+ iv = [1]
+ for i in range(1, 5555):
+-    f.append((f[i - 1] * i) % base)
++    f.append((i * f[i - 1]) % base)
+     iv.append(inverse(f[i]))
+ 
+ 
+@@ -38,7 +38,7 @@
+         return 1 if n == 0 else 0
+     ans = 0
+     for i in range(0, k + 1):
+-        t = n - x * i
++        t = n - i * x
+         # print(i, C(k, i))
+         if t < 0:
+             break
+@@ -60,6 +60,6 @@
+             break
+         # print(q, i, count_game(p-i-1, t, q));
+         ans = (
+-            ans + C(p - 1, i) * count_game(p - i - 1, t, q) * gamesize * inverse(i + 1)
++            ans + count_game(p - i - 1, t, q) * C(p - 1, i) * gamesize * inverse(i + 1)
+         ) % base
+ print(ans)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/1abd5e69ac3b68f2444aa0971cfa46689705faea61160269305cb800838cf40a/with_tabs.py

@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/ba8acad427c0084771e654a1af025f55e48c998109bddfb4a3d1509653c7799f/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ input = sys.stdin.readline
+ from bisect import bisect_right as br
+ 
+-P = 10**9 + 7
++P = 7 + 10**9
+ N = int(input())
+ X = []
+ maxinn = 0
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/ba8acad427c0084771e654a1af025f55e48c998109bddfb4a3d1509653c7799f/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+         VOL.append(VOL[-1] if len(CNT) > 1 else 0)
+         CNT.append(CNT[-1] if len(CNT) > 1 else 0)
+ 
+-    if VOL[-1] < vol:
++    if vol > VOL[-1]:
+         VOL[-1] = vol
+         CNT[-1] = CNT[i]
+     elif VOL[-1] == vol:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/ba8acad427c0084771e654a1af025f55e48c998109bddfb4a3d1509653c7799f/with_tabs.py

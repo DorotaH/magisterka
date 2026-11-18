@@ -1,0 +1,20 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/4f5ef48dbef78f9955fcfc80e299c4e60869a22a34b73ce28949dc7f82f693a9/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,11 +1,11 @@
+ def p2pl(p1, p2, p3, p4, p5):
+-    prob0 = (1 - p2) * (1 - p1) * (1 - p3) * (1 - p4) * (1 - p5)
++    prob0 = (1 - p1) * (1 - p2) * (1 - p3) * (1 - p4) * (1 - p5)
+     prob1 = (
+         p1 * (1 - p2) * (1 - p3) * (1 - p4) * (1 - p5)
+         + (1 - p1) * p2 * (1 - p3) * (1 - p4) * (1 - p5)
+         + (1 - p1) * p3 * (1 - p2) * (1 - p4) * (1 - p5)
+-        + p4 * (1 - p1) * (1 - p2) * (1 - p3) * (1 - p5)
+-        + p5 * (1 - p1) * (1 - p2) * (1 - p3) * (1 - p4)
++        + (1 - p1) * p4 * (1 - p2) * (1 - p3) * (1 - p5)
++        + (1 - p1) * p5 * (1 - p2) * (1 - p3) * (1 - p4)
+     )
+     return 1 - (prob1 + prob0)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/4f5ef48dbef78f9955fcfc80e299c4e60869a22a34b73ce28949dc7f82f693a9/with_tabs.py

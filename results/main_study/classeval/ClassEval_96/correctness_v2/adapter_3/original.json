@@ -1,0 +1,569 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_96/original/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_96/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit\": [[\"assertEqual\", 2]], \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_2\": [[\"assertEqual\", 2]], \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_3\": [[\"assertNotEqual\", 2]], \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_4\": [[\"assertNotEqual\", 2]], \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_5\": [[\"assertNotEqual\", 2]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius\": [[\"assertEqual\", 2]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_2\": [[\"assertEqual\", 2]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_3\": [[\"assertNotEqual\", 2]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_4\": [[\"assertNotEqual\", 2]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_5\": [[\"assertNotEqual\", 2]], \"benchmark_case.WeatherSystemTestMain.test_main\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3], [\"assertEqual\", 2], [\"assertEqual\", 2]], \"benchmark_case.WeatherSystemTestQuery.test_query\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.WeatherSystemTestQuery.test_query_2\": [[\"assertEqual\", 2]], \"benchmark_case.WeatherSystemTestQuery.test_query_3\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.WeatherSystemTestQuery.test_query_4\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.WeatherSystemTestQuery.test_query_5\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.WeatherSystemTestQuery.test_query_6\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city_2\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city_3\": [[\"assertNotEqual\", 2]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city_4\": [[\"assertNotEqual\", 2]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city_5\": [[\"assertNotEqual\", 2]]}, \"errors\": [], \"failures\": [], \"log\": \"test_query (benchmark_case.WeatherSystemTestQuery.test_query) ... ok\\ntest_query_2 (benchmark_case.WeatherSystemTestQuery.test_query_2) ... ok\\ntest_query_3 (benchmark_case.WeatherSystemTestQuery.test_query_3) ... ok\\ntest_query_4 (benchmark_case.WeatherSystemTestQuery.test_query_4) ... ok\\ntest_query_5 (benchmark_case.WeatherSystemTestQuery.test_query_5) ... ok\\ntest_query_6 (benchmark_case.WeatherSystemTestQuery.test_query_6) ... ok\\ntest_set_city (benchmark_case.WeatherSystemTestSetCity.test_set_city) ... ok\\ntest_set_city_2 (benchmark_case.WeatherSystemTestSetCity.test_set_city_2) ... ok\\ntest_set_city_3 (benchmark_case.WeatherSystemTestSetCity.test_set_city_3) ... ok\\ntest_set_city_4 (benchmark_case.WeatherSystemTestSetCity.test_set_city_4) ... ok\\ntest_set_city_5 (benchmark_case.WeatherSystemTestSetCity.test_set_city_5) ... ok\\ntest_celsius_to_fahrenheit (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit) ... ok\\ntest_celsius_to_fahrenheit_2 (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_2) ... ok\\ntest_celsius_to_fahrenheit_3 (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_3) ... ok\\ntest_celsius_to_fahrenheit_4 (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_4) ... ok\\ntest_celsius_to_fahrenheit_5 (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_5) ... ok\\ntest_fahrenheit_to_celsius (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius) ... ok\\ntest_fahrenheit_to_celsius_2 (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_2) ... ok\\ntest_fahrenheit_to_celsius_3 (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_3) ... ok\\ntest_fahrenheit_to_celsius_4 (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_4) ... ok\\ntest_fahrenheit_to_celsius_5 (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_5) ... ok\\ntest_main (benchmark_case.WeatherSystemTestMain.test_main) ... ok\\n\\n----------------------------------------------------------------------\\nRan 22 tests in 0.002s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit\": [[\"__init__\", \"null\"], [\"celsius_to_fahrenheit\", \"80.6\"]], \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_2\": [[\"__init__\", \"null\"], [\"celsius_to_fahrenheit\", \"73.4\"]], \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_3\": [[\"__init__\", \"null\"], [\"celsius_to_fahrenheit\", \"73.4\"]], \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_4\": [[\"__init__\", \"null\"], [\"celsius_to_fahrenheit\", \"80.6\"]], \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_5\": [[\"__init__\", \"null\"], [\"celsius_to_fahrenheit\", \"80.6\"]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius\": [[\"__init__\", \"null\"], [\"fahrenheit_to_celsius\", \"26.999999999999996\"]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_2\": [[\"__init__\", \"null\"], [\"fahrenheit_to_celsius\", \"23.000000000000004\"]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_3\": [[\"__init__\", \"null\"], [\"fahrenheit_to_celsius\", \"26.666666666666668\"]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_4\": [[\"__init__\", \"null\"], [\"fahrenheit_to_celsius\", \"22.77777777777778\"]], \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_5\": [[\"__init__\", \"null\"], [\"fahrenheit_to_celsius\", \"26.666666666666668\"]], \"benchmark_case.WeatherSystemTestMain.test_main\": [[\"__init__\", \"null\"], [\"query\", \"[27, \\\"sunny\\\"]\"], [\"set_city\", \"null\"], [\"celsius_to_fahrenheit\", \"80.6\"], [\"fahrenheit_to_celsius\", \"26.999999999999996\"]], \"benchmark_case.WeatherSystemTestQuery.test_query\": [[\"__init__\", \"null\"], [\"query\", \"[27, \\\"sunny\\\"]\"]], \"benchmark_case.WeatherSystemTestQuery.test_query_2\": [[\"__init__\", \"null\"], [\"query\", \"false\"]], \"benchmark_case.WeatherSystemTestQuery.test_query_3\": [[\"__init__\", \"null\"], [\"query\", \"[73.4, \\\"cloudy\\\"]\"]], \"benchmark_case.WeatherSystemTestQuery.test_query_4\": [[\"__init__\", \"null\"], [\"query\", \"[23.000000000000004, \\\"cloudy\\\"]\"]], \"benchmark_case.WeatherSystemTestQuery.test_query_5\": [[\"__init__\", \"null\"], [\"query\", \"[26.999999999999996, \\\"sunny\\\"]\"]], \"benchmark_case.WeatherSystemTestQuery.test_query_6\": [[\"__init__\", \"null\"], [\"query\", \"[80.6, \\\"sunny\\\"]\"]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city\": [[\"__init__\", \"null\"], [\"set_city\", \"null\"]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city_2\": [[\"__init__\", \"null\"], [\"set_city\", \"null\"]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city_3\": [[\"__init__\", \"null\"], [\"set_city\", \"null\"]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city_4\": [[\"__init__\", \"null\"], [\"set_city\", \"null\"]], \"benchmark_case.WeatherSystemTestSetCity.test_set_city_5\": [[\"__init__\", \"null\"], [\"set_city\", \"null\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.WeatherSystemTestQuery.test_query\", \"benchmark_case.WeatherSystemTestQuery.test_query_2\", \"benchmark_case.WeatherSystemTestQuery.test_query_3\", \"benchmark_case.WeatherSystemTestQuery.test_query_4\", \"benchmark_case.WeatherSystemTestQuery.test_query_5\", \"benchmark_case.WeatherSystemTestQuery.test_query_6\", \"benchmark_case.WeatherSystemTestSetCity.test_set_city\", \"benchmark_case.WeatherSystemTestSetCity.test_set_city_2\", \"benchmark_case.WeatherSystemTestSetCity.test_set_city_3\", \"benchmark_case.WeatherSystemTestSetCity.test_set_city_4\", \"benchmark_case.WeatherSystemTestSetCity.test_set_city_5\", \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit\", \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_2\", \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_3\", \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_4\", \"benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_5\", \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius\", \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_2\", \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_3\", \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_4\", \"benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_5\", \"benchmark_case.WeatherSystemTestMain.test_main\"], \"tests\": 22}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.11776281100037522,
+  "result": {
+    "checks": {
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_3": [
+        [
+          "assertNotEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_4": [
+        [
+          "assertNotEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_5": [
+        [
+          "assertNotEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_3": [
+        [
+          "assertNotEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_4": [
+        [
+          "assertNotEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_5": [
+        [
+          "assertNotEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestMain.test_main": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_6": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_3": [
+        [
+          "assertNotEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_4": [
+        [
+          "assertNotEqual",
+          2
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_5": [
+        [
+          "assertNotEqual",
+          2
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_query (benchmark_case.WeatherSystemTestQuery.test_query) ... ok\ntest_query_2 (benchmark_case.WeatherSystemTestQuery.test_query_2) ... ok\ntest_query_3 (benchmark_case.WeatherSystemTestQuery.test_query_3) ... ok\ntest_query_4 (benchmark_case.WeatherSystemTestQuery.test_query_4) ... ok\ntest_query_5 (benchmark_case.WeatherSystemTestQuery.test_query_5) ... ok\ntest_query_6 (benchmark_case.WeatherSystemTestQuery.test_query_6) ... ok\ntest_set_city (benchmark_case.WeatherSystemTestSetCity.test_set_city) ... ok\ntest_set_city_2 (benchmark_case.WeatherSystemTestSetCity.test_set_city_2) ... ok\ntest_set_city_3 (benchmark_case.WeatherSystemTestSetCity.test_set_city_3) ... ok\ntest_set_city_4 (benchmark_case.WeatherSystemTestSetCity.test_set_city_4) ... ok\ntest_set_city_5 (benchmark_case.WeatherSystemTestSetCity.test_set_city_5) ... ok\ntest_celsius_to_fahrenheit (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit) ... ok\ntest_celsius_to_fahrenheit_2 (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_2) ... ok\ntest_celsius_to_fahrenheit_3 (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_3) ... ok\ntest_celsius_to_fahrenheit_4 (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_4) ... ok\ntest_celsius_to_fahrenheit_5 (benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_5) ... ok\ntest_fahrenheit_to_celsius (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius) ... ok\ntest_fahrenheit_to_celsius_2 (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_2) ... ok\ntest_fahrenheit_to_celsius_3 (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_3) ... ok\ntest_fahrenheit_to_celsius_4 (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_4) ... ok\ntest_fahrenheit_to_celsius_5 (benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_5) ... ok\ntest_main (benchmark_case.WeatherSystemTestMain.test_main) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.002s\n\nOK\n",
+    "observed": {
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "celsius_to_fahrenheit",
+          "80.6"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "celsius_to_fahrenheit",
+          "73.4"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "celsius_to_fahrenheit",
+          "73.4"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "celsius_to_fahrenheit",
+          "80.6"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "celsius_to_fahrenheit",
+          "80.6"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "fahrenheit_to_celsius",
+          "26.999999999999996"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "fahrenheit_to_celsius",
+          "23.000000000000004"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "fahrenheit_to_celsius",
+          "26.666666666666668"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "fahrenheit_to_celsius",
+          "22.77777777777778"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "fahrenheit_to_celsius",
+          "26.666666666666668"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestMain.test_main": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "query",
+          "[27, \"sunny\"]"
+        ],
+        [
+          "set_city",
+          "null"
+        ],
+        [
+          "celsius_to_fahrenheit",
+          "80.6"
+        ],
+        [
+          "fahrenheit_to_celsius",
+          "26.999999999999996"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "query",
+          "[27, \"sunny\"]"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "query",
+          "false"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "query",
+          "[73.4, \"cloudy\"]"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "query",
+          "[23.000000000000004, \"cloudy\"]"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "query",
+          "[26.999999999999996, \"sunny\"]"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestQuery.test_query_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "query",
+          "[80.6, \"sunny\"]"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "set_city",
+          "null"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "set_city",
+          "null"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "set_city",
+          "null"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "set_city",
+          "null"
+        ]
+      ],
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "set_city",
+          "null"
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.WeatherSystemTestQuery.test_query",
+      "benchmark_case.WeatherSystemTestQuery.test_query_2",
+      "benchmark_case.WeatherSystemTestQuery.test_query_3",
+      "benchmark_case.WeatherSystemTestQuery.test_query_4",
+      "benchmark_case.WeatherSystemTestQuery.test_query_5",
+      "benchmark_case.WeatherSystemTestQuery.test_query_6",
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city",
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_2",
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_3",
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_4",
+      "benchmark_case.WeatherSystemTestSetCity.test_set_city_5",
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit",
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_2",
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_3",
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_4",
+      "benchmark_case.WeatherSystemTestCelsiusToFahrenheit.test_celsius_to_fahrenheit_5",
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius",
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_2",
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_3",
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_4",
+      "benchmark_case.WeatherSystemTestFahrenheitToCelsius.test_fahrenheit_to_celsius_5",
+      "benchmark_case.WeatherSystemTestMain.test_main"
+    ],
+    "tests": 22
+  }
+}

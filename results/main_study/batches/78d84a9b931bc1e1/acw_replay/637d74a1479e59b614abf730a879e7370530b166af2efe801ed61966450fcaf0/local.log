@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/637d74a1479e59b614abf730a879e7370530b166af2efe801ed61966450fcaf0/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+ pref = [0] * n
+ pref[0] = a[0]
+ for i in range(1, n):
+-    pref[i] = pref[i - 1] + a[i]
++    pref[i] = a[i] + pref[i - 1]
+ pref.sort()
+ before = ans = 0
+ tree = [0] * (2 + n)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/637d74a1479e59b614abf730a879e7370530b166af2efe801ed61966450fcaf0/with_tabs.py

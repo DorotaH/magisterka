@@ -1,0 +1,33 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/9139bc39181d414e5de46dcb9942389ca87ea972ffece265be6caf7613346e14/without_tabs.py:
+--- Original
++++ Modified
+@@ -92,7 +92,7 @@
+ 
+ 
+ ok, ng = 1 + 10**9, -1
+-while abs(ok - ng) > 1:
++while 1 < abs(ok - ng):
+     mid = (ng + ok) >> 1
+     p = solve(mid)
+     if p == OK:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/9139bc39181d414e5de46dcb9942389ca87ea972ffece265be6caf7613346e14/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,12 +17,12 @@
+     for k in sorted(imos.keys()):
+         if t < k:
+             break
+-        if acc <= 0 and cur + 1 < k or imos[k] + acc <= 0:
++        if 0 >= acc and cur + 1 < k or imos[k] + acc <= 0:
+             acc = 0
+             break
+         acc += imos[k]
+ 
+-    return acc <= 0
++    return 0 >= acc
+ 
+ 
+ def add_imos(imos, x, y):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/9139bc39181d414e5de46dcb9942389ca87ea972ffece265be6caf7613346e14/with_tabs.py

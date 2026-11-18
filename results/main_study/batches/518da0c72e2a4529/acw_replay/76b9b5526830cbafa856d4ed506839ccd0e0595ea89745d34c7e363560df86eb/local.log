@@ -1,0 +1,36 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/76b9b5526830cbafa856d4ed506839ccd0e0595ea89745d34c7e363560df86eb/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+             merged = []
+             i, j = 0, 0
+             
+-            while i < len(left) or j < len(right):
++            while i < len(left) or len(right) > j:
+                 if j == len(right) or (i < len(left) and nums[left[i]] <= nums[right[j]]):
+                     merged.append(left[i])
+                     counts[left[i]] += j
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/76b9b5526830cbafa856d4ed506839ccd0e0595ea89745d34c7e363560df86eb/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ class Solution:
+     def countSmaller(self, nums: List[int]) -> List[int]:
+         def merge_sort(nums, indices, counts):
+-            if len(indices) <= 1:
++            if 1 >= len(indices):
+                 return indices
+             
+             mid = len(indices) // 2
+@@ -17,7 +17,7 @@
+             i, j = 0, 0
+             
+             while i < len(left) or len(right) > j:
+-                if j == len(right) or (i < len(left) and nums[left[i]] <= nums[right[j]]):
++                if j == len(right) or (i < len(left) and nums[right[j]] >= nums[left[i]]):
+                     merged.append(left[i])
+                     counts[left[i]] += j
+                     i += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/76b9b5526830cbafa856d4ed506839ccd0e0595ea89745d34c7e363560df86eb/with_tabs.py

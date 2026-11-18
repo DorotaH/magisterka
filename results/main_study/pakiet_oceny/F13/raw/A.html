@@ -1,0 +1,17 @@
+<!doctype html><html lang="pl"><meta charset="utf-8"><title>Fragment</title><style>pre{font:14px monospace;tab-size:4;line-height:1.5;padding:16px}</style><pre>    def send_to(self, recv, content, size):
+        if not recv.is_full_with_one_more_email(size):
+            timestamp = datetime.now().strftime(&quot;%Y-%m-%d %H:%M:%S&quot;)
+            email = {
+                &quot;sender&quot;: self.addr,
+                &quot;receiver&quot;: recv.addr,
+                &quot;content&quot;: content,
+                &quot;size&quot;: size,
+                &quot;time&quot;: timestamp,
+                &quot;state&quot;: &quot;unread&quot;
+            }
+            recv.inbox.append(email)
+            return True
+        else:
+            self.clear_inbox(size)
+            return False
+</pre></html>

@@ -1,0 +1,14 @@
+{
+  "generator_code": "import random\nimport string\n\ndef generate_test_case():\n    length_num1 = random.randint(1, 200)\n    length_num2 = random.randint(1, 200)\n\n    num1 = \"\".join(random.choice(string.digits) for _ in range(length_num1))\n    num2 = \"\".join(random.choice(string.digits) for _ in range(length_num2))\n\n    # Make sure we do not have any leading zeros, except if the number is 0 itself\n    num1 = str(int(num1))\n    num2 = str(int(num2))\n\n    return num1, num2",
+  "seed": 1787115540388774920,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "2",
+        "3"
+      ],
+      "expected": "6"
+    }
+  ]
+}

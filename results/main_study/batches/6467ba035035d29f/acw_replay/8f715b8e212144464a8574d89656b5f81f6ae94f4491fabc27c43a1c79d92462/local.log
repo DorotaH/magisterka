@@ -1,0 +1,23 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/8f715b8e212144464a8574d89656b5f81f6ae94f4491fabc27c43a1c79d92462/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,14 +5,14 @@
+ 
+ 
+ def naiseki(a, b):
+-    return a[0] * b[0] + a[1] * b[1] > 0.0
++    return a[0] * b[0] + b[1] * a[1] > 0.0
+ 
+ 
+ ans = 0
+ 
+ for i in range(1001):
+-    xl = np.cos(np.pi * 2.0 * i / 1000.0)
+-    yl = np.sin(np.pi * 2.0 * i / 1000.0)
++    xl = np.cos(2.0 * np.pi * i / 1000.0)
++    yl = np.sin(2.0 * np.pi * i / 1000.0)
+     x = 0
+     y = 0
+     for j in range(n):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/8f715b8e212144464a8574d89656b5f81f6ae94f4491fabc27c43a1c79d92462/with_tabs.py

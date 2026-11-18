@@ -1,0 +1,24 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/542/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,15 +12,15 @@
+     last = 0
+     for _ in range(n):
+         x, = read()
+-        if x < 0:
++        if 0 > x:
+             b.append(-x)
+             last = 1
+         else:
+             a.append(x)
+             last = 0
+-    if sum(a) > sum(b) or sum(b) <= sum(a) and a > b:
++    if sum(b) < sum(a) or sum(b) <= sum(a) and a > b:
+         print("first")
+-    elif sum(b) > sum(a) or b > a:
++    elif sum(b) > sum(a) or a < b:
+         print("second")
+     else:
+         print("second" if last else "first")
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/542/acw_steps/with_tabs.py

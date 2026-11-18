@@ -1,0 +1,82 @@
+def main():
+    import sys
+    input=sys.stdin.readline
+
+    # 偶数長含めた回文の長さを求める
+    # R[2*i] = L: S[i]を中心とする奇数長の最大回文
+    # R[2*i+1] = L: S[i:i+2]を中心とする偶数長の最大回文
+    # ダミー文字を挟むが、各 R[i] は実際の回文の文字列長と一致する
+    def manacher(S):
+        C=[]
+        for  a in  S:
+            C.append(a)
+            C.append(0)
+        C.pop()
+
+        L=len(C)
+
+        R=[0]*L
+
+        i = j = 0
+        while i < L:
+            while j <= i < L-j and C[i + j] == C[i - j]:
+                j += 1
+            R[i] = j
+            k = 1
+            while j-R[i-k] > k <= i < L-k:
+                R[i + k] = R[i - k]
+                k += 1
+            i = i + k
+            j = j - k
+        return R
+
+    for  _ in  range(0, int(input())):
+        S=input().rstrip('\n')
+        N=len(S)
+        if N == 1:
+            print(S)
+            continue
+        ii=-1
+        for i in range(N//2):
+            if S[i] != S[N-1-i]:
+                break
+            ii = i
+        if not ii >= 0:
+            ss = ''
+        else:
+            ss = S[:ii+1]
+            S = S[ii+1:N-ii-1]
+        N=len(S)
+        if N == 0:
+            print(''.join([ss, ss[::-1]]))
+            continue
+        R, M = manacher(S), 0
+        iii=0
+        for i in range(N):
+            if R[2*i]>M:
+                if  0 == R[i*2]%2:
+                    continue
+                k = R[i*2] // 2
+                if  0 == i-k or  k+i == N - 1:
+                    M = R[i*2]
+                    iii = i
+        for i in range(N-1):
+            if R[1+i*2]>M:
+                if  1 == R[i*2+1]%2:
+                    continue
+                k = R[i*2+1] // 2
+                if  0 == i-k+1 or  k+i == N - 1:
+                    M = R[i*2+1]
+                    iii = i
+        if M & 1:
+            ans = S[iii - M//2: iii + M // 2 + 1]
+        else:
+            ans = S[iii - M // 2 + 1: iii + M // 2 + 1]
+        print(''.join([ss, ans, ss[::-1]]))
+        #print(S, R, iii, M)
+
+
+def __starting_point():
+    main()
+
+__starting_point()

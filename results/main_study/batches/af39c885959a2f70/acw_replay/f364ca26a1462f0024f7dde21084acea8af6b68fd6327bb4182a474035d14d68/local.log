@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/f364ca26a1462f0024f7dde21084acea8af6b68fd6327bb4182a474035d14d68/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+         return ["-1"]
+     num_a_over_y = len([1 for a in As if a >= y])
+     if middle < num_a_over_y:
+-        return (n - k) * ["1"]
++        return ["1"] * (n - k)
+     min_num_y = middle + 1 - num_a_over_y
+     if n - k < min_num_y:
+         return ["-1"]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/f364ca26a1462f0024f7dde21084acea8af6b68fd6327bb4182a474035d14d68/with_tabs.py

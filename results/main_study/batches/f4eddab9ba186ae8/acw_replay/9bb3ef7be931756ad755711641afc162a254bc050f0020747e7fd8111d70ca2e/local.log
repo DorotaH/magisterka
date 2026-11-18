@@ -1,0 +1,16 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/9bb3ef7be931756ad755711641afc162a254bc050f0020747e7fd8111d70ca2e/without_tabs.py:
+--- Original
++++ Modified
+@@ -42,8 +42,8 @@
+             board[i][j] = "*"
+             dirs = [[0, 1], [0, -1], [1, 0], [-1, 0]]
+             for l_dir, r_dir in dirs:
+-                if 0 <= l_dir + i < m and 0 <= r_dir + j < n:
+-                    dfs(i + l_dir, j + r_dir, child)
++                if 0 <= i + l_dir < m and 0 <= r_dir + j < n:
++                    dfs(i + l_dir, r_dir + j, child)
+             board[i][j] = c
+             # print(c)
+             # print(child.children)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/9bb3ef7be931756ad755711641afc162a254bc050f0020747e7fd8111d70ca2e/with_tabs.py

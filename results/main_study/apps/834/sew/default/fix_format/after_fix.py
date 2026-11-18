@@ -1,0 +1,30 @@
+n, f = int(input()), list(map(int, input().split()))
+for  i in  range(n):
+    f[i] -= 1
+
+def gcd(a, b):
+    while (0 != a and 0 != b):
+        a, b = b, a % b
+    return a+b
+
+def lcm(a, b):
+    return a * b//gcd(a, b)
+
+ans, minn = 1, 0
+
+for  i in  range(n):
+    vis, cur = [False] * n, i
+    st, pr = 0, 0
+    while not vis[cur]:
+        vis[cur] = True
+        cur = f[cur]
+        st += 1
+    fs = cur
+    cur = i
+    while cur != fs:
+        pr += 1
+        cur = f[cur]
+    minn = max(minn, pr)
+    ans = lcm(ans, st - pr)
+
+print(((max(0, minn - 1))// ans + 1)*ans)

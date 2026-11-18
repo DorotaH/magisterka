@@ -1,0 +1,35 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/736ed0eb275a3fa147204ab56dbcd3d2096ecf2471f7af289f978e59face83ae/without_tabs.py:
+--- Original
++++ Modified
+@@ -37,7 +37,7 @@
+     bp = path[0]
+     for i in range(1, 2 + N):
+         p = path[i] + bp
+-        if p > 0:
++        if 0 < p:
+             t += 2
+         bp = p
+ 
+@@ -47,7 +47,7 @@
+ OK = 2 * (10**5) + 10
+ NG = -1
+ 
+-while OK - NG > 1:
++while 1 < OK - NG:
+     mid = (NG + OK) // 2
+     if solve(mid):
+         OK = mid
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/736ed0eb275a3fa147204ab56dbcd3d2096ecf2471f7af289f978e59face83ae/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+             t += 2
+         bp = p
+ 
+-    return t <= T
++    return T >= t
+ 
+ 
+ OK = 2 * (10**5) + 10
+

@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/reverse-integer/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+             if (maxNum//10 < res or (maxNum//10 == res and digit > maxNum%10)):
+                 return 0
+ 
+-            if (minNum//10 > res or (minNum//10 == res and digit < minNum%10)):
++            if (res < minNum//10 or (minNum//10 == res and minNum%10 > digit)):
+                 print(minNum//10, res)
+                 return 0
+             
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/reverse-integer/acw_steps/with_tabs.py

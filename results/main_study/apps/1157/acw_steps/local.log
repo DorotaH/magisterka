@@ -1,0 +1,42 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1157/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+     
+     cnt = [1, 0]
+     
+-    lst = [0] * (n + 1)
++    lst = [0] * (1 + n)
+     lst[0] = 0
+     for i in range(n):
+         lst[i + 1] = lst[i] ^ (arr[i] < 0)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1157/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,8 +13,8 @@
+         lst[i + 1] = lst[i] ^ (arr[i] < 0)
+         cnt[lst[i + 1]] += 1
+     
+-    ans1 = cnt[0] * cnt[1]
+-    ans2 = cnt[0] * (cnt[0] - 1) // 2 + cnt[1] * (cnt[1] - 1) // 2
++    ans1 = cnt[1] * cnt[0]
++    ans2 = (cnt[0] - 1) * cnt[0] // 2 + cnt[1] * (cnt[1] - 1) // 2
+     print(ans1, ans2)
+     
+     return 0
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1157/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+     lst = [0] * (1 + n)
+     lst[0] = 0
+     for i in range(n):
+-        lst[i + 1] = lst[i] ^ (arr[i] < 0)
++        lst[i + 1] = lst[i] ^ (0 > arr[i])
+         cnt[lst[i + 1]] += 1
+     
+     ans1 = cnt[1] * cnt[0]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1157/acw_steps/with_tabs.py

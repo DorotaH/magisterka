@@ -1,0 +1,28 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/b68dacd8b8962327bd9d7db94e3b3073691f3110deb7b5476c0004b706c6115b/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+         Ans[qu] = chr(97 + S[K - 1])
+         continue
+     L = len(set(S[K:]))
+-    res = [S[0]] + [S[K]] * (-((K - N) // K)) if L == 1 else [S[0]] + S[K:]
+-    Ans[qu] = "".join(map(lambda x: chr(x + 97), res))
++    res = [S[0]] + [S[K]] * (-((K - N) // K)) if L == 1 else S[K:] + [S[0]]
++    Ans[qu] = "".join(map(lambda x: chr(97 + x), res))
+ 
+ print("\n".join(map(str, Ans)))
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/b68dacd8b8962327bd9d7db94e3b3073691f3110deb7b5476c0004b706c6115b/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ readline = sys.stdin.readline
+ 
+ T = int(readline())
+-Ans = [None] * T
++Ans = T * [None]
+ for qu in range(T):
+     N, K = map(int, readline().split())
+     S = list(map(lambda x: ord(x) - 97, readline().strip()))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/b68dacd8b8962327bd9d7db94e3b3073691f3110deb7b5476c0004b706c6115b/with_tabs.py

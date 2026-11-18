@@ -1,0 +1,35 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/5b46b7fae9d87233d4ae9d4fad11f2be4c9eff89033d51062b01c22612c9ab28/without_tabs.py:
+--- Original
++++ Modified
+@@ -68,14 +68,14 @@
+ 	def setter(self, ind, val):
+ 		ind += self.m
+ 		if val < self.data[ind]:
+-			while ind > 0 and val < self.data[ind]:
++			while 0 < ind and val < self.data[ind]:
+ 				self.data[ind] = val
+ 				ind //= 2
+ 		elif val > self.data[ind]:
+ 			old_val = self.data[ind]
+ 			self.data[ind] = val
+ 			ind //= 2
+-			while ind > 0 and self.data[ind] == old_val:
++			while 0 < ind and self.data[ind] == old_val:
+ 				self.data[ind] = min(self.data[2 * ind], self.data[2 * ind + 1])
+ 				ind //= 2
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/5b46b7fae9d87233d4ae9d4fad11f2be4c9eff89033d51062b01c22612c9ab28/without_tabs.py:
+--- Original
++++ Modified
+@@ -86,7 +86,7 @@
+ numb = 0
+ 
+ for i in range(len(s)):
+-	if s[i] >= 48:
++	if 48 <= s[i]:
+ 		numb = numb * 10 + s[i] - 48
+ 	elif s[i] != 13:
+ 		inp.append(numb)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/5b46b7fae9d87233d4ae9d4fad11f2be4c9eff89033d51062b01c22612c9ab28/with_tabs.py

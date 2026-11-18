@@ -1,0 +1,23 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/abfff04fc373997631667157408e923a680356ff1d7ec3fbf77f4a990bf46be3/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,14 +14,14 @@
+ cost = 0
+ 
+ if k == 1:
+-    cost = (n - 1) * a
++    cost = a * (n - 1)
+ else:
+     while n != 1:
+         if n % k == 0:
+-            cost += min(b, (n - n // k) * a)
++            cost += min(b, a * (n - n // k))
+             n = n // k
+         else:
+-            cost += (n % k) * a
++            cost += a * (n % k)
+             n -= n % k
+             if n == 0:
+                 n += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/abfff04fc373997631667157408e923a680356ff1d7ec3fbf77f4a990bf46be3/with_tabs.py

@@ -1,0 +1,23 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/cebd80eebb4984bc33d8d1eb62c40417539727014d435d80a0a11c5af64c2cc7/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+     cur = (i - b) // p
+ 
+     # print(cur - b, b, p)
+-    return None if b < 0 else cur
++    return None if 0 > b else cur
+ 
+ 
+ def sets_num(p):
+@@ -43,7 +43,7 @@
+         if sets_num(p):
+             print(sets_num(p))
+             break
+-        if (p > 0) and sets_num(p - 1):
++        if (0 < p) and sets_num(p - 1):
+             print(sets_num(p - 1))
+             break
+     elif sets_num(p):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/cebd80eebb4984bc33d8d1eb62c40417539727014d435d80a0a11c5af64c2cc7/with_tabs.py

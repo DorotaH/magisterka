@@ -1,0 +1,61 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/1167a46d093cee744e46111cb77e7aa04c505b8df27436b3650399fb05a3d871/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+ def rightinterval(x0, v0, t):
+     if (10**6 - x0) / v0 <= t:
+         return (0, 10**6)
+-    if (10**6 - x0) / (v0 + vl) > t:
++    if (10**6 - x0) / (vl + v0) > t:
+         return (-1, -2)
+     rightbound = x0
+     leftbound = v0 * x0 + (10**6) * (vl - v0) - t * (vl * vl - v0 * v0)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/1167a46d093cee744e46111cb77e7aa04c505b8df27436b3650399fb05a3d871/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+     if (10**6 - x0) / (vl + v0) > t:
+         return (-1, -2)
+     rightbound = x0
+-    leftbound = v0 * x0 + (10**6) * (vl - v0) - t * (vl * vl - v0 * v0)
++    leftbound = x0 * v0 + (vl - v0) * (10**6) - t * (vl * vl - v0 * v0)
+     leftbound /= vl
+     leftbound = math.ceil(leftbound)
+     leftbound = max(leftbound, 0)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/1167a46d093cee744e46111cb77e7aa04c505b8df27436b3650399fb05a3d871/without_tabs.py:
+--- Original
++++ Modified
+@@ -36,14 +36,14 @@
+     events = []
+     for item in leftpeople:
+         temp = leftinterval(item[0], item[1], t)
+-        if temp[0] > temp[1]:
++        if temp[1] < temp[0]:
+             continue
+         events.extend(((temp[0], 0, 0), (temp[1], 1, 0)))
+         if temp[1] - temp[0] == 10**6:
+             break
+     for item in rightpeople:
+         temp = rightinterval(item[0], item[1], t)
+-        if temp[0] > temp[1]:
++        if temp[1] < temp[0]:
+             continue
+         events.extend(((temp[0], 0, 1), (temp[1], 1, 1)))
+         if temp[1] - temp[0] == 10**6:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/1167a46d093cee744e46111cb77e7aa04c505b8df27436b3650399fb05a3d871/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+ 
+ 
+ def rightinterval(x0, v0, t):
+-    if (10**6 - x0) / v0 <= t:
++    if t >= (10**6 - x0) / v0:
+         return (0, 10**6)
+     if (10**6 - x0) / (vl + v0) > t:
+         return (-1, -2)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/1167a46d093cee744e46111cb77e7aa04c505b8df27436b3650399fb05a3d871/with_tabs.py

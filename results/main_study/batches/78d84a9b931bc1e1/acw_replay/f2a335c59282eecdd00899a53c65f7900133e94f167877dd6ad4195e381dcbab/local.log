@@ -1,0 +1,22 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/f2a335c59282eecdd00899a53c65f7900133e94f167877dd6ad4195e381dcbab/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+ 
+ def gcd(a, b):
+     if a < 0: a = -a
+-    if b < 0: b = -b
++    if 0 > b: b = -b
+     if a == 0: return b
+     return a if b == 0 else gcd(b, a % b)
+ 
+@@ -22,7 +22,7 @@
+         x, y = read()
+         x -= x0
+         y -= y0
+-        if x < 0 or (x == 0 and y < 0): x, y = -x, -y
++        if 0 > x or (x == 0 and y < 0): x, y = -x, -y
+         g = gcd(x, y)
+         x //= g
+         y //= g
+

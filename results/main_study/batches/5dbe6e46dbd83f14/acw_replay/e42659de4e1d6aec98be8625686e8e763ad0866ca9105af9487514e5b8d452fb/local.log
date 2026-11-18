@@ -1,0 +1,23 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/e42659de4e1d6aec98be8625686e8e763ad0866ca9105af9487514e5b8d452fb/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+                     x += n
+                     start, end = x - n, x
+ 
+-            if n <= arr[i - 2]:
++            if arr[i - 2] >= n:
+                 out = False
+ 
+             if not out:
+@@ -40,7 +40,7 @@
+                             return True
+ 
+                 for l, r in parallel[pos]:
+-                    if start <= r and end >= l:
++                    if start <= r and l <= end:
+                         return True
+ 
+             lines[prev[0]].add(prev[1])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/e42659de4e1d6aec98be8625686e8e763ad0866ca9105af9487514e5b8d452fb/with_tabs.py

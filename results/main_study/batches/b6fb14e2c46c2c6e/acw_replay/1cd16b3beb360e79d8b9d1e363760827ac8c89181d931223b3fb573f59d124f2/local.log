@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/1cd16b3beb360e79d8b9d1e363760827ac8c89181d931223b3fb573f59d124f2/without_tabs.py:
+--- Original
++++ Modified
+@@ -48,7 +48,7 @@
+                 h21 = a - ord(n[i]) * pow1[i] + ord(cyc[(2 + x) % 3]) * pow1[i]
+                 h22 = b - pow2[i] * ord(n[i]) + ord(cyc[(2 + x) % 3]) * pow2[i]
+                 t.add((h11 % m1) * m2 + h12 % m2)
+-                t.add((h21 % m1) * m2 + h22 % m2)
++                t.add(m2 * (h21 % m1) + h22 % m2)
+ 
+ 
+ for _ in range(a):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/1cd16b3beb360e79d8b9d1e363760827ac8c89181d931223b3fb573f59d124f2/with_tabs.py

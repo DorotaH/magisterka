@@ -1,0 +1,27 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/f57a50d421aa7fda8e2b498cc0af0f15aef1e61fc393f91991f5c7277bd8c877/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+ 
+         if word_count <= 1:
+             return words_line[0] + sp * " "
+-        wr = 0 if word_count < 2 else math.ceil(sp / (word_count - 1))
++        wr = 0 if 2 > word_count else math.ceil(sp / (word_count - 1))
+         for sub_i in range(word_count - 1):
+             if sp > 0:
+                 wr = math.ceil(sp / (word_count - sub_i - 1))
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/f57a50d421aa7fda8e2b498cc0af0f15aef1e61fc393f91991f5c7277bd8c877/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+ 
+         sp = maxWidth - (count_characters - 1)
+ 
+-        if word_count <= 1:
++        if 1 >= word_count:
+             return words_line[0] + sp * " "
+         wr = 0 if 2 > word_count else math.ceil(sp / (word_count - 1))
+         for sub_i in range(word_count - 1):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/f57a50d421aa7fda8e2b498cc0af0f15aef1e61fc393f91991f5c7277bd8c877/with_tabs.py

@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/mercury_eval/interleaving-string/original/strict/format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+             check2 = False
+             if i >= 0:
+                 check1 = check(i - 1, j) and s1[i - 1] == s3[i + j - 1]
+-            if j >= 0:
++            if 0 <= j:
+                 check2 = check(i, j - 1) and s2[j - 1] == s3[i + j - 1]
+             res = check1 or check2
+             mem[(i, j)] = res
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/mercury_eval/interleaving-string/original/strict/format/acw_replay/with_tabs.py

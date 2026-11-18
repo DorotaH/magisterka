@@ -1,0 +1,577 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_33/acw_full/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_33/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.DiscountStrategyTest.test_DiscountStrategy\": [[\"assertEqual\", 2], [\"assertEqual\", 2], [\"assertEqual\", 2], [\"assertEqual\", 2], [\"assertAlmostEqual\", 2]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_1\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_2\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_3\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_4\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_5\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestDue.test_due_1\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestDue.test_due_2\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestDue.test_due_3\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestDue.test_due_4\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestDue.test_due_5\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_1\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_2\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_3\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_4\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_5\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_1\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_2\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_3\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_4\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_5\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.DiscountStrategyTestTotal.test_total_1\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestTotal.test_total_2\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestTotal.test_total_3\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestTotal.test_total_4\": [[\"assertEqual\", 2]], \"benchmark_case.DiscountStrategyTestTotal.test_total_5\": [[\"assertEqual\", 2]]}, \"errors\": [], \"failures\": [], \"log\": \"test_total_1 (benchmark_case.DiscountStrategyTestTotal.test_total_1) ... ok\\ntest_total_2 (benchmark_case.DiscountStrategyTestTotal.test_total_2) ... ok\\ntest_total_3 (benchmark_case.DiscountStrategyTestTotal.test_total_3) ... ok\\ntest_total_4 (benchmark_case.DiscountStrategyTestTotal.test_total_4) ... ok\\ntest_total_5 (benchmark_case.DiscountStrategyTestTotal.test_total_5) ... ok\\ntest_due_1 (benchmark_case.DiscountStrategyTestDue.test_due_1) ... ok\\ntest_due_2 (benchmark_case.DiscountStrategyTestDue.test_due_2) ... ok\\ntest_due_3 (benchmark_case.DiscountStrategyTestDue.test_due_3) ... ok\\ntest_due_4 (benchmark_case.DiscountStrategyTestDue.test_due_4) ... ok\\ntest_due_5 (benchmark_case.DiscountStrategyTestDue.test_due_5) ... ok\\ntest_fidelity_promo_1 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_1) ... ok\\ntest_fidelity_promo_2 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_2) ... ok\\ntest_fidelity_promo_3 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_3) ... ok\\ntest_fidelity_promo_4 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_4) ... ok\\ntest_fidelity_promo_5 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_5) ... ok\\ntest_bulk_item_promo_1 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_1) ... ok\\ntest_bulk_item_promo_2 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_2) ... ok\\ntest_bulk_item_promo_3 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_3) ... ok\\ntest_bulk_item_promo_4 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_4) ... ok\\ntest_bulk_item_promo_5 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_5) ... ok\\ntest_large_order_promo_1 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_1) ... ok\\ntest_large_order_promo_2 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_2) ... ok\\ntest_large_order_promo_3 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_3) ... ok\\ntest_large_order_promo_4 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_4) ... ok\\ntest_large_order_promo_5 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_5) ... ok\\ntest_DiscountStrategy (benchmark_case.DiscountStrategyTest.test_DiscountStrategy) ... ok\\n\\n----------------------------------------------------------------------\\nRan 26 tests in 0.006s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.DiscountStrategyTest.test_DiscountStrategy\": [[\"__init__\", \"null\"], [\"total\", \"250.0\"], [\"__init__\", \"null\"], [\"due\", \"250.0\"], [\"__init__\", \"null\"], [\"FidelityPromo\", \"12.5\"], [\"__init__\", \"null\"], [\"BulkItemPromo\", \"20.0\"], [\"__init__\", \"null\"], [\"LargeOrderPromo\", \"7.000000000000001\"]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_1\": [[\"__init__\", \"null\"], [\"BulkItemPromo\", \"20.0\"]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_2\": [[\"__init__\", \"null\"], [\"BulkItemPromo\", \"0\"]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_3\": [[\"__init__\", \"null\"], [\"BulkItemPromo\", \"100.0\"]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_4\": [[\"__init__\", \"null\"], [\"BulkItemPromo\", \"0\"]], \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_5\": [[\"__init__\", \"null\"], [\"BulkItemPromo\", \"30.0\"]], \"benchmark_case.DiscountStrategyTestDue.test_due_1\": [[\"__init__\", \"null\"], [\"due\", \"250.0\"]], \"benchmark_case.DiscountStrategyTestDue.test_due_2\": [[\"__init__\", \"null\"], [\"due\", \"237.5\"]], \"benchmark_case.DiscountStrategyTestDue.test_due_3\": [[\"__init__\", \"null\"], [\"due\", \"410.0\"]], \"benchmark_case.DiscountStrategyTestDue.test_due_4\": [[\"__init__\", \"null\"], [\"due\", \"139.5\"]], \"benchmark_case.DiscountStrategyTestDue.test_due_5\": [[\"__init__\", \"null\"], [\"due\", \"250.0\"]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_1\": [[\"__init__\", \"null\"], [\"FidelityPromo\", \"12.5\"]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_2\": [[\"__init__\", \"null\"], [\"FidelityPromo\", \"0\"]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_3\": [[\"__init__\", \"null\"], [\"FidelityPromo\", \"0\"]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_4\": [[\"__init__\", \"null\"], [\"FidelityPromo\", \"12.5\"]], \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_5\": [[\"__init__\", \"null\"], [\"FidelityPromo\", \"12.5\"]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_1\": [[\"__init__\", \"null\"], [\"LargeOrderPromo\", \"7.000000000000001\"]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_2\": [[\"__init__\", \"null\"], [\"LargeOrderPromo\", \"0\"]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_3\": [[\"__init__\", \"null\"], [\"LargeOrderPromo\", \"70.0\"]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_4\": [[\"__init__\", \"null\"], [\"LargeOrderPromo\", \"700.0000000000001\"]], \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_5\": [[\"__init__\", \"null\"], [\"LargeOrderPromo\", \"0\"]], \"benchmark_case.DiscountStrategyTestTotal.test_total_1\": [[\"__init__\", \"null\"], [\"total\", \"250.0\"]], \"benchmark_case.DiscountStrategyTestTotal.test_total_2\": [[\"__init__\", \"null\"], [\"total\", \"150.0\"]], \"benchmark_case.DiscountStrategyTestTotal.test_total_3\": [[\"__init__\", \"null\"], [\"total\", \"2050.0\"]], \"benchmark_case.DiscountStrategyTestTotal.test_total_4\": [[\"__init__\", \"null\"], [\"total\", \"70.0\"]], \"benchmark_case.DiscountStrategyTestTotal.test_total_5\": [[\"__init__\", \"null\"], [\"total\", \"0\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.DiscountStrategyTestTotal.test_total_1\", \"benchmark_case.DiscountStrategyTestTotal.test_total_2\", \"benchmark_case.DiscountStrategyTestTotal.test_total_3\", \"benchmark_case.DiscountStrategyTestTotal.test_total_4\", \"benchmark_case.DiscountStrategyTestTotal.test_total_5\", \"benchmark_case.DiscountStrategyTestDue.test_due_1\", \"benchmark_case.DiscountStrategyTestDue.test_due_2\", \"benchmark_case.DiscountStrategyTestDue.test_due_3\", \"benchmark_case.DiscountStrategyTestDue.test_due_4\", \"benchmark_case.DiscountStrategyTestDue.test_due_5\", \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_1\", \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_2\", \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_3\", \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_4\", \"benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_5\", \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_1\", \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_2\", \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_3\", \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_4\", \"benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_5\", \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_1\", \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_2\", \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_3\", \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_4\", \"benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_5\", \"benchmark_case.DiscountStrategyTest.test_DiscountStrategy\"], \"tests\": 26}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.11077062200001819,
+  "result": {
+    "checks": {
+      "benchmark_case.DiscountStrategyTest.test_DiscountStrategy": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_1": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_3": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_4": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_5": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_total_1 (benchmark_case.DiscountStrategyTestTotal.test_total_1) ... ok\ntest_total_2 (benchmark_case.DiscountStrategyTestTotal.test_total_2) ... ok\ntest_total_3 (benchmark_case.DiscountStrategyTestTotal.test_total_3) ... ok\ntest_total_4 (benchmark_case.DiscountStrategyTestTotal.test_total_4) ... ok\ntest_total_5 (benchmark_case.DiscountStrategyTestTotal.test_total_5) ... ok\ntest_due_1 (benchmark_case.DiscountStrategyTestDue.test_due_1) ... ok\ntest_due_2 (benchmark_case.DiscountStrategyTestDue.test_due_2) ... ok\ntest_due_3 (benchmark_case.DiscountStrategyTestDue.test_due_3) ... ok\ntest_due_4 (benchmark_case.DiscountStrategyTestDue.test_due_4) ... ok\ntest_due_5 (benchmark_case.DiscountStrategyTestDue.test_due_5) ... ok\ntest_fidelity_promo_1 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_1) ... ok\ntest_fidelity_promo_2 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_2) ... ok\ntest_fidelity_promo_3 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_3) ... ok\ntest_fidelity_promo_4 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_4) ... ok\ntest_fidelity_promo_5 (benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_5) ... ok\ntest_bulk_item_promo_1 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_1) ... ok\ntest_bulk_item_promo_2 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_2) ... ok\ntest_bulk_item_promo_3 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_3) ... ok\ntest_bulk_item_promo_4 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_4) ... ok\ntest_bulk_item_promo_5 (benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_5) ... ok\ntest_large_order_promo_1 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_1) ... ok\ntest_large_order_promo_2 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_2) ... ok\ntest_large_order_promo_3 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_3) ... ok\ntest_large_order_promo_4 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_4) ... ok\ntest_large_order_promo_5 (benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_5) ... ok\ntest_DiscountStrategy (benchmark_case.DiscountStrategyTest.test_DiscountStrategy) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.006s\n\nOK\n",
+    "observed": {
+      "benchmark_case.DiscountStrategyTest.test_DiscountStrategy": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "total",
+          "250.0"
+        ],
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "due",
+          "250.0"
+        ],
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "FidelityPromo",
+          "12.5"
+        ],
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "BulkItemPromo",
+          "20.0"
+        ],
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "LargeOrderPromo",
+          "7.000000000000001"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "BulkItemPromo",
+          "20.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "BulkItemPromo",
+          "0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "BulkItemPromo",
+          "100.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "BulkItemPromo",
+          "0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "BulkItemPromo",
+          "30.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "due",
+          "250.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "due",
+          "237.5"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "due",
+          "410.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "due",
+          "139.5"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestDue.test_due_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "due",
+          "250.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "FidelityPromo",
+          "12.5"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "FidelityPromo",
+          "0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "FidelityPromo",
+          "0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "FidelityPromo",
+          "12.5"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "FidelityPromo",
+          "12.5"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "LargeOrderPromo",
+          "7.000000000000001"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "LargeOrderPromo",
+          "0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "LargeOrderPromo",
+          "70.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "LargeOrderPromo",
+          "700.0000000000001"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "LargeOrderPromo",
+          "0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "total",
+          "250.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "total",
+          "150.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "total",
+          "2050.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "total",
+          "70.0"
+        ]
+      ],
+      "benchmark_case.DiscountStrategyTestTotal.test_total_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "total",
+          "0"
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.DiscountStrategyTestTotal.test_total_1",
+      "benchmark_case.DiscountStrategyTestTotal.test_total_2",
+      "benchmark_case.DiscountStrategyTestTotal.test_total_3",
+      "benchmark_case.DiscountStrategyTestTotal.test_total_4",
+      "benchmark_case.DiscountStrategyTestTotal.test_total_5",
+      "benchmark_case.DiscountStrategyTestDue.test_due_1",
+      "benchmark_case.DiscountStrategyTestDue.test_due_2",
+      "benchmark_case.DiscountStrategyTestDue.test_due_3",
+      "benchmark_case.DiscountStrategyTestDue.test_due_4",
+      "benchmark_case.DiscountStrategyTestDue.test_due_5",
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_1",
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_2",
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_3",
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_4",
+      "benchmark_case.DiscountStrategyTestFidelityPromo.test_fidelity_promo_5",
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_1",
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_2",
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_3",
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_4",
+      "benchmark_case.DiscountStrategyTestBulkItemPromo.test_bulk_item_promo_5",
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_1",
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_2",
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_3",
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_4",
+      "benchmark_case.DiscountStrategyTestLargeOrderPromo.test_large_order_promo_5",
+      "benchmark_case.DiscountStrategyTest.test_DiscountStrategy"
+    ],
+    "tests": 26
+  }
+}

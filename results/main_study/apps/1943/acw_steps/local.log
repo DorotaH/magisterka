@@ -1,0 +1,77 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1943/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+ wining_props = [wining_props_first_round]
+ assert len(wining_props_first_round) == len(props)
+ 
+-for round_num in range(2, n + 1):
++for round_num in range(2, 1 + n):
+     # calculate propabilitys for winning in i round for each team
+     # prop of winning in i round = prop of winning prev round + mo of win this one
+     # mo win this = for each team we can meet prop of them wining prev * prop we win them
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1943/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+     for team_num in range(2 ** n):
+         t = team_num // (2 ** round_num) * (2 ** (round_num))
+         teams_we_meet_this_round = [t + x for x in range(2 ** round_num)]
+-        t = team_num // (2 ** (round_num-1)) * (2 ** (round_num-1))
++        t = (2 ** (round_num-1)) * team_num // (2 ** (round_num-1))
+         teams_we_meet_prev_round = [t + x for x in range(2 ** (round_num-1))]
+         for tt in teams_we_meet_prev_round:
+             teams_we_meet_this_round.remove(tt)
+@@ -64,11 +64,11 @@
+             if winner >= split:
+                 res = sum(
+                     [revenue(round_num - 1, teams_left, split), revenue(round_num - 1, split, teams_right, winner),
+-                     winner_prop * (2 ** (round_num - 1))])
++                     (2 ** (round_num - 1)) * winner_prop])
+             else:
+                 res = sum(
+                     [revenue(round_num - 1, teams_left, split, winner), revenue(round_num - 1, split, teams_right),
+-                     winner_prop * (2 ** (round_num - 1))])
++                     (2 ** (round_num - 1)) * winner_prop])
+             results.append(res)
+ 
+         return max(results)
+@@ -79,11 +79,11 @@
+         if winner >= split:
+             res = sum(
+                 [revenue(round_num - 1, teams_left, split), revenue(round_num - 1, split, teams_right, winner),
+-                 winner_prop * (2 ** (round_num - 1))])
++                 (2 ** (round_num - 1)) * winner_prop])
+         else:
+             res = sum(
+                 [revenue(round_num - 1, teams_left, split, winner), revenue(round_num - 1, split, teams_right),
+-                 winner_prop * (2 ** (round_num - 1))])
++                 (2 ** (round_num - 1)) * winner_prop])
+ 
+         return res
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1943/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -61,7 +61,7 @@
+         for winner in range(teams_left, teams_right):
+             winner_prop = wining_props[round_num - 1][winner]
+ 
+-            if winner >= split:
++            if split <= winner:
+                 res = sum(
+                     [revenue(round_num - 1, teams_left, split), revenue(round_num - 1, split, teams_right, winner),
+                      (2 ** (round_num - 1)) * winner_prop])
+@@ -76,7 +76,7 @@
+     else:
+         winner_prop = wining_props[round_num - 1][winner]
+ 
+-        if winner >= split:
++        if split <= winner:
+             res = sum(
+                 [revenue(round_num - 1, teams_left, split), revenue(round_num - 1, split, teams_right, winner),
+                  (2 ** (round_num - 1)) * winner_prop])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1943/acw_steps/with_tabs.py

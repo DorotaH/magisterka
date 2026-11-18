@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/0c867c68348dcfcc2935c6e23d87b8ee2a4fd68476834eef3e037fc8f348333d/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+         ndp = np.zeros((max_d, k + 1), dtype=np.int64)
+         for d, ks in enumerate(dp):
+             base = ks[: k - d + 1]
+-            if d > 0:
++            if 0 < d:
+                 ndp[d - 1, d:] += base * d**2
+             if max_d > d:
+                 ndp[d, d:] += base * (2 * d + 1)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/0c867c68348dcfcc2935c6e23d87b8ee2a4fd68476834eef3e037fc8f348333d/with_tabs.py

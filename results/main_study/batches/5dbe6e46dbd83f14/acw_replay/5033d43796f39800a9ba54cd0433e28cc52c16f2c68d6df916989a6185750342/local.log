@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/5033d43796f39800a9ba54cd0433e28cc52c16f2c68d6df916989a6185750342/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+                 return False
+             flag = False
+             for i in dictt:
+-                if s[curr : curr + i] in dictt[i] and rec(curr + i):
++                if s[curr : i + curr] in dictt[i] and rec(i + curr):
+                     flag = True
+             dp[curr] = flag
+             return flag
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/5033d43796f39800a9ba54cd0433e28cc52c16f2c68d6df916989a6185750342/with_tabs.py

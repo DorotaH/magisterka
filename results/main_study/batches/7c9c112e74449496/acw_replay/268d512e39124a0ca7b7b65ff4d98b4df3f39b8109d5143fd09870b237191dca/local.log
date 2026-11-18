@@ -1,0 +1,53 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/268d512e39124a0ca7b7b65ff4d98b4df3f39b8109d5143fd09870b237191dca/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,7 +18,7 @@
+     return (f[n]*iv[k]*iv[n-k])%base
+ def candy(n, k):
+     # print(n, k)
+-    return C(n+k-1, k-1)
++    return C(k+n-1, k-1)
+ def count_game(k, n, x): #k players, n points total, no player can have x point or more
+     if (k==0):
+         return 1 if (n==0) else 0
+@@ -37,7 +37,7 @@
+ gamesize=count_game(p, s-r, int(1e18))
+ gamesize=inverse(gamesize)
+ ans=0;
+-for q in range(r, s+1):
++for q in range(r, 1+s):
+     for i in range(0, p): #exactly i people have the same score
+         t=s-(i+1)*q
+         if(t<0):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/268d512e39124a0ca7b7b65ff4d98b4df3f39b8109d5143fd09870b237191dca/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+ f=[1]
+ iv=[1]
+ for i in range(1, 5555):
+-    f.append((f[i-1]*i)%base)
++    f.append((i*f[i-1])%base)
+     iv.append(inverse(f[i]))
+ def C(n, k):
+     return (f[n]*iv[k]*iv[n-k])%base
+@@ -24,7 +24,7 @@
+         return 1 if (n==0) else 0
+     ans=0
+     for i in range(0, k+1):
+-        t=n-x*i
++        t=n-i*x
+         # print(i, C(k, i))
+         if(t<0):
+             break
+@@ -43,6 +43,6 @@
+         if(t<0):
+             break
+         # print(q, i, count_game(p-i-1, t, q));
+-        ans=(ans+C(p-1, i)*count_game(p-i-1, t, q)*gamesize*inverse(i+1))%base
++        ans=(ans+count_game(p-i-1, t, q)*C(p-1, i)*gamesize*inverse(i+1))%base
+ print(ans)
+         
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/268d512e39124a0ca7b7b65ff4d98b4df3f39b8109d5143fd09870b237191dca/with_tabs.py

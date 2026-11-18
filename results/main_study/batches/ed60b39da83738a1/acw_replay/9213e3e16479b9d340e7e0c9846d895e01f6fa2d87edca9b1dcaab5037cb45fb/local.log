@@ -1,0 +1,27 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/9213e3e16479b9d340e7e0c9846d895e01f6fa2d87edca9b1dcaab5037cb45fb/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+         def merge(nums1, nums2):
+             merged = []
+             i, j = 0, 0
+-            while i < len(nums1) or j < len(nums2):
++            while i < len(nums1) or len(nums2) > j:
+                 if i >= len(nums1):
+                     merged.append(nums2[j])
+                     j += 1
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/9213e3e16479b9d340e7e0c9846d895e01f6fa2d87edca9b1dcaab5037cb45fb/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+                 if i >= len(nums1):
+                     merged.append(nums2[j])
+                     j += 1
+-                elif j >= len(nums2):
++                elif len(nums2) <= j:
+                     merged.append(nums1[i])
+                     i += 1
+                 elif nums1[i:] > nums2[j:]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/9213e3e16479b9d340e7e0c9846d895e01f6fa2d87edca9b1dcaab5037cb45fb/with_tabs.py

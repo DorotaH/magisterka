@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/7ba01d0f14bb2cf2a8e9f6fd1375d12a0d93b9488fa5e7751106c14aa57666a4/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+ 			a[i].y = -a[i].y
+ 	L, R = -1e8, 1e8
+ 	for _ in range(120):
+-		x1 = L + (R - L) / 3
++		x1 = (R - L) / 3 + L
+ 		x2 = R - (R - L) / 3
+ 		if get(x2, a, n) > get(x1, a, n):
+ 			R = x2
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/7ba01d0f14bb2cf2a8e9f6fd1375d12a0d93b9488fa5e7751106c14aa57666a4/with_tabs.py

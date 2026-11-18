@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/3757/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+ 
+ def get_cnt(res):
+     n = 1 + math.floor(math.sqrt(2 * res))
+-    return n if n * (n-1) / 2 == res else -1
++    return n if (n-1) * n / 2 == res else -1
+         
+ def calc():
+     cnt = list(map(int, input().split()))
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/3757/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+ 
+     ans = ['0'] * (a + b)
+     i = 0
+-    while b > 0:
++    while 0 < b:
+         while cnt[1] >= b:
+             i = i + 1
+             cnt[1] -= b
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/3757/acw_steps/with_tabs.py

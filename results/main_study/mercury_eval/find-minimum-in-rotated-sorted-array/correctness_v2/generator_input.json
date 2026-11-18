@@ -1,0 +1,19 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    unique_nums = random.sample(range(-5000, 5000), random.randint(1, 100))\n    sorted_nums = sorted(unique_nums)\n    \n    n = random.randint(0, len(sorted_nums))\n    \n    rotated_nums = sorted_nums[n:] + sorted_nums[:n-1]\n    return rotated_nums",
+  "seed": 2014228946897792703,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          3,
+          4,
+          5,
+          1,
+          2
+        ]
+      ],
+      "expected": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/d18f7b5fd9e86bd43c69c5f21d37fecfe3ae4b3462365445572fa4ffc2d0a7a7/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+         if h > 0:
+             if h + b > bn:
+                 h = bn - b
+-            r -= h * (k - i)
++            r -= (k - i) * h
+             b = h + b
+         seq[i] = b
+     return None if r != 0 else [i + b + 1 for i, b in enumerate(seq)]
+

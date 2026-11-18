@@ -1,0 +1,22 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/86b7c7b92ddfdf9b2d5162e65ed12abca85167e25473f4579ed00f3ac3e9d836/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+         # s.t. Sa + Sb = dis
+         #      2 * Sa + Sb <= V
+ 
+-        if dis > V:
++        if V < dis:
+             # Sa <= V - dis < 0
+             return False
+         else:
+@@ -33,7 +33,7 @@
+             # Sb = t - dis
+             t += max(3 * dis - V, dis)
+ 
+-        if t > T:
++        if T < t:
+             return False
+ 
+         prev = cur
+

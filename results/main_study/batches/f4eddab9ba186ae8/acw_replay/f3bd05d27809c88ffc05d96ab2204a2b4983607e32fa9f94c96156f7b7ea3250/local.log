@@ -1,0 +1,21 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/f3bd05d27809c88ffc05d96ab2204a2b4983607e32fa9f94c96156f7b7ea3250/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,13 +15,13 @@
+             if n in complete:
+                 for diff in complete[n]:
+                     num_slices += complete[n][diff]
+-                    complete[n + diff][diff] += complete[n][diff]
++                    complete[diff + n][diff] += complete[n][diff]
+             if n in partial:
+                 for diff in partial[n]:
+                     num_slices += partial[n][diff]
+-                    complete[n + diff][diff] += partial[n][diff]
++                    complete[diff + n][diff] += partial[n][diff]
+             for j in range(i):
+                 diff = n - nums[j]
+-                partial[n + diff][diff] += 1
++                partial[diff + n][diff] += 1
+         
+         return num_slices
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/f3bd05d27809c88ffc05d96ab2204a2b4983607e32fa9f94c96156f7b7ea3250/with_tabs.py

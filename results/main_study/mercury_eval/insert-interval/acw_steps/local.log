@@ -1,0 +1,23 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/insert-interval/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,7 +4,7 @@
+ 
+         tmp = []        
+         
+-        while intervals and intervals[-1][0] > newInterval[0]:
++        while intervals and newInterval[0] < intervals[-1][0]:
+             tmp.append(intervals.pop())
+         
+         tmp.append(newInterval)
+@@ -12,7 +12,7 @@
+             top = tmp.pop()
+             elem = top
+             if intervals:
+-                if intervals[-1][1] < top[0]:
++                if top[0] > intervals[-1][1]:
+                     elem = top
+                 else:
+                     old = intervals.pop()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/insert-interval/acw_steps/with_tabs.py

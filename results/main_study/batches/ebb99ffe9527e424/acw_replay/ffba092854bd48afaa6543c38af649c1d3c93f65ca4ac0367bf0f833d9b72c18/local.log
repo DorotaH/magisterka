@@ -1,0 +1,23 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/ffba092854bd48afaa6543c38af649c1d3c93f65ca4ac0367bf0f833d9b72c18/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+         ysum = np.sum(dataMat, axis=0)
+         sum = np.sum(dataMat)
+         Pe = float(ysum * xsum) / sum / sum
+-        P0 = float(P0 / sum * 1.0)
++        P0 = float(1.0 * P0 / sum)
+         return float((P0 - Pe) / (1 - Pe))
+ 
+     @staticmethod
+@@ -28,7 +28,7 @@
+                 sum += dataMat[i, j]
+                 temp += 1.0 * dataMat[i, j] ** 2
+             temp -= n
+-            temp /= (n - 1) * n
++            temp /= n * (n - 1)
+             P0 += temp
+         P0 = 1.0 * P0 / N
+         ysum = np.sum(dataMat, axis=0)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/ffba092854bd48afaa6543c38af649c1d3c93f65ca4ac0367bf0f833d9b72c18/with_tabs.py

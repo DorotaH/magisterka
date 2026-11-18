@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/d72a6d181fb7ad47b69e9600a5936d6c03fbd1f9fa29d251e81f70a0983e087c/without_tabs.py:
+--- Original
++++ Modified
+@@ -35,7 +35,7 @@
+ 
+     def is_full_with_one_more_email(self, size):
+         occupied_size = self.get_occupied_size()
+-        return occupied_size + size > self.capacity
++        return size + occupied_size > self.capacity
+         
+     def get_occupied_size(self):
+         return sum(email["size"] for email in self.inbox)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/d72a6d181fb7ad47b69e9600a5936d6c03fbd1f9fa29d251e81f70a0983e087c/with_tabs.py

@@ -1,0 +1,18 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/19cbbde85afb328bb78a1b966f6062c86f6c6dfb22c2b3aa2f76a5d7d55e3847/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,10 +3,10 @@
+ 		d = {10: 'a', 11: 'b', 12: 'c', 13: 'd', 14: 'e', 15: 'f'}
+ 		if num == 0:
+ 			return "0"
+-		if num < 0:
++		if 0 > num:
+ 			num = (1 << 32) + num
+ 		s = ""
+-		while num > 0:
++		while 0 < num:
+ 			rem = num % 16
+ 			s += str(rem) if rem < 10 else str(d[rem])
+ 			num = num // 16
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/19cbbde85afb328bb78a1b966f6062c86f6c6dfb22c2b3aa2f76a5d7d55e3847/with_tabs.py

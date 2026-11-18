@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/c886e5359526d243a8aae13855c2d0109fbdf1ea6851a0554c1d819c54a456bc/without_tabs.py:
+--- Original
++++ Modified
+@@ -99,7 +99,7 @@
+                 f_pizza = next(it)
+                 s_pizza = next(it)
+                 summary_cost = 0
+-                summary_cost += f_pizza[0] + s_pizza[0]
++                summary_cost += s_pizza[0] + f_pizza[0]
+                 ans = max(ans,
+                           (satisfied_users,
+                            -summary_cost,
+@@ -114,7 +114,7 @@
+                 f_pizza = next(it)
+                 s_pizza = next(it)
+                 summary_cost = 0
+-                summary_cost += f_pizza[0] + s_pizza[0]
++                summary_cost += s_pizza[0] + f_pizza[0]
+                 ans = max(ans,
+                           (satisfied_users,
+                            -summary_cost,
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/c886e5359526d243a8aae13855c2d0109fbdf1ea6851a0554c1d819c54a456bc/without_tabs.py:
+--- Original
++++ Modified
+@@ -59,7 +59,7 @@
+         bits = to_bits(a)
+         pizzas[bits].append((c, i + 1, bits))  # цена, номер, маска
+         pizzas[bits].sort()
+-        while len(pizzas[bits]) > 2:
++        while 2 < len(pizzas[bits]):
+             pizzas[bits].pop()
+     # pprint(pizzas)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/c886e5359526d243a8aae13855c2d0109fbdf1ea6851a0554c1d819c54a456bc/with_tabs.py

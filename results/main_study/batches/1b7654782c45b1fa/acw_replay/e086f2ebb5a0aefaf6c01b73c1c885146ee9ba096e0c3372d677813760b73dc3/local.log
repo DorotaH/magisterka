@@ -1,0 +1,84 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e086f2ebb5a0aefaf6c01b73c1c885146ee9ba096e0c3372d677813760b73dc3/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,31 +15,31 @@
+                 if i == n - 1:
+                     print(n * n - 1)
+                 else:
+-                    print(n + (n - 1) * (n - 2) + (n - 3) - i + 2, end=" ")
++                    print(n + (n - 2) * (n - 1) + (n - 3) - i + 2, end=" ")
+         elif row == n - 2:
+             for i in range(n):
+                 if i == 0:
+                     print(n * n - n + 2 + row, end=" ")
+                 elif i < n - 1:
+-                    print(n + (n - 1) * (row - 1) + i, end=" ")
++                    print(n + (row - 1) * (n - 1) + i, end=" ")
+                 else:
+-                    print(n + (n - 1) * (row - 1) + n - 1)
++                    print(n + (row - 1) * (n - 1) + n - 1)
+         elif row % 2 == 1:
+             for i in range(n):
+                 if i == 0:
+                     print(n * n - n + 2 + row - 1, end=" ")
+                 elif i < n - 1:
+-                    print(n + (n - 1) * (row - 1) + n - i, end=" ")
++                    print(n + (row - 1) * (n - 1) + n - i, end=" ")
+                 else:
+-                    print(n + (n - 1) * (row - 1) + 1)
++                    print(n + (row - 1) * (n - 1) + 1)
+         elif row % 2 == 0:
+             for i in range(n):
+                 if i == 0:
+                     print(n * n - n + 2 + row - 1, end=" ")
+                 elif i < n - 1:
+-                    print(n + (n - 1) * (row - 1) + i, end=" ")
++                    print(n + (row - 1) * (n - 1) + i, end=" ")
+                 else:
+-                    print(n + (n - 1) * (row - 1) + n - 1)
++                    print(n + (row - 1) * (n - 1) + n - 1)
+ elif n % 2 == 1:
+     for row in range(n):
+         if row == 0:
+@@ -59,22 +59,22 @@
+         elif row == n - 2:
+             for i in range(n):
+                 if i == 0 or i != 0 and i < n - 1:
+-                    print((n - 1) * row + n - i - 1, end=" ")
++                    print(row * (n - 1) + n - i - 1, end=" ")
+                 else:
+                     print(n * n)
+         elif row % 2 == 1:
+             for i in range(n):
+                 if i == 0:
+-                    print((n - 1) * row + n - i - 1, end=" ")
++                    print(row * (n - 1) + n - i - 1, end=" ")
+                 elif i < n - 1:
+-                    print((n - 1) * row + n - i - 1, end=" ")
++                    print(row * (n - 1) + n - i - 1, end=" ")
+                 else:
+                     print(n * n - n + row + 1)
+         elif row % 2 == 0:
+             for i in range(n):
+                 if i == 0:
+-                    print((n - 1) * row + i + 1, end=" ")
++                    print(row * (n - 1) + i + 1, end=" ")
+                 elif i < n - 1:
+-                    print((n - 1) * row + i + 1, end=" ")
++                    print(row * (n - 1) + i + 1, end=" ")
+                 else:
+                     print(n * n - n + row + 1)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e086f2ebb5a0aefaf6c01b73c1c885146ee9ba096e0c3372d677813760b73dc3/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ n = input()
+ n = int(n)
+-if n <= 2:
++if 2 >= n:
+     print(-1)
+ elif n % 2 == 0:
+     for row in range(n):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e086f2ebb5a0aefaf6c01b73c1c885146ee9ba096e0c3372d677813760b73dc3/with_tabs.py

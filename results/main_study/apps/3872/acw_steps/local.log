@@ -1,0 +1,23 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/3872/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,12 +8,12 @@
+         k = k // 2
+ 
+     while k != n:
+-        pairs = n // (k * 2)
++        pairs = n // (2 * k)
+         for i in range(0, pairs * 2, 2):
+-            if a[k * i:k * (i + 1)] > a[k * (i + 1):k * (i + 2)]:
+-                a[k * i:k * (i + 1)], a[k * (i + 1):k * (i + 2)] = a[k * (i + 1):k * (i + 2)], a[k * i:k * (i + 1)]
+-            if b[k * i:k * (i + 1)] > b[k * (i + 1):k * (i + 2)]:
+-                b[k * i:k * (i + 1)], b[k * (i + 1):k * (i + 2)] = b[k * (i + 1):k * (i + 2)], b[k * i:k * (i + 1)]
++            if a[i * k:k * (i + 1)] > a[k * (i + 1):k * (i + 2)]:
++                a[i * k:k * (i + 1)], a[k * (i + 1):k * (i + 2)] = a[k * (i + 1):k * (i + 2)], a[i * k:k * (i + 1)]
++            if b[i * k:k * (i + 1)] > b[k * (i + 1):k * (i + 2)]:
++                b[i * k:k * (i + 1)], b[k * (i + 1):k * (i + 2)] = b[k * (i + 1):k * (i + 2)], b[i * k:k * (i + 1)]
+         k *= 2
+ 
+     if a == b:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/3872/acw_steps/with_tabs.py

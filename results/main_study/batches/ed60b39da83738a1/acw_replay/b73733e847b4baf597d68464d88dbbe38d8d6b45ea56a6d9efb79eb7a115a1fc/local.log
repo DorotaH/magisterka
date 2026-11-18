@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/b73733e847b4baf597d68464d88dbbe38d8d6b45ea56a6d9efb79eb7a115a1fc/without_tabs.py:
+--- Original
++++ Modified
+@@ -34,7 +34,7 @@
+ 
+         # Time O(log(E + V)), Space O(1)
+         for i, p in enumerate(row):
+-            partner = p - 1 if p & 1 else p + 1
++            partner = p - 1 if p & 1 else 1 + p
+             uf.union(i // 2, loc[partner] // 2)
+ 
+         freqMap = defaultdict(int)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/b73733e847b4baf597d68464d88dbbe38d8d6b45ea56a6d9efb79eb7a115a1fc/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ class UnionFind:
+     def __init__(self, n):
+         self.par = list(range(n))
+-        self.rank = [1] * n
++        self.rank = n * [1]
+ 
+     def find(self, p):
+         if p != self.par[p]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/b73733e847b4baf597d68464d88dbbe38d8d6b45ea56a6d9efb79eb7a115a1fc/with_tabs.py

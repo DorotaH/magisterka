@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/0002903846552d124f6a82a341c0e15b3e1f7bf80304dacd4d9b78d27f3b2a92/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+     b[ind] = 0
+     for j in range(14):
+         b[j] += k
+-    for j in range(ind + 1, ind + x + 1):
++    for j in range(1 + ind, ind + x + 1):
+         j1 = j % 14
+         b[j1] += 1
+     return sum(b[j] for j in range(14) if b[j] % 2 == 0)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/0002903846552d124f6a82a341c0e15b3e1f7bf80304dacd4d9b78d27f3b2a92/with_tabs.py

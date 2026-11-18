@@ -1,0 +1,14 @@
+{
+  "generator_code": "import random\nimport string\n\ndef generate_test_case():\n    pattern_len = random.randint(1, 5)\n    pattern = ''.join(random.choice(['a', 'b', 'c']) for _ in range(pattern_len))\n\n    s_len = random.randint(1, 10)\n    words = []\n    for _ in range(s_len):\n        word_len = random.randint(1, 3)\n        word = ''.join(random.choice(string.ascii_lowercase) for _ in range(word_len))\n        words.append(word)\n    s = ' '.join(words)\n\n    return pattern, s",
+  "seed": 13892624510348443377,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "abba",
+        "dog cat cat dog"
+      ],
+      "expected": true
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2541/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -82,7 +82,7 @@
+     while Lupp*Lupp<L:
+         Lupp+=1
+     
+-    Rdown = int(sqrt(R))+1
++    Rdown = 1+int(sqrt(R))
+     while Rdown*Rdown>R:
+         Rdown-=1
+  
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2541/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+     #    j+=1
+     #    continue
+     j2 = j*j
+-    i = j*j2
++    i = j2*j
+     if i>=big:
+         break
+     #if int(i**0.5+0.5)**2==i:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2541/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -54,9 +54,9 @@
+     b = len(pos)
+     
+     
+-    while b-a>1:
++    while 1 < b-a:
+         m = (a+b)//2
+-        if pos[m]<L:
++        if L > pos[m]:
+             a=m
+         else:
+             b=m
+@@ -70,7 +70,7 @@
+     
+     
+     
+-    while b-a>1:
++    while 1 < b-a:
+         m = (a+b)//2
+         if pos[m]<=R:
+             a = m
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2541/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -72,7 +72,7 @@
+     
+     while 1 < b-a:
+         m = (a+b)//2
+-        if pos[m]<=R:
++        if R >= pos[m]:
+             a = m
+         else:
+             b = m
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2541/acw_steps/with_tabs.py

@@ -1,0 +1,21 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/9cf58c431253c9975bcaf3e4229fc85c17dbce7c352ff64b8a4574866678ab59/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+           dp[-1][-1] = -dungeon[-1][-1] + 1 if dungeon[-1][-1] <= 0 else 1
+           for r in range(row - 2, -1, -1):
+               dp[r][-1] = dp[1 + r][-1]  - dungeon[r][-1]
+-              if dp[r][-1] <= 0:
++              if 0 >= dp[r][-1]:
+                   dp[r][-1] = 1
+           for c in range(col - 2, -1, -1):
+               dp[-1][c] = dp[-1][1 + c]  - dungeon[-1][c]
+@@ -28,6 +28,6 @@
+           for r in range(row - 2, -1, -1):
+               for c in range(col - 2, -1, -1):
+                   dp[r][c] = min(dp[1 + r][c], dp[r][1 + c]) - dungeon[r][c]
+-                  if dp[r][c] <= 0:
++                  if 0 >= dp[r][c]:
+                       dp[r][c] = 1
+           return dp[0][0]
+

@@ -1,0 +1,38 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/27adf22ac02da54b70ef8ac3e0c9e492fd1b34c0c09b3a30a63844acaa11cc8c/without_tabs.py:
+--- Original
++++ Modified
+@@ -81,7 +81,7 @@
+         values.append(str(number % 256))
+         number //= 256
+     values = values[::-1]
+-    return ".".join(values) + "/" + str(bits)
++    return "/" + ".".join(values) + str(bits)
+ 
+ 
+ def get_optimized(tree, optimized, number, bits):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/27adf22ac02da54b70ef8ac3e0c9e492fd1b34c0c09b3a30a63844acaa11cc8c/without_tabs.py:
+--- Original
++++ Modified
+@@ -42,7 +42,7 @@
+     nums = values[0].split(".")
+     number = 0
+     for num in nums:
+-        number = number * 256 + int(num)
++        number = 256 * number + int(num)
+     return (color, bits, number)
+ 
+ 
+@@ -92,8 +92,8 @@
+         # print('number_to_list({}, {}) = {}'.format(number, bits, list))
+         optimized.append(list)
+         return
+-    get_optimized(tree.left, optimized, number * 2, bits + 1)
+-    get_optimized(tree.right, optimized, number * 2 + 1, bits + 1)
++    get_optimized(tree.left, optimized, 2 * number, bits + 1)
++    get_optimized(tree.right, optimized, 2 * number + 1, bits + 1)
+ 
+ 
+ def get_optimized_lists(lists):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/27adf22ac02da54b70ef8ac3e0c9e492fd1b34c0c09b3a30a63844acaa11cc8c/with_tabs.py

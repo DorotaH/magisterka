@@ -1,0 +1,30 @@
+class  Solution:
+    def  isPalindrome(self, s: str) -> bool:
+        # create new string with only alnum
+        new=''
+        for char in s:
+            if (char.isalnum()):
+                new+=char.lower()
+
+        # reverse string and compare
+        # if new == new[::-1]:
+            # return True
+        # return False
+
+        # return true is string is empty
+        if (new == ''):
+            return  True
+
+        # Loop through array
+        j=len(new)-1
+        for i in range(len(new)):
+            print('---------')
+            print(len(new))
+            print(i)
+            print(j-i)
+
+            # compare char, if not the same, return false
+            if new[j-i] != new[i]:
+                return  False
+            if ((0 != len(new) % 2 and i==j-i) or (0 == len(new) % 2 and i==j-i-1)):
+                return  True

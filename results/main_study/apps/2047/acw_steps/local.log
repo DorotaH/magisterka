@@ -1,0 +1,40 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2047/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+         if b[i] >= 0:
+             b[fa] += b[i]
+         else:
+-            b[fa] += b[i] * c[i][1]
++            b[fa] += c[i][1] * b[i]
+             if b[fa] < -1e17:
+                 print('NO')
+                 return 0
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2047/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+             b[fa] += b[i]
+         else:
+             b[fa] += c[i][1] * b[i]
+-            if b[fa] < -1e17:
++            if -1e17 > b[fa]:
+                 print('NO')
+                 return 0
+     # for x in b:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2047/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+     for i in range(n - 1, 0, -1):
+         # print(i)
+         fa = c[i][0] - 1
+-        if b[i] >= 0:
++        if 0 <= b[i]:
+             b[fa] += b[i]
+         else:
+             b[fa] += c[i][1] * b[i]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2047/acw_steps/with_tabs.py

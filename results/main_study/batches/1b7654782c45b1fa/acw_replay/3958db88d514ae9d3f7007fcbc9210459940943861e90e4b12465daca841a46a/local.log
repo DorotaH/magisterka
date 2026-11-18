@@ -1,0 +1,51 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/3958db88d514ae9d3f7007fcbc9210459940943861e90e4b12465daca841a46a/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+ i = 0
+ while i < N:
+     j = i
+-    while j < N and A[j] > L:
++    while N > j and L < A[j]:
+         j += 1
+     if i < j:
+         ans += 1
+@@ -29,19 +29,19 @@
+         prev = A[p - 1]
+         A[p - 1] += d
+         if prev <= L < A[p - 1]:
+-            if p - 2 >= 0 and p < N:
+-                if A[p - 2] > L and A[p] > L:
++            if p - 2 >= 0 and N > p:
++                if L < A[p - 2] and A[p] > L:
+                     ans -= 1
+                 elif A[p - 2] <= L and A[p] <= L:
+                     ans += 1
+                 else:
+                     pass
+             elif p - 2 >= 0:
+-                if A[p - 2] > L:
++                if L < A[p - 2]:
+                     pass
+                 else:
+                     ans += 1
+-            elif p < N:
++            elif N > p:
+                 if A[p] > L:
+                     pass
+                 else:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/3958db88d514ae9d3f7007fcbc9210459940943861e90e4b12465daca841a46a/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+             if p - 2 >= 0 and N > p:
+                 if L < A[p - 2] and A[p] > L:
+                     ans -= 1
+-                elif A[p - 2] <= L and A[p] <= L:
++                elif L >= A[p - 2] and A[p] <= L:
+                     ans += 1
+                 else:
+                     pass
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/3958db88d514ae9d3f7007fcbc9210459940943861e90e4b12465daca841a46a/with_tabs.py

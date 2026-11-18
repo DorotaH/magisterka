@@ -1,0 +1,89 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/37fcc3b7010511be9ba1e621140893a145318138de0531142a83f3a549e3e3bc/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,27 +14,27 @@
+     Q = [(r,c)]
+     for x,y in Q:
+         d = dist[x][y]
+-        if x < n - 1 and dist[x + 1][y] > d and lab[x + 1][y] == '.':
+-            dist[x + 1][y] = d
+-            Q.append((x + 1, y))
++        if x < n - 1 and dist[1 + x][y] > d and lab[1 + x][y] == '.':
++            dist[1 + x][y] = d
++            Q.append((1 + x, y))
+ 
+         if x > 0 and dist[x - 1][y] > d and lab[x - 1][y] == '.':
+             dist[x - 1][y] = d
+             Q.append((x - 1, y))
+ 
+         if y > 0 and dist[x][y - 1] > d and lab[x][y - 1] == '.':
+-            dist[x][y - 1] = d + 1
++            dist[x][y - 1] = 1 + d
+             Q.append((x, y - 1))
+ 
+         if y < m - 1 and dist[x][y + 1] > d and lab[x][y + 1] == '.':
+-            dist[x][y + 1] = d + 1
++            dist[x][y + 1] = 1 + d
+             Q.append((x, y + 1))
+     ans=0
+     for i in range(n):
+         for j in range(m):
+             d = dist[i][j]
+             if d < inf:
+-                right = (d + (j - c))//2
++                right = ((j - c) + d)//2
+                 left =  (d - (j - c))//2
+                 if right <= R and left <= L:
+                     ans+=1
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/37fcc3b7010511be9ba1e621140893a145318138de0531142a83f3a549e3e3bc/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,8 +7,8 @@
+     r -= 1
+     c -= 1
+ 
+-    inf = n*m+1
+-    dist = [[inf] * m for _ in range(n)]
++    inf = m*n+1
++    dist = [m * [inf] for _ in range(n)]
+     dist[r][c] = 0
+ 
+     Q = [(r,c)]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/37fcc3b7010511be9ba1e621140893a145318138de0531142a83f3a549e3e3bc/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,7 +18,7 @@
+             dist[1 + x][y] = d
+             Q.append((1 + x, y))
+ 
+-        if x > 0 and dist[x - 1][y] > d and lab[x - 1][y] == '.':
++        if 0 < x and dist[x - 1][y] > d and lab[x - 1][y] == '.':
+             dist[x - 1][y] = d
+             Q.append((x - 1, y))
+ 
+@@ -33,7 +33,7 @@
+     for i in range(n):
+         for j in range(m):
+             d = dist[i][j]
+-            if d < inf:
++            if inf > d:
+                 right = ((j - c) + d)//2
+                 left =  (d - (j - c))//2
+                 if right <= R and left <= L:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/37fcc3b7010511be9ba1e621140893a145318138de0531142a83f3a549e3e3bc/without_tabs.py:
+--- Original
++++ Modified
+@@ -36,7 +36,7 @@
+             if inf > d:
+                 right = ((j - c) + d)//2
+                 left =  (d - (j - c))//2
+-                if right <= R and left <= L:
++                if R >= right and L >= left:
+                     ans+=1
+     print(ans)
+ main()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/37fcc3b7010511be9ba1e621140893a145318138de0531142a83f3a549e3e3bc/with_tabs.py

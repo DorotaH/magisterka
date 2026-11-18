@@ -1,0 +1,22 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    # Generate the length of the array based on the constraints\n    n = random.randint(2, 100)\n\n    a = random.randint(-500, 500)\n    target = random.randint(-500, 500)\n    b = target - a\n    \n    exclusive = set([a, b])\n    numbers = [a, b]\n    \n    for _ in range(n):\n        select = random.randint(-500, 500)\n        if select not in exclusive:\n            numbers.append(select)\n            exclusive.add(target-select)\n            exclusive.add(select)\n\n    return sorted(numbers), target",
+  "seed": 18256019852803643504,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          2,
+          7,
+          11,
+          15
+        ],
+        9
+      ],
+      "expected": [
+        1,
+        2
+      ]
+    }
+  ]
+}

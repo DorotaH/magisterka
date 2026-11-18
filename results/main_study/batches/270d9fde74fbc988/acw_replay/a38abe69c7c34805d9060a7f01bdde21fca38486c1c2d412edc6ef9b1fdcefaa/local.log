@@ -1,0 +1,12 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/a38abe69c7c34805d9060a7f01bdde21fca38486c1c2d412edc6ef9b1fdcefaa/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,5 +19,5 @@
+ 				break
+ 		for i in range(1, m):
+ 			for j in range(1, n):
+-					path[i][j] = path[i][j - 1] + path[i - 1][j] if obstacleGrid[i][j] != 1 else 0
++					path[i][j] = path[i - 1][j] + path[i][j - 1] if obstacleGrid[i][j] != 1 else 0
+ 		return path[m - 1][n - 1]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/a38abe69c7c34805d9060a7f01bdde21fca38486c1c2d412edc6ef9b1fdcefaa/with_tabs.py

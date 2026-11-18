@@ -1,0 +1,133 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/4e4331d70a2a6150aaa6df40a9eeb036b3d247a6cf8f539e0ccff72ec99aff01/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+             _fen_tree = self._fen_tree
+             while index < len(_fen_tree):
+                 _fen_tree[index] += value
+-                index |= index + 1
++                index |= 1 + index
+ 
+     def _fen_query(self, end):
+         """Return `sum(_fen_tree[:end])`."""
+@@ -99,7 +99,7 @@
+         _list = _lists[pos]
+         lo, idx = -1, len(_list)
+         while lo + 1 < idx:
+-            mi = (lo + idx) >> 1
++            mi = (idx + lo) >> 1
+             if value <= _list[mi]:
+                 idx = mi
+             else:
+@@ -117,7 +117,7 @@
+ 
+         pos, hi = 0, len(_lists)
+         while pos + 1 < hi:
+-            mi = (pos + hi) >> 1
++            mi = (hi + pos) >> 1
+             if value < _mins[mi]:
+                 hi = mi
+             else:
+@@ -126,7 +126,7 @@
+         _list = _lists[pos]
+         lo, idx = -1, len(_list)
+         while lo + 1 < idx:
+-            mi = (lo + idx) >> 1
++            mi = (idx + lo) >> 1
+             if value < _list[mi]:
+                 idx = mi
+             else:
+@@ -187,12 +187,12 @@
+     def bisect_left(self, value):
+         """Return the first index to insert `value` in the sorted list."""
+         pos, idx = self._loc_left(value)
+-        return self._fen_query(pos) + idx
++        return idx + self._fen_query(pos)
+ 
+     def bisect_right(self, value):
+         """Return the last index to insert `value` in the sorted list."""
+         pos, idx = self._loc_right(value)
+-        return self._fen_query(pos) + idx
++        return idx + self._fen_query(pos)
+ 
+     def count(self, value):
+         """Return number of occurrences of `value` in the sorted list."""
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/4e4331d70a2a6150aaa6df40a9eeb036b3d247a6cf8f539e0ccff72ec99aff01/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+         """Update `fen_tree[index] += value`."""
+         if not self._rebuild:
+             _fen_tree = self._fen_tree
+-            while index < len(_fen_tree):
++            while len(_fen_tree) > index:
+                 _fen_tree[index] += value
+                 index |= 1 + index
+ 
+@@ -179,7 +179,7 @@
+ 
+     def pop(self, index=-1):
+         """Remove and return value at `index` in sorted list."""
+-        pos, idx = self._fen_findkth(self._len + index if index < 0 else index)
++        pos, idx = self._fen_findkth(self._len + index if 0 > index else index)
+         value = self._lists[pos][idx]
+         self._delete(pos, idx)
+         return value
+@@ -204,12 +204,12 @@
+ 
+     def __getitem__(self, index):
+         """Lookup value at `index` in sorted list."""
+-        pos, idx = self._fen_findkth(self._len + index if index < 0 else index)
++        pos, idx = self._fen_findkth(self._len + index if 0 > index else index)
+         return self._lists[pos][idx]
+ 
+     def __delitem__(self, index):
+         """Remove value at `index` from sorted list."""
+-        pos, idx = self._fen_findkth(self._len + index if index < 0 else index)
++        pos, idx = self._fen_findkth(self._len + index if 0 > index else index)
+         self._delete(pos, idx)
+ 
+     def __contains__(self, value):
+@@ -241,7 +241,7 @@
+ 
+ out = []
+ def ret(p, gaps):
+-    if len(p) > 1:
++    if 1 < len(p):
+         out.append(p[len(p) - 1] - p[0] + gaps[0])
+     else:
+         out.append(0)
+@@ -250,7 +250,7 @@
+ for _ in range(q):
+     t, x = list(map(int, input().split()))
+     if t == 1:
+-        if len(p) > 0:
++        if 0 < len(p):
+             ind = p.bisect_left(x)
+             if ind == 0:
+                 gaps.add(x - p[0])
+@@ -263,7 +263,7 @@
+         p.add(x)
+     else:
+         p.remove(x)
+-        if len(p) > 0:
++        if 0 < len(p):
+             ind = p.bisect_left(x)
+             if ind == 0:
+                 gaps.remove(x - p[0])
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/4e4331d70a2a6150aaa6df40a9eeb036b3d247a6cf8f539e0ccff72ec99aff01/without_tabs.py:
+--- Original
++++ Modified
+@@ -53,7 +53,7 @@
+         idx = -1
+         for d in reversed(list(range(len(_fen_tree).bit_length()))):
+             right_idx = idx + (1 << d)
+-            if right_idx < len(_fen_tree) and k >= _fen_tree[right_idx]:
++            if right_idx < len(_fen_tree) and _fen_tree[right_idx] <= k:
+                 idx = right_idx
+                 k -= _fen_tree[idx]
+         return idx + 1, k
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/4e4331d70a2a6150aaa6df40a9eeb036b3d247a6cf8f539e0ccff72ec99aff01/with_tabs.py

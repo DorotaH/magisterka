@@ -1,0 +1,30 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/e68184b32878c993f0015f5e7847105b729eb5d95d4e57d630f801ac2d898958/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+     # zc.append(countB(zk))
+     op=2001
+     for j in range(n-k+1):
+-        b=a[j:j+k]
++        b=a[j:k+j]
+         # print(len(b),xc,zc)
+         # bc=[]
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/e68184b32878c993f0015f5e7847105b729eb5d95d4e57d630f801ac2d898958/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,9 +12,9 @@
+            for i in ip)
+ # sys.stdin.readline()
+ t=int(sys.stdin.readline())
+-x='RGB'*680
++x=680*'RGB'
+ y='GBR'*680
+-z='BRG'*680
++z=680*'BRG'
+ for _ in range(t):
+     n,k=list(map(int,sys.stdin.readline().strip().split()))
+     a=sys.stdin.readline().strip()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/e68184b32878c993f0015f5e7847105b729eb5d95d4e57d630f801ac2d898958/with_tabs.py

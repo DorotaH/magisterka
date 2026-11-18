@@ -1,0 +1,48 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/d8ab071c4f20544c518dbad51c67a44396cf9bc99eb0c0cb484450441d8d3ce1/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+         inv_fac[i] = inv_fac[i + 1] * (i + 1) % mod
+     D = int(input())
+     A = []
+-    for i in range(2, int(D**0.5) + 1):
++    for i in range(2, 1 + int(D**0.5)):
+         c = 0
+         while D % i == 0:
+             D //= i
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/d8ab071c4f20544c518dbad51c67a44396cf9bc99eb0c0cb484450441d8d3ce1/without_tabs.py:
+--- Original
++++ Modified
+@@ -43,13 +43,13 @@
+         s2 = 0
+         for i in range(l):
+             if l3[i] >= 0:
+-                ans1 = ans1 * inv_fac[l3[i]] % mod
++                ans1 = inv_fac[l3[i]] * ans1 % mod
+                 s1 += l3[i]
+             else:
+-                ans2 = ans2 * inv_fac[-l3[i]] % mod
++                ans2 = inv_fac[-l3[i]] * ans2 % mod
+                 s2 -= l3[i]
+         ans1 = ans1 * fac[s1] % mod
+-        ans2 = ans2 * fac[s2] % mod
++        ans2 = fac[s2] * ans2 % mod
+         print(ans1 * ans2 % mod)
+ 
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/d8ab071c4f20544c518dbad51c67a44396cf9bc99eb0c0cb484450441d8d3ce1/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+             c += 1
+         if c != 0:
+             A.append(i)
+-    if D >= 2:
++    if 2 <= D:
+         A.append(D)
+     l = len(A)
+     q = int(input())
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/d8ab071c4f20544c518dbad51c67a44396cf9bc99eb0c0cb484450441d8d3ce1/with_tabs.py

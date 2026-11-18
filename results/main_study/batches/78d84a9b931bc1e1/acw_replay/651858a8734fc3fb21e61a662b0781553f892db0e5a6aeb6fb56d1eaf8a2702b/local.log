@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/651858a8734fc3fb21e61a662b0781553f892db0e5a6aeb6fb56d1eaf8a2702b/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+     # min(a+b) <=> max(b)
+     # b(p+1) <= i
+     # b == i (mod p)
+-    max_b = (i // (p + 1))
++    max_b = (i // (1 + p))
+     b = i % p + ((max_b - i % p) // p) * p
+     # cur = a + b
+     cur = (i - b) // p
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/651858a8734fc3fb21e61a662b0781553f892db0e5a6aeb6fb56d1eaf8a2702b/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+     cur = (i - b) // p
+ 
+     #print(cur - b, b, p)
+-    return None if b < 0 else cur
++    return None if 0 > b else cur
+ 
+ def sets_num(p):
+     
+@@ -41,7 +41,7 @@
+         if sets_num(p):
+             print(sets_num(p))
+             break
+-        if (p > 0) and sets_num(p - 1):
++        if (0 < p) and sets_num(p - 1):
+             print(sets_num(p - 1))
+             break
+     elif sets_num(p):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/651858a8734fc3fb21e61a662b0781553f892db0e5a6aeb6fb56d1eaf8a2702b/with_tabs.py

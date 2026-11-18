@@ -1,0 +1,32 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/5af5dbf04d5d8fb1c4c518e71245db22c8a74d8010ded54054b52b17afda209a/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,10 +14,10 @@
+ for i in range(size):
+     for j in range(n - 1):
+         x1 = a[i][j][0]
+-        x2 = a[i][j + 1][0]
++        x2 = a[i][1 + j][0]
+         y1 = a[i][j][1]
+-        y2 = a[i][j + 1][1]
++        y2 = a[i][1 + j][1]
+         x_total = (x1 - x2) ** 2
+         y_total = (y1 - y2) ** 2
+-        total += (x_total + y_total) ** 0.5
++        total += (y_total + x_total) ** 0.5
+ print(total / size)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/5af5dbf04d5d8fb1c4c518e71245db22c8a74d8010ded54054b52b17afda209a/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ 
+ 
+ def factorization(n):
+-    return 1 if n == 1 else n * factorization(n - 1)
++    return 1 if n == 1 else factorization(n - 1) * n
+ 
+ 
+ size = factorization(n)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/5af5dbf04d5d8fb1c4c518e71245db22c8a74d8010ded54054b52b17afda209a/with_tabs.py

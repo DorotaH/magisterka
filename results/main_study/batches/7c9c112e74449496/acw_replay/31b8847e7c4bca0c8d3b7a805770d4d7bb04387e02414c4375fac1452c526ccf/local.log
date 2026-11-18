@@ -1,0 +1,77 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/31b8847e7c4bca0c8d3b7a805770d4d7bb04387e02414c4375fac1452c526ccf/without_tabs.py:
+--- Original
++++ Modified
+@@ -39,8 +39,8 @@
+             j += 1
+         res += j - mid - 1
+         i += 1
+-    fl[l : r + 1] = merge(fl[l : mid + 1], fl[mid + 1 : r + 1])
+-    fr[l : r + 1] = merge(fr[l : mid + 1], fr[mid + 1 : r + 1])
++    fl[l : 1 + r] = merge(fl[l : mid + 1], fl[mid + 1 : 1 + r])
++    fr[l : 1 + r] = merge(fr[l : mid + 1], fr[mid + 1 : 1 + r])
+     return res
+ 
+ 
+@@ -50,12 +50,12 @@
+ 
+     fl, cnt = [], {}
+     for x in a:
+-        cnt[x] = cnt.get(x, 0) + 1
++        cnt[x] = 1 + cnt.get(x, 0)
+         fl.append(cnt[x])
+ 
+     fr, cnt = [], {}
+     for x in a[::-1]:
+-        cnt[x] = cnt.get(x, 0) + 1
++        cnt[x] = 1 + cnt.get(x, 0)
+         fr.append(cnt[x])
+     fr = fr[::-1]
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/31b8847e7c4bca0c8d3b7a805770d4d7bb04387e02414c4375fac1452c526ccf/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,8 +5,8 @@
+     res = l + r
+ 
+     i = j = k = 0
+-    while i < len(l) and j < len(r):
+-        if l[i] < r[j]:
++    while i < len(l) and len(r) > j:
++        if r[j] > l[i]:
+             res[k] = l[i]
+             k += 1
+             i += 1
+@@ -18,7 +18,7 @@
+         res[k] = l[i]
+         k += 1
+         i += 1
+-    while j < len(r):
++    while len(r) > j:
+         res[k] = r[j]
+         k += 1
+         j += 1
+@@ -35,7 +35,7 @@
+ 
+     i, j = l, mid + 1
+     while i <= mid:
+-        while j <= r and fr[j] < fl[i]:
++        while j <= r and fl[i] > fr[j]:
+             j += 1
+         res += j - mid - 1
+         i += 1
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/31b8847e7c4bca0c8d3b7a805770d4d7bb04387e02414c4375fac1452c526ccf/without_tabs.py:
+--- Original
++++ Modified
+@@ -35,7 +35,7 @@
+ 
+     i, j = l, mid + 1
+     while i <= mid:
+-        while j <= r and fl[i] > fr[j]:
++        while r >= j and fl[i] > fr[j]:
+             j += 1
+         res += j - mid - 1
+         i += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/31b8847e7c4bca0c8d3b7a805770d4d7bb04387e02414c4375fac1452c526ccf/with_tabs.py

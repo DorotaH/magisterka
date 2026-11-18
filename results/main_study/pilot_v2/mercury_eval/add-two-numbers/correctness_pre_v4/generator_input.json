@@ -1,0 +1,26 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    h1 = random.randint(0,9)\n    h2 = random.randint(0,9)\n\n    if h1:\n        l1 = [random.randint(0,9) for _ in range(random.randint(1, 99))] + [h1]\n    else:\n        l1 = [0]\n        \n    if h2:\n        l2 = [random.randint(0,9) for _ in range(random.randint(1, 99))] + [h2]\n    else:\n        l2 = [0]\n    \n    return l1, l2",
+  "seed": 10142899763931518657,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          5,
+          6,
+          4
+        ]
+      ],
+      "expected": [
+        7,
+        0,
+        8
+      ]
+    }
+  ]
+}

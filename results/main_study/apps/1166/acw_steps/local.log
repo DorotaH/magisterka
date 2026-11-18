@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1166/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+ 
+     n2idx = {a[i]: i for i in range(n)}
+ 
+-    f = [False] * (n+1)
++    f = [False] * (1+n)
+ 
+     for i in range(n, 0, -1):
+         idx_lg = n2idx[i]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1166/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+     for i in range(n, 0, -1):
+         idx_lg = n2idx[i]
+ 
+-        win_flag = any(a[j] > i and not f[a[j]] for j in range(idx_lg%i, n, i))
++        win_flag = any(i < a[j] and not f[a[j]] for j in range(idx_lg%i, n, i))
+         f[i] = win_flag
+ 
+     f = ''.join(['A' if f[a_i] else 'B' for a_i in a])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1166/acw_steps/with_tabs.py

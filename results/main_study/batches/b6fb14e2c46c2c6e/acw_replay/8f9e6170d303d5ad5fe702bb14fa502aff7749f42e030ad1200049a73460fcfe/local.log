@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/8f9e6170d303d5ad5fe702bb14fa502aff7749f42e030ad1200049a73460fcfe/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+         inv_fac[i] = inv_fac[i + 1] * (i + 1) % mod
+     D = int(input())
+     A = []
+-    for i in range(2, int(D**0.5) + 1):
++    for i in range(2, 1 + int(D**0.5)):
+         c = 0
+         while D % i == 0:
+             D //= i
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/8f9e6170d303d5ad5fe702bb14fa502aff7749f42e030ad1200049a73460fcfe/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+     N = 10**5 + 3
+     fac = [1] * (N + 1)
+     for i in range(1, N + 1):
+-        fac[i] = i * fac[i - 1] % mod
++        fac[i] = fac[i - 1] * i % mod
+     inv_fac = [1] * (N + 1)
+     inv_fac[N] = pow(fac[N], mod - 2, mod)
+     for i in range(N - 1, 0, -1):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/8f9e6170d303d5ad5fe702bb14fa502aff7749f42e030ad1200049a73460fcfe/with_tabs.py

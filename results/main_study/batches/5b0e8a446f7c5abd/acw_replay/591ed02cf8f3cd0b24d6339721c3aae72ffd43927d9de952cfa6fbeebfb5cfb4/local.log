@@ -1,0 +1,43 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/591ed02cf8f3cd0b24d6339721c3aae72ffd43927d9de952cfa6fbeebfb5cfb4/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,14 +6,14 @@
+         maxprod = 0
+         maxprod2 = 0
+         for i in nums:
+-            prod = prod * i
++            prod = i * prod
+             if prod > maxprod:
+                 maxprod = prod
+             if prod == 0:
+                 prod = 1
+         prod = 1
+         for i in range(len(nums) - 1, -1, -1):
+-            prod = prod * nums[i]
++            prod = nums[i] * prod
+             if prod > maxprod2:
+                 maxprod2 = prod
+             if prod == 0:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/591ed02cf8f3cd0b24d6339721c3aae72ffd43927d9de952cfa6fbeebfb5cfb4/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,14 +7,14 @@
+         maxprod2 = 0
+         for i in nums:
+             prod = i * prod
+-            if prod > maxprod:
++            if maxprod < prod:
+                 maxprod = prod
+             if prod == 0:
+                 prod = 1
+         prod = 1
+         for i in range(len(nums) - 1, -1, -1):
+             prod = nums[i] * prod
+-            if prod > maxprod2:
++            if maxprod2 < prod:
+                 maxprod2 = prod
+             if prod == 0:
+                 prod = 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/591ed02cf8f3cd0b24d6339721c3aae72ffd43927d9de952cfa6fbeebfb5cfb4/with_tabs.py

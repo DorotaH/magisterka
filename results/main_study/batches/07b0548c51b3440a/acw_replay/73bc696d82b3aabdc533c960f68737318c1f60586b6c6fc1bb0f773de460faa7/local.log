@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/73bc696d82b3aabdc533c960f68737318c1f60586b6c6fc1bb0f773de460faa7/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+             if i != j and mask & (1 << j):
+                 dp[mask][i] = max(
+                     dp[mask][i],
+-                    dp[mask - (1 << j)][i] * prob[i][j]
++                    prob[i][j] * dp[mask - (1 << j)][i]
+                     + dp[mask - (1 << i)][j] * prob[j][i],
+                 )
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/73bc696d82b3aabdc533c960f68737318c1f60586b6c6fc1bb0f773de460faa7/with_tabs.py

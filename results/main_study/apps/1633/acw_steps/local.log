@@ -1,0 +1,39 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1633/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,9 +19,9 @@
+             return i+1
+         if x > 0 and y < m-1 and board[x-1][y+1] and board[x-1][y] and board[x][y+1]:
+             return i+1
+-        if x < n-1 and y > 0 and board[x+1][y-1] and board[x+1][y] and board[x][y-1]:
++        if x < n-1 and y > 0 and board[1+x][y-1] and board[1+x][y] and board[x][y-1]:
+             return i+1
+-        if x < n-1 and y < m-1 and board[x+1][y+1] and board[x+1][y] and board[x][y+1]:
++        if x < n-1 and y < m-1 and board[1+x][y+1] and board[1+x][y] and board[x][y+1]:
+             return i+1
+     return 0
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1633/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,13 +15,13 @@
+         x -= 1
+         y -= 1
+         board[x][y] = 1
+-        if x > 0 and y > 0 and board[x-1][y-1] and board[x-1][y] and board[x][y-1]:
++        if 0 < x and y > 0 and board[x-1][y-1] and board[x-1][y] and board[x][y-1]:
+             return i+1
+-        if x > 0 and y < m-1 and board[x-1][y+1] and board[x-1][y] and board[x][y+1]:
++        if 0 < x and m-1 > y and board[x-1][y+1] and board[x-1][y] and board[x][y+1]:
+             return i+1
+-        if x < n-1 and y > 0 and board[1+x][y-1] and board[1+x][y] and board[x][y-1]:
++        if n-1 > x and y > 0 and board[1+x][y-1] and board[1+x][y] and board[x][y-1]:
+             return i+1
+-        if x < n-1 and y < m-1 and board[1+x][y+1] and board[1+x][y] and board[x][y+1]:
++        if n-1 > x and m-1 > y and board[1+x][y+1] and board[1+x][y] and board[x][y+1]:
+             return i+1
+     return 0
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1633/acw_steps/with_tabs.py

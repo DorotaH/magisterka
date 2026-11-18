@@ -1,0 +1,113 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/f16294676942395f90204779434754cb726c34f5b966b97a318c82f715ea26b9/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,48 +2,48 @@
+ 
+ sys.setrecursionlimit(10**7)
+ inf = 10**10
+-mod = 10**9 + 7
++mod = 7 + 10**9
+ 
+ 
+ def f():
+     n, m, k = list(map(int, input().split()))
+-    a = [[inf] * (m + 2)]
++    a = [[inf] * (2 + m)]
+     g = []
+     for _ in range(n):
+         a.append([inf] + list(input()) + [inf])
+         g.append([False] * m)
+-    a.append([[inf] * (m + 2)])
++    a.append([[inf] * (2 + m)])
+ 
+     c = 0
+-    for i in range(1, n + 1):
++    for i in range(1, 1 + n):
+         if a[i][1] == ".":
+             a[i][1] = -1
+         if a[i][-2] == ".":
+             a[i][-2] = -1
+-    for j in range(1, m + 1):
++    for j in range(1, 1 + m):
+         if a[1][j] == ".":
+             a[1][j] = -1
+         if a[-2][j] == ".":
+             a[-2][j] = -1
+ 
+     def ff(n1, n2):
+-        for i in range(1, n + 1):
+-            for j in range(1, m + 1):
++        for i in range(1, 1 + n):
++            for j in range(1, 1 + m):
+                 if a[i][j] == n1:
+                     a[i][j] = n2
+ 
+     ff("*", inf)
+ 
+-    for i in range(1, n + 1):
+-        for j in range(1, m + 1):
++    for i in range(1, 1 + n):
++        for j in range(1, 1 + m):
+             if a[i][j] == ".":
+                 mc = [inf]
+                 if a[i - 1][j] != ".":
+                     mc.append(a[i - 1][j])
+                 if a[i + 1][j] != ".":
+                     mc.append(a[i + 1][j])
+-                if a[i][j + 1] != ".":
+-                    mc.append(a[i][j + 1])
++                if a[i][1 + j] != ".":
++                    mc.append(a[i][1 + j])
+                 if a[i][j - 1] != ".":
+                     mc.append(a[i][j - 1])
+                 mm = min(mc)
+@@ -55,8 +55,8 @@
+                     a[i][j] = c
+                     c += 1
+     cnt = [0] * c
+-    for i in range(1, n + 1):
+-        for j in range(1, m + 1):
++    for i in range(1, 1 + n):
++        for j in range(1, 1 + m):
+             if -1 < a[i][j] < c:
+                 cnt[a[i][j]] += 1
+     cnt2 = [_ for _ in cnt if _ > 0]
+@@ -67,16 +67,16 @@
+         ind = cnt.index(mm)
+         cnt[ind] = 0
+         r += mm
+-        for i in range(1, n + 1):
+-            for j in range(1, m + 1):
++        for i in range(1, 1 + n):
++            for j in range(1, 1 + m):
+                 if a[i][j] == ind:
+                     a[i][j] = "*"
+ 
+     print(r)
+ 
+-    for i in range(1, n + 1):
++    for i in range(1, 1 + n):
+         s = ""
+-        for j in range(1, m + 1):
++        for j in range(1, 1 + m):
+             c = a[i][j]
+             if c == "*":
+                 s += c
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/f16294676942395f90204779434754cb726c34f5b966b97a318c82f715ea26b9/without_tabs.py:
+--- Original
++++ Modified
+@@ -47,9 +47,9 @@
+                 if a[i][j - 1] != ".":
+                     mc.append(a[i][j - 1])
+                 mm = min(mc)
+-                if mm < inf:
++                if inf > mm:
+                     a[i][j] = mm
+-                    for t in [_ for _ in mc if _ < inf and _ != mm]:
++                    for t in [_ for _ in mc if inf > _ and _ != mm]:
+                         ff(t, mm)
+                 else:
+                     a[i][j] = c
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/f16294676942395f90204779434754cb726c34f5b966b97a318c82f715ea26b9/with_tabs.py

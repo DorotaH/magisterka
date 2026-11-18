@@ -1,0 +1,42 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/668/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+     if total >= n - 1:
+         return
+     for i in range(len(A)):
+-        for j in range(total, min(total + A[i][0], len(A))):
++        for j in range(total, min(A[i][0] + total, len(A))):
+             print(A[i][1], A[j][1])
+             total += 1
+             if total >= n - 1:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/668/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,20 +15,20 @@
+         msg += a[0] - 1
+         total += a[0]
+         cnt += 1
+-        if total >= n:
++        if n <= total:
+             break
+ 
+     print(n - 1)
+     total = x
+     for j in range(min(x, len(A))):
+         print(1, A[j][1])
+-    if total >= n - 1:
++    if n - 1 <= total:
+         return
+     for i in range(len(A)):
+         for j in range(total, min(A[i][0] + total, len(A))):
+             print(A[i][1], A[j][1])
+             total += 1
+-            if total >= n - 1:
++            if n - 1 <= total:
+                 return
+ 
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/668/acw_steps/with_tabs.py

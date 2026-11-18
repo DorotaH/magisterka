@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/2aed111cd86a52137c19aaad7bc4f43f44ae12c2ee2f4a13e0805448d476c9de/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+             if fr < tt:
+                 tt = fr
+                 ii = i
+-        print(ii + 1)
++        print(1 + ii)
+ 
+ 
+ def __starting_point():
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/2aed111cd86a52137c19aaad7bc4f43f44ae12c2ee2f4a13e0805448d476c9de/without_tabs.py:
+--- Original
++++ Modified
+@@ -36,7 +36,7 @@
+         for i in range(n):
+             fr = self.next_int()
+             d = self.next_int()
+-            if fr < t:
++            if t > fr:
+                 fr += (t - fr + d - 1) // d * d
+             if fr < tt:
+                 tt = fr
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/2aed111cd86a52137c19aaad7bc4f43f44ae12c2ee2f4a13e0805448d476c9de/with_tabs.py

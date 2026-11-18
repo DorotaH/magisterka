@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/8be183248e7653d166ce411743d4082eece335ef91d47772c8c878799d00043c/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+           charsCopy = chars[i][::]
+           newBm = bm
+           for j in range(n):
+-            if (bm & (1 << j)) == 0 and charsCopy[ord(target[j])-ord('a')] > 0:
++            if (bm & (1 << j)) == 0 and 0 < charsCopy[ord(target[j])-ord('a')]:
+               charsCopy[ord(target[j])-ord('a')] -= 1
+               newBm |= 1 << j
+           
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/8be183248e7653d166ce411743d4082eece335ef91d47772c8c878799d00043c/with_tabs.py

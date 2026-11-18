@@ -1,0 +1,31 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/429a85d1055f0c2d5aaa3fddcaa1fc6580068759b3c36f31b918ec1991456382/without_tabs.py:
+--- Original
++++ Modified
+@@ -56,7 +56,7 @@
+         for i in range(1, 2 * n + 3):
+             res = subdp[i - 1]
+             for l, val in query[i]:
+-                test = subdp[l - 1] + val
++                test = val + subdp[l - 1]
+                 res = max(test, res)
+             subdp[i] = res
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/429a85d1055f0c2d5aaa3fddcaa1fc6580068759b3c36f31b918ec1991456382/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,10 +27,10 @@
+         for j in range(i + 1, 1 + n):
+             l, r = seg[i]
+             L, R = seg[j]
+-            if l >= L and r <= R:
++            if l >= L and R >= r:
+                 out[j].append(i)
+                 deg[i] += 1
+-            elif l <= L and r >= R:
++            elif l <= L and R <= r:
+                 out[i].append(j)
+                 deg[j] += 1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/429a85d1055f0c2d5aaa3fddcaa1fc6580068759b3c36f31b918ec1991456382/with_tabs.py

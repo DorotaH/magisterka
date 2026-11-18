@@ -1,0 +1,38 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1750/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,9 +15,9 @@
+     colored[v] = p = c
+     for u in arr[v]:
+         if not colored[u]:
+-            c = c + 1 if c < s else 1
++            c = 1 + c if c < s else 1
+             if c == d:
+-                c = c + 1 if c < s else 1
++                c = 1 + c if c < s else 1
+             dfs(u, c, p)
+ if s > 3:
+     dfs(0, 1, 0)
+@@ -28,7 +28,7 @@
+         i += 1
+     for j in range(n):
+         colored[i] = c
+-        c = c + 1 if c < s else 1
++        c = 1 + c if c < s else 1
+         if j < n - 1:
+             i = arr[i][0] if not colored[arr[i][0]] else arr[i][1]
+ print(" ".join(map(str, colored)))
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1750/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+             if c == d:
+                 c = 1 + c if c < s else 1
+             dfs(u, c, p)
+-if s > 3:
++if 3 < s:
+     dfs(0, 1, 0)
+ else:
+     i = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1750/acw_steps/with_tabs.py

@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/cf2a905c7da5e2f882a9fa9d52f6011eb607a54d33a5bc0a822e397a07f1db0f/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,7 +18,7 @@
+             lr[a].append(i)
+     minspan = float('inf')
+     for pos in list(lr.values()):
+-        if pos[-1] - pos[0] < minspan:
++        if minspan > pos[-1] - pos[0]:
+             minspan = pos[-1] - pos[0]
+             LR = (pos[0], pos[-1])
+     return LR
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/cf2a905c7da5e2f882a9fa9d52f6011eb607a54d33a5bc0a822e397a07f1db0f/with_tabs.py

@@ -1,0 +1,54 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/45802dfe11bf0fca02865fad5736f6e66247c430707f09c491e8100e17e4b9dd/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+ 
+ 
+ def nio(offset):
+-    return [int(x) + offset for x in input().split()]
++    return [offset + int(x) for x in input().split()]
+ 
+ 
+ def nia():
+@@ -33,7 +33,7 @@
+ def countMap(arr):
+     m = {}
+     for x in arr:
+-        m[x] = m.get(x,0) + 1
++        m[x] = 1 + m.get(x,0)
+     return m
+ 
+ def sortId(arr):
+@@ -49,7 +49,7 @@
+ cc = countMap(c)
+ cf = countMap(f)
+ 
+-n1 = n+1
++n1 = 1+n
+ k1 = k+1
+ 
+ nk1 = n*k+1
+@@ -58,7 +58,7 @@
+ 
+ for ni in range(1,n1):
+     for ki in range(1,nk1):
+-        mficount = min(k,ki) + 1        
++        mficount = 1 + min(k,ki)        
+         for kii in range(mficount):
+             # log(ni,ki, kii, dp[ni][ki], dp[ni-1][ki-kii] + h[kii])
+             dp[ni][ki] = max(dp[ni][ki], dp[ni-1][ki-kii] + h[kii])
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/45802dfe11bf0fca02865fad5736f6e66247c430707f09c491e8100e17e4b9dd/without_tabs.py:
+--- Original
++++ Modified
+@@ -52,7 +52,7 @@
+ n1 = 1+n
+ k1 = k+1
+ 
+-nk1 = n*k+1
++nk1 = k*n+1
+ dp = [[0]*nk1 for _ in range(n1)]
+ 
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/45802dfe11bf0fca02865fad5736f6e66247c430707f09c491e8100e17e4b9dd/with_tabs.py

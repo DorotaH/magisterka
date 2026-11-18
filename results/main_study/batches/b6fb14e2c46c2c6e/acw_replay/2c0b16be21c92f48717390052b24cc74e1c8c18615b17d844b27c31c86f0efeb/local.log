@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/2c0b16be21c92f48717390052b24cc74e1c8c18615b17d844b27c31c86f0efeb/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+         while to_use and res:
+             moving = to_use.popleft()
+             loads[moving[0] - 1] -= 1
+-            if loads[moving[1] - 1] < 9 and loads[moving[2] - 1] < 9 + (-1 if moving[2] == moving[1] else 0):
++            if loads[moving[1] - 1] < 9 and loads[moving[2] - 1] < (-1 if moving[2] == moving[1] else 0) + 9:
+                 ba = 0
+                 loads[moving[1] - 1] += 1
+                 loads[moving[2] - 1] += 1
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/2c0b16be21c92f48717390052b24cc74e1c8c18615b17d844b27c31c86f0efeb/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+ 
+     def process_task(self):
+ 
+-        loads = [4] * self.n
++        loads = self.n * [4]
+         random.shuffle(self.rules)
+         to_use = deque(self.rules)
+         order = []
+@@ -32,7 +32,7 @@
+                 ba += 1
+                 loads[moving[0] - 1] += 1
+                 to_use.append(moving)
+-            if ba > self.n * 12:
++            if ba > 12 * self.n:
+                 res = False
+         self.result = "NO" if not res else f"YES\n{' '.join([str(x) for x in order])}"
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/2c0b16be21c92f48717390052b24cc74e1c8c18615b17d844b27c31c86f0efeb/with_tabs.py

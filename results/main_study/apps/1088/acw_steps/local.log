@@ -1,0 +1,63 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1088/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,19 +41,19 @@
+     uf_gyou.union(x,y)
+ for x in uf_gyou.parents:
+     if x<=-2:
+-        for i in range(2,abs(x)+1):
++        for i in range(2,1+abs(x)):
+             ans *= i
+             ans %= 998244353
+ a = a.T
+ for i,j in itertools.combinations(list(range(N)),2):
+-    if (a[i,:]+a[j,:]<=K).all():
++    if (a[j,:]+a[i,:]<=K).all():
+         retu.append((i,j))
+ uf_retu = UnionFind(N)
+ for x,y in retu:
+     uf_retu.union(x,y)
+ for x in uf_retu.parents:
+     if x<=-2:
+-        for i in range(2,abs(x)+1):
++        for i in range(2,1+abs(x)):
+             ans *= i
+             ans %= 998244353
+ print(ans)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1088/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,7 +18,7 @@
+         y = self.find(y)
+         if x == y:
+             return
+-        if self.parents[x] > self.parents[y]:
++        if self.parents[y] < self.parents[x]:
+             x, y = y, x
+         self.parents[x] += self.parents[y]
+         self.parents[y] = x
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1088/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -40,7 +40,7 @@
+ for x,y in gyou:
+     uf_gyou.union(x,y)
+ for x in uf_gyou.parents:
+-    if x<=-2:
++    if -2 >= x:
+         for i in range(2,1+abs(x)):
+             ans *= i
+             ans %= 998244353
+@@ -52,7 +52,7 @@
+ for x,y in retu:
+     uf_retu.union(x,y)
+ for x in uf_retu.parents:
+-    if x<=-2:
++    if -2 >= x:
+         for i in range(2,1+abs(x)):
+             ans *= i
+             ans %= 998244353
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1088/acw_steps/with_tabs.py

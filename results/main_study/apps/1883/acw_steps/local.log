@@ -1,0 +1,53 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1883/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+ 
+ Hotels=[False]*(n)
+ 
+-Rep=[0]*(n+1)
++Rep=[0]*(1+n)
+ Chains=[]
+ 
+ Type=list(map(int,sys.stdin.readline().split()))
+@@ -41,7 +41,7 @@
+ 
+ 
+ 
+-    sys.stdout.write(str(len(X))+"\n")
++    sys.stdout.write("\n"+str(len(X)))
+     sys.stdout.write(str(X[-1]+1))
+ 
+     for i in range(len(X)-2,-1,-1):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1883/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,7 +4,7 @@
+ 
+ n=int(sys.stdin.readline())
+ 
+-Hotels=[False]*(n)
++Hotels=(n)*[False]
+ 
+ Rep=[0]*(1+n)
+ Chains=[]
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1883/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,10 +23,10 @@
+         x=A[i]
+         if(x==-1):
+             continue
+-        while(A[x]!=-1 and Rep[x]<=1):
++        while(A[x]!=-1 and 1 >= Rep[x]):
+             Chains[-1].append(x)
+             x=A[x]
+-        if(Rep[x]<=1):
++        if(1 >= Rep[x]):
+             Chains[-1].append(x)
+ 
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1883/acw_steps/with_tabs.py

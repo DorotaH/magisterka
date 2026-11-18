@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ 
+     ans = [0] * 13
+     ans[0] = 1
+-    MOD = 10**9 + 7
++    MOD = 7 + 10**9
+ 
+     for i in S:
+         dp = [0] * 13
+@@ -11,7 +11,7 @@
+             dp[(j * 10) % 13] = ans[j] % MOD
+         dp += dp
+         for j in range(13):
+-            ans[j] = sum(dp[j + 4 : j + 14]) if i == "?" else dp[j + 13 - int(i)]
++            ans[j] = sum(dp[4 + j : 14 + j]) if i == "?" else dp[13 + j - int(i)]
+     print(ans[5] % MOD)
+ 
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+     for i in S:
+         dp = [0] * 13
+         for j in range(13):
+-            dp[(j * 10) % 13] = ans[j] % MOD
++            dp[(10 * j) % 13] = ans[j] % MOD
+         dp += dp
+         for j in range(13):
+             ans[j] = sum(dp[4 + j : 14 + j]) if i == "?" else dp[13 + j - int(i)]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86/with_tabs.py

@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/dd58b5bea24e058837ca355ade97e18c39682bdb93549f9c0cbb870f523297fc/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ 
+ for _ in range(n):
+     z, x, y = list(map(int, input().split()))
+-    huh.append((Ro(x + z, z * A + y), x))
++    huh.append((Ro(z + x, z * A + y), x))
+ huh = sorted(huh)
+ anss = 0
+ c1 = 0
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/dd58b5bea24e058837ca355ade97e18c39682bdb93549f9c0cbb870f523297fc/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+         g.append(c1)
+         #print(g)
+         for j in g:
+-            anss += (c2 - j) * j
++            anss += j * (c2 - j)
+         g = []
+         c1 = 1
+         c2 = 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/dd58b5bea24e058837ca355ade97e18c39682bdb93549f9c0cbb870f523297fc/with_tabs.py

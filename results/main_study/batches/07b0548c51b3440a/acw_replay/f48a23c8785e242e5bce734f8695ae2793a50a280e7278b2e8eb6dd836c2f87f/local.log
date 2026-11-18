@@ -1,0 +1,25 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/f48a23c8785e242e5bce734f8695ae2793a50a280e7278b2e8eb6dd836c2f87f/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,8 +7,8 @@
+     x, v = list(map(float, input().split()))
+     xv.append((x, v))
+ 
+-sumA = np.zeros(N + 2, dtype=float)
+-sumB = np.zeros(N + 2, dtype=float)
++sumA = np.zeros(2 + N, dtype=float)
++sumB = np.zeros(2 + N, dtype=float)
+ 
+ xv.sort(key=lambda tup: tup[0])
+ xv.append((C, 0))
+@@ -41,7 +41,7 @@
+     # when to turn back?
+     # valB = -xv[i][0] + max(sumB[:N-i+1])
+     valB = -xv[i][0] + maxB[N - i]
+-    ans = max(ans, sumA[i]) if valB < 0 else max(ans, sumA[i] + valB)
++    ans = max(ans, sumA[i]) if valB < 0 else max(ans, valB + sumA[i])
+     # when to turn back?
+     valA = -C + xv[N - i + 1][0] + maxA[N - i]
+     ans = max(ans, sumB[i]) if valA < 0 else max(ans, sumB[i] + valA)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/f48a23c8785e242e5bce734f8695ae2793a50a280e7278b2e8eb6dd836c2f87f/with_tabs.py

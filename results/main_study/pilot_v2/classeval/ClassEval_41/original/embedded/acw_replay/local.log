@@ -1,0 +1,16 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_41/original/embedded/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,8 +26,8 @@
+         count = 1
+         symbol = self.board[row][col]
+         for i in range(1, 5):
+-            new_row = row + dx * i
+-            new_col = col + dy * i
++            new_row = row + i * dx
++            new_col = col + i * dy
+             if not (0 <= new_row < self.board_size and 0 <= new_col < self.board_size):
+                 return False
+             if self.board[new_row][new_col] != symbol:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_41/original/embedded/acw_replay/with_tabs.py

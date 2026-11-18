@@ -1,0 +1,60 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/8fb7faf1c5b03436525d8f3a6b20ff74e7622a084e7f88f6a60d73b113ba247f/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+     class Bit:
+         def __init__(self, n):
+             self.size = n
+-            self.tree = [0] * (n + 1)
++            self.tree = [0] * (1 + n)
+ 
+         def sum(self, i):
+             s = 0
+@@ -30,11 +30,11 @@
+             x = 0
+             k = 1 << (self.size.bit_length() - 1)
+             while k:
+-                if x + k <= self.size and self.tree[x + k] < w:
+-                    w -= self.tree[x + k]
++                if k + x <= self.size and self.tree[k + x] < w:
++                    w -= self.tree[k + x]
+                     x += k
+                 k >>= 1
+-            return x + 1
++            return 1 + x
+ 
+     N = int(input())
+     A = list(map(int, input().split()))
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/8fb7faf1c5b03436525d8f3a6b20ff74e7622a084e7f88f6a60d73b113ba247f/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+                 i += i & -i
+ 
+         def lower_bound(self, w):
+-            if w <= 0:
++            if 0 >= w:
+                 return 0
+             x = 0
+             k = 1 << (self.size.bit_length() - 1)
+@@ -58,7 +58,7 @@
+             ir = bit_high.lower_bound(val + 1)
+             if il > 0:
+                 adj[il].append(i)
+-            if ir <= N:
++            if N >= ir:
+                 adj[i].append(ir)
+ 
+     bit_low = Bit(N)
+@@ -72,7 +72,7 @@
+             ir = bit_low.lower_bound(val + 1)
+             if il > 0:
+                 adj[il].append(i)
+-            if ir <= N:
++            if N >= ir:
+                 adj[i].append(ir)
+ 
+     dp = [inf] * (N+1)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/8fb7faf1c5b03436525d8f3a6b20ff74e7622a084e7f88f6a60d73b113ba247f/with_tabs.py

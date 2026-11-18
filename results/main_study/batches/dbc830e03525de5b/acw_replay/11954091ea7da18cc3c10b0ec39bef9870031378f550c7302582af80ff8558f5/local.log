@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/11954091ea7da18cc3c10b0ec39bef9870031378f550c7302582af80ff8558f5/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+     b = []
+     for c in a:
+         # if len(b) == 0 or c > b[-1]
+-        if not b or c > b[-1]:
++        if not b or b[-1] < c:
+             b.append(c)
+         else:
+             l = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/11954091ea7da18cc3c10b0ec39bef9870031378f550c7302582af80ff8558f5/with_tabs.py

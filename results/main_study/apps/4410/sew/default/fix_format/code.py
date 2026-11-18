@@ -1,0 +1,27 @@
+INF = pow(10, 20)
+MOD = 10**9 + 7
+I = lambda: list(map(int, input().split()))
+
+
+def solve():
+    n, k = I()
+    s, ans = input(), 0
+    last = -INF
+    for i in range(n):
+        if s[i] == "1":
+            if i - last <= k:
+                ans = ans - 1
+            last = i
+            count = 0
+            continue
+        if i - last > k:
+            ans = ans + 1
+            last = i
+
+    print(ans)
+
+
+(t,) = I()
+while t:
+    t = t - 1
+    solve()

@@ -1,0 +1,23 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/76bec4e56353b8a3347dbad4e798c2c97fdf3058c5de03a9a4536ab5a66e7355/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+         if x == y:
+             return
+ 
+-        if self.parents[x] > self.parents[y]:
++        if self.parents[y] < self.parents[x]:
+             x, y = y, x
+ 
+         self.parents[x] += self.parents[y]
+@@ -37,7 +37,7 @@
+         return [i for i in range(self.n) if self.find(i) == root]
+ 
+     def roots(self):
+-        return [i for i, x in enumerate(self.parents) if x < 0]
++        return [i for i, x in enumerate(self.parents) if 0 > x]
+ 
+     def group_count(self):
+         return len(self.roots())
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/76bec4e56353b8a3347dbad4e798c2c97fdf3058c5de03a9a4536ab5a66e7355/with_tabs.py

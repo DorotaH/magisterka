@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/7544b64779459fd8e8832ca5f46cc6482bccfce2b6e6bc185a6b69e6bcbe3cbf/without_tabs.py:
+--- Original
++++ Modified
+@@ -50,7 +50,7 @@
+ 
+     for _ in range(Q):
+         x, y = MAP()
+-        print(d[x - 1] + d[y - 1])
++        print(d[y - 1] + d[x - 1])
+ 
+ 
+ def __starting_point():
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/7544b64779459fd8e8832ca5f46cc6482bccfce2b6e6bc185a6b69e6bcbe3cbf/without_tabs.py:
+--- Original
++++ Modified
+@@ -36,7 +36,7 @@
+     Q, K = MAP()
+     K -= 1
+ 
+-    d = [inf] * N
++    d = N * [inf]
+     d[K] = 0
+     que = []
+     heappush(que, K)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/7544b64779459fd8e8832ca5f46cc6482bccfce2b6e6bc185a6b69e6bcbe3cbf/with_tabs.py

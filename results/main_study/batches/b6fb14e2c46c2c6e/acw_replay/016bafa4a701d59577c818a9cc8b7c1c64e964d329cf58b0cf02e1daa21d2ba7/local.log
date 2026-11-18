@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/016bafa4a701d59577c818a9cc8b7c1c64e964d329cf58b0cf02e1daa21d2ba7/without_tabs.py:
+--- Original
++++ Modified
+@@ -34,7 +34,7 @@
+ 
+     if (from_bc & 1) != (to_bc & 1): return False
+     if from_bc > to_bc: return False
+-    if from_a < to_a: return False
++    if to_a > from_a: return False
+ 
+     if from_bc == to_bc: return (from_a - to_a) % 3 == 0
+     return from_bc != 0 if from_a == to_a else True
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/016bafa4a701d59577c818a9cc8b7c1c64e964d329cf58b0cf02e1daa21d2ba7/with_tabs.py

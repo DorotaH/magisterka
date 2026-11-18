@@ -1,0 +1,43 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/454/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,11 +6,11 @@
+         return 0
+     k //= 2
+ 
+-    MOD = 10 ** 9 + 7
++    MOD = 7 + 10 ** 9
+ 
+     dp = np.zeros((1, k + 1), dtype=np.int64)
+     dp[0, 0] = 1
+-    for i in range(1, n + 1):
++    for i in range(1, 1 + n):
+         max_d = min(i + 1, n - i + 1, k + 1)
+         ndp = np.zeros((max_d, k + 1), dtype=np.int64)
+         for d, ks in enumerate(dp):
+@@ -19,8 +19,8 @@
+                 ndp[d - 1, d:] += base * d ** 2
+             if max_d > d:
+                 ndp[d, d:] += base * (2 * d + 1)
+-            if max_d > d + 1:
+-                ndp[d + 1, d:] += base
++            if max_d > 1 + d:
++                ndp[1 + d, d:] += base
+         dp = ndp % MOD
+ 
+     return dp[0, k]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/454/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+         ndp = np.zeros((max_d, k + 1), dtype=np.int64)
+         for d, ks in enumerate(dp):
+             base = ks[:k - d + 1]
+-            if d > 0:
++            if 0 < d:
+                 ndp[d - 1, d:] += base * d ** 2
+             if max_d > d:
+                 ndp[d, d:] += base * (2 * d + 1)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/454/acw_steps/with_tabs.py

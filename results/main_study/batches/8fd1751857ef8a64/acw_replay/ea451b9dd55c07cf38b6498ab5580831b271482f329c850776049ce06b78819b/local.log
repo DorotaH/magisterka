@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/ea451b9dd55c07cf38b6498ab5580831b271482f329c850776049ce06b78819b/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,8 +9,8 @@
+     s = 1
+     stack = [s]
+     traversal = []
+-    visited = [False] * (n + 1)
+-    subtreeSize = [1 for _ in range(n + 1)]
++    visited = [False] * (1 + n)
++    subtreeSize = [1 for _ in range(1 + n)]
+     while stack:
+         v = stack.pop()
+         if not visited[v]:
+@@ -33,7 +33,7 @@
+ for _ in range(t):
+     k, = next(reader)
+     n = 2 * k
+-    g = [[] for _ in range(n + 1)]
++    g = [[] for _ in range(1 + n)]
+     costDict = {}
+     for _ in range(n - 1):
+         v, to, cost = next(reader)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/ea451b9dd55c07cf38b6498ab5580831b271482f329c850776049ce06b78819b/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,8 +24,8 @@
+             toSize = subtreeSize[to]
+             subtreeSize[v] += toSize
+             minComp = min(toSize, n - toSize)
+-            G += (minComp % 2) * cost
+-            B += minComp * cost
++            G += cost * (minComp % 2)
++            B += cost * minComp
+         traversal.append(v)
+     return G, B
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/ea451b9dd55c07cf38b6498ab5580831b271482f329c850776049ce06b78819b/with_tabs.py

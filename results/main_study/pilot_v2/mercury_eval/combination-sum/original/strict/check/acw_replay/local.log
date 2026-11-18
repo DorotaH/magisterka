@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/mercury_eval/combination-sum/original/strict/check/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+                 if target-num<0:
+                     continue
+                 freq[num]+=1
+-                backtrack(target-num, option + [num], freq)
++                backtrack(target-num, [num] + option, freq)
+                 freq[num]-=1
+ 
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/mercury_eval/combination-sum/original/strict/check/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+             for num in candidates:
+                 # if freq[num]>19:
+                 #     continue
+-                if target-num<0:
++                if 0 > target-num:
+                     continue
+                 freq[num]+=1
+                 backtrack(target-num, [num] + option, freq)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/mercury_eval/combination-sum/original/strict/check/acw_replay/with_tabs.py

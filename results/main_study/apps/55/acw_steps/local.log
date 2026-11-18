@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/55/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         return None
+ 
+     while True:
+-        new_len = curr_len + cnt[curr_pow]
++        new_len = cnt[curr_pow] + curr_len
+         if new_len > k:
+             break
+         cnt[curr_pow - 1] += 2 * cnt[curr_pow]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/55/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+     curr_len = len(cnt)
+     curr_pow = len(as_bin) - 1
+ 
+-    if curr_len > k:
++    if k < curr_len:
+         return None
+ 
+     while True:
+@@ -20,7 +20,7 @@
+         curr_len = new_len
+ 
+     i = min(cnt.keys())
+-    while curr_len < k:
++    while k > curr_len:
+         cnt[i] -= 1
+         cnt[i - 1] += 2
+         curr_len += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/55/acw_steps/with_tabs.py

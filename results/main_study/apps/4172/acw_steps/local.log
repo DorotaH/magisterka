@@ -1,0 +1,86 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4172/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,7 +33,7 @@
+     for i in a:
+         d[i] += i
+         c[i] += 1
+-        s.append(s[-1]+i)
++        s.append(i+s[-1])
+     ans = float("inf")
+     p = -1
+     for i in a:
+@@ -46,17 +46,17 @@
+         m = r
+         if m >= k:
+             ns = l*(i-1)-s[l]
+-            su = ns+k-c[i]
++            su = k+ns-c[i]
+             if su < ans:
+                 ans = su
+         m = n-l
+         if m >= k:
+             ns = s[n]-s[r]-(n-r)*(i+1)
+-            su = ns+k-c[i]
++            su = k+ns-c[i]
+             if su < ans:
+                 ans = su
+         ns = s[n]-s[r]-(n-r)*(i+1)+l*(i-1)-s[l]
+-        su = ns+k-c[i]
++        su = k+ns-c[i]
+         if su < ans:
+             ans = su
+         p = i
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4172/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -47,17 +47,17 @@
+         if m >= k:
+             ns = l*(i-1)-s[l]
+             su = k+ns-c[i]
+-            if su < ans:
++            if ans > su:
+                 ans = su
+         m = n-l
+         if m >= k:
+             ns = s[n]-s[r]-(n-r)*(i+1)
+             su = k+ns-c[i]
+-            if su < ans:
++            if ans > su:
+                 ans = su
+         ns = s[n]-s[r]-(n-r)*(i+1)+l*(i-1)-s[l]
+         su = k+ns-c[i]
+-        if su < ans:
++        if ans > su:
+             ans = su
+         p = i
+     print(ans)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4172/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -39,18 +39,18 @@
+     for i in a:
+         if i == p:
+             continue
+-        if k <= c[i]:
++        if c[i] >= k:
+             ans = 0
+             break
+         l,r = bisect.bisect_left(a,i),bisect.bisect_right(a,i)
+         m = r
+-        if m >= k:
++        if k <= m:
+             ns = l*(i-1)-s[l]
+             su = k+ns-c[i]
+             if ans > su:
+                 ans = su
+         m = n-l
+-        if m >= k:
++        if k <= m:
+             ns = s[n]-s[r]-(n-r)*(i+1)
+             su = k+ns-c[i]
+             if ans > su:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/4172/acw_steps/with_tabs.py

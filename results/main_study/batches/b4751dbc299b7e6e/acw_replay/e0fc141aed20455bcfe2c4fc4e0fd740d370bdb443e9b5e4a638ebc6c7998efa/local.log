@@ -1,0 +1,28 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/e0fc141aed20455bcfe2c4fc4e0fd740d370bdb443e9b5e4a638ebc6c7998efa/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+     dp = []
+     for i in range(n):
+         x = x_coords[i]
+-        index = bisect.bisect(x_coords,x+k)-1
++        index = bisect.bisect(x_coords,k+x)-1
+         dp.append(index-i+1)
+ 
+     dp_max = []
+@@ -19,10 +19,10 @@
+     max_val = 0
+     for i in range(n):
+         x = x_coords[i]
+-        index = bisect.bisect(x_coords,x+k)-1
++        index = bisect.bisect(x_coords,k+x)-1
+         val = index-i+1
+-        if index+1 < n:
+-            val += dp_max[index+1]
++        if 1+index < n:
++            val += dp_max[1+index]
+ 
+         max_val = max(max_val,val)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/e0fc141aed20455bcfe2c4fc4e0fd740d370bdb443e9b5e4a638ebc6c7998efa/with_tabs.py

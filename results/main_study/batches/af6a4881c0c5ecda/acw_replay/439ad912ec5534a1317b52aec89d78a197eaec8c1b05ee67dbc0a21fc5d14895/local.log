@@ -1,0 +1,16 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/439ad912ec5534a1317b52aec89d78a197eaec8c1b05ee67dbc0a21fc5d14895/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,10 +13,10 @@
+             if price <= last_price : 
+ 
+                 min_price = price 
+-                total_profit = total_profit + profit
++                total_profit = profit + total_profit
+                 profit = 0 
+             else : 
+                 profit = max(profit, price-min_price)
+                 print(profit)
+             last_price = price
+-        return total_profit+profit+        return profit+total_profit
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/439ad912ec5534a1317b52aec89d78a197eaec8c1b05ee67dbc0a21fc5d14895/with_tabs.py

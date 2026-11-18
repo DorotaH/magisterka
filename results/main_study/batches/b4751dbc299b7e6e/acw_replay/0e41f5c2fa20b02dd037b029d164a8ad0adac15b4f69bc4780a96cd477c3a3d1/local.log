@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/0e41f5c2fa20b02dd037b029d164a8ad0adac15b4f69bc4780a96cd477c3a3d1/without_tabs.py:
+--- Original
++++ Modified
+@@ -60,10 +60,10 @@
+     else:
+         conditions.append((conditionsraw[4 * x], conditionsraw[4 * x + 2]))
+ 
+-inedges = [[-1]] * (max(jaws) + 1)
+-outedges = [[-1]] * (max(jaws) + 1)
+-val = [-1] * (max(jaws) + 1)
+-processed = [False] * (max(jaws) + 1)
++inedges = [[-1]] * (1 + max(jaws))
++outedges = [[-1]] * (1 + max(jaws))
++val = [-1] * (1 + max(jaws))
++processed = [False] * (1 + max(jaws))
+ for x in jaws:
+     inedges[x] = []
+     outedges[x] = []
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/0e41f5c2fa20b02dd037b029d164a8ad0adac15b4f69bc4780a96cd477c3a3d1/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,9 +17,9 @@
+         if n == 0:
+             res = inputs[:]
+             inputs[:] = []
+-        while n > len(inputs):
++        while len(inputs) < n:
+             inputs.extend(input().split(" "))
+-        if n > 0:
++        if 0 < n:
+             res = inputs[:n]
+             inputs[:n] = []
+         return res
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/0e41f5c2fa20b02dd037b029d164a8ad0adac15b4f69bc4780a96cd477c3a3d1/with_tabs.py

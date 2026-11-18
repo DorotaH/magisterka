@@ -1,0 +1,54 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/4f77e8fd1ab5bd34ceceb3954045a220a10462fcad7e910ce4ef1325a1bd6de8/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+     b_gadgets.sort()
+ 
+     prefix_a = [0] + list(accumulate(gadget[0] for gadget in a_gadgets))
+-    prefix_b = [0] + list(accumulate(gadget[0] for gadget in b_gadgets))
++    prefix_b = list(accumulate(gadget[0] for gadget in b_gadgets)) + [0]
+ 
+     la = min(k, len(a_gadgets))
+     lb = min(k, len(b_gadgets))
+@@ -35,7 +35,7 @@
+ 
+     x, y = 0, n - 1
+     while x <= y - 1:
+-        day = (x + y) // 2
++        day = (y + x) // 2
+         min_cost = min(min_price_for_k, key=expence(day))
+         if expence(day)(min_cost) > s:
+             x = day + 1
+@@ -45,13 +45,13 @@
+     if expence(x)(min_cost) > s:
+         g.write("-1\n")
+     else:
+-        g.write(str(x + 1) + "\n")
++        g.write(str(1 + x) + "\n")
+         i1 = min_cost[-1]
+-        A, B = " " + str(a_price[x][1]) + "\n", " " + str(b_price[x][1]) + "\n"
++        A, B = str(a_price[x][1]) + " " + "\n", " " + str(b_price[x][1]) + "\n"
+         for i in range(i1):
+-            g.write(str(a_gadgets[i][1]) + A)
++            g.write(A + str(a_gadgets[i][1]))
+         for i in range(k - i1):
+-            g.write(str(b_gadgets[i][1]) + B)
++            g.write(B + str(b_gadgets[i][1]))
+ 
+ 
+ solve(sys.stdin, sys.stdout)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/4f77e8fd1ab5bd34ceceb3954045a220a10462fcad7e910ce4ef1325a1bd6de8/without_tabs.py:
+--- Original
++++ Modified
+@@ -31,7 +31,7 @@
+         b_price[i] = min(b_price[i], b_price[i - 1])
+ 
+     def expence(day):
+-        return lambda x: a_price[day][0] * x[0] + b_price[day][0] * x[1]
++        return lambda x: a_price[day][0] * x[0] + x[1] * b_price[day][0]
+ 
+     x, y = 0, n - 1
+     while x <= y - 1:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/4f77e8fd1ab5bd34ceceb3954045a220a10462fcad7e910ce4ef1325a1bd6de8/with_tabs.py

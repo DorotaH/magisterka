@@ -1,0 +1,36 @@
+    def minWindow(self, s: str, t: str) -> str:
+
+        if len(s) < len(t):
+            return ""
+
+        lettersSet = set()
+        lettersNeeded = {}
+        for c in t:
+            self.updateAndDelIfZero(lettersNeeded, c, 1)        
+            lettersSet.add(c)
+        # 01234567890123
+        # ADOBBECODEBANC   ABC    r: BANC
+        # a 0
+        # b -1
+        # c 0
+
+
+        start = 0
+        end = start
+        shortestSubstr = None
+        while end < len(s):
+            c = s[end]
+            if s[end] in lettersSet:
+                self.updateAndDelIfZero(lettersNeeded, c, -1)
+                if self.allNonPos(lettersNeeded):
+                    # reduce substring just before we need to remove needed letter
+                    start = self.moveForward(s, start, lettersNeeded, lettersSet)
+                    if shortestSubstr is None or shortestSubstr[1] - shortestSubstr[0] > end - start:
+                        shortestSubstr = (start, end)
+                    # move forward just before we need a new letter (but stop before)
+                    start = self.moveForward(s, start, lettersNeeded, lettersSet)
+            end += 1
+        
+        if shortestSubstr is None:
+            return ""
+        return s[shortestSubstr[0]:shortestSubstr[1] + 1]

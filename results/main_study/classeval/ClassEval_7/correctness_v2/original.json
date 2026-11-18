@@ -1,0 +1,462 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_7/original/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_7/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets\": [[\"assertEqual\", 2]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_2\": [[\"assertEqual\", 2]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_3\": [[\"assertEqual\", 2]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_4\": [[\"assertEqual\", 2]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_5\": [[\"assertEqual\", 2]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_6\": [[\"assertEqual\", 2]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_7\": [[\"assertEqual\", 2]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_2\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_3\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_4\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_5\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3]], \"benchmark_case.BalancedBracketsTestMain.test_main\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3], [\"assertEqual\", 2]], \"benchmark_case.BalancedBracketsTestMain.test_main_2\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3], [\"assertEqual\", 2]], \"benchmark_case.BalancedBracketsTestMain.test_main_3\": [[\"assertEqual\", 2], [\"assertMultiLineEqual\", 2], [\"assertIsInstance\", 3], [\"assertIsInstance\", 3], [\"assertEqual\", 2]]}, \"errors\": [], \"failures\": [], \"log\": \"test_clear_expr (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr) ... ok\\ntest_clear_expr_2 (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_2) ... ok\\ntest_clear_expr_3 (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_3) ... ok\\ntest_clear_expr_4 (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_4) ... ok\\ntest_clear_expr_5 (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_5) ... ok\\ntest_check_balanced_brackets (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets) ... ok\\ntest_check_balanced_brackets_2 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_2) ... ok\\ntest_check_balanced_brackets_3 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_3) ... ok\\ntest_check_balanced_brackets_4 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_4) ... ok\\ntest_check_balanced_brackets_5 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_5) ... ok\\ntest_check_balanced_brackets_6 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_6) ... ok\\ntest_check_balanced_brackets_7 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_7) ... ok\\ntest_main (benchmark_case.BalancedBracketsTestMain.test_main) ... ok\\ntest_main_2 (benchmark_case.BalancedBracketsTestMain.test_main_2) ... ok\\ntest_main_3 (benchmark_case.BalancedBracketsTestMain.test_main_3) ... ok\\n\\n----------------------------------------------------------------------\\nRan 15 tests in 0.001s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets\": [[\"__init__\", \"null\"], [\"check_balanced_brackets\", \"true\"]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_2\": [[\"__init__\", \"null\"], [\"check_balanced_brackets\", \"true\"]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_3\": [[\"__init__\", \"null\"], [\"check_balanced_brackets\", \"true\"]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_4\": [[\"__init__\", \"null\"], [\"check_balanced_brackets\", \"false\"]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_5\": [[\"__init__\", \"null\"], [\"check_balanced_brackets\", \"false\"]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_6\": [[\"__init__\", \"null\"], [\"check_balanced_brackets\", \"false\"]], \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_7\": [[\"__init__\", \"null\"], [\"check_balanced_brackets\", \"false\"]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr\": [[\"__init__\", \"null\"], [\"clear_expr\", \"null\"]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_2\": [[\"__init__\", \"null\"], [\"clear_expr\", \"null\"]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_3\": [[\"__init__\", \"null\"], [\"clear_expr\", \"null\"]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_4\": [[\"__init__\", \"null\"], [\"clear_expr\", \"null\"]], \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_5\": [[\"__init__\", \"null\"], [\"clear_expr\", \"null\"]], \"benchmark_case.BalancedBracketsTestMain.test_main\": [[\"__init__\", \"null\"], [\"clear_expr\", \"null\"], [\"check_balanced_brackets\", \"true\"]], \"benchmark_case.BalancedBracketsTestMain.test_main_2\": [[\"__init__\", \"null\"], [\"clear_expr\", \"null\"], [\"check_balanced_brackets\", \"false\"]], \"benchmark_case.BalancedBracketsTestMain.test_main_3\": [[\"__init__\", \"null\"], [\"clear_expr\", \"null\"], [\"check_balanced_brackets\", \"false\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr\", \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_2\", \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_3\", \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_4\", \"benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_5\", \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets\", \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_2\", \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_3\", \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_4\", \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_5\", \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_6\", \"benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_7\", \"benchmark_case.BalancedBracketsTestMain.test_main\", \"benchmark_case.BalancedBracketsTestMain.test_main_2\", \"benchmark_case.BalancedBracketsTestMain.test_main_3\"], \"tests\": 15}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.0758402669998759,
+  "result": {
+    "checks": {
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_6": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_7": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestMain.test_main": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestMain.test_main_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestMain.test_main_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertMultiLineEqual",
+          2
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertIsInstance",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_clear_expr (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr) ... ok\ntest_clear_expr_2 (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_2) ... ok\ntest_clear_expr_3 (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_3) ... ok\ntest_clear_expr_4 (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_4) ... ok\ntest_clear_expr_5 (benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_5) ... ok\ntest_check_balanced_brackets (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets) ... ok\ntest_check_balanced_brackets_2 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_2) ... ok\ntest_check_balanced_brackets_3 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_3) ... ok\ntest_check_balanced_brackets_4 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_4) ... ok\ntest_check_balanced_brackets_5 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_5) ... ok\ntest_check_balanced_brackets_6 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_6) ... ok\ntest_check_balanced_brackets_7 (benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_7) ... ok\ntest_main (benchmark_case.BalancedBracketsTestMain.test_main) ... ok\ntest_main_2 (benchmark_case.BalancedBracketsTestMain.test_main_2) ... ok\ntest_main_3 (benchmark_case.BalancedBracketsTestMain.test_main_3) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.001s\n\nOK\n",
+    "observed": {
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "true"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "true"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "true"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "false"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "false"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "false"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_7": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "false"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "clear_expr",
+          "null"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "clear_expr",
+          "null"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "clear_expr",
+          "null"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "clear_expr",
+          "null"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "clear_expr",
+          "null"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestMain.test_main": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "clear_expr",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "true"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestMain.test_main_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "clear_expr",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "false"
+        ]
+      ],
+      "benchmark_case.BalancedBracketsTestMain.test_main_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "clear_expr",
+          "null"
+        ],
+        [
+          "check_balanced_brackets",
+          "false"
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr",
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_2",
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_3",
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_4",
+      "benchmark_case.BalancedBracketsTestClearExpr.test_clear_expr_5",
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets",
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_2",
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_3",
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_4",
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_5",
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_6",
+      "benchmark_case.BalancedBracketsTestCheckBalancedBrackets.test_check_balanced_brackets_7",
+      "benchmark_case.BalancedBracketsTestMain.test_main",
+      "benchmark_case.BalancedBracketsTestMain.test_main_2",
+      "benchmark_case.BalancedBracketsTestMain.test_main_3"
+    ],
+    "tests": 15
+  }
+}

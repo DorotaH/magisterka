@@ -1,0 +1,35 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/7d8d30e7af9e38ad34d780a6dfffb4e5c9db6ec5b80eded39eb70263cb6c517b/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ class BIT:
+     def __init__(self,n):
+-        self.BIT=[0]*(n+1)
++        self.BIT=[0]*(1+n)
+         self.num=n
+ 
+     def query(self,idx):
+@@ -17,7 +17,7 @@
+             idx += idx&(-idx)
+         return
+ 
+-al = [chr(97+i) for i in range(26)]
++al = [chr(i+97) for i in range(26)]
+ 
+ n = int(input())
+ s = input()
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/7d8d30e7af9e38ad34d780a6dfffb4e5c9db6ec5b80eded39eb70263cb6c517b/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+ 
+     #Ai += x O(logN)
+     def update(self,idx,x):
+-        while idx <= self.num:
++        while self.num >= idx:
+             self.BIT[idx] += x
+             idx += idx&(-idx)
+         return
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/7d8d30e7af9e38ad34d780a6dfffb4e5c9db6ec5b80eded39eb70263cb6c517b/with_tabs.py

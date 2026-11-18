@@ -1,0 +1,24 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    length = random.randint(0, 10**5)\n\n    if length == 0:\n        nums = []\n    else:\n        nums = sorted([random.randint(-10**9, 10**9) for _ in range(length)])\n\n    target = random.randint(-10**9, 10**9)\n\n    return nums, target",
+  "seed": 1669811871728847451,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          5,
+          7,
+          7,
+          8,
+          8,
+          10
+        ],
+        8
+      ],
+      "expected": [
+        3,
+        4
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+def g(i):
+	u[i] = 0
+	for j in p[i]:
+		if 0 > v[j] or u[v[j]] and g(v[j]):
+			v[j] = i
+			return 1
+	return 0
+
+
+f = lambda: map(int, input().split())
+n, m = f()
+s = k = 0
+d = [[]]
+for i in f():
+	j = 2
+	t = []
+	while j**2 <= i:
+		while i % j == 0:
+			t.append((j, k))
+			k += 1
+			i //= j
+		j += 1
+	if i > 1:
+		t.append((i, k))
+		k += 1
+	d.append(t)
+p = [[] for _ in range(k)]
+for _ in range(m):
+	a, b = f()
+	if b % 2:
+		a, b = b, a
+	for x, i in d[a]:
+		for y, j in d[b]:
+			if x == y:
+				p[i].append(j)
+v = [-1] * k
+for i in range(k):
+	u = k * [1]
+	s += g(i)
+print(s)

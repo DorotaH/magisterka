@@ -1,0 +1,28 @@
+def  main():
+    import sys
+    input=sys.stdin.readline
+
+    N = int(input())
+    A = list(map(int, input().split()))
+
+    S=-1
+    for mid in range(0, N):
+        ans=[0]*N
+        ans[mid]=A[mid]
+        prev=A[mid]
+        for j in range(mid-1, -1, -1):
+            ans[j]=min(prev, A[j])
+            prev=ans[j]
+        prev=A[mid]
+        for j in range(1+mid, N):
+            ans[j]=min(prev, A[j])
+            prev=ans[j]
+        if  sum(ans, 0)>S:
+            S = sum(ans)
+            ans_best = ans
+    print(*ans_best)
+
+def  __starting_point():
+    main()
+
+__starting_point()

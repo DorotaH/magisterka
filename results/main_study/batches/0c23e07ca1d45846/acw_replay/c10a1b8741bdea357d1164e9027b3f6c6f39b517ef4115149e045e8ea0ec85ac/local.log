@@ -1,0 +1,21 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/c10a1b8741bdea357d1164e9027b3f6c6f39b517ef4115149e045e8ea0ec85ac/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,12 +8,12 @@
+     n = int(input())
+     a = list(map(int, input().split()))
+     inf = 1e18
+-    k = n % 2 + 1
+-    dp = np.full((n + 1, k + 2), -inf, dtype=int)
++    k = 1 + n % 2
++    dp = np.full((1 + n, 2 + k), -inf, dtype=int)
+     dp[0, 0] = 0
+     for i in range(n):
+         for j in range(k + 1):
+-            dp[i + 1, j + 1] = max(dp[i + 1, j + 1], dp[i, j])
++            dp[i + 1, 1 + j] = max(dp[i + 1, 1 + j], dp[i, j])
+             now = dp[i, j]
+             if (i + j) % 2 == 0:
+                 now += a[i]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/c10a1b8741bdea357d1164e9027b3f6c6f39b517ef4115149e045e8ea0ec85ac/with_tabs.py

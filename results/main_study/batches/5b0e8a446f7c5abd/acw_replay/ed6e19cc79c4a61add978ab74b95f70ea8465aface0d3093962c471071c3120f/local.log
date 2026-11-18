@@ -1,0 +1,21 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/ed6e19cc79c4a61add978ab74b95f70ea8465aface0d3093962c471071c3120f/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,12 +17,12 @@
+             #base case - two sum II
+             l,r = start,len(nums)-1
+             while l < r:
+-                if nums[l] + nums[r] < target:
++                if nums[r] + nums[l] < target:
+                     l+=1
+-                elif nums[l] + nums[r] > target:
++                elif nums[r] + nums[l] > target:
+                     r-=1
+                 else:
+-                    res.append(quad+[nums[l],nums[r]])
++                    res.append([nums[l],nums[r]]+quad)
+                     l+=1
+                     while l < r and nums[l] == nums[l-1]:
+                         l+=1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/ed6e19cc79c4a61add978ab74b95f70ea8465aface0d3093962c471071c3120f/with_tabs.py

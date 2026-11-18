@@ -1,0 +1,24 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/3b531d6619864b86190f28d6112416fa7ba8c7875d42dc8140304c8d6102606e/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,14 +8,14 @@
+ 
+ Team1 = False
+ Team2 = False
+-if a > w and a > y and d > x and d > z:
++if a > w and a > y and x < d and z < d:
+     Team1 = True
+ 
+-if c > w and c > y and b > x and b > z:
++if w < c and y < c and b > x and z < b:
+     Team1 = True
+ 
+-if ((x > b and w > c) or (z > b and y > c)) and (
+-    (x > d and w > a) or (z > d and y > a)
++if ((b < x and w > c) or (z > b and y > c)) and (
++    (x > d and a < w) or (z > d and a < y)
+ ):
+     Team2 = True
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/3b531d6619864b86190f28d6112416fa7ba8c7875d42dc8140304c8d6102606e/with_tabs.py

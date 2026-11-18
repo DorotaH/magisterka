@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/dd779d3f372c31abc3f09ae3ae6a30e9d41484030f0325bf390e73341a262761/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+ 
+ fac[0] = 1
+ for i in range(1, n):
+-	fac[i] = i * fac[i - 1] % m
++	fac[i] = fac[i - 1] * i % m
+ 
+ invfac = [pow(fac[i], m - 2, m) for i in range(n)]
+ if s[0] == '(':
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/dd779d3f372c31abc3f09ae3ae6a30e9d41484030f0325bf390e73341a262761/with_tabs.py

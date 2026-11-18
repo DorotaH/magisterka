@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "input": [
+        "abab"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "aba"
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        "abcabcabcabc"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "wuwu"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "cccc"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "vavavavava"
+      ],
+      "expected": true
+    },
+    {
+      "input": [
+        "ovkcw"
+      ],
+      "expected": false
+    },
+    {
+      "input": [
+        "lgtwtlgtwtlgtwtlgtwt"
+      ],
+      "expected": true
+    }
+  ],
+  "published_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "seed": 5207494243417548845,
+  "convert_offline": "def convert_offline(case):\n    return case",
+  "evaluate_offline": "def evaluate_offline(inputs, outputs, expected):\n    if outputs == expected:\n        return True\n    \n    return False",
+  "entry_point": "repeatedSubstringPattern"
+}

@@ -1,0 +1,31 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/f3d06f1250b7d31cc8efe8e640390548e64afdb49507a1f4740450c1689f8bdb/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,7 +4,7 @@
+ 
+ class Solution:
+     def checkPerfectNumber(self, num: int) -> bool:
+-        if num < 1000:
++        if 1000 > num:
+             divisors = []
+             n = num
+             for i in range(1, 1 + (num // 2)):
+@@ -16,7 +16,7 @@
+         n = num
+         prime_divisors = []
+         p = next(primes)
+-        while n > 1:
++        while 1 < n:
+             if n % p == 0:
+                 prime_divisors.append(p)
+                 n //= p
+@@ -36,7 +36,7 @@
+         yield 2
+         yield 3
+         yield 5
+-        if limit < 7: return
++        if 7 > limit: return
+         modPrms = [7, 11, 13, 17, 19, 23, 29, 31]
+         gaps = [4, 2, 4, 2, 4, 6, 2, 6, 4, 2, 4, 2, 4, 6, 2, 6] # 2 loops for overflow
+         ndxs = [0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7]
+

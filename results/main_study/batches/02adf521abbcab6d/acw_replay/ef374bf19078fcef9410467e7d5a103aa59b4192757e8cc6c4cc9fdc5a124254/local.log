@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/ef374bf19078fcef9410467e7d5a103aa59b4192757e8cc6c4cc9fdc5a124254/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+ 		c -= shift[lc] * b
+ 		b -= a * shift[lb]
+ 		return a + b == c
+-	for lc in range(l // 3 + bool(l % 3), 1 + l // 2) :
++	for lc in range(l // 3 + bool(l % 3), l // 2 + 1) :
+ 		for lb in (lc, lc - 1, l - lc * 2, l - lc * 2 + 1) :
+ 			la = l - lc - lb
+ 			if la < 1 or lb < 1 or lc < 1 : continue
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/ef374bf19078fcef9410467e7d5a103aa59b4192757e8cc6c4cc9fdc5a124254/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+ 	num = [mod(0)] * (l + 1) # num[i] = int(s[:i]) <mod>
+ 	shift = [mod(1)] * (l + 1) # shift[i] = 10**i <mod>
+ 	for i, x in enumerate(s, 1) :
+-		num[i] = num[i - 1] * mod(10) + mod(int(x))
++		num[i] = mod(10) * num[i - 1] + mod(int(x))
+ 		shift[i] = shift[i - 1] * mod(10)
+ 
+ 	def mod_check(la, lb, lc) :
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/ef374bf19078fcef9410467e7d5a103aa59b4192757e8cc6c4cc9fdc5a124254/with_tabs.py

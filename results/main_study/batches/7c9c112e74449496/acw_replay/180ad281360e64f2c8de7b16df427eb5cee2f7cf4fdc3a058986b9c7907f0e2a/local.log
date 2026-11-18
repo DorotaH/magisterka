@@ -1,0 +1,50 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/180ad281360e64f2c8de7b16df427eb5cee2f7cf4fdc3a058986b9c7907f0e2a/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,7 +4,7 @@
+     val = 2**ans % bigMod
+     mod, phi = 5, 4
+     phiVal = 2**phi % bigMod
+-    for _ in range(2, n + 1):
++    for _ in range(2, 1 + n):
+         nextMod = mod * 5
+         while val % nextMod != x % nextMod:
+             val = val * phiVal % bigMod
+@@ -29,9 +29,9 @@
+     inp = input()
+     n = len(inp)
+     a = int(inp)
+-    for m in range(n + 1):
++    for m in range(1 + n):
+         l = a * 10**m
+-        x, mod = l, 2 ** (n + m)
++        x, mod = l, 2 ** (m + n)
+         if x % mod != 0:
+             x += mod - x % mod
+         if x % 5 == 0:
+@@ -39,8 +39,8 @@
+         if x < l + 10**m:
+             assert x % mod == 0 and x % 5 != 0
+             x = x // mod
+-            mod = 5 ** (n + m)
+-            print(n + m + dlog(x % mod, n + m))
++            mod = 5 ** (m + n)
++            print(m + n + dlog(x % mod, m + n))
+             return
+     assert False
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/180ad281360e64f2c8de7b16df427eb5cee2f7cf4fdc3a058986b9c7907f0e2a/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+     mod, phi = 5, 4
+     phiVal = 2**phi % bigMod
+     for _ in range(2, 1 + n):
+-        nextMod = mod * 5
++        nextMod = 5 * mod
+         while val % nextMod != x % nextMod:
+             val = val * phiVal % bigMod
+             ans += phi
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/180ad281360e64f2c8de7b16df427eb5cee2f7cf4fdc3a058986b9c7907f0e2a/with_tabs.py

@@ -1,0 +1,428 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_46/acw_full/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_46/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_2\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_3\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_4\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_5\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_6\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_7\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_2\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_3\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_4\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_5\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.InterpolationTestMain.test_main\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]]}, \"errors\": [], \"failures\": [], \"log\": \"test_interpolate_1d (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d) ... ok\\ntest_interpolate_1d_2 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_2) ... ok\\ntest_interpolate_1d_3 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_3) ... ok\\ntest_interpolate_1d_4 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_4) ... ok\\ntest_interpolate_1d_5 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_5) ... ok\\ntest_interpolate_1d_6 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_6) ... ok\\ntest_interpolate_1d_7 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_7) ... ok\\ntest_interpolate_2d (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d) ... ok\\ntest_interpolate_2d_2 (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_2) ... ok\\ntest_interpolate_2d_3 (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_3) ... ok\\ntest_interpolate_2d_4 (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_4) ... ok\\ntest_interpolate_2d_5 (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_5) ... ok\\ntest_main (benchmark_case.InterpolationTestMain.test_main) ... ok\\n\\n----------------------------------------------------------------------\\nRan 13 tests in 0.001s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d\": [[\"__init__\", \"null\"], [\"interpolate_1d\", \"[1.5, 2.5]\"]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_2\": [[\"__init__\", \"null\"], [\"interpolate_1d\", \"[1.1, 1.3]\"]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_3\": [[\"__init__\", \"null\"], [\"interpolate_1d\", \"[1.6, 2.8]\"]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_4\": [[\"__init__\", \"null\"], [\"interpolate_1d\", \"[1.2, 1.4]\"]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_5\": [[\"__init__\", \"null\"], [\"interpolate_1d\", \"[2.2, 3.4]\"]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_6\": [[\"__init__\", \"null\"], [\"interpolate_1d\", \"[]\"]], \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_7\": [[\"__init__\", \"null\"], [\"interpolate_1d\", \"[]\"]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d\": [[\"__init__\", \"null\"], [\"interpolate_2d\", \"[3.0, 7.0]\"]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_2\": [[\"__init__\", \"null\"], [\"interpolate_2d\", \"[4.5]\"]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_3\": [[\"__init__\", \"null\"], [\"interpolate_2d\", \"[7.5]\"]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_4\": [[\"__init__\", \"null\"], [\"interpolate_2d\", \"[9.0]\"]], \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_5\": [[\"__init__\", \"null\"], [\"interpolate_2d\", \"[3.0, 7.0]\"]], \"benchmark_case.InterpolationTestMain.test_main\": [[\"__init__\", \"null\"], [\"interpolate_1d\", \"[1.5, 2.5]\"], [\"interpolate_2d\", \"[3.0, 7.0]\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d\", \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_2\", \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_3\", \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_4\", \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_5\", \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_6\", \"benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_7\", \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d\", \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_2\", \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_3\", \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_4\", \"benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_5\", \"benchmark_case.InterpolationTestMain.test_main\"], \"tests\": 13}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.07138428200050839,
+  "result": {
+    "checks": {
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_6": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_7": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.InterpolationTestMain.test_main": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_interpolate_1d (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d) ... ok\ntest_interpolate_1d_2 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_2) ... ok\ntest_interpolate_1d_3 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_3) ... ok\ntest_interpolate_1d_4 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_4) ... ok\ntest_interpolate_1d_5 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_5) ... ok\ntest_interpolate_1d_6 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_6) ... ok\ntest_interpolate_1d_7 (benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_7) ... ok\ntest_interpolate_2d (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d) ... ok\ntest_interpolate_2d_2 (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_2) ... ok\ntest_interpolate_2d_3 (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_3) ... ok\ntest_interpolate_2d_4 (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_4) ... ok\ntest_interpolate_2d_5 (benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_5) ... ok\ntest_main (benchmark_case.InterpolationTestMain.test_main) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.001s\n\nOK\n",
+    "observed": {
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_1d",
+          "[1.5, 2.5]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_1d",
+          "[1.1, 1.3]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_1d",
+          "[1.6, 2.8]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_1d",
+          "[1.2, 1.4]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_1d",
+          "[2.2, 3.4]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_1d",
+          "[]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_7": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_1d",
+          "[]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_2d",
+          "[3.0, 7.0]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_2d",
+          "[4.5]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_2d",
+          "[7.5]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_2d",
+          "[9.0]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_2d",
+          "[3.0, 7.0]"
+        ]
+      ],
+      "benchmark_case.InterpolationTestMain.test_main": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "interpolate_1d",
+          "[1.5, 2.5]"
+        ],
+        [
+          "interpolate_2d",
+          "[3.0, 7.0]"
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d",
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_2",
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_3",
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_4",
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_5",
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_6",
+      "benchmark_case.InterpolationTestInterpolate1d.test_interpolate_1d_7",
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d",
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_2",
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_3",
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_4",
+      "benchmark_case.InterpolationTestInterpolate2d.test_interpolate_2d_5",
+      "benchmark_case.InterpolationTestMain.test_main"
+    ],
+    "tests": 13
+  }
+}

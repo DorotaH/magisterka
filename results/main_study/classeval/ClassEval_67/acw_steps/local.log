@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_67/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+ 
+     def calculate_total(self):
+         return sum(
+-            dish["price"] * dish["count"] * self.sales[dish["dish"]]
++            dish["count"] * dish["price"] * self.sales[dish["dish"]]
+             for dish in self.selected_dishes
+         )
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_67/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+     def add_dish(self, dish):
+         for menu_dish in self.menu:
+             if dish["dish"] == menu_dish["dish"]:
+-                if menu_dish["count"] < dish["count"]:
++                if dish["count"] > menu_dish["count"]:
+                     return False
+                 menu_dish["count"] -= dish["count"]
+                 break
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_67/acw_steps/with_tabs.py

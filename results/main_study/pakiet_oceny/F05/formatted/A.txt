@@ -1,0 +1,14 @@
+def solve_wfs(n, m, maze, r1, c1, r2, c2):
+    frontier = [(r1, c1)]
+    while frontier:
+        new_frontier = list()
+        for r, c in frontier:
+            for nr, nc in [(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)]:
+                if nr == r2 and c2 == nc:
+                    return True
+                if not maze[nr][nc]:
+                    continue
+                maze[nr][nc] = False
+                new_frontier.append((nr, nc))
+        frontier = new_frontier
+    return False

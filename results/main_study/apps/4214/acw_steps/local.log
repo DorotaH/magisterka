@@ -1,0 +1,31 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4214/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,10 +11,10 @@
+ for i in range(size):
+     for j in range(n-1):
+         x1 = a[i][j][0]
+-        x2 = a[i][j+1][0]
++        x2 = a[i][1+j][0]
+         y1 = a[i][j][1]
+-        y2 = a[i][j+1][1]
++        y2 = a[i][1+j][1]
+         x_total = (x1-x2)**2
+         y_total = (y1-y2)**2
+-        total += (x_total + y_total)**.5
++        total += (y_total + x_total)**.5
+ print(total/size)
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4214/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ l = [list(map(int,input().split())) for _ in range(n)]
+ 
+ def factorization(n):
+-    return 1 if n == 1 else n * factorization(n-1)
++    return 1 if n == 1 else factorization(n-1) * n
+ 
+ size = factorization(n)
+ a = list(itertools.permutations(l,n))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/4214/acw_steps/with_tabs.py

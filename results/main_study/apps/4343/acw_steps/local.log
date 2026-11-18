@@ -1,0 +1,22 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4343/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+ carry = 0
+ cc = [0] * (k + 1)
+ for i in range(k + 1):
+-    cc[i] = aa[i] + bb[i] + carry
++    cc[i] = bb[i] + aa[i] + carry
+     if cc[i] >= 26:
+         carry = 1
+         cc[i] -= 26
+@@ -25,6 +25,6 @@
+     carry = value % 2
+     cc[i] = value // 2
+ 
+-answer = "".join(chr(x + 97) for x in reversed(cc[:-1]))
++answer = "".join(chr(97 + x) for x in reversed(cc[:-1]))
+ print(answer)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/4343/acw_steps/with_tabs.py

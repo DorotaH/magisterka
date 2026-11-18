@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/2d27b420d7ceb7c38f22b4be95bab001ec6af1ad8c38d0fd2fc3cb57083f34a6/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ class UnionFindVerSize:
+     def __init__(self, N):
+         self._parent = list(range(N))
+-        self._size = [1] * N
++        self._size = N * [1]
+         self.group = N
+ 
+     def find_root(self, x):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/2d27b420d7ceb7c38f22b4be95bab001ec6af1ad8c38d0fd2fc3cb57083f34a6/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+ 
+         self.group -= 1
+ 
+-        if self._size[gx] < self._size[gy]:
++        if self._size[gy] > self._size[gx]:
+             self._parent[gx] = gy
+             self._size[gy] += self._size[gx]
+         else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/2d27b420d7ceb7c38f22b4be95bab001ec6af1ad8c38d0fd2fc3cb57083f34a6/with_tabs.py

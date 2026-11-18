@@ -1,0 +1,21 @@
+def f(x):
+    res = val * (x // k1)
+    e = x % k1
+    res += e if k >= e else (e - k) / 2 + k
+    return res
+
+
+k, d, t = map(int, input().split())
+c = (k - 1) // d + 1
+k1 = c * d
+rem = -k % d
+val = k + rem / 2
+l = 0
+r = 1e50
+for _ in range(500):
+    m = (l + r) / 2
+    if t <= f(m):
+        r = m
+    else:
+        l = m
+print('%.10f' % r)

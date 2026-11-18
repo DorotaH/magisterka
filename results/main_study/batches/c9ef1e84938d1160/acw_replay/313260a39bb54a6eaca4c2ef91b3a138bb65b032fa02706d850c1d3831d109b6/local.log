@@ -1,0 +1,26 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/313260a39bb54a6eaca4c2ef91b3a138bb65b032fa02706d850c1d3831d109b6/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ def main():
+     def f(x):
+-        inc = [0 for i in range(n + w)]
++        inc = [0 for i in range(w + n)]
+         cur_inc = 0
+         days = m
+         for i, v in enumerate(arr):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/313260a39bb54a6eaca4c2ef91b3a138bb65b032fa02706d850c1d3831d109b6/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+             v += cur_inc
+             if x - v > days:
+                 return False
+-            if x > v:
++            if v < x:
+                 cur_inc += x - v
+                 days -= x - v
+                 inc[i + w] += x - v
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/313260a39bb54a6eaca4c2ef91b3a138bb65b032fa02706d850c1d3831d109b6/with_tabs.py

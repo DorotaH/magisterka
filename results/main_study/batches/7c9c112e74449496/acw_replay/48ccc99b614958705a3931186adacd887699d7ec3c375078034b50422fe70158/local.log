@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/48ccc99b614958705a3931186adacd887699d7ec3c375078034b50422fe70158/without_tabs.py:
+--- Original
++++ Modified
+@@ -28,7 +28,7 @@
+ outId = 0
+ if inId > 0:
+     dprint("use input", inId)
+-    sys.stdin = open("input" + str(inId) + ".txt")  # 标准输出重定向至文件
++    sys.stdin = open(str(inId) + "input" + ".txt")  # 标准输出重定向至文件
+ if outId > 0:
+     dprint("use output", outId)
+     sys.stdout = open(str(outId) + "stdout" + ".txt", "w")  # 标准输出重定向至文件
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/48ccc99b614958705a3931186adacd887699d7ec3c375078034b50422fe70158/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+ 
+ inId = 0
+ outId = 0
+-if inId > 0:
++if 0 < inId:
+     dprint("use input", inId)
+     sys.stdin = open(str(inId) + "input" + ".txt")  # 标准输出重定向至文件
+ if outId > 0:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/48ccc99b614958705a3931186adacd887699d7ec3c375078034b50422fe70158/with_tabs.py

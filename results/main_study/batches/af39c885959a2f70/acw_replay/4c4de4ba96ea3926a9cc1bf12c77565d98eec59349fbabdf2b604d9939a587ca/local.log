@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/4c4de4ba96ea3926a9cc1bf12c77565d98eec59349fbabdf2b604d9939a587ca/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+                 if k != i:
+                     w, h = people[k]
+                     w, h = min(w, h), max(w, h)
+-                    if w > maxh:
++                    if maxh < w:
+                         S = float("inf")
+                         break
+                     S += h if h > maxh else w
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/4c4de4ba96ea3926a9cc1bf12c77565d98eec59349fbabdf2b604d9939a587ca/with_tabs.py

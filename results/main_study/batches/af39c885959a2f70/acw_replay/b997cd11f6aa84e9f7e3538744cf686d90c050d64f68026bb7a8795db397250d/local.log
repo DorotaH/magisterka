@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/b997cd11f6aa84e9f7e3538744cf686d90c050d64f68026bb7a8795db397250d/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ P = [list(map(int,input().split())) for _ in range(n-1)]
+ 
+ 
+-Group = list(range(n+1))
++Group = list(range(1+n))
+ def find(x):
+     while Group[x] != x:
+         x=Group[x]
+@@ -14,7 +14,7 @@
+     if find(x) != find(y):
+         Group[find(y)]=Group[find(x)]=min(find(y),find(x))
+ 
+-ANS=[[i] for i in range(n+1)]
++ANS=[[i] for i in range(1+n)]
+ 
+ for i,j in P:
+     if find(j)<find(i):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/b997cd11f6aa84e9f7e3538744cf686d90c050d64f68026bb7a8795db397250d/with_tabs.py

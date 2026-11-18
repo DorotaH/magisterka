@@ -1,0 +1,27 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/create-maximum-number/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+         def merge(nums1, nums2):
+             merged = []
+             i, j = 0, 0
+-            while i < len(nums1) or j < len(nums2):
++            while i < len(nums1) or len(nums2) > j:
+                 if i >= len(nums1):
+                     merged.append(nums2[j])
+                     j += 1
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/create-maximum-number/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+                 if i >= len(nums1):
+                     merged.append(nums2[j])
+                     j += 1
+-                elif j >= len(nums2):
++                elif len(nums2) <= j:
+                     merged.append(nums1[i])
+                     i += 1
+                 elif nums1[i:] > nums2[j:]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/create-maximum-number/acw_steps/with_tabs.py

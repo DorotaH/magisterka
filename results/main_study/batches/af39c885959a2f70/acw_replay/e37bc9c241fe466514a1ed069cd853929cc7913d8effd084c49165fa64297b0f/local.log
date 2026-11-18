@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/e37bc9c241fe466514a1ed069cd853929cc7913d8effd084c49165fa64297b0f/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+ 
+ 
+ def comb(n, k):
+-	return 0 if k > n else fact[n] * fact_inv[n - k] * fact_inv[k] % mod
++	return 0 if k > n else fact_inv[n - k] * fact[n] * fact_inv[k] % mod
+ 
+ 
+ n, m, k = list(map(int, input().split()))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/e37bc9c241fe466514a1ed069cd853929cc7913d8effd084c49165fa64297b0f/with_tabs.py

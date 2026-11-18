@@ -1,0 +1,30 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/d36af380c46293e4d77e9319d278886f6b8fc32c2eeb4bcf98d9829dc50d94c8/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,9 +15,9 @@
+         if n == 0:
+             res = inputs[:]
+             inputs[:] = []
+-        while n > len(inputs):
++        while len(inputs) < n:
+             inputs.extend(input().split(" "))
+-        if n > 0:
++        if 0 < n:
+             res = inputs[:n]
+             inputs[:n] = []
+         return res
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/d36af380c46293e4d77e9319d278886f6b8fc32c2eeb4bcf98d9829dc50d94c8/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+ 
+ ############################## SOLUTION ##############################
+ n,t,c = [int(x) for x in g()]
+-a = [int(x) <= t for x in g()]
++a = [t >= int(x) for x in g()]
+ ct = 0
+ res = 0
+ for i in a:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/d36af380c46293e4d77e9319d278886f6b8fc32c2eeb4bcf98d9829dc50d94c8/with_tabs.py

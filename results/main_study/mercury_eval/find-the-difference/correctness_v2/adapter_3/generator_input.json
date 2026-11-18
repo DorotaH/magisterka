@@ -1,0 +1,14 @@
+{
+  "generator_code": "from collections import Counter\nimport random\nimport string\n\n\ndef generate_test_case():\n    s_length = random.randint(0, 1000)\n    s = ''.join(random.choice(string.ascii_lowercase) for _ in range(s_length))\n    t = list(s)\n    t.append(random.choice(string.ascii_lowercase))\n    random.shuffle(t)\n    t = ''.join(t)\n    return s, t",
+  "seed": 12978994584868756690,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "abcd",
+        "abcde"
+      ],
+      "expected": "e"
+    }
+  ]
+}

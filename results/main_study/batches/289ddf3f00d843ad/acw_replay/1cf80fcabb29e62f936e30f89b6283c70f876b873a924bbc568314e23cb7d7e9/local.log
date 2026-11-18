@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/1cf80fcabb29e62f936e30f89b6283c70f876b873a924bbc568314e23cb7d7e9/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+             ans = ""
+             for j in range(n // i):
+                 for k in range(i):
+-                    ans += vowels[(j + k) % 5]
++                    ans += vowels[(k + j) % 5]
+             print(ans)
+             return 0
+     print(-1)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/1cf80fcabb29e62f936e30f89b6283c70f876b873a924bbc568314e23cb7d7e9/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+     n = int(input())
+     for i in range(1, n):
+         if n % i == 0:
+-            if i < 5 or n // i < 5:
++            if 5 > i or 5 > n // i:
+                 continue
+             vowels = "aeiou"
+             ind = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/1cf80fcabb29e62f936e30f89b6283c70f876b873a924bbc568314e23cb7d7e9/with_tabs.py

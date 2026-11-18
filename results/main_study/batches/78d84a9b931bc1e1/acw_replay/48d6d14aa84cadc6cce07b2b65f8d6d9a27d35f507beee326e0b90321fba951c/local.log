@@ -1,0 +1,13 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/48d6d14aa84cadc6cce07b2b65f8d6d9a27d35f507beee326e0b90321fba951c/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,6 +33,6 @@
+ s = 1
+ for i in range(2, big):
+ 	# p is probabilty that i | a random number [1,m]
+-	p = mod_inv(m) * (m // i)
++	p = (m // i) * mod_inv(m)
+ 	s += (-mu[i]) * (p) * mod_inv(1 - p)
+ print(s % MOD)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/48d6d14aa84cadc6cce07b2b65f8d6d9a27d35f507beee326e0b90321fba951c/with_tabs.py

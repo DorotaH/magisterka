@@ -1,0 +1,28 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/trapping-rain-water/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -51,8 +51,8 @@
+ 
+             for gr in range(len(grids)-1):
+ 
+-                if (grids[gr + 1] == max_grid):
+-                    t = grids[gr + 2:]
++                if (grids[1 + gr] == max_grid):
++                    t = grids[2 + gr:]
+                     if(len(t)):
+                         max1 = max(t)
+                         min1 = min(t)
+@@ -69,9 +69,9 @@
+                             pointer = max_grid = max1
+                             continue        
+ 
+-                diff = pointer - grids[gr + 1]
++                diff = pointer - grids[1 + gr]
+                 if diff < 0:
+-                    pointer = grids[gr + 1]
++                    pointer = grids[1 + gr]
+                 elif diff > 0:
+                     litres += diff
+                     continue
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/trapping-rain-water/acw_steps/with_tabs.py

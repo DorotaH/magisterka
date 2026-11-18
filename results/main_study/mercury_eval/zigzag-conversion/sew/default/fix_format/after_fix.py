@@ -1,0 +1,17 @@
+class  Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if  numRows==1 or  numRows >= len(s):
+            return  s
+        
+        rows, index = [[] for row in range(numRows)], 0
+        step = -1
+        for  ch in  s:
+            rows[index].append(ch)
+            if 0==index:
+               step=1
+            elif index ==  numRows - 1:
+                step = -1
+            index=index +step
+        for  i in  range(numRows):
+            rows[i]=''.join(rows[i])
+        return  ''.join(rows)

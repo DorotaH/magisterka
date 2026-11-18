@@ -1,0 +1,17 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/92ff996a28b37d6342475a4d06fe44320e9c0b2d54426bb13482a5ee393e2650/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,9 +19,9 @@
+ 					cur += prev_count * 6
+ 			else:
+ 				if prev == '*':
+-					cur += prev_count * 2 if o < 7 else prev_count
++					cur += prev_count * 2 if 7 > o else prev_count
+ 				else:
+-					if o < 7 and prev == '2' or prev == '1':
++					if 7 > o and prev == '2' or prev == '1':
+ 						cur += prev_count
+ 			prev_count, count = count, cur % mod
+ 			prev = c
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/92ff996a28b37d6342475a4d06fe44320e9c0b2d54426bb13482a5ee393e2650/with_tabs.py

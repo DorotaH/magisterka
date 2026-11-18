@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/51b89d18cb3d22b427bc7525f18cca6496571cb09ced5e01c7f782d8e3a804c0/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+         m, n = len(matrix), len(matrix[0])
+         res = []
+-        for o in range(0, min(m, n) // 2 + 1):
++        for o in range(0, 1 + min(m, n) // 2):
+             left = o
+             right = n - o - 1
+             up = o
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/51b89d18cb3d22b427bc7525f18cca6496571cb09ced5e01c7f782d8e3a804c0/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+             up = o
+             down = m - o - 1
+             print(left, right, up, down)
+-            if down < up or right < left:
++            if down < up or left > right:
+                 continue
+             # if up == down and left == right:
+             #    res.append(matrix[up][left])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/51b89d18cb3d22b427bc7525f18cca6496571cb09ced5e01c7f782d8e3a804c0/with_tabs.py

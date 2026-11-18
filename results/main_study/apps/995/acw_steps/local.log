@@ -1,0 +1,36 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/995/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+ 	if int(sqrt(abs(x)))**2 == abs(x):
+ 		return (y if x > 0 else -y)
+ 	else:
+-		return x * y
++		return y * x
+ 
+ n = int(input().strip())
+ ais = list(map(int, input().strip().split()))
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/995/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+ 		if abs(x) < p:
+ 			break
+ 	if int(sqrt(abs(x)))**2 == abs(x):
+-		return (y if x > 0 else -y)
++		return (y if 0 < x else -y)
+ 	else:
+ 		return y * x
+ 
+@@ -46,7 +46,7 @@
+ for l in range(n):
+ 	cnt = 0
+ 	for r in range(l, n):
+-		if bis[r] != 0 and prev[r] < l:
++		if bis[r] != 0 and l > prev[r]:
+ 			cnt += 1
+ 		res[max(cnt - 1, 0)] += 1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/995/acw_steps/with_tabs.py

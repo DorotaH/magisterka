@@ -1,0 +1,14 @@
+{
+  "generator_code": "import random\nimport string\n\ndef generate_test_case():\n    length = random.randint(1, 30)\n    s1 = ''.join(random.choice(string.ascii_lowercase) for _ in range(length))\n    s_list = list(s1)\n    random.shuffle(s_list)\n    s2 = ''.join(s_list)\n    return s1, s2",
+  "seed": 656270116905021057,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "great",
+        "rgeat"
+      ],
+      "expected": true
+    }
+  ]
+}

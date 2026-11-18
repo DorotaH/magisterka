@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/9fac5b65efa9fe342cd116a127ec5e1790e98be8a1463fa5d450ddfae00df1bb/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+         statistic = {}
+         for c in expression:
+             if c.isdigit() and int(c) in self.nums:
+-                statistic[c] = statistic.get(c, 0) + 1
++                statistic[c] = 1 + statistic.get(c, 0)
+ 
+         nums_used = statistic.copy()
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/9fac5b65efa9fe342cd116a127ec5e1790e98be8a1463fa5d450ddfae00df1bb/with_tabs.py

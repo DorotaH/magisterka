@@ -1,0 +1,30 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/0392e7f9078960618c1a0cf6fbf46384d05490fdecacd1b59fb677155a9d8ffa/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+             columns = ", ".join(columns)
+         query = f"SELECT {columns} FROM {table}"
+         if where:
+-            query += " AND ".join(f"{k}='{v}'" for k, v in where.items()) + " WHERE "
++            query += " WHERE " + " AND ".join(f"{k}='{v}'" for k, v in where.items())
+         return query
+ 
+     @staticmethod
+@@ -18,7 +18,7 @@
+     def delete(table, where=None):
+         query = f"DELETE FROM {table}"
+         if where:
+-            query += " AND ".join(f"{k}='{v}'" for k, v in where.items()) + " WHERE "
++            query += " WHERE " + " AND ".join(f"{k}='{v}'" for k, v in where.items())
+         return query
+ 
+     @staticmethod
+@@ -26,5 +26,5 @@
+         update_str = ", ".join(f"{k}='{v}'" for k, v in data.items())
+         query = f"UPDATE {table} SET {update_str}"
+         if where:
+-            query += " AND ".join(f"{k}='{v}'" for k, v in where.items()) + " WHERE "
++            query += " WHERE " + " AND ".join(f"{k}='{v}'" for k, v in where.items())
+         return query
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/0392e7f9078960618c1a0cf6fbf46384d05490fdecacd1b59fb677155a9d8ffa/with_tabs.py

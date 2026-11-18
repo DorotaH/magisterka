@@ -1,0 +1,27 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0ad82492a05ba754/acw_replay/2bf5b7f72873d074f1624f4b86609493fb6007d1f867af5f59b37c94e90497d4/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+ s = str(input())
+ n = len(s)
+ A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+-if n < 26:
++if 26 > n:
+     print(-1)
+ else:
+     for i in range(n-25):
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0ad82492a05ba754/acw_replay/2bf5b7f72873d074f1624f4b86609493fb6007d1f867af5f59b37c94e90497d4/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+         j = 0
+         for k in range(n):
+             if s[k] == "?":
+-                if k >= i and k < i+26:
++                if i <= k and k < i+26:
+                     while F[j] == 0:
+                         j += 1
+                     print(A[j],end="")
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0ad82492a05ba754/acw_replay/2bf5b7f72873d074f1624f4b86609493fb6007d1f867af5f59b37c94e90497d4/with_tabs.py

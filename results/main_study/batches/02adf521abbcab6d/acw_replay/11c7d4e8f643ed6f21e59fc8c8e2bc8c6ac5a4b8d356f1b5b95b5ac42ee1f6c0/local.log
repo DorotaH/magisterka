@@ -1,0 +1,42 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/11c7d4e8f643ed6f21e59fc8c8e2bc8c6ac5a4b8d356f1b5b95b5ac42ee1f6c0/without_tabs.py:
+--- Original
++++ Modified
+@@ -63,7 +63,7 @@
+ 
+ for i in range(N):
+     ff.add_edge(i + 1, T + i, 10**9)
+-    ff.add_edge(0, S + i, A[i])
++    ff.add_edge(0, i + S, A[i])
+     ff.add_edge(T + i, 2 * N + 1, B[i])
+ 
+ ans = [[0 for _ in range(N)] for _ in range(N)]
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/11c7d4e8f643ed6f21e59fc8c8e2bc8c6ac5a4b8d356f1b5b95b5ac42ee1f6c0/without_tabs.py:
+--- Original
++++ Modified
+@@ -52,7 +52,7 @@
+ A = list(map(int, input().split()))
+ B = list(map(int, input().split()))
+ 
+-ff = ford_fulkerson(N * 2 + 2)
++ff = ford_fulkerson(2 * N + 2)
+ S = 1
+ T = N + 1
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/11c7d4e8f643ed6f21e59fc8c8e2bc8c6ac5a4b8d356f1b5b95b5ac42ee1f6c0/without_tabs.py:
+--- Original
++++ Modified
+@@ -31,8 +31,8 @@
+         for i in range(len(self.G[v])):
+             edge = self.G[v][i]
+             if self.used[edge.to] is False and edge.cap > 0:
+-                d = self.dfs(edge.to, t, f if f < edge.cap else edge.cap)
+-                if d > 0:
++                d = self.dfs(edge.to, t, f if edge.cap > f else edge.cap)
++                if 0 < d:
+                     self.G[v][i].cap -= d
+                     self.G[edge.to][edge.rev].cap += d
+                     return d
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/11c7d4e8f643ed6f21e59fc8c8e2bc8c6ac5a4b8d356f1b5b95b5ac42ee1f6c0/with_tabs.py

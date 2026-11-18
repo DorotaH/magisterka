@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/6cacb78582cebc23d59b00afac1b43a7ed86bbf75bbb800348480f75c84cfed0/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+         nleft   = len(inorder[:rootloc])
+ 
+         root.left  = self.buildTree(preorder[1:1+nleft], inorder[:rootloc])
+-        root.right = self.buildTree(preorder[1+nleft:],  inorder[rootloc+1:])
++        root.right = self.buildTree(preorder[1+nleft:],  inorder[1+rootloc:])
+ 
+         return root
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/6cacb78582cebc23d59b00afac1b43a7ed86bbf75bbb800348480f75c84cfed0/with_tabs.py

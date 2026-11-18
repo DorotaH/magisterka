@@ -1,0 +1,32 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/98c26b0d9ff0b82e387035fb6abe62fd9f297e81d51e020088e00f3d7d08e775/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,12 +9,12 @@
+             x1, y1 = arr[i]
+             x2, y2 = arr[j]
+             xc = (x1 + x2) / 2
+-            yc = (y1 + y2) / 2
++            yc = (y2 + y1) / 2
+             xd = (x1 - x2) / 2
+             yd = (y1 - y2) / 2
+             x3 = xc - yd
+             y3 = yc + xd
+-            x4 = xc + yd
++            x4 = yd + xc
+             y4 = yc - xd
+             if (x3, y3) in set_arr:
+                 need -= 1
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/98c26b0d9ff0b82e387035fb6abe62fd9f297e81d51e020088e00f3d7d08e775/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ def main(arr):
+     ans = 2
+-    if len(arr) < 2:
++    if 2 > len(arr):
+         return 4 - len(arr)
+     set_arr = set(arr)
+     for i in range(len(arr)):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/98c26b0d9ff0b82e387035fb6abe62fd9f297e81d51e020088e00f3d7d08e775/with_tabs.py

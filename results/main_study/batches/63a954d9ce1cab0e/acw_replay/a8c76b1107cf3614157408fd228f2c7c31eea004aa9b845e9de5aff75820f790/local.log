@@ -1,0 +1,30 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/a8c76b1107cf3614157408fd228f2c7c31eea004aa9b845e9de5aff75820f790/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,17 +8,17 @@
+         k = k // 2
+ 
+     while k != n:
+-        pairs = n // (k * 2)
++        pairs = n // (2 * k)
+         for i in range(0, pairs * 2, 2):
+-            if a[k * i : k * (i + 1)] > a[k * (i + 1) : k * (i + 2)]:
+-                a[k * i : k * (i + 1)], a[k * (i + 1) : k * (i + 2)] = (
++            if a[i * k : k * (i + 1)] > a[k * (i + 1) : k * (i + 2)]:
++                a[i * k : k * (i + 1)], a[k * (i + 1) : k * (i + 2)] = (
+                     a[k * (i + 1) : k * (i + 2)],
+-                    a[k * i : k * (i + 1)],
++                    a[i * k : k * (i + 1)],
+                 )
+-            if b[k * i : k * (i + 1)] > b[k * (i + 1) : k * (i + 2)]:
+-                b[k * i : k * (i + 1)], b[k * (i + 1) : k * (i + 2)] = (
++            if b[i * k : k * (i + 1)] > b[k * (i + 1) : k * (i + 2)]:
++                b[i * k : k * (i + 1)], b[k * (i + 1) : k * (i + 2)] = (
+                     b[k * (i + 1) : k * (i + 2)],
+-                    b[k * i : k * (i + 1)],
++                    b[i * k : k * (i + 1)],
+                 )
+         k *= 2
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/a8c76b1107cf3614157408fd228f2c7c31eea004aa9b845e9de5aff75820f790/with_tabs.py

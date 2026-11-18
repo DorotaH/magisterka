@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/622a5115e78e054d308666720a3efcb4bef40ef7defa7f94e74512116a8a6c4e/without_tabs.py:
+--- Original
++++ Modified
+@@ -49,7 +49,7 @@
+ 
+     while True:
+         if a[iter] == 0:
+-            print(iter % n + 1)
++            print(1 + iter % n)
+             break
+         else:
+             if cur != 6:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/622a5115e78e054d308666720a3efcb4bef40ef7defa7f94e74512116a8a6c4e/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ 
+ 
+ def Lcm(x, y):
+-    return x * y // Gcd(x, y)
++    return y * x // Gcd(x, y)
+ 
+ 
+ n = int(input())
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/622a5115e78e054d308666720a3efcb4bef40ef7defa7f94e74512116a8a6c4e/without_tabs.py:
+--- Original
++++ Modified
+@@ -37,7 +37,7 @@
+         a[i] += d[i]
+         if d[i] == 0:
+             continue
+-        k = Min(k, a[i] // d[i]) if a[i] % d[i] > 0 else Min(k, a[i] // d[i] - 1)
++        k = Min(k, a[i] // d[i]) if 0 < a[i] % d[i] else Min(k, a[i] // d[i] - 1)
+     if k == 10**20:
+         k = 0
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/622a5115e78e054d308666720a3efcb4bef40ef7defa7f94e74512116a8a6c4e/with_tabs.py

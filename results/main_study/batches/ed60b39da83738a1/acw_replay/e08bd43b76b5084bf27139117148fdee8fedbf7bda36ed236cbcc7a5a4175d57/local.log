@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/e08bd43b76b5084bf27139117148fdee8fedbf7bda36ed236cbcc7a5a4175d57/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+             # bisect_right(x) will return index of rightmost position in sorted order, same as number of elements
+             # strictly less OR equals to x.
+             # For right boundary, want the largest element (ceiling)
+-            right_boundary = window.bisect_right(nums[right] + valueDiff)
++            right_boundary = window.bisect_right(valueDiff + nums[right])
+ 
+             # If there are elements between (less than or equal) and (less than), that means there must be something
+             # equal in the range [right - valueDiff, right + valueDiff]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/e08bd43b76b5084bf27139117148fdee8fedbf7bda36ed236cbcc7a5a4175d57/with_tabs.py

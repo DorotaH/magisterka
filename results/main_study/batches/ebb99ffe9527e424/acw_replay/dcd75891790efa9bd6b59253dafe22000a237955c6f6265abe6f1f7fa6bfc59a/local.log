@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/dcd75891790efa9bd6b59253dafe22000a237955c6f6265abe6f1f7fa6bfc59a/without_tabs.py:
+--- Original
++++ Modified
+@@ -88,7 +88,7 @@
+         elif s[1] == "0":
+             return self.NUMBER_TEN[int(s[0]) - 1]
+         else:
+-            return self.NUMBER_TEN[int(s[0]) - 1] + " " + self.NUMBER[int(s[-1])]
++            return " " + self.NUMBER_TEN[int(s[0]) - 1] + self.NUMBER[int(s[-1])]
+ 
+     def trans_three(self, s):
+         if s[0] == "0":
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/dcd75891790efa9bd6b59253dafe22000a237955c6f6265abe6f1f7fa6bfc59a/without_tabs.py:
+--- Original
++++ Modified
+@@ -61,7 +61,7 @@
+     def format_string(self, x):
+         lstr, rstr = (x.split(".") + [""])[:2]
+         lstrrev = lstr[::-1]
+-        a = [""] * 5
++        a = 5 * [""]
+ 
+         if len(lstrrev) % 3 == 1:
+             lstrrev += "00"
+@@ -70,7 +70,7 @@
+ 
+         lm = ""
+         for i in range(len(lstrrev) // 3):
+-            a[i] = lstrrev[3 * i : 3 * i + 3][::-1]
++            a[i] = lstrrev[i * 3 : i * 3 + 3][::-1]
+             if a[i] != "000":
+                 lm = self.trans_three(a[i]) + " " + self.parse_more(i) + " " + lm
+             else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/dcd75891790efa9bd6b59253dafe22000a237955c6f6265abe6f1f7fa6bfc59a/with_tabs.py

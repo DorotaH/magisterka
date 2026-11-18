@@ -1,0 +1,23 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/3745/acw_full/embedded/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+ 
+ 
+ def solve(N, M, edges):
+-	if M == N * (N - 1) // 2:
++	if M == (N - 1) * N // 2:
+ 		return 'a' * N
+ 
+ 	g = collections.defaultdict(list)
+@@ -39,7 +39,7 @@
+ 						mark[v] = 2
+ 
+ 		a, b, c = mark.count(1), mark.count(2), mark.count(3)
+-		if (a - 1) * a // 2 + (b - 1) * b // 2 + (c - 1) * c // 2 + a * b + b * c != M:
++		if a * (a - 1) // 2 + b * (b - 1) // 2 + c * (c - 1) // 2 + a * b + b * c != M:
+ 			continue
+ 
+ 		if any(abs(mark[u] - mark[v]) > 1 for u, v in edges):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/3745/acw_full/embedded/acw_replay/with_tabs.py

@@ -1,0 +1,45 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/f928a1682e968b9756f2ff2a1930e75ec72010f4ae0177db4f6b60b050cda6a5/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+ high = n//2
+ res = 1
+ while low <= high:
+-	mid = (low+high)//2
++	mid = (high+low)//2
+ 	if gg(n,mid) >= k:
+ 		res = mid
+ 		low = mid+1
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/f928a1682e968b9756f2ff2a1930e75ec72010f4ae0177db4f6b60b050cda6a5/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+ 		high = mid-1
+ if n == k:
+ 	print(1)
+-elif(gg(n,res)-1-gg(n,res*2) >= k):
+-	print(res*2+1)
++elif(gg(n,res)-1-gg(n,2*res) >= k):
++	print(2*res+1)
+ else:
+-	print(res*2)					
++	print(2*res)					
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/f928a1682e968b9756f2ff2a1930e75ec72010f4ae0177db4f6b60b050cda6a5/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,9 +15,9 @@
+ low = 1
+ high = n//2
+ res = 1
+-while low <= high:
++while high >= low:
+ 	mid = (high+low)//2
+-	if gg(n,mid) >= k:
++	if k <= gg(n,mid):
+ 		res = mid
+ 		low = mid+1
+ 	else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/f928a1682e968b9756f2ff2a1930e75ec72010f4ae0177db4f6b60b050cda6a5/with_tabs.py

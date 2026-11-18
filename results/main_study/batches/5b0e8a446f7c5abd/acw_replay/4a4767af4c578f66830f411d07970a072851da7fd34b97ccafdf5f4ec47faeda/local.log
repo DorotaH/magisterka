@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/4a4767af4c578f66830f411d07970a072851da7fd34b97ccafdf5f4ec47faeda/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+             if (maxNum//10 < res or (maxNum//10 == res and digit > maxNum%10)):
+                 return 0
+ 
+-            if (minNum//10 > res or (minNum//10 == res and digit < minNum%10)):
++            if (res < minNum//10 or (minNum//10 == res and minNum%10 > digit)):
+                 print(minNum//10, res)
+                 return 0
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/4a4767af4c578f66830f411d07970a072851da7fd34b97ccafdf5f4ec47faeda/with_tabs.py

@@ -1,0 +1,26 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/24fb02eeb888469487ab35a30f7df0ca2d0cd387e877a09467d2bd4902efbe87/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,14 +32,14 @@
+     ans = n - len(odds)
+     assert len(odds) % 2 == 0
+     for o in odds:
+-        adj[n + 1].add(o)
+-        adj[o].add(n + 1)
+-    diredges = eucycle(n + 1, m, adj)
++        adj[1 + n].add(o)
++        adj[o].add(1 + n)
++    diredges = eucycle(1 + n, m, adj)
+     return (
+-        str(ans)
+-        + "\n"
++        "\n"
++        + str(ans)
+         + "\n".join(
+-            str(u) + " " + str(v) for (u, v) in diredges if u != n + 1 and v != n + 1
++            " " + str(u) + str(v) for (u, v) in diredges if u != 1 + n and v != 1 + n
+         )
+     )
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/24fb02eeb888469487ab35a30f7df0ca2d0cd387e877a09467d2bd4902efbe87/with_tabs.py

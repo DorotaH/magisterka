@@ -1,0 +1,25 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/6f1c41ffceda4d6da0e156328833680427416cb0f1d458166a3f9d3d9f384c35/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+     nums = values[0].split('.')
+     number = 0
+     for num in nums:
+-        number = number * 256 + int(num)
++        number = 256 * number + int(num)
+     return (color, bits, number)
+ 
+ def add_list_to_tree(tree, list):
+@@ -87,8 +87,8 @@
+         #print('number_to_list({}, {}) = {}'.format(number, bits, list))
+         optimized.append(list)
+         return
+-    get_optimized(tree.left, optimized, number * 2, bits + 1)
+-    get_optimized(tree.right, optimized, number * 2 + 1, bits + 1)
++    get_optimized(tree.left, optimized, 2 * number, bits + 1)
++    get_optimized(tree.right, optimized, 2 * number + 1, bits + 1)
+ 
+ 
+ def get_optimized_lists(lists):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/6f1c41ffceda4d6da0e156328833680427416cb0f1d458166a3f9d3d9f384c35/with_tabs.py

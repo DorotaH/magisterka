@@ -1,0 +1,59 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/28fe4c5beaff47198b24315ba7f90825442422b1971746ac5ef38101083ad5f2/without_tabs.py:
+--- Original
++++ Modified
+@@ -34,7 +34,7 @@
+         i     = 0
+         while i < len(words):
+             res=len(words[i])+1
+-            if s+res-1 > maxWidth:
++            if res+s-1 > maxWidth:
+                 res_p+=self.adjustLine(gt,s,maxWidth),
+                 gt = []
+                 s  = 0
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/28fe4c5beaff47198b24315ba7f90825442422b1971746ac5ef38101083ad5f2/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,12 +16,12 @@
+         sp  = maxWidth-(count_characters-1)
+ 
+         if word_count <= 1:
+-            return words_line[0]+" "*sp
++            return words_line[0]+sp*" "
+         wr  = 0 if  word_count < 2 else math.ceil(sp/(word_count-1))
+         for sub_i in range(word_count-1):
+             if sp > 0:
+                 wr  = math.ceil(sp/(word_count-sub_i-1))
+-                words_line[sub_i]+=" "+(" "*wr)
++                words_line[sub_i]+=" "+(wr*" ")
+                 sp -= wr
+             else:
+                 words_line[sub_i]+=" "
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/28fe4c5beaff47198b24315ba7f90825442422b1971746ac5ef38101083ad5f2/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+ 
+         if word_count <= 1:
+             return words_line[0]+sp*" "
+-        wr  = 0 if  word_count < 2 else math.ceil(sp/(word_count-1))
++        wr  = 0 if  2 > word_count else math.ceil(sp/(word_count-1))
+         for sub_i in range(word_count-1):
+             if sp > 0:
+                 wr  = math.ceil(sp/(word_count-sub_i-1))
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/28fe4c5beaff47198b24315ba7f90825442422b1971746ac5ef38101083ad5f2/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+ 
+         sp  = maxWidth-(count_characters-1)
+ 
+-        if word_count <= 1:
++        if 1 >= word_count:
+             return words_line[0]+sp*" "
+         wr  = 0 if  2 > word_count else math.ceil(sp/(word_count-1))
+         for sub_i in range(word_count-1):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/28fe4c5beaff47198b24315ba7f90825442422b1971746ac5ef38101083ad5f2/with_tabs.py

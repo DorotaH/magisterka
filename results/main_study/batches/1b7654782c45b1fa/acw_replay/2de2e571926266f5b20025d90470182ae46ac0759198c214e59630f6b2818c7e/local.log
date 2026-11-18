@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/2de2e571926266f5b20025d90470182ae46ac0759198c214e59630f6b2818c7e/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ 3
+ 
+ s = input()
+-alph = "".join([chr(x + ord("a")) for x in range(26)])
++alph = "".join([chr(ord("a") + x) for x in range(26)])
+ l = [[]]
+ for x in s:
+     if x not in alph:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/2de2e571926266f5b20025d90470182ae46ac0759198c214e59630f6b2818c7e/with_tabs.py

@@ -1,0 +1,15 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/9ad059e5f7966625cfb7674954cb5fd471d3b495107b7b514818c489b2aaaa96/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,8 +33,8 @@
+         for course in self.courses:
+             start_time = datetime.strptime(course['start_time'], '%H:%M')
+             end_time = datetime.strptime(course['end_time'], '%H:%M')
+-            if start_time <= new_start_time and end_time >= new_start_time:
++            if start_time <= new_start_time and new_start_time <= end_time:
+                 flag = False
+-            if start_time <= new_end_time and end_time >= new_end_time:
++            if start_time <= new_end_time and new_end_time <= end_time:
+                 flag = False
+         return flag
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/9ad059e5f7966625cfb7674954cb5fd471d3b495107b7b514818c489b2aaaa96/with_tabs.py

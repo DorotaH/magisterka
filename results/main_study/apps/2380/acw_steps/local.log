@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2380/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ import math
+ from math import gcd,pi,sqrt
+ INF = float("inf")
+-MOD = 10**9 + 7
++MOD = 7 + 10**9
+ 
+ import sys
+ sys.setrecursionlimit(10**6)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2380/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -31,7 +31,7 @@
+ 
+     temp = []
+     for i in range(M):
+-        temp += [BC[i][1]] * BC[i][0]
++        temp += BC[i][0] * [BC[i][1]]
+         if len(temp) > N:
+             break
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2380/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+     temp = []
+     for i in range(M):
+         temp += BC[i][0] * [BC[i][1]]
+-        if len(temp) > N:
++        if N < len(temp):
+             break
+ 
+     A += temp
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2380/acw_steps/with_tabs.py

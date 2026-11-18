@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/b53ee3babe30eacbfcfbfc9e0a8eef7ff68f381be5a38ea3aa794ec26953db9c/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+             answer.append(top - bottom)
+         else:
+             bottom = max(bottom, link + k)
+-            answer.append(max(0, top - bottom) + answer[link - 1])
++            answer.append(answer[link - 1] + max(0, top - bottom))
+ 
+     print(" ".join(map(str, answer)))
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/b53ee3babe30eacbfcfbfc9e0a8eef7ff68f381be5a38ea3aa794ec26953db9c/with_tabs.py

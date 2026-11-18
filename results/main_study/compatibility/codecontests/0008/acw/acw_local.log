@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/compatibility/codecontests/0008/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+         pwrt[i].sort(reverse=True)
+         # print(pwrt[i])
+         j, s = 0, 0
+-        while j < n and s + pwrt[i][j] > 0:
++        while j < n and pwrt[i][j] + s > 0:
+             s += pwrt[i][j]
+             j += 1
+         h.add(j)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/compatibility/codecontests/0008/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+         pwrt[i].sort(reverse=True)
+         # print(pwrt[i])
+         j, s = 0, 0
+-        while j < n and pwrt[i][j] + s > 0:
++        while n > j and pwrt[i][j] + s > 0:
+             s += pwrt[i][j]
+             j += 1
+         h.add(j)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/compatibility/codecontests/0008/acw/watermarked.py

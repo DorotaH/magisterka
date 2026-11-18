@@ -1,0 +1,78 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/44e1de8e377f3e86f89c0007b8180ba6e9a818880dfc5011c848dbe32b0fc312/without_tabs.py:
+--- Original
++++ Modified
+@@ -144,7 +144,7 @@
+         numnums = [str(i) + " " + str(i+1) for i in range(nmax)]
+         test += "\n".join(numnums) + "\n"
+         nums = [random.randint(1, 10000) for _ in range(nmax)]
+-        test += " ".join(map(str, nums)) + "\n"
++        test += "\n" + " ".join(map(str, nums))
+ 
+         # Run the test
+         start = timeit.default_timer()
+@@ -152,8 +152,8 @@
+         calc = timeit.default_timer()
+         d.calculate()
+         stop = timeit.default_timer()
+-        print("\nTimelimit Test: " +
+-              f"{stop-start:.3f}s (init {calc-start:.3f}s calc {stop-calc:.3f}s)")
++        print(f"{stop-start:.3f}s (init {calc-start:.3f}s calc {stop-calc:.3f}s)" +
++              "\nTimelimit Test: ")
+ 
+ def __starting_point():
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/44e1de8e377f3e86f89c0007b8180ba6e9a818880dfc5011c848dbe32b0fc312/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+     w = 32
+     r = (i // m) // w
+     c = (i % m) // w
+-    j = r * mw + c
++    j = mw * r + c
+     if j < len(rc) and rc[j] == 0:
+         rc[j] = 1
+         return True, r, c
+@@ -25,7 +25,7 @@
+     w = 32
+     for r in range(w):
+         for c in range(w):
+-            i = (r0 * w + r) * m + (c0 * w + c)
++            i = (r0 * w + r) * m + (w * c0 + c)
+             if (r == 0 or r == w - 1 or c == 0 or c == w - 1):
+                 if a[i] == 0:
+                     to_visit.append(i)
+@@ -61,7 +61,7 @@
+             rc += [sum(row[i*w:i*w+w]) for i in range(mw)]
+         for i in range(nw):
+             j = i*mw*w
+-            rr += [sum(rc[j+u*mw+v] for u in range(w)) for v in range(mw)]
++            rr += [sum(rc[j+mw*u+v] for u in range(w)) for v in range(mw)]
+         to_visit = deque()
+         for _ in range(k):
+             x0, y0 = [int(x)-1 for x in uinput().split()]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/44e1de8e377f3e86f89c0007b8180ba6e9a818880dfc5011c848dbe32b0fc312/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+     r = (i // m) // w
+     c = (i % m) // w
+     j = mw * r + c
+-    if j < len(rc) and rc[j] == 0:
++    if len(rc) > j and rc[j] == 0:
+         rc[j] = 1
+         return True, r, c
+     return False, 0, 0
+@@ -67,7 +67,7 @@
+             x0, y0 = [int(x)-1 for x in uinput().split()]
+             i0 = x0*m+y0
+             step = 0
+-            if a[i0] > 3:
++            if 3 < a[i0]:
+                 self.result.append(a[i0])
+             else:
+                 ans = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/44e1de8e377f3e86f89c0007b8180ba6e9a818880dfc5011c848dbe32b0fc312/with_tabs.py

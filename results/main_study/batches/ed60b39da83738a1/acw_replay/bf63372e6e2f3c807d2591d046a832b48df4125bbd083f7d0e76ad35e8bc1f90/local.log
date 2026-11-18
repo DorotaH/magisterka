@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/bf63372e6e2f3c807d2591d046a832b48df4125bbd083f7d0e76ad35e8bc1f90/without_tabs.py:
+--- Original
++++ Modified
+@@ -34,7 +34,7 @@
+             # rt[:n-1] = rt[1:n]-x[index]
+             # rt[n-1] = rt[n-2] + x[index]
+             min_v = min(min_v - x[index], sum_v)
+-            index = index + 1
++            index = 1 + index
+ 
+         return -1
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/bf63372e6e2f3c807d2591d046a832b48df4125bbd083f7d0e76ad35e8bc1f90/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+             # print(index)
+             # print(rt)
+             # print('min',min_v)
+-            if min_v >= 0:
++            if 0 <= min_v:
+                 return index
+             if index == n - 1:
+                 break
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/bf63372e6e2f3c807d2591d046a832b48df4125bbd083f7d0e76ad35e8bc1f90/with_tabs.py

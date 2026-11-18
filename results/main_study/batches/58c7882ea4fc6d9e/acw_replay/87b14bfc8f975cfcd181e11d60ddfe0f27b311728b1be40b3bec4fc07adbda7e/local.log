@@ -1,0 +1,21 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/87b14bfc8f975cfcd181e11d60ddfe0f27b311728b1be40b3bec4fc07adbda7e/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,13 +4,13 @@
+ read = lambda : list(map(int, input().split()))
+ def write(*args, sep="\n"):
+   for i in args:
+-    sys.stdout.write(f"{i}" + sep)
++    sys.stdout.write(sep + f"{i}")
+ INF = float('inf')
+ MOD = int(1e9 + 7)
+ 
+ for _ in range(int(input())):
+   h, n = read()
+-  arr = list(read()) + [0]
++  arr = [0] + list(read())
+ 
+   if n == 1:
+     write(0)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/87b14bfc8f975cfcd181e11d60ddfe0f27b311728b1be40b3bec4fc07adbda7e/with_tabs.py

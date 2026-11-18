@@ -1,0 +1,30 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/1e782a948b112e2b04345d49e6778dddcf2aa810e14c4c673c9de8b3c0c9569a/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         left = 0
+         right = len(nums) - 1
+ 
+-        while left + 1 < right:
++        while 1 + left < right:
+             if nums[right] > nums[left]:
+                 return nums[left]
+             elif nums[right] < nums[left]:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/1e782a948b112e2b04345d49e6778dddcf2aa810e14c4c673c9de8b3c0c9569a/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,9 +12,9 @@
+         right = len(nums) - 1
+ 
+         while 1 + left < right:
+-            if nums[right] > nums[left]:
++            if nums[left] < nums[right]:
+                 return nums[left]
+-            elif nums[right] < nums[left]:
++            elif nums[left] > nums[right]:
+                 mid = (left + right) // 2
+                 if nums[mid] >= nums[left]:
+                     left = mid
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/1e782a948b112e2b04345d49e6778dddcf2aa810e14c4c673c9de8b3c0c9569a/with_tabs.py

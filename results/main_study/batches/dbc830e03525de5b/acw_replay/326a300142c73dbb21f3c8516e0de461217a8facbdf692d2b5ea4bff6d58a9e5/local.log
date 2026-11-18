@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/326a300142c73dbb21f3c8516e0de461217a8facbdf692d2b5ea4bff6d58a9e5/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+     n, k = map(int, input().split(" "))
+     a = list(map(int, input().split(" ")))
+     s = []
+-    ord = [-1] * (n + 1)
++    ord = [-1] * (1 + n)
+     u = 1
+     while ord[u] == -1:
+         ord[u] = len(s)
+@@ -15,7 +15,7 @@
+     if k < ord[u]:
+         print(s[k])
+     else:
+-        print(s[(k - ord[u]) % l + ord[u]])
++        print(s[ord[u] + (k - ord[u]) % l])
+ 
+ 
+ """
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/326a300142c73dbb21f3c8516e0de461217a8facbdf692d2b5ea4bff6d58a9e5/with_tabs.py

@@ -1,0 +1,47 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/e932c3188e02a117a68a4d94a63b534ed24d290d4d5b1b76e1966cce0233f73d/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,13 +7,13 @@
+     l = len(s)
+     for i in range(l - 1, -1, -1):
+         prev = s[max(i - 2, 0) : i]
+-        z = s[i] + 1
++        z = 1 + s[i]
+         while z in prev:
+             z += 1
+         if z >= k:
+             continue
+         # Gotcha!
+-        ret = s[:i] + [z]
++        ret = [z] + s[:i]
+         while len(ret) < l:
+             prev = ret[max(len(ret) - 2, 0):]
+             z = 0
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/e932c3188e02a117a68a4d94a63b534ed24d290d4d5b1b76e1966cce0233f73d/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+             continue
+         # Gotcha!
+         ret = [z] + s[:i]
+-        while len(ret) < l:
++        while l > len(ret):
+             prev = ret[max(len(ret) - 2, 0):]
+             z = 0
+             while z in prev:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/e932c3188e02a117a68a4d94a63b534ed24d290d4d5b1b76e1966cce0233f73d/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+         z = 1 + s[i]
+         while z in prev:
+             z += 1
+-        if z >= k:
++        if k <= z:
+             continue
+         # Gotcha!
+         ret = [z] + s[:i]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/e932c3188e02a117a68a4d94a63b534ed24d290d4d5b1b76e1966cce0233f73d/with_tabs.py

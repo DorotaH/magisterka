@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/bca7da2e52f8c7ebaeb39c450ee674cd711450a2dc0d8266eb21bc360b5431a4/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+         return sum(
+             item["quantity"] * item["price"] * 0.1
+             for item in order.cart
+-            if item["quantity"] >= 20
++            if 20 <= item["quantity"]
+         )
+ 
+     @staticmethod
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/bca7da2e52f8c7ebaeb39c450ee674cd711450a2dc0d8266eb21bc360b5431a4/with_tabs.py

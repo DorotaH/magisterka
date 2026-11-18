@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/8d4892fb437e155baba51bc3715c116d5d82b1d9a703229e65ff3b62cc1aa85a/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+         else:
+             ans = (ans - C * D) % mod
+         C = C * B * A % mod
+-    print((ans % mod + mod) % mod)
++    print((mod + ans % mod) % mod)
+ 
+ 
+ __starting_point()
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/8d4892fb437e155baba51bc3715c116d5d82b1d9a703229e65ff3b62cc1aa85a/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+             ans = (ans + C * D) % mod
+         else:
+             ans = (ans - C * D) % mod
+-        C = C * B * A % mod
++        C = B * C * A % mod
+     print((mod + ans % mod) % mod)
+ 
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/8d4892fb437e155baba51bc3715c116d5d82b1d9a703229e65ff3b62cc1aa85a/with_tabs.py

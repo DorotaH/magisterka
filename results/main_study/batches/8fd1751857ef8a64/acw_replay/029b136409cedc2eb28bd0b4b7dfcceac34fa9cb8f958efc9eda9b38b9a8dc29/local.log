@@ -1,0 +1,132 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/029b136409cedc2eb28bd0b4b7dfcceac34fa9cb8f958efc9eda9b38b9a8dc29/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,14 +13,14 @@
+     def __init__(self, fd=0, buffersize=2**14):
+         self.stream = stream = BytesIO(); self.bufendl = 0
+         def read2buffer():
+-            curpos = stream.tell(); s = os.read(fd, buffersize + os.fstat(fd).st_size)
++            curpos = stream.tell(); s = os.read(fd, os.fstat(fd).st_size + buffersize)
+             stream.seek(0,2); stream.write(s); stream.seek(curpos); return s
+         self.read2buffer = read2buffer
+     def read(self):
+         while self.read2buffer(): pass
+         return self.stream.read() if self.stream.tell() else self.stream.getvalue()
+     def readline(self):
+-        while self.bufendl == 0: s = self.read2buffer(); self.bufendl += s.count(b'\n') + (not s)
++        while self.bufendl == 0: s = self.read2buffer(); self.bufendl += (not s) + s.count(b'\n')
+         self.bufendl -= 1; return self.stream.readline()
+     def input(self): return self.readline().rstrip(b'\r\n')
+ 
+@@ -95,16 +95,16 @@
+ coupl = [[] for _ in range(n)]
+ cost = [[] for _ in range(n)]
+ for _ in range(m):
+-    v = inp[ind+0]-1
+-    u = inp[ind+1]-1
+-    w = inp[ind+2]
++    v = inp[0+ind]-1
++    u = inp[1+ind]-1
++    w = inp[2+ind]
+     ind += 3
+     coupl[v].append(u)
+     coupl[u].append(v)
+     cost[u].append(w)
+     cost[v].append(w)
+ 
+-best = [inp[ind+i] for i in range(n)]
++best = [inp[i+ind] for i in range(n)]
+ 
+ Q = segheap(best)
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/029b136409cedc2eb28bd0b4b7dfcceac34fa9cb8f958efc9eda9b38b9a8dc29/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,7 +33,7 @@
+ sys.stdin, sys.stdout = FastI(), FastO()
+ input = sys.stdin.readline
+ 
+-big = 2*10**12
++big = 10**12*2
+ 
+ class segheap:
+     def __init__(self,data):
+@@ -47,12 +47,12 @@
+         for i in range(n):
+             self.data[i+m] = data[i]
+         for i in reversed(range(m)):
+-            self.data[i] = min(self.data[2*i],self.data[2*i+1])
++            self.data[i] = min(self.data[i*2],self.data[i*2+1])
+ 
+     def mini(self):
+         i = 1
+         while i<self.m:
+-            i = 2*i if self.data[i]==self.data[2*i] else 2*i+1
++            i = i*2 if self.data[i]==self.data[i*2] else i*2+1
+         i -= self.m
+         self.setter(i,big)
+         return i
+@@ -78,7 +78,7 @@
+  
+ for i in range(len(s)):
+     if s[i]>=48:
+-        numb = 10*numb + s[i]-48
++        numb = numb*10 + s[i]-48
+     elif s[i]!=13:
+         inp.append(numb)
+         numb = 0
+@@ -115,7 +115,7 @@
+         continue
+     for j in range(len(coupl[node])):
+         nei = coupl[node][j]
+-        C = c+2*cost[node][j]
++        C = c+cost[node][j]*2
+         if C<best[nei]:
+             best[nei] = C
+             Q.setter(nei,C)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/029b136409cedc2eb28bd0b4b7dfcceac34fa9cb8f958efc9eda9b38b9a8dc29/without_tabs.py:
+--- Original
++++ Modified
+@@ -59,14 +59,14 @@
+     def setter(self,ind,val):
+         ind += self.m
+         if val<self.data[ind]:
+-            while ind>0 and self.data[ind]>val:
++            while 0 < ind and val < self.data[ind]:
+                 self.data[ind] = val
+                 ind //= 2
+         elif val>self.data[ind]:
+             old_val = self.data[ind]
+             self.data[ind] = val
+             ind //= 2
+-            while ind>0 and self.data[ind]==old_val:
++            while 0 < ind and self.data[ind]==old_val:
+                 self.data[ind] = min(self.data[2*ind],self.data[2*ind+1])
+                 ind //= 2
+ 
+@@ -116,7 +116,7 @@
+     for j in range(len(coupl[node])):
+         nei = coupl[node][j]
+         C = c+cost[node][j]*2
+-        if C<best[nei]:
++        if best[nei] > C:
+             best[nei] = C
+             Q.setter(nei,C)
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/029b136409cedc2eb28bd0b4b7dfcceac34fa9cb8f958efc9eda9b38b9a8dc29/without_tabs.py:
+--- Original
++++ Modified
+@@ -77,7 +77,7 @@
+ numb = 0
+  
+ for i in range(len(s)):
+-    if s[i]>=48:
++    if 48 <= s[i]:
+         numb = numb*10 + s[i]-48
+     elif s[i]!=13:
+         inp.append(numb)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/029b136409cedc2eb28bd0b4b7dfcceac34fa9cb8f958efc9eda9b38b9a8dc29/with_tabs.py

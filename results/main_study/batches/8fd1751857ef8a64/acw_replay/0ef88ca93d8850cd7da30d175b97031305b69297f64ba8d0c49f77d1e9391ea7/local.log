@@ -1,0 +1,67 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/0ef88ca93d8850cd7da30d175b97031305b69297f64ba8d0c49f77d1e9391ea7/without_tabs.py:
+--- Original
++++ Modified
+@@ -91,7 +91,7 @@
+ 				total += val
+ 			else:
+ 				opt = max(opt, val)
+-		if total + opt >= k:
++		if opt + total >= k:
+ 			return True
+ 	return False
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/0ef88ca93d8850cd7da30d175b97031305b69297f64ba8d0c49f77d1e9391ea7/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+ def good(guess):
+ 	cnt = [0] * n
+ 	for i in order:
+-		if a[i] < guess:
++		if guess > a[i]:
+ 			continue
+ 		cnt[i] = 1
+ 		opt = 0
+@@ -47,7 +47,7 @@
+ 		return True
+ 	up = [0] * n
+ 	for i in order[::-1]:
+-		if a[i] < guess:
++		if guess > a[i]:
+ 			continue
+ 		opt, secondOpt = 0, 0
+ 		total = 1
+@@ -61,7 +61,7 @@
+ 				size = n - sub[i]
+ 			if val == size:
+ 				total += val
+-			elif opt < val:
++			elif val > opt:
+ 				opt, secondOpt = val, opt
+ 			elif secondOpt < val:
+ 				secondOpt = val
+@@ -76,7 +76,7 @@
+ 					add = secondOpt
+ 				up[j] += add
+ 	for i in range(n):
+-		if a[i] < guess:
++		if guess > a[i]:
+ 			continue
+ 		total, opt = 1, 0
+ 		for j in g[i]:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/0ef88ca93d8850cd7da30d175b97031305b69297f64ba8d0c49f77d1e9391ea7/without_tabs.py:
+--- Original
++++ Modified
+@@ -43,7 +43,7 @@
+ 				else:
+ 					opt = max(opt, cnt[j])
+ 		cnt[i] += opt
+-	if cnt[0] >= k:
++	if k <= cnt[0]:
+ 		return True
+ 	up = [0] * n
+ 	for i in order[::-1]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/0ef88ca93d8850cd7da30d175b97031305b69297f64ba8d0c49f77d1e9391ea7/with_tabs.py

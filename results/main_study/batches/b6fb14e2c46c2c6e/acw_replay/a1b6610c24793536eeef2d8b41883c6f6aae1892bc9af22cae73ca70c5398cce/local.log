@@ -1,0 +1,19 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/a1b6610c24793536eeef2d8b41883c6f6aae1892bc9af22cae73ca70c5398cce/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,11 +15,11 @@
+ 	dots = count_surrounding_intact_ices(maze, r2, c2)
+ 	if maze[r2][c2] == False:
+ 		return (
+-			dots >= 1
++			1 <= dots
+ 			if r1 == r2 and c1 == c2
+ 			else solve_wfs(n, m, maze, r1, c1, r2, c2)
+ 		)
+-	if dots >= 2:
++	if 2 <= dots:
+ 		return solve_wfs(n, m, maze, r1, c1, r2, c2)
+ 	if dots == 0:
+ 		return False
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/a1b6610c24793536eeef2d8b41883c6f6aae1892bc9af22cae73ca70c5398cce/with_tabs.py

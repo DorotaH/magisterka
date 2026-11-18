@@ -1,0 +1,33 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_56/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,15 +18,15 @@
+ 
+     def precision(self, predicted_labels, true_labels):
+         self.update(predicted_labels, true_labels)
+-        if self.true_positives + self.false_positives == 0:
++        if self.false_positives + self.true_positives == 0:
+             return 0.0
+-        return self.true_positives / (self.true_positives + self.false_positives)
++        return self.true_positives / (self.false_positives + self.true_positives)
+ 
+     def recall(self, predicted_labels, true_labels):
+         self.update(predicted_labels, true_labels)
+-        if self.true_positives + self.false_negatives == 0:
++        if self.false_negatives + self.true_positives == 0:
+             return 0.0
+-        return self.true_positives / (self.true_positives + self.false_negatives)
++        return self.true_positives / (self.false_negatives + self.true_positives)
+ 
+     def f1_score(self, predicted_labels, true_labels):
+         self.update(predicted_labels, true_labels)
+@@ -38,7 +38,7 @@
+ 
+     def accuracy(self, predicted_labels, true_labels):
+         self.update(predicted_labels, true_labels)
+-        total = self.true_positives + self.true_negatives + self.false_positives + self.false_negatives
++        total = self.true_negatives + self.true_positives + self.false_positives + self.false_negatives
+         if total == 0:
+             return 0.0
+-        return (self.true_positives + self.true_negatives) / total+        return (self.true_negatives + self.true_positives) / total
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_56/acw_steps/with_tabs.py

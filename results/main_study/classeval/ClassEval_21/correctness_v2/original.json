@@ -1,0 +1,595 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_21/original/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_21/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.ClassroomTestAddCourse.test_add_course_1\": [[\"assertIn\", 2]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_2\": [[\"assertIn\", 2]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_3\": [[\"assertIn\", 2]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_4\": [[\"assertIn\", 2]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_5\": [[\"assertIn\", 2]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_6\": [[\"assertIn\", 2]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_1\": [[\"assertTrue\", 1]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_2\": [[\"assertFalse\", 1]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_3\": [[\"assertFalse\", 1]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_4\": [[\"assertFalse\", 1]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_5\": [[\"assertTrue\", 1]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_6\": [[\"assertFalse\", 1]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_1\": [[\"assertTrue\", 1]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_2\": [[\"assertFalse\", 1]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_3\": [[\"assertTrue\", 1]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_4\": [[\"assertTrue\", 1]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_5\": [[\"assertFalse\", 1]], \"benchmark_case.ClassroomTestMain.test_main\": [[\"assertIn\", 2], [\"assertNotIn\", 2], [\"assertIn\", 2], [\"assertFalse\", 1], [\"assertFalse\", 1]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_1\": [[\"assertNotIn\", 2]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_2\": [[\"assertNotIn\", 2]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_3\": [[\"assertNotIn\", 2]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_4\": [[\"assertNotIn\", 2]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_5\": [[\"assertNotIn\", 2]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_6\": [[\"assertNotIn\", 2]]}, \"errors\": [], \"failures\": [], \"log\": \"test_add_course_1 (benchmark_case.ClassroomTestAddCourse.test_add_course_1) ... ok\\ntest_add_course_2 (benchmark_case.ClassroomTestAddCourse.test_add_course_2) ... ok\\ntest_add_course_3 (benchmark_case.ClassroomTestAddCourse.test_add_course_3) ... ok\\ntest_add_course_4 (benchmark_case.ClassroomTestAddCourse.test_add_course_4) ... ok\\ntest_add_course_5 (benchmark_case.ClassroomTestAddCourse.test_add_course_5) ... ok\\ntest_add_course_6 (benchmark_case.ClassroomTestAddCourse.test_add_course_6) ... ok\\ntest_remove_course_1 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_1) ... ok\\ntest_remove_course_2 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_2) ... ok\\ntest_remove_course_3 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_3) ... ok\\ntest_remove_course_4 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_4) ... ok\\ntest_remove_course_5 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_5) ... ok\\ntest_remove_course_6 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_6) ... ok\\ntest_is_free_at_1 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_1) ... ok\\ntest_is_free_at_2 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_2) ... ok\\ntest_is_free_at_3 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_3) ... ok\\ntest_is_free_at_4 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_4) ... ok\\ntest_is_free_at_5 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_5) ... ok\\ntest_check_course_conflict_1 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_1) ... ok\\ntest_check_course_conflict_2 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_2) ... ok\\ntest_check_course_conflict_3 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_3) ... ok\\ntest_check_course_conflict_4 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_4) ... ok\\ntest_check_course_conflict_5 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_5) ... ok\\ntest_check_course_conflict_6 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_6) ... ok\\ntest_main (benchmark_case.ClassroomTestMain.test_main) ... ok\\n\\n----------------------------------------------------------------------\\nRan 24 tests in 0.006s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.ClassroomTestAddCourse.test_add_course_1\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_2\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_3\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_4\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_5\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"]], \"benchmark_case.ClassroomTestAddCourse.test_add_course_6\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"add_course\", \"null\"]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_1\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"check_course_conflict\", \"true\"]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_2\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"check_course_conflict\", \"false\"]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_3\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"check_course_conflict\", \"false\"]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_4\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"check_course_conflict\", \"false\"]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_5\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"check_course_conflict\", \"true\"]], \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_6\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"check_course_conflict\", \"false\"]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_1\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"is_free_at\", \"true\"]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_2\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"is_free_at\", \"false\"]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_3\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"is_free_at\", \"true\"]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_4\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"is_free_at\", \"true\"]], \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_5\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"is_free_at\", \"false\"]], \"benchmark_case.ClassroomTestMain.test_main\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"remove_course\", \"null\"], [\"add_course\", \"null\"], [\"is_free_at\", \"false\"], [\"check_course_conflict\", \"false\"]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_1\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"remove_course\", \"null\"]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_2\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"remove_course\", \"null\"]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_3\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"remove_course\", \"null\"]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_4\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"remove_course\", \"null\"]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_5\": [[\"__init__\", \"null\"], [\"add_course\", \"null\"], [\"remove_course\", \"null\"]], \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_6\": [[\"__init__\", \"null\"], [\"remove_course\", \"null\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.ClassroomTestAddCourse.test_add_course_1\", \"benchmark_case.ClassroomTestAddCourse.test_add_course_2\", \"benchmark_case.ClassroomTestAddCourse.test_add_course_3\", \"benchmark_case.ClassroomTestAddCourse.test_add_course_4\", \"benchmark_case.ClassroomTestAddCourse.test_add_course_5\", \"benchmark_case.ClassroomTestAddCourse.test_add_course_6\", \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_1\", \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_2\", \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_3\", \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_4\", \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_5\", \"benchmark_case.ClassroomTestRemoveCourse.test_remove_course_6\", \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_1\", \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_2\", \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_3\", \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_4\", \"benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_5\", \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_1\", \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_2\", \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_3\", \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_4\", \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_5\", \"benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_6\", \"benchmark_case.ClassroomTestMain.test_main\"], \"tests\": 24}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.0934196680000241,
+  "result": {
+    "checks": {
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_1": [
+        [
+          "assertIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_2": [
+        [
+          "assertIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_3": [
+        [
+          "assertIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_4": [
+        [
+          "assertIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_5": [
+        [
+          "assertIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_6": [
+        [
+          "assertIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_1": [
+        [
+          "assertTrue",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_2": [
+        [
+          "assertFalse",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_3": [
+        [
+          "assertFalse",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_4": [
+        [
+          "assertFalse",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_5": [
+        [
+          "assertTrue",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_6": [
+        [
+          "assertFalse",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_1": [
+        [
+          "assertTrue",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_2": [
+        [
+          "assertFalse",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_3": [
+        [
+          "assertTrue",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_4": [
+        [
+          "assertTrue",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_5": [
+        [
+          "assertFalse",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestMain.test_main": [
+        [
+          "assertIn",
+          2
+        ],
+        [
+          "assertNotIn",
+          2
+        ],
+        [
+          "assertIn",
+          2
+        ],
+        [
+          "assertFalse",
+          1
+        ],
+        [
+          "assertFalse",
+          1
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_1": [
+        [
+          "assertNotIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_2": [
+        [
+          "assertNotIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_3": [
+        [
+          "assertNotIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_4": [
+        [
+          "assertNotIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_5": [
+        [
+          "assertNotIn",
+          2
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_6": [
+        [
+          "assertNotIn",
+          2
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_add_course_1 (benchmark_case.ClassroomTestAddCourse.test_add_course_1) ... ok\ntest_add_course_2 (benchmark_case.ClassroomTestAddCourse.test_add_course_2) ... ok\ntest_add_course_3 (benchmark_case.ClassroomTestAddCourse.test_add_course_3) ... ok\ntest_add_course_4 (benchmark_case.ClassroomTestAddCourse.test_add_course_4) ... ok\ntest_add_course_5 (benchmark_case.ClassroomTestAddCourse.test_add_course_5) ... ok\ntest_add_course_6 (benchmark_case.ClassroomTestAddCourse.test_add_course_6) ... ok\ntest_remove_course_1 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_1) ... ok\ntest_remove_course_2 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_2) ... ok\ntest_remove_course_3 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_3) ... ok\ntest_remove_course_4 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_4) ... ok\ntest_remove_course_5 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_5) ... ok\ntest_remove_course_6 (benchmark_case.ClassroomTestRemoveCourse.test_remove_course_6) ... ok\ntest_is_free_at_1 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_1) ... ok\ntest_is_free_at_2 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_2) ... ok\ntest_is_free_at_3 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_3) ... ok\ntest_is_free_at_4 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_4) ... ok\ntest_is_free_at_5 (benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_5) ... ok\ntest_check_course_conflict_1 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_1) ... ok\ntest_check_course_conflict_2 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_2) ... ok\ntest_check_course_conflict_3 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_3) ... ok\ntest_check_course_conflict_4 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_4) ... ok\ntest_check_course_conflict_5 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_5) ... ok\ntest_check_course_conflict_6 (benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_6) ... ok\ntest_main (benchmark_case.ClassroomTestMain.test_main) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.006s\n\nOK\n",
+    "observed": {
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "check_course_conflict",
+          "true"
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "check_course_conflict",
+          "false"
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "check_course_conflict",
+          "false"
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "check_course_conflict",
+          "false"
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "check_course_conflict",
+          "true"
+        ]
+      ],
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "check_course_conflict",
+          "false"
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "is_free_at",
+          "true"
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "is_free_at",
+          "false"
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "is_free_at",
+          "true"
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "is_free_at",
+          "true"
+        ]
+      ],
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "is_free_at",
+          "false"
+        ]
+      ],
+      "benchmark_case.ClassroomTestMain.test_main": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "remove_course",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "is_free_at",
+          "false"
+        ],
+        [
+          "check_course_conflict",
+          "false"
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "remove_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "remove_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "remove_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "remove_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "add_course",
+          "null"
+        ],
+        [
+          "remove_course",
+          "null"
+        ]
+      ],
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "remove_course",
+          "null"
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_1",
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_2",
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_3",
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_4",
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_5",
+      "benchmark_case.ClassroomTestAddCourse.test_add_course_6",
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_1",
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_2",
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_3",
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_4",
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_5",
+      "benchmark_case.ClassroomTestRemoveCourse.test_remove_course_6",
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_1",
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_2",
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_3",
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_4",
+      "benchmark_case.ClassroomTestIsFreeAt.test_is_free_at_5",
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_1",
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_2",
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_3",
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_4",
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_5",
+      "benchmark_case.ClassroomTestCheckCourseConflict.test_check_course_conflict_6",
+      "benchmark_case.ClassroomTestMain.test_main"
+    ],
+    "tests": 24
+  }
+}

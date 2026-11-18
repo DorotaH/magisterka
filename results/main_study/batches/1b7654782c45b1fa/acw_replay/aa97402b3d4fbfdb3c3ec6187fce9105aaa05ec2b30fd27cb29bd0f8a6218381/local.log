@@ -1,0 +1,13 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/aa97402b3d4fbfdb3c3ec6187fce9105aaa05ec2b30fd27cb29bd0f8a6218381/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+ 
+ res = 999999999999
+ for key in freq:
+-    if len(freq[key]) < K:
++    if K > len(freq[key]):
+         continue
+     else:
+         s = sum(freq[key][:K])
+

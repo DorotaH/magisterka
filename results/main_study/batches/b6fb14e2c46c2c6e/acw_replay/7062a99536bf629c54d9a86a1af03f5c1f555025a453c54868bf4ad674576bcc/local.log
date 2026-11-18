@@ -1,0 +1,33 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/7062a99536bf629c54d9a86a1af03f5c1f555025a453c54868bf4ad674576bcc/without_tabs.py:
+--- Original
++++ Modified
+@@ -29,12 +29,12 @@
+                         return
+                 xL = xM
+             else:
+-                for x in range(xM + 1, min(xR, xM + self.maxDigitSum) + 1):
++                for x in range(xM + 1, min(xR, self.maxDigitSum + xM) + 1):
+                     if x**2 + self.digitSum(x) * x == self.n:
+                         self.answer = x
+                         return
+                 xR = xM
+-        for x in range(xL, xR + 1):
++        for x in range(xL, 1 + xR):
+             if x**2 + self.digitSum(x) * x == self.n:
+                 self.answer = x
+                 return
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/7062a99536bf629c54d9a86a1af03f5c1f555025a453c54868bf4ad674576bcc/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+         xL, xR = 0, self.n
+         while xL + self.maxDigitSum < xR:
+             xM = (xL + xR) // 2
+-            if xM**2 + self.digitSum(xM) * xM < self.n:
++            if xM**2 + xM * self.digitSum(xM) < self.n:
+                 for x in range(xM - 1, max(xL, xM - self.maxDigitSum) - 1, -1):
+                     if x**2 + self.digitSum(x) * x == self.n:
+                         self.answer = x
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/7062a99536bf629c54d9a86a1af03f5c1f555025a453c54868bf4ad674576bcc/with_tabs.py

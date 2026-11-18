@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/combination-sum-ii/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+         def rec(i, s): 
+             if sum(s) == target and s not in t: 
+                 t.append(list(s))
+-            if i >= len(candidates) or sum(s) > target: 
++            if i >= len(candidates) or target < sum(s): 
+                 return
+             
+             s.append(candidates[i])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/combination-sum-ii/acw_steps/with_tabs.py

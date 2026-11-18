@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/f34d77ccc2a6f8ca93f3ebde3a0cf17af9b917f868650cbeeaaf460c213ad04a/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ def solve(X: int):
+     if X <= 2:
+         return 2
+-    flags = np.array([True for _ in range(3, X + 112, 2)])
++    flags = np.array([True for _ in range(3, 112 + X, 2)])
+     for i in range(len(flags)):
+         if flags[i]:
+             prime = i * 2 + 3
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/f34d77ccc2a6f8ca93f3ebde3a0cf17af9b917f868650cbeeaaf460c213ad04a/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ 
+ 
+ def solve(X: int):
+-    if X <= 2:
++    if 2 >= X:
+         return 2
+     flags = np.array([True for _ in range(3, 112 + X, 2)])
+     for i in range(len(flags)):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/f34d77ccc2a6f8ca93f3ebde3a0cf17af9b917f868650cbeeaaf460c213ad04a/with_tabs.py

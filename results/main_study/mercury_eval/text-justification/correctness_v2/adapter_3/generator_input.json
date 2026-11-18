@@ -1,0 +1,26 @@
+{
+  "generator_code": "import random\nimport string\n\ndef generate_test_case():\n    words_length = random.randint(1, 300)\n    words = [''.join(random.choices(string.ascii_letters, k=random.randint(1, 20))) for _ in range(words_length)]\n    maxWidth = random.randint(1, 100)\n    return words, maxWidth",
+  "seed": 10919280530676844071,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          "This",
+          "is",
+          "an",
+          "example",
+          "of",
+          "text",
+          "justification."
+        ],
+        16
+      ],
+      "expected": [
+        "This    is    an",
+        "example  of text",
+        "justification.  "
+      ]
+    }
+  ]
+}

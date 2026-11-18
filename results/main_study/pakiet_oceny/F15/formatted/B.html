@@ -1,0 +1,21 @@
+<!doctype html><html lang="pl"><meta charset="utf-8"><title>Fragment</title><style>pre{font:14px monospace;tab-size:4;line-height:1.5;padding:16px}</style><pre>    def insert_student(self, student_data):
+        conn = sqlite3.connect(self.database_name)
+        cursor = conn.cursor()
+
+        insert_query = &quot;&quot;&quot;
+        INSERT INTO students (name, age, gender, grade)
+        VALUES (?, ?, ?, ?)
+        &quot;&quot;&quot;
+        cursor.execute(
+            insert_query,
+            (
+                student_data[&quot;name&quot;],
+                student_data[&quot;age&quot;],
+                student_data[&quot;gender&quot;],
+                student_data[&quot;grade&quot;],
+            ),
+        )
+
+        conn.commit()
+        conn.close()
+</pre></html>

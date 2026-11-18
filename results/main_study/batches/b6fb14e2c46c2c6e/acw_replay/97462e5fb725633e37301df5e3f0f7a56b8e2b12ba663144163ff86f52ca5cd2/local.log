@@ -1,0 +1,38 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/97462e5fb725633e37301df5e3f0f7a56b8e2b12ba663144163ff86f52ca5cd2/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,10 +4,10 @@
+ 
+ def generate_primes(n):
+ 
+-    for p in range(2, n + 1):
++    for p in range(2, 1 + n):
+         if primes[p]:
+             prime_factors[p].append(p)
+-            for i in range(2 * p, n + 1, p):
++            for i in range(2 * p, 1 + n, p):
+                 primes[i] = False
+                 prime_factors[i].append(p)
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/97462e5fb725633e37301df5e3f0f7a56b8e2b12ba663144163ff86f52ca5cd2/without_tabs.py:
+--- Original
++++ Modified
+@@ -40,13 +40,13 @@
+     low = 0
+     high = 10**9
+     answer = high
+-    while low <= high:
++    while high >= low:
+         mid = (high + low) // 2
+         temp_count = sum(mid // num for num in to_add)
+         for num in to_subtract:
+             temp_count -= mid // num
+         temp_count = mid - temp_count
+-        if temp_count >= k:
++        if k <= temp_count:
+             answer = min(answer, mid)
+             high = mid - 1
+         else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/97462e5fb725633e37301df5e3f0f7a56b8e2b12ba663144163ff86f52ca5cd2/with_tabs.py

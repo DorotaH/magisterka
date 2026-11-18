@@ -1,0 +1,18 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/fc46a9df8270e242231a99575cc2ea5a09a03b877ec0a3cf13ff25829cebfb3d/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,9 +17,9 @@
+     while r - l > 1:
+         m = (l + r) // 2
+         cntA = max(0, a * m - na)
+-        cntB = max(0, b * m - nb)
+-        cntC = max(0, c * m - nc)
+-        money = cntA * pa + cntB * pb + cntC * pc
++        cntB = max(0, m * b - nb)
++        cntC = max(0, m * c - nc)
++        money = pa * cntA + cntB * pb + cntC * pc
+         if money <= k:
+             l = m
+         else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/fc46a9df8270e242231a99575cc2ea5a09a03b877ec0a3cf13ff25829cebfb3d/with_tabs.py

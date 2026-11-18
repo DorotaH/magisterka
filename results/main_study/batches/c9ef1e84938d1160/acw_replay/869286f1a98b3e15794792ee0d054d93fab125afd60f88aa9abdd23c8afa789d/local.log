@@ -1,0 +1,19 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/869286f1a98b3e15794792ee0d054d93fab125afd60f88aa9abdd23c8afa789d/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,11 +15,11 @@
+     x = floor(quad_solv)
+     y = ceil(quad_solv)
+ 
+-    xed = int(x*(x-1)/2 + n - x)
++    xed = int((x-1)*x/2 + n - x)
+     xbr = n - x
+ 
+     ybr = n - y
+-    yed = 2*ybr
++    yed = ybr*2
+ 
+     if xed > yed:
+         print(xed)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/869286f1a98b3e15794792ee0d054d93fab125afd60f88aa9abdd23c8afa789d/with_tabs.py

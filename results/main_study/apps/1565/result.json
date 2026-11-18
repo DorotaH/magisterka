@@ -1,0 +1,3101 @@
+{
+  "dataset": "apps",
+  "sample": {
+    "sample_id": "1565",
+    "sloc": 16,
+    "structure": "script",
+    "difficulty": "interview",
+    "format": "stdin",
+    "sha256": "876617f283af2a90129c1c0a70ee88d49ddf90159761133af40d079dec8e08d2"
+  },
+  "sew_embedding": {
+    "status": "ok",
+    "n_sites": 21,
+    "n_grades": 10,
+    "n_edits": 18,
+    "iterations": 1
+  },
+  "variants": {
+    "original": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py",
+        "sha256": "876617f283af2a90129c1c0a70ee88d49ddf90159761133af40d079dec8e08d2",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9474748344863309,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.26067629662069763,
+            "p_all": 0.1911660998475398,
+            "p_syntax": 0.13033814831034882,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8966788448546104,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.08616390700080956
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/complexipy.json\nresults/main_study/apps/1565/original/embedded/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.055863310999484384,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/original/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.019815687000118487
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 12,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 12,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 12,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 12,\n      \"row\": 20\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.014320588999908068
+            },
+            "diagnostics": {
+              "E741": 1,
+              "W191": 8,
+              "W292": 1
+            }
+          }
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/876617f283af2a90129c1c0a70ee88d49ddf90159761133af40d079dec8e08d2"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/check/code.py",
+        "sha256": "876617f283af2a90129c1c0a70ee88d49ddf90159761133af40d079dec8e08d2",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9474748344863309,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.26067629662069763,
+            "p_all": 0.1911660998475398,
+            "p_syntax": 0.13033814831034882,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8966788448546104,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.019815687000118487
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/876617f283af2a90129c1c0a70ee88d49ddf90159761133af40d079dec8e08d2"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix/code.py",
+        "sha256": "876617f283af2a90129c1c0a70ee88d49ddf90159761133af40d079dec8e08d2",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9474748344863309,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.26067629662069763,
+            "p_all": 0.1911660998475398,
+            "p_syntax": 0.13033814831034882,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8966788448546104,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.05456926900023973
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.05415789800008497
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/876617f283af2a90129c1c0a70ee88d49ddf90159761133af40d079dec8e08d2"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/format/code.py",
+        "sha256": "c5076e78ecc7c9d232939c69f470572e5561d5382932e196af2ba81df88055ed",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9716312056737588,
+          "delta_tokens": -4,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9954110349967459,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 3,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.26067629662069763,
+            "p_all": 0.6169378216697782,
+            "p_syntax": 0.13033814831034882,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.984994614075274,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03256228899954294
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.04006350199961162
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/c5076e78ecc7c9d232939c69f470572e5561d5382932e196af2ba81df88055ed"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix_format/code.py",
+        "sha256": "c5076e78ecc7c9d232939c69f470572e5561d5382932e196af2ba81df88055ed",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9716312056737588,
+          "delta_tokens": -4,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9954110349967459,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 3,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.26067629662069763,
+            "p_all": 0.6169378216697782,
+            "p_syntax": 0.13033814831034882,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.984994614075274,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix_format/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.18611844899987773
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix_format/complexipy.json\nresults/main_study/apps/1565/original/default/fix_format/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06391700800031686,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/original/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.022023219999937282
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.04049168399978953
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.042117326999687066
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/c5076e78ecc7c9d232939c69f470572e5561d5382932e196af2ba81df88055ed"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/check/code.py",
+        "sha256": "876617f283af2a90129c1c0a70ee88d49ddf90159761133af40d079dec8e08d2",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9474748344863309,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 4,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.26067629662069763,
+            "p_all": 0.1911660998475398,
+            "p_syntax": 0.13033814831034882,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8966788448546104,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 12,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 12,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 12,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 12,\n      \"row\": 20\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.014320588999908068
+        },
+        "diagnostics": {
+          "E741": 1,
+          "W191": 8,
+          "W292": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/876617f283af2a90129c1c0a70ee88d49ddf90159761133af40d079dec8e08d2"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py",
+        "sha256": "588c25485f210398051a1a5e81f8cde721e47a8b769fa86def61c2ce5723d661",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9954110349967459,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 3,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.26067629662069763,
+            "p_all": 0.6169378216697782,
+            "p_syntax": 0.13033814831034882,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.984994614075274,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "E741 Ambiguous variable name: `l`\n --> results/main_study/apps/1565/original/strict/fix/code.py:1:1\n  |\n1 | l = int(input())\n  | ^\n2 | n = input()\n3 | best = int(n)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/original/strict/fix/code.py:6:1\n  |\n4 | p = (l - 1) // 2\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n  | ^^^^\n7 |         continue\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/original/strict/fix/code.py:7:1\n  |\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n7 |         continue\n  | ^^^^^^^^\n8 |\n9 |     best = min(best, int(n[0:(i + 1)]) + int(n[i + 1:]))\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix/code.py:9:1\n   |\n 7 |         continue\n 8 |\n 9 |     best = min(best, int(n[0:(i + 1)]) + int(n[i + 1:]))\n   | ^^^^\n10 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix/code.py:10:1\n   |\n 9 |     best = min(best, int(n[0:(i + 1)]) + int(n[i + 1:]))\n10 |     break\n   | ^^^^\n11 |\n12 | p = l // 2\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix/code.py:14:1\n   |\n12 | p = l // 2\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n   | ^^^^\n15 |         continue\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix/code.py:15:1\n   |\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n15 |         continue\n   | ^^^^^^^^\n16 |\n17 |     best = min(best, int(n[0:i]) + int(n[i:]))\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix/code.py:17:1\n   |\n15 |         continue\n16 |\n17 |     best = min(best, int(n[0:i]) + int(n[i:]))\n   | ^^^^\n18 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix/code.py:18:1\n   |\n17 |     best = min(best, int(n[0:i]) + int(n[i:]))\n18 |     break\n   | ^^^^\n19 |\n20 | print(best)\n   |\n\nFound 10 errors (1 fixed, 9 remaining).\n",
+            "stderr": "",
+            "seconds": 0.03442157999961637
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.049565480999262945
+        },
+        "diagnostics": {
+          "E741": 1,
+          "W191": 8
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/588c25485f210398051a1a5e81f8cde721e47a8b769fa86def61c2ce5723d661"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/format/code.py",
+        "sha256": "c5076e78ecc7c9d232939c69f470572e5561d5382932e196af2ba81df88055ed",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9716312056737588,
+          "delta_tokens": -4,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9954110349967459,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 3,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.26067629662069763,
+            "p_all": 0.6169378216697782,
+            "p_syntax": 0.13033814831034882,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.984994614075274,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02518032999978459
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03912518600009207
+        },
+        "diagnostics": {
+          "E741": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/c5076e78ecc7c9d232939c69f470572e5561d5382932e196af2ba81df88055ed"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/code.py",
+        "sha256": "c5076e78ecc7c9d232939c69f470572e5561d5382932e196af2ba81df88055ed",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9716312056737588,
+          "delta_tokens": -4,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9954110349967459,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 3,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.26067629662069763,
+            "p_all": 0.6169378216697782,
+            "p_syntax": 0.13033814831034882,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 3,
+            "n_sites": 21
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.984994614075274,
+            "p_syntax": 0.9849280580874495,
+            "n_grades": 10,
+            "k_grades": 5,
+            "n_syntax": 4,
+            "k_syntax": 1,
+            "n_sites": 21
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.17255662099978508
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/complexipy.json\nresults/main_study/apps/1565/original/strict/fix_format/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.056179121999775816,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/original/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "E741 Ambiguous variable name: `l`\n --> results/main_study/apps/1565/original/strict/fix_format/code.py:1:1\n  |\n1 | l = int(input())\n  | ^\n2 | n = input()\n3 | best = int(n)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/original/strict/fix_format/code.py:6:1\n  |\n4 | p = (l - 1) // 2\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n  | ^^^^\n7 |         continue\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/original/strict/fix_format/code.py:7:1\n  |\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n7 |         continue\n  | ^^^^^^^^\n8 |\n9 |     best = min(best, int(n[0:(i + 1)]) + int(n[i + 1:]))\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix_format/code.py:9:1\n   |\n 7 |         continue\n 8 |\n 9 |     best = min(best, int(n[0:(i + 1)]) + int(n[i + 1:]))\n   | ^^^^\n10 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix_format/code.py:10:1\n   |\n 9 |     best = min(best, int(n[0:(i + 1)]) + int(n[i + 1:]))\n10 |     break\n   | ^^^^\n11 |\n12 | p = l // 2\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix_format/code.py:14:1\n   |\n12 | p = l // 2\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n   | ^^^^\n15 |         continue\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix_format/code.py:15:1\n   |\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n15 |         continue\n   | ^^^^^^^^\n16 |\n17 |     best = min(best, int(n[0:i]) + int(n[i:]))\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix_format/code.py:17:1\n   |\n15 |         continue\n16 |\n17 |     best = min(best, int(n[0:i]) + int(n[i:]))\n   | ^^^^\n18 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/original/strict/fix_format/code.py:18:1\n   |\n17 |     best = min(best, int(n[0:i]) + int(n[i:]))\n18 |     break\n   | ^^^^\n19 |\n20 | print(best)\n   |\n\nFound 10 errors (1 fixed, 9 remaining).\n",
+            "stderr": "",
+            "seconds": 0.02965312400010589
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02952558400011185
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/original/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.06454832000054012
+        },
+        "diagnostics": {
+          "E741": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/c5076e78ecc7c9d232939c69f470572e5561d5382932e196af2ba81df88055ed"
+      }
+    },
+    "sew": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py",
+        "sha256": "0ff1446591daadb525e6c458cac01cdf2d39557e77d334e0cfd7aa9cdc578130",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8,
+          "changed_lines": 4,
+          "token_similarity": 0.9647887323943662,
+          "delta_tokens": -2,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 1.2122007314818283e-05,
+            "p_all": 6.061003657409142e-06,
+            "p_syntax": 0.013859662120550401,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 21
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.14037787999950524
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/complexipy.json\nresults/main_study/apps/1565/sew/embedded/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.059056459000203176,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/sew/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.03534387599938782
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 12,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 12,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 12,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 12,\n      \"row\": 20\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.02915877699979319
+            },
+            "diagnostics": {
+              "E741": 1,
+              "W191": 8,
+              "W292": 1
+            }
+          }
+        }
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/check/code.py",
+        "sha256": "0ff1446591daadb525e6c458cac01cdf2d39557e77d334e0cfd7aa9cdc578130",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8,
+          "changed_lines": 4,
+          "token_similarity": 0.9647887323943662,
+          "delta_tokens": -2,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 1.2122007314818283e-05,
+            "p_all": 6.061003657409142e-06,
+            "p_syntax": 0.013859662120550401,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 21
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03534387599938782
+        },
+        "diagnostics": {}
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix/code.py",
+        "sha256": "0ff1446591daadb525e6c458cac01cdf2d39557e77d334e0cfd7aa9cdc578130",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8,
+          "changed_lines": 4,
+          "token_similarity": 0.9647887323943662,
+          "delta_tokens": -2,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 1.2122007314818283e-05,
+            "p_all": 6.061003657409142e-06,
+            "p_syntax": 0.013859662120550401,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 21
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.019084046999523707
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.027799312999377435
+        },
+        "diagnostics": {}
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/format/code.py",
+        "sha256": "8b613fd1ecdd6196be78d65b59d82b752dee4f15c3e3ed56c846797e248bb80b",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9357142857142857,
+          "delta_tokens": -6,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.027719324241100803,
+            "p_all": 0.2734347510678857,
+            "p_syntax": 0.013859662120550401,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 21
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03704628400009824
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.04251028199996654
+        },
+        "diagnostics": {}
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix_format/code.py",
+        "sha256": "8b613fd1ecdd6196be78d65b59d82b752dee4f15c3e3ed56c846797e248bb80b",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9357142857142857,
+          "delta_tokens": -6,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.027719324241100803,
+            "p_all": 0.2734347510678857,
+            "p_syntax": 0.013859662120550401,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 21
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix_format/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.1269575550004447
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix_format/complexipy.json\nresults/main_study/apps/1565/sew/default/fix_format/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.060228012000152376,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/sew/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.06632815299963113
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.04768805599996995
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.048658392999641364
+        },
+        "diagnostics": {}
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/check/code.py",
+        "sha256": "0ff1446591daadb525e6c458cac01cdf2d39557e77d334e0cfd7aa9cdc578130",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8,
+          "changed_lines": 4,
+          "token_similarity": 0.9647887323943662,
+          "delta_tokens": -2,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 1.2122007314818283e-05,
+            "p_all": 6.061003657409142e-06,
+            "p_syntax": 0.013859662120550401,
+            "n_grades": 10,
+            "k_grades": 10,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 21
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 12,\n      \"row\": 20\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 12,\n            \"row\": 20\n          },\n          \"location\": {\n            \"column\": 12,\n            \"row\": 20\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 12,\n      \"row\": 20\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 20,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02915877699979319
+        },
+        "diagnostics": {
+          "E741": 1,
+          "W191": 8,
+          "W292": 1
+        }
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py",
+        "sha256": "874b562c07b83c2c0ff2ee40a63e8b07c8086f81eb48c6110fe7c0d5a02053b5",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.8,
+          "changed_lines": 4,
+          "token_similarity": 0.9647887323943662,
+          "delta_tokens": -2,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 0.0006033851363553611,
+            "p_all": 0.0003016925681776806,
+            "p_syntax": 0.013859662120550401,
+            "n_grades": 10,
+            "k_grades": 9,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 21
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "E741 Ambiguous variable name: `l`\n --> results/main_study/apps/1565/sew/strict/fix/code.py:1:1\n  |\n1 | l = int(input())\n  | ^\n2 | n = input()\n3 | best = int(n)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/sew/strict/fix/code.py:6:1\n  |\n4 | p = (l - 1) // 2\n5 | for i in range(p, -1, -1):\n6 |     if  (n[1 + i]=='0'):\n  | ^^^^\n7 |         continue\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/sew/strict/fix/code.py:7:1\n  |\n5 | for i in range(p, -1, -1):\n6 |     if  (n[1 + i]=='0'):\n7 |         continue\n  | ^^^^^^^^\n8 |\n9 |     best=min(best, int(n[:(i + 1)])+int(n[1 + i:]))\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix/code.py:9:1\n   |\n 7 |         continue\n 8 |\n 9 |     best=min(best, int(n[:(i + 1)])+int(n[1 + i:]))\n   | ^^^^\n10 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix/code.py:10:1\n   |\n 9 |     best=min(best, int(n[:(i + 1)])+int(n[1 + i:]))\n10 |     break\n   | ^^^^\n11 |\n12 | p = l // 2\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix/code.py:14:1\n   |\n12 | p = l // 2\n13 | for i in range(p, l):\n14 |     if  (n[i]=='0'):\n   | ^^^^\n15 |         continue\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix/code.py:15:1\n   |\n13 | for i in range(p, l):\n14 |     if  (n[i]=='0'):\n15 |         continue\n   | ^^^^^^^^\n16 |\n17 |     best=min(best, int(n[:i])+int(n[i:]))\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix/code.py:17:1\n   |\n15 |         continue\n16 |\n17 |     best=min(best, int(n[:i])+int(n[i:]))\n   | ^^^^\n18 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix/code.py:18:1\n   |\n17 |     best=min(best, int(n[:i])+int(n[i:]))\n18 |     break\n   | ^^^^\n19 |\n20 | print(best)\n   |\n\nFound 10 errors (1 fixed, 9 remaining).\n",
+            "stderr": "",
+            "seconds": 0.036454295999647
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.05548436099979881
+        },
+        "diagnostics": {
+          "E741": 1,
+          "W191": 8
+        }
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/format/code.py",
+        "sha256": "8b613fd1ecdd6196be78d65b59d82b752dee4f15c3e3ed56c846797e248bb80b",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9357142857142857,
+          "delta_tokens": -6,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.027719324241100803,
+            "p_all": 0.2734347510678857,
+            "p_syntax": 0.013859662120550401,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 21
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02518558999963716
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.030614532999607036
+        },
+        "diagnostics": {
+          "E741": 1
+        }
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/code.py",
+        "sha256": "8b613fd1ecdd6196be78d65b59d82b752dee4f15c3e3ed56c846797e248bb80b",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9357142857142857,
+          "delta_tokens": -6,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.027719324241100803,
+            "p_all": 0.2734347510678857,
+            "p_syntax": 0.013859662120550401,
+            "n_grades": 10,
+            "k_grades": 6,
+            "n_syntax": 4,
+            "k_syntax": 4,
+            "n_sites": 21
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.16375133699966682
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/complexipy.json\nresults/main_study/apps/1565/sew/strict/fix_format/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.11864695799977198,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/sew/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "E741 Ambiguous variable name: `l`\n --> results/main_study/apps/1565/sew/strict/fix_format/code.py:1:1\n  |\n1 | l = int(input())\n  | ^\n2 | n = input()\n3 | best = int(n)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/sew/strict/fix_format/code.py:6:1\n  |\n4 | p = (l - 1) // 2\n5 | for i in range(p, -1, -1):\n6 |     if  (n[1 + i]=='0'):\n  | ^^^^\n7 |         continue\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/sew/strict/fix_format/code.py:7:1\n  |\n5 | for i in range(p, -1, -1):\n6 |     if  (n[1 + i]=='0'):\n7 |         continue\n  | ^^^^^^^^\n8 |\n9 |     best=min(best, int(n[:(i + 1)])+int(n[1 + i:]))\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix_format/code.py:9:1\n   |\n 7 |         continue\n 8 |\n 9 |     best=min(best, int(n[:(i + 1)])+int(n[1 + i:]))\n   | ^^^^\n10 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix_format/code.py:10:1\n   |\n 9 |     best=min(best, int(n[:(i + 1)])+int(n[1 + i:]))\n10 |     break\n   | ^^^^\n11 |\n12 | p = l // 2\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix_format/code.py:14:1\n   |\n12 | p = l // 2\n13 | for i in range(p, l):\n14 |     if  (n[i]=='0'):\n   | ^^^^\n15 |         continue\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix_format/code.py:15:1\n   |\n13 | for i in range(p, l):\n14 |     if  (n[i]=='0'):\n15 |         continue\n   | ^^^^^^^^\n16 |\n17 |     best=min(best, int(n[:i])+int(n[i:]))\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix_format/code.py:17:1\n   |\n15 |         continue\n16 |\n17 |     best=min(best, int(n[:i])+int(n[i:]))\n   | ^^^^\n18 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/sew/strict/fix_format/code.py:18:1\n   |\n17 |     best=min(best, int(n[:i])+int(n[i:]))\n18 |     break\n   | ^^^^\n19 |\n20 | print(best)\n   |\n\nFound 10 errors (1 fixed, 9 remaining).\n",
+            "stderr": "",
+            "seconds": 0.03492171600009897
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02178643600018404
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/sew/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03401556999961031
+        },
+        "diagnostics": {
+          "E741": 1
+        }
+      }
+    },
+    "acw_notab": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.16342132900081197
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/complexipy.json\nresults/main_study/apps/1565/acw_notab/embedded/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06614311500015901,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/acw_notab/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.03204059299969231
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.04142039299949829
+            },
+            "diagnostics": {
+              "E741": 1,
+              "W191": 8
+            }
+          }
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/check/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03204059299969231
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.03083409400005621
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03916429899982177
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/format/code.py",
+        "sha256": "e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9568345323741008,
+          "delta_tokens": -8,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.0455383009993966
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.046281703999738966
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix_format/code.py",
+        "sha256": "e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9568345323741008,
+          "delta_tokens": -8,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix_format/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.20314163900002313
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix_format/complexipy.json\nresults/main_study/apps/1565/acw_notab/default/fix_format/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.07847484099966096,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/acw_notab/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.04743864900046901
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.0656617840004401
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.055494840999926964
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/check/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.04142039299949829
+        },
+        "diagnostics": {
+          "E741": 1,
+          "W191": 8
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "E741 Ambiguous variable name: `l`\n --> results/main_study/apps/1565/acw_notab/strict/fix/code.py:1:1\n  |\n1 | l = int(input())\n  | ^\n2 | n = input()\n3 | best = int(n)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/acw_notab/strict/fix/code.py:6:1\n  |\n4 | p = (l - 1) // 2\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n  | ^^^^\n7 |         continue\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/acw_notab/strict/fix/code.py:7:1\n  |\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n7 |         continue\n  | ^^^^^^^^\n8 |\n9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix/code.py:9:1\n   |\n 7 |         continue\n 8 |\n 9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n   | ^^^^\n10 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix/code.py:10:1\n   |\n 9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n10 |     break\n   | ^^^^\n11 |\n12 | p = l // 2\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix/code.py:14:1\n   |\n12 | p = l // 2\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n   | ^^^^\n15 |         continue\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix/code.py:15:1\n   |\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n15 |         continue\n   | ^^^^^^^^\n16 |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix/code.py:17:1\n   |\n15 |         continue\n16 |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n   | ^^^^\n18 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix/code.py:18:1\n   |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n18 |     break\n   | ^^^^\n19 |\n20 | print(best)\n   |\n\nFound 9 errors.\n",
+            "stderr": "",
+            "seconds": 0.030759113999920373
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03782705499997974
+        },
+        "diagnostics": {
+          "E741": 1,
+          "W191": 8
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/format/code.py",
+        "sha256": "e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9568345323741008,
+          "delta_tokens": -8,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.022130399999696238
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.023980855000445445
+        },
+        "diagnostics": {
+          "E741": 1
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/code.py",
+        "sha256": "e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9568345323741008,
+          "delta_tokens": -8,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.19328494599994883
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/complexipy.json\nresults/main_study/apps/1565/acw_notab/strict/fix_format/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.05810756200025935,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/acw_notab/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "E741 Ambiguous variable name: `l`\n --> results/main_study/apps/1565/acw_notab/strict/fix_format/code.py:1:1\n  |\n1 | l = int(input())\n  | ^\n2 | n = input()\n3 | best = int(n)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/acw_notab/strict/fix_format/code.py:6:1\n  |\n4 | p = (l - 1) // 2\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n  | ^^^^\n7 |         continue\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/acw_notab/strict/fix_format/code.py:7:1\n  |\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n7 |         continue\n  | ^^^^^^^^\n8 |\n9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix_format/code.py:9:1\n   |\n 7 |         continue\n 8 |\n 9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n   | ^^^^\n10 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix_format/code.py:10:1\n   |\n 9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n10 |     break\n   | ^^^^\n11 |\n12 | p = l // 2\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix_format/code.py:14:1\n   |\n12 | p = l // 2\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n   | ^^^^\n15 |         continue\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix_format/code.py:15:1\n   |\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n15 |         continue\n   | ^^^^^^^^\n16 |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix_format/code.py:17:1\n   |\n15 |         continue\n16 |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n   | ^^^^\n18 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_notab/strict/fix_format/code.py:18:1\n   |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n18 |     break\n   | ^^^^\n19 |\n20 | print(best)\n   |\n\nFound 9 errors.\n",
+            "stderr": "",
+            "seconds": 0.035042732999500004
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.031038446999446023
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_notab/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03880185999969399
+        },
+        "diagnostics": {
+          "E741": 1
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0"
+      }
+    },
+    "acw_full": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.1523172710003564
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/complexipy.json\nresults/main_study/apps/1565/acw_full/embedded/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.07610243999988597,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/acw_full/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.02628871400065691
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.04487556100048096
+            },
+            "diagnostics": {
+              "E741": 1,
+              "W191": 8
+            }
+          }
+        },
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/check/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.02628871400065691
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.02685906199985766
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.051030583000283514
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/format/code.py",
+        "sha256": "e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9568345323741008,
+          "delta_tokens": -8,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.07071405300030165
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.04701265199946647
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix_format/code.py",
+        "sha256": "e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9568345323741008,
+          "delta_tokens": -8,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix_format/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.23186864800027251
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix_format/complexipy.json\nresults/main_study/apps/1565/acw_full/default/fix_format/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.07002409100005025,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/acw_full/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.030460805000075197
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.019545540999388322
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.02639952200024709
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/check/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.04487556100048096
+        },
+        "diagnostics": {
+          "E741": 1,
+          "W191": 8
+        },
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py",
+        "sha256": "69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9,
+          "changed_lines": 2,
+          "token_similarity": 0.9858156028368794,
+          "delta_tokens": -4,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 8,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "E741 Ambiguous variable name: `l`\n --> results/main_study/apps/1565/acw_full/strict/fix/code.py:1:1\n  |\n1 | l = int(input())\n  | ^\n2 | n = input()\n3 | best = int(n)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/acw_full/strict/fix/code.py:6:1\n  |\n4 | p = (l - 1) // 2\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n  | ^^^^\n7 |         continue\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/acw_full/strict/fix/code.py:7:1\n  |\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n7 |         continue\n  | ^^^^^^^^\n8 |\n9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix/code.py:9:1\n   |\n 7 |         continue\n 8 |\n 9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n   | ^^^^\n10 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix/code.py:10:1\n   |\n 9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n10 |     break\n   | ^^^^\n11 |\n12 | p = l // 2\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix/code.py:14:1\n   |\n12 | p = l // 2\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n   | ^^^^\n15 |         continue\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix/code.py:15:1\n   |\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n15 |         continue\n   | ^^^^^^^^\n16 |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix/code.py:17:1\n   |\n15 |         continue\n16 |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n   | ^^^^\n18 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix/code.py:18:1\n   |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n18 |     break\n   | ^^^^\n19 |\n20 | print(best)\n   |\n\nFound 9 errors.\n",
+            "stderr": "",
+            "seconds": 0.034558847999505815
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 6\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 6\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 6,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 7\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 7\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 7,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 15\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 15\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 15,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 17\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 17\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 17,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 18\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 18\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 18,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02419301100053417
+        },
+        "diagnostics": {
+          "E741": 1,
+          "W191": 8
+        },
+        "acw": {
+          "acw_full": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/69e369b5235ea1dc02b619a85224539358d6f82c0e2c5a43c6524e2a99896e33"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/format/code.py",
+        "sha256": "e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9568345323741008,
+          "delta_tokens": -8,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03188921899982233
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02863790199990035
+        },
+        "diagnostics": {
+          "E741": 1
+        },
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/code.py",
+        "sha256": "e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.6,
+          "changed_lines": 8,
+          "token_similarity": 0.9568345323741008,
+          "delta_tokens": -8,
+          "delta_ast_nodes": -2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/code.py\": {\"loc\": 20, \"lloc\": 18, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.22492950699961511
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--check-script",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/complexipy.json\nresults/main_study/apps/1565/acw_full/strict/fix_format/code.py\n    <module> 6  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.07323823799924867,
+            "data": [
+              {
+                "complexity": 6,
+                "file_name": "code.py",
+                "function_name": "<module>",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 5
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 6
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 14
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/1565/acw_full/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "E741 Ambiguous variable name: `l`\n --> results/main_study/apps/1565/acw_full/strict/fix_format/code.py:1:1\n  |\n1 | l = int(input())\n  | ^\n2 | n = input()\n3 | best = int(n)\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/acw_full/strict/fix_format/code.py:6:1\n  |\n4 | p = (l - 1) // 2\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n  | ^^^^\n7 |         continue\n  |\n\nW191 Indentation contains tabs\n --> results/main_study/apps/1565/acw_full/strict/fix_format/code.py:7:1\n  |\n5 | for i in range(p, -1, -1):\n6 |     if (n[i + 1] == '0'):\n7 |         continue\n  | ^^^^^^^^\n8 |\n9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix_format/code.py:9:1\n   |\n 7 |         continue\n 8 |\n 9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n   | ^^^^\n10 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix_format/code.py:10:1\n   |\n 9 |     best = min(best, int(n[:i + 1]) + int(n[i + 1:]))\n10 |     break\n   | ^^^^\n11 |\n12 | p = l // 2\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix_format/code.py:14:1\n   |\n12 | p = l // 2\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n   | ^^^^\n15 |         continue\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix_format/code.py:15:1\n   |\n13 | for i in range(p, l):\n14 |     if (n[i] == '0'):\n15 |         continue\n   | ^^^^^^^^\n16 |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix_format/code.py:17:1\n   |\n15 |         continue\n16 |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n   | ^^^^\n18 |     break\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/1565/acw_full/strict/fix_format/code.py:18:1\n   |\n17 |     best = min(best, int(n[:i]) + int(n[i:]))\n18 |     break\n   | ^^^^\n19 |\n20 | print(best)\n   |\n\nFound 9 errors.\n",
+            "stderr": "",
+            "seconds": 0.030437701999289857
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.029395541000667436
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"E741\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 1\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/1565/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 1\n    },\n    \"message\": \"Ambiguous variable name: `l`\",\n    \"name\": \"ambiguous-variable-name\",\n    \"noqa_row\": 1,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/ambiguous-variable-name\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.04562200800046412
+        },
+        "diagnostics": {
+          "E741": 1
+        },
+        "acw": {
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/e6eda247a0c5a3af9ff8dcf77c065423cd17ae168e476c0b6b7e6c5e04f7f9e0"
+      }
+    }
+  }
+}

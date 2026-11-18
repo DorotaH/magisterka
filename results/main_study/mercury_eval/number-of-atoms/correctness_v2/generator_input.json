@@ -1,0 +1,13 @@
+{
+  "generator_code": "import random\nimport string\n\n\ndef generate_test_case():\n    \n    def generate_molecule():\n        return random.choice(string.ascii_uppercase) + ''.join(random.choices(string.ascii_lowercase, k=random.randint(0, 2)))\n\n    def generate_formula(min_len=1, max_len=1000):\n        length = random.randint(min_len, max_len)\n        formula = ''\n\n        while len(formula) < length:\n            if formula and random.random() < 0.3:  # With 30% chance, wrap the last molecule in parentheses and add a count\n                closing_parenthesis_index = formula.rfind(')')  # Find last closing parenthesis\n                if closing_parenthesis_index == -1:  # If there is no closing parenthesis, take the whole formula\n                    opening_parenthesis_index = 0\n                else:  # Otherwise, start from the parenthesis after the last closing parenthesis\n                    opening_parenthesis_index = closing_parenthesis_index + 1\n\n                formula = formula[:opening_parenthesis_index] + '(' + formula[opening_parenthesis_index:] + ')' + str(random.randint(2, 9))\n            else:  # With 70% chance, add a new molecule\n                formula += generate_molecule() + str(random.randint(1, 9))\n\n        # If the resulting formula is too long, remove the last molecule\n        if len(formula) > max_len:  \n            return formula[:formula.rfind('(')]\n        else:\n            return formula\n\n    return generate_formula()",
+  "seed": 3753516074616474173,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "H2O"
+      ],
+      "expected": "H2O"
+    }
+  ]
+}

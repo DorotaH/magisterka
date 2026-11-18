@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/d7473c285475623c76668c6388fc22a7730ab22d6909990a90ab0e229bf77884/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+ 
+ sys.setrecursionlimit(10**8)
+ INF = float("inf")
+-mod = 10**9 + 7
++mod = 7 + 10**9
+ eps = 10**-7
+ 
+ 
+@@ -21,7 +21,7 @@
+ N, M, d = inpl()
+ CC = inpl()
+ 
+-if sum(CC) + (d - 1) * (M + 1) < N:
++if sum(CC) + (d - 1) * (1 + M) < N:
+     print("NO")
+ else:
+     x = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/d7473c285475623c76668c6388fc22a7730ab22d6909990a90ab0e229bf77884/with_tabs.py

@@ -1,0 +1,64 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/7a29e9d82a7cc183f4919c361775d620aded2ce06c151e2e62376bcabbf32dc3/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+ p = myargsort(a)
+ p.reverse()
+ j = 0
+-aib = [0] * (n + 1)
++aib = [0] * (1 + n)
+ 
+ 
+ def ultb(x):
+@@ -36,12 +36,12 @@
+ 
+ for i in range(0, n):
+     add(i + 1, 1, aib, n)
+-r = [0] * (n + 1)
++r = [0] * (1 + n)
+ for i in range(0, n):
+     if i > 0 and a[i - 1] > a[i]:
+         r[1] += 1
+     while j < n and a[p[j]] == a[p[i]]:
+-        add(p[j] + 1, -1, aib, n)
++        add(1 + p[j], -1, aib, n)
+         j += 1
+     k = 2
+     while k < n and p[i] * k + 1 < n:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/7a29e9d82a7cc183f4919c361775d620aded2ce06c151e2e62376bcabbf32dc3/without_tabs.py:
+--- Original
++++ Modified
+@@ -28,7 +28,7 @@
+ 
+ def suma(p, aib):
+     r = 0
+-    while p > 0:
++    while 0 < p:
+         r += aib[p]
+         p -= ultb(p)
+     return r
+@@ -40,7 +40,7 @@
+ for i in range(0, n):
+     if i > 0 and a[i - 1] > a[i]:
+         r[1] += 1
+-    while j < n and a[p[j]] == a[p[i]]:
++    while n > j and a[p[j]] == a[p[i]]:
+         add(1 + p[j], -1, aib, n)
+         j += 1
+     k = 2
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/7a29e9d82a7cc183f4919c361775d620aded2ce06c151e2e62376bcabbf32dc3/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+ 
+ 
+ def add(p, a, aib, n):
+-    while p <= n:
++    while n >= p:
+         aib[p] += a
+         p += ultb(p)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/7a29e9d82a7cc183f4919c361775d620aded2ce06c151e2e62376bcabbf32dc3/with_tabs.py

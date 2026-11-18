@@ -1,0 +1,34 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/667f01b47a74658b71e6a291d9bbcd35ffdd134adebdc413ff009511d6101474/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ 
+ #UnionFind
+ 
+-Group=[[i,1] for i in range(n+1)]
++Group=[[i,1] for i in range(1+n)]
+ 
+ def find(x):
+     while Group[x][0] != x:
+@@ -28,5 +28,5 @@
+     for k in range(2,len(FR[j])):
+         Union(FR[j][k],FR[j][k-1])
+ 
+-ANS = [Group[find(i)][1] for i in range(1,n+1)]
++ANS = [Group[find(i)][1] for i in range(1,1+n)]
+ print(*ANS)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/667f01b47a74658b71e6a291d9bbcd35ffdd134adebdc413ff009511d6101474/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+         
+ 
+ for j in range(m):
+-    if len(FR[j])<=2:
++    if 2 >= len(FR[j]):
+         continue
+     for k in range(2,len(FR[j])):
+         Union(FR[j][k],FR[j][k-1])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/667f01b47a74658b71e6a291d9bbcd35ffdd134adebdc413ff009511d6101474/with_tabs.py

@@ -1,0 +1,22 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    num_nodes = random.randint(0, 100)\n    if num_nodes == 0:\n        return []\n    else:\n        nodes = []\n        for _ in range(num_nodes):\n            node = random.randint(-100, 100)\n            nodes.append(node if node != 0 else None)\n        return nodes",
+  "seed": 5836736380561408827,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          1,
+          null,
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

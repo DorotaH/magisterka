@@ -1,0 +1,26 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/1b4a7fbdb42f6aa50d842fc3fbc07bf00773d9c753dc3f07300f6df3bbf07d0f/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ n, m = list(map(int,input().split()))
+ 
+-M = 10 ** 9 + 7
++M = 7 + 10 ** 9
+ 
+ def inv(x):
+     return pow(x, M - 2, M)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/1b4a7fbdb42f6aa50d842fc3fbc07bf00773d9c753dc3f07300f6df3bbf07d0f/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+             n -= 1
+             ntok %= M
+             ktok %= M
+-        return (ntok * inv(ktok))%M
++        return (inv(ktok) * ntok)%M
+     else:
+         return 0
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/1b4a7fbdb42f6aa50d842fc3fbc07bf00773d9c753dc3f07300f6df3bbf07d0f/with_tabs.py

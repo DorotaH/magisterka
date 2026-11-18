@@ -1,0 +1,11 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/8d56e6657cb6cd24e22b7173245cf93231b73e9a7c7cfac76ecc2f4a2c01bbe6/without_tabs.py:
+--- Original
++++ Modified
+@@ -99,5 +99,5 @@
+     else:
+         b = int(b)
+         c = int(c)
+-        cnt = sum(1 <= st[i].query(b - 1, c) for i in range(26))
++        cnt = sum(st[i].query(b - 1, c) >= 1 for i in range(26))
+         print(cnt)
+

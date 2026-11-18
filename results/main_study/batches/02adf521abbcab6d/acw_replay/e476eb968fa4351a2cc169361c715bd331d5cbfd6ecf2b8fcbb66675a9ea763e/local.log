@@ -1,0 +1,23 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/e476eb968fa4351a2cc169361c715bd331d5cbfd6ecf2b8fcbb66675a9ea763e/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+ 		# s.t. Sa + Sb = dis
+ 		#      2 * Sa + Sb <= V
+ 
+-		if dis > V:
++		if V < dis:
+ 			# Sa <= V - dis < 0
+ 			return False
+ 		else:
+@@ -33,7 +33,7 @@
+ 			# Sb = t - dis
+ 			t += max(3 * dis - V, dis)
+ 
+-		if t > T:
++		if T < t:
+ 			return False
+ 
+ 		prev = cur
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/e476eb968fa4351a2cc169361c715bd331d5cbfd6ecf2b8fcbb66675a9ea763e/with_tabs.py

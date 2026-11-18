@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/11cd08adc600f6943fe8aa11befc1b7d167375926080ccc76ecbd1b17ebd8dac/without_tabs.py:
+--- Original
++++ Modified
+@@ -45,7 +45,7 @@
+         if self.map[new_player_row][new_player_col] != "#":
+             if (new_player_row, new_player_col) in self.boxes:
+                 new_box_row = new_player_row + (new_player_row - self.player_row)
+-                new_box_col = new_player_col + (new_player_col - self.player_col)
++                new_box_col = (new_player_col - self.player_col) + new_player_col
+ 
+                 if self.map[new_box_row][new_box_col] != "#":
+                     self.boxes.remove((new_player_row, new_player_col))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/11cd08adc600f6943fe8aa11befc1b7d167375926080ccc76ecbd1b17ebd8dac/with_tabs.py

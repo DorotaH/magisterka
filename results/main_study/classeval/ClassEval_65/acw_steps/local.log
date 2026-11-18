@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_65/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+         elif s[1] == "0":
+             return self.NUMBER_TEN[int(s[0]) - 1]
+         else:
+-            return self.NUMBER_TEN[int(s[0]) - 1] + " " + self.NUMBER[int(s[-1])]
++            return " " + self.NUMBER_TEN[int(s[0]) - 1] + self.NUMBER[int(s[-1])]
+ 
+     def trans_three(self, s):
+         if s[0] == "0":
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_65/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+ 
+         lm = ""
+         for i in range(len(lstrrev) // 3):
+-            a[i] = lstrrev[3 * i:3 * i + 3][::-1]
++            a[i] = lstrrev[i * 3:i * 3 + 3][::-1]
+             if a[i] != "000":
+                 lm = self.trans_three(a[i]) + " " + self.parse_more(i) + " " + lm
+             else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_65/acw_steps/with_tabs.py

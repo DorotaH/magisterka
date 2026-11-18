@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dce7ea693a7ae04f1eb3a41f941c2927d5203a573fec0da5377af9e2f028495b/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,7 +33,7 @@
+                 continue
+             elif char == ')':
+                 popped_value = _sum * stack_sign.pop()
+-                _sum  = stack_nums.pop() + popped_value
++                _sum  = popped_value + stack_nums.pop()
+                 i += 1
+                 continue
+             else:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dce7ea693a7ae04f1eb3a41f941c2927d5203a573fec0da5377af9e2f028495b/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+                 while i  < len(s) and s[i].isdigit():
+                     i += 1
+                 num = int(s[start:i])
+-                _sum += sign * num
++                _sum += num * sign
+                 continue
+             elif char == '+':
+                 sign = 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dce7ea693a7ae04f1eb3a41f941c2927d5203a573fec0da5377af9e2f028495b/with_tabs.py

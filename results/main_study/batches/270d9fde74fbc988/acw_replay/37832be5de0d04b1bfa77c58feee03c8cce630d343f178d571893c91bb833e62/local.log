@@ -1,0 +1,32 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/37832be5de0d04b1bfa77c58feee03c8cce630d343f178d571893c91bb833e62/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+ 
+     def random_food_position(self):
+         while self.food_position in self.positions:
+-            self.food_position = (random.randint(0, self.SCREEN_WIDTH // self.BLOCK_SIZE - 1) * self.BLOCK_SIZE,
++            self.food_position = (self.BLOCK_SIZE * random.randint(0, self.SCREEN_WIDTH // self.BLOCK_SIZE - 1),
+                                   random.randint(0, self.SCREEN_HEIGHT // self.BLOCK_SIZE - 1) * self.BLOCK_SIZE)
+ 
+     def reset(self):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/37832be5de0d04b1bfa77c58feee03c8cce630d343f178d571893c91bb833e62/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,11 +23,11 @@
+         if new == self.food_position:
+             self.eat_food()
+ 
+-        if len(self.positions) > 2 and new in self.positions[2:]:
++        if 2 < len(self.positions) and new in self.positions[2:]:
+             self.reset()
+         else:
+             self.positions.insert(0, new)
+-            if len(self.positions) > self.length:
++            if self.length < len(self.positions):
+                 self.positions.pop()
+ 
+     def random_food_position(self):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/37832be5de0d04b1bfa77c58feee03c8cce630d343f178d571893c91bb833e62/with_tabs.py

@@ -1,0 +1,49 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/mercury_eval/longest-consecutive-sequence/original/default/fix_format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,33 +6,33 @@
+         for num in nums:
+             if num in pointers:
+                 continue
+-            is_begin = (num + 1) in pointers and status[num + 1] in ["begin", "single"]
++            is_begin = (1 + num) in pointers and status[1 + num] in ["begin", "single"]
+             is_end = (num - 1) in pointers and status[num - 1] in ["single", "end"]
+             if is_begin and not is_end:
+-                li = pointers[num + 1]
+-                max_len = max(max_len, len(li) + 1)
++                li = pointers[1 + num]
++                max_len = max(max_len, 1 + len(li))
+                 li.insert(0, num)
+                 pointers[num] = li
+                 status[num] = "begin"
+-                status[num + 1] = "end" if status[num + 1] == "single" else "middle"
++                status[1 + num] = "end" if status[1 + num] == "single" else "middle"
+             elif not is_begin and is_end:
+                 li = pointers[num - 1]
+-                max_len = max(max_len, len(li) + 1)
++                max_len = max(max_len, 1 + len(li))
+                 li.append(num)
+                 pointers[num] = li
+                 status[num] = "end"
+                 status[num - 1] = "begin" if status[num - 1] == "single" else "middle"
+             elif is_begin:
+                 li1 = pointers[num - 1]
+-                li2 = pointers[num + 1]
+-                max_len = max(max_len, len(li1) + len(li2) + 1)
+-                new_li = li1 + [num] + li2
++                li2 = pointers[1 + num]
++                max_len = max(max_len, len(li2) + len(li1) + 1)
++                new_li = [num] + li1 + li2
+                 pointers[num] = new_li
+                 pointers[num - len(li1)] = new_li
+-                pointers[num + len(li2)] = new_li
++                pointers[len(li2) + num] = new_li
+                 status[num] = "middle"
+                 status[num - 1] = "begin" if status[num - 1] == "single" else "middle"
+-                status[num + 1] = "end" if status[num + 1] == "single" else "middle"
++                status[1 + num] = "end" if status[1 + num] == "single" else "middle"
+             else:
+                 max_len = max(max_len, 1)
+                 pointers[num] = [num]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/mercury_eval/longest-consecutive-sequence/original/default/fix_format/acw_replay/with_tabs.py

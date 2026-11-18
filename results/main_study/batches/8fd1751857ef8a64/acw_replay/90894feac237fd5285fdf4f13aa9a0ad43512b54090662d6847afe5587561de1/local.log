@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/90894feac237fd5285fdf4f13aa9a0ad43512b54090662d6847afe5587561de1/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ sys.setrecursionlimit(10**7)
+ inf = 10**20
+ eps = 1.0 / 10**10
+-mod = 10**9 + 7
++mod = 7 + 10**9
+ dd = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+ ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/90894feac237fd5285fdf4f13aa9a0ad43512b54090662d6847afe5587561de1/without_tabs.py:
+--- Original
++++ Modified
+@@ -66,7 +66,7 @@
+             t -= 1
+             s += c[ci]
+             ci += 1
+-        e[k] = s + k * t
++        e[k] = s + t * k
+ 
+     rr = [e[k] for k in b]
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/90894feac237fd5285fdf4f13aa9a0ad43512b54090662d6847afe5587561de1/without_tabs.py:
+--- Original
++++ Modified
+@@ -62,7 +62,7 @@
+     t = n
+     ci = 0
+     for k in d:
+-        while c[ci] <= k:
++        while k >= c[ci]:
+             t -= 1
+             s += c[ci]
+             ci += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/90894feac237fd5285fdf4f13aa9a0ad43512b54090662d6847afe5587561de1/with_tabs.py

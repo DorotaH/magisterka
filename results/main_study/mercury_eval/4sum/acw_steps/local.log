@@ -1,0 +1,21 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/4sum/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,12 +17,12 @@
+             #base case - two sum II
+             l,r = start,len(nums)-1
+             while l < r:
+-                if nums[l] + nums[r] < target:
++                if nums[r] + nums[l] < target:
+                     l+=1
+-                elif nums[l] + nums[r] > target:
++                elif nums[r] + nums[l] > target:
+                     r-=1
+                 else:
+-                    res.append(quad+[nums[l],nums[r]])
++                    res.append([nums[l],nums[r]]+quad)
+                     l+=1
+                     while l < r and nums[l] == nums[l-1]:
+                         l+=1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/4sum/acw_steps/with_tabs.py

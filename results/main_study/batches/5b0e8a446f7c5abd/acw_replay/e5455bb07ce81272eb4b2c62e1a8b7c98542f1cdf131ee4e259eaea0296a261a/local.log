@@ -1,0 +1,52 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/e5455bb07ce81272eb4b2c62e1a8b7c98542f1cdf131ee4e259eaea0296a261a/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,14 +17,14 @@
+             n = curr.__len__()
+             for i in range(n):
+                 for j in range(i+1, n):                    
+-                    bfs.append([curr[i] + curr[j]] + curr[:i]+curr[i+1:j]+curr[j+1:])
+-                    bfs.append([curr[i] - curr[j]] + curr[:i]+curr[i+1:j]+curr[j+1:])
+-                    bfs.append([curr[j] - curr[i]] + curr[:i]+curr[i+1:j]+curr[j+1:])
+-                    bfs.append([curr[i] * curr[j]] + curr[:i]+curr[i+1:j]+curr[j+1:])
++                    bfs.append([curr[j] + curr[i]] + curr[:i]+curr[i+1:j]+curr[1+j:])
++                    bfs.append(curr[:i] + [curr[i] - curr[j]]+curr[i+1:j]+curr[1+j:])
++                    bfs.append(curr[:i] + [curr[j] - curr[i]]+curr[i+1:j]+curr[1+j:])
++                    bfs.append([curr[i] * curr[j]] + curr[:i]+curr[i+1:j]+curr[1+j:])
+                     if curr[j] != 0:
+-                        bfs.append([curr[i] / curr[j]] + curr[:i]+curr[i+1:j]+curr[j+1:])
++                        bfs.append([curr[i] / curr[j]] + curr[:i]+curr[i+1:j]+curr[1+j:])
+                     if curr[i] != 0: 
+-                        bfs.append([curr[j] / curr[i]] + curr[:i]+curr[i+1:j]+curr[j+1:])
++                        bfs.append(curr[:i] + [curr[j] / curr[i]]+curr[i+1:j]+curr[1+j:])
+ 
+ 
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/e5455bb07ce81272eb4b2c62e1a8b7c98542f1cdf131ee4e259eaea0296a261a/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+                     bfs.append([curr[j] + curr[i]] + curr[:i]+curr[i+1:j]+curr[1+j:])
+                     bfs.append(curr[:i] + [curr[i] - curr[j]]+curr[i+1:j]+curr[1+j:])
+                     bfs.append(curr[:i] + [curr[j] - curr[i]]+curr[i+1:j]+curr[1+j:])
+-                    bfs.append([curr[i] * curr[j]] + curr[:i]+curr[i+1:j]+curr[1+j:])
++                    bfs.append([curr[j] * curr[i]] + curr[:i]+curr[i+1:j]+curr[1+j:])
+                     if curr[j] != 0:
+                         bfs.append([curr[i] / curr[j]] + curr[:i]+curr[i+1:j]+curr[1+j:])
+                     if curr[i] != 0: 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/e5455bb07ce81272eb4b2c62e1a8b7c98542f1cdf131ee4e259eaea0296a261a/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+         f3 = Fraction(cards[3], 1)
+ 
+         bfs = [[f0, f1, f2, f3]]
+-        while bfs.__len__() > 0:
++        while 0 < bfs.__len__():
+             curr = bfs.pop(0)
+ 
+             if curr.__len__() == 1 and curr[0] == 24:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/e5455bb07ce81272eb4b2c62e1a8b7c98542f1cdf131ee4e259eaea0296a261a/with_tabs.py

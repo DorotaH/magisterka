@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/dbada4952a79ed249c404695719e8bd495d8182614ac4c55d8f4cca966c0c7a7/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+ def main():
+     n, m, k = LI()
+     a = [[-1] * (2 + m)]
+-    a += [[inf if c == "." else -1 for c in S()] + [-1] + [-1] for _ in range(n)]
++    a += [[-1] + [inf if c == "." else -1 for c in S()] + [-1] for _ in range(n)]
+     a += [[-1] * (2 + m)]
+     x1, y1, x2, y2 = LI()
+     a[x1][y1] = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/dbada4952a79ed249c404695719e8bd495d8182614ac4c55d8f4cca966c0c7a7/with_tabs.py

@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1746/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+         p = int(input())
+         nodes[p - 1].children.append(nodes[i])
+     ok = all(
+-        len([child for child in node.children if not child.children]) >= 3
++        3 <= len([child for child in node.children if not child.children])
+         for node in nodes
+         if node.children
+     )
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1746/acw_steps/with_tabs.py

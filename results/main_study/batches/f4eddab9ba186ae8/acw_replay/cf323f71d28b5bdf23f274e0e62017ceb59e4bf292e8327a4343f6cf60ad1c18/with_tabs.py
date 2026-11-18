@@ -1,0 +1,46 @@
+from datetime import datetime, timedelta
+
+
+class CalendarUtil:
+	def __init__(self):
+		self.events = []
+
+	def add_event(self, event):
+		self.events.append(event)
+
+	def remove_event(self, event):
+		if event in self.events:
+			self.events.remove(event)
+
+	def get_events(self, date):
+		return [event for event in self.events if event['date'].date() == date.date()]
+
+	def is_available(self, start_time, end_time):
+		return not any(
+			event['end_time'] > start_time and event['start_time'] < end_time
+			for event in self.events
+		)
+
+	def get_available_slots(self, date):
+		available_slots = []
+		start_time = datetime(date.year, date.month, date.day, 0, 0)
+		end_time = datetime(date.year, date.month, date.day, 23, 59)
+
+		while start_time < end_time:
+			slot_end_time = start_time + timedelta(minutes=60)
+			if self.is_available(start_time, slot_end_time):
+				available_slots.append((start_time, slot_end_time))
+			start_time += timedelta(minutes=60)
+
+
+		return available_slots
+
+	def get_upcoming_events(self, num_events):
+		now = datetime.now()
+		upcoming_events = []
+		for event in self.events:
+			if now <= event['start_time']:
+				upcoming_events.append(event)
+			if len(upcoming_events) == num_events:
+				break
+		return upcoming_events

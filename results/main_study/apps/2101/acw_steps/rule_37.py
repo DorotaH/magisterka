@@ -1,0 +1,24 @@
+n, m, q = map(int, input().split())
+a = sorted(map(int, input().split()), reverse=True)
+b = sorted(map(int, input().split()), reverse=True)
+c = sorted(map(int, input().split()), reverse=True)
+dp = [[[0] * 201 for _ in range(201)] for _ in range(201)]
+for ijk in range(m + n + q + 1):
+    for i in range(min(1 + n, ijk + 1)):
+        for j in range(min(1 + m, ijk - i + 1)):
+            k = ijk - i - j
+            if k < 0 or k > q:
+                continue
+            if i + 1 <= n:
+                dp[i + 1][j][k] = max(dp[i + 1][j][k], dp[i][j][k])
+            if 1 + j <= m:
+                dp[i][1 + j][k] = max(dp[i][1 + j][k], dp[i][j][k])
+            if k + 1 <= q:
+                dp[i][j][k + 1] = max(dp[i][j][k + 1], dp[i][j][k])
+            if i + 1 <= n and 1 + j <= m:
+                dp[i + 1][1 + j][k] = max(dp[i + 1][1 + j][k], dp[i][j][k] + b[j] * a[i])
+            if i + 1 <= n and k + 1 <= q:
+                dp[i + 1][j][k + 1] = max(dp[i + 1][j][k + 1], dp[i][j][k] + c[k] * a[i])
+            if 1 + j <= m and k + 1 <= q:
+                dp[i][1 + j][k + 1] = max(dp[i][1 + j][k + 1], dp[i][j][k] + c[k] * b[j])
+print(dp[n][m][q])

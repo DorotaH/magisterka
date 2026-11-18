@@ -1,0 +1,32 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/81af7fa33225e7c2826ee5329428b24fbb19bb6b55aa4d371edc6bf83f89a51e/without_tabs.py:
+--- Original
++++ Modified
+@@ -76,11 +76,11 @@
+     bit = (num>>dig)&1
+     if bit > 0: #try to go to left first
+         if u.Left(): #if valid
+-            return (1<<dig) + cal(u.left, num, dig-1)
++            return cal(u.left, num, dig-1) + (1<<dig)
+         elif u.Right():
+             return cal(u.right, num, dig-1)
+     elif u.Right():
+-        return (1<<dig) + cal(u.right, num, dig-1)
++        return cal(u.right, num, dig-1) + (1<<dig)
+     elif u.Left():
+         return cal(u.left, num, dig-1)
+     return 0
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/81af7fa33225e7c2826ee5329428b24fbb19bb6b55aa4d371edc6bf83f89a51e/without_tabs.py:
+--- Original
++++ Modified
+@@ -43,7 +43,7 @@
+         return self.left != None and self.leftCnt > 0
+ 
+     def Right(self):
+-        return self.right != None and self.rightCnt > 0
++        return self.right != None and 0 < self.rightCnt
+ 
+ def insert(u, num, dig=MAX_BIT):
+     if dig < 0:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/81af7fa33225e7c2826ee5329428b24fbb19bb6b55aa4d371edc6bf83f89a51e/with_tabs.py

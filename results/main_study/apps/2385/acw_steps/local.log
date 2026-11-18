@@ -1,0 +1,85 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2385/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,13 +16,13 @@
+ def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+ sys.setrecursionlimit(10 ** 9)
+ INF = float('inf')
+-mod = 10 ** 9 + 7
++mod = 7 + 10 ** 9
+ 
+ N = INT()
+ lim = N+10  # 必要そうな階乗の限界を入れる
+-fact = [1] * (lim+1)
+-fact_inv = [1] * (lim+1)
+-for n in range(1, lim+1):
++fact = [1] * (1+lim)
++fact_inv = [1] * (1+lim)
++for n in range(1, 1+lim):
+     fact[n] = (fact[n-1] * n) % mod
+ fact_inv[lim] = pow(fact[lim], mod-2, mod)
+ for n in range(lim, 0, -1):
+@@ -54,7 +54,7 @@
+     dp_d[v] *= fact[size_d[v]]
+     dp_d[v] %= mod
+     p = parent[v]
+-    s = size_d[v] + 1
++    s = 1 + size_d[v]
+     size_d[p] += s
+     dp_d[p] *= fact_inv[s] * dp_d[v]
+     dp_d[p] %= mod
+@@ -71,12 +71,12 @@
+     p = parent[v]
+     arr = [(fact_inv[size_d[node]+1], dp_d[node]) if node != p else (fact_inv[size_u[v]], dp_u[v]) for node in tree[v]]
+     left = [(1, 1)] + list(accumulate(arr, merge))[:-1]
+-    right = list(accumulate(arr[::-1], merge))[-2::-1] + [(1, 1)]
++    right = [(1, 1)] + list(accumulate(arr[::-1], merge))[-2::-1]
+     contrib = [merge(x, y) for x, y in zip(left, right)]
+     for node, c in zip(tree[v], contrib):
+         if node != p:
+             dp_u[node] = (c[0]*c[1]*fact[size_u[node]-1])%mod
+ # print(dp_u)
+ for xd, xu, sd, su in zip(dp_d[1:], dp_u[1:], size_d[1:], size_u[1:]):
+-    x = xd * xu * fact[sd + su] * fact_inv[sd] * fact_inv[su] % mod
++    x = xd * xu * fact[su + sd] * fact_inv[sd] * fact_inv[su] % mod
+     print(x)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2385/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+     fact[n] = (fact[n-1] * n) % mod
+ fact_inv[lim] = pow(fact[lim], mod-2, mod)
+ for n in range(lim, 0, -1):
+-    fact_inv[n-1] = (n * fact_inv[n]) % mod
++    fact_inv[n-1] = (fact_inv[n] * n) % mod
+ 
+ tree = [[] for _ in range(N+1)]  # 1-indexed
+ for _ in range(N-1):
+@@ -56,7 +56,7 @@
+     p = parent[v]
+     s = 1 + size_d[v]
+     size_d[p] += s
+-    dp_d[p] *= fact_inv[s] * dp_d[v]
++    dp_d[p] *= dp_d[v] * fact_inv[s]
+     dp_d[p] %= mod
+ 
+ size_u = [N-1-x for x in size_d]
+@@ -65,7 +65,7 @@
+ def merge(p1, p2):
+     den_inv1, v1 = p1
+     den_inv2, v2 = p2
+-    return den_inv1*den_inv2%mod, v1*v2%mod
++    return den_inv1*den_inv2%mod, v2*v1%mod
+ 
+ for v in order:
+     p = parent[v]
+@@ -78,5 +78,5 @@
+             dp_u[node] = (c[0]*c[1]*fact[size_u[node]-1])%mod
+ # print(dp_u)
+ for xd, xu, sd, su in zip(dp_d[1:], dp_u[1:], size_d[1:], size_u[1:]):
+-    x = xd * xu * fact[su + sd] * fact_inv[sd] * fact_inv[su] % mod
++    x = xu * xd * fact[su + sd] * fact_inv[sd] * fact_inv[su] % mod
+     print(x)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2385/acw_steps/with_tabs.py

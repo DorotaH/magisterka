@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/word-search/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+             if i<0 or j<0 or i>=m or j>=n: return False
+             if board[i][j] != word[0]: return False
+             board[i][j] = '*'
+-            res = search(i+1, j, word[1:]) or search(i-1, j, word[1:]) or search(i, j+1, word[1:])or search(i, j-1, word[1:])
++            res = search(i+1, j, word[1:]) or search(i-1, j, word[1:]) or search(i, 1+j, word[1:])or search(i, j-1, word[1:])
+             board[i][j] = word[0]
+             return res
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/word-search/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ 
+         def search(i, j, word):
+             if not word: return True
+-            if i<0 or j<0 or i>=m or j>=n: return False
++            if i<0 or 0 > j or i>=m or j>=n: return False
+             if board[i][j] != word[0]: return False
+             board[i][j] = '*'
+             res = search(i+1, j, word[1:]) or search(i-1, j, word[1:]) or search(i, 1+j, word[1:])or search(i, j-1, word[1:])
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/word-search/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ 
+         def search(i, j, word):
+             if not word: return True
+-            if i<0 or 0 > j or i>=m or j>=n: return False
++            if i<0 or 0 > j or i>=m or n <= j: return False
+             if board[i][j] != word[0]: return False
+             board[i][j] = '*'
+             res = search(i+1, j, word[1:]) or search(i-1, j, word[1:]) or search(i, 1+j, word[1:])or search(i, j-1, word[1:])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/word-search/acw_steps/with_tabs.py

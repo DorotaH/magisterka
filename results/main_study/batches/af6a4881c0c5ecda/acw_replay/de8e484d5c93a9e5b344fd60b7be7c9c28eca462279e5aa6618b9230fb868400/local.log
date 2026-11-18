@@ -1,0 +1,102 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/de8e484d5c93a9e5b344fd60b7be7c9c28eca462279e5aa6618b9230fb868400/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+             self.tree[i] = [self.data[tl]]
+             return
+ 
+-        tm = (tr + tl) // 2
++        tm = (tl + tr) // 2
+         self._buildRecurse(2*i, tl, tm)
+         self._buildRecurse(2*i + 1, tm + 1, tr)
+ 
+@@ -47,7 +47,7 @@
+             bucket = self.tree[i]
+             return bisect.bisect_right(bucket, upperValBound) - bisect.bisect_left(bucket, lowerValBound)
+ 
+-        tm = (tr + tl) // 2
++        tm = (tl + tr) // 2
+         return self._queryRecurse(2*i, tl, tm, l, r, lowerValBound, upperValBound) + self._queryRecurse(2*i + 1, tm + 1, tr, l, r, lowerValBound, upperValBound)
+ 
+     def query(self, l, r, lowerBound, upperBound):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/de8e484d5c93a9e5b344fd60b7be7c9c28eca462279e5aa6618b9230fb868400/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,10 +12,10 @@
+             return
+ 
+         tm = (tl + tr) // 2
+-        self._buildRecurse(2*i, tl, tm)
+-        self._buildRecurse(2*i + 1, tm + 1, tr)
++        self._buildRecurse(i*2, tl, tm)
++        self._buildRecurse(i*2 + 1, tm + 1, tr)
+ 
+-        self.tree[i] = self._merge(self.tree[2*i], self.tree[2*i + 1])
++        self.tree[i] = self._merge(self.tree[i*2], self.tree[i*2 + 1])
+ 
+     # merges two sorted lists
+     def _merge(self, a, b):
+@@ -48,7 +48,7 @@
+             return bisect.bisect_right(bucket, upperValBound) - bisect.bisect_left(bucket, lowerValBound)
+ 
+         tm = (tl + tr) // 2
+-        return self._queryRecurse(2*i, tl, tm, l, r, lowerValBound, upperValBound) + self._queryRecurse(2*i + 1, tm + 1, tr, l, r, lowerValBound, upperValBound)
++        return self._queryRecurse(i*2, tl, tm, l, r, lowerValBound, upperValBound) + self._queryRecurse(i*2 + 1, tm + 1, tr, l, r, lowerValBound, upperValBound)
+ 
+     def query(self, l, r, lowerBound, upperBound):
+         return self._queryRecurse(1, 0, self.n - 1, l, r, lowerBound, upperBound)
+@@ -61,7 +61,7 @@
+         leftIndex = 0
+         for i in range(len(nums)):
+             rightIndex = i - 1
+-            lowerBound = nums[i] * 2 + 1
++            lowerBound = 2 * nums[i] + 1
+             upperBound = 2**31 - 1
+             res += seg.query(leftIndex, rightIndex, lowerBound, upperBound)
+         return res
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/de8e484d5c93a9e5b344fd60b7be7c9c28eca462279e5aa6618b9230fb868400/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+         newList = []
+         i = 0
+         j = 0
+-        while i < len(a) and j < len(b):
++        while i < len(a) and len(b) > j:
+             if a[i] <= b[j]:
+                 newList.append(a[i])
+                 i += 1
+@@ -32,14 +32,14 @@
+         if i < len(a):
+             for k in range(i, len(a)):
+                 newList.append(a[k])
+-        if j < len(b):
++        if len(b) > j:
+             for g in range(j, len(b)):
+                 newList.append(b[g])
+         return newList
+ 
+     def _queryRecurse(self, i, tl, tr, l, r, lowerValBound, upperValBound):
+         # if we have no intersection on the numbers return an identity value
+-        if tl > r or tr < l:
++        if tl > r or l > tr:
+             return 0
+ 
+         # if we are fully contained
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/de8e484d5c93a9e5b344fd60b7be7c9c28eca462279e5aa6618b9230fb868400/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+         i = 0
+         j = 0
+         while i < len(a) and len(b) > j:
+-            if a[i] <= b[j]:
++            if b[j] >= a[i]:
+                 newList.append(a[i])
+                 i += 1
+             else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/de8e484d5c93a9e5b344fd60b7be7c9c28eca462279e5aa6618b9230fb868400/with_tabs.py

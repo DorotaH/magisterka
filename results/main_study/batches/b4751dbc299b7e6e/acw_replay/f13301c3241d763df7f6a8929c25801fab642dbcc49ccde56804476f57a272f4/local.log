@@ -1,0 +1,62 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/f13301c3241d763df7f6a8929c25801fab642dbcc49ccde56804476f57a272f4/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,15 +16,15 @@
+         seg.append((l,r))
+     val=list(val)
+     val.sort()
+-    comp={i:e+1 for e,i in enumerate(val)}
+-    for i in range(n+1):
++    comp={i:1+e for e,i in enumerate(val)}
++    for i in range(1+n):
+         l,r=seg[i]
+         seg[i]=(comp[l],comp[r])
+ 
+-    deg=[0]*(n+1)
+-    out=[[] for i in range(n+1)]
+-    for i in range(n+1):
+-        for j in range(i+1,n+1):
++    deg=[0]*(1+n)
++    out=[[] for i in range(1+n)]
++    for i in range(1+n):
++        for j in range(i+1,1+n):
+             l,r=seg[i]
+             L,R=seg[j]
+             if l >= L and r<=R:
+@@ -45,7 +45,7 @@
+                 deq.append(nv)
+                 ans.append(nv)
+ 
+-    dp=[0]*(n+1)
++    dp=[0]*(1+n)
+ 
+     def solve(v):
+         query = [[] for _ in range(2*n+3)]
+@@ -60,7 +60,7 @@
+                 res=max(test,res)
+             subdp[i]=res
+ 
+-        dp[v]=subdp[-1]+1
++        dp[v]=1+subdp[-1]
+ 
+     for v in ans[::-1]:
+         solve(v)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/f13301c3241d763df7f6a8929c25801fab642dbcc49ccde56804476f57a272f4/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,10 +27,10 @@
+         for j in range(i+1,1+n):
+             l,r=seg[i]
+             L,R=seg[j]
+-            if l >= L and r<=R:
++            if l >= L and R >= r:
+                 out[j].append(i)
+                 deg[i]+=1
+-            elif l<=L and r >= R:
++            elif l<=L and R <= r:
+                 out[i].append(j)
+                 deg[j]+=1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/f13301c3241d763df7f6a8929c25801fab642dbcc49ccde56804476f57a272f4/with_tabs.py

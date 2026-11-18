@@ -1,0 +1,49 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/find-minimum-in-rotated-sorted-array/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+             j += 1
+             k += 1
+ 
+-        for i in range(left, right + 1):
++        for i in range(left, 1 + right):
+             array[i] = temp[i]
+ 
+     def mergeSort(self, array, left, right, temp):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/find-minimum-in-rotated-sorted-array/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -35,6 +35,6 @@
+             self.merge(array, left, middle, right, temp)
+ 
+     def findMin(self, nums: List[int]) -> int:
+-        temp = [None] * len(nums)
++        temp = len(nums) * [None]
+         self.mergeSort(nums, 0, len(nums) - 1, temp)
+         return nums[0]  # Assuming the goal is to find the minimum value
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/find-minimum-in-rotated-sorted-array/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,8 +5,8 @@
+         j = middle + 1
+         k = left
+ 
+-        while i <= middle and j <= right:
+-            if array[i] <= array[j]:
++        while i <= middle and right >= j:
++            if array[j] >= array[i]:
+                 temp[k] = array[i]
+                 i += 1
+             else:
+@@ -19,7 +19,7 @@
+             i += 1
+             k += 1
+ 
+-        while j <= right:
++        while right >= j:
+             temp[k] = array[j]
+             j += 1
+             k += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/find-minimum-in-rotated-sorted-array/acw_steps/with_tabs.py

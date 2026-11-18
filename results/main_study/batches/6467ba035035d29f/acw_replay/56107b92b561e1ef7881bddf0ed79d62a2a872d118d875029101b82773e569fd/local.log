@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/56107b92b561e1ef7881bddf0ed79d62a2a872d118d875029101b82773e569fd/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+             # Loop til end
+             inc = curcomfort
+         else:
+-            inc = curcomfort + dparr[nextsection]
++            inc = dparr[nextsection] + curcomfort
+         exc = 0 if i == len(sections) - 1 else dparr[i + 1]
+         dparr[i] = max(inc, exc)
+     return dparr[0]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/56107b92b561e1ef7881bddf0ed79d62a2a872d118d875029101b82773e569fd/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+     comfort = 0
+     i = start
+     while i <= end:
+-        if first[zs[i]] < start:
++        if start > first[zs[i]]:
+             break
+         if i == last[zs[i]]:
+             comfort ^= zs[i]
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/56107b92b561e1ef7881bddf0ed79d62a2a872d118d875029101b82773e569fd/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,7 +4,7 @@
+         _, curend, curcomfort = sections[i]
+         nextsection = i + 1
+         try:
+-            while sections[nextsection][0] <= curend:
++            while curend >= sections[nextsection][0]:
+                 nextsection += 1
+         except IndexError:
+             # Loop til end
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/56107b92b561e1ef7881bddf0ed79d62a2a872d118d875029101b82773e569fd/with_tabs.py

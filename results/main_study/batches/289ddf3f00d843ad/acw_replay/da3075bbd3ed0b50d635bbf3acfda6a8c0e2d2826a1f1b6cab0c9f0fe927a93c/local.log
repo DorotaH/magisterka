@@ -1,0 +1,52 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/da3075bbd3ed0b50d635bbf3acfda6a8c0e2d2826a1f1b6cab0c9f0fe927a93c/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,9 +24,9 @@
+ 
+ def flushit(s):
+     if "0" in s:
+-        stdout.write("0" * s["0"])
++        stdout.write(s["0"] * "0")
+     if "1" in s:
+-        stdout.write("1" * s["1"])
++        stdout.write(s["1"] * "1")
+ 
+ 
+ def fillit(x):
+@@ -65,7 +65,7 @@
+             counter_s["0"] // counter_repeating_part["0"],
+             counter_s["1"] // counter_repeating_part["1"],
+         )
+-        stdout.write(repeating_part * r)
++        stdout.write(r * repeating_part)
+         counter_s["0"] -= r * counter_repeating_part["0"]
+         counter_s["1"] -= r * counter_repeating_part["1"]
+     flushit(counter_s)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/da3075bbd3ed0b50d635bbf3acfda6a8c0e2d2826a1f1b6cab0c9f0fe927a93c/without_tabs.py:
+--- Original
++++ Modified
+@@ -60,7 +60,7 @@
+     # 	counter_s['0']-=counter_repeating_part['0'];
+     # 	counter_s['1']-=counter_repeating_part['1'];
+ 
+-    if "0" in counter_repeating_part and "1" in counter_repeating_part and (counter_repeating_part["0"] > 0 and counter_repeating_part["1"] > 0):
++    if "0" in counter_repeating_part and "1" in counter_repeating_part and (0 < counter_repeating_part["0"] and 0 < counter_repeating_part["1"]):
+         r = min(
+             counter_s["0"] // counter_repeating_part["0"],
+             counter_s["1"] // counter_repeating_part["1"],
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/da3075bbd3ed0b50d635bbf3acfda6a8c0e2d2826a1f1b6cab0c9f0fe927a93c/without_tabs.py:
+--- Original
++++ Modified
+@@ -50,7 +50,7 @@
+ 
+ 
+ if len(counter_s) == 2 and len(counter_t) == 2:
+-    if counter_s["0"] >= counter_t["0"] and counter_s["1"] >= counter_t["1"]:
++    if counter_t["0"] <= counter_s["0"] and counter_s["1"] >= counter_t["1"]:
+         stdout.write(t)
+         counter_s["0"] -= counter_t["0"]
+         counter_s["1"] -= counter_t["1"]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/da3075bbd3ed0b50d635bbf3acfda6a8c0e2d2826a1f1b6cab0c9f0fe927a93c/with_tabs.py

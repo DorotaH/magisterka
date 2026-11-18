@@ -1,0 +1,92 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/4295720ce930b38fbe95211b8db60bccface4dec3a640202d6b215e9b519f3e2/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+                 for k in range(self.m):
+                     ans.arr[i][j] = (
+                         ans.arr[i][j] + self.arr[i][k] * other.arr[k][j]
+-                    ) % (10**9 + 7)
++                    ) % (7 + 10**9)
+         return ans
+ 
+     def __imul__(self, other):
+@@ -56,10 +56,10 @@
+     if n == 0:
+         return 1
+     elif n & 1 == 1:
+-        return (a * fpow(a, n - 1)) % (10**9 + 7)
++        return (a * fpow(a, n - 1)) % (7 + 10**9)
+     else:
+         t = fpow(a, n >> 1)
+-        return (t * t) % (10**9 + 7)
++        return (t * t) % (7 + 10**9)
+ 
+ 
+ transform = Matrix(2, 2, [[1, 1], [0, 4]])
+@@ -90,17 +90,17 @@
+ 
+ x = 1
+ for j in a:
+-    x = (x * j) % (10**9 + 6)
++    x = (x * j) % (6 + 10**9)
+ 
+-x = (x - 1) % (10**9 + 6)
++x = (x - 1) % (6 + 10**9)
+ 
+ if x % 2 == 0:
+     ans = (transform ** (x // 2)) * Matrix(2, 1, [[0], [1]])
+     print("%d/%d" % (ans.arr[0][0], fpow(2, x)))
+ else:
+-    y = (x - 1) % (10**9 + 6)
++    y = (x - 1) % (6 + 10**9)
+     ans = (transform ** (y // 2)) * Matrix(2, 1, [[0], [1]])
+     print(
+         "%d/%d"
+-        % ((ans.arr[0][0] * 2 + 1) % (10**9 + 7), (ans.arr[1][0] * 2) % (10**9 + 7))
++        % ((ans.arr[0][0] * 2 + 1) % (7 + 10**9), (ans.arr[1][0] * 2) % (7 + 10**9))
+     )
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/4295720ce930b38fbe95211b8db60bccface4dec3a640202d6b215e9b519f3e2/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,12 +18,12 @@
+             for j in range(other.m):
+                 for k in range(self.m):
+                     ans.arr[i][j] = (
+-                        ans.arr[i][j] + self.arr[i][k] * other.arr[k][j]
++                        ans.arr[i][j] + other.arr[k][j] * self.arr[i][k]
+                     ) % (7 + 10**9)
+         return ans
+ 
+     def __imul__(self, other):
+-        self = self * other
++        self = other * self
+         return self
+ 
+     def __pow__(self, n):
+@@ -33,7 +33,7 @@
+                 ans.arr[i][i] = 1
+             return ans
+         elif n & 1 == 1:
+-            return self * (self ** (n - 1))
++            return (self ** (n - 1)) * self
+         else:
+             t = self ** (n >> 1)
+             return t * t
+@@ -95,12 +95,12 @@
+ x = (x - 1) % (6 + 10**9)
+ 
+ if x % 2 == 0:
+-    ans = (transform ** (x // 2)) * Matrix(2, 1, [[0], [1]])
++    ans = Matrix(2, 1, [[0], [1]]) * (transform ** (x // 2))
+     print("%d/%d" % (ans.arr[0][0], fpow(2, x)))
+ else:
+     y = (x - 1) % (6 + 10**9)
+     ans = (transform ** (y // 2)) * Matrix(2, 1, [[0], [1]])
+     print(
+         "%d/%d"
+-        % ((ans.arr[0][0] * 2 + 1) % (7 + 10**9), (ans.arr[1][0] * 2) % (7 + 10**9))
++        % ((ans.arr[0][0] * 2 + 1) % (7 + 10**9), (2 * ans.arr[1][0]) % (7 + 10**9))
+     )
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/4295720ce930b38fbe95211b8db60bccface4dec3a640202d6b215e9b519f3e2/with_tabs.py

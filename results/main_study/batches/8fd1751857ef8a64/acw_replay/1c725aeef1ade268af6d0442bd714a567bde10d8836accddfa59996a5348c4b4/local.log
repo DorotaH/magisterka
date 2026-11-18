@@ -1,0 +1,29 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/1c725aeef1ade268af6d0442bd714a567bde10d8836accddfa59996a5348c4b4/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,8 +13,8 @@
+         for num2 in lst:
+             for i in range(half, 0, -1):
+                 for num in dp[i - 1]:
+-                    pos = (num + num2) % k
+-                    dp[i][pos] = max(dp[i][pos], num + num2)
++                    pos = (num2 + num) % k
++                    dp[i][pos] = max(dp[i][pos], num2 + num)
+         se_s.append(set(dp[-1]))
+     
+     ans = 0
+@@ -23,9 +23,9 @@
+         se_tmp = set()
+         for num in se:
+             for num2 in ans_sub:
+-                se_tmp.add(num + num2)
+-                if (num + num2) % k == 0:
+-                    ans = max(ans, num + num2)
++                se_tmp.add(num2 + num)
++                if (num2 + num) % k == 0:
++                    ans = max(ans, num2 + num)
+         tmp = [0 for _ in range(k)]
+         for num in se_tmp:
+             tmp[num % k] = max(tmp[num % k], num)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/8fd1751857ef8a64/acw_replay/1c725aeef1ade268af6d0442bd714a567bde10d8836accddfa59996a5348c4b4/with_tabs.py

@@ -1,0 +1,20 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/35e8ce805b71434e3b3ee1829d7b50387f736061795cc5bf93a649b2dea61bcd/without_tabs.py:
+--- Original
++++ Modified
+@@ -37,11 +37,11 @@
+     def check_winner(self, player_hand, dealer_hand):
+         player_value = self.calculate_hand_value(player_hand)
+         dealer_value = self.calculate_hand_value(dealer_hand)
+-        if player_value > 21 and dealer_value > 21:
++        if 21 < player_value and 21 < dealer_value:
+             return 'Player wins' if player_value <= dealer_value else 'Dealer wins'
+-        elif player_value > 21:
++        elif 21 < player_value:
+             return 'Dealer wins'
+-        elif dealer_value > 21:
++        elif 21 < dealer_value:
+             return 'Player wins'
+         else:
+             return 'Dealer wins' if player_value <= dealer_value else 'Player wins'
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/35e8ce805b71434e3b3ee1829d7b50387f736061795cc5bf93a649b2dea61bcd/with_tabs.py

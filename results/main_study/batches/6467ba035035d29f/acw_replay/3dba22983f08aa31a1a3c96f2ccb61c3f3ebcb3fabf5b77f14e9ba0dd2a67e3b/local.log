@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/3dba22983f08aa31a1a3c96f2ccb61c3f3ebcb3fabf5b77f14e9ba0dd2a67e3b/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+         current = 0
+         X = 1
+         for s in S:
+-            current = (current + int(s) * X) % P
++            current = (current + X * int(s)) % P
+             ans += mod[current]
+             mod[current] += 1
+             X = X * 10 % P
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/3dba22983f08aa31a1a3c96f2ccb61c3f3ebcb3fabf5b77f14e9ba0dd2a67e3b/with_tabs.py

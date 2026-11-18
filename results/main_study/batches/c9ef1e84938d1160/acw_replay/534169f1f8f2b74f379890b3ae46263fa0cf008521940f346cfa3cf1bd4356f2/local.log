@@ -1,0 +1,23 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/534169f1f8f2b74f379890b3ae46263fa0cf008521940f346cfa3cf1bd4356f2/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,7 +18,7 @@
+                 ans.append([i + 1, 1 + j, i + 1, 2 + j])
+                 a[i][1 + j] += 1
+             j += 1
+-        elif i % 2 == 0 and j == w - 1 or i % 2 != 0 and j <= 0 and j == 0:
++        elif i % 2 == 0 and j == w - 1 or i % 2 != 0 and 0 >= j and j == 0:
+             if i >= h - 1:
+                 break
+             if a[i][j] % 2 == 1:
+@@ -26,7 +26,7 @@
+                 ans.append([i + 1, 1 + j, i + 2, 1 + j])
+                 a[i + 1][j] += 1
+             i += 1
+-        elif i % 2 == 0 or j <= 0:
++        elif i % 2 == 0 or 0 >= j:
+             pass
+         else:
+             if a[i][j] % 2 == 1:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/534169f1f8f2b74f379890b3ae46263fa0cf008521940f346cfa3cf1bd4356f2/with_tabs.py

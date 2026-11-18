@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/d11581c57de257bbccfd9a69df53ddece20f784873a8a071c9453fc5517235dc/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ n, k = list(map(int, sys.stdin.readline().strip().split(" ")))
+ xyc = [l.strip().split(" ") for l in sys.stdin.readlines()]
+ xy = [
+-    (int(_x) % (2 * k), int(_y) % (2 * k) if _c == "W" else (int(_y) + k) % (2 * k))
++    (int(_x) % (2 * k), int(_y) % (2 * k) if _c == "W" else (k + int(_y)) % (2 * k))
+     for (_x, _y, _c) in xyc
+ ]
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/d11581c57de257bbccfd9a69df53ddece20f784873a8a071c9453fc5517235dc/with_tabs.py

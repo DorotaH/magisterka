@@ -1,0 +1,30 @@
+<!doctype html><html lang="pl"><meta charset="utf-8"><title>Fragment</title><style>pre{font:14px monospace;tab-size:4;line-height:1.5;padding:16px}</style><pre>import sys
+
+readline = sys.stdin.readline
+read = sys.stdin.read
+ns = lambda: readline().rstrip()
+ni = lambda: int(readline().rstrip())
+nm = lambda: map(int, readline().split())
+nl = lambda: list(map(int, readline().split()))
+prn = lambda x: print(*x, sep=&quot;\n&quot;)
+
+
+def solve():
+    a, b, c, d = nm()
+    if a &lt;= b:
+        print(b)
+    else:
+        a -= b
+        if c &lt;= d:
+            print(-1)
+        else:
+            print(b + c * ((a - 1) // (c - d) + 1))
+    return
+
+
+# solve()
+
+T = ni()
+for _ in range(T):
+    solve()
+</pre></html>

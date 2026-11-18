@@ -1,0 +1,60 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/a799abdc5baea25eb86ce851156cb95e7eff2fc5541716b981dfdfcb02578f0e/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+                 self.par[0][v]=p
+                 for to in G[v]:
+                     if to != p:
+-                        que.append((v,to,d+1))
++                        que.append((v,to,1+d))
+ 
+         bfs(root)
+ 
+@@ -45,7 +45,7 @@
+ 
+     def dist(self, a,b):
+         lca = self.lca(a,b)
+-        return self.dep[a]+self.dep[b]-2*self.dep[lca]
++        return self.dep[b]+self.dep[a]-2*self.dep[lca]
+ 
+ n = int(input())
+ G = [[] for _ in range(n)]
+@@ -71,8 +71,8 @@
+     bx = L.dist(b,x)
+     by = L.dist(b,y)
+ 
+-    base.append(ax+1+by)
+-    base.append(ay+1+bx)
++    base.append(1+ax+by)
++    base.append(1+ay+bx)
+ 
+     flag = any(ki<=k and (k-ki)%2==0 for ki in base)
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/a799abdc5baea25eb86ce851156cb95e7eff2fc5541716b981dfdfcb02578f0e/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+                 self.par[i+1][j]=self.par[i][self.par[i][j]]
+ 
+     def lca(self,a,b):
+-        if self.dep[a]>self.dep[b]:
++        if self.dep[b] < self.dep[a]:
+             a,b=b,a
+         for i in range(18):
+             if (self.dep[b]-self.dep[a]) & 1<<i:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/a799abdc5baea25eb86ce851156cb95e7eff2fc5541716b981dfdfcb02578f0e/without_tabs.py:
+--- Original
++++ Modified
+@@ -74,7 +74,7 @@
+     base.append(1+ax+by)
+     base.append(1+ay+bx)
+ 
+-    flag = any(ki<=k and (k-ki)%2==0 for ki in base)
++    flag = any(k >= ki and (k-ki)%2==0 for ki in base)
+ 
+     if flag:
+         print("YES")
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/a799abdc5baea25eb86ce851156cb95e7eff2fc5541716b981dfdfcb02578f0e/with_tabs.py

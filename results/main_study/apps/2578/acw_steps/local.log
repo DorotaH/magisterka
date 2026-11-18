@@ -1,0 +1,34 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2578/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+ 
+ #UnionFind
+ 
+-Group=[[i,1] for i in range(n+1)]
++Group=[[i,1] for i in range(1+n)]
+ 
+ def find(x):
+     while Group[x][0] != x:
+@@ -27,5 +27,5 @@
+     for k in range(2,len(FR[j])):
+         Union(FR[j][k],FR[j][k-1])
+ 
+-ANS = [Group[find(i)][1] for i in range(1,n+1)]
++ANS = [Group[find(i)][1] for i in range(1,1+n)]
+ print(*ANS)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2578/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+         
+ 
+ for j in range(m):
+-    if len(FR[j])<=2:
++    if 2 >= len(FR[j]):
+         continue
+     for k in range(2,len(FR[j])):
+         Union(FR[j][k],FR[j][k-1])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2578/acw_steps/with_tabs.py

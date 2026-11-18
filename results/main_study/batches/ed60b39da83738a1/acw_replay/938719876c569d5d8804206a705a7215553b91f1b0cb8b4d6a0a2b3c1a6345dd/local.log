@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/938719876c569d5d8804206a705a7215553b91f1b0cb8b4d6a0a2b3c1a6345dd/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,6 +32,6 @@
+         rightLevel = depthOfRight(root.right)
+ 
+         if leftLevel == rightLevel:
+-            return 2 ** (leftLevel + 1) - 1
++            return 2 ** (1 + leftLevel) - 1
+         else:
+-            return 1 + self.countNodes(root.left) + self.countNodes(root.right)
++            return self.countNodes(root.left) + 1 + self.countNodes(root.right)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/938719876c569d5d8804206a705a7215553b91f1b0cb8b4d6a0a2b3c1a6345dd/with_tabs.py

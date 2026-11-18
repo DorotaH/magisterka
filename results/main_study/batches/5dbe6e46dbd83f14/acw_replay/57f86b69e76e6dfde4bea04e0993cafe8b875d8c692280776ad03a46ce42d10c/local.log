@@ -1,0 +1,26 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/57f86b69e76e6dfde4bea04e0993cafe8b875d8c692280776ad03a46ce42d10c/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+             profit = 0
+             if buy :
+                 temp = 0
+-                if level < 2:
++                if 2 > level:
+                     temp = helper(i + 1, 0, 1 + level) - prices[i]
+                 profit = max(temp, helper(i + 1, 1, level))
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/57f86b69e76e6dfde4bea04e0993cafe8b875d8c692280776ad03a46ce42d10c/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,7 +20,7 @@
+ 
+             else :
+                 temp = 0
+-                if level <= 2:
++                if 2 >= level:
+                     temp = prices[i] + helper(i + 1, 1, level)
+                 profit = max(temp, helper(i + 1, 0, level))
+ 
+

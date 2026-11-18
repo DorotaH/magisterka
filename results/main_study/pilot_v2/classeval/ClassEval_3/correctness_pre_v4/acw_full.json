@@ -1,0 +1,626 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_3/acw_full/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_3/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.ArrangementCalculatorTest.test_arrangementcalculator\": [[\"assertEqual\", 2], [\"assertEqual\", 2], [\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_1\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_2\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_3\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_4\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_5\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_1\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_2\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_3\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_4\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_5\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_1\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_2\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_3\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_4\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_5\": [[\"assertEqual\", 2]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_1\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_2\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_3\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_4\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_5\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_6\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_1\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_2\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_3\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_4\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_5\": [[\"assertEqual\", 2], [\"assertListEqual\", 2], [\"assertSequenceEqual\", 3]]}, \"errors\": [], \"failures\": [], \"log\": \"test_count_1 (benchmark_case.ArrangementCalculatorTestCount.test_count_1) ... ok\\ntest_count_2 (benchmark_case.ArrangementCalculatorTestCount.test_count_2) ... ok\\ntest_count_3 (benchmark_case.ArrangementCalculatorTestCount.test_count_3) ... ok\\ntest_count_4 (benchmark_case.ArrangementCalculatorTestCount.test_count_4) ... ok\\ntest_count_5 (benchmark_case.ArrangementCalculatorTestCount.test_count_5) ... ok\\ntest_count_all_1 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_1) ... ok\\ntest_count_all_2 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_2) ... ok\\ntest_count_all_3 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_3) ... ok\\ntest_count_all_4 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_4) ... ok\\ntest_count_all_5 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_5) ... ok\\ntest_select_1 (benchmark_case.ArrangementCalculatorTestSelect.test_select_1) ... ok\\ntest_select_2 (benchmark_case.ArrangementCalculatorTestSelect.test_select_2) ... ok\\ntest_select_3 (benchmark_case.ArrangementCalculatorTestSelect.test_select_3) ... ok\\ntest_select_4 (benchmark_case.ArrangementCalculatorTestSelect.test_select_4) ... ok\\ntest_select_5 (benchmark_case.ArrangementCalculatorTestSelect.test_select_5) ... ok\\ntest_select_6 (benchmark_case.ArrangementCalculatorTestSelect.test_select_6) ... ok\\ntest_select_all_1 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_1) ... ok\\ntest_select_all_2 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_2) ... ok\\ntest_select_all_3 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_3) ... ok\\ntest_select_all_4 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_4) ... ok\\ntest_select_all_5 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_5) ... ok\\ntest_factorial_1 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_1) ... ok\\ntest_factorial_2 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_2) ... ok\\ntest_factorial_3 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_3) ... ok\\ntest_factorial_4 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_4) ... ok\\ntest_factorial_5 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_5) ... ok\\ntest_arrangementcalculator (benchmark_case.ArrangementCalculatorTest.test_arrangementcalculator) ... ok\\n\\n----------------------------------------------------------------------\\nRan 27 tests in 0.003s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.ArrangementCalculatorTest.test_arrangementcalculator\": [[\"count\", \"60\"], [\"count_all\", \"64\"], [\"__init__\", \"null\"], [\"select\", \"[[1, 2], [1, 3], [1, 4], [2, 1], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]\"], [\"__init__\", \"null\"], [\"select_all\", \"[[1], [2], [3], [1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2], [1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\"], [\"factorial\", \"24\"]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_1\": [[\"count\", \"60\"]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_2\": [[\"count\", \"24\"]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_3\": [[\"count\", \"120\"]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_4\": [[\"count\", \"210\"]], \"benchmark_case.ArrangementCalculatorTestCount.test_count_5\": [[\"count\", \"24\"]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_1\": [[\"count_all\", \"64\"]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_2\": [[\"count_all\", \"1\"]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_3\": [[\"count_all\", \"4\"]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_4\": [[\"count_all\", \"15\"]], \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_5\": [[\"count_all\", \"325\"]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_1\": [[\"factorial\", \"24\"]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_2\": [[\"factorial\", \"120\"]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_3\": [[\"factorial\", \"6\"]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_4\": [[\"factorial\", \"2\"]], \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_5\": [[\"factorial\", \"1\"]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_1\": [[\"__init__\", \"null\"], [\"select\", \"[[1, 2], [1, 3], [1, 4], [2, 1], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]\"]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_2\": [[\"__init__\", \"null\"], [\"select\", \"[[1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2]]\"]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_3\": [[\"__init__\", \"null\"], [\"select\", \"[[2, 3], [2, 4], [3, 2], [3, 4], [4, 2], [4, 3]]\"]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_4\": [[\"__init__\", \"null\"], [\"select\", \"[[1, 2], [2, 1]]\"]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_5\": [[\"__init__\", \"null\"], [\"select\", \"[[1], [2], [3], [4]]\"]], \"benchmark_case.ArrangementCalculatorTestSelect.test_select_6\": [[\"__init__\", \"null\"], [\"select\", \"[[1, 2], [2, 1]]\"]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_1\": [[\"__init__\", \"null\"], [\"select_all\", \"[[1], [2], [3], [1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2], [1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\"]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_2\": [[\"__init__\", \"null\"], [\"select_all\", \"[[1], [2], [4], [1, 2], [1, 4], [2, 1], [2, 4], [4, 1], [4, 2], [1, 2, 4], [1, 4, 2], [2, 1, 4], [2, 4, 1], [4, 1, 2], [4, 2, 1]]\"]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_3\": [[\"__init__\", \"null\"], [\"select_all\", \"[[1], [2], [1, 2], [2, 1]]\"]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_4\": [[\"__init__\", \"null\"], [\"select_all\", \"[[1], [3], [1, 3], [3, 1]]\"]], \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_5\": [[\"__init__\", \"null\"], [\"select_all\", \"[[1]]\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.ArrangementCalculatorTestCount.test_count_1\", \"benchmark_case.ArrangementCalculatorTestCount.test_count_2\", \"benchmark_case.ArrangementCalculatorTestCount.test_count_3\", \"benchmark_case.ArrangementCalculatorTestCount.test_count_4\", \"benchmark_case.ArrangementCalculatorTestCount.test_count_5\", \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_1\", \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_2\", \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_3\", \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_4\", \"benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_5\", \"benchmark_case.ArrangementCalculatorTestSelect.test_select_1\", \"benchmark_case.ArrangementCalculatorTestSelect.test_select_2\", \"benchmark_case.ArrangementCalculatorTestSelect.test_select_3\", \"benchmark_case.ArrangementCalculatorTestSelect.test_select_4\", \"benchmark_case.ArrangementCalculatorTestSelect.test_select_5\", \"benchmark_case.ArrangementCalculatorTestSelect.test_select_6\", \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_1\", \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_2\", \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_3\", \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_4\", \"benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_5\", \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_1\", \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_2\", \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_3\", \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_4\", \"benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_5\", \"benchmark_case.ArrangementCalculatorTest.test_arrangementcalculator\"], \"tests\": 27}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.09251023699971483,
+  "result": {
+    "checks": {
+      "benchmark_case.ArrangementCalculatorTest.test_arrangementcalculator": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_1": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_6": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_1": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertListEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_count_1 (benchmark_case.ArrangementCalculatorTestCount.test_count_1) ... ok\ntest_count_2 (benchmark_case.ArrangementCalculatorTestCount.test_count_2) ... ok\ntest_count_3 (benchmark_case.ArrangementCalculatorTestCount.test_count_3) ... ok\ntest_count_4 (benchmark_case.ArrangementCalculatorTestCount.test_count_4) ... ok\ntest_count_5 (benchmark_case.ArrangementCalculatorTestCount.test_count_5) ... ok\ntest_count_all_1 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_1) ... ok\ntest_count_all_2 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_2) ... ok\ntest_count_all_3 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_3) ... ok\ntest_count_all_4 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_4) ... ok\ntest_count_all_5 (benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_5) ... ok\ntest_select_1 (benchmark_case.ArrangementCalculatorTestSelect.test_select_1) ... ok\ntest_select_2 (benchmark_case.ArrangementCalculatorTestSelect.test_select_2) ... ok\ntest_select_3 (benchmark_case.ArrangementCalculatorTestSelect.test_select_3) ... ok\ntest_select_4 (benchmark_case.ArrangementCalculatorTestSelect.test_select_4) ... ok\ntest_select_5 (benchmark_case.ArrangementCalculatorTestSelect.test_select_5) ... ok\ntest_select_6 (benchmark_case.ArrangementCalculatorTestSelect.test_select_6) ... ok\ntest_select_all_1 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_1) ... ok\ntest_select_all_2 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_2) ... ok\ntest_select_all_3 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_3) ... ok\ntest_select_all_4 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_4) ... ok\ntest_select_all_5 (benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_5) ... ok\ntest_factorial_1 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_1) ... ok\ntest_factorial_2 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_2) ... ok\ntest_factorial_3 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_3) ... ok\ntest_factorial_4 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_4) ... ok\ntest_factorial_5 (benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_5) ... ok\ntest_arrangementcalculator (benchmark_case.ArrangementCalculatorTest.test_arrangementcalculator) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 0.003s\n\nOK\n",
+    "observed": {
+      "benchmark_case.ArrangementCalculatorTest.test_arrangementcalculator": [
+        [
+          "count",
+          "60"
+        ],
+        [
+          "count_all",
+          "64"
+        ],
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select",
+          "[[1, 2], [1, 3], [1, 4], [2, 1], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]"
+        ],
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select_all",
+          "[[1], [2], [3], [1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2], [1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]"
+        ],
+        [
+          "factorial",
+          "24"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_1": [
+        [
+          "count",
+          "60"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_2": [
+        [
+          "count",
+          "24"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_3": [
+        [
+          "count",
+          "120"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_4": [
+        [
+          "count",
+          "210"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_5": [
+        [
+          "count",
+          "24"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_1": [
+        [
+          "count_all",
+          "64"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_2": [
+        [
+          "count_all",
+          "1"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_3": [
+        [
+          "count_all",
+          "4"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_4": [
+        [
+          "count_all",
+          "15"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_5": [
+        [
+          "count_all",
+          "325"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_1": [
+        [
+          "factorial",
+          "24"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_2": [
+        [
+          "factorial",
+          "120"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_3": [
+        [
+          "factorial",
+          "6"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_4": [
+        [
+          "factorial",
+          "2"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_5": [
+        [
+          "factorial",
+          "1"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select",
+          "[[1, 2], [1, 3], [1, 4], [2, 1], [2, 3], [2, 4], [3, 1], [3, 2], [3, 4], [4, 1], [4, 2], [4, 3]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select",
+          "[[1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select",
+          "[[2, 3], [2, 4], [3, 2], [3, 4], [4, 2], [4, 3]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select",
+          "[[1, 2], [2, 1]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select",
+          "[[1], [2], [3], [4]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select",
+          "[[1, 2], [2, 1]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select_all",
+          "[[1], [2], [3], [1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2], [1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select_all",
+          "[[1], [2], [4], [1, 2], [1, 4], [2, 1], [2, 4], [4, 1], [4, 2], [1, 2, 4], [1, 4, 2], [2, 1, 4], [2, 4, 1], [4, 1, 2], [4, 2, 1]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select_all",
+          "[[1], [2], [1, 2], [2, 1]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select_all",
+          "[[1], [3], [1, 3], [3, 1]]"
+        ]
+      ],
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "select_all",
+          "[[1]]"
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_1",
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_2",
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_3",
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_4",
+      "benchmark_case.ArrangementCalculatorTestCount.test_count_5",
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_1",
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_2",
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_3",
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_4",
+      "benchmark_case.ArrangementCalculatorTestCountAll.test_count_all_5",
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_1",
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_2",
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_3",
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_4",
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_5",
+      "benchmark_case.ArrangementCalculatorTestSelect.test_select_6",
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_1",
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_2",
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_3",
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_4",
+      "benchmark_case.ArrangementCalculatorTestSelectAll.test_select_all_5",
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_1",
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_2",
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_3",
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_4",
+      "benchmark_case.ArrangementCalculatorTestFactorial.test_factorial_5",
+      "benchmark_case.ArrangementCalculatorTest.test_arrangementcalculator"
+    ],
+    "tests": 27
+  }
+}

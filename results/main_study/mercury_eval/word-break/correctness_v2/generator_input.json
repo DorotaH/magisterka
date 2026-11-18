@@ -1,0 +1,17 @@
+{
+  "generator_code": "import random\nimport string\n\ndef generate_test_case():\n    s_len = random.randint(1, 300)\n    s = ''.join(random.choices(string.ascii_lowercase, k=s_len))\n    \n    wordDict_len = random.randint(1, 1000)\n    wordDict = [''.join(random.choices(string.ascii_lowercase, k=random.randint(1, 20))) for _ in range(wordDict_len)]\n    \n    return s, list(set(wordDict))  # Remove duplicate words in wordDict",
+  "seed": 11088660695213236036,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "leetcode",
+        [
+          "leet",
+          "code"
+        ]
+      ],
+      "expected": true
+    }
+  ]
+}

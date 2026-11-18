@@ -1,0 +1,26 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/1745e129edfa47298b34d35b1682a5ecdd5bee0d4035f5e2dd1bdb30b8ee6cd4/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+ 
+     ret = 0
+     x = a
+-    while x > 0:
++    while 0 < x:
+         ret += bit[x]
+         x -= x & (x * -1)
+     return ret
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/1745e129edfa47298b34d35b1682a5ecdd5bee0d4035f5e2dd1bdb30b8ee6cd4/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+ def bitadd(a, w, bit):
+ 
+     x = a
+-    while x <= (len(bit) - 1):
++    while (len(bit) - 1) >= x:
+         bit[x] += w
+         x += x & (x * -1)
+ 
+

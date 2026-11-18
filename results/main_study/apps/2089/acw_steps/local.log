@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2089/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,8 +23,8 @@
+ 		if dist[node]!=dist_node: continue
+ 
+ 		for adj in adjl[node]:
+-			if dist[adj]>dist_node+1:
+-				dist[adj]=dist_node+1
++			if dist[adj]>1+dist_node:
++				dist[adj]=1+dist_node
+ 				heapq.heappush(pq,(dist[adj],adj))
+ 
+ 	return dist
+@@ -43,8 +43,8 @@
+ 	for v in range(u):
+ 		if not adj_to_u[v]:
+ 			if min(
+-			d_dst[u]+d_src[v]+1,
+-			d_src[u]+d_dst[v]+1
++			d_src[v]+d_dst[u]+1,
++			d_dst[v]+d_src[u]+1
+ 			)<d_src[dest]: continue
+ 			ans+=1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2089/acw_steps/with_tabs.py

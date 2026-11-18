@@ -1,0 +1,13 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/0644f9b42742072cd3d177d0e5c21fac4735c8b523d838e25df46046a479f672/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,6 +21,6 @@
+         ans1 = (ans1 * (10 - ord(s1[i]) + ord("0"))) % 1000000007
+         ans2 = (ans2 * (ord(s1[i]) - ord("0") + 1)) % 1000000007
+ print(
+-    (10**s - (not b2) * ans1 - (not b1) * ans2 + (not b1 and not b2) * ans3)
++    (10**s - ans1 * (not b2) - (not b1) * ans2 + ans3 * (not b1 and not b2))
+     % 1000000007
+ )
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/0644f9b42742072cd3d177d0e5c21fac4735c8b523d838e25df46046a479f672/with_tabs.py

@@ -1,0 +1,19 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0ad82492a05ba754/acw_replay/1538c304910bf68429615c7cfaa974131cb1c4d5aebef051c1837842b7023250/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,11 +12,11 @@
+                 if k:
+                     k -= 1
+                 else:
+-                    if i - left > result:
++                    if result < i - left:
+                         res_left = left
+                         res_right = i
+                         result = i - left
+-                    while left < i and a[left]:
++                    while i > left and a[left]:
+                         left += 1
+                     left += 1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0ad82492a05ba754/acw_replay/1538c304910bf68429615c7cfaa974131cb1c4d5aebef051c1837842b7023250/with_tabs.py

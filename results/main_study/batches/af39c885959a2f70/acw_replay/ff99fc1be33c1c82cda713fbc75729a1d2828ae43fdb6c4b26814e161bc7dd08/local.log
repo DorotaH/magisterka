@@ -1,0 +1,43 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/ff99fc1be33c1c82cda713fbc75729a1d2828ae43fdb6c4b26814e161bc7dd08/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+     n,m,a,b = read()
+     if b/m < a:
+         if n%m and a * (n%m) > b:
+-            print((n//m + 1) * b)
++            print((1 + n//m) * b)
+         else:
+             print((n%m) * a + (n//m) * b)
+     else:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/ff99fc1be33c1c82cda713fbc75729a1d2828ae43fdb6c4b26814e161bc7dd08/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,9 +11,9 @@
+         if n%m and a * (n%m) > b:
+             print((1 + n//m) * b)
+         else:
+-            print((n%m) * a + (n//m) * b)
++            print(a * (n%m) + b * (n//m))
+     else:
+-        print(n*a)
++        print(a*n)
+ 
+ ################################### NON-SOLUTION STUFF BELOW
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/ff99fc1be33c1c82cda713fbc75729a1d2828ae43fdb6c4b26814e161bc7dd08/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ 
+ def main():
+     n,m,a,b = read()
+-    if b/m < a:
++    if a > b/m:
+         if n%m and a * (n%m) > b:
+             print((1 + n//m) * b)
+         else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/ff99fc1be33c1c82cda713fbc75729a1d2828ae43fdb6c4b26814e161bc7dd08/with_tabs.py

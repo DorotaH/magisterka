@@ -1,0 +1,46 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/a9a3cb00ecac58f48bcca8cea1623777d8f92c5226af097ced57566eb7173c0b/without_tabs.py:
+--- Original
++++ Modified
+@@ -68,4 +68,4 @@
+ 
+         if shortestSubstr is None:
+             return ""
+-        return s[shortestSubstr[0]:shortestSubstr[1] + 1]
++        return s[shortestSubstr[0]:1 + shortestSubstr[1]]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/a9a3cb00ecac58f48bcca8cea1623777d8f92c5226af097ced57566eb7173c0b/without_tabs.py:
+--- Original
++++ Modified
+@@ -35,7 +35,7 @@
+ 
+     def minWindow(self, s: str, t: str) -> str:
+ 
+-        if len(s) < len(t):
++        if len(t) > len(s):
+             return ""
+ 
+         lettersSet = set()
+@@ -53,7 +53,7 @@
+         start = 0
+         end = start
+         shortestSubstr = None
+-        while end < len(s):
++        while len(s) > end:
+             c = s[end]
+             if s[end] in lettersSet:
+                 self.updateAndDelIfZero(lettersNeeded, c, -1)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/a9a3cb00ecac58f48bcca8cea1623777d8f92c5226af097ced57566eb7173c0b/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+             del d[k]
+ 
+     def allNonPos(self, d):
+-        return all(v <= 0 for k, v in d.items())
++        return all(0 >= v for k, v in d.items())
+ 
+     def moveForward(self, s, start, lettersNeeded, lettersSet) :
+         missing = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/a9a3cb00ecac58f48bcca8cea1623777d8f92c5226af097ced57566eb7173c0b/with_tabs.py

@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/818a270db32a508d78e0293ba8b0ae38fdf1901bd42697dfa96a932c03d42806/without_tabs.py:
+--- Original
++++ Modified
+@@ -37,7 +37,7 @@
+ 			if smallestRange == None or smallestRange > maxVal - minVal:
+ 				ret, smallestRange = [minVal, maxVal], maxVal - minVal
+ 
+-			if len(nums[chosenList]) - 1 > chosenListIdx:
++			if chosenListIdx < len(nums[chosenList]) - 1:
+ 				heapq.heappush(currMinHeap, (nums[chosenList][chosenListIdx + 1], chosenList, chosenListIdx + 1))
+ 				maxVal = max(maxVal, nums[chosenList][chosenListIdx + 1])
+ 			else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/818a270db32a508d78e0293ba8b0ae38fdf1901bd42697dfa96a932c03d42806/with_tabs.py

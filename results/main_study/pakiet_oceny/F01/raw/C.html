@@ -1,0 +1,24 @@
+<!doctype html><html lang="pl"><meta charset="utf-8"><title>Fragment</title><style>pre{font:14px monospace;tab-size:4;line-height:1.5;padding:16px}</style><pre>class Solution:
+    def reverseVowels(self, s: str) -&gt; str:
+        if len(s) == 1:
+            return s[0]
+
+        VOWELS = {&#x27;a&#x27;, &#x27;e&#x27;, &#x27;i&#x27;, &#x27;o&#x27;, &#x27;u&#x27;, &#x27;A&#x27;, &#x27;E&#x27;, &#x27;I&#x27;, &#x27;O&#x27;, &#x27;U&#x27;} #Set is used as it has a better search TC than List
+        s = list(s)
+        left, right = 0, len(s) - 1
+
+        while left &lt; right:
+            if s[left] not in VOWELS:
+                left += 1
+            
+            if s[right] not in VOWELS:
+                right -= 1
+
+            if s[left] in VOWELS and s[right] in VOWELS:
+                tmp = s[left]
+                s[left] = s[right]
+                s[right] = tmp
+                left += 1
+                right -= 1
+        
+        return &quot;&quot;.join(s)</pre></html>

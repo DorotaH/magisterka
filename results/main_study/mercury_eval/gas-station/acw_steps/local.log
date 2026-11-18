@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/gas-station/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -32,7 +32,7 @@
+             # rt[:n-1] = rt[1:n]-x[index]
+             # rt[n-1] = rt[n-2] + x[index]
+             min_v = min(min_v-x[index],sum_v)
+-            index = index+1
++            index = 1+index
+ 
+         return -1
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/gas-station/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+             #print(index)
+             #print(rt)
+             #print('min',min_v)
+-            if min_v >= 0:
++            if 0 <= min_v:
+                 return index
+             if index == n-1:
+                 break
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/gas-station/acw_steps/with_tabs.py

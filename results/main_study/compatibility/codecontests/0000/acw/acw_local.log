@@ -1,0 +1,25 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/compatibility/codecontests/0000/acw/watermarked.py:
+--- Original
++++ Modified
+@@ -6,16 +6,16 @@
+ for _ in range(N):
+     x, y = map(int, input().split())
+     x, y = x // 2, y // 2
+-    A[(x % 2) * 2 + (y % 2)] += 1
++    A[2 * (x % 2) + (y % 2)] += 1
+ 
+ ans = 0
+ for i in range(4):
+     a = A[i]
+     s = a * (a - 1) // 2
+-    ans += s * (a - 2) // 3
++    ans += (a - 2) * s // 3
+     for j in range(4):
+         if i == j: continue
+         b = A[j]
+-        ans += s * b
++        ans += b * s
+ print(ans)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/compatibility/codecontests/0000/acw/watermarked.py

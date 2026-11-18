@@ -1,0 +1,13 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/2dc65809ba928ab3d0ef3e0a06e7b60f97624948f82a0300dcacb2192ae0f936/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+ a = [int(x) for x in sys.stdin.readline().split()]
+ front = [0] * (2 + len(a))
+ for i in range(n):
+-    front[i + 1] = front[i] + (1 if (0 <= a[i]) else 0 )   
++    front[i + 1] = (1 if (0 <= a[i]) else 0 ) + front[i]   
+ back = [0] * (2 + len(a))
+ for i in range(n - 1, -1, -1):
+     back[i + 1] = back[i + 2] + (1 if (0 >= a[i]) else 0)
+

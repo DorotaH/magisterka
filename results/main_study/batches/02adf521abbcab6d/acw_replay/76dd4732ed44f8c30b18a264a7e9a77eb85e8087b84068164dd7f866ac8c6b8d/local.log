@@ -1,0 +1,20 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/76dd4732ed44f8c30b18a264a7e9a77eb85e8087b84068164dd7f866ac8c6b8d/without_tabs.py:
+--- Original
++++ Modified
+@@ -70,11 +70,11 @@
+ 			add(N,bitArray,mostRightColorIndex[C[n]], -1 )
+ 
+ 		# この要素の色の一番右のindexを、BITに登録
+-		mostRightColorIndex[C[n]] = n+1
+-		add(N,bitArray,n+1, 1)
++		mostRightColorIndex[C[n]] = 1+n
++		add(N,bitArray,1+n, 1)
+ 
+ 		# while qindex < Q and n+1 == queries[qindex][2]:
+-		while qindex < Q and n+1 == queries[orderByR[qindex]][1]:
++		while qindex < Q and 1+n == queries[orderByR[qindex]][1]:
+ 			# 今のBITが次のクエリ発行するための状態(n==query.right)だったら、クエリ発行
+ 			tmpIndex = orderByR[qindex]
+ 			start = queries[tmpIndex][0]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/76dd4732ed44f8c30b18a264a7e9a77eb85e8087b84068164dd7f866ac8c6b8d/with_tabs.py

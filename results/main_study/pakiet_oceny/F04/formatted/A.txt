@@ -1,0 +1,27 @@
+        def dfs(i, j):
+            nonlocal arr
+            if i == n - 1 and j == n - 1:
+                # arr.append((i,j))
+                # print(i,j)
+                return 0
+            maxi = float("-inf")
+            p, q = -1, -1
+            for x, y in forward:
+                if (
+                    i + x >= 0
+                    and j + y >= 0
+                    and i + x < n
+                    and j + y < n
+                    and grid[i + x][j + y] != -1
+                ):
+                    temp = grid[i + x][j + y]
+                    # grid[i+x][j+y] = 0
+                    if dfs(i + x, j + y) + grid[i + x][j + y] > maxi:
+                        p = i + x
+                        q = j + y
+                    maxi = max(dfs(i + x, j + y) + grid[i + x][j + y], maxi)
+                    # grid[i+x][j+y] = temp
+            # print(i,j, maxi)
+
+            arr[(i, j)] = max(arr.get((i, j), 0), maxi)
+            return maxi

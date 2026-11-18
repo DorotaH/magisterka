@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/f4e7897672963cadc1c716314a927915dbdea5ebe33f519d631a6294c4b57688/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+ for i in range(k):
+     s = [0]
+     dfs(A[i])
+-    ans += s[0] * (s[0] - 1) // 2
++    ans += (s[0] - 1) * s[0] // 2
+     mx = max(mx, s[0])
+ 
+ ans -= mx * (mx - 1) // 2
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/f4e7897672963cadc1c716314a927915dbdea5ebe33f519d631a6294c4b57688/with_tabs.py

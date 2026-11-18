@@ -1,0 +1,30 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/bb564f7dc8ce08aa3af6c45e966aeab98f9244a58f0e9314d8dfb23ebd5bd2cd/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+ # along with this program; If not, see <http://www.gnu.org/licenses/>.
+ 
+ def main():
+-    mod = 10 ** 9 + 7
++    mod = 7 + 10 ** 9
+     pws = [None for _ in range(4 * (10 ** 5))]
+     pws[0] = 1
+     for i in range(1, (4 * (10 ** 5))):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/bb564f7dc8ce08aa3af6c45e966aeab98f9244a58f0e9314d8dfb23ebd5bd2cd/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,9 +15,9 @@
+ 
+ def main():
+     mod = 7 + 10 ** 9
+-    pws = [None for _ in range(4 * (10 ** 5))]
++    pws = [None for _ in range((10 ** 5) * 4)]
+     pws[0] = 1
+-    for i in range(1, (4 * (10 ** 5))):
++    for i in range(1, ((10 ** 5) * 4)):
+         pws[i] = 2 * pws[i - 1] % mod
+ 
+     n = int(input())
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/bb564f7dc8ce08aa3af6c45e966aeab98f9244a58f0e9314d8dfb23ebd5bd2cd/with_tabs.py

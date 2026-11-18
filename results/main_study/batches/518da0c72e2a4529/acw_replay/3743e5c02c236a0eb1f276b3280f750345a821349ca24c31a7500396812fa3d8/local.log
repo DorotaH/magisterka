@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/3743e5c02c236a0eb1f276b3280f750345a821349ca24c31a7500396812fa3d8/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+     def list_dict(self, nums: List[int]) -> dict:
+         res = {}
+         for a in nums:
+-            res[a] = res.get(a, 0) + 1
++            res[a] = 1 + res.get(a, 0)
+         return res
+     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+         res=list()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/518da0c72e2a4529/acw_replay/3743e5c02c236a0eb1f276b3280f750345a821349ca24c31a7500396812fa3d8/with_tabs.py

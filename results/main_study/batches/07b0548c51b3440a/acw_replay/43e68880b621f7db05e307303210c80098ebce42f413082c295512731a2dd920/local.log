@@ -1,0 +1,39 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/43e68880b621f7db05e307303210c80098ebce42f413082c295512731a2dd920/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ minans = 10**20
+ mass1 = [(pr[i], t[i]) for i in range(m)]
+ mass1.sort()
+-mass1 = [(0, x)] + mass1
++mass1 = mass1 + [(0, x)]
+ pr2 = [0] + pr2
+ t2 = [0] + t2
+ uk1 = len(mass1) - 1
+@@ -16,7 +16,7 @@
+ for uk1 in range(len(mass1) - 1, -1, -1):
+     if (s < mass1[uk1][0]):
+         continue
+-    while (uk2 < len(pr2) and mass1[uk1][0] + pr2[uk2] <= s):
++    while (uk2 < len(pr2) and pr2[uk2] + mass1[uk1][0] <= s):
+         maxw = max(maxw, t2[uk2])
+         uk2 += 1
+     uk2 -= 1
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/43e68880b621f7db05e307303210c80098ebce42f413082c295512731a2dd920/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,9 +14,9 @@
+ uk2 = 0
+ maxw = 0
+ for uk1 in range(len(mass1) - 1, -1, -1):
+-    if (s < mass1[uk1][0]):
++    if (mass1[uk1][0] > s):
+         continue
+-    while (uk2 < len(pr2) and pr2[uk2] + mass1[uk1][0] <= s):
++    while (len(pr2) > uk2 and pr2[uk2] + mass1[uk1][0] <= s):
+         maxw = max(maxw, t2[uk2])
+         uk2 += 1
+     uk2 -= 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/43e68880b621f7db05e307303210c80098ebce42f413082c295512731a2dd920/with_tabs.py

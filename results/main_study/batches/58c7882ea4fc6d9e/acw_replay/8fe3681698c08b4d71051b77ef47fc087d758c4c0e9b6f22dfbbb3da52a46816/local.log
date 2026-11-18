@@ -1,0 +1,48 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/8fe3681698c08b4d71051b77ef47fc087d758c4c0e9b6f22dfbbb3da52a46816/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,7 +33,7 @@
+     if n == 2:
+         return [4,3]
+     if n % 2:
+-        return [(n+1)//2, 2] + [1] * (n-2)
++        return [(1+n)//2, 2] + [1] * (n-2)
+     return [(n-2)//2] + [1] * (n-1)
+ 
+ a = sqr(n)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/8fe3681698c08b4d71051b77ef47fc087d758c4c0e9b6f22dfbbb3da52a46816/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,11 +33,11 @@
+     if n == 2:
+         return [4,3]
+     if n % 2:
+-        return [(1+n)//2, 2] + [1] * (n-2)
+-    return [(n-2)//2] + [1] * (n-1)
++        return [(1+n)//2, 2] + (n-2) * [1]
++    return [(n-2)//2] + (n-1) * [1]
+ 
+ a = sqr(n)
+ b = sqr(m)
+ for i in range(n):
+-    res = [str(a[i]*x) for x in b]
++    res = [str(x*a[i]) for x in b]
+     print(" ".join(res))
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/8fe3681698c08b4d71051b77ef47fc087d758c4c0e9b6f22dfbbb3da52a46816/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,9 +15,9 @@
+         if n == 0:
+             res = inputs[:]
+             inputs[:] = []
+-        while n > len(inputs):
++        while len(inputs) < n:
+             inputs.extend(input().split(" "))
+-        if n > 0:
++        if 0 < n:
+             res = inputs[:n]
+             inputs[:n] = []
+         return res
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/8fe3681698c08b4d71051b77ef47fc087d758c4c0e9b6f22dfbbb3da52a46816/with_tabs.py

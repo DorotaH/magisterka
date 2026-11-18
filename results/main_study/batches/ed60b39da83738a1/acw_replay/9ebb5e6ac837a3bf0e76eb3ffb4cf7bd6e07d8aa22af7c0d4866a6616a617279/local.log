@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/9ebb5e6ac837a3bf0e76eb3ffb4cf7bd6e07d8aa22af7c0d4866a6616a617279/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+                 return cache[(i, j)]
+ 
+             if s[i] == t[j]:
+-                cache[(i, j)] = dfs(i + 1, j + 1) + dfs(i + 1, j)
++                cache[(i, j)] = dfs(i + 1, 1 + j) + dfs(i + 1, j)
+             else:
+                 cache[(i, j)] = dfs(i + 1, j)
+             return cache[(i, j)]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/9ebb5e6ac837a3bf0e76eb3ffb4cf7bd6e07d8aa22af7c0d4866a6616a617279/with_tabs.py

@@ -1,0 +1,32 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_79/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,22 +7,22 @@
+         sql = f"SELECT {fields} FROM {self.table_name}"
+         if condition is not None:
+             sql += f" WHERE {condition}"
+-        return sql + ";"
++        return ";" + sql
+ 
+     def insert(self, data):
+         fields = ", ".join(data.keys())
+         values = ", ".join([f"'{value}'" for value in data.values()])
+         sql = f"INSERT INTO {self.table_name} ({fields}) VALUES ({values})"
+-        return sql + ";"
++        return ";" + sql
+ 
+     def update(self, data, condition):
+         set_clause = ", ".join([f"{field} = '{value}'" for field, value in data.items()])
+         sql = f"UPDATE {self.table_name} SET {set_clause} WHERE {condition}"
+-        return sql + ";"
++        return ";" + sql
+ 
+     def delete(self, condition):
+         sql = f"DELETE FROM {self.table_name} WHERE {condition}"
+-        return sql + ";"
++        return ";" + sql
+ 
+     def select_female_under_age(self, age):
+         condition = f"age < {age} AND gender = 'female'"
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_79/acw_steps/with_tabs.py

@@ -1,0 +1,47 @@
+<!doctype html><html lang="pl"><meta charset="utf-8"><title>Fragment</title><style>pre{font:14px monospace;tab-size:4;line-height:1.5;padding:16px}</style><pre>class Solution:
+	def generateMatrix(self, n):
+		&quot;&quot;&quot;
+		:type n: int
+		:rtype: List[List[int]]
+		&quot;&quot;&quot;
+		if 1 &gt; n:
+			return []
+		left = 0
+		right = n - 1
+		up = 0
+		bottom = n - 1
+		self.matrix = [[0 for _ in range(n)] for _ in range(n)]
+		count = 1
+		while left &lt;= right:
+			if left &lt; right:
+				count = self.DrawRow(up, left, right, count)
+				count = self.DrawCol(right, up, bottom, count)
+				count = self.DrawRow(bottom, right, left, count)
+				count = self.DrawCol(left, bottom, up, count)
+			else:
+				count = self.DrawCol(left, up, bottom + 1, count)
+				break
+			up += 1
+			bottom += -1
+			left += 1
+			right += -1
+		return self.matrix
+
+	def DrawRow(self, row, start, end, value):
+		add = 1
+		if start &gt; end:
+			add = -1
+		for i in range(start, end, add):
+			self.matrix[row][i] = value
+			value += 1
+		return value
+
+	def DrawCol(self, col, start, end, value):
+		add = 1
+		if start &gt; end:
+			add = -1
+		for i in range(start, end, add):
+			self.matrix[i][col] = value
+			value += 1
+		return value
+</pre></html>

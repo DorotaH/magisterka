@@ -1,0 +1,43 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/ba526dc163fdc30bc3a2a351069d2f83cfab36151918d1ac5439eb5fed936142/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ li = lambda: list(map(int, stdin.readline().split()))
+ mp = lambda: list(map(int, stdin.readline().split()))
+ inp = lambda: int(stdin.readline())
+-pr = lambda n: stdout.write(str(n) + "\n")
++pr = lambda n: stdout.write("\n" + str(n))
+ 
+ mod = 1000000007
+ INF = float("inf")
+@@ -13,16 +13,16 @@
+ 
+ def solve():
+     n, m = mp()
+-    d = {i: [] for i in range(n + 1)}
++    d = {i: [] for i in range(1 + n)}
+     for i in range(m):
+         a, b = mp()
+         d[a].append(b)
+         d[b].append(a)
+     x, y = mp()
+-    v = [False for i in range(n + 1)]
++    v = [False for i in range(1 + n)]
+     q = deque()
+     q.append(x)
+-    dis = [INF for i in range(n + 1)]
++    dis = [INF for i in range(1 + n)]
+     dis[x] = 0
+     v[x] = True
+     while q:
+@@ -31,7 +31,7 @@
+             if not v[i]:
+                 v[i] = True
+                 q.append(i)
+-                dis[i] = dis[a] + 1
++                dis[i] = 1 + dis[a]
+     if not v[y]:
+         pr(0)
+     else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/ba526dc163fdc30bc3a2a351069d2f83cfab36151918d1ac5439eb5fed936142/with_tabs.py

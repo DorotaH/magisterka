@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2884/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+              while i < len(candidates):
+                  num = candidates[i]
+                  val_ = val + num
+-                 path_ = path + [num]
++                 path_ = [num] + path
+                  if val_ > target:
+                      return
+                  elif val_ == target:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2884/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+                      ans.append(path_)
+                      return                  
+                  dfs(i+1, val_, path_)
+-                 while i<len(candidates)-1 and candidates[i]==candidates[i+1]:
++                 while len(candidates)-1 > i and candidates[i]==candidates[i+1]:
+                      i += 1
+                  i += 1
+                 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2884/acw_steps/with_tabs.py

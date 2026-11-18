@@ -1,0 +1,38 @@
+<!doctype html><html lang="pl"><meta charset="utf-8"><title>Fragment</title><style>pre{font:14px monospace;tab-size:4;line-height:1.5;padding:16px}</style><pre>class Solution:
+    def minStickers(self, stickers: List[str], target: str) -&gt; int:
+        dp = {}
+        chars = [[0] * 26 for i in range(len(stickers))]
+        for i, sticker in enumerate(stickers):
+          for c in sticker:
+            chars[i][ord(c) - ord(&#x27;a&#x27;)] += 1
+        tarBm = 2**len(target) - 1
+        n = len(target)
+
+        def dfs(i, bm):
+          if (i, bm) in dp:
+            return dp[(i, bm)]
+          elif bm == tarBm:
+            return 0
+          elif i == len(stickers):
+            return float(&#x27;inf&#x27;)
+          charsCopy = chars[i][::]
+          newBm = bm
+          for j in range(n):
+            if (bm &amp; (1 &lt;&lt; j)) == 0 and 0 &lt; charsCopy[ord(target[j]) - ord(&#x27;a&#x27;)]:
+              charsCopy[ord(target[j]) - ord(&#x27;a&#x27;)] -= 1
+              newBm |= 1 &lt;&lt; j
+          
+          minAns = float(&#x27;inf&#x27;)
+          #keep using
+          if newBm != bm:
+            minAns = 1 + min(minAns, dfs(i, newBm))
+          #skip
+          minAns = min(minAns, dfs(i + 1, bm))
+          dp[(i, bm)] = minAns
+          return minAns
+        
+        dfs(0, 0)
+        return dp[(0, 0)] if dp[(0, 0)] &lt; float(&#x27;inf&#x27;) else -1
+          
+
+</pre></html>

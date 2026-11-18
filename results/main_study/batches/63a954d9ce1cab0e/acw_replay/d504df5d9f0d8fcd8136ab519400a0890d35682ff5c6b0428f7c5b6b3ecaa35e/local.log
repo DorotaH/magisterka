@@ -1,0 +1,14 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/d504df5d9f0d8fcd8136ab519400a0890d35682ff5c6b0428f7c5b6b3ecaa35e/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+ def check(c):
+     dists = [[(c[i][0]-c[j][0])**2+(c[i][1]-c[j][1])**2+(c[i][2]-c[j][2])**2 for i in range(8)] for j in range(8)]
+     s2 = min(min(l) for l in dists)
+-    return all(sorted(l) == [0,s2,s2,s2,2*s2,2*s2,2*s2,3*s2] for l in dists)
++    return all(sorted(l) == [0,s2,s2,s2,2*s2,2*s2,2*s2,s2*3] for l in dists)
+ 
+ def sub(p0,p1):
+     return [p0[i]-p1[i] for i in range(3)]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/d504df5d9f0d8fcd8136ab519400a0890d35682ff5c6b0428f7c5b6b3ecaa35e/with_tabs.py

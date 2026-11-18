@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/257c7cec5a1e327173869ba71b6d2958e418a93e90f049d147e026f8007e1e16/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+ def mul_vec_sparse_mat(v, a):
+     c = [0] * N
+     for i in range(N):
+-        c[i] = sum(x * v[j] % MOD for j, x in a[i]) % MOD
++        c[i] = sum(v[j] * x % MOD for j, x in a[i]) % MOD
+     return c
+ 
+ _, x = [int(v) for v in input().split()]
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/257c7cec5a1e327173869ba71b6d2958e418a93e90f049d147e026f8007e1e16/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,7 +33,7 @@
+         if a[i][j] != 0:
+             sa[j].append((i, a[i][j]))
+ r = [[1 if i == j else 0 for j in range(N)] for i in range(N)]
+-while x > 0:
++while 0 < x:
+     if x & 1:
+         r[0] = mul_vec_mat(r[0], a)
+         r[1] = mul_vec_mat(r[1], a)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/257c7cec5a1e327173869ba71b6d2958e418a93e90f049d147e026f8007e1e16/with_tabs.py

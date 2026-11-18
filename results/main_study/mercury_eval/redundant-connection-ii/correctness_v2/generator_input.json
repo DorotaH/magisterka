@@ -1,0 +1,29 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    n = random.randint(3, 1000)\n    edges = [[i, i+1] for i in range(1, n)]\n    source = random.randint(1, n)\n    target = random.randint(1, n)\n    while target == source or [source, target] in edges:\n        source = random.randint(1, n)\n        target = random.randint(1, n)\n    edges.append([source, target])\n    random.shuffle(edges)\n    return edges",
+  "seed": 513898349171027124,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "expected": [
+        2,
+        3
+      ]
+    }
+  ]
+}

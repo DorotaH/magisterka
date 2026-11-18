@@ -1,0 +1,749 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_56/acw_notab/embedded/code.py",
+    "/tmp/solution.py",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_56/correctness_v2/cases.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "classeval",
+    "/tmp/payload.json",
+    "/tmp/solution.py"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": {\"checks\": {\"benchmark_case.MetricsCalculatorTest.test_metricscalculator\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertEqual\", 2], [\"assertEqual\", 2], [\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_1\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_2\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_3\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_4\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_5\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_6\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_1\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_2\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_3\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_4\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_5\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_6\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_1\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_2\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_3\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_4\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_5\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_6\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_1\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_2\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_3\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_4\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_5\": [[\"assertAlmostEqual\", 2]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_6\": [[\"assertEqual\", 2]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_1\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_2\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_3\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_4\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_5\": [[\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3], [\"assertEqual\", 2], [\"assertTupleEqual\", 2], [\"assertSequenceEqual\", 3]]}, \"errors\": [], \"failures\": [], \"log\": \"test_update_1 (benchmark_case.MetricsCalculatorTestUpdate.test_update_1) ... ok\\ntest_update_2 (benchmark_case.MetricsCalculatorTestUpdate.test_update_2) ... ok\\ntest_update_3 (benchmark_case.MetricsCalculatorTestUpdate.test_update_3) ... ok\\ntest_update_4 (benchmark_case.MetricsCalculatorTestUpdate.test_update_4) ... ok\\ntest_update_5 (benchmark_case.MetricsCalculatorTestUpdate.test_update_5) ... ok\\ntest_precision_1 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_1) ... ok\\ntest_precision_2 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_2) ... ok\\ntest_precision_3 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_3) ... ok\\ntest_precision_4 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_4) ... ok\\ntest_precision_5 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_5) ... ok\\ntest_precision_6 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_6) ... ok\\ntest_recall_1 (benchmark_case.MetricsCalculatorTestRecall.test_recall_1) ... ok\\ntest_recall_2 (benchmark_case.MetricsCalculatorTestRecall.test_recall_2) ... ok\\ntest_recall_3 (benchmark_case.MetricsCalculatorTestRecall.test_recall_3) ... ok\\ntest_recall_4 (benchmark_case.MetricsCalculatorTestRecall.test_recall_4) ... ok\\ntest_recall_5 (benchmark_case.MetricsCalculatorTestRecall.test_recall_5) ... ok\\ntest_recall_6 (benchmark_case.MetricsCalculatorTestRecall.test_recall_6) ... ok\\ntest_f1_score_1 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_1) ... ok\\ntest_f1_score_2 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_2) ... ok\\ntest_f1_score_3 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_3) ... ok\\ntest_f1_score_4 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_4) ... ok\\ntest_f1_score_5 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_5) ... ok\\ntest_f1_score_6 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_6) ... ok\\ntest_accuracy_1 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_1) ... ok\\ntest_accuracy_2 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_2) ... ok\\ntest_accuracy_3 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_3) ... ok\\ntest_accuracy_4 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_4) ... ok\\ntest_accuracy_5 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_5) ... ok\\ntest_accuracy_6 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_6) ... ok\\ntest_metricscalculator (benchmark_case.MetricsCalculatorTest.test_metricscalculator) ... ok\\n\\n----------------------------------------------------------------------\\nRan 30 tests in 0.004s\\n\\nOK\\n\", \"observed\": {\"benchmark_case.MetricsCalculatorTest.test_metricscalculator\": [[\"__init__\", \"null\"], [\"update\", \"null\"], [\"precision\", \"0.5\"], [\"recall\", \"0.5\"], [\"f1_score\", \"0.5\"], [\"accuracy\", \"0.5\"]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_1\": [[\"__init__\", \"null\"], [\"accuracy\", \"0.5\"]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_2\": [[\"__init__\", \"null\"], [\"accuracy\", \"0.3333333333333333\"]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_3\": [[\"__init__\", \"null\"], [\"accuracy\", \"0.75\"]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_4\": [[\"__init__\", \"null\"], [\"accuracy\", \"0.75\"]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_5\": [[\"__init__\", \"null\"], [\"accuracy\", \"0.25\"]], \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_6\": [[\"__init__\", \"null\"], [\"accuracy\", \"0.0\"]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_1\": [[\"__init__\", \"null\"], [\"f1_score\", \"0.5\"]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_2\": [[\"__init__\", \"null\"], [\"f1_score\", \"0.4\"]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_3\": [[\"__init__\", \"null\"], [\"f1_score\", \"0.8\"]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_4\": [[\"__init__\", \"null\"], [\"f1_score\", \"0.8\"]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_5\": [[\"__init__\", \"null\"], [\"f1_score\", \"0.4\"]], \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_6\": [[\"__init__\", \"null\"], [\"f1_score\", \"0.0\"]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_1\": [[\"__init__\", \"null\"], [\"precision\", \"0.5\"]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_2\": [[\"__init__\", \"null\"], [\"precision\", \"0.3333333333333333\"]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_3\": [[\"__init__\", \"null\"], [\"precision\", \"0.6666666666666666\"]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_4\": [[\"__init__\", \"null\"], [\"precision\", \"1.0\"]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_5\": [[\"__init__\", \"null\"], [\"precision\", \"0.5\"]], \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_6\": [[\"__init__\", \"null\"], [\"precision\", \"0.0\"]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_1\": [[\"__init__\", \"null\"], [\"recall\", \"0.5\"]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_2\": [[\"__init__\", \"null\"], [\"recall\", \"0.5\"]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_3\": [[\"__init__\", \"null\"], [\"recall\", \"1.0\"]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_4\": [[\"__init__\", \"null\"], [\"recall\", \"0.6666666666666666\"]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_5\": [[\"__init__\", \"null\"], [\"recall\", \"0.3333333333333333\"]], \"benchmark_case.MetricsCalculatorTestRecall.test_recall_6\": [[\"__init__\", \"null\"], [\"recall\", \"0.0\"]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_1\": [[\"__init__\", \"null\"], [\"update\", \"null\"]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_2\": [[\"__init__\", \"null\"], [\"update\", \"null\"]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_3\": [[\"__init__\", \"null\"], [\"update\", \"null\"]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_4\": [[\"__init__\", \"null\"], [\"update\", \"null\"]], \"benchmark_case.MetricsCalculatorTestUpdate.test_update_5\": [[\"__init__\", \"null\"], [\"update\", \"null\"]]}, \"pass\": true, \"test_ids\": [\"benchmark_case.MetricsCalculatorTestUpdate.test_update_1\", \"benchmark_case.MetricsCalculatorTestUpdate.test_update_2\", \"benchmark_case.MetricsCalculatorTestUpdate.test_update_3\", \"benchmark_case.MetricsCalculatorTestUpdate.test_update_4\", \"benchmark_case.MetricsCalculatorTestUpdate.test_update_5\", \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_1\", \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_2\", \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_3\", \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_4\", \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_5\", \"benchmark_case.MetricsCalculatorTestPrecision.test_precision_6\", \"benchmark_case.MetricsCalculatorTestRecall.test_recall_1\", \"benchmark_case.MetricsCalculatorTestRecall.test_recall_2\", \"benchmark_case.MetricsCalculatorTestRecall.test_recall_3\", \"benchmark_case.MetricsCalculatorTestRecall.test_recall_4\", \"benchmark_case.MetricsCalculatorTestRecall.test_recall_5\", \"benchmark_case.MetricsCalculatorTestRecall.test_recall_6\", \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_1\", \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_2\", \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_3\", \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_4\", \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_5\", \"benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_6\", \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_1\", \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_2\", \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_3\", \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_4\", \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_5\", \"benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_6\", \"benchmark_case.MetricsCalculatorTest.test_metricscalculator\"], \"tests\": 30}, \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.11292754099940794,
+  "result": {
+    "checks": {
+      "benchmark_case.MetricsCalculatorTest.test_metricscalculator": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_2": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_6": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_4": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_5": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_6": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_2": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_3": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_4": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_5": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_6": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_1": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_2": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_3": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_4": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_5": [
+        [
+          "assertAlmostEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_6": [
+        [
+          "assertEqual",
+          2
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_1": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_2": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_3": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_4": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_5": [
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ],
+        [
+          "assertEqual",
+          2
+        ],
+        [
+          "assertTupleEqual",
+          2
+        ],
+        [
+          "assertSequenceEqual",
+          3
+        ]
+      ]
+    },
+    "errors": [],
+    "failures": [],
+    "log": "test_update_1 (benchmark_case.MetricsCalculatorTestUpdate.test_update_1) ... ok\ntest_update_2 (benchmark_case.MetricsCalculatorTestUpdate.test_update_2) ... ok\ntest_update_3 (benchmark_case.MetricsCalculatorTestUpdate.test_update_3) ... ok\ntest_update_4 (benchmark_case.MetricsCalculatorTestUpdate.test_update_4) ... ok\ntest_update_5 (benchmark_case.MetricsCalculatorTestUpdate.test_update_5) ... ok\ntest_precision_1 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_1) ... ok\ntest_precision_2 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_2) ... ok\ntest_precision_3 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_3) ... ok\ntest_precision_4 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_4) ... ok\ntest_precision_5 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_5) ... ok\ntest_precision_6 (benchmark_case.MetricsCalculatorTestPrecision.test_precision_6) ... ok\ntest_recall_1 (benchmark_case.MetricsCalculatorTestRecall.test_recall_1) ... ok\ntest_recall_2 (benchmark_case.MetricsCalculatorTestRecall.test_recall_2) ... ok\ntest_recall_3 (benchmark_case.MetricsCalculatorTestRecall.test_recall_3) ... ok\ntest_recall_4 (benchmark_case.MetricsCalculatorTestRecall.test_recall_4) ... ok\ntest_recall_5 (benchmark_case.MetricsCalculatorTestRecall.test_recall_5) ... ok\ntest_recall_6 (benchmark_case.MetricsCalculatorTestRecall.test_recall_6) ... ok\ntest_f1_score_1 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_1) ... ok\ntest_f1_score_2 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_2) ... ok\ntest_f1_score_3 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_3) ... ok\ntest_f1_score_4 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_4) ... ok\ntest_f1_score_5 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_5) ... ok\ntest_f1_score_6 (benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_6) ... ok\ntest_accuracy_1 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_1) ... ok\ntest_accuracy_2 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_2) ... ok\ntest_accuracy_3 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_3) ... ok\ntest_accuracy_4 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_4) ... ok\ntest_accuracy_5 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_5) ... ok\ntest_accuracy_6 (benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_6) ... ok\ntest_metricscalculator (benchmark_case.MetricsCalculatorTest.test_metricscalculator) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 0.004s\n\nOK\n",
+    "observed": {
+      "benchmark_case.MetricsCalculatorTest.test_metricscalculator": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "update",
+          "null"
+        ],
+        [
+          "precision",
+          "0.5"
+        ],
+        [
+          "recall",
+          "0.5"
+        ],
+        [
+          "f1_score",
+          "0.5"
+        ],
+        [
+          "accuracy",
+          "0.5"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "accuracy",
+          "0.5"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "accuracy",
+          "0.3333333333333333"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "accuracy",
+          "0.75"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "accuracy",
+          "0.75"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "accuracy",
+          "0.25"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "accuracy",
+          "0.0"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "f1_score",
+          "0.5"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "f1_score",
+          "0.4"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "f1_score",
+          "0.8"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "f1_score",
+          "0.8"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "f1_score",
+          "0.4"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "f1_score",
+          "0.0"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "precision",
+          "0.5"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "precision",
+          "0.3333333333333333"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "precision",
+          "0.6666666666666666"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "precision",
+          "1.0"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "precision",
+          "0.5"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "precision",
+          "0.0"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "recall",
+          "0.5"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "recall",
+          "0.5"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "recall",
+          "1.0"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "recall",
+          "0.6666666666666666"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "recall",
+          "0.3333333333333333"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_6": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "recall",
+          "0.0"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_1": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "update",
+          "null"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_2": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "update",
+          "null"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_3": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "update",
+          "null"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_4": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "update",
+          "null"
+        ]
+      ],
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_5": [
+        [
+          "__init__",
+          "null"
+        ],
+        [
+          "update",
+          "null"
+        ]
+      ]
+    },
+    "pass": true,
+    "test_ids": [
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_1",
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_2",
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_3",
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_4",
+      "benchmark_case.MetricsCalculatorTestUpdate.test_update_5",
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_1",
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_2",
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_3",
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_4",
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_5",
+      "benchmark_case.MetricsCalculatorTestPrecision.test_precision_6",
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_1",
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_2",
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_3",
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_4",
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_5",
+      "benchmark_case.MetricsCalculatorTestRecall.test_recall_6",
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_1",
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_2",
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_3",
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_4",
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_5",
+      "benchmark_case.MetricsCalculatorTestF1Score.test_f1_score_6",
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_1",
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_2",
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_3",
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_4",
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_5",
+      "benchmark_case.MetricsCalculatorTestAccuracy.test_accuracy_6",
+      "benchmark_case.MetricsCalculatorTest.test_metricscalculator"
+    ],
+    "tests": 30
+  }
+}

@@ -1,0 +1,59 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/b14bf6e9331c2b180b38860576100ad2d16a0537ee7738224cfaaecde8f9b619/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,4 +1,4 @@
+-MOD = 10**9 + 7
++MOD = 7 + 10**9
+ 
+ 
+ def readints():
+@@ -19,7 +19,7 @@
+     count = total = 0
+     pos = oplist[0] // 2
+     for op in oplist:
+-        i, delta = ((op+1)//2, -1) if op & 1 else (op//2, 1)
++        i, delta = ((1+op)//2, -1) if op & 1 else (op//2, 1)
+         total = (total + combk(count, k) * (i - pos)) % MOD
+         pos = i
+         count += delta
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/b14bf6e9331c2b180b38860576100ad2d16a0537ee7738224cfaaecde8f9b619/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+     if len(tbl) < k:
+         tbl += [0] * k + [1]
+     while n >= len(tbl):
+-        tbl.append(tbl[-1] * len(tbl) * pow(len(tbl) - k, MOD-2, MOD) % MOD)
++        tbl.append(len(tbl) * tbl[-1] * pow(len(tbl) - k, MOD-2, MOD) % MOD)
+     return tbl[n]
+ 
+ def main():
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/b14bf6e9331c2b180b38860576100ad2d16a0537ee7738224cfaaecde8f9b619/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+     return [int(fld) for fld in input().strip().split()]
+ 
+ def combk(n, k, MOD=MOD, tbl=[]):
+-    if len(tbl) < k:
++    if k > len(tbl):
+         tbl += [0] * k + [1]
+     while n >= len(tbl):
+         tbl.append(len(tbl) * tbl[-1] * pow(len(tbl) - k, MOD-2, MOD) % MOD)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/b14bf6e9331c2b180b38860576100ad2d16a0537ee7738224cfaaecde8f9b619/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ def combk(n, k, MOD=MOD, tbl=[]):
+     if k > len(tbl):
+         tbl += [0] * k + [1]
+-    while n >= len(tbl):
++    while len(tbl) <= n:
+         tbl.append(len(tbl) * tbl[-1] * pow(len(tbl) - k, MOD-2, MOD) % MOD)
+     return tbl[n]
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/b14bf6e9331c2b180b38860576100ad2d16a0537ee7738224cfaaecde8f9b619/with_tabs.py

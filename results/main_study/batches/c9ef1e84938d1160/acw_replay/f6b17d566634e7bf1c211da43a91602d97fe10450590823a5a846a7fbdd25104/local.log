@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/f6b17d566634e7bf1c211da43a91602d97fe10450590823a5a846a7fbdd25104/without_tabs.py:
+--- Original
++++ Modified
+@@ -31,7 +31,7 @@
+     else:
+         dn = 0
+         up = int(1e6) + 1
+-        while up - dn > 1:
++        while 1 < up - dn:
+             md = (up + dn) >> 1
+             if getSm(md, a, b, c, d) < getSm(1 + md, a, b, c, d):
+                 dn = md
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/f6b17d566634e7bf1c211da43a91602d97fe10450590823a5a846a7fbdd25104/with_tabs.py

@@ -1,0 +1,55 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4033/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+         D.append(i)
+         if i*i != area:
+             D.append(area//i)
+-for i in range(1,sa+1):
++for i in range(1,1+sa):
+     if a % i == 0:
+         DA.append(i)
+         if i*i != a:
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4033/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -46,9 +46,9 @@
+     t = D[start]
+     s = D[-start-1]
+     if DA[-closestdiv(t,DA)-1] <= s:
+-        print(2*t+2*s)
++        print(t*2+2*s)
+         break
+     elif DB[-closestdiv(t,DB)-1] <= s:
+-        print(2*t+2*s)
++        print(t*2+2*s)
+         break
+     start -= 1
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4033/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -36,7 +36,7 @@
+     high = len(D)-1
+     while high - low > 1:
+         guess = (high+low)//2
+-        if D[guess] > t:
++        if t < D[guess]:
+             high = guess
+         else:
+             low = guess
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4033/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -40,7 +40,7 @@
+             high = guess
+         else:
+             low = guess
+-    return high if D[high] <= t else low
++    return high if t >= D[high] else low
+     
+ while start > -1:
+     t = D[start]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/4033/acw_steps/with_tabs.py

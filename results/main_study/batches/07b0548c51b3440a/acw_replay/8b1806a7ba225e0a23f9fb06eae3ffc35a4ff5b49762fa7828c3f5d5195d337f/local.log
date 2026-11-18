@@ -1,0 +1,23 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/8b1806a7ba225e0a23f9fb06eae3ffc35a4ff5b49762fa7828c3f5d5195d337f/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+     b = 2 ** (1 + r) - 3
+     c = -2 * n
+     d = b * b - a * 4 * c
+-    if d < 0:
++    if 0 > d:
+         continue
+     le = 0
+     ri = d
+@@ -16,7 +16,7 @@
+         else:
+             ri = c
+     if le**2 == d:
+-        if (-b - le) % 4 == 2 and -b - le > 0:
++        if (-b - le) % 4 == 2 and 0 < -b - le:
+             res.add(2**r * (-b - le) // 2)
+         if (le + -b) % 4 == 2 and le + -b > 0:
+             res.add((le + -b) // 2 * 2**r)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/8b1806a7ba225e0a23f9fb06eae3ffc35a4ff5b49762fa7828c3f5d5195d337f/with_tabs.py

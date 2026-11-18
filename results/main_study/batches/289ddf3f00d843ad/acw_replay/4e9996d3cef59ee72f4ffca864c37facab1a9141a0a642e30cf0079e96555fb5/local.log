@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/4e9996d3cef59ee72f4ffca864c37facab1a9141a0a642e30cf0079e96555fb5/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+ 					dq.append(items[-1][0] * x)
+ 					dq.appendleft(items[-1][0] * x)
+ 					cur_length += x << 1
+-					if items[-1][1] - (x << 1) <= 1:
++					if 1 >= items[-1][1] - (x << 1):
+ 						items.pop()
+ 					else:
+ 						items[-1] = (items[-1][0], items[-1][1] - (x << 1))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/4e9996d3cef59ee72f4ffca864c37facab1a9141a0a642e30cf0079e96555fb5/with_tabs.py

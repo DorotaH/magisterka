@@ -1,0 +1,27 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/bc1013fd8941db884c2581c21453471944dfa767fbc27bc813690a9e3a0ec1ab/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,7 +18,7 @@
+ 			dist[1 + x][y] = d
+ 			Q.append((1 + x, y))
+ 
+-		if x > 0 and dist[x - 1][y] > d and lab[x - 1][y] == '.':
++		if 0 < x and dist[x - 1][y] > d and lab[x - 1][y] == '.':
+ 			dist[x - 1][y] = d
+ 			Q.append((x - 1, y))
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/bc1013fd8941db884c2581c21453471944dfa767fbc27bc813690a9e3a0ec1ab/without_tabs.py:
+--- Original
++++ Modified
+@@ -36,7 +36,7 @@
+ 			if inf > d:
+ 				right = ((j - c) + d) // 2
+ 				left =  (d - (j - c)) // 2
+-				if right <= R and left <= L:
++				if R >= right and L >= left:
+ 					ans += 1
+ 	print(ans)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/bc1013fd8941db884c2581c21453471944dfa767fbc27bc813690a9e3a0ec1ab/with_tabs.py

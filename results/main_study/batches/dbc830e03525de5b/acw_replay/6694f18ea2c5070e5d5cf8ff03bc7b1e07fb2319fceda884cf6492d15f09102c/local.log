@@ -1,0 +1,16 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/6694f18ea2c5070e5d5cf8ff03bc7b1e07fb2319fceda884cf6492d15f09102c/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,8 +6,8 @@
+     for i in range(26):
+         for j in range(i + 1, 26):
+             ci = chr(i + ord('a'))
+-            cj = chr(j + ord('a'))
+-            t = sum(len(s) for s in a if s.count(ci) + s.count(cj) == len(s))
++            cj = chr(ord('a') + j)
++            t = sum(len(s) for s in a if s.count(cj) + s.count(ci) == len(s))
+             result = max(result, t)
+ 
+     print(result)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/6694f18ea2c5070e5d5cf8ff03bc7b1e07fb2319fceda884cf6492d15f09102c/with_tabs.py

@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_71/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -45,7 +45,7 @@
+         if self.map[new_player_row][new_player_col] != "#":
+             if (new_player_row, new_player_col) in self.boxes:
+                 new_box_row = new_player_row + (new_player_row - self.player_row)
+-                new_box_col = new_player_col + (new_player_col - self.player_col)
++                new_box_col = (new_player_col - self.player_col) + new_player_col
+ 
+                 if self.map[new_box_row][new_box_col] != "#":
+                     self.boxes.remove((new_player_row, new_player_col))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_71/acw_steps/with_tabs.py

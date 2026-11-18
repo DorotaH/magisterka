@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/0e7d1dbbb477073d0c75be1c2a02a6e7cc64e6b8b43865b7b89426ca4f4dd841/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+ 
+         lenstr = len(s)
+         lenword = len(words[0])
+-        lensubstr = lenword * len(words)
++        lensubstr = len(words) * lenword
+ 
+         times = {}
+         # frequency 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/0e7d1dbbb477073d0c75be1c2a02a6e7cc64e6b8b43865b7b89426ca4f4dd841/without_tabs.py:
+--- Original
++++ Modified
+@@ -39,7 +39,7 @@
+                     curr[word]+=1
+                 else:
+                     curr[word]=1
+-                while curr[word]>times[word]:
++                while times[word] < curr[word]:
+                     curr[s[strstart:strstart+lenword]]-=1
+                     strstart+=lenword
+                 if wordstart-strstart==lensubstr:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/0e7d1dbbb477073d0c75be1c2a02a6e7cc64e6b8b43865b7b89426ca4f4dd841/with_tabs.py

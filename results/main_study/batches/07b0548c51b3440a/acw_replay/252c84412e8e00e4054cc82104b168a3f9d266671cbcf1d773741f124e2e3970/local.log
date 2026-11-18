@@ -1,0 +1,26 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/252c84412e8e00e4054cc82104b168a3f9d266671cbcf1d773741f124e2e3970/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+     S = list(map(lambda x: ord(x) - 97, readline().strip()))
+     S.sort()
+     if len(set(S[:K])) != 1:
+-        Ans[qu] = chr(S[K - 1] + 97)
++        Ans[qu] = chr(97 + S[K - 1])
+         continue
+     L = len(set(S[K:]))
+     res = [S[0]] + (-((K - N) // K)) * [S[K]] if L == 1 else S[K:] + [S[0]]
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/252c84412e8e00e4054cc82104b168a3f9d266671cbcf1d773741f124e2e3970/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         Ans[qu] = chr(97 + S[K - 1])
+         continue
+     L = len(set(S[K:]))
+-    res = [S[0]] + (-((K - N) // K)) * [S[K]] if L == 1 else S[K:] + [S[0]]
++    res = [S[0]] + [S[K]] * (-((K - N) // K)) if L == 1 else S[K:] + [S[0]]
+     Ans[qu] = ''.join(map(lambda x: chr(97 + x), res))
+ 
+ print('\n'.join(map(str, Ans)))
+

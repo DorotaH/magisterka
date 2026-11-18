@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/6c5602799e03d9a5e65f9861dfdf49bfe7451051c35c1efdccb3e04006dd11f3/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,10 +8,10 @@
+   A_border_index = 0 # 超えるときのindex
+   for a_ in A:
+     A_end = A_cusum[-1]
+-    if A_end+a_ > K:
++    if a_+A_end > K:
+       break
+ 
+-    A_cusum.append(A_end+a_)
++    A_cusum.append(a_+A_end)
+ 
+   A_border_index = len(A_cusum)-1
+   ret = A_border_index
+@@ -25,7 +25,7 @@
+       B_end = B_cusum[-1]
+       b_ = B[B_border_index]
+ 
+-      if A_cusum[A_border_index]+B_end+b_ > K:
++      if B_end+A_cusum[A_border_index]+b_ > K:
+         break
+ 
+       B_cusum.append(B_end+b_)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/6c5602799e03d9a5e65f9861dfdf49bfe7451051c35c1efdccb3e04006dd11f3/with_tabs.py

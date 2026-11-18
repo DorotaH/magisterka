@@ -1,0 +1,19 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1241/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,11 +12,11 @@
+                 if k:
+                     k -= 1
+                 else:
+-                    if i - left > result:
++                    if result < i - left:
+                         res_left = left
+                         res_right = i
+                         result = i - left
+-                    while left < i and a[left]:
++                    while i > left and a[left]:
+                         left += 1
+                     left += 1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1241/acw_steps/with_tabs.py

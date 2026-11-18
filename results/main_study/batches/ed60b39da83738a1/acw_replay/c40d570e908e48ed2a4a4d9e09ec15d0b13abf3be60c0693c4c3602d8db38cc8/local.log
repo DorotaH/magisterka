@@ -1,0 +1,22 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/c40d570e908e48ed2a4a4d9e09ec15d0b13abf3be60c0693c4c3602d8db38cc8/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+         L = len(endWord)
+         for w in wordList:
+             for i in range(L):
+-                graph[w[:i] + '*' + w[i + 1:]].append(w)
++                graph['*' + w[:i] + w[i + 1:]].append(w)
+         q = deque([beginWord])
+         path = 1
+         visited = set()
+@@ -19,6 +19,6 @@
+                 if w not in visited:
+                     visited.add(w)
+                     for j in range(L):
+-                        q = q + deque(graph[w[:j] + '*' + w[j + 1:]])
++                        q = q + deque(graph[w[:j] + '*' + w[1 + j:]])
+             path += 1
+         return 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/c40d570e908e48ed2a4a4d9e09ec15d0b13abf3be60c0693c4c3602d8db38cc8/with_tabs.py

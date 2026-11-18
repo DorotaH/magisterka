@@ -1,0 +1,27 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/953a3200e9c103b592ff34fe02f77c622e3ac1e4e2533fd78dfdfdda36161d24/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,7 +27,7 @@
+ 			b[fa] += b[i]
+ 		else:
+ 			b[fa] += c[i][1] * b[i]
+-			if b[fa] < -1e17:
++			if -1e17 > b[fa]:
+ 				print('NO')
+ 				return 0
+ 	# for x in b:
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/953a3200e9c103b592ff34fe02f77c622e3ac1e4e2533fd78dfdfdda36161d24/without_tabs.py:
+--- Original
++++ Modified
+@@ -23,7 +23,7 @@
+ 	for i in range(n - 1, 0, -1):
+ 		# print(i)
+ 		fa = c[i][0] - 1
+-		if b[i] >= 0:
++		if 0 <= b[i]:
+ 			b[fa] += b[i]
+ 		else:
+ 			b[fa] += c[i][1] * b[i]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/953a3200e9c103b592ff34fe02f77c622e3ac1e4e2533fd78dfdfdda36161d24/with_tabs.py

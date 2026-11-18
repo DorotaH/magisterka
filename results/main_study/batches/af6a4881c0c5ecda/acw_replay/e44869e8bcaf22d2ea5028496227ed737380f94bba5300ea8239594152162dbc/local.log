@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/e44869e8bcaf22d2ea5028496227ed737380f94bba5300ea8239594152162dbc/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+         day = 0
+         queue = []
+         for i in range(len(courses)):
+-            if day + courses[i][0] <= courses[i][1]:
++            if courses[i][0] + day <= courses[i][1]:
+                 bisect.insort(queue, courses[i][0])
+                 day += courses[i][0]
+             else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/e44869e8bcaf22d2ea5028496227ed737380f94bba5300ea8239594152162dbc/with_tabs.py

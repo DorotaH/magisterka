@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/cc0f484c390bdd40c5d4583f78ab8fd21f31fb43864a1e5dc8df481518dbae0f/without_tabs.py:
+--- Original
++++ Modified
+@@ -28,7 +28,7 @@
+ 	p = [0] * len(v)
+ 	for i in range(1, len(v)):
+ 		j = p[i - 1]
+-		while j > 0 and v[i] != v[j]:
++		while 0 < j and v[i] != v[j]:
+ 			j = p[j - 1]
+ 		if v[i] == v[j]:
+ 			j += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/cc0f484c390bdd40c5d4583f78ab8fd21f31fb43864a1e5dc8df481518dbae0f/with_tabs.py

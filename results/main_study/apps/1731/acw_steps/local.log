@@ -1,0 +1,26 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1731/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ n, m = list(map(int,input().split()))
+ 
+-M = 10 ** 9 + 7
++M = 7 + 10 ** 9
+ 
+ def inv(x):
+     return pow(x, M - 2, M)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1731/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+             n -= 1
+             ntok %= M
+             ktok %= M
+-        return (ntok * inv(ktok))%M
++        return (inv(ktok) * ntok)%M
+     else:
+         return 0
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1731/acw_steps/with_tabs.py

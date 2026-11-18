@@ -1,0 +1,34 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/100fd8939a9099880627a8d2d16774b8a4aeb4f281ca8f97d32c711766d428c8/without_tabs.py:
+--- Original
++++ Modified
+@@ -52,13 +52,13 @@
+         tb = sum(x[1])
+         acc =0;
+ 
+-        for j in range(hide + 1):
++        for j in range(1 + hide):
+             la = x[0] * (num-j)
+             lb = tb - acc
+             if j<num: acc += x[1][j]
+             for t in tz:
+                 # t = (0,0)
+-                tr = (t[0] + la, t[1] + lb)
++                tr = (la + t[0], lb + t[1])
+                 addres(nowdp[ i -j + num -j] ,tr)
+     lastdp = nowdp
+     #print(lastdp)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/100fd8939a9099880627a8d2d16774b8a4aeb4f281ca8f97d32c711766d428c8/without_tabs.py:
+--- Original
++++ Modified
+@@ -55,7 +55,7 @@
+         for j in range(1 + hide):
+             la = x[0] * (num-j)
+             lb = tb - acc
+-            if j<num: acc += x[1][j]
++            if num > j: acc += x[1][j]
+             for t in tz:
+                 # t = (0,0)
+                 tr = (la + t[0], lb + t[1])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/289ddf3f00d843ad/acw_replay/100fd8939a9099880627a8d2d16774b8a4aeb4f281ca8f97d32c711766d428c8/with_tabs.py

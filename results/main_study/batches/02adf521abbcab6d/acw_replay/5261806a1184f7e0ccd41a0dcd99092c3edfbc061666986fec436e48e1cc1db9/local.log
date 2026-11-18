@@ -1,0 +1,13 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/5261806a1184f7e0ccd41a0dcd99092c3edfbc061666986fec436e48e1cc1db9/without_tabs.py:
+--- Original
++++ Modified
+@@ -52,6 +52,6 @@
+         fr, to, val = el
+         # print(fr, to, val)
+         # print(ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0))
+-        result += ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0)
++        result += ft.sum(to) - (ft.sum(fr - 1) if 1 < fr else 0)
+ 
+ print(result)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/5261806a1184f7e0ccd41a0dcd99092c3edfbc061666986fec436e48e1cc1db9/with_tabs.py

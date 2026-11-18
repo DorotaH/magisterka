@@ -1,0 +1,39 @@
+# @author 
+
+import sys
+
+
+class ABeautifulString:
+    def solve(self):
+
+        def get_not(arr):
+            for  x in  ['a', 'b', 'c']:
+                if  x not  in arr:
+                    return x
+
+            assert(False)
+
+        for  _ in  range(0, int(input())):
+            s = list(input())
+            n = len(s)
+            for  i in  range(0, n - 1):
+                if  s[i + 1] == s[i] and  s[i]!='?':
+                    print(-1)
+                    break
+            else:
+                x=3 * ord('a') + 1 +2
+                for i in range(n):
+                    if  s[i]=='?':
+                        if (i>0 and i<n-1):
+                            s[i]=get_not([s[i-1], s[1 + i]])
+                        elif 0 == i:
+                            s[i]=get_not([s[i + 1]])
+                        else:
+                            s[i]=get_not([s[i-1]])
+
+                print(''.join(s))
+
+solver = ABeautifulString()
+input = sys.stdin.readline
+
+solver.solve()

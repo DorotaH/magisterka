@@ -1,0 +1,26 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/97af43a235d9d8b625e2ad8194b765961c65685d5af39f3c0f7c738e78cd5a7c/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,6 +13,6 @@
+ 
+ for i in range(len(debts)):
+     if debts[i] < 0:
+-        total += debts[i] * -1
++        total += -1 * debts[i]
+ 
+ print(total)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/97af43a235d9d8b625e2ad8194b765961c65685d5af39f3c0f7c738e78cd5a7c/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+     debts[data[1] - 1] += data[2]
+ 
+ for i in range(len(debts)):
+-    if debts[i] < 0:
++    if 0 > debts[i]:
+         total += -1 * debts[i]
+ 
+ print(total)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/97af43a235d9d8b625e2ad8194b765961c65685d5af39f3c0f7c738e78cd5a7c/with_tabs.py

@@ -1,0 +1,30 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/a59a1d121dbdbae60cf41f735f51c920ef220d5f3366c248745292662709730e/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,9 +12,9 @@
+         if n % m and a * (n % m) > b:
+             print((n // m + 1) * b)
+         else:
+-            print((n % m) * a + (n // m) * b)
++            print(a * (n % m) + b * (n // m))
+     else:
+-        print(n * a)
++        print(a * n)
+ 
+ 
+ ################################### NON-SOLUTION STUFF BELOW
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/a59a1d121dbdbae60cf41f735f51c920ef220d5f3366c248745292662709730e/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+ 
+ def main():
+     n, m, a, b = read()
+-    if b / m < a:
++    if a > b / m:
+         if n % m and a * (n % m) > b:
+             print((n // m + 1) * b)
+         else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/a59a1d121dbdbae60cf41f735f51c920ef220d5f3366c248745292662709730e/with_tabs.py

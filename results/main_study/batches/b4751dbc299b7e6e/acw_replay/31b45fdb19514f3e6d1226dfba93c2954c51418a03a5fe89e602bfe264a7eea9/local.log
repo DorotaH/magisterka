@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/31b45fdb19514f3e6d1226dfba93c2954c51418a03a5fe89e602bfe264a7eea9/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+   num=0
+   for i in range(D):
+     if bit & (1<<i):
+-      p_sum += c[i] + p[i] * 100*(i+1)
++      p_sum += c[i] + 100 * p[i]*(i+1)
+       num += p[i]
+   if p_sum < G:
+     for i in reversed(range(D)):
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/31b45fdb19514f3e6d1226dfba93c2954c51418a03a5fe89e602bfe264a7eea9/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+   c += [b]
+ 
+ def solve(bit):
+-  if bit >= (1<<D):
++  if (1<<D) <= bit:
+     return 1000
+   p_sum=0
+   num=0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/31b45fdb19514f3e6d1226dfba93c2954c51418a03a5fe89e602bfe264a7eea9/with_tabs.py

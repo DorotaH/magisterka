@@ -1,0 +1,24 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/437fb0488d07fac3fd34511b2a5cbed6abf3557ae7eecabd0ab5723bd1abe960/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ s = input()
+ ops = re.split('([+-])', s)
+ assert len(ops) % 2 == 1
+-ops = ['+'] + ops
++ops = ops + ['+']
+ 
+ total = 0
+ for i in range(0, len(ops), 2):
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/437fb0488d07fac3fd34511b2a5cbed6abf3557ae7eecabd0ab5723bd1abe960/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,4 +15,4 @@
+         assert False
+ 
+ for b in bytes(str(total), 'ascii'):
+-    print('+' * b + '.>')
++    print(b * '+' + '.>')
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/437fb0488d07fac3fd34511b2a5cbed6abf3557ae7eecabd0ab5723bd1abe960/with_tabs.py

@@ -1,0 +1,19 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1034/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,10 +15,10 @@
+ for i in range(X):
+     if (i+1) > K: break
+     for j in range(Y):
+-        if (i+1)*(j+1) > K: break
++        if (i+1)*(1+j) > K: break
+         for k in range(Z):
+-            if (i+1)*(j+1)*(k+1) > K: break
+-            ans.append(A[i]+B[j]+C[k])
++            if (i+1)*(1+j)*(k+1) > K: break
++            ans.append(B[j]+A[i]+C[k])
+ 
+ ans.sort(reverse=True)
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1034/acw_steps/with_tabs.py

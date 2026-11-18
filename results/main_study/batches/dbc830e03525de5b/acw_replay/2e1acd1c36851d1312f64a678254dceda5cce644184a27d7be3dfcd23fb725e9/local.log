@@ -1,0 +1,22 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/2e1acd1c36851d1312f64a678254dceda5cce644184a27d7be3dfcd23fb725e9/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+     c = [0] * 128
+     for i in range(128):
+         for j in range(128):
+-            c[i ^ j] += a[i] * b[j]
++            c[i ^ j] += b[j] * a[i]
+     return c
+ 
+ 
+@@ -25,6 +25,6 @@
+ 
+ 
+ prob = list(map(float, input().split()))
+-prob += [0.0] * (128 - len(prob))
++prob += (128 - len(prob)) * [0.0]
+ 
+ print("%.9f" % (1 - quickpow(prob, n)[0]))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/2e1acd1c36851d1312f64a678254dceda5cce644184a27d7be3dfcd23fb725e9/with_tabs.py

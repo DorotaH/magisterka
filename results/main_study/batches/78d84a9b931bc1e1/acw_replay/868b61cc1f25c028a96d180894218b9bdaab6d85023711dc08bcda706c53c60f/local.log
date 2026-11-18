@@ -1,0 +1,33 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/868b61cc1f25c028a96d180894218b9bdaab6d85023711dc08bcda706c53c60f/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,14 +26,14 @@
+             return i + 1
+         if (
+             0 < x
+-            and m - 1 > y
++            and y < m - 1
+             and board[x - 1][y + 1]
+             and board[x - 1][y]
+             and board[x][y + 1]
+         ):
+             return i + 1
+         if (
+-            n - 1 > x
++            x < n - 1
+             and y > 0
+             and board[1 + x][y - 1]
+             and board[1 + x][y]
+@@ -41,8 +41,8 @@
+         ):
+             return i + 1
+         if (
+-            n - 1 > x
+-            and m - 1 > y
++            x < n - 1
++            and y < m - 1
+             and board[1 + x][y + 1]
+             and board[1 + x][y]
+             and board[x][y + 1]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/868b61cc1f25c028a96d180894218b9bdaab6d85023711dc08bcda706c53c60f/with_tabs.py

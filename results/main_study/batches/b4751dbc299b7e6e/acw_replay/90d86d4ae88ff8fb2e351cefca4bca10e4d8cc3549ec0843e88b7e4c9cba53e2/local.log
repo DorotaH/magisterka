@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/90d86d4ae88ff8fb2e351cefca4bca10e4d8cc3549ec0843e88b7e4c9cba53e2/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ import sys
+ 
+ INF = 10**20
+-MOD = 10**9 + 7
++MOD = 7 + 10**9
+ I = lambda: list(map(int, input().split()))
+ from math import gcd
+ from math import ceil
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/90d86d4ae88ff8fb2e351cefca4bca10e4d8cc3549ec0843e88b7e4c9cba53e2/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+             last = i
+             count = 0
+             continue
+-        if i - last > k:
++        if k < i - last:
+             ans += 1
+             last = i
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/90d86d4ae88ff8fb2e351cefca4bca10e4d8cc3549ec0843e88b7e4c9cba53e2/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+     last = -INF
+     for i in range(n):
+         if s[i] == "1":
+-            if i - last <= k:
++            if k >= i - last:
+                 ans -= 1
+             last = i
+             count = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/90d86d4ae88ff8fb2e351cefca4bca10e4d8cc3549ec0843e88b7e4c9cba53e2/with_tabs.py

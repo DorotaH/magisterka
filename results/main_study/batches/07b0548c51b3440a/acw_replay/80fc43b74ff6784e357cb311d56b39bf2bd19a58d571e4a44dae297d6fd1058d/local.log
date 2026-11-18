@@ -1,0 +1,62 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/80fc43b74ff6784e357cb311d56b39bf2bd19a58d571e4a44dae297d6fd1058d/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+ 
+ N = int(readline())
+ A = list(map(int, readline().split()))
+-geta = 10**9 + 7
++geta = 7 + 10**9
+ 
+ Q = int(readline())
+ C = Counter()
+@@ -13,7 +13,7 @@
+ Ans = [sum(A)] + [0] * Q
+ A = [0] + A
+ table = [geta] + [0] * N
+-for qu in range(1, Q + 1):
++for qu in range(1, 1 + Q):
+     s, t, u = list(map(int, readline().split()))
+     vn = s * geta + t
+     res = 0
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/80fc43b74ff6784e357cb311d56b39bf2bd19a58d571e4a44dae297d6fd1058d/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+ table = [geta] + [0] * N
+ for qu in range(1, 1 + Q):
+     s, t, u = list(map(int, readline().split()))
+-    vn = s * geta + t
++    vn = geta * s + t
+     res = 0
+     cv = C[vn]
+     if u != cv:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/80fc43b74ff6784e357cb311d56b39bf2bd19a58d571e4a44dae297d6fd1058d/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+         if table[cv] <= A[cv]:
+             res = 1
+         table[cv] -= 1
+-        if table[u] < A[u]:
++        if A[u] > table[u]:
+             res -= 1
+         table[u] += 1
+     C[vn] = u
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/80fc43b74ff6784e357cb311d56b39bf2bd19a58d571e4a44dae297d6fd1058d/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+     res = 0
+     cv = C[vn]
+     if u != cv:
+-        if table[cv] <= A[cv]:
++        if A[cv] >= table[cv]:
+             res = 1
+         table[cv] -= 1
+         if A[u] > table[u]:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/07b0548c51b3440a/acw_replay/80fc43b74ff6784e357cb311d56b39bf2bd19a58d571e4a44dae297d6fd1058d/with_tabs.py

@@ -1,0 +1,3563 @@
+{
+  "dataset": "apps",
+  "sample": {
+    "sample_id": "900",
+    "sloc": 20,
+    "structure": "function",
+    "difficulty": "interview",
+    "format": "stdin",
+    "sha256": "6767a65cde6a2ebfa434a6505e572229cfe0a8db33eb6a118030f4e7ac401c5d"
+  },
+  "sew_embedding": {
+    "status": "ok",
+    "n_sites": 24,
+    "n_grades": 13,
+    "n_edits": 22,
+    "iterations": 1
+  },
+  "variants": {
+    "original": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py",
+        "sha256": "6767a65cde6a2ebfa434a6505e572229cfe0a8db33eb6a118030f4e7ac401c5d",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.7259640651600903,
+            "p_all": 0.36298203258004513,
+            "p_syntax": 0.61165526512896,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 4,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8889874565986445,
+            "p_syntax": 0.9381387318745598,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 2,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5563852061109567,
+            "p_syntax": 1.0,
+            "n_grades": 13,
+            "k_grades": 5,
+            "n_syntax": 5,
+            "k_syntax": 0,
+            "n_sites": 24
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py\": {\"loc\": 24, \"lloc\": 21, \"sloc\": 20, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.18939973100077623
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py\": [{\"type\": \"function\", \"rank\": \"B\", \"col_offset\": 0, \"lineno\": 1, \"endline\": 20, \"name\": \"main\", \"complexity\": 6, \"closures\": []}, {\"type\": \"function\", \"rank\": \"A\", \"col_offset\": 0, \"lineno\": 22, \"endline\": 23, \"name\": \"__starting_point\", \"complexity\": 1, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.1986560159994042
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py\": {\"mi\": 54.31463157436825, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.172924478000823
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py\": {\"total\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"functions\": {\"main\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"__starting_point\": {\"h1\": 0, \"h2\": 0, \"N1\": 0, \"N2\": 0, \"vocabulary\": 0, \"length\": 0, \"calculated_length\": 0, \"volume\": 0, \"difficulty\": 0, \"effort\": 0, \"time\": 0.0, \"bugs\": 0.0}}}}\n",
+            "stderr": "",
+            "seconds": 0.14378451700031292
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/complexipy.json\nresults/main_study/apps/900/original/embedded/code.py\n    __starting_point 0  ✅  PASSED  \n    main 12  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06761235800058785,
+            "data": [
+              {
+                "complexity": 0,
+                "file_name": "code.py",
+                "function_name": "__starting_point",
+                "line_complexities": [],
+                "line_end": 23,
+                "line_start": 22,
+                "path": "results/main_study/apps/900/original/embedded/code.py",
+                "refactor_plans": []
+              },
+              {
+                "complexity": 12,
+                "file_name": "code.py",
+                "function_name": "main",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 16
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 17
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/900/original/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.02532745100052125
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 2,\n            \"row\": 3\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 19,\n      \"row\": 24\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 19,\n            \"row\": 24\n          },\n          \"location\": {\n            \"column\": 19,\n            \"row\": 24\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 19,\n      \"row\": 24\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 24,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.037221796000267204
+            },
+            "diagnostics": {
+              "W293": 1,
+              "W292": 1
+            }
+          }
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/6767a65cde6a2ebfa434a6505e572229cfe0a8db33eb6a118030f4e7ac401c5d"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/check/code.py",
+        "sha256": "6767a65cde6a2ebfa434a6505e572229cfe0a8db33eb6a118030f4e7ac401c5d",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.7259640651600903,
+            "p_all": 0.36298203258004513,
+            "p_syntax": 0.61165526512896,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 4,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8889874565986445,
+            "p_syntax": 0.9381387318745598,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 2,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5563852061109567,
+            "p_syntax": 1.0,
+            "n_grades": 13,
+            "k_grades": 5,
+            "n_syntax": 5,
+            "k_syntax": 0,
+            "n_sites": 24
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.02532745100052125
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/6767a65cde6a2ebfa434a6505e572229cfe0a8db33eb6a118030f4e7ac401c5d"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix/code.py",
+        "sha256": "6767a65cde6a2ebfa434a6505e572229cfe0a8db33eb6a118030f4e7ac401c5d",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.7259640651600903,
+            "p_all": 0.36298203258004513,
+            "p_syntax": 0.61165526512896,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 4,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8889874565986445,
+            "p_syntax": 0.9381387318745598,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 2,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5563852061109567,
+            "p_syntax": 1.0,
+            "n_grades": 13,
+            "k_grades": 5,
+            "n_syntax": 5,
+            "k_syntax": 0,
+            "n_sites": 24
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.027410772000621364
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.01897709899913025
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/6767a65cde6a2ebfa434a6505e572229cfe0a8db33eb6a118030f4e7ac401c5d"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/format/code.py",
+        "sha256": "91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.27450980392156865,
+          "changed_lines": 32,
+          "token_similarity": 0.9933333333333333,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.7259640651600903,
+            "p_all": 0.36298203258004513,
+            "p_syntax": 0.61165526512896,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 4,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8889874565986445,
+            "p_syntax": 0.9381387318745598,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 2,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5563852061109567,
+            "p_syntax": 1.0,
+            "n_grades": 13,
+            "k_grades": 5,
+            "n_syntax": 5,
+            "k_syntax": 0,
+            "n_sites": 24
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02421990699986054
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.027754847000323934
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py",
+        "sha256": "91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.27450980392156865,
+          "changed_lines": 32,
+          "token_similarity": 0.9933333333333333,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.7259640651600903,
+            "p_all": 0.36298203258004513,
+            "p_syntax": 0.61165526512896,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 4,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8889874565986445,
+            "p_syntax": 0.9381387318745598,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 2,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5563852061109567,
+            "p_syntax": 1.0,
+            "n_grades": 13,
+            "k_grades": 5,
+            "n_syntax": 5,
+            "k_syntax": 0,
+            "n_sites": 24
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py\": {\"loc\": 27, \"lloc\": 21, \"sloc\": 20, \"comments\": 0, \"multi\": 0, \"blank\": 7, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.19270289599990065
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py\": [{\"type\": \"function\", \"rank\": \"B\", \"lineno\": 1, \"endline\": 20, \"complexity\": 6, \"name\": \"main\", \"col_offset\": 0, \"closures\": []}, {\"type\": \"function\", \"rank\": \"A\", \"lineno\": 23, \"endline\": 24, \"complexity\": 1, \"name\": \"__starting_point\", \"col_offset\": 0, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.1572317700001804
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py\": {\"mi\": 54.31463157436825, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.13527453999995487
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py\": {\"total\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"functions\": {\"main\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"__starting_point\": {\"h1\": 0, \"h2\": 0, \"N1\": 0, \"N2\": 0, \"vocabulary\": 0, \"length\": 0, \"calculated_length\": 0, \"volume\": 0, \"difficulty\": 0, \"effort\": 0, \"time\": 0.0, \"bugs\": 0.0}}}}\n",
+            "stderr": "",
+            "seconds": 0.1589667489997737
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/complexipy.json\nresults/main_study/apps/900/original/default/fix_format/code.py\n    __starting_point 0  ✅  PASSED  \n    main 12  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06268652400012797,
+            "data": [
+              {
+                "complexity": 0,
+                "file_name": "code.py",
+                "function_name": "__starting_point",
+                "line_complexities": [],
+                "line_end": 24,
+                "line_start": 23,
+                "path": "results/main_study/apps/900/original/default/fix_format/code.py",
+                "refactor_plans": []
+              },
+              {
+                "complexity": 12,
+                "file_name": "code.py",
+                "function_name": "main",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 16
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 17
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/900/original/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.028879653000331018
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.05525163100082864
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/original/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03317094900012307
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/check/code.py",
+        "sha256": "6767a65cde6a2ebfa434a6505e572229cfe0a8db33eb6a118030f4e7ac401c5d",
+        "changed": false,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 1.0,
+          "changed_lines": 0,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.7259640651600903,
+            "p_all": 0.36298203258004513,
+            "p_syntax": 0.61165526512896,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 4,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8889874565986445,
+            "p_syntax": 0.9381387318745598,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 2,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5563852061109567,
+            "p_syntax": 1.0,
+            "n_grades": 13,
+            "k_grades": 5,
+            "n_syntax": 5,
+            "k_syntax": 0,
+            "n_sites": 24
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 2,\n            \"row\": 3\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W292\",\n    \"end_location\": {\n      \"column\": 19,\n      \"row\": 24\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/original/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\\n\",\n          \"end_location\": {\n            \"column\": 19,\n            \"row\": 24\n          },\n          \"location\": {\n            \"column\": 19,\n            \"row\": 24\n          }\n        }\n      ],\n      \"message\": \"Add trailing newline\"\n    },\n    \"location\": {\n      \"column\": 19,\n      \"row\": 24\n    },\n    \"message\": \"No newline at end of file\",\n    \"name\": \"missing-newline-at-end-of-file\",\n    \"noqa_row\": 24,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/missing-newline-at-end-of-file\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.037221796000267204
+        },
+        "diagnostics": {
+          "W293": 1,
+          "W292": 1
+        },
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/6767a65cde6a2ebfa434a6505e572229cfe0a8db33eb6a118030f4e7ac401c5d"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix/code.py",
+        "sha256": "637ca411ac6ca5f042c8000898e8d067afda30e4f5dee56a2abec34c16fb09ad",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.9583333333333334,
+          "changed_lines": 1,
+          "token_similarity": 1.0,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.18569995384732052,
+            "p_all": 0.09284997692366026,
+            "p_syntax": 0.61165526512896,
+            "n_grades": 13,
+            "k_grades": 8,
+            "n_syntax": 5,
+            "k_syntax": 4,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.9821067304961653,
+            "p_syntax": 0.9381387318745598,
+            "n_grades": 13,
+            "k_grades": 6,
+            "n_syntax": 5,
+            "k_syntax": 2,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.42367309281066107,
+            "p_all": 0.21183654640533053,
+            "p_syntax": 1.0,
+            "n_grades": 13,
+            "k_grades": 6,
+            "n_syntax": 5,
+            "k_syntax": 0,
+            "n_sites": 24
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "Found 2 errors (2 fixed, 0 remaining).\n",
+            "stderr": "",
+            "seconds": 0.025401849999980186
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.024557419000302616
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/637ca411ac6ca5f042c8000898e8d067afda30e4f5dee56a2abec34c16fb09ad"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/format/code.py",
+        "sha256": "91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.27450980392156865,
+          "changed_lines": 32,
+          "token_similarity": 0.9933333333333333,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.7259640651600903,
+            "p_all": 0.36298203258004513,
+            "p_syntax": 0.61165526512896,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 4,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8889874565986445,
+            "p_syntax": 0.9381387318745598,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 2,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5563852061109567,
+            "p_syntax": 1.0,
+            "n_grades": 13,
+            "k_grades": 5,
+            "n_syntax": 5,
+            "k_syntax": 0,
+            "n_sites": 24
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.024196092000238423
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.026190306999524182
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py",
+        "sha256": "91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.27450980392156865,
+          "changed_lines": 32,
+          "token_similarity": 0.9933333333333333,
+          "delta_tokens": 0,
+          "delta_ast_nodes": 0,
+          "ast_equal": true
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.7259640651600903,
+            "p_all": 0.36298203258004513,
+            "p_syntax": 0.61165526512896,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 4,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.8889874565986445,
+            "p_syntax": 0.9381387318745598,
+            "n_grades": 13,
+            "k_grades": 7,
+            "n_syntax": 5,
+            "k_syntax": 2,
+            "n_sites": 24
+          },
+          {
+            "verdict": "No watermark evidence",
+            "p": 1.0,
+            "p_all": 0.5563852061109567,
+            "p_syntax": 1.0,
+            "n_grades": 13,
+            "k_grades": 5,
+            "n_syntax": 5,
+            "k_syntax": 0,
+            "n_sites": 24
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py\": {\"loc\": 27, \"lloc\": 21, \"sloc\": 20, \"comments\": 0, \"multi\": 0, \"blank\": 7, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.12277797799924883
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py\": [{\"type\": \"function\", \"rank\": \"B\", \"complexity\": 6, \"col_offset\": 0, \"lineno\": 1, \"name\": \"main\", \"endline\": 20, \"closures\": []}, {\"type\": \"function\", \"rank\": \"A\", \"complexity\": 1, \"col_offset\": 0, \"lineno\": 23, \"name\": \"__starting_point\", \"endline\": 24, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.17056608100028825
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py\": {\"mi\": 54.31463157436825, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.1719865609993576
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py\": {\"total\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"functions\": {\"main\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"__starting_point\": {\"h1\": 0, \"h2\": 0, \"N1\": 0, \"N2\": 0, \"vocabulary\": 0, \"length\": 0, \"calculated_length\": 0, \"volume\": 0, \"difficulty\": 0, \"effort\": 0, \"time\": 0.0, \"bugs\": 0.0}}}}\n",
+            "stderr": "",
+            "seconds": 0.17270112999995035
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/complexipy.json\nresults/main_study/apps/900/original/strict/fix_format/code.py\n    __starting_point 0  ✅  PASSED  \n    main 12  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.07098839099944598,
+            "data": [
+              {
+                "complexity": 0,
+                "file_name": "code.py",
+                "function_name": "__starting_point",
+                "line_complexities": [],
+                "line_end": 24,
+                "line_start": 23,
+                "path": "results/main_study/apps/900/original/strict/fix_format/code.py",
+                "refactor_plans": []
+              },
+              {
+                "complexity": 12,
+                "file_name": "code.py",
+                "function_name": "main",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 16
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 17
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/900/original/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "Found 2 errors (2 fixed, 0 remaining).\n",
+            "stderr": "",
+            "seconds": 0.03235907900034363
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.034973746000105166
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/original/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.027258517000518623
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": false,
+          "acw_full": false
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/91b455c1dd046eca624b840f938459b6b6a7df4a9e2c47f195128f48310f5a86"
+      }
+    },
+    "sew": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py",
+        "sha256": "5e74d405a56e0346d06113851f4ad9e0bcfe5d7a0fefc1d7fc0aeb94b6bd351f",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.4166666666666667,
+          "changed_lines": 17,
+          "token_similarity": 0.8239202657807309,
+          "delta_tokens": 1,
+          "delta_ast_nodes": 2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 2.5671998574101967e-08,
+            "p_all": 1.2835999287050984e-08,
+            "p_syntax": 0.029751299321760002,
+            "n_grades": 13,
+            "k_grades": 13,
+            "n_syntax": 5,
+            "k_syntax": 5,
+            "n_sites": 24
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\": {\"loc\": 24, \"lloc\": 21, \"sloc\": 20, \"comments\": 0, \"multi\": 0, \"blank\": 4, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.15418327099996532
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\": [{\"type\": \"function\", \"rank\": \"B\", \"lineno\": 1, \"col_offset\": 0, \"complexity\": 6, \"name\": \"main\", \"endline\": 20, \"closures\": []}, {\"type\": \"function\", \"rank\": \"A\", \"lineno\": 22, \"col_offset\": 0, \"complexity\": 1, \"name\": \"__starting_point\", \"endline\": 23, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.16615727499993227
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\": {\"mi\": 54.101316152514585, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.16877029800070886
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\": {\"total\": {\"h1\": 7, \"h2\": 20, \"N1\": 15, \"N2\": 29, \"vocabulary\": 27, \"length\": 44, \"calculated_length\": 106.09004635215048, \"volume\": 209.21505009519265, \"difficulty\": 5.075, \"effort\": 1061.7663792331027, \"time\": 58.987021068505705, \"bugs\": 0.06973835003173089}, \"functions\": {\"main\": {\"h1\": 7, \"h2\": 20, \"N1\": 15, \"N2\": 29, \"vocabulary\": 27, \"length\": 44, \"calculated_length\": 106.09004635215048, \"volume\": 209.21505009519265, \"difficulty\": 5.075, \"effort\": 1061.7663792331027, \"time\": 58.987021068505705, \"bugs\": 0.06973835003173089}, \"__starting_point\": {\"h1\": 0, \"h2\": 0, \"N1\": 0, \"N2\": 0, \"vocabulary\": 0, \"length\": 0, \"calculated_length\": 0, \"volume\": 0, \"difficulty\": 0, \"effort\": 0, \"time\": 0.0, \"bugs\": 0.0}}}}\n",
+            "stderr": "",
+            "seconds": 0.16161446800015256
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/complexipy.json\nresults/main_study/apps/900/sew/embedded/code.py\n    __starting_point 0  ✅  PASSED  \n    main 12  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.08008468600019114,
+            "data": [
+              {
+                "complexity": 0,
+                "file_name": "code.py",
+                "function_name": "__starting_point",
+                "line_complexities": [],
+                "line_end": 23,
+                "line_start": 22,
+                "path": "results/main_study/apps/900/sew/embedded/code.py",
+                "refactor_plans": []
+              },
+              {
+                "complexity": 12,
+                "file_name": "code.py",
+                "function_name": "main",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 16
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 17
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/900/sew/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != '?'\",\n          \"end_location\": {\n            \"column\": 22,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 10,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 10,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != '?'` instead of `not i == '?'`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.02230205500018201
+            },
+            "diagnostics": {
+              "SIM201": 1
+            }
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 2,\n            \"row\": 3\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != '?'\",\n          \"end_location\": {\n            \"column\": 22,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 10,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 10,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != '?'` instead of `not i == '?'`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.03763060199980828
+            },
+            "diagnostics": {
+              "W293": 1,
+              "SIM201": 1
+            }
+          }
+        }
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/check/code.py",
+        "sha256": "5e74d405a56e0346d06113851f4ad9e0bcfe5d7a0fefc1d7fc0aeb94b6bd351f",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.4166666666666667,
+          "changed_lines": 17,
+          "token_similarity": 0.8239202657807309,
+          "delta_tokens": 1,
+          "delta_ast_nodes": 2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 2.5671998574101967e-08,
+            "p_all": 1.2835999287050984e-08,
+            "p_syntax": 0.029751299321760002,
+            "n_grades": 13,
+            "k_grades": 13,
+            "n_syntax": 5,
+            "k_syntax": 5,
+            "n_sites": 24
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != '?'\",\n          \"end_location\": {\n            \"column\": 22,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 10,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 10,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != '?'` instead of `not i == '?'`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02230205500018201
+        },
+        "diagnostics": {
+          "SIM201": 1
+        }
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix/code.py",
+        "sha256": "5e74d405a56e0346d06113851f4ad9e0bcfe5d7a0fefc1d7fc0aeb94b6bd351f",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.4166666666666667,
+          "changed_lines": 17,
+          "token_similarity": 0.8239202657807309,
+          "delta_tokens": 1,
+          "delta_ast_nodes": 2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 2.5671998574101967e-08,
+            "p_all": 1.2835999287050984e-08,
+            "p_syntax": 0.029751299321760002,
+            "n_grades": 13,
+            "k_grades": 13,
+            "n_syntax": 5,
+            "k_syntax": 5,
+            "n_sites": 24
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "SIM201 Use `i != '?'` instead of `not i == '?'`\n  --> results/main_study/apps/900/sew/default/fix/code.py:13:10\n   |\n11 |           dp[(j * 10) % 13] = ans[j] % MOD\n12 |       dp+=dp\n13 |       if not i == '?':\n   |          ^^^^^^^^^^^^\n14 |           for j in range(13):\n15 |               ans[j] = dp[j + 13 - int(i)]\n   |\nhelp: Replace with `!=` operator\n   |\n12 |       dp+=dp\n   -       if not i == '?':\n13 +       if i != '?':\n14 |           for j in range(13):\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 1 error.\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.034212380000099074
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != '?'\",\n          \"end_location\": {\n            \"column\": 22,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 10,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 10,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != '?'` instead of `not i == '?'`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02637471199977881
+        },
+        "diagnostics": {
+          "SIM201": 1
+        }
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/format/code.py",
+        "sha256": "db150ffe10a312ab5ef4b06ea949862ccdaed3a17bf606b0ff309e5226df1247",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.27450980392156865,
+          "changed_lines": 32,
+          "token_similarity": 0.8172757475083057,
+          "delta_tokens": 1,
+          "delta_ast_nodes": 2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.059502598643520005,
+            "p_all": 0.09284997692366026,
+            "p_syntax": 0.029751299321760002,
+            "n_grades": 13,
+            "k_grades": 8,
+            "n_syntax": 5,
+            "k_syntax": 5,
+            "n_sites": 24
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.0437697979996301
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 24,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != \\\"?\\\"\",\n          \"end_location\": {\n            \"column\": 24,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 12,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 12,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != \\\"?\\\"` instead of `not i == \\\"?\\\"`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.014731396999195567
+        },
+        "diagnostics": {
+          "SIM201": 1
+        }
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py",
+        "sha256": "db150ffe10a312ab5ef4b06ea949862ccdaed3a17bf606b0ff309e5226df1247",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.27450980392156865,
+          "changed_lines": 32,
+          "token_similarity": 0.8172757475083057,
+          "delta_tokens": 1,
+          "delta_ast_nodes": 2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.059502598643520005,
+            "p_all": 0.09284997692366026,
+            "p_syntax": 0.029751299321760002,
+            "n_grades": 13,
+            "k_grades": 8,
+            "n_syntax": 5,
+            "k_syntax": 5,
+            "n_sites": 24
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py\": {\"loc\": 27, \"lloc\": 21, \"sloc\": 20, \"comments\": 0, \"multi\": 0, \"blank\": 7, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.15517180300048494
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py\": [{\"type\": \"function\", \"rank\": \"B\", \"lineno\": 1, \"col_offset\": 0, \"complexity\": 6, \"name\": \"main\", \"endline\": 20, \"closures\": []}, {\"type\": \"function\", \"rank\": \"A\", \"lineno\": 23, \"col_offset\": 0, \"complexity\": 1, \"name\": \"__starting_point\", \"endline\": 24, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.14348931400036236
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py\": {\"mi\": 54.101316152514585, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.16899540899976273
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 20, \"N1\": 15, \"N2\": 29, \"vocabulary\": 27, \"length\": 44, \"calculated_length\": 106.09004635215048, \"volume\": 209.21505009519265, \"difficulty\": 5.075, \"effort\": 1061.7663792331027, \"time\": 58.987021068505705, \"bugs\": 0.06973835003173089}, \"functions\": {\"main\": {\"h1\": 7, \"h2\": 20, \"N1\": 15, \"N2\": 29, \"vocabulary\": 27, \"length\": 44, \"calculated_length\": 106.09004635215048, \"volume\": 209.21505009519265, \"difficulty\": 5.075, \"effort\": 1061.7663792331027, \"time\": 58.987021068505705, \"bugs\": 0.06973835003173089}, \"__starting_point\": {\"h1\": 0, \"h2\": 0, \"N1\": 0, \"N2\": 0, \"vocabulary\": 0, \"length\": 0, \"calculated_length\": 0, \"volume\": 0, \"difficulty\": 0, \"effort\": 0, \"time\": 0.0, \"bugs\": 0.0}}}}\n",
+            "stderr": "",
+            "seconds": 0.15036742499978573
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/complexipy.json\nresults/main_study/apps/900/sew/default/fix_format/code.py\n    __starting_point 0  ✅  PASSED  \n    main 12  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06883433700022579,
+            "data": [
+              {
+                "complexity": 0,
+                "file_name": "code.py",
+                "function_name": "__starting_point",
+                "line_complexities": [],
+                "line_end": 24,
+                "line_start": 23,
+                "path": "results/main_study/apps/900/sew/default/fix_format/code.py",
+                "refactor_plans": []
+              },
+              {
+                "complexity": 12,
+                "file_name": "code.py",
+                "function_name": "main",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 16
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 17
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/900/sew/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "SIM201 Use `i != '?'` instead of `not i == '?'`\n  --> results/main_study/apps/900/sew/default/fix_format/code.py:13:10\n   |\n11 |           dp[(j * 10) % 13] = ans[j] % MOD\n12 |       dp+=dp\n13 |       if not i == '?':\n   |          ^^^^^^^^^^^^\n14 |           for j in range(13):\n15 |               ans[j] = dp[j + 13 - int(i)]\n   |\nhelp: Replace with `!=` operator\n   |\n12 |       dp+=dp\n   -       if not i == '?':\n13 +       if i != '?':\n14 |           for j in range(13):\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 1 error.\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.016898335999940173
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03504042999975354
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 24,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/default/fix_format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != \\\"?\\\"\",\n          \"end_location\": {\n            \"column\": 24,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 12,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 12,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != \\\"?\\\"` instead of `not i == \\\"?\\\"`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.022284292000222194
+        },
+        "diagnostics": {
+          "SIM201": 1
+        }
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/check/code.py",
+        "sha256": "5e74d405a56e0346d06113851f4ad9e0bcfe5d7a0fefc1d7fc0aeb94b6bd351f",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.4166666666666667,
+          "changed_lines": 17,
+          "token_similarity": 0.8239202657807309,
+          "delta_tokens": 1,
+          "delta_ast_nodes": 2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 2.5671998574101967e-08,
+            "p_all": 1.2835999287050984e-08,
+            "p_syntax": 0.029751299321760002,
+            "n_grades": 13,
+            "k_grades": 13,
+            "n_syntax": 5,
+            "k_syntax": 5,
+            "n_sites": 24
+          }
+        ],
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"W293\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 3\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"safe\",\n      \"edits\": [\n        {\n          \"content\": \"\",\n          \"end_location\": {\n            \"column\": 2,\n            \"row\": 3\n          },\n          \"location\": {\n            \"column\": 1,\n            \"row\": 3\n          }\n        }\n      ],\n      \"message\": \"Remove whitespace from blank line\"\n    },\n    \"location\": {\n      \"column\": 1,\n      \"row\": 3\n    },\n    \"message\": \"Blank line contains whitespace\",\n    \"name\": \"blank-line-with-whitespace\",\n    \"noqa_row\": 3,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/blank-line-with-whitespace\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/embedded/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != '?'\",\n          \"end_location\": {\n            \"column\": 22,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 10,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 10,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != '?'` instead of `not i == '?'`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03763060199980828
+        },
+        "diagnostics": {
+          "W293": 1,
+          "SIM201": 1
+        }
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix/code.py",
+        "sha256": "0103414c9b81dfbc7c1713a2fe259b2c01af3e7b78ca833ae85f1bbb90e945e6",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.375,
+          "changed_lines": 22,
+          "token_similarity": 0.8239202657807309,
+          "delta_tokens": 1,
+          "delta_ast_nodes": 2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "Watermark detected",
+            "p": 2.5671998574101967e-08,
+            "p_all": 1.2835999287050984e-08,
+            "p_syntax": 0.029751299321760002,
+            "n_grades": 13,
+            "k_grades": 13,
+            "n_syntax": 5,
+            "k_syntax": 5,
+            "n_sites": 24
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "SIM201 Use `i != '?'` instead of `not i == '?'`\n  --> results/main_study/apps/900/sew/strict/fix/code.py:13:10\n   |\n11 |           dp[(j * 10) % 13] = ans[j] % MOD\n12 |       dp+=dp\n13 |       if not i == '?':\n   |          ^^^^^^^^^^^^\n14 |           for j in range(13):\n15 |               ans[j] = dp[j + 13 - int(i)]\n   |\nhelp: Replace with `!=` operator\n   |\n12 |       dp+=dp\n   -       if not i == '?':\n13 +       if i != '?':\n14 |           for j in range(13):\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 2 errors (1 fixed, 1 remaining).\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.02702037100061716
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 22,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != '?'\",\n          \"end_location\": {\n            \"column\": 22,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 10,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 10,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != '?'` instead of `not i == '?'`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.036263852000047336
+        },
+        "diagnostics": {
+          "SIM201": 1
+        }
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/format/code.py",
+        "sha256": "db150ffe10a312ab5ef4b06ea949862ccdaed3a17bf606b0ff309e5226df1247",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.27450980392156865,
+          "changed_lines": 32,
+          "token_similarity": 0.8172757475083057,
+          "delta_tokens": 1,
+          "delta_ast_nodes": 2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.059502598643520005,
+            "p_all": 0.09284997692366026,
+            "p_syntax": 0.029751299321760002,
+            "n_grades": 13,
+            "k_grades": 8,
+            "n_syntax": 5,
+            "k_syntax": 5,
+            "n_sites": 24
+          }
+        ],
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03429106699968543
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 24,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != \\\"?\\\"\",\n          \"end_location\": {\n            \"column\": 24,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 12,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 12,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != \\\"?\\\"` instead of `not i == \\\"?\\\"`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02057874799993442
+        },
+        "diagnostics": {
+          "SIM201": 1
+        }
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py",
+        "sha256": "db150ffe10a312ab5ef4b06ea949862ccdaed3a17bf606b0ff309e5226df1247",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.27450980392156865,
+          "changed_lines": 32,
+          "token_similarity": 0.8172757475083057,
+          "delta_tokens": 1,
+          "delta_ast_nodes": 2,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "sew": [
+          {
+            "verdict": "No watermark evidence",
+            "p": 0.059502598643520005,
+            "p_all": 0.09284997692366026,
+            "p_syntax": 0.029751299321760002,
+            "n_grades": 13,
+            "k_grades": 8,
+            "n_syntax": 5,
+            "k_syntax": 5,
+            "n_sites": 24
+          }
+        ],
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py\": {\"loc\": 27, \"lloc\": 21, \"sloc\": 20, \"comments\": 0, \"multi\": 0, \"blank\": 7, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.14071901599982084
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py\": [{\"type\": \"function\", \"rank\": \"B\", \"lineno\": 1, \"endline\": 20, \"name\": \"main\", \"col_offset\": 0, \"complexity\": 6, \"closures\": []}, {\"type\": \"function\", \"rank\": \"A\", \"lineno\": 23, \"endline\": 24, \"name\": \"__starting_point\", \"col_offset\": 0, \"complexity\": 1, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.15439340499960963
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py\": {\"mi\": 54.101316152514585, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.14460384199992404
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py\": {\"total\": {\"h1\": 7, \"h2\": 20, \"N1\": 15, \"N2\": 29, \"vocabulary\": 27, \"length\": 44, \"calculated_length\": 106.09004635215048, \"volume\": 209.21505009519265, \"difficulty\": 5.075, \"effort\": 1061.7663792331027, \"time\": 58.987021068505705, \"bugs\": 0.06973835003173089}, \"functions\": {\"main\": {\"h1\": 7, \"h2\": 20, \"N1\": 15, \"N2\": 29, \"vocabulary\": 27, \"length\": 44, \"calculated_length\": 106.09004635215048, \"volume\": 209.21505009519265, \"difficulty\": 5.075, \"effort\": 1061.7663792331027, \"time\": 58.987021068505705, \"bugs\": 0.06973835003173089}, \"__starting_point\": {\"h1\": 0, \"h2\": 0, \"N1\": 0, \"N2\": 0, \"vocabulary\": 0, \"length\": 0, \"calculated_length\": 0, \"volume\": 0, \"difficulty\": 0, \"effort\": 0, \"time\": 0.0, \"bugs\": 0.0}}}}\n",
+            "stderr": "",
+            "seconds": 0.1459835949999615
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/complexipy.json\nresults/main_study/apps/900/sew/strict/fix_format/code.py\n    __starting_point 0  ✅  PASSED  \n    main 12  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.1336137799999051,
+            "data": [
+              {
+                "complexity": 0,
+                "file_name": "code.py",
+                "function_name": "__starting_point",
+                "line_complexities": [],
+                "line_end": 24,
+                "line_start": 23,
+                "path": "results/main_study/apps/900/sew/strict/fix_format/code.py",
+                "refactor_plans": []
+              },
+              {
+                "complexity": 12,
+                "file_name": "code.py",
+                "function_name": "main",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 14
+                  },
+                  {
+                    "complexity": 1,
+                    "line": 16
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 17
+                  }
+                ],
+                "line_end": 20,
+                "line_start": 1,
+                "path": "results/main_study/apps/900/sew/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "SIM201 Use `i != '?'` instead of `not i == '?'`\n  --> results/main_study/apps/900/sew/strict/fix_format/code.py:13:10\n   |\n11 |           dp[(j * 10) % 13] = ans[j] % MOD\n12 |       dp+=dp\n13 |       if not i == '?':\n   |          ^^^^^^^^^^^^\n14 |           for j in range(13):\n15 |               ans[j] = dp[j + 13 - int(i)]\n   |\nhelp: Replace with `!=` operator\n   |\n12 |       dp+=dp\n   -       if not i == '?':\n13 +       if i != '?':\n14 |           for j in range(13):\n   |\nnote: This is an unsafe fix and may change runtime behavior\n\nFound 2 errors (1 fixed, 1 remaining).\n1 unsafe fix available with `--fix --unsafe-fixes`.\n",
+            "stderr": "",
+            "seconds": 0.0209428600001047
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02938926699971489
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"SIM201\",\n    \"end_location\": {\n      \"column\": 24,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/sew/strict/fix_format/code.py\",\n    \"fix\": {\n      \"applicability\": \"unsafe\",\n      \"edits\": [\n        {\n          \"content\": \"i != \\\"?\\\"\",\n          \"end_location\": {\n            \"column\": 24,\n            \"row\": 13\n          },\n          \"location\": {\n            \"column\": 12,\n            \"row\": 13\n          }\n        }\n      ],\n      \"message\": \"Replace with `!=` operator\"\n    },\n    \"location\": {\n      \"column\": 12,\n      \"row\": 13\n    },\n    \"message\": \"Use `i != \\\"?\\\"` instead of `not i == \\\"?\\\"`\",\n    \"name\": \"negate-equal-op\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/negate-equal-op\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.032703954999306006
+        },
+        "diagnostics": {
+          "SIM201": 1
+        }
+      }
+    },
+    "acw_notab": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py",
+        "sha256": "9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.4782608695652174,
+          "changed_lines": 15,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": -14,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py\": {\"loc\": 22, \"lloc\": 17, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 6, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.13580301000001782
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py\": [{\"type\": \"function\", \"rank\": \"A\", \"col_offset\": 0, \"endline\": 15, \"lineno\": 1, \"name\": \"main\", \"complexity\": 5, \"closures\": []}, {\"type\": \"function\", \"rank\": \"A\", \"col_offset\": 0, \"endline\": 19, \"lineno\": 18, \"name\": \"__starting_point\", \"complexity\": 1, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.13009189500007778
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py\": {\"mi\": 56.4510101225605, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.21998488799999905
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py\": {\"total\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"functions\": {\"main\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"__starting_point\": {\"h1\": 0, \"h2\": 0, \"N1\": 0, \"N2\": 0, \"vocabulary\": 0, \"length\": 0, \"calculated_length\": 0, \"volume\": 0, \"difficulty\": 0, \"effort\": 0, \"time\": 0.0, \"bugs\": 0.0}}}}\n",
+            "stderr": "",
+            "seconds": 0.1732071870001164
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/complexipy.json\nresults/main_study/apps/900/acw_notab/embedded/code.py\n    __starting_point 0  ✅  PASSED  \n    main 8  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.0589844810001523,
+            "data": [
+              {
+                "complexity": 0,
+                "file_name": "code.py",
+                "function_name": "__starting_point",
+                "line_complexities": [],
+                "line_end": 19,
+                "line_start": 18,
+                "path": "results/main_study/apps/900/acw_notab/embedded/code.py",
+                "refactor_plans": []
+              },
+              {
+                "complexity": 8,
+                "file_name": "code.py",
+                "function_name": "main",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 14
+                  }
+                ],
+                "line_end": 15,
+                "line_start": 1,
+                "path": "results/main_study/apps/900/acw_notab/embedded/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.03862870000011753
+            },
+            "diagnostics": {}
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py"
+              ],
+              "exit": 0,
+              "stdout": "[]",
+              "stderr": "",
+              "seconds": 0.03387692099931883
+            },
+            "diagnostics": {}
+          }
+        },
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d"
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/check/code.py",
+        "sha256": "9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.4782608695652174,
+          "changed_lines": 15,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": -14,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03862870000011753
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d"
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix/code.py",
+        "sha256": "9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.4782608695652174,
+          "changed_lines": 15,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": -14,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.03255820199956361
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.02706597700034763
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d"
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/format/code.py",
+        "sha256": "98d97f80f901a7ee009d6505e5330428b35e68e27889277b4405c56bcd14cb73",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30434782608695654,
+          "changed_lines": 27,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": -14,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.02524992599956022
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.019464822000372806
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/98d97f80f901a7ee009d6505e5330428b35e68e27889277b4405c56bcd14cb73"
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py",
+        "sha256": "98d97f80f901a7ee009d6505e5330428b35e68e27889277b4405c56bcd14cb73",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30434782608695654,
+          "changed_lines": 27,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": -14,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py\": {\"loc\": 22, \"lloc\": 17, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 6, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.17788665999978548
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py\": [{\"type\": \"function\", \"rank\": \"A\", \"endline\": 15, \"name\": \"main\", \"lineno\": 1, \"complexity\": 5, \"col_offset\": 0, \"closures\": []}, {\"type\": \"function\", \"rank\": \"A\", \"endline\": 19, \"name\": \"__starting_point\", \"lineno\": 18, \"complexity\": 1, \"col_offset\": 0, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.14451893299974472
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py\": {\"mi\": 56.4510101225605, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.1701618340002824
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py\": {\"total\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"functions\": {\"main\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"__starting_point\": {\"h1\": 0, \"h2\": 0, \"N1\": 0, \"N2\": 0, \"vocabulary\": 0, \"length\": 0, \"calculated_length\": 0, \"volume\": 0, \"difficulty\": 0, \"effort\": 0, \"time\": 0.0, \"bugs\": 0.0}}}}\n",
+            "stderr": "",
+            "seconds": 0.18154885900003137
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/complexipy.json\nresults/main_study/apps/900/acw_notab/default/fix_format/code.py\n    __starting_point 0  ✅  PASSED  \n    main 8  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.05547609099994588,
+            "data": [
+              {
+                "complexity": 0,
+                "file_name": "code.py",
+                "function_name": "__starting_point",
+                "line_complexities": [],
+                "line_end": 19,
+                "line_start": 18,
+                "path": "results/main_study/apps/900/acw_notab/default/fix_format/code.py",
+                "refactor_plans": []
+              },
+              {
+                "complexity": 8,
+                "file_name": "code.py",
+                "function_name": "main",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 14
+                  }
+                ],
+                "line_end": 15,
+                "line_start": 1,
+                "path": "results/main_study/apps/900/acw_notab/default/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.041674232999866945
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.027633199000774766
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/default/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.030854552000164404
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/98d97f80f901a7ee009d6505e5330428b35e68e27889277b4405c56bcd14cb73"
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/check/code.py",
+        "sha256": "9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.4782608695652174,
+          "changed_lines": 15,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": -14,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/embedded/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03387692099931883
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d"
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix/code.py",
+        "sha256": "9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.4782608695652174,
+          "changed_lines": 15,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": -14,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.028425723000509606
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03549769700020988
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/9e2a07f0eb26dee80b8da04bb24c45e2d568a3c9ea7b8db38e9c1a905b291e3d"
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/format/code.py",
+        "sha256": "98d97f80f901a7ee009d6505e5330428b35e68e27889277b4405c56bcd14cb73",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30434782608695654,
+          "changed_lines": 27,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": -14,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.027199467000173172
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.04939663599998312
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/98d97f80f901a7ee009d6505e5330428b35e68e27889277b4405c56bcd14cb73"
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py",
+        "sha256": "98d97f80f901a7ee009d6505e5330428b35e68e27889277b4405c56bcd14cb73",
+        "changed": true,
+        "syntax_error": null,
+        "invasion": {
+          "line_similarity": 0.30434782608695654,
+          "changed_lines": 27,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": -14,
+          "ast_equal": false
+        },
+        "tab_lines": 0,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py\": {\"loc\": 22, \"lloc\": 17, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 6, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.13156054499995662
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py\": [{\"type\": \"function\", \"rank\": \"A\", \"name\": \"main\", \"lineno\": 1, \"endline\": 15, \"complexity\": 5, \"col_offset\": 0, \"closures\": []}, {\"type\": \"function\", \"rank\": \"A\", \"name\": \"__starting_point\", \"lineno\": 18, \"endline\": 19, \"complexity\": 1, \"col_offset\": 0, \"closures\": []}]}\n",
+            "stderr": "",
+            "seconds": 0.18441621900001337
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py\": {\"mi\": 56.4510101225605, \"rank\": \"A\"}}\n",
+            "stderr": "",
+            "seconds": 0.17849347599985776
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py\": {\"total\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"functions\": {\"main\": {\"h1\": 6, \"h2\": 19, \"N1\": 14, \"N2\": 28, \"vocabulary\": 25, \"length\": 42, \"calculated_length\": 96.22039775975506, \"volume\": 195.04195997053841, \"difficulty\": 4.421052631578948, \"effort\": 862.2907703960647, \"time\": 47.90504279978137, \"bugs\": 0.06501398665684614}, \"__starting_point\": {\"h1\": 0, \"h2\": 0, \"N1\": 0, \"N2\": 0, \"vocabulary\": 0, \"length\": 0, \"calculated_length\": 0, \"volume\": 0, \"difficulty\": 0, \"effort\": 0, \"time\": 0.0, \"bugs\": 0.0}}}}\n",
+            "stderr": "",
+            "seconds": 0.15114178499970876
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/complexipy.json\nresults/main_study/apps/900/acw_notab/strict/fix_format/code.py\n    __starting_point 0  ✅  PASSED  \n    main 8  ✅  PASSED  \n\nAll functions are within the allowed complexity.\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.07620076200055337,
+            "data": [
+              {
+                "complexity": 0,
+                "file_name": "code.py",
+                "function_name": "__starting_point",
+                "line_complexities": [],
+                "line_end": 19,
+                "line_start": 18,
+                "path": "results/main_study/apps/900/acw_notab/strict/fix_format/code.py",
+                "refactor_plans": []
+              },
+              {
+                "complexity": 8,
+                "file_name": "code.py",
+                "function_name": "main",
+                "line_complexities": [
+                  {
+                    "complexity": 1,
+                    "line": 8
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 10
+                  },
+                  {
+                    "complexity": 2,
+                    "line": 13
+                  },
+                  {
+                    "complexity": 3,
+                    "line": 14
+                  }
+                ],
+                "line_end": 15,
+                "line_start": 1,
+                "path": "results/main_study/apps/900/acw_notab/strict/fix_format/code.py",
+                "refactor_plans": []
+              }
+            ]
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "All checks passed!\n",
+            "stderr": "",
+            "seconds": 0.02496909000001324
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "1 file reformatted\n",
+            "stderr": "",
+            "seconds": 0.03221654199933255
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_notab/strict/fix_format/code.py"
+          ],
+          "exit": 0,
+          "stdout": "[]",
+          "stderr": "",
+          "seconds": 0.03968719200020132
+        },
+        "diagnostics": {},
+        "acw": {
+          "acw_notab": true
+        },
+        "acw_replay": "/home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/98d97f80f901a7ee009d6505e5330428b35e68e27889277b4405c56bcd14cb73"
+      }
+    },
+    "acw_full": {
+      "embedded": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py",
+        "sha256": "6fe3c1087b13dd4eaefe52aec6d380dee0fba023466fe61c5aceb3a1935f377b",
+        "changed": true,
+        "syntax_error": "expected an indented block after function definition on line 1 (<unknown>, line 2)",
+        "invasion": {
+          "line_similarity": 0.2608695652173913,
+          "changed_lines": 28,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": null,
+          "ast_equal": null
+        },
+        "tab_lines": 7,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\": {\"loc\": 22, \"lloc\": 17, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 6, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.16790826399937941
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\": {\"error\": \"expected an indented block after function definition on line 1 (<unknown>, line 2)\"}}\n",
+            "stderr": "",
+            "seconds": 0.19504824900013773
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\": {\"error\": \"expected an indented block after function definition on line 1 (<unknown>, line 2)\"}}\n",
+            "stderr": "",
+            "seconds": 0.1560244189995501
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\": {\"error\": \"expected an indented block after function definition on line 1 (<unknown>, line 2)\"}}\n",
+            "stderr": "",
+            "seconds": 0.15569458100071643
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py"
+            ],
+            "exit": 1,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/complexipy.json\nNo files were found with functions. No complexity was calculated.\nerror: Failed to process /home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py - Please check file/folder exists or check syntax\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.08130910799991398,
+            "data": []
+          }
+        },
+        "ruff_baseline": {
+          "default": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  }\n]",
+              "stderr": "",
+              "seconds": 0.03276395699958812
+            },
+            "diagnostics": {
+              "invalid-syntax": 2
+            }
+          },
+          "strict": {
+            "diagnostic_command": {
+              "argv": [
+                "ruff",
+                "check",
+                "--isolated",
+                "--no-cache",
+                "--select",
+                "E,F,W,I,B,UP,SIM",
+                "--output-format",
+                "json",
+                "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py"
+              ],
+              "exit": 1,
+              "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 11\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 11\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 19\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 19\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 19,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+              "stderr": "",
+              "seconds": 0.02383420499972999
+            },
+            "diagnostics": {
+              "invalid-syntax": 2,
+              "W191": 7
+            }
+          }
+        },
+        "acw": {
+          "reason": "invalid_syntax"
+        }
+      },
+      "default/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/check/code.py",
+        "sha256": "6fe3c1087b13dd4eaefe52aec6d380dee0fba023466fe61c5aceb3a1935f377b",
+        "changed": true,
+        "syntax_error": "expected an indented block after function definition on line 1 (<unknown>, line 2)",
+        "invasion": {
+          "line_similarity": 0.2608695652173913,
+          "changed_lines": 28,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": null,
+          "ast_equal": null
+        },
+        "tab_lines": 7,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  }\n]",
+          "stderr": "",
+          "seconds": 0.03276395699958812
+        },
+        "diagnostics": {
+          "invalid-syntax": 2
+        },
+        "acw": {
+          "reason": "invalid_syntax"
+        }
+      },
+      "default/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix/code.py",
+        "sha256": "6fe3c1087b13dd4eaefe52aec6d380dee0fba023466fe61c5aceb3a1935f377b",
+        "changed": true,
+        "syntax_error": "expected an indented block after function definition on line 1 (<unknown>, line 2)",
+        "invasion": {
+          "line_similarity": 0.2608695652173913,
+          "changed_lines": 28,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": null,
+          "ast_equal": null
+        },
+        "tab_lines": 7,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "invalid-syntax: Expected an indented block after function definition\n --> results/main_study/apps/900/acw_full/default/fix/code.py:2:1\n  |\n1 | def main():\n2 | S = str(input())\n  | ^\n3 |\n4 | ans = [0] * 13\n  |\n\ninvalid-syntax: Expected an indented block after `for` statement\n  --> results/main_study/apps/900/acw_full/default/fix/code.py:14:2\n   |\n12 |     dp += dp\n13 |     for j in range(13):\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n   |     ^^^\n15 | print(ans[5] % MOD)\n   |\n\nFound 2 errors.\n",
+            "stderr": "",
+            "seconds": 0.01941899600024044
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  }\n]",
+          "stderr": "",
+          "seconds": 0.026377056000455923
+        },
+        "diagnostics": {
+          "invalid-syntax": 2
+        },
+        "acw": {
+          "reason": "invalid_syntax"
+        }
+      },
+      "default/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/format/code.py",
+        "sha256": "6fe3c1087b13dd4eaefe52aec6d380dee0fba023466fe61c5aceb3a1935f377b",
+        "changed": true,
+        "syntax_error": "expected an indented block after function definition on line 1 (<unknown>, line 2)",
+        "invasion": {
+          "line_similarity": 0.2608695652173913,
+          "changed_lines": 28,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": null,
+          "ast_equal": null
+        },
+        "tab_lines": 7,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/format/code.py"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "error: Failed to parse results/main_study/apps/900/acw_full/default/format/code.py:2:1: Expected an indented block after function definition\n",
+            "seconds": 0.021964743000353337
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  }\n]",
+          "stderr": "",
+          "seconds": 0.023603974000252492
+        },
+        "diagnostics": {
+          "invalid-syntax": 2
+        },
+        "acw": {
+          "reason": "invalid_syntax"
+        }
+      },
+      "default/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py",
+        "sha256": "6fe3c1087b13dd4eaefe52aec6d380dee0fba023466fe61c5aceb3a1935f377b",
+        "changed": true,
+        "syntax_error": "expected an indented block after function definition on line 1 (<unknown>, line 2)",
+        "invasion": {
+          "line_similarity": 0.2608695652173913,
+          "changed_lines": 28,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": null,
+          "ast_equal": null
+        },
+        "tab_lines": 7,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py\": {\"loc\": 22, \"lloc\": 17, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 6, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.14393493800071155
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py\": {\"error\": \"expected an indented block after function definition on line 1 (<unknown>, line 2)\"}}\n",
+            "stderr": "",
+            "seconds": 0.149167368000235
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py\": {\"error\": \"expected an indented block after function definition on line 1 (<unknown>, line 2)\"}}\n",
+            "stderr": "",
+            "seconds": 0.17876732900003844
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py\": {\"error\": \"expected an indented block after function definition on line 1 (<unknown>, line 2)\"}}\n",
+            "stderr": "",
+            "seconds": 0.19373590199938917
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/complexipy.json\nNo files were found with functions. No complexity was calculated.\nerror: Failed to process /home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py - Please check file/folder exists or check syntax\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.09185680200062052,
+            "data": []
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "invalid-syntax: Expected an indented block after function definition\n --> results/main_study/apps/900/acw_full/default/fix_format/code.py:2:1\n  |\n1 | def main():\n2 | S = str(input())\n  | ^\n3 |\n4 | ans = [0] * 13\n  |\n\ninvalid-syntax: Expected an indented block after `for` statement\n  --> results/main_study/apps/900/acw_full/default/fix_format/code.py:14:2\n   |\n12 |     dp += dp\n13 |     for j in range(13):\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n   |     ^^^\n15 | print(ans[5] % MOD)\n   |\n\nFound 2 errors.\n",
+            "stderr": "",
+            "seconds": 0.039219596999828354
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "error: Failed to parse results/main_study/apps/900/acw_full/default/fix_format/code.py:2:1: Expected an indented block after function definition\n",
+            "seconds": 0.021429010000247217
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/default/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  }\n]",
+          "stderr": "",
+          "seconds": 0.05044222400010767
+        },
+        "diagnostics": {
+          "invalid-syntax": 2
+        },
+        "acw": {
+          "reason": "invalid_syntax"
+        }
+      },
+      "strict/check": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/check/code.py",
+        "sha256": "6fe3c1087b13dd4eaefe52aec6d380dee0fba023466fe61c5aceb3a1935f377b",
+        "changed": true,
+        "syntax_error": "expected an indented block after function definition on line 1 (<unknown>, line 2)",
+        "invasion": {
+          "line_similarity": 0.2608695652173913,
+          "changed_lines": 28,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": null,
+          "ast_equal": null
+        },
+        "tab_lines": 7,
+        "operations": [],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 11\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 11\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 19\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/embedded/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 19\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 19,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.02383420499972999
+        },
+        "diagnostics": {
+          "invalid-syntax": 2,
+          "W191": 7
+        },
+        "acw": {
+          "reason": "invalid_syntax"
+        }
+      },
+      "strict/fix": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py",
+        "sha256": "6fe3c1087b13dd4eaefe52aec6d380dee0fba023466fe61c5aceb3a1935f377b",
+        "changed": true,
+        "syntax_error": "expected an indented block after function definition on line 1 (<unknown>, line 2)",
+        "invasion": {
+          "line_similarity": 0.2608695652173913,
+          "changed_lines": 28,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": null,
+          "ast_equal": null
+        },
+        "tab_lines": 7,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py"
+            ],
+            "exit": 1,
+            "stdout": "invalid-syntax: Expected an indented block after function definition\n --> results/main_study/apps/900/acw_full/strict/fix/code.py:2:1\n  |\n1 | def main():\n2 | S = str(input())\n  | ^\n3 |\n4 | ans = [0] * 13\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix/code.py:9:1\n   |\n 8 | for i in S:\n 9 |     dp = [0] * 13\n   | ^^^^\n10 |     for j in range(13):\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix/code.py:10:1\n   |\n 8 | for i in S:\n 9 |     dp = [0] * 13\n10 |     for j in range(13):\n   | ^^^^\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n12 |     dp += dp\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix/code.py:11:1\n   |\n 9 |     dp = [0] * 13\n10 |     for j in range(13):\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n   | ^^^^^^^^\n12 |     dp += dp\n13 |     for j in range(13):\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix/code.py:12:1\n   |\n10 |     for j in range(13):\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n12 |     dp += dp\n   | ^^^^\n13 |     for j in range(13):\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix/code.py:13:1\n   |\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n12 |     dp += dp\n13 |     for j in range(13):\n   | ^^^^\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n15 | print(ans[5] % MOD)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix/code.py:14:1\n   |\n12 |     dp += dp\n13 |     for j in range(13):\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n   | ^^^^\n15 | print(ans[5] % MOD)\n   |\n\ninvalid-syntax: Expected an indented block after `for` statement\n  --> results/main_study/apps/900/acw_full/strict/fix/code.py:14:2\n   |\n12 |     dp += dp\n13 |     for j in range(13):\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n   |     ^^^\n15 | print(ans[5] % MOD)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix/code.py:19:1\n   |\n18 | def __starting_point():\n19 |     main()\n   | ^^^^\n\nFound 9 errors.\n",
+            "stderr": "",
+            "seconds": 0.023400602999572584
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 11\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 11\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 19\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 19\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 19,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.05816395400051988
+        },
+        "diagnostics": {
+          "invalid-syntax": 2,
+          "W191": 7
+        },
+        "acw": {
+          "reason": "invalid_syntax"
+        }
+      },
+      "strict/format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py",
+        "sha256": "6fe3c1087b13dd4eaefe52aec6d380dee0fba023466fe61c5aceb3a1935f377b",
+        "changed": true,
+        "syntax_error": "expected an indented block after function definition on line 1 (<unknown>, line 2)",
+        "invasion": {
+          "line_similarity": 0.2608695652173913,
+          "changed_lines": 28,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": null,
+          "ast_equal": null
+        },
+        "tab_lines": 7,
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "error: Failed to parse results/main_study/apps/900/acw_full/strict/format/code.py:2:1: Expected an indented block after function definition\n",
+            "seconds": 0.02665900400006649
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 11\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 11\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 19\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 19\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 19,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.018766423999295512
+        },
+        "diagnostics": {
+          "invalid-syntax": 2,
+          "W191": 7
+        },
+        "acw": {
+          "reason": "invalid_syntax"
+        }
+      },
+      "strict/fix_format": {
+        "path": "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py",
+        "sha256": "6fe3c1087b13dd4eaefe52aec6d380dee0fba023466fe61c5aceb3a1935f377b",
+        "changed": true,
+        "syntax_error": "expected an indented block after function definition on line 1 (<unknown>, line 2)",
+        "invasion": {
+          "line_similarity": 0.2608695652173913,
+          "changed_lines": 28,
+          "token_similarity": 0.8491228070175438,
+          "delta_tokens": -15,
+          "delta_ast_nodes": null,
+          "ast_equal": null
+        },
+        "tab_lines": 7,
+        "metrics": {
+          "raw": {
+            "argv": [
+              "radon",
+              "raw",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\": {\"loc\": 22, \"lloc\": 17, \"sloc\": 16, \"comments\": 0, \"multi\": 0, \"blank\": 6, \"single_comments\": 0}}\n",
+            "stderr": "",
+            "seconds": 0.1604121460004535
+          },
+          "cc": {
+            "argv": [
+              "radon",
+              "cc",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\": {\"error\": \"expected an indented block after function definition on line 1 (<unknown>, line 2)\"}}\n",
+            "stderr": "",
+            "seconds": 0.1518415049995383
+          },
+          "mi": {
+            "argv": [
+              "radon",
+              "mi",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\": {\"error\": \"expected an indented block after function definition on line 1 (<unknown>, line 2)\"}}\n",
+            "stderr": "",
+            "seconds": 0.140870520000135
+          },
+          "hal": {
+            "argv": [
+              "radon",
+              "hal",
+              "-j",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 0,
+            "stdout": "{\"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\": {\"error\": \"expected an indented block after function definition on line 1 (<unknown>, line 2)\"}}\n",
+            "stderr": "",
+            "seconds": 0.1385558449992459
+          },
+          "complexipy": {
+            "argv": [
+              "complexipy",
+              "--isolated",
+              "--no-ignore",
+              "--output-format",
+              "json",
+              "--output",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/complexipy.json",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "──────────────────────────────── 🐙 complexipy ─────────────────────────────────\nResults saved at /home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/complexipy.json\nNo files were found with functions. No complexity was calculated.\nerror: Failed to process /home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py - Please check file/folder exists or check syntax\n────────────────────────── 🎉 Analysis completed! 🎉 ───────────────────────────\n",
+            "stderr": "",
+            "seconds": 0.06800343099985184,
+            "data": []
+          }
+        },
+        "operations": [
+          {
+            "argv": [
+              "ruff",
+              "check",
+              "--isolated",
+              "--no-cache",
+              "--select",
+              "E,F,W,I,B,UP,SIM",
+              "--fix",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 1,
+            "stdout": "invalid-syntax: Expected an indented block after function definition\n --> results/main_study/apps/900/acw_full/strict/fix_format/code.py:2:1\n  |\n1 | def main():\n2 | S = str(input())\n  | ^\n3 |\n4 | ans = [0] * 13\n  |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix_format/code.py:9:1\n   |\n 8 | for i in S:\n 9 |     dp = [0] * 13\n   | ^^^^\n10 |     for j in range(13):\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix_format/code.py:10:1\n   |\n 8 | for i in S:\n 9 |     dp = [0] * 13\n10 |     for j in range(13):\n   | ^^^^\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n12 |     dp += dp\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix_format/code.py:11:1\n   |\n 9 |     dp = [0] * 13\n10 |     for j in range(13):\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n   | ^^^^^^^^\n12 |     dp += dp\n13 |     for j in range(13):\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix_format/code.py:12:1\n   |\n10 |     for j in range(13):\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n12 |     dp += dp\n   | ^^^^\n13 |     for j in range(13):\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix_format/code.py:13:1\n   |\n11 |         dp[(10 * j) % 13] = ans[j] % MOD\n12 |     dp += dp\n13 |     for j in range(13):\n   | ^^^^\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n15 | print(ans[5] % MOD)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix_format/code.py:14:1\n   |\n12 |     dp += dp\n13 |     for j in range(13):\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n   | ^^^^\n15 | print(ans[5] % MOD)\n   |\n\ninvalid-syntax: Expected an indented block after `for` statement\n  --> results/main_study/apps/900/acw_full/strict/fix_format/code.py:14:2\n   |\n12 |     dp += dp\n13 |     for j in range(13):\n14 |     ans[j] = sum(dp[4 + j:14 + j]) if i == '?' else dp[13 + j - int(i)]\n   |     ^^^\n15 | print(ans[5] % MOD)\n   |\n\nW191 Indentation contains tabs\n  --> results/main_study/apps/900/acw_full/strict/fix_format/code.py:19:1\n   |\n18 | def __starting_point():\n19 |     main()\n   | ^^^^\n\nFound 9 errors.\n",
+            "stderr": "",
+            "seconds": 0.050868963000539225
+          },
+          {
+            "argv": [
+              "ruff",
+              "format",
+              "--isolated",
+              "--no-cache",
+              "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py"
+            ],
+            "exit": 2,
+            "stdout": "",
+            "stderr": "error: Failed to parse results/main_study/apps/900/acw_full/strict/fix_format/code.py:2:1: Expected an indented block after function definition\n",
+            "seconds": 0.023761018000186596
+          }
+        ],
+        "diagnostic_command": {
+          "argv": [
+            "ruff",
+            "check",
+            "--isolated",
+            "--no-cache",
+            "--select",
+            "E,F,W,I,B,UP,SIM",
+            "--output-format",
+            "json",
+            "/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py"
+          ],
+          "exit": 1,
+          "stdout": "[\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 2\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 2\n    },\n    \"message\": \"Expected an indented block after function definition\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 9\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 9\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 9,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 10\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 10\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 10,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 3,\n      \"row\": 11\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 11\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 11,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 12\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 12\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 12,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 13\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 13\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 13,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 14\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 14,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  },\n  {\n    \"cell\": null,\n    \"code\": \"invalid-syntax\",\n    \"end_location\": {\n      \"column\": 5,\n      \"row\": 14\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 2,\n      \"row\": 14\n    },\n    \"message\": \"Expected an indented block after `for` statement\",\n    \"name\": \"invalid-syntax\",\n    \"noqa_row\": null,\n    \"severity\": \"error\",\n    \"url\": null\n  },\n  {\n    \"cell\": null,\n    \"code\": \"W191\",\n    \"end_location\": {\n      \"column\": 2,\n      \"row\": 19\n    },\n    \"filename\": \"/home/dh/Desktop/watermark/results/main_study/apps/900/acw_full/strict/fix_format/code.py\",\n    \"fix\": null,\n    \"location\": {\n      \"column\": 1,\n      \"row\": 19\n    },\n    \"message\": \"Indentation contains tabs\",\n    \"name\": \"tab-indentation\",\n    \"noqa_row\": 19,\n    \"severity\": \"error\",\n    \"url\": \"https://docs.astral.sh/ruff/rules/tab-indentation\"\n  }\n]",
+          "stderr": "",
+          "seconds": 0.020778741999492922
+        },
+        "diagnostics": {
+          "invalid-syntax": 2,
+          "W191": 7
+        },
+        "acw": {
+          "reason": "invalid_syntax"
+        }
+      }
+    }
+  }
+}

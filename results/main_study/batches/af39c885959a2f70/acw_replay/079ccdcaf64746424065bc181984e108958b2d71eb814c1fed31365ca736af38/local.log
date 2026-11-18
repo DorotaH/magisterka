@@ -1,0 +1,49 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/079ccdcaf64746424065bc181984e108958b2d71eb814c1fed31365ca736af38/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,5 +1,5 @@
+ def f(n):
+-	left, right = -1, n + 1
++	left, right = -1, 1 + n
+ 	while right - left > 1:
+ 		mid = (left + right) // 2
+ 		x = 6 * mid * (mid + 1) // 2 + 5 * (mid + 1)
+@@ -11,7 +11,7 @@
+ 		mid = left
+ 		x = 6 * mid * (mid + 1) // 2 + 5 * (mid + 1)
+ 		n -= x
+-	return (n, left + 1)
++	return (n, 1 + left)
+ 
+ def main():
+ 	n = int(input())
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/079ccdcaf64746424065bc181984e108958b2d71eb814c1fed31365ca736af38/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,8 +25,8 @@
+ 	dy = [2,  2,  0, -2, -2, 0]
+ 	
+ 	for i in range(6):
+-		x += min(d[i], n) * dx[i]
+-		y += min(d[i], n) * dy[i]
++		x += dx[i] * min(d[i], n)
++		y += dy[i] * min(d[i], n)
+ 		n = max(0, n - d[i])
+ 	
+ 	print(x, y)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/079ccdcaf64746424065bc181984e108958b2d71eb814c1fed31365ca736af38/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+ 			right = mid
+ 		else:
+ 			left = mid
+-	if left >= 0:
++	if 0 <= left:
+ 		mid = left
+ 		x = 6 * mid * (mid + 1) // 2 + 5 * (mid + 1)
+ 		n -= x
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/079ccdcaf64746424065bc181984e108958b2d71eb814c1fed31365ca736af38/with_tabs.py

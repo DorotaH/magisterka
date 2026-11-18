@@ -1,0 +1,36 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1984/original/embedded/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+     return list(map(int, input().split()))
+ def diff(x,y):
+     return sum(bool(s[x][i]!= s[y][i])
+-           for i in range(n*m))
++           for i in range(m*n))
+ def find(i):
+     if i==p[i]:
+         return i
+@@ -35,7 +35,7 @@
+ 
+ for i in range(k):
+     for j in range(i+1,k):
+-        z = n*m if i==0 else diff(i-1,j-1)*w
++        z = m*n if i==0 else diff(i-1,j-1)*w
+         edge.append((z,i,j))
+ 
+ edge.sort()
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1984/original/embedded/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+     p[i] = find(p[i])
+     return p[i]
+ def union(i,j):
+-    if rank[i]>rank[j]:
++    if rank[j] < rank[i]:
+         i,j = j,i
+     elif rank[i]==rank[j]:
+         rank[j]+=1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1984/original/embedded/acw_replay/with_tabs.py

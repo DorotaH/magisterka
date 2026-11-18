@@ -1,0 +1,54 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/strong-password-checker/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+         hasUpperCase = any(character in uppercase for character in pickedPassword)
+         hasDigit = any(character in digits for character in pickedPassword)
+ 
+-        typeSteps = (not hasLowerCase) + (not hasUpperCase) + (not hasDigit)
++        typeSteps = (not hasUpperCase) + (not hasLowerCase) + (not hasDigit)
+ 
+         minLength = 6
+         maxLength = 20
+@@ -39,6 +39,6 @@
+                 amountToDelete, lengthOfSet = heappop(deleteArray)
+                 if lengthOfSet > 3: heappush(deleteArray, ((lengthOfSet-1)%3, lengthOfSet -1))
+             deleteArray = [lengthOfSet for _, lengthOfSet in deleteArray]
+-            return deleteSteps + max(sum(length//3 for length in deleteArray), typeSteps)
++            return max(sum(length//3 for length in deleteArray), typeSteps) + deleteSteps
+         else:
+             return max([sum(length//3 for length in deleteArray), addSteps, typeSteps])
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/strong-password-checker/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,16 +17,16 @@
+         minLength = 6
+         maxLength = 20
+         passwordLength = len(pickedPassword)
+-        if(passwordLength < minLength):
++        if(minLength > passwordLength):
+             addSteps += minLength - passwordLength
+-        elif(passwordLength > maxLength):
++        elif(maxLength < passwordLength):
+             deleteSteps += passwordLength - maxLength
+ 
+         currentChar = ""
+         currentCount = 0
+         replacestepsForThree = 0
+         deleteArray = [len(list(lengthOfSet)) for _,lengthOfSet in groupby(pickedPassword)]
+-        deleteArray = [lengthOfSet for lengthOfSet in deleteArray if lengthOfSet > 2]
++        deleteArray = [lengthOfSet for lengthOfSet in deleteArray if 2 < lengthOfSet]
+ 
+ 
+         if (deleteSteps > 0):
+@@ -37,7 +37,7 @@
+             for _ in range(deleteSteps):
+                 if not deleteArray: break
+                 amountToDelete, lengthOfSet = heappop(deleteArray)
+-                if lengthOfSet > 3: heappush(deleteArray, ((lengthOfSet-1)%3, lengthOfSet -1))
++                if 3 < lengthOfSet: heappush(deleteArray, ((lengthOfSet-1)%3, lengthOfSet -1))
+             deleteArray = [lengthOfSet for _, lengthOfSet in deleteArray]
+             return max(sum(length//3 for length in deleteArray), typeSteps) + deleteSteps
+         else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/strong-password-checker/acw_steps/with_tabs.py

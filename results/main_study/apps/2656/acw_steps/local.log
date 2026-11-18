@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2656/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+         n %= mod
+     return res
+ 
+-MOD = 10**9+7
++MOD = 7+10**9
+ 
+ K = int(input())
+ N = len(input())
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2656/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         t *= n-i
+         t %= mod
+ 
+-    n = reduce(lambda x,y: (x*y)%mod, range(1,max_k+1), 1)
++    n = reduce(lambda x,y: (y*x)%mod, range(1,max_k+1), 1)
+     n = pow(n,-1, mod)
+ 
+     for i in reversed(range(max_k+1)):
+@@ -32,7 +32,7 @@
+ com = comb(N+K, K, MOD)
+ 
+ for c in com:
+-    res += x*c
++    res += c*x
+     res %= MOD
+     x *= 25
+     x %= MOD
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2656/acw_steps/with_tabs.py

@@ -1,0 +1,22 @@
+{
+  "generator_code": "import random\n\ndef generate_test_case():\n    nums_length = random.randint(0, 10)\n    \n    nums = []\n    exlusive = []\n    \n    a = random.randint(-100000, 100000)\n    target = random.randint(-100000, 100000)\n    b = target - a\n    nums = [a,b]\n    exlusive = [a,b]\n\n    for _ in range(nums_length):\n        c = random.randint(-100000, 100000)\n        if c not in exlusive:\n            nums += [c]\n            exlusive += [c]\n            exlusive += [target-c]\n        \n    return nums, target",
+  "seed": 17915179333255093002,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          2,
+          7,
+          11,
+          15
+        ],
+        9
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    }
+  ]
+}

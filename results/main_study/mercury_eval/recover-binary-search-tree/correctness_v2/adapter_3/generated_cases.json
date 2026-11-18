@@ -1,0 +1,190 @@
+{
+  "cases": [
+    {
+      "input": [
+        [
+          574
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          548,
+          193,
+          892,
+          94,
+          504,
+          755,
+          981,
+          19,
+          188,
+          289,
+          null,
+          736,
+          780,
+          954
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          481,
+          242,
+          763,
+          180,
+          203,
+          757,
+          855,
+          106
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          340,
+          334,
+          988,
+          261,
+          null,
+          567
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          509,
+          528,
+          555,
+          126,
+          null,
+          466
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          548,
+          247,
+          841,
+          183,
+          499,
+          637,
+          882,
+          177,
+          224,
+          452,
+          528,
+          603,
+          575,
+          875,
+          975,
+          64,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          667
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          563,
+          418,
+          486,
+          251,
+          512,
+          637,
+          996,
+          37,
+          284,
+          730,
+          null,
+          600,
+          704,
+          830
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          445,
+          353,
+          973,
+          204,
+          422,
+          516,
+          983,
+          99,
+          328,
+          378,
+          425,
+          505,
+          755,
+          823
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          658,
+          332,
+          850,
+          150,
+          468,
+          718,
+          980,
+          85,
+          184,
+          366,
+          null,
+          700,
+          809,
+          826
+        ]
+      ]
+    },
+    {
+      "input": [
+        [
+          674,
+          157,
+          732,
+          27,
+          527,
+          749,
+          895,
+          6,
+          null,
+          190,
+          null,
+          874
+        ]
+      ]
+    }
+  ],
+  "published_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "seed": 3155267572221017344,
+  "convert_offline": "def convert_offline(case):\n    import lctk\n    inputs, expected = case\n    inputs = tuple([lctk.binaryTree(inputs[0])])\n    return inputs, expected",
+  "evaluate_offline": "def evaluate_offline(inputs, outputs, expected):\n    import lctk\n    if lctk.binaryTree2Arr(inputs[0]) == expected:\n        return True\n    \n    return False",
+  "entry_point": "recoverTree"
+}

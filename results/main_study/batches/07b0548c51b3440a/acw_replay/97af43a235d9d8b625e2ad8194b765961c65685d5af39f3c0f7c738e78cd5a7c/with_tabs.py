@@ -1,0 +1,18 @@
+data = input().split(" ")
+n = int(data[0])
+m = int(data[1])
+debts = []
+total = 0
+for _ in range(n):
+	debts.append(0)
+for _ in range(m):
+	data = input().split(" ")
+	data = [int(x) for x in data]
+	debts[data[0] - 1] -= data[2]
+	debts[data[1] - 1] += data[2]
+
+for i in range(len(debts)):
+	if 0 > debts[i]:
+		total += -1 * debts[i]
+
+print(total)

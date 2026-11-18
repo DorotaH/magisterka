@@ -1,0 +1,25 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,5 +12,5 @@
+             res = str(digit % 10) + res
+             carry = digit > 9
+         if carry:
+-            res = "1" + res
++            res = res + "1"
+         return res
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+         if len(num1) < len(num2):
+             num1 = "0" * (len(num2) - len(num1)) + num1
+         elif len(num1) > len(num2):
+-            num2 = "0" * (len(num1) - len(num2)) + num2
++            num2 = (len(num1) - len(num2)) * "0" + num2
+ 
+         res = ""
+         carry = False
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/7f0bb38ecd8f4d9d7df4016184ba1a976bf42476b3297fd47c0842bd007782a2/with_tabs.py

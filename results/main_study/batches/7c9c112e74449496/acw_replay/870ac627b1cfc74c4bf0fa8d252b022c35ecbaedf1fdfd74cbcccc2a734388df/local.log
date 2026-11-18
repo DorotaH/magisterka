@@ -1,0 +1,32 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/870ac627b1cfc74c4bf0fa8d252b022c35ecbaedf1fdfd74cbcccc2a734388df/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+             outgoing_cnt[k] = len(edge_map[k])
+         cntr = 0
+         s = [i for i in range(self.n) if outgoing_cnt[i] == 0]
+-        while len(s) > cntr:
++        while cntr < len(s):
+             if len(s) > cntr+1:
+                 return False
+             node = s[cntr]
+@@ -37,7 +37,7 @@
+             print(-1)
+         else:
+             mn, mx = 0, self.m
+-            while mn < mx-1:
++            while mx-1 > mn:
+                 md = int((mn+mx)/2)
+                 if self.check_order(md):
+                     mx = md
+@@ -54,7 +54,7 @@
+         cntr = 0
+         order = []
+         s = [i for i in range(self.n) if outgoing_cnt[i] == 0]
+-        while len(s) > cntr:
++        while cntr < len(s):
+             if len(s) > cntr+1 :
+                 print(-1)
+                 return
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/870ac627b1cfc74c4bf0fa8d252b022c35ecbaedf1fdfd74cbcccc2a734388df/with_tabs.py

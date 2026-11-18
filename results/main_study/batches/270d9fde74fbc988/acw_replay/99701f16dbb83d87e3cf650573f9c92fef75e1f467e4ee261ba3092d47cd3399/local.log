@@ -1,0 +1,23 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/99701f16dbb83d87e3cf650573f9c92fef75e1f467e4ee261ba3092d47cd3399/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+             return not self.parseBoolExpr(expression[2:-1])
+         if expression[0] == '|':
+             cursor = 2
+-            while cursor < len(expression)-1:
++            while len(expression)-1 > cursor:
+                 end_of_next = self.getNextExpr(expression, cursor)
+                 if self.parseBoolExpr(expression[cursor:end_of_next]):
+                     return True
+@@ -16,7 +16,7 @@
+             return False
+         if expression[0] == '&':
+             cursor = 2
+-            while cursor < len(expression)-1:
++            while len(expression)-1 > cursor:
+                 end_of_next = self.getNextExpr(expression, cursor)
+                 if not self.parseBoolExpr(expression[cursor:end_of_next]):
+                     return False
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/99701f16dbb83d87e3cf650573f9c92fef75e1f467e4ee261ba3092d47cd3399/with_tabs.py

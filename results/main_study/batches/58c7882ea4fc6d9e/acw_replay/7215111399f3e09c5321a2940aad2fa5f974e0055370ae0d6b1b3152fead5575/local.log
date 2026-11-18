@@ -1,0 +1,47 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/7215111399f3e09c5321a2940aad2fa5f974e0055370ae0d6b1b3152fead5575/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,8 +19,8 @@
+ 
+         keeper = 1
+         while keeper < k:
+-            self.answer += [keeper, keeper, keeper + 1]
+-            self.answer += [keeper, keeper + 1, keeper + 1]
++            self.answer += [keeper, keeper, 1 + keeper]
++            self.answer += [keeper, 1 + keeper, 1 + keeper]
+             keeper += 2
+         if keeper > k:
+             self.answer += [k] * (n - len(self.answer))
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/7215111399f3e09c5321a2940aad2fa5f974e0055370ae0d6b1b3152fead5575/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+ 
+     def solve(self):
+         n, k = self.n, self.k
+-        if n < 3 * k:
++        if n < k * 3:
+             self.answer = "-1"
+             return
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/7215111399f3e09c5321a2940aad2fa5f974e0055370ae0d6b1b3152fead5575/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,11 +18,11 @@
+             return
+ 
+         keeper = 1
+-        while keeper < k:
++        while k > keeper:
+             self.answer += [keeper, keeper, 1 + keeper]
+             self.answer += [keeper, 1 + keeper, 1 + keeper]
+             keeper += 2
+-        if keeper > k:
++        if k < keeper:
+             self.answer += [k] * (n - len(self.answer))
+             return
+         else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/7215111399f3e09c5321a2940aad2fa5f974e0055370ae0d6b1b3152fead5575/with_tabs.py

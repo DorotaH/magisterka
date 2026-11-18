@@ -1,0 +1,40 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2714/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+ 
+ 
+ def calc(s,a):
+-    return (pow(2,s,mod)+pow(2,a-s,mod))%mod
++    return (pow(2,a-s,mod)+pow(2,s,mod))%mod
+ 
+  
+ def find(x):
+@@ -24,21 +24,21 @@
+ for _ in range(testcase):
+     n,m=list(map(int,input().split()))
+     EDGE = [list(map(int,input().split())) for _ in range(m)]
+-    EDGELIST = [[] for _ in range(n+1)]
++    EDGELIST = [[] for _ in range(1+n)]
+     ANS=1
+ 
+ 
+-    Group = list(range(n+1))
++    Group = list(range(1+n))
+ 
+     for a,b in EDGE:
+         Union(a,b)
+         EDGELIST[a].append(b)
+         EDGELIST[b].append(a)
+ 
+-    testing=[None]*(n+1)
++    testing=[None]*(1+n)
+     flag=1
+ 
+-    for i in range(1,n+1):
++    for i in range(1,1+n):
+         if testing[i]!=None:
+             continue
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2714/acw_steps/with_tabs.py

@@ -1,0 +1,41 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2273/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+ for a in E[0]:
+     X[a] = 1
+ A = [i for i in range(N) if X[i]==0]
+-b = min([i for i in range(N) if X[i] == 1] + [inf])
++b = min([inf] + [i for i in range(N) if X[i] == 1])
+ if b < inf:
+     for a in E[b]:
+         if X[a] == 1: X[a] = 2
+@@ -36,6 +36,6 @@
+     if f:
+         print(-1)
+     else:
+-        print(*[x+1 for x in X])
++        print(*[1+x for x in X])
+ else:
+     print(-1)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/2273/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,12 +15,12 @@
+     X[a] = 1
+ A = [i for i in range(N) if X[i]==0]
+ b = min([inf] + [i for i in range(N) if X[i] == 1])
+-if b < inf:
++if inf > b:
+     for a in E[b]:
+         if X[a] == 1: X[a] = 2
+     B = [i for i in range(N) if X[i]==1]
+ c = min([i for i in range(N) if X[i] == 2] + [inf])
+-if c < inf:
++if inf > c:
+     for a in E[c]:
+         if X[a] == 2: X[a] = 3
+     C = [i for i in range(N) if X[i]==2]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/2273/acw_steps/with_tabs.py

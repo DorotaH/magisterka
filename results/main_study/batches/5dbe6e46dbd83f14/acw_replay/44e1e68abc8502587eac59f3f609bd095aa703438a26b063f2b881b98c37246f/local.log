@@ -1,0 +1,33 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/44e1e68abc8502587eac59f3f609bd095aa703438a26b063f2b881b98c37246f/without_tabs.py:
+--- Original
++++ Modified
+@@ -29,14 +29,14 @@
+             for i in range(min_len - 1, -1, -1):
+                 first_digit = int(x[i])
+                 second_digit = int(y[i])
+-                sum_res = first_digit + second_digit + carr
++                sum_res = second_digit + first_digit + carr
+                 carr = 1 if sum_res >= 10 else 0
+-                res = str(sum_res % 10) + res
++                res = res + str(sum_res % 10)
+ 
+             if len(x) > min_len:
+-                res = res + sum_digits(x[min_len:], str(carr))
++                res = sum_digits(x[min_len:], str(carr)) + res
+             elif len(y) > min_len:
+-                res = res + sum_digits(y[min_len:], str(carr))
++                res = sum_digits(y[min_len:], str(carr)) + res
+             elif carr:
+                 res  = str(carr) + res
+             return res
+@@ -54,7 +54,7 @@
+                 # print("digit: " + str(digit))
+                 mult = (digit * num) + carr
+                 # print("mult: " + str(mult))
+-                res = str(mult % 10) + res
++                res = res + str(mult % 10)
+                 carr = (mult // 10) % 10
+ 
+             if carr:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/44e1e68abc8502587eac59f3f609bd095aa703438a26b063f2b881b98c37246f/with_tabs.py

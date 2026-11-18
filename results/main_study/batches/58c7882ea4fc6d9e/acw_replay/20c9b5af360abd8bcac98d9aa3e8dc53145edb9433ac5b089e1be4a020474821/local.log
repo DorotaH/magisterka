@@ -1,0 +1,31 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/20c9b5af360abd8bcac98d9aa3e8dc53145edb9433ac5b089e1be4a020474821/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,10 +14,10 @@
+     for i in range(len(n)-1):
+         c = int(n[i])
+         if c%2 == 0 and c < ld:
+-            return n[:i] + n[-1] + n[i+1:-1] + n[i]
++            return n[-1] + n[:i] + n[i+1:-1] + n[i]
+         if c%2 == 0:
+             last = i
+-    return -1 if last == -1 else n[:last] + n[-1] + n[last+1:-1] + n[last]
++    return -1 if last == -1 else n[:last] + n[-1] + n[1+last:-1] + n[last]
+ 
+ 
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/20c9b5af360abd8bcac98d9aa3e8dc53145edb9433ac5b089e1be4a020474821/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+     last = -1
+     for i in range(len(n)-1):
+         c = int(n[i])
+-        if c%2 == 0 and c < ld:
++        if c%2 == 0 and ld > c:
+             return n[-1] + n[:i] + n[i+1:-1] + n[i]
+         if c%2 == 0:
+             last = i
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/20c9b5af360abd8bcac98d9aa3e8dc53145edb9433ac5b089e1be4a020474821/with_tabs.py

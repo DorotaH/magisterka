@@ -1,0 +1,56 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/697/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,19 +12,19 @@
+     return ans
+ def inv(x):
+     return pw(x, mod - 2)
+-for i in range(1, n + m + 1):
++for i in range(1, m + n + 1):
+     fact.append(fact[i - 1] * i % mod)
+     invfact.append(invfact[i - 1] * inv(i) % mod)
+ mn = max(0, n - m)
+ def ways_to(sub):
+-    inc = (n + m + sub) // 2
+-    return fact[n + m] * invfact[inc] * invfact[n + m - inc] % mod
++    inc = (m + n + sub) // 2
++    return fact[m + n] * invfact[inc] * invfact[m + n - inc] % mod
+ ans = 0
+-ways = [0 for _ in range(0, n + 2)]
+-for i in range (mn, n + 1):
++ways = [0 for _ in range(0, 2 + n)]
++for i in range (mn, 1 + n):
+     ways[i] = ways_to(n - m) - ways_to(2 * i - n + m)
+-ways[n + 1] = ways_to(n - m)
+-for i in range(1, n + 1):
++ways[1 + n] = ways_to(n - m)
++for i in range(1, 1 + n):
+     ans += i * (ways[i + 1] - ways[i])
+     ans %= mod
+ if (ans < 0) :
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/697/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,8 +13,8 @@
+ def inv(x):
+     return pw(x, mod - 2)
+ for i in range(1, m + n + 1):
+-    fact.append(fact[i - 1] * i % mod)
+-    invfact.append(invfact[i - 1] * inv(i) % mod)
++    fact.append(i * fact[i - 1] % mod)
++    invfact.append(inv(i) * invfact[i - 1] % mod)
+ mn = max(0, n - m)
+ def ways_to(sub):
+     inc = (m + n + sub) // 2
+@@ -22,7 +22,7 @@
+ ans = 0
+ ways = [0 for _ in range(0, 2 + n)]
+ for i in range (mn, 1 + n):
+-    ways[i] = ways_to(n - m) - ways_to(2 * i - n + m)
++    ways[i] = ways_to(n - m) - ways_to(i * 2 - n + m)
+ ways[1 + n] = ways_to(n - m)
+ for i in range(1, 1 + n):
+     ans += i * (ways[i + 1] - ways[i])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/697/acw_steps/with_tabs.py

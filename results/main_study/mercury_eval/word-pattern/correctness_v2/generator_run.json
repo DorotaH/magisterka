@@ -1,0 +1,112 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/mercury_eval/word-pattern/correctness_v2/generator_input.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "mercury_generate",
+    "/tmp/payload.json"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": [[\"cbc\", \"zj bq tda kcw\"], [\"bbaba\", \"hrw g us ybb s l ek nb cuh v\"], [\"caba\", \"urv n rq ob\"], [\"aabab\", \"ces eo\"], [\"a\", \"zgh m ac\"], [\"acc\", \"b l pk fe iir n cfs hh\"], [\"acaa\", \"bu ps ho lab\"], [\"ccbc\", \"y\"], [\"bc\", \"jx u h cut ss xo tx dl wsy qk\"], [\"cca\", \"qe ogr ok ft a lt klt\"]], \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.0747483530003592,
+  "result": [
+    [
+      "cbc",
+      "zj bq tda kcw"
+    ],
+    [
+      "bbaba",
+      "hrw g us ybb s l ek nb cuh v"
+    ],
+    [
+      "caba",
+      "urv n rq ob"
+    ],
+    [
+      "aabab",
+      "ces eo"
+    ],
+    [
+      "a",
+      "zgh m ac"
+    ],
+    [
+      "acc",
+      "b l pk fe iir n cfs hh"
+    ],
+    [
+      "acaa",
+      "bu ps ho lab"
+    ],
+    [
+      "ccbc",
+      "y"
+    ],
+    [
+      "bc",
+      "jx u h cut ss xo tx dl wsy qk"
+    ],
+    [
+      "cca",
+      "qe ogr ok ft a lt klt"
+    ]
+  ]
+}

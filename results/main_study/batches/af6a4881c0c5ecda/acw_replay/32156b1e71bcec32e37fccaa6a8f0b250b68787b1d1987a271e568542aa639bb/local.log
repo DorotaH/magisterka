@@ -1,0 +1,18 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/32156b1e71bcec32e37fccaa6a8f0b250b68787b1d1987a271e568542aa639bb/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,9 +18,9 @@
+             if pos == maxReach: return True
+             if pos not in set1: return False
+             flag1, flag2, flag3 = False, False, False
+-            if lastUnit - 1 > 0: flag1 = reachNext(pos + lastUnit - 1, lastUnit - 1)
+-            flag2 = reachNext(pos + lastUnit, lastUnit)
+-            if pos > 0: flag3 = reachNext(pos + lastUnit + 1, lastUnit + 1)
++            if lastUnit - 1 > 0: flag1 = reachNext(lastUnit + pos - 1, lastUnit - 1)
++            flag2 = reachNext(lastUnit + pos, lastUnit)
++            if pos > 0: flag3 = reachNext(lastUnit + pos + 1, lastUnit + 1)
+             return flag1 or flag2 or flag3 
+ 
+         return reachNext(0, 1)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/32156b1e71bcec32e37fccaa6a8f0b250b68787b1d1987a271e568542aa639bb/with_tabs.py

@@ -1,0 +1,33 @@
+{
+  "generator_code": "import random\nclass TreeNode:\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n        \ndef generate_binary_tree(n):\n    if n == 0:\n        return None\n\n    root = TreeNode(random.randint(-1000, 1000))\n\n    num_left = random.randint(0, n-1)\n    num_right = n - 1 - num_left\n\n    root.left = generate_binary_tree(num_left)\n    root.right = generate_binary_tree(num_right)\n\n    return root\n\ndef generate_test_case():\n    root = generate_binary_tree(random.randint(1, 100))\n            \n    import lctk\n    root = lctk.binaryTree2Arr(root)\n    return root",
+  "seed": 5296661344566727238,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        [
+          3,
+          9,
+          20,
+          null,
+          null,
+          15,
+          7
+        ]
+      ],
+      "expected": [
+        [
+          3
+        ],
+        [
+          9,
+          20
+        ],
+        [
+          15,
+          7
+        ]
+      ]
+    }
+  ]
+}

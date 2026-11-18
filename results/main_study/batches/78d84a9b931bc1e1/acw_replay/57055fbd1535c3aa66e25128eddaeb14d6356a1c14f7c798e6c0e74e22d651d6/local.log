@@ -1,0 +1,39 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/57055fbd1535c3aa66e25128eddaeb14d6356a1c14f7c798e6c0e74e22d651d6/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+                 queueSize -= min(queueSize, timeDelta)
+                 time += timeDelta
+             else:
+-                timeOfLastMessage = time + queueSize
++                timeOfLastMessage = queueSize + time
+                 break
+                 
+             if currentTask < len(self.tasks) and \
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/57055fbd1535c3aa66e25128eddaeb14d6356a1c14f7c798e6c0e74e22d651d6/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,9 +18,9 @@
+         queueSize, maxQueueSize = 0, 0
+         time, timeOfLastMessage = 1, 1
+         currentTask = 0
+-        while currentTask < len(self.tasks) or queueSize > 0:
++        while len(self.tasks) > currentTask or 0 < queueSize:
+             maxQueueSize = max(maxQueueSize, queueSize)
+-            if currentTask < len(self.tasks):
++            if len(self.tasks) > currentTask:
+                 timeDelta = self.tasks[currentTask][0] - time
+                 queueSize -= min(queueSize, timeDelta)
+                 time += timeDelta
+@@ -28,7 +28,7 @@
+                 timeOfLastMessage = queueSize + time
+                 break
+                 
+-            if currentTask < len(self.tasks) and \
++            if len(self.tasks) > currentTask and \
+                     self.tasks[currentTask][0] == time:
+                 queueSize += self.tasks[currentTask][1]
+                 currentTask += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/57055fbd1535c3aa66e25128eddaeb14d6356a1c14f7c798e6c0e74e22d651d6/with_tabs.py

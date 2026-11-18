@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/147cb1adfe5ca857e522957d00281145b18dc590a91f3995b24211f4e36168ee/without_tabs.py:
+--- Original
++++ Modified
+@@ -40,7 +40,7 @@
+         for i, current_op in enumerate(arr):
+             if self.is_operator(current_op):
+                 if count > 0:
+-                    self.postfix_stack.append("".join(arr[current_index: current_index + count]))
++                    self.postfix_stack.append("".join(arr[current_index: count + current_index]))
+                 peek_op = op_stack[-1]
+                 if current_op == ')':
+                     while op_stack[-1] != '(':
+@@ -58,7 +58,7 @@
+                 count += 1
+ 
+         if count > 1 or (count == 1 and not self.is_operator(arr[current_index])):
+-            self.postfix_stack.append("".join(arr[current_index: current_index + count]))
++            self.postfix_stack.append("".join(arr[current_index: count + current_index]))
+ 
+         while op_stack[-1] != ',':
+             self.postfix_stack.append(str(op_stack.pop()))
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/147cb1adfe5ca857e522957d00281145b18dc590a91f3995b24211f4e36168ee/without_tabs.py:
+--- Original
++++ Modified
+@@ -72,7 +72,7 @@
+             cur = '/'
+         if peek == '%':
+             peek = '/'
+-        return self.operat_priority[ord(peek) - 40] >= self.operat_priority[ord(cur) - 40]
++        return self.operat_priority[ord(cur) - 40] <= self.operat_priority[ord(peek) - 40]
+ 
+     @staticmethod
+     def _calculate(first_value, second_value, current_op):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/147cb1adfe5ca857e522957d00281145b18dc590a91f3995b24211f4e36168ee/with_tabs.py

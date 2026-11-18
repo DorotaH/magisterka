@@ -1,0 +1,32 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/3f5adba6e30f09a7e101e551d3d94090945e262c7d1c68a76e149f8c5d390190/without_tabs.py:
+--- Original
++++ Modified
+@@ -26,7 +26,7 @@
+                 i += i & -i
+ 
+         def lower_bound(self, w):
+-            if w <= 0:
++            if 0 >= w:
+                 return 0
+             x = 0
+             k = 1 << (self.size.bit_length() - 1)
+@@ -59,7 +59,7 @@
+             ir = bit_high.lower_bound(val + 1)
+             if il > 0:
+                 adj[il].append(i)
+-            if ir <= N:
++            if N >= ir:
+                 adj[i].append(ir)
+ 
+     bit_low = Bit(N)
+@@ -73,7 +73,7 @@
+             ir = bit_low.lower_bound(val + 1)
+             if il > 0:
+                 adj[il].append(i)
+-            if ir <= N:
++            if N >= ir:
+                 adj[i].append(ir)
+ 
+     dp = [inf] * (N + 1)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/3f5adba6e30f09a7e101e551d3d94090945e262c7d1c68a76e149f8c5d390190/with_tabs.py

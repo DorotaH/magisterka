@@ -1,0 +1,36 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/3c2eb17b0abd7784c4ecef8482bce37ba02785651bb8e3d77d979e9c88ad01aa/without_tabs.py:
+--- Original
++++ Modified
+@@ -44,7 +44,7 @@
+ 
+                 if isSafe(row, col, board):
+                     board[row][col] = "Q"
+-                    rec(board, col+1)
++                    rec(board, 1+col)
+                     board[row][col] = 0
+ 
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/3c2eb17b0abd7784c4ecef8482bce37ba02785651bb8e3d77d979e9c88ad01aa/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+ 
+             i, j = row, col
+ 
+-            while(i >= 0 and j >=0):
++            while(i >= 0 and 0 <= j):
+ 
+                 if board[i][j] == "Q":
+                     return False
+@@ -19,7 +19,7 @@
+ 
+             i, j = row, col
+ 
+-            while(i < n and j >= 0):
++            while(i < n and 0 <= j):
+                 if board[i][j] == "Q":
+                     return False
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/3c2eb17b0abd7784c4ecef8482bce37ba02785651bb8e3d77d979e9c88ad01aa/with_tabs.py

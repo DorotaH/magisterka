@@ -1,0 +1,18 @@
+def solve():
+    n = int(input())
+    l1, l2 = list(map(int, input().split())), list(map(int, input().split()))
+    ans = list()
+    for i in range(0, n):
+        c = 0
+        for j in range(0, i + 1):
+            if l1[j] <= l2[i]:
+                c += l1[j]
+                l1[j] = 0
+            else:
+                l1[j] -= l2[i]
+                c += l2[i]
+        ans.append(c)
+    print(*ans)
+
+
+solve()

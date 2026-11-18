@@ -1,0 +1,65 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/429ba01514829ab97eab0e5a5de9000ebda02fddfe277f805be111f18fb44e09/without_tabs.py:
+--- Original
++++ Modified
+@@ -79,7 +79,7 @@
+     while Lupp*Lupp<L:
+         Lupp+=1
+ 
+-    Rdown = int(sqrt(R))+1
++    Rdown = 1+int(sqrt(R))
+     while Rdown*Rdown>R:
+         Rdown-=1
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/429ba01514829ab97eab0e5a5de9000ebda02fddfe277f805be111f18fb44e09/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+     #    j+=1
+     #    continue
+     j2 = j*j
+-    i = j*j2
++    i = j2*j
+     if i>=big:
+         break
+     #if int(i**0.5+0.5)**2==i:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/429ba01514829ab97eab0e5a5de9000ebda02fddfe277f805be111f18fb44e09/without_tabs.py:
+--- Original
++++ Modified
+@@ -51,9 +51,9 @@
+     b = len(pos)
+ 
+ 
+-    while b-a>1:
++    while 1 < b-a:
+         m = (a+b)//2
+-        if pos[m]<L:
++        if L > pos[m]:
+             a=m
+         else:
+             b=m
+@@ -67,7 +67,7 @@
+ 
+ 
+ 
+-    while b-a>1:
++    while 1 < b-a:
+         m = (a+b)//2
+         if pos[m]<=R:
+             a = m
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/429ba01514829ab97eab0e5a5de9000ebda02fddfe277f805be111f18fb44e09/without_tabs.py:
+--- Original
++++ Modified
+@@ -69,7 +69,7 @@
+ 
+     while 1 < b-a:
+         m = (a+b)//2
+-        if pos[m]<=R:
++        if R >= pos[m]:
+             a = m
+         else:
+             b = m
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/429ba01514829ab97eab0e5a5de9000ebda02fddfe277f805be111f18fb44e09/with_tabs.py

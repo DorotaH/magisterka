@@ -1,0 +1,59 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/e19a8e9087643635ce155d03a9d9f46d132d3b0d27f2f2801a2ea3d2cd3ffd0b/without_tabs.py:
+--- Original
++++ Modified
+@@ -36,8 +36,8 @@
+ queries = [(i+2, min(l[i], n), i+1) for i in range(n) if min(l[i], n) >= i+2]
+ result = 0
+ 
+-a = sorted(list(zip(list(range(1, n+1)), l)) + queries, key=lambda x:(-x[-1], len(x)))
+-ft = RangeBit(n+1)
++a = sorted(list(zip(list(range(1, 1+n)), l)) + queries, key=lambda x:(-x[-1], len(x)))
++ft = RangeBit(1+n)
+ 
+ for el in a:
+     #print(el)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/e19a8e9087643635ce155d03a9d9f46d132d3b0d27f2f2801a2ea3d2cd3ffd0b/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,11 +16,11 @@
+             add += self.dataAdd[i]
+             mul += self.dataMul[i]
+             i -= i & -i
+-        return mul * start + add
++        return start * mul + add
+ 
+     def add(self, left, right, by):
+         assert 0 < left <= right
+-        self._add(left, by, -by * (left - 1))
++        self._add(left, by, (left - 1) * -by)
+         self._add(right, -by, by * right)
+ 
+     def _add(self, i, mul, add):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/e19a8e9087643635ce155d03a9d9f46d132d3b0d27f2f2801a2ea3d2cd3ffd0b/without_tabs.py:
+--- Original
++++ Modified
+@@ -48,6 +48,6 @@
+         fr, to, val = el
+         # print(fr, to, val)
+         # print(ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0))
+-        result += ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0)
++        result += ft.sum(to) - (ft.sum(fr - 1) if 1 < fr else 0)
+ 
+ print(result)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/e19a8e9087643635ce155d03a9d9f46d132d3b0d27f2f2801a2ea3d2cd3ffd0b/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ class RangeBit:
+     def __init__(self, n):
+         sz = 1
+-        while n >= sz:
++        while sz <= n:
+             sz *= 2
+         self.size = sz
+         self.dataAdd = [0 for _ in range(sz)]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/e19a8e9087643635ce155d03a9d9f46d132d3b0d27f2f2801a2ea3d2cd3ffd0b/with_tabs.py

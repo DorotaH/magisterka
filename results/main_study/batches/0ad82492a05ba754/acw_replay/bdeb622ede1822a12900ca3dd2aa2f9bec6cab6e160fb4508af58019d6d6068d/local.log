@@ -1,0 +1,11 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0ad82492a05ba754/acw_replay/bdeb622ede1822a12900ca3dd2aa2f9bec6cab6e160fb4508af58019d6d6068d/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,4 +15,4 @@
+     li += 1
+     ri -= 1
+ 
+-print( max( [ r[ 0 ], len(s) - l[ -1 ] - 1 ] + [ max( 0, r[ i ] - l[ i - 1 ] ) - 1 for i in range( 1, len(t) ) ] ) )
++print( max( [ max( 0, r[ i ] - l[ i - 1 ] ) - 1 for i in range( 1, len(t) ) ] + [ r[ 0 ], len(s) - l[ -1 ] - 1 ] ) )
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0ad82492a05ba754/acw_replay/bdeb622ede1822a12900ca3dd2aa2f9bec6cab6e160fb4508af58019d6d6068d/with_tabs.py

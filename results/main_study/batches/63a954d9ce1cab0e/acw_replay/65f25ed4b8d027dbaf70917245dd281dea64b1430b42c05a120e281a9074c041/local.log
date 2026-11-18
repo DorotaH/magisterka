@@ -1,0 +1,54 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/65f25ed4b8d027dbaf70917245dd281dea64b1430b42c05a120e281a9074c041/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+ sys.setrecursionlimit(10**7)
+ inf = 10**20
+ eps = 1.0 / 10**10
+-mod = 10**9 + 7
++mod = 7 + 10**9
+ dd = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+ ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
+ 
+@@ -55,7 +55,7 @@
+ def bs(f, mi, ma):
+     mm = -1
+     while ma > mi:
+-        mm = (ma + mi) // 2
++        mm = (mi + ma) // 2
+         if f(mm):
+             mi = mm + 1
+         else:
+@@ -67,7 +67,7 @@
+     n = I()
+     a = LI()
+     b = LI()
+-    if b == list(range(1, n + 1)):
++    if b == list(range(1, 1 + n)):
+         return 0
+ 
+     ss = set(a)
+@@ -91,7 +91,7 @@
+ 
+     def f(i):
+         s = ss | set(b[:i])
+-        for j in range(1, n + 1):
++        for j in range(1, 1 + n):
+             if j not in s:
+                 return True
+             if i + j <= n:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/65f25ed4b8d027dbaf70917245dd281dea64b1430b42c05a120e281a9074c041/without_tabs.py:
+--- Original
++++ Modified
+@@ -54,7 +54,7 @@
+ 
+ def bs(f, mi, ma):
+     mm = -1
+-    while ma > mi:
++    while mi < ma:
+         mm = (mi + ma) // 2
+         if f(mm):
+             mi = mm + 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/65f25ed4b8d027dbaf70917245dd281dea64b1430b42c05a120e281a9074c041/with_tabs.py

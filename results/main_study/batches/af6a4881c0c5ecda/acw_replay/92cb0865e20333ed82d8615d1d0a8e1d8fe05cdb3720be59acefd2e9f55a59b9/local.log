@@ -1,0 +1,35 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/92cb0865e20333ed82d8615d1d0a8e1d8fe05cdb3720be59acefd2e9f55a59b9/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,5 +14,4 @@
+ 
+ assert s.isPowerOfTwo(16) is True
+ assert s.isPowerOfTwo(17) is False
+-            
+         
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/92cb0865e20333ed82d8615d1d0a8e1d8fe05cdb3720be59acefd2e9f55a59b9/without_tabs.py:
+--- Original
++++ Modified
+@@ -5,7 +5,7 @@
+         if n==1:
+             return True
+         r = 1
+-        while n>r:
++        while r < n:
+             r *= 2
+         return n == r
+     
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/92cb0865e20333ed82d8615d1d0a8e1d8fe05cdb3720be59acefd2e9f55a59b9/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,6 +1,6 @@
+ class Solution:
+     def isPowerOfTwo(self, n: int) -> bool:
+-        if n<=0:
++        if 0 >= n:
+             return False
+         if n==1:
+             return True
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af6a4881c0c5ecda/acw_replay/92cb0865e20333ed82d8615d1d0a8e1d8fe05cdb3720be59acefd2e9f55a59b9/with_tabs.py

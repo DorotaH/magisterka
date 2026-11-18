@@ -1,0 +1,41 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/29bcb9c7f3ed2223c730ff1b596eb94951f69f194b200e2d7aafca98262f6504/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,11 +14,11 @@
+             i += 1
+             break
+         b = t[i].rfind('B')
+-        if 'W' in t[i][a: b + 1]: return 1
++        if 'W' in t[i][a: 1 + b]: return 1
+ 
+         for j in range(i + 1, n):
+             if a > 0 and t[j][a - 1] == 'B' and t[j][b] == 'W': return 1
+-            if b < m - 1 and t[j][b + 1] == 'B' and t[j][a] == 'W': return 1
++            if b < m - 1 and t[j][1 + b] == 'B' and t[j][a] == 'W': return 1
+         i += 1
+ 
+     while i < n:
+@@ -37,7 +37,7 @@
+             i += 1
+             break
+         b = t[i].rfind('B')
+-        if 'W' in t[i][a: b + 1]: return 1
++        if 'W' in t[i][a: 1 + b]: return 1
+         i += 1
+ 
+     while i < n:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/29bcb9c7f3ed2223c730ff1b596eb94951f69f194b200e2d7aafca98262f6504/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,7 +18,7 @@
+ 
+         for j in range(i + 1, n):
+             if a > 0 and t[j][a - 1] == 'B' and t[j][b] == 'W': return 1
+-            if b < m - 1 and t[j][1 + b] == 'B' and t[j][a] == 'W': return 1
++            if m - 1 > b and t[j][1 + b] == 'B' and t[j][a] == 'W': return 1
+         i += 1
+ 
+     while i < n:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/29bcb9c7f3ed2223c730ff1b596eb94951f69f194b200e2d7aafca98262f6504/with_tabs.py

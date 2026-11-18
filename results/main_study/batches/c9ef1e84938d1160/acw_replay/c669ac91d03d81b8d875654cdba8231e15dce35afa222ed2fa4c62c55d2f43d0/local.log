@@ -1,0 +1,69 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/c669ac91d03d81b8d875654cdba8231e15dce35afa222ed2fa4c62c55d2f43d0/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,12 +14,12 @@
+         a[i] = int(g[-1]) + int(g[1])*60 + int(g[0])*3600
+         [p,count,sim] = [1,0,0]
+     is_solution_there=False
+-    for i in range(1,n+1):
++    for i in range(1,1+n):
+         while p<i and a[i] - t + 1>a[p]:
+             p+=1
+             if b[p]!=b[p-1]:
+                 sim = max(sim-1,0)
+-        if a[i]<a[p]+t and sim<m:
++        if a[i]<t+a[p] and sim<m:
+             count+=1
+             sim+=1
+         if sim==m:
+@@ -29,7 +29,7 @@
+         print("No solution")
+         return
+     print(count)
+-    for i in range(1,n+1):
++    for i in range(1,1+n):
+         print(b[i],end=' ')
+ 
+     if mode=="file":f.close()
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/c669ac91d03d81b8d875654cdba8231e15dce35afa222ed2fa4c62c55d2f43d0/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+         return
+     for i in range(1,1+n):
+         g = gets()
+-        a[i] = int(g[-1]) + int(g[1])*60 + int(g[0])*3600
++        a[i] = int(g[-1]) + 60*int(g[1]) + int(g[0])*3600
+         [p,count,sim] = [1,0,0]
+     is_solution_there=False
+     for i in range(1,1+n):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/c669ac91d03d81b8d875654cdba8231e15dce35afa222ed2fa4c62c55d2f43d0/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+     [n,m,t]=get()
+     a=[0]*20002
+     b=[0]*20002
+-    if n<m:
++    if m > n:
+         print("No solution")
+         return
+     for i in range(1,1+n):
+@@ -15,11 +15,11 @@
+         [p,count,sim] = [1,0,0]
+     is_solution_there=False
+     for i in range(1,1+n):
+-        while p<i and a[i] - t + 1>a[p]:
++        while i > p and a[i] - t + 1>a[p]:
+             p+=1
+             if b[p]!=b[p-1]:
+                 sim = max(sim-1,0)
+-        if a[i]<t+a[p] and sim<m:
++        if a[i]<t+a[p] and m > sim:
+             count+=1
+             sim+=1
+         if sim==m:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/c669ac91d03d81b8d875654cdba8231e15dce35afa222ed2fa4c62c55d2f43d0/with_tabs.py

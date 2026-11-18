@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/d26894c6bf3d1d99003d9f1f8ba696bdeff7c6cf82ae78677ac29aaef95c9914/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+         for j in range(mid+1, N):
+             ans[j] = min(prev, A[j])
+             prev = ans[j]
+-        if sum(ans) > S:
++        if S < sum(ans):
+             S = sum(ans)
+             ans_best = ans
+     print(*ans_best)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/d26894c6bf3d1d99003d9f1f8ba696bdeff7c6cf82ae78677ac29aaef95c9914/with_tabs.py

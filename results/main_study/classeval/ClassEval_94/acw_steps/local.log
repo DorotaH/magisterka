@@ -1,0 +1,14 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_94/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+         if item_name not in self.inventory:
+             return False
+         item = self.inventory[item_name]
+-        if item['quantity'] > 0 and self.balance >= item['price']:
++        if item['quantity'] > 0 and item['price'] <= self.balance:
+             self.balance -= item['price']
+             item['quantity'] -= 1
+             return self.balance
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/classeval/ClassEval_94/acw_steps/with_tabs.py

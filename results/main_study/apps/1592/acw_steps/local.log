@@ -1,0 +1,39 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1592/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+                 queueSize -= min(queueSize, timeDelta)
+                 time += timeDelta
+             else:
+-                timeOfLastMessage = time + queueSize
++                timeOfLastMessage = queueSize + time
+                 break
+                 
+             if currentTask < len(self.tasks) and \
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1592/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,9 +18,9 @@
+         queueSize, maxQueueSize = 0, 0
+         time, timeOfLastMessage = 1, 1
+         currentTask = 0
+-        while currentTask < len(self.tasks) or queueSize > 0:
++        while len(self.tasks) > currentTask or 0 < queueSize:
+             maxQueueSize = max(maxQueueSize, queueSize)
+-            if currentTask < len(self.tasks):
++            if len(self.tasks) > currentTask:
+                 timeDelta = self.tasks[currentTask][0] - time
+                 queueSize -= min(queueSize, timeDelta)
+                 time += timeDelta
+@@ -28,7 +28,7 @@
+                 timeOfLastMessage = queueSize + time
+                 break
+                 
+-            if currentTask < len(self.tasks) and \
++            if len(self.tasks) > currentTask and \
+                     self.tasks[currentTask][0] == time:
+                 queueSize += self.tasks[currentTask][1]
+                 currentTask += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1592/acw_steps/with_tabs.py

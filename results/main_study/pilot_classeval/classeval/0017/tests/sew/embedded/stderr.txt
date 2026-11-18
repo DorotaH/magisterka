@@ -1,0 +1,28 @@
+...........................F.
+======================================================================
+FAIL: test_get_upcoming_events_5 (test_sample.CalendarTestGetUpcomingEvents.test_get_upcoming_events_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/test_sample.py", line 271, in test_get_upcoming_events_5
+    self.assertEqual(calendar.get_upcoming_events(1), [
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        {'date': datetime(2024, 1, 2, 0, 0), 'start_time': datetime(2024, 1, 2, 1, 0),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         'end_time': datetime(2024, 1, 2, 2, 0), 'description': 'New Year 2'}])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != [{'date': datetime.datetime(2024, 1, 2, 0,[129 chars] 2'}]
+
+Second list contains 1 additional elements.
+First extra element 0:
+{'date': datetime.datetime(2024, 1, 2, 0, 0), 'start_time': datetime.datetime(2024, 1, 2, 1, 0), 'end_time': datetime.datetime(2024, 1, 2, 2, 0), 'description': 'New Year 2'}
+
+- []
++ [{'date': datetime.datetime(2024, 1, 2, 0, 0),
++   'description': 'New Year 2',
++   'end_time': datetime.datetime(2024, 1, 2, 2, 0),
++   'start_time': datetime.datetime(2024, 1, 2, 1, 0)}]
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.001s
+
+FAILED (failures=1)

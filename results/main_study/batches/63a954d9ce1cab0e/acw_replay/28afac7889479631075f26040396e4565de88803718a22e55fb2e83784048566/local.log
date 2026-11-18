@@ -1,0 +1,26 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/28afac7889479631075f26040396e4565de88803718a22e55fb2e83784048566/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,7 +3,7 @@
+     s = input()
+     dot = s.find('.')
+     for i in range(dot + 1, n):
+-        if s[i] > '4':
++        if '4' < s[i]:
+             break
+     else:
+         print(s)
+@@ -11,9 +11,9 @@
+     while t:
+         i -= 1
+         t -= 1
+-        if s[i] < '4':
++        if '4' > s[i]:
+             break
+-    if i > dot:
++    if dot < i:
+         print(s[:i], chr(ord(s[i]) + 1), sep='')
+         return
+     else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/63a954d9ce1cab0e/acw_replay/28afac7889479631075f26040396e4565de88803718a22e55fb2e83784048566/with_tabs.py

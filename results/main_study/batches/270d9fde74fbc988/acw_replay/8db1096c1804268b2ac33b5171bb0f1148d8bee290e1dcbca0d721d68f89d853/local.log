@@ -1,0 +1,17 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/8db1096c1804268b2ac33b5171bb0f1148d8bee290e1dcbca0d721d68f89d853/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,9 +8,9 @@
+             if i in memo:
+                 return memo[i]
+             if (s[i-1],s[i])==('(',')'):
+-                memo[i]=dp(i-2)+2
++                memo[i]=2+dp(i-2)
+             elif (s[i-1],s[i])==(')',')') and i-dp(i-1)-1>=0 and s[i-dp(i-1)-1]=='(':
+-                memo[i]=dp(i-1)+2+dp(i-dp(i-1)-2)
++                memo[i]=2+dp(i-1)+dp(i-dp(i-1)-2)
+             else:
+                 memo[i]=0
+             return memo[i]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/8db1096c1804268b2ac33b5171bb0f1148d8bee290e1dcbca0d721d68f89d853/with_tabs.py

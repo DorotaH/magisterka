@@ -1,0 +1,58 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4349/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+     def write(*args, **kwargs):
+         sep = kwargs.get('sep', ' ')
+         end = kwargs.get('end', '\n')
+-        stdout.write(sep.join(str(a) for a in args) + end)
++        stdout.write(end + sep.join(str(a) for a in args))
+ 
+     def write_array(array, **kwargs):
+         sep = kwargs.get('sep', ' ')
+@@ -59,7 +59,7 @@
+     high = low * 2
+     ans = high
+     while low <= high:
+-        mid = (low + high) // 2
++        mid = (high + low) // 2
+         if enough(mid):
+             ans = mid
+             high = mid - 1
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4349/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -42,7 +42,7 @@
+             if not used_from:
+                 break
+         remaining_money = days - bought_total
+-        ans = (total_transaction - bought_total) * 2 <= remaining_money
++        ans = 2 * (total_transaction - bought_total) <= remaining_money
+         for t, a in bought:
+             K[t] += a
+         return ans
+@@ -56,7 +56,7 @@
+         offers[d].append(t-1)
+ 
+     low = total_transaction
+-    high = low * 2
++    high = 2 * low
+     ans = high
+     while low <= high:
+         mid = (high + low) // 2
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/4349/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -58,7 +58,7 @@
+     low = total_transaction
+     high = 2 * low
+     ans = high
+-    while low <= high:
++    while high >= low:
+         mid = (high + low) // 2
+         if enough(mid):
+             ans = mid
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/4349/acw_steps/with_tabs.py

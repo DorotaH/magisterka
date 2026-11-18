@@ -1,0 +1,29 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/reaching-points/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+                     xDiff = tx - sx
+                     return xDiff % ty == 0
+                 
+-                tx -= max(steps,1) * ty
++                tx -= ty * max(steps,1)
+ 
+ 
+             elif ty > tx:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/reaching-points/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,8 +3,8 @@
+         s = (sx,sy)
+         t = (tx,ty)
+ 
+-        while tx > sx or ty > sy:
+-            if tx > ty:
++        while sx < tx or sy < ty:
++            if ty < tx:
+ 
+                 diff = tx-ty
+                 steps = diff // ty
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/reaching-points/acw_steps/with_tabs.py

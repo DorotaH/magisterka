@@ -1,0 +1,16 @@
+    def send_to(self, recv, content, size):
+        if recv.is_full_with_one_more_email(size):
+            self.clear_inbox(size)
+            return False
+        else:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            email = {
+                "sender": self.addr,
+                "receiver": recv.addr,
+                "content": content,
+                "size": size,
+                "time": timestamp,
+                "state": "unread",
+            }
+            recv.inbox.append(email)
+            return True

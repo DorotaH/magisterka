@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/81a8c407d03d6b658062040eed3d1f0e3bf864caa32466924881e9b517c7ece0/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+             if char.isalpha():
+                 shift = ord(self.key[key_index % len(self.key)].lower()) - ord("a")
+                 decrypted_char = chr(
+-                    (ord(char.lower()) - ord("a") - shift) % 26 + ord("a")
++                    ord("a") + (ord(char.lower()) - ord("a") - shift) % 26
+                 )
+                 decrypted_text += (
+                     decrypted_char.upper() if char.isupper() else decrypted_char
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ebb99ffe9527e424/acw_replay/81a8c407d03d6b658062040eed3d1f0e3bf864caa32466924881e9b517c7ece0/with_tabs.py

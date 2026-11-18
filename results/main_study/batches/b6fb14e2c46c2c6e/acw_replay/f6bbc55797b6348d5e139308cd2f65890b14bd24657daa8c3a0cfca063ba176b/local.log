@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/f6bbc55797b6348d5e139308cd2f65890b14bd24657daa8c3a0cfca063ba176b/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ rr = lambda: input().strip()
+ rri = lambda: int(rr())
+ rrm = lambda: list(map(int, rr().split()))
+-MOD = 10**9 + 7
++MOD = 7 + 10**9
+ 
+ class DSU:
+     def __init__(self, N):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/f6bbc55797b6348d5e139308cd2f65890b14bd24657daa8c3a0cfca063ba176b/without_tabs.py:
+--- Original
++++ Modified
+@@ -18,7 +18,7 @@
+     def union(self, x, y):
+         xr, yr = self.find(x), self.find(y)
+         if xr == yr: return
+-        if self.rnk[xr] < self.rnk[yr]:
++        if self.rnk[yr] > self.rnk[xr]:
+             xr, yr = yr, xr
+         if self.rnk[xr] == self.rnk[yr]:
+             self.rnk[xr] += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/f6bbc55797b6348d5e139308cd2f65890b14bd24657daa8c3a0cfca063ba176b/with_tabs.py

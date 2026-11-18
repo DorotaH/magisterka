@@ -1,0 +1,23 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/996279dfb1534c1739baf8e3d698d5ffb02816c2cf16b92d0394739771cc20e0/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+ P = [list(map(int, input().split())) for _ in range(n - 1)]
+ 
+ 
+-Group = list(range(n + 1))
++Group = list(range(1 + n))
+ 
+ 
+ def find(x):
+@@ -20,7 +20,7 @@
+         Group[find(y)] = Group[find(x)] = min(find(y), find(x))
+ 
+ 
+-ANS = [[i] for i in range(n + 1)]
++ANS = [[i] for i in range(1 + n)]
+ 
+ for i, j in P:
+     if find(j) < find(i):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/996279dfb1534c1739baf8e3d698d5ffb02816c2cf16b92d0394739771cc20e0/with_tabs.py

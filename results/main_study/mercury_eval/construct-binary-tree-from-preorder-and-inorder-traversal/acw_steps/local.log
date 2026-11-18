@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/construct-binary-tree-from-preorder-and-inorder-traversal/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+         nleft   = len(inorder[:rootloc])
+ 
+         root.left  = self.buildTree(preorder[1:1+nleft], inorder[:rootloc])
+-        root.right = self.buildTree(preorder[1+nleft:],  inorder[rootloc+1:])
++        root.right = self.buildTree(preorder[1+nleft:],  inorder[1+rootloc:])
+ 
+         return root
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/construct-binary-tree-from-preorder-and-inorder-traversal/acw_steps/with_tabs.py

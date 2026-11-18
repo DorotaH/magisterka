@@ -1,0 +1,34 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1759/original/strict/format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -37,10 +37,10 @@
+         if i == 0 and j == 0:
+             continue
+         if i == 0:
+-            p[i][j] = p[i][j - 1] + q[i][j]
++            p[i][j] = q[i][j] + p[i][j - 1]
+             continue
+         if j == 0:
+-            p[i][j] = p[i - 1][j] + q[i][j]
++            p[i][j] = q[i][j] + p[i - 1][j]
+             continue
+         p[i][j] = max(p[i - 1][j], p[i][j - 1]) + q[i][j]
+ for i in range(m):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1759/original/strict/format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,9 +17,9 @@
+         if n == 0:
+             res = inputs[:]
+             inputs[:] = []
+-        while n > len(inputs):
++        while len(inputs) < n:
+             inputs.extend(input().split(" "))
+-        if n > 0:
++        if 0 < n:
+             res = inputs[:n]
+             inputs[:n] = []
+         return res
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/1759/original/strict/format/acw_replay/with_tabs.py

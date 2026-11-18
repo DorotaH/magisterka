@@ -1,0 +1,29 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/2b5c7a14dac50d3be5c412051f2792639101f6562ede88876a12f31cff5728b6/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+                 dfs(i-1, j) if i > 0 and val < matrix[i-1][j] else 0,
+                 dfs(i+1, j) if i < m-1 and val < matrix[i+1][j] else 0,
+                 dfs(i, j-1) if j> 0 and val < matrix[i][j-1] else 0,
+-                dfs(i, j+1) if j< n-1 and val < matrix[i][j+1] else 0
++                dfs(i, 1+j) if j< n-1 and val < matrix[i][1+j] else 0
+             )
+             return dp[i][j]
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/2b5c7a14dac50d3be5c412051f2792639101f6562ede88876a12f31cff5728b6/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,8 +11,8 @@
+             dp[i][j] = 1 + max(
+                 dfs(i-1, j) if i > 0 and val < matrix[i-1][j] else 0,
+                 dfs(i+1, j) if i < m-1 and val < matrix[i+1][j] else 0,
+-                dfs(i, j-1) if j> 0 and val < matrix[i][j-1] else 0,
+-                dfs(i, 1+j) if j< n-1 and val < matrix[i][1+j] else 0
++                dfs(i, j-1) if 0 < j and matrix[i][j-1] > val else 0,
++                dfs(i, 1+j) if n-1 > j and val < matrix[i][1+j] else 0
+             )
+             return dp[i][j]
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5dbe6e46dbd83f14/acw_replay/2b5c7a14dac50d3be5c412051f2792639101f6562ede88876a12f31cff5728b6/with_tabs.py

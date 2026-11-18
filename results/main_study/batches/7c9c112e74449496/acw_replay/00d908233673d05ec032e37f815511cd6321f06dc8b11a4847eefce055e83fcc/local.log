@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/00d908233673d05ec032e37f815511cd6321f06dc8b11a4847eefce055e83fcc/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+ MOD = 998244353
+ n = int(input())
+ fact = [1]
+-for i in range(1, n + 1):
++for i in range(1, 1 + n):
+     fact.append((fact[-1] * i) % MOD)
+ 
+ seq = []
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/00d908233673d05ec032e37f815511cd6321f06dc8b11a4847eefce055e83fcc/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,7 +10,7 @@
+ n = int(input())
+ fact = [1]
+ for i in range(1, 1 + n):
+-    fact.append((fact[-1] * i) % MOD)
++    fact.append((i * fact[-1]) % MOD)
+ 
+ seq = []
+ ca, cb = Counter(), Counter()
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/00d908233673d05ec032e37f815511cd6321f06dc8b11a4847eefce055e83fcc/with_tabs.py

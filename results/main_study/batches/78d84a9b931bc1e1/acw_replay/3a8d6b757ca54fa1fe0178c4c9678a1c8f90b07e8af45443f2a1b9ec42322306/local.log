@@ -1,0 +1,29 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/3a8d6b757ca54fa1fe0178c4c9678a1c8f90b07e8af45443f2a1b9ec42322306/without_tabs.py:
+--- Original
++++ Modified
+@@ -20,8 +20,8 @@
+     r[x] += r[x] == r[y]
+     mx[z] = max(mx[x], mx[y], suf[x] + pre[y])
+     pre[z] = max(pre[x], sm[x] + pre[y])
+-    suf[z] = max(suf[x] + sm[y], suf[y])
+-    sm[z] = sm[x] + sm[y]
++    suf[z] = max(sm[y] + suf[x], suf[y])
++    sm[z] = sm[y] + sm[x]
+     p[x] = p[y] = z
+     return mx[z] - w ** 2
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/3a8d6b757ca54fa1fe0178c4c9678a1c8f90b07e8af45443f2a1b9ec42322306/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+ 
+ def union(x, y, w):
+     x, y = find(x), find(y)
+-    z = y if r[y] > r[x] else x
++    z = y if r[x] < r[y] else x
+     r[x] += r[x] == r[y]
+     mx[z] = max(mx[x], mx[y], suf[x] + pre[y])
+     pre[z] = max(pre[x], sm[x] + pre[y])
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/3a8d6b757ca54fa1fe0178c4c9678a1c8f90b07e8af45443f2a1b9ec42322306/with_tabs.py

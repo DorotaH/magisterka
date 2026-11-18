@@ -1,0 +1,16 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/find-the-closest-palindrome/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,8 +12,8 @@
+ 
+         candidates = (
+             [10 ** (n_len - 1) - 1] +
+-            [make_pal(base_int + i) for i in (-1, 0, 1)] +
+-            [10 ** n_len + 1]
++            [make_pal(i + base_int) for i in (-1, 0, 1)] +
++            [1 + 10 ** n_len]
+         )
+ 
+         candidates_non_self = [cand for cand in candidates if cand != n_int]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/find-the-closest-palindrome/acw_steps/with_tabs.py

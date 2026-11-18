@@ -1,0 +1,60 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/6bcf9f45a83bd0eac7e7bb7964631944c69c47ce8bb0b7348f124264a1b01e3b/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,9 +41,9 @@
+ result = 0
+ 
+ a = sorted(
+-    list(zip(list(range(1, n + 1)), l)) + queries, key=lambda x: (-x[-1], len(x))
++    list(zip(list(range(1, 1 + n)), l)) + queries, key=lambda x: (-x[-1], len(x))
+ )
+-ft = RangeBit(n + 1)
++ft = RangeBit(1 + n)
+ 
+ for el in a:
+     # print(el)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/6bcf9f45a83bd0eac7e7bb7964631944c69c47ce8bb0b7348f124264a1b01e3b/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,11 +17,11 @@
+             add += self.dataAdd[i]
+             mul += self.dataMul[i]
+             i -= i & -i
+-        return mul * start + add
++        return start * mul + add
+ 
+     def add(self, left, right, by):
+         assert 0 < left <= right
+-        self._add(left, by, -by * (left - 1))
++        self._add(left, by, (left - 1) * -by)
+         self._add(right, -by, by * right)
+ 
+     def _add(self, i, mul, add):
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/6bcf9f45a83bd0eac7e7bb7964631944c69c47ce8bb0b7348f124264a1b01e3b/without_tabs.py:
+--- Original
++++ Modified
+@@ -54,6 +54,6 @@
+         fr, to, val = el
+         # print(fr, to, val)
+         # print(ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0))
+-        result += ft.sum(to) - (ft.sum(fr - 1) if fr > 1 else 0)
++        result += ft.sum(to) - (ft.sum(fr - 1) if 1 < fr else 0)
+ 
+ print(result)
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/6bcf9f45a83bd0eac7e7bb7964631944c69c47ce8bb0b7348f124264a1b01e3b/without_tabs.py:
+--- Original
++++ Modified
+@@ -4,7 +4,7 @@
+ class RangeBit:
+     def __init__(self, n):
+         sz = 1
+-        while n >= sz:
++        while sz <= n:
+             sz *= 2
+         self.size = sz
+         self.dataAdd = [0 for _ in range(sz)]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/6bcf9f45a83bd0eac7e7bb7964631944c69c47ce8bb0b7348f124264a1b01e3b/with_tabs.py

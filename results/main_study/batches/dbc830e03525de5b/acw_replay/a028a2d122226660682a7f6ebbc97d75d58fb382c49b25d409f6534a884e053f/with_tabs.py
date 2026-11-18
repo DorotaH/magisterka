@@ -1,0 +1,21 @@
+from functools import reduce
+
+
+def main():
+	from operator import xor
+	from sys import stdin
+	x, res = reduce(xor, (input()[i] == '1' for i in range(0, 2 * int(input()), 2))), []
+	input()
+	for s in stdin.read().splitlines():
+		if s == '3':
+			res.append("01"[x])
+		else:
+			x ^= True
+	print(''.join(res))
+
+
+def __starting_point():
+	main()
+
+
+__starting_point()

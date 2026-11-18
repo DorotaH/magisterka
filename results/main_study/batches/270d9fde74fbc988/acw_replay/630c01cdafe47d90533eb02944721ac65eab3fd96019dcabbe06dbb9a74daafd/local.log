@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/630c01cdafe47d90533eb02944721ac65eab3fd96019dcabbe06dbb9a74daafd/without_tabs.py:
+--- Original
++++ Modified
+@@ -34,7 +34,7 @@
+                      curr[word]+=1
+                  else:
+                      curr[word]=1
+-                 while curr[word]>times[word]:
++                 while times[word] < curr[word]:
+                      curr[s[strstart:strstart+lenword]]-=1
+                      strstart+=lenword
+                  if wordstart-strstart==lensubstr:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/270d9fde74fbc988/acw_replay/630c01cdafe47d90533eb02944721ac65eab3fd96019dcabbe06dbb9a74daafd/with_tabs.py

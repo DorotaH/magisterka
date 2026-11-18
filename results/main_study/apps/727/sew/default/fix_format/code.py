@@ -1,0 +1,54 @@
+from heapq import heapify, heappop, heappush
+from sys import stdin
+
+
+def main():
+    n, a = int(stdin.readline()), stdin.readline().split()
+    q, p = [], 0
+    c = 0
+    l, r = [0] * (n + 1), [0] * (n + 1)
+    k, pa = [0] * (n + 1), [0] * (n + 1)
+    for i, x in enumerate(a, 0):
+        if x == a[p]:
+            c += 1
+        else:
+            l[p] = p - 1
+            k[p] = k[i - 1] = c
+            pa[p] = i - 1
+            pa[i - 1] = p
+            r[i - 1] = i
+            q.append((-c, p))
+            p = i
+            c = 1
+    q.append((-c, p))
+    l[p] = p - 1
+    k[p] = k[n - 1] = c
+    pa[p] = n - 1
+    pa[n - 1] = p
+    r[n - 1] = n
+    heapify(q)
+    ans = 0
+    while len(q):
+        c, p = heappop(q)
+        c = -c
+        if c < k[p]:
+            continue
+        ans = ans + 1
+        ls = l[p]
+        rs = r[pa[p]]
+        if not (ls >= 0 and rs < n and a[ls] == a[rs]):
+            if ls >= 0:
+                r[ls] = rs
+            if rs < n:
+                l[rs] = ls
+        else:
+            nc = k[ls] + k[rs]
+            nl, nr = pa[ls], pa[rs]
+            k[nl] = k[nr] = k[ls] = k[rs] = nc
+            pa[nr] = nl
+            pa[nl] = nr
+            heappush(q, (-nc, nl))
+    print(ans)
+
+
+main()

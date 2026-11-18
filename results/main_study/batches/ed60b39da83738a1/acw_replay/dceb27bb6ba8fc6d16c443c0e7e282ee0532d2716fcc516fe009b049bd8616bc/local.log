@@ -1,0 +1,28 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc/without_tabs.py:
+--- Original
++++ Modified
+@@ -10,8 +10,8 @@
+         carry=False
+         for i in range(len(num1)-1, -1,-1):
+             digit=(int(num1[i])+int(num2[i])+carry)
+-            res=str(digit%10)+res
++            res=res+str(digit%10)
+             carry=digit>9
+         if carry:
+-            res="1"+res
++            res=res+"1"
+         return res
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ class Solution:
+     def addStrings(self, num1: str, num2: str) -> str:
+         if len(num1)<len(num2):
+-            num1="0"*(len(num2)-len(num1))+num1
++            num1=(len(num2)-len(num1))*"0"+num1
+         elif len(num1)>len(num2):
+             num2="0"*(len(num1)-len(num2))+num2
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/ed60b39da83738a1/acw_replay/dceb27bb6ba8fc6d16c443c0e7e282ee0532d2716fcc516fe009b049bd8616bc/with_tabs.py

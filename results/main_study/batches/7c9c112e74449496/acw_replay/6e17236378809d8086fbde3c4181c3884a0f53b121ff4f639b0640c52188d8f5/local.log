@@ -1,0 +1,32 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/6e17236378809d8086fbde3c4181c3884a0f53b121ff4f639b0640c52188d8f5/without_tabs.py:
+--- Original
++++ Modified
+@@ -8,7 +8,7 @@
+         mid =int( (start + end)/2)
+         if (x == sortedlist[mid][0]):
+             return mid
+-        elif(x < sortedlist[mid][0]):
++        elif(sortedlist[mid][0] > x):
+             end = mid - 1
+         else:
+             start = mid + 1 
+@@ -56,7 +56,7 @@
+     a=a%s
+     left=b%s
+ 
+-    while(left>0):
++    while(0 < left):
+         if(slab[loc+count][1]<left):
+             happia+=slab[loc+count][0]*slab[loc+count][1]
+             left-=slab[loc+count][1]
+@@ -71,7 +71,7 @@
+     while(loc<n and slab[loc][0]<=0):
+         loc+=1
+     #print(slab[loc][0])
+-    while(left>0):
++    while(0 < left):
+         if(slab[loc+count][1]<left):
+             happib-=slab[loc+count][0]*slab[loc+count][1]
+             left-=slab[loc+count][1]
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/6e17236378809d8086fbde3c4181c3884a0f53b121ff4f639b0640c52188d8f5/with_tabs.py

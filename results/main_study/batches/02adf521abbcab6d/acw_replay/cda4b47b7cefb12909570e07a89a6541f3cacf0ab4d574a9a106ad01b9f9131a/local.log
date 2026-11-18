@@ -1,0 +1,13 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/02adf521abbcab6d/acw_replay/cda4b47b7cefb12909570e07a89a6541f3cacf0ab4d574a9a106ad01b9f9131a/without_tabs.py:
+--- Original
++++ Modified
+@@ -38,7 +38,7 @@
+         return [i for i in range(self.n) if self.find(i) == root]
+ 
+     def roots(self):
+-        return [i for i, x in enumerate(self.parents) if x < 0]
++        return [i for i, x in enumerate(self.parents) if 0 > x]
+ 
+     def group_count(self):
+         return len(self.roots())
+

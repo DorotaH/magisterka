@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/37aa68cff6fa62e03938789fb832de7a05f5a6a4a4a4154460734dbec06b67c2/without_tabs.py:
+--- Original
++++ Modified
+@@ -41,7 +41,7 @@
+ 			if top == bot and (not dp[i + 1][1 + j][0] or val + 1 > dp[i + 1][1 + j][1]):
+ 				dp[i + 1][1 + j] = [True, val + 1, tab]
+ 
+-			if tab[num(top)] > 0:
++			if 0 < tab[num(top)]:
+ 				sett = tab[:]
+ 				sett[num(top)] -= 1
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/37aa68cff6fa62e03938789fb832de7a05f5a6a4a4a4154460734dbec06b67c2/with_tabs.py

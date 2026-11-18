@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/78fa9f880d0bde3253dab24e1e13c121a68d570f1f4ed487f397bc349a9e90ec/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+ 
+ 
+ def lowbit(s):
+-    return int("1" + bin(s).split("1")[-1], 2)
++    return int(bin(s).split("1")[-1] + "1", 2)
+ 
+ 
+ for i in reversed(range(1 + b)):
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/78fa9f880d0bde3253dab24e1e13c121a68d570f1f4ed487f397bc349a9e90ec/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+ 
+ 
+ def bin(s):
+-    return str(s) if s <= 1 else str(s & 1) + bin(s >> 1)
++    return str(s) if 1 >= s else str(s & 1) + bin(s >> 1)
+ 
+ 
+ def lowbit(s):
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/dbc830e03525de5b/acw_replay/78fa9f880d0bde3253dab24e1e13c121a68d570f1f4ed487f397bc349a9e90ec/with_tabs.py

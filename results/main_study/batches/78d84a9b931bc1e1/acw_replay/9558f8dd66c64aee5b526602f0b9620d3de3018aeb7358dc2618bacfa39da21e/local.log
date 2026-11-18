@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/9558f8dd66c64aee5b526602f0b9620d3de3018aeb7358dc2618bacfa39da21e/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+             t = si * ri + si * pi + pi * ri
+             if t == 0:
+                 continue
+-            if ri > 0:
++            if 0 < ri:
+                 dp[ri - 1][si][pi] += dp[ri][si][pi] * ri * pi / t
+             if si > 0:
+                 dp[ri][si - 1][pi] += dp[ri][si][pi] * ri * si / t
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/9558f8dd66c64aee5b526602f0b9620d3de3018aeb7358dc2618bacfa39da21e/with_tabs.py

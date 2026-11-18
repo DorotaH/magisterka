@@ -1,0 +1,25 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/d69a955ebf72261cd47ca7ea14355c0e75fe8ae4ac5664f8c75b4b06130541eb/without_tabs.py:
+--- Original
++++ Modified
+@@ -3,8 +3,8 @@
+ c = list(map(int, input().split()))
+ d = int(input())
+ k = [int(input()) for _ in range(d)]
+-vis = [False for _ in range(m+1)]
+-match = [-1 for _ in range(m+1)]
++vis = [False for _ in range(1+m)]
++match = [-1 for _ in range(1+m)]
+ 
+ 
+ def dfs(u: int) -> bool:
+@@ -26,7 +26,7 @@
+ ans = []
+ for i in range(d - 1, -1, -1):
+     while True:
+-        vis = [False for _ in range(m+1)]
++        vis = [False for _ in range(1+m)]
+         if not dfs(mex):
+             break
+         mex += 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/6467ba035035d29f/acw_replay/d69a955ebf72261cd47ca7ea14355c0e75fe8ae4ac5664f8c75b4b06130541eb/with_tabs.py

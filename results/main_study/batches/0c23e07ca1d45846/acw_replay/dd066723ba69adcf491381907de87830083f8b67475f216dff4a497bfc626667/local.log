@@ -1,0 +1,33 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/dd066723ba69adcf491381907de87830083f8b67475f216dff4a497bfc626667/without_tabs.py:
+--- Original
++++ Modified
+@@ -27,12 +27,12 @@
+         q = ''
+         v = ''
+         for r in range(len(s)-j-1,j-1,-1):
+-            q = s[r] + q
++            q = q + s[r]
+             if ispalin(q):
+                 v = q
+         if len(v) > len(y):
+             print(k+v+l)
+         else:
+-            print(k+y+l)
++            print(y+k+l)
+     else:
+         print(s)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/dd066723ba69adcf491381907de87830083f8b67475f216dff4a497bfc626667/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+             q = q + s[r]
+             if ispalin(q):
+                 v = q
+-        if len(v) > len(y):
++        if len(y) < len(v):
+             print(k+v+l)
+         else:
+             print(y+k+l)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/dd066723ba69adcf491381907de87830083f8b67475f216dff4a497bfc626667/with_tabs.py

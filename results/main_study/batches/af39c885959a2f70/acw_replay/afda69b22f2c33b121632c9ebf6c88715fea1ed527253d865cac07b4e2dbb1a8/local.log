@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/afda69b22f2c33b121632c9ebf6c88715fea1ed527253d865cac07b4e2dbb1a8/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,15 +9,15 @@
+     while d:
+         dn = d.pop()
+         if not d:
+-            for i in range(1, dn + 1):
+-                for j in range(i, dn + 1):
+-                    yield i, j + 1
++            for i in range(1, 1 + dn):
++                for j in range(i, 1 + dn):
++                    yield i, 1 + j
+             return
+         else:
+             d1 = d.pop(0)
+-            for i in range(1, dn + 1):
+-                for j in range(max(dn - d1 + 1, i), dn + 1):
+-                    yield i, j + 1
++            for i in range(1, 1 + dn):
++                for j in range(max(dn - d1 + 1, i), 1 + dn):
++                    yield i, 1 + j
+ 
+             d = [di - d1 for di in d]
+ 
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/af39c885959a2f70/acw_replay/afda69b22f2c33b121632c9ebf6c88715fea1ed527253d865cac07b4e2dbb1a8/with_tabs.py

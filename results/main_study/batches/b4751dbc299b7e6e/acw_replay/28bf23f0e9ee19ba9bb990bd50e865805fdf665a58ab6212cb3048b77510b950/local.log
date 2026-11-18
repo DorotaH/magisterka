@@ -1,0 +1,38 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/28bf23f0e9ee19ba9bb990bd50e865805fdf665a58ab6212cb3048b77510b950/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,5 +1,5 @@
+ INF = 10**20
+-MOD = 10**9 + 7
++MOD = 7 + 10**9
+ I = lambda:list(map(int,input().split()))
+ 
+ def solve():
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/28bf23f0e9ee19ba9bb990bd50e865805fdf665a58ab6212cb3048b77510b950/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+       last = i
+       count = 0
+       continue
+-    if i - last > k:
++    if k < i - last:
+       ans += 1
+       last = i
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/28bf23f0e9ee19ba9bb990bd50e865805fdf665a58ab6212cb3048b77510b950/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,7 +9,7 @@
+   last = -INF
+   for i in range(n):
+     if s[i] == '1':
+-      if i - last <= k:
++      if k >= i - last:
+         ans -= 1
+       last = i
+       count = 0
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b4751dbc299b7e6e/acw_replay/28bf23f0e9ee19ba9bb990bd50e865805fdf665a58ab6212cb3048b77510b950/with_tabs.py

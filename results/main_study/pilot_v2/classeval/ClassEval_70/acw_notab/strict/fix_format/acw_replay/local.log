@@ -1,0 +1,13 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_70/acw_notab/strict/fix_format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+     def _validate_name(self, name: str) -> str:
+         if not name:
+             return None
+-        return None if len(name) > 33 else name
++        return None if 33 < len(name) else name
+ 
+     def _validate_sex(self, sex: str) -> str:
+         return None if sex not in ["Man", "Woman", "UGM"] else sex
+

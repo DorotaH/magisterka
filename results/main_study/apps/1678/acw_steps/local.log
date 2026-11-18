@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1678/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -19,7 +19,7 @@
+     pref[i]=pref[i-1]+a[i]
+ pref.sort()
+ before=ans=0
+-tree=[0]*(n+2)
++tree=[0]*(2+n)
+ for i in range(n):
+     ind = bisect_left(pref, t + before)
+     if ind>0:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1678/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,7 +22,7 @@
+ tree=[0]*(2+n)
+ for i in range(n):
+     ind = bisect_left(pref, t + before)
+-    if ind>0:
++    if 0 < ind:
+         ans += ind-read_bit(tree, ind)
+     before += a[i]
+     before_ind=bisect_left(pref, before)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1678/acw_steps/with_tabs.py

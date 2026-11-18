@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1866/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,7 +1,7 @@
+ n = int(input())
+ out = []
+ def p(a,b,d):
+-    out.append(str(a + 1 + d) + ' ' + str(b+1+d))
++    out.append(str(a + 1 + d) + ' ' + str(1+b+d))
+ 
+ p2 = 1
+ while 2 * p2 <= n:
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/1866/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+     bit = 1
+     while bit < p2:
+         for i in range(p2):
+-            if i ^ bit > i:
++            if i < i ^ bit:
+                 p(i, i ^ bit, d)
+         bit *= 2
+ print(len(out))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/1866/acw_steps/with_tabs.py

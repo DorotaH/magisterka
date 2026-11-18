@@ -1,0 +1,14 @@
+{
+  "generator_code": "import random\nimport string\n\ndef generate_test_case():\n    m = random.randint(1, 1000)       # length of string s\n    n = random.randint(1, m)            # length of string t\n    \n    # All uppercase and lowercase English letters\n    alphabet = string.ascii_letters   \n    \n    s = ''.join(random.choice(alphabet) for _ in range(m))\n    t = ''.join(random.choice(s) for _ in range(n)) # Ensures string t has characters from string s\n\n    return s, t",
+  "seed": 5653890010897492598,
+  "limit": 10,
+  "official": [
+    {
+      "input": [
+        "ADOBECODEBANC",
+        "ABC"
+      ],
+      "expected": "BANC"
+    }
+  ]
+}

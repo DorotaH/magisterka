@@ -1,0 +1,45 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/dd777174dda75ee55e3fec841beeaab958c676971bc0f7052874eacf6fa631a7/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+ """
+ 
+ def ceildiv(a,b):
+-    return a//b + (1 if a%b else 0)
++    return (1 if a%b else 0) + a//b
+ 
+ def main():
+     n,a,b = read()
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/dd777174dda75ee55e3fec841beeaab958c676971bc0f7052874eacf6fa631a7/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+         print(a,b)
+         return
+     t = int((6*n) ** .5)
+-    tgt = 9001*n
++    tgt = n*9001
+     tgta = 0
+     tgtb = 0
+     for i in range(1, t+1):
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/dd777174dda75ee55e3fec841beeaab958c676971bc0f7052874eacf6fa631a7/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,11 +21,11 @@
+     tgtb = 0
+     for i in range(1, t+1):
+         c = ceildiv(s,i)
+-        if a <= i and b <= c and tgt > i*c:
++        if i >= a and b <= c and tgt > i*c:
+             tgt = i*c
+             tgta = i
+             tgtb = c
+-        if b <= i and a <= c and tgt > i*c:
++        if i >= b and a <= c and tgt > i*c:
+             tgt = i*c
+             tgtb = i
+             tgta = c
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/58c7882ea4fc6d9e/acw_replay/dd777174dda75ee55e3fec841beeaab958c676971bc0f7052874eacf6fa631a7/with_tabs.py

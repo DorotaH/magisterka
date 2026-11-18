@@ -1,0 +1,82 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/3956/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -9,12 +9,12 @@
+ def inpls(): return list(input().split())
+ 
+ K,N = inpl()
+-MAX = K+N+10
+-fac = [1]*(MAX+1)
+-for i in range(1,MAX+1):
++MAX = N+K+10
++fac = [1]*(1+MAX)
++for i in range(1,1+MAX):
+ 	fac[i] = (fac[i-1]*i)%mod
+ 
+-gyakugen = [1]*(MAX+1)
++gyakugen = [1]*(1+MAX)
+ gyakugen[MAX] = pow(fac[MAX],mod-2,mod)
+ for i in range(MAX,0,-1):
+ 	gyakugen[i-1] = (gyakugen[i]*i)%mod
+@@ -46,7 +46,7 @@
+ 	return ans % mod
+ 
+ ans = []
+-for i in range(2,K+2):
++for i in range(2,2+K):
+ 	if i%2 == 0:
+ 		pairs = (i-2)//2
+ 		tmp = 0
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/3956/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+ MAX = N+K+10
+ fac = [1]*(1+MAX)
+ for i in range(1,1+MAX):
+-	fac[i] = (fac[i-1]*i)%mod
++	fac[i] = (i*fac[i-1])%mod
+ 
+ gyakugen = [1]*(1+MAX)
+ gyakugen[MAX] = pow(fac[MAX],mod-2,mod)
+@@ -51,9 +51,9 @@
+ 		pairs = (i-2)//2
+ 		tmp = 0
+ 		for p0 in range(pairs+1): #p0 = 0pairの数
+-			tmp1 = calc(K-p0*2 , N , i-p0*2) %mod #k-p0*2,i-p0*2で0pairが0組
++			tmp1 = calc(K-2*p0 , N , i-2*p0) %mod #k-p0*2,i-p0*2で0pairが0組
+ 			tmp2 = Comb(pairs,p0) %mod #0pairの選び方
+-			tmp += tmp1 * tmp2
++			tmp += tmp2 * tmp1
+ 			tmp %= mod
+ 	ans.append(tmp)
+ 	print(tmp)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/3956/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+ 	n -= pairs
+ 
+ 	#色々と例外処理
+-	if n < 0 or k <= 0 or k == 1 and n >= 2:
++	if 0 > n or k <= 0 or k == 1 and n >= 2:
+ 		return 0
+ 	if n == 0: 	 #球が0個なら1通り
+ 		ans = 1
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/3956/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+ 	n -= pairs
+ 
+ 	#色々と例外処理
+-	if 0 > n or k <= 0 or k == 1 and n >= 2:
++	if 0 > n or k <= 0 or k == 1 and 2 <= n:
+ 		return 0
+ 	if n == 0: 	 #球が0個なら1通り
+ 		ans = 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/3956/acw_steps/with_tabs.py

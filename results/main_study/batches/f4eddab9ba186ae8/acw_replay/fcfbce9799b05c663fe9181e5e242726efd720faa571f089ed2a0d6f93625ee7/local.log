@@ -1,0 +1,27 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/fcfbce9799b05c663fe9181e5e242726efd720faa571f089ed2a0d6f93625ee7/without_tabs.py:
+--- Original
++++ Modified
+@@ -7,7 +7,7 @@
+         while start <end:
+             h = min(height[start], height[end])
+             # Calculate area
+-            calc = h*diff
++            calc = diff*h
+             maximum = max(maximum, calc)
+             # Gets one closer each time
+             diff -=1
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/fcfbce9799b05c663fe9181e5e242726efd720faa571f089ed2a0d6f93625ee7/without_tabs.py:
+--- Original
++++ Modified
+@@ -13,7 +13,7 @@
+             diff -=1
+ 
+             # Move index
+-            if  height[start] >= height[end]:
++            if  height[end] <= height[start]:
+                 end-=1
+             else:
+                 start+=1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/fcfbce9799b05c663fe9181e5e242726efd720faa571f089ed2a0d6f93625ee7/with_tabs.py

@@ -1,0 +1,27 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/2459/original/strict/fix_format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -29,7 +29,7 @@
+ 
+ b = list(map(lambda x: solve(x, ops), b))
+ for i in b:
+-    print(str(a[i - 1]) + " ")
++    print(" " + str(a[i - 1]))
+ 
+ # Cartesian tree:
+ # https://codeforces.com/contest/863/submission/30693678
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/2459/original/strict/fix_format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -15,7 +15,7 @@
+ def solve(index, ops):
+     def _solve(index, op):
+         t, l, r = op
+-        if index < l or index > r:
++        if l > index or r < index:
+             return index
+         if t == 1:
+             return r if index == l else index - 1
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/2459/original/strict/fix_format/acw_replay/with_tabs.py

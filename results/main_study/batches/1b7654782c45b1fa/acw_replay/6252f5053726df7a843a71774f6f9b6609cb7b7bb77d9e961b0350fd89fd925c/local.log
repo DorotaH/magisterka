@@ -1,0 +1,49 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/6252f5053726df7a843a71774f6f9b6609cb7b7bb77d9e961b0350fd89fd925c/without_tabs.py:
+--- Original
++++ Modified
+@@ -2,7 +2,7 @@
+ if h == w:
+     if a < h:
+         n = w // a
+-        x = (w - a * n) / (n + 1)
++        x = (w - a * n) / (1 + n)
+         print(x)
+     elif a == h:
+         print(0)
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/6252f5053726df7a843a71774f6f9b6609cb7b7bb77d9e961b0350fd89fd925c/without_tabs.py:
+--- Original
++++ Modified
+@@ -12,7 +12,7 @@
+     for _ in range(100):
+         if h > w:
+             w, h = h, w
+-        if w > h + a * 2:
++        if w > h + 2 * a:
+             w = w - h - a
+     if h > w:
+         w, h = h, w
+@@ -21,7 +21,7 @@
+     r = 0
+     if m < s or s == 0:
+         for i in range(m, 0, -1):
+-            x = (h - a * i) / (i + 1)
++            x = (h - i * a) / (i + 1)
+             w1 = w - x
+             a1 = a + x
+             q = w1 % a1
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/6252f5053726df7a843a71774f6f9b6609cb7b7bb77d9e961b0350fd89fd925c/without_tabs.py:
+--- Original
++++ Modified
+@@ -25,7 +25,7 @@
+             w1 = w - x
+             a1 = a + x
+             q = w1 % a1
+-            if q < 0.00000001 or a1 - q < 0.0000001:
++            if q < 0.00000001 or 0.0000001 > a1 - q:
+                 r = 1
+                 break
+     else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/6252f5053726df7a843a71774f6f9b6609cb7b7bb77d9e961b0350fd89fd925c/with_tabs.py

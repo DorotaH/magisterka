@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/f0de8802a17c2dd95fa7e320f8994f3bcbd8a0fb9f2572bac04e829d00db7122/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+     def modify(self, pos, value):
+         p = pos + self.margin
+         self.L[p] = value
+-        while p > 1:
++        while 1 < p:
+             x, y = self.L[p], self.L[p ^ 1]
+             if p & 1:
+                 x, y = y, x
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/c9ef1e84938d1160/acw_replay/f0de8802a17c2dd95fa7e320f8994f3bcbd8a0fb9f2572bac04e829d00db7122/with_tabs.py

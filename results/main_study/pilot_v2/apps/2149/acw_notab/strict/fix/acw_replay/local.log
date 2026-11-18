@@ -1,0 +1,21 @@
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/apps/2149/acw_notab/strict/fix/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,14 +17,14 @@
+         return self.inv[i]
+ 
+     def comb(self, n, k):
+-        return self.inv[n - k] * self.f[n] * self.inv[k] % M if k <= n else 0
++        return self.f[n] * self.inv[n - k] * self.inv[k] % M if k <= n else 0
+ 
+ 
+ def main():
+     n, k, *h = map(int, open(0).read().split())
+     m = sum(i != j for i, j in zip(h, h[1:] + h[:1]))
+     comb = Factorial(m).comb
+-    print((pow(k, m, M) - sum(comb(m, i) * comb(m - i, i) * pow(k - 2, m - i - i, M)for i in range(1 + m // 2))) * pow(k, n - m, M) * pow(2, M - 2, M) % M)
++    print((pow(k, m, M) - sum(comb(m - i, i) * comb(m, i) * pow(k - 2, m - i - i, M)for i in range(1 + m // 2))) * pow(k, n - m, M) * pow(2, M - 2, M) % M)
+ 
+ 
+ main()
+

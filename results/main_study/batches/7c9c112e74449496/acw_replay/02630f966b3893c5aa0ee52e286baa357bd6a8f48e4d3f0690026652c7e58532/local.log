@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/02630f966b3893c5aa0ee52e286baa357bd6a8f48e4d3f0690026652c7e58532/without_tabs.py:
+--- Original
++++ Modified
+@@ -59,7 +59,7 @@
+ retu.extend(
+ 	(i, j)
+ 	for i, j in itertools.combinations(list(range(N)), 2)
+-	if (a[j, :] + a[i, :] <= K).all()
++	if (a[i, :] + a[j, :] <= K).all()
+ )
+ uf_retu = UnionFind(N)
+ for x, y in retu:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/02630f966b3893c5aa0ee52e286baa357bd6a8f48e4d3f0690026652c7e58532/with_tabs.py

@@ -1,0 +1,80 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/b44489cd4059f317942449ee6b85274b6ffcb9ef3e115bbacc063c7151797fd5/without_tabs.py:
+--- Original
++++ Modified
+@@ -33,7 +33,7 @@
+ 
+ 
+ def update1(n, x, val):
+-    while x <= n + 1:
++    while x <= 1 + n:
+         bit1[x] += val
+         x += x & -x
+ 
+@@ -47,7 +47,7 @@
+ 
+ 
+ def update2(n, x, val):
+-    while x <= n + 1:
++    while x <= 1 + n:
+         bit2[x] += val
+         x += x & -x
+ 
+@@ -63,8 +63,8 @@
+ def process(n, m, fa, fb):
+     r2 = 1
+     ans = 0
+-    for l1 in range(1, n + 1):
+-        while r2 <= min(n, l1 + m - 2):
++    for l1 in range(1, 1 + n):
++        while r2 <= min(n, m + l1 - 2):
+             update1(n, m - fb[r2] + 1, 1)
+             update2(n, m - fb[r2] + 1, fb[r2] - m + 1)
+             r2 += 1
+@@ -82,9 +82,9 @@
+     a = a[: (len(a) - 1)]
+     b = b[: (len(b) - 1)]
+     s = s[: (len(s) - 1)]
+-    fa = build(s + a, n)
+-    kb = build(s[::-1] + b[::-1], n)
+-    fb = [0 for _ in range(n + 2)]
++    fa = build(a + s, n)
++    kb = build(b[::-1] + s[::-1], n)
++    fb = [0 for _ in range(2 + n)]
+     for i in range(m, m + n):
+         fa[i - m + 1] = fa[i]
+         if fa[i - m + 1] >= m:
+@@ -92,8 +92,8 @@
+         fb[m + n - i] = kb[i]
+         if fb[m + n - i] >= m:
+             fb[m + n - i] = m - 1
+-    logging.info(fa[1 : (n + 1)])
+-    logging.info(fb[1 : (n + 1)])
++    logging.info(fa[1 : (1 + n)])
++    logging.info(fb[1 : (1 + n)])
+     process(n, m, fa, fb)
+ 
+ 
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/b44489cd4059f317942449ee6b85274b6ffcb9ef3e115bbacc063c7151797fd5/without_tabs.py:
+--- Original
++++ Modified
+@@ -40,7 +40,7 @@
+ 
+ def get1(n, x):
+     ans = 0
+-    while x > 0:
++    while 0 < x:
+         ans += bit1[x]
+         x -= x & -x
+     return ans
+@@ -54,7 +54,7 @@
+ 
+ def get2(n, x):
+     ans = 0
+-    while x > 0:
++    while 0 < x:
+         ans += bit2[x]
+         x -= x & -x
+     return ans
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/b6fb14e2c46c2c6e/acw_replay/b44489cd4059f317942449ee6b85274b6ffcb9ef3e115bbacc063c7151797fd5/with_tabs.py

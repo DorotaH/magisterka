@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_0/original/strict/format/acw_replay/without_tabs.py:
+--- Original
++++ Modified
+@@ -16,7 +16,7 @@
+         try:
+             token = self.get_jwt_user(request)
+             user = token["user"]
+-            if user["level"] > 2:
++            if 2 < user["level"]:
+                 self.set_current_user_info_and_log(user)
+                 return True
+         except:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/pilot_v2/classeval/ClassEval_0/original/strict/format/acw_replay/with_tabs.py

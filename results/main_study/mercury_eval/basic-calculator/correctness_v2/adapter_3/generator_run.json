@@ -1,0 +1,102 @@
+{
+  "argv": [
+    "prlimit",
+    "--as=1073741824",
+    "--cpu=5",
+    "--fsize=4194304",
+    "--nofile=64",
+    "--",
+    "bwrap",
+    "--unshare-all",
+    "--die-with-parent",
+    "--clearenv",
+    "--setenv",
+    "PATH",
+    "/usr/bin",
+    "--setenv",
+    "HOME",
+    "/tmp",
+    "--setenv",
+    "PYTHONDONTWRITEBYTECODE",
+    "1",
+    "--setenv",
+    "PYTHONHASHSEED",
+    "0",
+    "--setenv",
+    "TZ",
+    "UTC",
+    "--setenv",
+    "OPENBLAS_NUM_THREADS",
+    "1",
+    "--ro-bind",
+    "/usr",
+    "/usr",
+    "--symlink",
+    "usr/lib",
+    "/lib",
+    "--symlink",
+    "usr/lib64",
+    "/lib64",
+    "--proc",
+    "/proc",
+    "--dev",
+    "/dev",
+    "--tmpfs",
+    "/tmp",
+    "--chdir",
+    "/tmp",
+    "--ro-bind",
+    "/tmp/watermark-study-benchmark",
+    "/tmp/deps",
+    "--setenv",
+    "PYTHONPATH",
+    "/tmp/deps",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/results/main_study/mercury_eval/basic-calculator/correctness_v2/generator_input.json",
+    "/tmp/payload.json",
+    "--ro-bind",
+    "/home/dh/Desktop/watermark/experiments/benchmark_worker.py",
+    "/tmp/worker.py",
+    "--",
+    "/usr/bin/python3.14",
+    "/tmp/worker.py",
+    "mercury_generate",
+    "/tmp/payload.json"
+  ],
+  "exit": 0,
+  "stdout": "{\"answer\": [[\"(((32 - 10 - 3 - 30 + 69)))\"], [\"(85 + (2 - 63) + 80)\"], [\"(28) - 11 - 80 - (86) + 93 + 68 + (13) + 7 - 75 - 78 + ((60) - 26)\"], [\"(((23) + 52 - 54))\"], [\"((14))\"], [\"22 - ((((24)))) - ((94) + 84 + 96 + 63 - 67 + (4))\"], [\"29 - 50 - 94 - 45 + 96 + (45) + 65\"], [\"((89 - 85 + 42) + 92 + (83 - ((69))) - 20 - 83) - 24\"], [\"83 + 66 - 65 + 41 - ((84))\"], [\"((86))\"]], \"stdout\": \"\"}\n",
+  "stderr": "",
+  "seconds": 0.12249570399990262,
+  "result": [
+    [
+      "(((32 - 10 - 3 - 30 + 69)))"
+    ],
+    [
+      "(85 + (2 - 63) + 80)"
+    ],
+    [
+      "(28) - 11 - 80 - (86) + 93 + 68 + (13) + 7 - 75 - 78 + ((60) - 26)"
+    ],
+    [
+      "(((23) + 52 - 54))"
+    ],
+    [
+      "((14))"
+    ],
+    [
+      "22 - ((((24)))) - ((94) + 84 + 96 + 63 - 67 + (4))"
+    ],
+    [
+      "29 - 50 - 94 - 45 + 96 + (45) + 65"
+    ],
+    [
+      "((89 - 85 + 42) + 92 + (83 - ((69))) - 20 - 83) - 24"
+    ],
+    [
+      "83 + 66 - 65 + 41 - ((84))"
+    ],
+    [
+      "((86))"
+    ]
+  ]
+}

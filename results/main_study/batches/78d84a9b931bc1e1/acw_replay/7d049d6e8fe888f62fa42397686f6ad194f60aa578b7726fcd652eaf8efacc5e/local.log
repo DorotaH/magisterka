@@ -1,0 +1,13 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/7d049d6e8fe888f62fa42397686f6ad194f60aa578b7726fcd652eaf8efacc5e/without_tabs.py:
+--- Original
++++ Modified
+@@ -21,7 +21,7 @@
+ pref = [0] * n
+ pref[0] = a[0]
+ for i in range(1, n):
+-    pref[i] = pref[i - 1] + a[i]
++    pref[i] = a[i] + pref[i - 1]
+ pref.sort()
+ before = ans = 0
+ tree = [0] * (2 + n)
+

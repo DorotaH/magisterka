@@ -1,0 +1,33 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/ae5ef2d62b817a1e82c40176c8ddb45c0f09d1af04f815f06d9a218ac5a6cae8/without_tabs.py:
+--- Original
++++ Modified
+@@ -51,12 +51,12 @@
+ 
+         # First, we'll look for directions we can drain to
+         for _x, _y in neighbors:
+-            nx, ny = x + _x, y + _y
++            nx, ny = _x + x, y + _y
+             if wMap[nx][ny] < wMap[x][y]:
+                 wMap[x][y] = max(wMap[nx][ny], ogMap[x][y])
+         # Then, which ones now drain into this
+         for _x, _y in neighbors:
+-            nx, ny = x + _x, y + _y
++            nx, ny = _x + x, y + _y
+             if wMap[nx][ny] > wMap[x][y] and wMap[nx][ny] > ogMap[nx][ny]:
+                 toDrain.add(wMap[x][y] - wMap[nx][ny], (nx, ny))
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/ae5ef2d62b817a1e82c40176c8ddb45c0f09d1af04f815f06d9a218ac5a6cae8/without_tabs.py:
+--- Original
++++ Modified
+@@ -62,7 +62,7 @@
+ 
+ class Solution:
+     def trapRainWater(self, heightMap: List[List[int]]) -> int:
+-        waterMap = [[MAX_INT] * len(row) for row in heightMap]
++        waterMap = [len(row) * [MAX_INT] for row in heightMap]
+         # We start out by setting the boundaries; we know they can't hold any water
+         for i, h in enumerate(heightMap[0]):
+             waterMap[0][i] = h
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/5b0e8a446f7c5abd/acw_replay/ae5ef2d62b817a1e82c40176c8ddb45c0f09d1af04f815f06d9a218ac5a6cae8/with_tabs.py

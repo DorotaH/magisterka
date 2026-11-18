@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/7c705c8ed8c9cbba25865d422a5cda21ffd6845ff1b4f4137eecabece8547128/without_tabs.py:
+--- Original
++++ Modified
+@@ -30,7 +30,7 @@
+                 segment_vals[potential_new][new_beauty] = 1
+                 for g in segment_vals[node].keys():
+                     segment_gcd = gcd(new_beauty,g)
+-                    segment_vals[potential_new][segment_gcd] = segment_vals[potential_new].get(segment_gcd,0) + segment_vals[node][g]
++                    segment_vals[potential_new][segment_gcd] = segment_vals[node][g] + segment_vals[potential_new].get(segment_gcd,0)
+                 for k in segment_vals[potential_new].keys():
+                     ans += k*segment_vals[potential_new][k]
+                     ans = ans % mod
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/7c9c112e74449496/acw_replay/7c705c8ed8c9cbba25865d422a5cda21ffd6845ff1b4f4137eecabece8547128/with_tabs.py

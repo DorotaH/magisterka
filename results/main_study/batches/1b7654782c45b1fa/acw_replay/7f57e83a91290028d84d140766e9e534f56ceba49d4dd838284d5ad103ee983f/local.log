@@ -1,0 +1,29 @@
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/7f57e83a91290028d84d140766e9e534f56ceba49d4dd838284d5ad103ee983f/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,20 +1,20 @@
+ a, b, x, y = map(int, input().split())
+ if a >= x:
+-    if b >= y:
++    if y <= b:
+         print('Vasiliy')
+     else:
+         z = y - b
+         t = max(x - z, 0)
+-        if a - z <= t:
++        if t >= a - z:
+             print('Polycarp')
+         else:
+             print('Vasiliy')
+-elif b <= y:
++elif y >= b:
+     print('Polycarp')
+ else:
+     z = x - a
+     t = max(y - z, 0)
+-    if b - z <= t:
++    if t >= b - z:
+         print('Polycarp')
+     else:
+         print('Vasiliy')
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/1b7654782c45b1fa/acw_replay/7f57e83a91290028d84d140766e9e534f56ceba49d4dd838284d5ad103ee983f/with_tabs.py

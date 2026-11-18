@@ -1,0 +1,33 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/93c177d10e27f3b4b73b5f5449576301d2ac69cdd4d23c79105a7eceef15c29a/without_tabs.py:
+--- Original
++++ Modified
+@@ -24,7 +24,7 @@
+         aci[n - k] = tmp
+         for j in range(n - k - 1, -1, -1):
+             tmp += col[j]
+-            tmp -= col[j + k]
++            tmp -= col[k + j]
+             aci[j] = tmp
+ 
+     return blank, acc
+@@ -37,4 +37,4 @@
+ bv, t_var = count(n, k, t_field)
+ var = list(zip(*t_var))
+ 
+-print(bh + bv + max(h + v for (rh, rv) in zip(hor, var) for (h, v) in zip(rh, rv)))
++print(bv + bh + max(h + v for (rh, rv) in zip(hor, var) for (h, v) in zip(rh, rv)))
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/93c177d10e27f3b4b73b5f5449576301d2ac69cdd4d23c79105a7eceef15c29a/without_tabs.py:
+--- Original
++++ Modified
+@@ -14,7 +14,7 @@
+             continue
+         kl = max(0, r - k + 1)
+         kr = min(l + 1, n - k + 1)
+-        cnt[i][kl:kr] = [1] * (kr - kl)
++        cnt[i][kl:kr] = (kr - kl) * [1]
+ 
+     acc = [[0] * (n - k + 1) for _ in range(n - k + 1)]
+     t_cnt = list(zip(*cnt))
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/0c23e07ca1d45846/acw_replay/93c177d10e27f3b4b73b5f5449576301d2ac69cdd4d23c79105a7eceef15c29a/with_tabs.py

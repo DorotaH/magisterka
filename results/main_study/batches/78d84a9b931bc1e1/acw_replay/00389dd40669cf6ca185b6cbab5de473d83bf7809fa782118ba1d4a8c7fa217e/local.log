@@ -1,0 +1,60 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/00389dd40669cf6ca185b6cbab5de473d83bf7809fa782118ba1d4a8c7fa217e/without_tabs.py:
+--- Original
++++ Modified
+@@ -1,5 +1,5 @@
+ def norm(x):
+-    return (x % 998244353 + 998244353) % 998244353
++    return (998244353 + x % 998244353) % 998244353
+ 
+ n, k = map(int, input().split())
+ 
+@@ -9,7 +9,7 @@
+ for i in range(n):
+     l = [1]
+     cur = 0
+-    for j in range(n + 1):
++    for j in range(1 + n):
+         cur += l[j]
+         if(j > i):
+             cur -= l[j - i - 1]
+@@ -19,8 +19,8 @@
+     dp2.append(norm(dp1[i + 1] - dp1[i]))
+ 
+ ans = 0
+-for i in range(n + 1):
+-    for j in range(n + 1):
++for i in range(1 + n):
++    for j in range(1 + n):
+         if(i * j < k):
+             ans = norm(ans + dp2[i] * dp2[j])
+ 
+
+[MultSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/00389dd40669cf6ca185b6cbab5de473d83bf7809fa782118ba1d4a8c7fa217e/without_tabs.py:
+--- Original
++++ Modified
+@@ -22,8 +22,8 @@
+ for i in range(1 + n):
+     for j in range(1 + n):
+         if(i * j < k):
+-            ans = norm(ans + dp2[i] * dp2[j])
++            ans = norm(ans + dp2[j] * dp2[i])
+ 
+-ans = norm(ans * 2)
++ans = norm(2 * ans)
+ 
+ print(ans)
+
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/00389dd40669cf6ca185b6cbab5de473d83bf7809fa782118ba1d4a8c7fa217e/without_tabs.py:
+--- Original
++++ Modified
+@@ -11,7 +11,7 @@
+     cur = 0
+     for j in range(1 + n):
+         cur += l[j]
+-        if(j > i):
++        if(i < j):
+             cur -= l[j - i - 1]
+         cur = norm(cur)
+         l.append(cur)
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/78d84a9b931bc1e1/acw_replay/00389dd40669cf6ca185b6cbab5de473d83bf7809fa782118ba1d4a8c7fa217e/with_tabs.py

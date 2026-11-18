@@ -1,0 +1,14 @@
+[AddSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/mercury_eval/course-schedule-iii/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -6,7 +6,7 @@
+         day = 0
+         queue = []
+         for i in range(len(courses)):
+-            if day + courses[i][0] <= courses[i][1]:
++            if courses[i][0] + day <= courses[i][1]:
+                 bisect.insort(queue, courses[i][0])
+                 day += courses[i][0]
+             else:
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/mercury_eval/course-schedule-iii/acw_steps/with_tabs.py

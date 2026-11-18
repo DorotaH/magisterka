@@ -1,0 +1,14 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/apps/953/acw_steps/without_tabs.py:
+--- Original
++++ Modified
+@@ -71,7 +71,7 @@
+         xr = self.find(x)
+         yr = self.find(y)
+         if xr == yr: return
+-        if self._rank[xr] < self._rank[yr]:
++        if self._rank[yr] > self._rank[xr]:
+             self._parent[xr] = yr
+         elif self._rank[yr] < self._rank[xr]:
+             self._parent[yr] = xr
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/apps/953/acw_steps/with_tabs.py

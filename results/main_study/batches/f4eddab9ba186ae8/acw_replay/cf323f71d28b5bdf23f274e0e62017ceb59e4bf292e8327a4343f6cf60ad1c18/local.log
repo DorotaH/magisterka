@@ -1,0 +1,27 @@
+[GtLtSwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/cf323f71d28b5bdf23f274e0e62017ceb59e4bf292e8327a4343f6cf60ad1c18/without_tabs.py:
+--- Original
++++ Modified
+@@ -17,7 +17,7 @@
+ 
+     def is_available(self, start_time, end_time):
+         return not any(
+-            start_time < event['end_time'] and end_time > event['start_time']
++            event['end_time'] > start_time and event['start_time'] < end_time
+             for event in self.events
+         )
+ 
+
+[GtELtESwapTransformer] Modified /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/cf323f71d28b5bdf23f274e0e62017ceb59e4bf292e8327a4343f6cf60ad1c18/without_tabs.py:
+--- Original
++++ Modified
+@@ -39,7 +39,7 @@
+         now = datetime.now()
+         upcoming_events = []
+         for event in self.events:
+-            if event['start_time'] >= now:
++            if now <= event['start_time']:
+                 upcoming_events.append(event)
+             if len(upcoming_events) == num_events:
+                 break
+
+rule 45 exec succeeded on /home/dh/Desktop/watermark/results/main_study/batches/f4eddab9ba186ae8/acw_replay/cf323f71d28b5bdf23f274e0e62017ceb59e4bf292e8327a4343f6cf60ad1c18/with_tabs.py
