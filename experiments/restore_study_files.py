@@ -1,5 +1,6 @@
 """Restore the split study files from the published archive parts."""
 
+import argparse
 import gzip
 from hashlib import file_digest
 import json
@@ -37,8 +38,11 @@ def restore(root, entry):
 
 def main():
     root = Path(__file__).resolve().parents[1]
-    manifest = root / "results/main_study/split_files/manifest.json"
-    for entry in json.loads(manifest.read_text(encoding="utf-8")):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--manifest", type=Path,
+                        default=root / "results/main_study/split_files/manifest.json")
+    args = parser.parse_args()
+    for entry in json.loads(args.manifest.read_text(encoding="utf-8")):
         restore(root, entry)
         print(entry["path"])
 

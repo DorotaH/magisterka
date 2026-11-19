@@ -1,0 +1,10 @@
+# Ograniczenia rozszerzenia v3
+
+- Analizy E1–E3 są eksploracyjne. Przedziały opisują zmienność dla badanych jednostek i nie obejmują niepewności wynikającej z wyboru benchmarków, modeli oraz konfiguracji.
+- Warstwa A obejmuje rozwiązania z kwalifikujących się zbiorów zadań programistycznych. Selekcja dotyczy pierwszego kwalifikującego się rozwiązania, a identyczność SHA-256 wykrywa powtórzone ciągi źródłowe. Różne rozwiązania tego samego zadania, podobny kod i wspólne zadania między zbiorami mogą nadal wpływać na wyniki.
+- Zgodność AST sprawdza strukturę bez lokalizacji w pliku. Nie obejmuje całej semantyki Pythona ani obserwacji zewnętrznych. W szczególności nie zastępuje testów w warstwie A. Krok Sourcery jest oceniany łącznie, ponieważ wariant główny stosuje cały zestaw reguł w jednym przebiegu.
+- Warstwa C ma jeden zbiór zadań, dwa konkretne wydania modeli, jedną konfigurację kwantyzacji dla każdego oraz wspólny szablon promptu. Pięć odpowiedzi dla tego samego zadania jest zależnych. Bootstrap zachowuje tę zależność przez losowanie całych zadań. Porównanie modeli nie identyfikuje przyczyn różnic.
+- Pomiary statyczne warstwy C są warunkowe względem przejścia filtrów ekstrakcji, składni i długości. Osobno wykazujemy odrzucone generacje, które mogłyby zmienić obraz jakości pełnej puli.
+- Testy ClassEval obserwują wybrane przypadki i wyniki publicznych wywołań. Różnice testowe w warstwie C dotyczą oryginałów zaliczających testy i wariantów z obserwowalnym przebiegiem. Porównanie z badaniem głównym uwzględnia odmienną definicję mianownika dla zachowania.
+- Diagnostyki i wykrywalność zależą od wersji Pythona, Sourcery, Ruffa, zestawów reguł i klasyfikatora SEW. Przeżywalność po Ruffie jest warunkowa względem wykrywalności przed tym przetwarzaniem.
+- W warstwie C część oryginałów kończy próbę bez werdyktu testowego, m.in. z powodu brakujących zależności w środowisku Bubblewrap. Tabela błędów podaje wariant, status i komunikat procesu. Zmiany śladów zależne od odczytu bieżącego czasu opisano w kontroli TimeUtils. [Błędy testów](warstwa_C/summary/bledy_testow.csv) · [Kontrola zachowania](warstwa_C/kontrola_zachowania.md)

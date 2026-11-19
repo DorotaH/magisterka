@@ -114,7 +114,8 @@ def benchmark(job):
         for logged in out.glob("*.json"):
             logged.replace(previous_run / logged.name)
     out.mkdir(parents=True, exist_ok=True)
-    seed = int.from_bytes(hashlib.sha256(sample["sample_id"].encode()).digest()[:8], "big")
+    task_id = sample.get("task_id", sample["sample_id"])
+    seed = int.from_bytes(hashlib.sha256(task_id.encode()).digest()[:8], "big")
     rng = random.Random(seed)
     tests = None
     if dataset == "mercury_eval":
@@ -131,7 +132,7 @@ def benchmark(job):
                  "entry_point": row["entry_point"]}
     elif dataset == "classeval":
         tests = {"test": row["test"], "test_classes": row["test_classes"], "seed": seed,
-                 "freeze": "2024-01-01 12:00:00" if sample["sample_id"] == "ClassEval_17" else None}
+                 "freeze": "2024-01-01 12:00:00" if task_id == "ClassEval_17" else None}
     else:
         data = json.loads(row["input_output"] or "{}")
         if data.get("inputs") and data.get("outputs"):
