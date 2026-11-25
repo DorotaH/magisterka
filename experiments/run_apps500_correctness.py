@@ -2,9 +2,10 @@
 """Run APPS official input/output cases on saved Qwen/Llama code artifacts.
 
 The APPS ZIPs used to prepare this experiment contain generated code and task
-IDs, not APPS test cases. This runner fetches the public APPS test split via
-Hugging Face ``datasets``, joins by APPS ``problem_id``, and executes the saved
-original, marked, fmt_first, and Ruff-transformed artifacts.
+IDs, not APPS test cases. This runner reads the public APPS Parquet conversion
+from Hugging Face (the legacy ``apps.py`` loading script is no longer supported
+by current ``datasets`` releases), joins by APPS ``problem_id``, and executes
+the saved original, marked, fmt_first, and Ruff-transformed artifacts.
 """
 
 from __future__ import annotations
@@ -15,6 +16,7 @@ import hashlib
 import json
 import os
 import signal
+import statistics
 import subprocess
 import sys
 import tempfile
@@ -171,11 +173,22 @@ def artifact_info(path: Path) -> dict[str, str]:
 def load_tests(wanted_ids: set[str], split: str) -> dict[str, dict[str, Any]]:
     try:
         from datasets import load_dataset
+        from huggingface_hub import HfApi
     except ImportError as exc:
         raise SystemExit("Missing dependency. Install it with: python3 -m pip install datasets") from exc
-    print(f"Loading APPS {split!r} split from Hugging Face; this may download the dataset.", flush=True)
+    print(f"Finding APPS Parquet shards for {split!r} on Hugging Face.", flush=True)
+    files = HfApi().list_repo_files("codeparrot/apps", repo_type="dataset",
+                                    revision="refs/convert/parquet")
+    prefix = f"all/{split}/"
+    parquet_files = sorted(name for name in files if name.startswith(prefix) and name.endswith(".parquet"))
+    if not parquet_files:
+        raise SystemExit(f"No APPS Parquet shards found under {prefix!r} on refs/convert/parquet")
+    urls = ["https://huggingface.co/datasets/codeparrot/apps/resolve/refs%2Fconvert%2Fparquet/" + name
+            for name in parquet_files]
+    print(f"Streaming {len(urls)} APPS Parquet shard(s); this may download data.", flush=True)
     records: dict[str, dict[str, Any]] = {}
-    dataset = load_dataset("codeparrot/apps", split=split, streaming=True)
+    dataset = load_dataset("parquet", data_files={split: urls}, split=split,
+                           streaming=True, columns=["problem_id", "input_output"])
     for row in dataset:
         problem_id = str(row.get("problem_id", ""))
         if problem_id not in wanted_ids:
@@ -198,6 +211,14 @@ def load_tests(wanted_ids: set[str], split: str) -> dict[str, dict[str, Any]]:
     missing = wanted_ids - records.keys()
     if missing:
         print(f"APPS split did not return {len(missing)} selected problem IDs.", flush=True)
+    counts = [len(record.get("cases", [])) for record in records.values() if record.get("cases")]
+    if counts:
+        print(
+            "Selected APPS problems with test cases: "
+            f"{len(counts)}; per-problem cases min/median/max/mean="
+            f"{min(counts)}/{statistics.median(counts):g}/{max(counts)}/{statistics.mean(counts):.2f}.",
+            flush=True,
+        )
     return records
 
 
@@ -221,10 +242,11 @@ def evaluate_one(job: tuple[Path, dict[str, str], dict[str, Any], float, int]) -
     try:
         with tempfile.TemporaryDirectory(prefix="apps-artifact-") as workdir:
             run = subprocess.run(
-                [sys.executable, "-I", "-c", CHILD_RUNNER, str(path), str(timeout), str(memory_mb)],
+                [sys.executable, "-P", "-c", CHILD_RUNNER, str(path), str(timeout), str(memory_mb)],
                 input=json.dumps(tests, ensure_ascii=False), cwd=workdir,
                 capture_output=True, text=True, timeout=wall_timeout,
-                env={"PATH": os.environ.get("PATH", ""), "LANG": "C.UTF-8", "LC_ALL": "C.UTF-8"},
+                env={key: os.environ[key] for key in ("PATH", "LANG", "LC_ALL", "PYTHONPATH")
+                     if key in os.environ},
             )
         payload = json.loads(run.stdout) if run.stdout.strip() else {}
         if payload.get("compile_error"):
@@ -272,6 +294,8 @@ def evaluate_one(job: tuple[Path, dict[str, str], dict[str, Any], float, int]) -
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--code-root", type=Path, default=CODE_ROOT)
+    parser.add_argument("--scope", choices=("base", "all"), default="base",
+                        help="base tests only the 3,000 corrected originals; all tests every saved variant")
     parser.add_argument("--split", default="test", choices=("train", "test"))
     parser.add_argument("--workers", type=int, default=min(8, os.cpu_count() or 1))
     parser.add_argument("--timeout", type=float, default=3.0, help="CPU/wall limit in seconds per test case")
@@ -283,13 +307,16 @@ def main() -> None:
 
     code_root = args.code_root.resolve()
     artifacts = sorted(path for path in code_root.rglob("*.py") if path.is_file())
+    if args.scope == "base":
+        artifacts = [path for path in artifacts
+                     if path.relative_to(code_root).parts[3:] == ("original.py",)]
     if args.limit_artifacts:
         artifacts = artifacts[:args.limit_artifacts]
     if not artifacts:
         raise SystemExit(f"No Python artifacts found under {code_root}")
     infos = [(path, artifact_info(path)) for path in artifacts]
     tests = load_tests({info["problem_id"] for _, info in infos}, args.split)
-    print(f"Testing {len(artifacts)} saved code artifacts across {len(tests)} APPS problems.", flush=True)
+    print(f"Scope={args.scope}: testing {len(artifacts)} code artifacts across {len(tests)} selected APPS problems.", flush=True)
 
     args.summary_out.parent.mkdir(parents=True, exist_ok=True)
     args.cases_out.parent.mkdir(parents=True, exist_ok=True)

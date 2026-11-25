@@ -1,2 +1,0 @@
-k, a, b = map(int, input().split())
-print(((b // k) - (a // k) + (a % k == 0)) if b >= a else 0)

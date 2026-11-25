@@ -1,0 +1,71 @@
+# Strict mode adds naming, security, test-output, typing, and documentation checks
+# to the extended ruleset. Some checks may need project-specific per-file ignores.
+[lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "C90",
+    "A",
+    "I",
+    "UP",
+    "ASYNC",
+    "BLE",
+    "C4",
+    "EXE",
+    "ISC",
+    "INP",
+    "PIE",
+    "PT",
+    "RSE",
+    "SIM",
+    "TCH",
+    "PLE",
+    "PLR",
+    "PLW",
+    "TRY",
+    "B",
+    "DTZ",
+    "N",
+    "S",
+    "T20",
+    "RET",
+    "ARG",
+    "PTH",
+    "RUF",
+    "D",
+    "ANN",
+    "FBT",
+    "COM",
+    "EM",
+    "ERA",
+    "ICN",
+    "LOG",
+    "PERF",
+    "PGH",
+    "PYI",
+    "SLF",
+    "TID",
+    "TD",
+    "FIX",
+    "YTT",
+]
+ignore = ["TRY003", "PLR2004", "D203", "D212"]
+
+[lint.mccabe]
+max-complexity = 15
+
+[lint.isort]
+combine-as-imports = true
+
+[lint.pylint]
+max-branches = 17
+max-args = 16
+max-returns = 9
+max-statements = 54
+
+[lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+parametrize-names-type = "csv"
+parametrize-values-type = "tuple"

@@ -1,0 +1,47 @@
+# Extended ruleset based on the configuration supplied for this project.
+[lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "C90",
+    "A",
+    "I",
+    "UP",
+    "ASYNC",
+    "BLE",
+    "C4",
+    "EXE",
+    "ISC",
+    "INP",
+    "PIE",
+    "PT",
+    "RSE",
+    "SIM",
+    "TCH",
+    "PLE",
+    "PLR",
+    "PLW",
+    "TRY",
+    "B007",
+    "DTZ011",
+]
+ignore = ["TRY003", "PLR2004"]
+
+[lint.mccabe]
+max-complexity = 15
+
+[lint.isort]
+combine-as-imports = true
+
+[lint.pylint]
+max-branches = 17
+max-args = 16
+max-returns = 9
+max-statements = 54
+
+[lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+parametrize-names-type = "csv"
+parametrize-values-type = "tuple"
