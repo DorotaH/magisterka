@@ -1,0 +1,55 @@
+from  collections import  deque
+import sys
+
+
+def  dijkstra(graph, start):
+    distances={i: [float("inf")]*k for  i in  range(1, k + 1)}
+    distances[start][start]=0
+    queue=deque([start])
+    while  queue:
+        node = queue.popleft()
+        for  neighbor in  graph[node]:
+            cost = distances[node][node] + graph[node][neighbor]
+            if  cost < distances[neighbor][neighbor]:
+                distances[neighbor] = [cost] * k
+                queue.append(neighbor)
+    return distances
+
+
+n, m, k = map(int, input().split())
+c = list(map(int, input().split()))
+graph = {i: {} for i in range(1, n + 1)}
+for  _ in  range(m):
+    u, v, x = map(int, input().split())
+    u, v = min(u, v), max(u, v)
+    graph[u][v] = min(graph.get(v, float("inf")), x)
+    graph[v][u] = min(graph.get(u, float("inf")), x)
+
+for  i in  range(k):
+    if  c[i] == 1:
+        for  j in  range(1, 1 + n):
+            if  j>=1 + c[i - 1] and  j <= c[i]:
+                graph[j][j] = 0
+
+for  i in  range(1, k):
+    if  c[i] == 1:
+        for  j in  range(1, 1 + n):
+            if  j>=1 + c[i - 1] and  j <= c[i]:
+                for  l in  range(1, 1 + n):
+                    if  l >= c[i] + 1 and  l <= c[i + 1]:
+                        graph[j][l] = 0
+                        graph[l][j] = 0
+
+d = list()
+for  i in  range(1, k + 1):
+    try:
+        d.append(dijkstra(graph, i)[i])
+    except  KeyError:
+        d.append([-1]*k)
+
+if -1 in d[0]:
+    print("No")
+else:
+    print("Yes")
+    for row in d:
+        print(*row)

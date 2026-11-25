@@ -1,0 +1,15 @@
+import sys
+
+# Read input from standard input
+input_data = sys.stdin.read().strip()
+n, k = map(int, input_data.split())
+
+# Calculate k-rounding of n
+if k == 0:
+	result = n
+else:
+	power_of_ten = 10 ** k
+	result = ((power_of_ten + n - 1) // power_of_ten) * power_of_ten
+
+# Print the result
+print(result)

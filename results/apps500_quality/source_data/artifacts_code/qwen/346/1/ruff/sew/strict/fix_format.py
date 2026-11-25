@@ -1,0 +1,30 @@
+import sys
+
+input = sys.stdin.read
+data = input().split()
+
+n = int(data[0])
+m = int(data[1])
+prices = list(map(int, data[2 : n + 2]))
+auctions = list(map(int, data[n + 2 : n + m + 2]))
+
+# Sort questions by price in descending order
+questions = sorted(range(n), key=lambda i: prices[i], reverse=True)
+
+# Initialize points and the index of the last question chosen
+points = 0
+last_chosen = -1
+
+# Process each question
+for i in questions:
+    if i + 1 not in auctions:
+        # If it's an auction question, R2 can change the price
+        points += prices[i]
+    else:
+        # If it's a regular question, R2 answers correctly
+        new_price = min(points, prices[i])
+        points += new_price
+    last_chosen = i
+
+# Print the maximum points R2 can get
+print(points)

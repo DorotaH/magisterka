@@ -12,8 +12,11 @@ pozytywną detekcję, `0` negatywną. Pusta komórka oznacza brak wykonanego wyn
 albo status błędu; szczegółowy status jest w arkuszu `Detekcja`.
 
 CSV w `source_data/` są wejściami generatora i zostały skopiowane z zapisanych
-wyników eksperymentu. Oryginalne pliki Python użyte do odtworzenia kontroli są
-w `source_data/original_code/`. Skrypty nie nadpisują tych kodów.
+wyników eksperymentu. `source_data/original_code/` zawiera poprawione kody
+oryginalne Qwena i Llamy. Ich skróty zgadzają się z 44 wpisami w
+`source_data/original_code_repairs.jsonl`. `source_data/artifacts_code/`
+zawiera oryginały, warianty oznakowane i wszystkie zapisane warianty Ruffa.
+Skrypty nie nadpisują tych kodów.
 
 ## Uzupełnienie detekcji na kodach oryginalnych
 
@@ -36,3 +39,29 @@ python3 experiments/export_apps500_detection_excel.py
 
 Generator korzysta wyłącznie z plików w repozytorium i zapisuje jeden wynik:
 `results/apps500_quality/APPS_watermark_detection.xlsx`.
+
+## Testy poprawności APPS
+
+APPS udostępnia wejścia i oczekiwane wyjścia w polu `input_output`. Dwa ZIP-y
+z generacjami użyte w tym badaniu zawierają listę identyfikatorów zadań i kody,
+ale nie zawierają przypadków testowych. Skrypt pobiera testowy podział APPS z
+Hugging Face, dopasowuje go po `problem_id` i testuje wszystkie zapisane pliki
+Python w `source_data/artifacts_code/`.
+
+Przygotuj osobne środowisko Pythona, pobierz zależności i uruchom komplet:
+
+```bash
+python3 -m venv /tmp/apps-test-env
+/tmp/apps-test-env/bin/pip install datasets
+/tmp/apps-test-env/bin/python experiments/run_apps500_correctness.py --workers 8 --timeout 3
+python3 experiments/export_apps500_detection_excel.py
+```
+
+Test runner zapisuje podsumowanie każdego artefaktu i wynik każdego przypadku
+do `source_data/apps_test_summary.csv` oraz `source_data/apps_test_cases.csv`.
+Generator dołącza je do tego samego skoroszytu; arkusze przypadków są dzielone,
+jeśli przekroczą limit wierszy Excela. `--limit-artifacts 20` uruchamia mały
+pilot przed pełnym przebiegiem.
+
+Runner wykonuje wygenerowany Python w osobnym procesie dla każdego artefaktu,
+z limitami czasu i pamięci. Nie jest to pełna izolacja bezpieczeństwa.

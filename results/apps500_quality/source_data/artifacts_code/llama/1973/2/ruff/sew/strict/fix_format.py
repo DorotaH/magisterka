@@ -1,0 +1,25 @@
+from collections import defaultdict
+
+
+def solve():
+    n = int(input())
+    u = list(map(int, input().split()))
+
+    freq = defaultdict(int)
+    for i in u:
+        freq[i] += 1
+
+    res = 0
+    for i in range(n):
+        freq, s = defaultdict(int), set()
+        for j in range(i, n):
+            freq[u[j]] += 1
+            s.add(freq[u[j]])
+            if len(s) > 1:
+                break
+            if len(s) == 1 and j - i + 1 > res:
+                res = j - i + 1
+    return res
+
+
+print(solve())

@@ -1,0 +1,21 @@
+from typing import List
+
+
+def possible_initial_scores(k: int, n: int, a: List[int], b: List[int]) -> int:
+    # Calculate the range of possible initial scores
+    min_score, max_score = sum(b) - sum(a[: k - n]), sum(b) - sum(a[n:])
+
+    # If the calculated range is valid, return the number of possible scores
+    if min_score <= max_score:
+        return max_score - min_score + 1
+    else:
+        return 0
+
+
+# Read input
+k, n = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+# Calculate and print the result
+print(possible_initial_scores(k, n, a, b))

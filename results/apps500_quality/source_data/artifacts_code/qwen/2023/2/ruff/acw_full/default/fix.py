@@ -1,0 +1,34 @@
+from sys import stdin, stdout
+
+# Read input
+input = stdin.read
+data = input().split()
+
+# Parse input
+n = int(data[0])
+m = int(data[1])
+
+a = list(map(int, data[2:2 + n]))
+b = list(map(int, data[2 + n:2 + 2 * n]))
+
+# Initialize output list
+output = []
+
+# Process queries
+index = 2 + 2 * n
+for _ in range(m):
+	t = int(data[index])
+	if t == 1:
+		x = int(data[1 + index]) - 1
+		y = int(data[2 + index]) - 1
+		k = int(data[3 + index])
+		for j in range(k):
+			b[y + j] += a[x + j]
+	elif t == 2:
+		x = int(data[1 + index]) - 1
+		output.append(b[x])
+	index += 4
+
+# Print output
+for value in output:
+	stdout.write(f"{value}\n")

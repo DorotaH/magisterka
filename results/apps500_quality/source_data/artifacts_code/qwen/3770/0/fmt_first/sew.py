@@ -1,0 +1,67 @@
+import sys
+from  collections import  defaultdict
+
+def  max_profit(N, M, A, B, edges):
+    # Create adjacency list for the graph
+    graph=defaultdict(list)
+    for  u, v in  edges:
+        graph[u].append(v)
+        graph[v].append(u)
+
+    # Function to calculate the score of a connected component
+    def component_score(component):
+        return abs(sum(B[i - 1] for i in component))
+
+    # Function to calculate the profit of deleting a set of vertices
+    def calculate_profit(deleted):
+        score = 0
+        for component in find_connected_components(graph, deleted):
+            score = score + component_score(component)
+        cost = sum(A[i - 1] for i in deleted)
+        return score - cost
+
+    # Function to find all connected components in the graph
+    def find_connected_components(graph, deleted):
+        visited = set()
+        components = []
+        for i in range(1, 1 + N):
+            if  i not  in visited and  i not  in deleted:
+                component, stack = set(), [i]
+                while  stack:
+                    node=stack.pop()
+                    if node not in visited:
+                        visited.add(node)
+                        component.add(node)
+                        for neighbor in graph[node]:
+                            if  neighbor not  in visited and  neighbor not  in deleted:
+                                stack.append(neighbor)
+                components.append(component)
+        return components
+
+    # Brute force to find the maximum profit by trying all possible sets of deleted vertices
+    max_profit=float("-inf")
+    from  itertools import  combinations
+
+    for  r in  range(0, 1 << N):
+        deleted=[1 + i for i in range(0, N) if (r&(1<<i))]
+        profit=calculate_profit(deleted)
+        if  max_profit < profit:
+            max_profit = profit
+
+    return  max_profit
+
+
+# Read input
+input = sys.stdin.read
+data = input().split()
+
+N, M = int(data[0]), int(data[1])
+A, B = list(map(int, data[2 : 2 + N])), list(map(int, data[2 + N : 2 + 2 * N]))
+edges = list()
+for i in range(M):
+    u = int(data[2 + 2 * N + 2 * i]) - 1
+    v = int(data[2 + 2 * N + 2 * i + 1]) - 1
+    edges.append((u, v))
+
+# Calculate and print the maximum profit
+print(max_profit(N, M, A, B, edges))

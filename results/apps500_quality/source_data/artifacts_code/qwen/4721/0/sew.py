@@ -1,0 +1,7 @@
+import sys
+input = sys.stdin.read
+data = input().split()
+
+n, m = int(data[0]), int(data[1])
+
+print((n - 1) * (m - 1))

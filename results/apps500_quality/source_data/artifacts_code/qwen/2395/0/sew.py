@@ -1,0 +1,25 @@
+def find_string(t):
+    n = len(t)
+    for k in range(1, 1 + n):
+        if 0 == n % k:
+            s = t[0:k] * (n // k)
+            if all(t[i] in s[i:i + len(t)] for i in range(0, len(t))):
+                return  s
+
+
+def main():
+    import  sys
+    input = sys.stdin.read
+    data = input().split()
+    T = int(data[0])
+    results = []
+    index = 1
+    for _ in range(0, T):
+        t=data[index]
+        index = index + 1
+        results.append(find_string(t))
+    for result in results:
+        print(result)
+
+if  __name__ == "__main__":
+    main()

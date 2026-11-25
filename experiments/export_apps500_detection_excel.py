@@ -47,6 +47,17 @@ MARK_FIELDS = [
     "marking_passed", "error_type", "error", "output_path", "tool_seconds",
     "sourcery_batch_id",
 ]
+TEST_SUMMARY_FIELDS = [
+    "artifact_id", "dataset", "problem_id", "sample_index", "arm", "variant",
+    "ruff_profile", "ruff_mode", "artifact_path", "code_sha256", "status",
+    "test_cases", "passed", "failed", "compile_errors", "runtime_errors", "timeouts",
+    "strict_pass", "failed_case_indices", "case_results", "error",
+]
+TEST_CASE_FIELDS = [
+    "artifact_id", "dataset", "problem_id", "sample_index", "arm", "variant",
+    "ruff_profile", "ruff_mode", "case_index", "status", "passed", "input",
+    "expected", "actual", "error",
+]
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -124,6 +135,60 @@ def worksheet_xml(rows: list[list[object]], widths: list[int] | None = None) -> 
     parts.append(f'<autoFilter ref="A1:{col_name(max_cols)}{max_rows}"/>')
     parts.append('</worksheet>')
     return "".join(parts)
+
+
+def csv_row_count(path: Path) -> int:
+    if not path.exists():
+        return 0
+    with path.open(newline="", encoding="utf-8") as stream:
+        return max(0, sum(1 for _ in csv.reader(stream)) - 1)
+
+
+def write_csv_sheet(book: zipfile.ZipFile, index: int, path: Path, fields: list[str],
+                    skip: int, limit: int, total: int) -> None:
+    rows_in_sheet = min(limit, max(0, total - skip)) + 1
+    last_col = col_name(len(fields))
+    target = f"xl/worksheets/sheet{index}.xml"
+    with book.open(target, "w") as stream:
+        def write(text: str) -> None:
+            stream.write(text.encode("utf-8"))
+
+        write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+              '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" '
+              'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">')
+        write(f'<dimension ref="A1:{last_col}{rows_in_sheet}"/>')
+        write('<sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" '
+              'activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><cols>')
+        for column, field in enumerate(fields, 1):
+            width = 22 if field in ("artifact_id", "artifact_path", "error", "input", "expected", "actual") else 16
+            write(f'<col min="{column}" max="{column}" width="{width}" customWidth="1"/>')
+        write('</cols><sheetData>')
+
+        def add_row(row_index: int, values: list[object]) -> None:
+            write(f'<row r="{row_index}">')
+            for col_index, value in enumerate(values, 1):
+                ref = f"{col_name(col_index)}{row_index}"
+                style = ' s="1"' if row_index == 1 else ""
+                if value is None or value == "":
+                    write(f'<c r="{ref}"{style}/>')
+                elif row_index > 1 and fields[col_index - 1] in ("case_index", "passed") and str(value).isdigit():
+                    write(f'<c r="{ref}"{style}><v>{value}</v></c>')
+                else:
+                    write(f'<c r="{ref}" t="inlineStr"{style}><is><t xml:space="preserve">'
+                          f'{xml_text(value)}</t></is></c>')
+            write('</row>')
+
+        add_row(1, fields)
+        with path.open(newline="", encoding="utf-8") as source:
+            reader = csv.DictReader(source)
+            for row_index, row in enumerate(reader, 1):
+                if row_index <= skip:
+                    continue
+                if row_index > skip + limit:
+                    break
+                add_row(row_index - skip + 1, [row.get(field, "") for field in fields])
+        write('</sheetData>')
+        write(f'<autoFilter ref="A1:{last_col}{rows_in_sheet}"/></worksheet>')
 
 
 def as_long_record(source: str, row: dict[str, str], **overrides: str) -> dict[str, str]:
@@ -228,13 +293,30 @@ def make_workbook(data: Path, output: Path) -> None:
             "positive", "reason", "p", "n_sites", "n_grades", "error",
         )])
 
+    test_summary_path = data / "apps_test_summary.csv"
+    test_cases_path = data / "apps_test_cases.csv"
+    test_summary = read_csv(test_summary_path)
+    if test_summary:
+        test_summary_rows: list[list[object]] = [TEST_SUMMARY_FIELDS]
+        test_summary_rows.extend([[row.get(field, "") for field in TEST_SUMMARY_FIELDS]
+                                  for row in test_summary])
+    else:
+        test_summary_rows = [TEST_SUMMARY_FIELDS, ["", "", "", "", "", "", "", "", "", "",
+                                                   "not_run", "", "", "", "", "", "", "", "", "",
+                                                   "Testy APPS nie zostały jeszcze uruchomione."]]
+    case_count = csv_row_count(test_cases_path)
+    case_sheet_chunk = 1_000_000
+    case_sheet_count = (case_count + case_sheet_chunk - 1) // case_sheet_chunk
     sheets = [
         ("Macierz bazowa", profile_sheets["Macierz bazowa"]),
         ("Macierz rygor", profile_sheets["Macierz rygor"]),
         ("Detekcja", long_rows),
         ("Znakowanie", marking_rows),
         ("SEW szczegóły", sew_rows),
+        ("Testy APPS", test_summary_rows),
     ]
+    sheet_names = [name for name, _ in sheets]
+    sheet_names.extend(f"Testy przypadków {part}" for part in range(1, case_sheet_count + 1))
     output.parent.mkdir(parents=True, exist_ok=True)
     content_types = ['<?xml version="1.0" encoding="UTF-8" standalone="yes"?>',
                      '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">',
@@ -242,7 +324,7 @@ def make_workbook(data: Path, output: Path) -> None:
                      '<Default Extension="xml" ContentType="application/xml"/>',
                      '<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>',
                      '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>']
-    for i in range(1, len(sheets) + 1):
+    for i in range(1, len(sheet_names) + 1):
         content_types.append(f'<Override PartName="/xl/worksheets/sheet{i}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>')
     content_types.append('</Types>')
     workbook = ['<?xml version="1.0" encoding="UTF-8" standalone="yes"?>',
@@ -253,11 +335,11 @@ def make_workbook(data: Path, output: Path) -> None:
                  '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">',
                  '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>',
                  '</Relationships>']
-    for index, (name, _rows) in enumerate(sheets, 1):
+    for index, name in enumerate(sheet_names, 1):
         workbook.append(f'<sheet name="{escape(name)}" sheetId="{index}" r:id="rId{index}"/>')
         rels.append(f'<Relationship Id="rId{index}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet{index}.xml"/>')
     workbook.extend(['</sheets><calcPr calcId="191029"/></workbook>'])
-    rels.append(f'<Relationship Id="rId{len(sheets)+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>')
+    rels.append(f'<Relationship Id="rId{len(sheet_names)+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>')
     rels.append('</Relationships>')
     styles = ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
               '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
@@ -286,6 +368,9 @@ def make_workbook(data: Path, output: Path) -> None:
             if index == 3:
                 width = [20, 16, 14, 14, 18, 22, 15, 15, 15, 24, 12, 24, 14, 12, 12, 20, 48, 12, 12, 12, 15, 66]
             book.writestr(f"xl/worksheets/sheet{index}.xml", worksheet_xml(rows, width))
+        for part in range(case_sheet_count):
+            write_csv_sheet(book, len(sheets) + part + 1, test_cases_path,
+                            TEST_CASE_FIELDS, part * case_sheet_chunk, case_sheet_chunk, case_count)
 
 
 def main() -> None:

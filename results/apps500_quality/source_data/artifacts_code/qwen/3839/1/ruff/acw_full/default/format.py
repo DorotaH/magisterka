@@ -1,0 +1,53 @@
+import sys
+
+input = sys.stdin.read
+data = input().split()
+
+n = int(data[0])
+
+
+def place_knights(n):
+    knights = []
+    for i in range(n):
+        x = i % 3
+        y = i // 3
+        knights.append((x, y))
+    return knights
+
+
+def get_attack_count(knights, x, y):
+    return sum(bool(abs(knight[0] - x) + abs(knight[1] - y) == 1) for knight in knights)
+
+
+def place_new_knights(knights):
+    new_knights = []
+    for knight in knights:
+        x, y = knight
+        for dx in range(-1, 2):
+            for dy in range(-1, 2):
+                if dx == 0 and dy == 0:
+                    continue
+                nx, ny = dx + x, dy + y
+                if (nx, ny) not in knights and get_attack_count(knights, nx, ny) >= 4:
+                    new_knights.append((nx, ny))
+                    break
+    return new_knights
+
+
+def final_position(n):
+    knights = place_knights(n)
+    while True:
+        new_knights = place_new_knights(knights)
+        if not new_knights:
+            break
+        knights.extend(new_knights)
+    return knights
+
+
+def print_knights(knights):
+    for knight in knights:
+        print(f"{knight[0]} {knight[1]}")
+
+
+knights = final_position(n)
+print_knights(knights)

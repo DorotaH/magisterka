@@ -1,0 +1,27 @@
+
+
+def can_sort_by_handle(n: int, handles: list[list[str]], p: list[int]) -> str:
+    for i in range(n):
+        handles[p[i] - 1].append(str(i + 1))
+
+    for i in range(n):
+        handles[i].sort(key=lambda x: (x[0], x[1]))
+
+    for i in range(n):
+        handles[i].sort(key=lambda x: int(x[2]))
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            if handles[p[i] - 1][0] > handles[p[j] - 1][0]:
+                return "NO"
+
+    return "YES"
+
+
+# Read input
+n = int(input())
+handles = [input().split() for _ in range(n)]
+p = list(map(int, input().split()))
+
+# Output result
+print(can_sort_by_handle(n, handles, p))

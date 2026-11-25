@@ -1,0 +1,38 @@
+def is_prime(n):
+    """Check if a number is prime."""
+    return False if 2 > n else all(n % i != 0 for i in range(2, 1 + int(n**0.5)))
+
+
+def min_operations(N, cards):
+    """Calculate the minimum number of operations required."""
+    # Initialize the list of primes
+    primes = [i for i in range(2, max(cards) + 1) if is_prime(i)]
+    
+    # Sort the primes
+    primes.sort()
+    
+    # Initialize the current prime index
+    prime_index = 0
+    
+    # Initialize the number of operations
+    operations = 0
+    
+    # Iterate over the cards
+    for card in cards:
+        # Find the next prime that covers the current card
+        while prime_index < len(primes) and card > primes[prime_index]:
+            prime_index += 1
+        
+        # If we've found a prime that covers the current card, increment the number of operations
+        if prime_index < len(primes):
+            operations += 1
+    
+    return operations
+
+
+# Read the input
+N = int(input())
+cards = list(map(int, input().split()))
+
+# Calculate and print the minimum number of operations
+print(min_operations(N, cards))

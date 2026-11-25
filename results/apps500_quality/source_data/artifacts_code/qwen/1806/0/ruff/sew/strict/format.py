@@ -1,0 +1,50 @@
+def can_cover(intervals, x, y):
+    # Check if there is any interval that covers the entire range [x, y]
+    return any(l <= x and y <= r for l, r in intervals)
+
+
+def min_intervals_to_cover(intervals, x, y):
+    # If there is no interval that covers [x, y], return -1
+    if not can_cover(intervals, x, y):
+        return -1
+
+    # Sort intervals by their right endpoint
+    intervals.sort(key=lambda x: x[1])
+
+    # Use a greedy approach to select the minimum number of intervals
+    selected_intervals = []
+    for l, r in intervals:
+        if len(selected_intervals) == 0 or l > selected_intervals[-1][1]:
+            selected_intervals.append((l, r))
+
+    return len(selected_intervals)
+
+
+def solve():
+    import sys
+
+    input = sys.stdin.read
+    data = input().split()
+
+    n, m = int(data[0]), int(data[1])
+
+    intervals = []
+    for i in range(0, n):
+        l, r = int(data[2 + 2 * i]), int(data[3 + 2 * i])
+        intervals.append((l, r))
+
+    queries = []
+    for i in range(0, m):
+        x, y = int(data[2 + 2 * n + 2 * i]), int(data[3 + 2 * n + 2 * i])
+        queries.append((x, y))
+
+    results = []
+    for x, y in queries:
+        results.append(min_intervals_to_cover(intervals, x, y))
+
+    for result in results:
+        print(result)
+
+
+# Call the solve function to run the program
+solve()

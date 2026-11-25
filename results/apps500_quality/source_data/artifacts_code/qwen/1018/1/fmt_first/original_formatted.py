@@ -1,0 +1,18 @@
+n = int(input())
+a = list(map(int, input().split()))
+
+# Initialize variables
+days_in_week = 7
+current_day = 0
+current_pen = 0
+
+# Loop through the days of the week
+for _ in range(days_in_week):
+    # Update the current pen and its ink
+    current_pen = (current_pen + 1) % n
+    if current_day == 0:
+        a[current_pen] -= 1
+        if a[current_pen] == 0:
+            print(current_pen + 1)
+            break
+    current_day = (current_day + 1) % days_in_week

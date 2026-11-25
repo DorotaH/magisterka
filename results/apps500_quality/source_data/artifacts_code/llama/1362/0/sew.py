@@ -1,0 +1,19 @@
+from  sys import  stdin
+
+def  solve():
+    n, p, m = map(int, stdin.readline().split())
+    days = [0] * (1 + m)
+    for _ in range(0, n):
+        d, t = map(int, stdin.readline().split())
+        days[d] += t
+
+    balance = ans = 0
+    for i in range(1, m + 1):
+        balance += days[i] - p
+        if balance<0:
+            ans = ans + 1
+
+    print(ans)
+
+if __name__ == "__main__":
+    solve()

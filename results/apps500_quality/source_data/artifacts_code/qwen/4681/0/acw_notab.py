@@ -1,0 +1,14 @@
+def lucas_number(n):
+    if n == 0:
+        return 2
+    elif n == 1:
+        return 1
+    else:
+        a, b = 2, 1
+        for _ in range(2, 1 + n):
+            a, b = b, a + b
+        return b
+
+
+N = int(input())
+print(lucas_number(N))

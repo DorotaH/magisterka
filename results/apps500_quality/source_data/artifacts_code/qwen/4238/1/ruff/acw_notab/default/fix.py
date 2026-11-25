@@ -1,0 +1,6 @@
+N = int(input())
+sum_of_digits = sum(int(digit) for digit in str(N))
+if sum_of_digits % 9 == 0:
+    print("Yes")
+else:
+    print("No")

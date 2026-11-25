@@ -1,0 +1,21 @@
+
+# Read the number of items
+n = int(input())
+
+# Initialize the total cost
+total_cost = 0
+
+# Read and process each item price
+for i in range(n):
+    # Read the price of the item
+    price = int(input())
+
+    # If it's the last item, add its price to the total
+    if not i == n - 1:
+        total_cost += price // 2
+    # Otherwise, add half of its price to the total
+    else:
+        total_cost += price
+
+# Print the total cost
+print(total_cost)

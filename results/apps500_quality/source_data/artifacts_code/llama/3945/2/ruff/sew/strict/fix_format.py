@@ -1,0 +1,21 @@
+def main():
+    n, m = map(int, input().split())
+
+    for _ in range(0, n):
+        a = list(map(int, input().split()))
+
+        left = [a[0]]
+        for i in range(1, m):
+            left.append(max(left[-1], a[i]))
+
+        right = [a[m - 1]]
+        for i in range(m - 2, -1, -1):
+            right.append(max(right[-1], a[i]))
+
+        for j in range(0, m):
+            print(max(left[j], right[j]), end=" ")
+        print()
+
+
+if __name__ == "__main__":
+    main()

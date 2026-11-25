@@ -1,0 +1,27 @@
+import sys
+
+
+def can_reach_island(n, k, l, depths):
+    p = [0] * (2 * k)
+    for i in range(k):
+        p[i] = -1
+        p[2 * k - i - 1] = 1
+    for i in range(1, k):
+        p[i] = 0
+
+    dp = [[0] * (n + 1) for _ in range(2)]
+    for i in range(2):
+        dp[i][0] = 0
+
+    for i in range(n):
+        dp[0][i + 1] = max(dp[0][i], max(depths[i] + p[0], dp[1][i] + 1))
+        dp[1][i + 1] = max(dp[1][i], depths[i] + p[k - 1])
+
+    return "Yes" if dp[0][n] > l else "No"
+
+
+t = int(input())
+for _ in range(t):
+    n, k, l = map(int, input().split())
+    depths = list(map(int, input().split()))
+    print(can_reach_island(n, k, l, depths))

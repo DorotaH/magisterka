@@ -1,0 +1,19 @@
+import sys
+
+
+def  main():
+    input = sys.stdin.read
+    data = input().split()
+
+    n, m = int(data[0]), int(data[1])
+
+    k = min(n, m)
+
+    print(k)
+    for i in range(0, k):
+        print(i + 1, 1)
+    for i in range(0, k):
+        print(1, i + 1)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,10 @@
+import sys
+input = sys.stdin.read
+data = input().split()
+
+N = int(data[0])
+A = int(data[1])
+B = int(data[2])
+
+min_cost = min(N * A, B)
+print(min_cost)
