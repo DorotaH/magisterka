@@ -14,5 +14,4 @@ if not (temp and temp[-1] != 'a'):
     print(':(')
 else:
     result += temp
-else:
     print(result)

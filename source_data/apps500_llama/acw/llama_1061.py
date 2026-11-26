@@ -1,4 +1,5 @@
 import sys
+import builtins
 import math
 import heapq
 from collections import deque, Counter, OrderedDict
@@ -30,8 +31,8 @@ def input_int_list():
 
 
 def print(*args, **kwargs):
-	**kwargs['file'] = sys.stdout
-	return print(*args, **kwargs)
+	kwargs['file'] = sys.stdout
+	return builtins.print(*args, **kwargs)
 
 
 def solve():
@@ -42,8 +43,8 @@ def solve():
 	for i in range(6):
 		mx, mn = float('-inf'), float('inf')
 		for j in range(n):
-			mx = max(mx, a[i] + b[j])
-			mn = min(mn, a[i] + b[j])
+			mx = max(mx, b[j] + a[i])
+			mn = min(mn, b[j] + a[i])
 		ans = min(ans, mx - mn)
 	print(ans)
 

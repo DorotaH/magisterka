@@ -22,6 +22,3 @@ else:
             break
     else:
         print("YES")
-        break
-else:
-    print("NO")

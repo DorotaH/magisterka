@@ -1,0 +1,29 @@
+import sys
+
+n = int(input())
+p = list(map(int, input().split()))
+q = list(map(int, input().split()))
+
+
+def get_permutation(n, ord):
+    result = [0] * n
+    i = 0
+    for j in range(n):
+        if j % 2 == 0:
+            result[i] = j
+        i += 1
+    return result
+
+
+def get_ord(p):
+    result = 0
+    for i in range(len(p)):
+        result = result * (i + 1) + p[i]
+    return result
+
+
+p_ord = get_ord(p)
+q_ord = get_ord(q)
+
+answer = get_permutation(n, (q_ord + p_ord) % (n * n))
+print(" ".join(map(str, answer)))

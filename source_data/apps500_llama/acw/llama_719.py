@@ -13,7 +13,6 @@ for char in s:
 
 if temp and temp[-1] != 'a':
 	result += temp
+	print(result)
 else:
 	print(':(')
-else:
-	print(result)

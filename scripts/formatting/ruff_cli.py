@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "scripts"))
 
 from operation_utils import add_io_arguments, copy_file, output_path, python_files, write_report  # noqa: E402
 
@@ -34,29 +34,44 @@ def run(profile: str) -> int:
         target = output_path(source, args.input, args.output)
         copy_file(source, target)
         commands = []
+        command_results = []
         lint_json: list[dict[str, Any]] = []
+        operation_errors = []
         try:
             if args.action in ("fix", "fix-format"):
                 command = [executable, "check", "--config", str(config), "--fix", str(target)]
                 commands.append(command)
-                subprocess.run(command, capture_output=True, text=True, timeout=args.timeout, check=False)
+                fixed = subprocess.run(command, capture_output=True, text=True,
+                                       timeout=args.timeout, check=False)
+                command_results.append({"command": command, "returncode": fixed.returncode,
+                                        "stdout": fixed.stdout, "stderr": fixed.stderr})
             if args.action in ("format", "fix-format"):
                 command = [executable, "format", "--config", str(config), str(target)]
                 commands.append(command)
-                subprocess.run(command, capture_output=True, text=True, timeout=args.timeout, check=False)
+                formatted = subprocess.run(command, capture_output=True, text=True,
+                                           timeout=args.timeout, check=False)
+                command_results.append({"command": command, "returncode": formatted.returncode,
+                                        "stdout": formatted.stdout, "stderr": formatted.stderr})
+                if formatted.returncode != 0:
+                    operation_errors.append({"command": "format", "returncode": formatted.returncode,
+                                             "stderr": formatted.stderr, "stdout": formatted.stdout})
             command = [executable, "check", "--config", str(config), "--output-format", "json", str(target)]
             commands.append(command)
             checked = subprocess.run(command, capture_output=True, text=True,
                                      timeout=args.timeout, check=False)
+            command_results.append({"command": command, "returncode": checked.returncode,
+                                    "stdout": checked.stdout, "stderr": checked.stderr})
             try:
                 lint_json = json.loads(checked.stdout or "[]")
             except json.JSONDecodeError:
                 lint_json = []
             row = {"input": str(source), "output": str(target), "profile": profile,
-                   "action": args.action, "status": "ok" if checked.returncode in (0, 1) else "error",
+                   "action": args.action,
+                   "status": "ok" if checked.returncode in (0, 1) and not operation_errors else "error",
                    "diagnostic_count": len(lint_json),
                    "diagnostic_codes": [entry.get("code") for entry in lint_json],
                    "diagnostics": lint_json, "commands": commands,
+                   "command_results": command_results, "operation_errors": operation_errors,
                    "stderr": checked.stderr, "changed": source.read_bytes() != target.read_bytes()}
         except (OSError, subprocess.TimeoutExpired) as error:
             row = {"input": str(source), "output": str(target), "profile": profile,

@@ -1,0 +1,43 @@
+n, t = map(int, input().split())
+s1 = input()
+s2 = input()
+
+if abs(n - t) % 2 != 0:
+    print(-1)
+    exit()
+
+if t == n:
+    print(-1)
+    exit()
+
+diff = 0
+s = ""
+for i in range(n):
+    if s1[i] != s2[i]:
+        diff += 1
+
+if diff == t:
+    print(s1)
+    exit()
+
+for i in range(n):
+    if s1[i] != s2[i]:
+        if t > diff:
+            s += "a" if s1[i] == "a" else "b" if s1[i] == "b" else "c"
+            diff += 1
+        elif t - 1 > diff:
+            s += "a" if s2[i] == "a" else "b" if s2[i] == "b" else "c"
+            diff -= 1
+        elif s1[i] == "a":
+            s += "b" if s2[i] == "b" else "c"
+        elif s1[i] == "b":
+            s += "a" if s2[i] == "a" else "c"
+        else:
+            s += "a" if s2[i] == "a" else "b"
+    else:
+        s += s1[i]
+
+if diff == t:
+    print(s)
+else:
+    print(-1)

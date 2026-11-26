@@ -1,4 +1,5 @@
 import sys
+import builtins
 import math
 import heapq
 from collections import deque, Counter, OrderedDict
@@ -30,8 +31,8 @@ def input_int_list():
 
 
 def print(*args, **kwargs):
-    **kwargs['file'] = sys.stdout
-    return print(*args, **kwargs)
+    kwargs['file'] = sys.stdout
+    return builtins.print(*args, **kwargs)
 
 
 def solve():
